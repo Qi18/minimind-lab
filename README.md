@@ -2,7 +2,7 @@
 
 MiniMind Lab 是一个围绕 64M 级小语言模型展开的可复现实验项目，覆盖数据与 Tokenizer、模型结构、预训练、SFT/LoRA、DPO、GRPO/CISPO、Agentic RL、统一评测和推理服务。
 
-本仓库保存实验配置、结果、源码阅读笔记和报告；模型源码通过 Git Submodule 固定到 [`minimind/`](minimind/) 的确定 commit。
+本仓库保存实验配置、结果、源码阅读笔记和报告；模型源码通过 Git Subtree 导入 [`minimind/`](minimind/)，当前基线固定到上游 commit `393e387`。
 
 ## 项目目标
 
@@ -19,6 +19,7 @@ MiniMind Lab 是一个围绕 64M 级小语言模型展开的可复现实验项�
 - [最终报告模板](docs/final_report.md)
 - [实验登记规范](experiments/README.md)
 - [源码阅读索引](docs/source_reading/README.md)
+- [MiniMind 上游来源与同步](docs/upstream-minimind.md)
 
 ## 实验主线
 
@@ -59,15 +60,11 @@ DPO、GRPO/CISPO 和 Agentic RL 默认从同一个 Full SFT 基线分支，避�
 ## 克隆
 
 ```bash
-git clone --recurse-submodules git@github.com:Qi18/minimind-lab.git
+git clone git@github.com:Qi18/minimind-lab.git
 cd minimind-lab
 ```
 
-已经克隆但没有初始化源码时：
-
-```bash
-git submodule update --init --recursive
-```
+`minimind/` 已作为普通源码目录进入仓库，不需要初始化 Submodule。
 
 ## 产物边界
 
