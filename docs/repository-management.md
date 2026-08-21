@@ -9,13 +9,13 @@
 - 每次实验的元数据、指标和报告；
 - 源码阅读笔记、博客草稿和最终项目报告。
 
-`minimind/` 是 Git Submodule，负责保存：
+`minimind/` 是通过 Git Subtree 导入的普通源码目录，负责保存：
 
 - MiniMind 模型、Dataset 和 Trainer 源码；
 - 通用 SwanLab 埋点；
 - 对训练、奖励、Rollout 或推理逻辑的源码修改。
 
-实验目录不复制 MiniMind 源码，而是记录 Submodule commit。
+实验目录不复制 MiniMind 源码，而是同时记录 Lab commit 和 MiniMind 上游来源 commit。
 
 ## 2. 权威工作区
 
@@ -25,7 +25,7 @@ L20 的 `/data/projects/minimind-lab` 是训练期间的权威 checkout。代码
 
 ```text
 lab_commit
-minimind_commit
+minimind_source_commit
 minimind_dirty
 hardware
 dtype
@@ -35,7 +35,7 @@ command
 swanlab_url
 ```
 
-如果 Submodule 工作区不干净，正式实验应停止；确有必要时保存 `source.patch` 并在报告中明确说明。
+如果 Lab 工作区不干净，正式实验应停止；确有必要时保存 `source.patch` 并在报告中明确说明。
 
 ## 3. 分支策略
 
@@ -78,7 +78,7 @@ swanlab-url.txt
   "experiment_id": "agent-dense64m-agentrl-cispo-20260821",
   "stage": "agentic_rl",
   "lab_commit": "<sha>",
-  "minimind_commit": "<sha>",
+  "minimind_source_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",
   "entrypoint": "minimind/trainer/train_agent.py",
   "base_weight": "full_sft",
   "dataset": "agent_rl.jsonl",
@@ -112,24 +112,28 @@ swanlab-url.txt
 
 删除 checkpoint 前，先生成 `checkpoint-manifest.txt`，记录路径、step、指标、大小、保留或删除理由，以及是否已上传 Hugging Face。
 
-## 7. Submodule 工作流
+## 7. 上游源码工作流
 
-查看当前源码版本：
+当前源码作为普通目录参与 Lab commit。来源、初始 commit 和审计结论记录在 [`upstream-minimind.md`](upstream-minimind.md)。
 
-```bash
-git submodule status
-git -C minimind status --short --branch
-```
-
-更新源码必须显式进行：
+查看源码改动：
 
 ```bash
-git -C minimind fetch origin
-git -C minimind checkout <validated-commit>
-git add -- minimind
+git status --short -- minimind
+git diff -- minimind
 ```
 
-不要让 `git submodule update --remote` 在正式实验前自动漂移源码版本。
+更新官方源码必须在独立分支显式进行：
+
+```bash
+git switch -c feature/sync-minimind-upstream
+git subtree pull \
+  --prefix=minimind \
+  https://github.com/jingyaogong/minimind.git \
+  master --squash
+```
+
+同步后必须检查 `minimind/` 的 diff、运行 smoke test，并更新实验元数据中的 `minimind_source_commit`。正式实验开始后不得自动漂移源码版本。
 
 ## 8. 发布门槛
 
