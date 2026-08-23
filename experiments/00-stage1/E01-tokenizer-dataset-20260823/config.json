@@ -1,0 +1,18 @@
+{
+  "experiment_id": "E01-tokenizer-dataset-20260823",
+  "stage": "00-stage1",
+  "status": "completed",
+  "protocol_version": "2026-08-21",
+  "seed": 42,
+  "primary_variable": "official tokenizer and dataset semantics observation",
+  "direct_baseline": "MiniMind vendored source 393e387 with its bundled tokenizer",
+  "tokenizer_path": "minimind/model",
+  "tokenizer_policy": "fixed; train_tokenizer.py is learning-only",
+  "dataset_repo": "jingyaogong/minimind_dataset",
+  "dataset_revision": "312afb4f76391145c6902f765bb51691c09a12f5",
+  "max_length": 768,
+  "fixture_max_length": 128,
+  "audit_sample_size_per_file": 2000,
+  "domain_samples": 20,
+  "notes": "No model training, checkpoint, or SwanLab run is expected in Stage1."
+}

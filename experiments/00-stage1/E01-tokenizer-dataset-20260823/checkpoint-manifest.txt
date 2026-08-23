@@ -1,0 +1,2 @@
+# sha256 size_bytes path role
+# Stage1 is a tokenizer/dataset observation stage; no checkpoint is produced.

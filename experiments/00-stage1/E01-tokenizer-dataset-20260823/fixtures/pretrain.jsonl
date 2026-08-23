@@ -1,0 +1,2 @@
+{"text":"MiniMind 使用固定的 ByteLevel BPE Tokenizer。本样本只用于验证 BOS、EOS、padding 与 labels。"}
+{"text":"def add(a, b):\n    return a + b\n"}

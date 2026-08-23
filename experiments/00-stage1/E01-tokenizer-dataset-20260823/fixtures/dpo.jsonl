@@ -1,0 +1,1 @@
+{"chosen":[{"role":"user","content":"什么是可复现实验？"},{"role":"assistant","content":"固定代码、数据、配置与随机种子，并保存可核验的结果。"}],"rejected":[{"role":"user","content":"什么是可复现实验？"},{"role":"assistant","content":"每次随便运行即可。"}]}

@@ -1,2 +1,3 @@
 experiment_id,stage,status,lab_commit,minimind_commit,base_weight,dataset,hardware,dtype,seed,swanlab_url,report_path,checkpoint_url,started_at,finished_at
 E00-l20-baseline-20260823,stage0,completed,9ca9fe21899fc5e0a4b4b425cfecba03eca4161b,393e387e9ad99f0f04c296e4c5e7353f4444629f,,,8xL20,bfloat16,42,,experiments/00-stage0/E00-l20-baseline-20260823/report.md,,2026-08-23T04:10:00Z,2026-08-23T05:18:03Z
+E01-tokenizer-dataset-20260823,stage1,completed,080179c9d1ec2a0752e2a21155af899e7509c5b9,393e387e9ad99f0f04c296e4c5e7353f4444629f,,jingyaogong/minimind_dataset@312afb4f,8xL20,n/a,42,,experiments/00-stage1/E01-tokenizer-dataset-20260823/report.md,,2026-08-23T08:36:21Z,2026-08-23T13:40:24Z

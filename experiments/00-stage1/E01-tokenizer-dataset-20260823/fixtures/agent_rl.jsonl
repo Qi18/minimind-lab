@@ -1,0 +1,1 @@
+{"conversations":[{"role":"system","content":"你可以使用计算器。","tools":"[{\"type\":\"function\",\"function\":{\"name\":\"calculator\",\"description\":\"执行算术\",\"parameters\":{\"type\":\"object\",\"properties\":{\"expression\":{\"type\":\"string\"}},\"required\":[\"expression\"]}}}]"},{"role":"user","content":"计算 19×23。"},{"role":"assistant","content":"437"}],"gt":"437"}
