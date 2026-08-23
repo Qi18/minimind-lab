@@ -2,7 +2,7 @@
 
 ## 状态
 
-Stage 0 已开始，环境、NCCL、源码运行时和模板基础设施已完成验证。当前唯一硬门禁是 L20 Pod 尚未恢复 SwanLab 登录，因此本记录保持 running，不能标记为 completed。
+Stage 0 已完成。环境、NCCL、源码运行时、实验模板和 SwanLab 登录均通过硬门禁；2026-08-23T05:18:03Z 再次执行强制 preflight，结果为 pass。
 
 ## 环境验收
 
@@ -18,7 +18,7 @@ Stage 0 已开始，环境、NCCL、源码运行时和模板基础设施已完�
 | NCCL | 通过 | 8 rank all-reduce 均得到 36 |
 | CPFS | 通过 | /data 为 NFS read-write，容量约 3.6T |
 | /dev/shm | 通过 | 800 GiB |
-| SwanLab | 阻塞 | 当前 Pod 未登录 |
+| SwanLab | 通过 | cloud verify 通过；凭据未写入仓库、日志或 CPFS |
 
 网络切换后 ACK API 白名单已恢复，但公开实验记录不保存公网 IP、ACL、集群 ID、账号或凭据。
 
@@ -80,11 +80,11 @@ MiniMind 源码没有 SIGTERM 即时 checkpoint handler。启动器只保证把�
 | GPU 占用确认 | 通过 |
 | 历史资产盘点 | 通过，结论为未找到 |
 | 实验模板可验证 | 通过，生成、格式校验和清理 smoke test 成功 |
-| SwanLab 登录 | 阻塞 |
-| run id → 源码/曲线/checkpoint 追溯 | 待首次训练 run |
+| SwanLab 登录 | 通过；账号、服务地址和 netrc 权限已验证 |
+| run id → 源码/曲线/checkpoint 追溯 | Stage 1 首次训练 run 的验收项，不阻塞 Stage 0 |
 
 ## 下一步
 
-1. 通过 masked interactive prompt 恢复 SwanLab 登录，不把 API key 写入命令、日志或仓库。
-2. 运行新增 preflight、锁冲突、信号转发和模板测试。
-3. 登录通过后关闭 Stage 0，进入 Stage 1 Tokenizer/Dataset。
+1. 进入 Stage 1 Tokenizer/Dataset，冻结数据版本、tokenizer 配置和基线样本。
+2. 初始化首个正式实验目录，并把配置、源码 commit 和 SwanLab run id 建立映射。
+3. 训练启动前继续强制执行 preflight 和单任务锁；`swanlab sync` 仍需单独授权。
