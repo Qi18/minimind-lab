@@ -1,0 +1,11 @@
+{
+  "experiment_id": "E00-l20-baseline-20260823",
+  "stage": "00-stage0",
+  "status": "running",
+  "protocol_version": "2026-08-21",
+  "expected_gpu_count": 8,
+  "dtype": "bfloat16",
+  "min_shm_bytes": 858993459200,
+  "require_swanlab": true,
+  "historical_asset_scope": "active CPFS paths"
+}

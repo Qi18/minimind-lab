@@ -1,1 +1,2 @@
 experiment_id,stage,status,lab_commit,minimind_commit,base_weight,dataset,hardware,dtype,seed,swanlab_url,report_path,checkpoint_url,started_at,finished_at
+E00-l20-baseline-20260823,stage0,running,,393e387e9ad99f0f04c296e4c5e7353f4444629f,,,8xL20,bfloat16,42,,experiments/00-stage0/E00-l20-baseline-20260823/report.md,,2026-08-23T04:10:00Z,

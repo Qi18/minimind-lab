@@ -1,0 +1,1 @@
+# No checkpoint is produced by Stage 0.

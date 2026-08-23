@@ -1,0 +1,11 @@
+{
+  "experiment_id": "__EXPERIMENT_ID__",
+  "stage": "__STAGE__",
+  "status": "planned",
+  "baseline_lab_commit": "",
+  "minimind_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",
+  "swanlab_run_id": "",
+  "started_at": null,
+  "finished_at": null,
+  "exit_code": null
+}

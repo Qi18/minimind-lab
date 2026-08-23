@@ -1,0 +1,6 @@
+{
+  "status": "not_applicable",
+  "protocol": "docs/evaluation_protocol.md",
+  "reason": "Stage 0 validates environment and reproducibility infrastructure, not model quality",
+  "results": {}
+}

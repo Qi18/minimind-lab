@@ -1,0 +1,54 @@
+{
+  "recorded_at": "2026-08-23T04:23:00Z",
+  "hardware": {
+    "gpu_model": "NVIDIA L20",
+    "gpu_count": 8,
+    "gpu_memory_mib_each": 46068,
+    "driver": "535.161.08",
+    "gpu_idle_at_check": true
+  },
+  "software": {
+    "python": "3.10.12",
+    "torch": "2.6.0+cu124",
+    "cuda_runtime": "12.4",
+    "cudnn": 90100,
+    "nccl": "2.21.5",
+    "transformers": "4.57.6",
+    "datasets": "3.6.0",
+    "tokenizers": "0.22.2",
+    "swanlab": "0.7.11"
+  },
+  "storage": {
+    "data_mount_type": "nfs",
+    "data_read_write": true,
+    "data_capacity": "3.6T",
+    "data_used": "9.5G",
+    "dev_shm_bytes": 858993459200
+  },
+  "smoke_tests": {
+    "ack_readyz": "pass",
+    "real_ssh": "pass",
+    "cuda_matmul": "pass",
+    "bf16": "pass",
+    "nccl_all_reduce_8_gpu": "pass",
+    "nccl_expected_sum": 36,
+    "dense_forward": {
+      "parameters": 63912192,
+      "logits_shape": [1, 16, 6400],
+      "finite": true,
+      "peak_mib": 149.35
+    },
+    "moe_forward": {
+      "parameters": 198416640,
+      "logits_shape": [1, 16, 6400],
+      "finite": true,
+      "peak_mib": 406.41
+    },
+    "swanlab_login": "blocked"
+  },
+  "known_environment_issue": {
+    "package": "litellm",
+    "detail": "System-site litellm expects openai>=1.68.2, while MiniMind pins openai==1.59.6",
+    "impact": "Not used by the MiniMind training entrypoints; retain as an explicit pip-check warning"
+  }
+}

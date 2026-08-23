@@ -1,0 +1,11 @@
+name,value,unit,status,recorded_at
+gpu_count,8,count,pass,2026-08-23T04:18:48Z
+gpu_idle,1,bool,pass,2026-08-23T04:18:48Z
+cuda_available,1,bool,pass,2026-08-23T04:18:48Z
+bf16_supported,1,bool,pass,2026-08-23T04:18:48Z
+nccl_all_reduce_sum,36,sum,pass,2026-08-23T04:22:58Z
+cpfs_read_write,1,bool,pass,2026-08-23T04:18:00Z
+dev_shm,800,GiB,pass,2026-08-23T04:18:00Z
+dense_parameters,63912192,count,pass,2026-08-23T04:24:00Z
+moe_parameters,198416640,count,pass,2026-08-23T04:24:00Z
+swanlab_login,0,bool,blocked,2026-08-23T04:22:35Z

@@ -1,0 +1,12 @@
+{
+  "experiment_id": "E00-l20-baseline-20260823",
+  "stage": "00-stage0",
+  "status": "running",
+  "baseline_lab_commit": "7b0375d06375648e186786f831f4964d31d0b4d8",
+  "minimind_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",
+  "swanlab_run_id": "",
+  "started_at": "2026-08-23T04:10:00Z",
+  "finished_at": null,
+  "exit_code": null,
+  "blocker": "SwanLab login is not configured in the current L20 Pod"
+}

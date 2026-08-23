@@ -1,0 +1,10 @@
+{
+  "experiment_id": "__EXPERIMENT_ID__",
+  "stage": "__STAGE__",
+  "status": "planned",
+  "protocol_version": "2026-08-21",
+  "seed": 42,
+  "primary_variable": "",
+  "direct_baseline": "",
+  "notes": ""
+}
