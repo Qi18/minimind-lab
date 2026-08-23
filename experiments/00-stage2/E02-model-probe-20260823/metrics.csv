@@ -1,2 +1,10 @@
 name,value,unit,status,recorded_at
-stage2_probe,0,boolean,running,2026-08-24T00:00:00Z
+dense_total_parameters,63912192,count,pass,2026-08-23T16:22:52.371885+00:00
+moe_total_parameters,198416640,count,pass,2026-08-23T16:22:52.371885+00:00
+moe_active_parameters,63936768,count,observed,2026-08-23T16:22:52.371885+00:00
+mean_tokens_per_second,50602.951190608896,tokens/s,observed,2026-08-23T16:22:52.371885+00:00
+stdev_tokens_per_second,71.14746631601966,tokens/s,observed,2026-08-23T16:22:52.371885+00:00
+mean_samples_per_second,435.52224869910884,samples/s,observed,2026-08-23T16:22:52.371885+00:00
+resume_from_step,50,step,pass,2026-08-23T16:22:52.371885+00:00
+resume_to_step,100,step,pass,2026-08-23T16:22:52.371885+00:00
+seed_count,3,count,pass,2026-08-23T16:22:52.371885+00:00

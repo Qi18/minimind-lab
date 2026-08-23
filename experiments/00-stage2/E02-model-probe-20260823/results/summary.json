@@ -1,0 +1,119 @@
+{
+  "status": "pass",
+  "seeds": {
+    "42": {
+      "status": "completed",
+      "seed": 42,
+      "world_size": 8,
+      "completed_step": 100,
+      "total_steps": 100,
+      "resumed_this_phase": true,
+      "resumed_from_step": 50,
+      "optimizer_state_entries_after_resume": 90,
+      "swanlab_run_id": "iq14wfm1nc1ca8iigdbop",
+      "first_loss": 8.879359364509583,
+      "last_loss": 6.675415456295013,
+      "mean_tokens_per_second_after_warmup": 50641.32981044994,
+      "mean_samples_per_second_after_warmup": 437.22699280386104,
+      "peak_allocated_mib_rank0": 1392.96337890625,
+      "gpu_sampler": {
+        "sample_count": 9,
+        "mean_utilization": 89.01388888888889,
+        "peak_memory_mib": 1944.0
+      },
+      "finished_at": "2026-08-23T16:21:44.892603+00:00"
+    },
+    "43": {
+      "status": "completed",
+      "seed": 43,
+      "world_size": 8,
+      "completed_step": 100,
+      "total_steps": 100,
+      "resumed_this_phase": false,
+      "resumed_from_step": null,
+      "optimizer_state_entries_after_resume": 0,
+      "swanlab_run_id": "is8yx09hw3341ar8qvvfa",
+      "first_loss": 8.893887996673584,
+      "last_loss": 6.557876765727997,
+      "mean_tokens_per_second_after_warmup": 50646.66874134372,
+      "mean_samples_per_second_after_warmup": 435.6062478257462,
+      "peak_allocated_mib_rank0": 1392.96337890625,
+      "gpu_sampler": {
+        "sample_count": 16,
+        "mean_utilization": 90.2890625,
+        "peak_memory_mib": 1956.0
+      },
+      "finished_at": "2026-08-23T16:22:16.036334+00:00"
+    },
+    "44": {
+      "status": "completed",
+      "seed": 44,
+      "world_size": 8,
+      "completed_step": 100,
+      "total_steps": 100,
+      "resumed_this_phase": false,
+      "resumed_from_step": null,
+      "optimizer_state_entries_after_resume": 0,
+      "swanlab_run_id": "kngkosspce6sfuzkoztzm",
+      "first_loss": 8.94085967540741,
+      "last_loss": 6.511202812194824,
+      "mean_tokens_per_second_after_warmup": 50520.85502003302,
+      "mean_samples_per_second_after_warmup": 433.7335054677193,
+      "peak_allocated_mib_rank0": 1392.96337890625,
+      "gpu_sampler": {
+        "sample_count": 14,
+        "mean_utilization": 90.13392857142857,
+        "peak_memory_mib": 1956.0
+      },
+      "finished_at": "2026-08-23T16:22:48.604573+00:00"
+    }
+  },
+  "architecture": {
+    "dense_total_parameters": 63912192,
+    "moe_total_parameters": 198416640,
+    "moe_active_parameters": 63936768,
+    "dense_logits_shape": [
+      2,
+      16,
+      6400
+    ],
+    "kv_cache": {
+      "layers": 8,
+      "prefix_layer0_key": [
+        2,
+        8,
+        4,
+        96
+      ],
+      "continued_layer0_key": [
+        2,
+        9,
+        4,
+        96
+      ],
+      "continued_logits": [
+        2,
+        1,
+        6400
+      ]
+    }
+  },
+  "throughput": {
+    "mean_tokens_per_second": 50602.951190608896,
+    "stdev_tokens_per_second": 71.14746631601966,
+    "mean_samples_per_second": 435.52224869910884,
+    "seed_values": [
+      50641.32981044994,
+      50646.66874134372,
+      50520.85502003302
+    ]
+  },
+  "resume": {
+    "seed": 42,
+    "from_step": 50,
+    "to_step": 100,
+    "optimizer_state_entries": 90,
+    "swanlab_run_id": "iq14wfm1nc1ca8iigdbop"
+  },
+  "recorded_at": "2026-08-23T16:22:52.371885+00:00"
+}

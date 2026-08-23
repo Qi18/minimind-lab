@@ -1,12 +1,16 @@
 {
   "experiment_id": "E02-model-probe-20260823",
   "stage": "00-stage2",
-  "status": "running",
+  "status": "completed",
   "baseline_lab_commit": "9961a5119e4249c48da923f3630c2e8ba362df15",
-  "lab_commit": null,
+  "lab_commit": "5ccb66702c2f1f1b969c79240fd5fe5e247131cd",
   "minimind_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",
-  "swanlab_run_ids": [],
-  "started_at": "2026-08-24T00:00:00Z",
-  "finished_at": null,
-  "exit_code": null
+  "swanlab_run_ids": [
+    "iq14wfm1nc1ca8iigdbop",
+    "is8yx09hw3341ar8qvvfa",
+    "kngkosspce6sfuzkoztzm"
+  ],
+  "started_at": "2026-08-23T16:20:07Z",
+  "finished_at": "2026-08-23T16:22:52.371885+00:00",
+  "exit_code": 0
 }

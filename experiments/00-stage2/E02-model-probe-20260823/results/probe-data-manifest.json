@@ -1,0 +1,14 @@
+{
+  "samples": 8192,
+  "max_length": 128,
+  "source": "/data/datasets/minimind/312afb4f76391145c6902f765bb51691c09a12f5/pretrain_t2t_mini.jsonl",
+  "source_sha256": "6dd6716c84ab36897bdbfc7f88e04f4441c48c1ab7ecee88ce0b0e7d4685560c",
+  "tokenizer": "minimind/model",
+  "tokenizer_vocab_size": 6400,
+  "invalid_json_before_sample_limit": 0,
+  "created_at": "2026-08-23T16:20:30.399338+00:00",
+  "output": "/data/artifacts/minimind-lab/E02-model-probe-20260823/probe-data.pt",
+  "output_size": 8390460,
+  "output_sha256": "287f5352ff98f1b89ecc8c020d230d649526832a0d51cd0ef2d205605a872fe8",
+  "valid_target_tokens": 952428
+}

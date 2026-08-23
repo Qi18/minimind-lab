@@ -1,9 +1,13 @@
 {
   "experiment_id": "E02-model-probe-20260823",
   "stage": "00-stage2",
-  "status": "running",
+  "status": "completed",
   "protocol_version": "2026-08-21",
-  "seeds": [42, 43, 44],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
   "primary_variable": "model/runtime correctness under a bounded 8-GPU probe",
   "direct_baseline": "Stage1 commit 9961a51 with MiniMind source 393e387",
   "model": {

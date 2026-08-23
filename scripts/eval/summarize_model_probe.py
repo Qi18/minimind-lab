@@ -90,7 +90,7 @@ def main() -> None:
         ("seed_count", 3, "count", "pass"),
     ]
     with (experiment / "metrics.csv").open("w", encoding="utf-8", newline="") as sink:
-        writer = csv.writer(sink)
+        writer = csv.writer(sink, lineterminator="\n")
         writer.writerow(["name", "value", "unit", "status", "recorded_at"])
         for name, value, unit, status in metric_rows:
             writer.writerow([name, value, unit, status, recorded_at.isoformat()])
@@ -98,7 +98,7 @@ def main() -> None:
     run_ids = [summaries[seed]["swanlab_run_id"] for seed in (42, 43, 44)]
     (experiment / "swanlab-url.txt").write_text(
         "# SwanLab project: https://swanlab.cn/@richliu0153/MiniMind-Lab\n"
-        + "\n".join(f"seed{seed}: {summaries[seed]['swanlab_run_id']}" for seed in (42, 43, 44))
+        + "\n".join(f"seed{seed}: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/{summaries[seed]['swanlab_run_id']}" for seed in (42, 43, 44))
         + "\n",
         encoding="utf-8",
     )

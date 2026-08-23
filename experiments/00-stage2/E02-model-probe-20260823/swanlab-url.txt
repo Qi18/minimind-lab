@@ -1,2 +1,4 @@
-# Add the public SwanLab run URL after the run starts.
-# Pending: three cloud run IDs will be recorded after the probe.
+# SwanLab project: https://swanlab.cn/@richliu0153/MiniMind-Lab
+seed42: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/iq14wfm1nc1ca8iigdbop
+seed43: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/is8yx09hw3341ar8qvvfa
+seed44: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/kngkosspce6sfuzkoztzm

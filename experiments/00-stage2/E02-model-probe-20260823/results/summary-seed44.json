@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "seed": 44,
+  "world_size": 8,
+  "completed_step": 100,
+  "total_steps": 100,
+  "resumed_this_phase": false,
+  "resumed_from_step": null,
+  "optimizer_state_entries_after_resume": 0,
+  "swanlab_run_id": "kngkosspce6sfuzkoztzm",
+  "first_loss": 8.94085967540741,
+  "last_loss": 6.511202812194824,
+  "mean_tokens_per_second_after_warmup": 50520.85502003302,
+  "mean_samples_per_second_after_warmup": 433.7335054677193,
+  "peak_allocated_mib_rank0": 1392.96337890625,
+  "gpu_sampler": {
+    "sample_count": 14,
+    "mean_utilization": 90.13392857142857,
+    "peak_memory_mib": 1956.0
+  },
+  "finished_at": "2026-08-23T16:22:48.604573+00:00"
+}

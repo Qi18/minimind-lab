@@ -1,7 +1,15 @@
 {
-  "status": "running",
+  "status": "completed",
   "protocol": "docs/training_plan.md#8-stage-2模型结构与最小训练探针",
   "results": {
-    "stage_gate": "pending"
+    "stage_gate": "pass",
+    "architecture": "results/architecture.json",
+    "summary": "results/summary.json",
+    "seed_summaries": [
+      "results/summary-seed42.json",
+      "results/summary-seed43.json",
+      "results/summary-seed44.json"
+    ],
+    "resume_verified": true
   }
 }
