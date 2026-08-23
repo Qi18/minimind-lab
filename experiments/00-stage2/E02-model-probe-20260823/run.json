@@ -1,0 +1,12 @@
+{
+  "experiment_id": "E02-model-probe-20260823",
+  "stage": "00-stage2",
+  "status": "running",
+  "baseline_lab_commit": "9961a5119e4249c48da923f3630c2e8ba362df15",
+  "lab_commit": null,
+  "minimind_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",
+  "swanlab_run_ids": [],
+  "started_at": "2026-08-24T00:00:00Z",
+  "finished_at": null,
+  "exit_code": null
+}

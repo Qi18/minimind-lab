@@ -1,0 +1,25 @@
+{
+  "experiment_id": "E02-model-probe-20260823",
+  "stage": "00-stage2",
+  "status": "running",
+  "protocol_version": "2026-08-21",
+  "seeds": [42, 43, 44],
+  "primary_variable": "model/runtime correctness under a bounded 8-GPU probe",
+  "direct_baseline": "Stage1 commit 9961a51 with MiniMind source 393e387",
+  "model": {
+    "variant": "dense",
+    "hidden_size": 768,
+    "num_hidden_layers": 8,
+    "dtype": "bfloat16",
+    "flash_sdpa": true
+  },
+  "training": {
+    "world_size": 8,
+    "batch_size_per_gpu": 4,
+    "max_seq_len": 128,
+    "optimizer_steps": 100,
+    "learning_rate": 0.0005
+  },
+  "resume_probe": "seed42: steps 1-50 then resume 51-100",
+  "notes": "Model/runtime probe only; it is not a quality or convergence result."
+}
