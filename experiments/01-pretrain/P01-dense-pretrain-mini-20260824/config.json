@@ -1,7 +1,7 @@
 {
   "experiment_id": "P01-dense-pretrain-mini-20260824",
   "stage": "01-pretrain",
-  "status": "running",
+  "status": "completed",
   "protocol_version": "2026-08-21",
   "seed": 42,
   "primary_variable": "first formal Dense pretraining baseline on the mini dataset",
@@ -29,7 +29,8 @@
     "save_interval_micro_steps": 1000,
     "from_weight": "none",
     "expected_micro_steps": 39695,
-    "expected_optimizer_updates": 4962
+    "expected_optimizer_updates": 4962,
+    "completed_micro_steps": 39695
   },
   "dataset": {
     "repo_id": "jingyaogong/minimind_dataset",
@@ -41,5 +42,5 @@
   },
   "hardware": "8x NVIDIA L20 46GB",
   "tracking": "SwanLab project MiniMind-Lab-Stage3",
-  "notes": "Reproduces the historical Official Zero P01 configuration before later ablations."
+  "notes": "Completed historical Official Zero P01 configuration and established the direct baseline for P02 and S01."
 }

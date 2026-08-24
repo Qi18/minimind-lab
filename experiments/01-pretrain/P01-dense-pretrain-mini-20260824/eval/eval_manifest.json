@@ -1,0 +1,74 @@
+{
+  "experiment_id": "P01-dense-pretrain-mini-20260824",
+  "checkpoint_id": "p01_pretrain_768",
+  "direct_baseline": null,
+  "protocol_version": "2026-08-21",
+  "status": "completed",
+  "training_lab_commit": "64d2908c8300985357993a66011e2b6114104fd1",
+  "evaluation_lab_commit": "0ed9783b3e067b5edd0e02ec9bc778db87011d0a",
+  "minimind_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",
+  "checkpoint": {
+    "path": "/data/artifacts/minimind-lab/P01-dense-pretrain-mini-20260824/checkpoints/p01_pretrain_768.pth",
+    "sha256": "71efd40d9fcd494bc5472891b66ea7f17167ae27ac341968bcd258a5a24b94e9",
+    "size_bytes": 137684380,
+    "parameters": 63912192
+  },
+  "export": {
+    "path": "/data/artifacts/minimind-lab/P01-dense-pretrain-mini-20260824/exported-base",
+    "architecture": "Qwen3ForCausalLM with MiniMind-compatible weights",
+    "dtype": "float16",
+    "tokenizer_vocab_size": 6400
+  },
+  "harness": {
+    "name": "lm-evaluation-harness",
+    "version": "0.4.12",
+    "commit": "6d642546f4688648fced259eb3302efd36ece5af",
+    "tasks": [
+      "ceval-valid",
+      "cmmlu",
+      "arc_easy",
+      "piqa",
+      "openbookqa",
+      "hellaswag",
+      "social_iqa"
+    ],
+    "metric_rule": "acc_norm when provided by the task, otherwise acc",
+    "num_fewshot": 0,
+    "apply_chat_template": false,
+    "batch_size": 16,
+    "device": "cuda:0",
+    "dtype": "auto (resolved to torch.float16)",
+    "seed": 42,
+    "limit": null,
+    "command": "HF_DATASETS_OFFLINE=1 HF_HUB_OFFLINE=1 CUDA_VISIBLE_DEVICES=0 lm-eval run --model hf --model_args pretrained=<exported-base> dtype=auto trust_remote_code=True --tasks ceval-valid cmmlu arc_easy piqa openbookqa hellaswag social_iqa --batch_size 16 --device cuda:0 --trust_remote_code --seed 42 --output_path <artifact-eval-dir>"
+  },
+  "datasets": [
+    {"task": "ceval-valid", "dataset_path": "ceval/ceval-exam", "split": "val", "samples": 1346, "revision": "not pinned by harness", "cache_fingerprint": "617524a00b307ff6f9933702f724131fe12ca7ce"},
+    {"task": "cmmlu", "dataset_path": "haonan-li/cmmlu", "split": "test", "samples": 11582, "revision": "not pinned by harness", "archive_sha256": "22ecf70b28bef447ee7d8aa5fe144f56996762f901a8537b03b7693773c672a6"},
+    {"task": "arc_easy", "dataset_path": "allenai/ai2_arc", "dataset_name": "ARC-Easy", "split": "test", "samples": 2376, "revision": "not pinned by harness"},
+    {"task": "piqa", "dataset_path": "baber/piqa", "split": "validation", "samples": 1838, "revision": "not pinned by harness"},
+    {"task": "openbookqa", "dataset_path": "allenai/openbookqa", "dataset_name": "main", "split": "test", "samples": 500, "revision": "not pinned by harness"},
+    {"task": "hellaswag", "dataset_path": "Rowan/hellaswag", "split": "validation", "samples": 10042, "revision": "not pinned by harness"},
+    {"task": "social_iqa", "dataset_path": "allenai/social_i_qa", "split": "validation", "samples": 1954, "revision": "not pinned by harness"}
+  ],
+  "environment": {
+    "gpu": "1x NVIDIA L20",
+    "nvidia_driver": "535.161.08",
+    "cuda_runtime": "12.4",
+    "torch": "2.6.0+cu124",
+    "transformers": "4.51.1",
+    "datasets": "3.6.0",
+    "typing_extensions": "4.16.0"
+  },
+  "evaluation_started_at": "2026-08-24T05:37:06Z",
+  "evaluation_finished_at": "2026-08-24T05:39:28Z",
+  "raw_results": {
+    "path": "eval/official_benchmarks.json",
+    "sha256": "ba9720844cd5cd1120752e219725733f086ca4c1ee82ef345d515398d6505f06"
+  },
+  "data_loading_notes": [
+    "The final scoring run used the complete local cache in offline mode after hf-mirror returned HTTP 429 during multi-subject metadata lookup.",
+    "The CMMLU loader source URL was redirected from huggingface.co to a local copy of the same cmmlu_v1_0_1.zip archive; task prompts and examples were not modified.",
+    "The harness does not pin dataset revisions, so this run is task-and-call aligned with the MiniMind README but is not a bitwise reproduction."
+  ]
+}

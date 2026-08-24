@@ -1,4 +1,6 @@
 # sha256 size_bytes path role
-# Filled after checkpoints exist. Expected paths:
-# /data/artifacts/minimind-lab/P01-dense-pretrain-mini-20260824/checkpoints/p01_pretrain_768.pth release-candidate
-# /data/projects/minimind-lab/minimind/checkpoints/p01_pretrain_768_resume.pth in-progress-resume
+71efd40d9fcd494bc5472891b66ea7f17167ae27ac341968bcd258a5a24b94e9 137684380 /data/artifacts/minimind-lab/P01-dense-pretrain-mini-20260824/checkpoints/p01_pretrain_768.pth baseline-base
+a7f24b81aa34e3f677a7d846a3c4c1c4cea87d6cdd2231842d13221ef24249a0 649065380 /data/projects/minimind-lab/minimind/checkpoints/p01_pretrain_768_resume.pth resumable-training-state
+
+# Retention: keep both files until P02 and S01 initialize successfully from P01.
+# The 619 MiB resume file is not a release artifact and can be removed after downstream initialization is verified.

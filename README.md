@@ -49,7 +49,7 @@ DPO、GRPO/CISPO 和 Agentic RL 默认从同一个 Full SFT 基线分支，避�
 
 | 阶段 | 初始化权重 | 数据 | 训练成本 | 目标指标 | 通用能力回归 | SwanLab | 权重 |
 |---|---|---|---:|---:|---:|---|---|
-| Pretrain mini | Random | 待填写 | 待填写 | 待评测 | - | 待填写 | 待填写 |
+| Pretrain mini | Random | `pretrain_t2t_mini` 1,270,238 行 | 45.83 min / 6.11 GPU-hours | 七项宏平均 31.44 | 无自身基线；官方口径参考 +0.66 pp | [run](https://swanlab.cn/@richliu0153/MiniMind-Lab-Stage3/runs/7iochx9kfe75qa2pt6d1u) | L20 保留，SHA `71efd40d` |
 | Pretrain full | Random | 待填写 | 待填写 | 待评测 | - | 待填写 | 待填写 |
 | Full SFT | Pretrain | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
 | LoRA | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
