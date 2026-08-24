@@ -1,0 +1,2 @@
+# Not applicable: Stage1 does not train a model or create a SwanLab run.
+# SwanLab login remains a global preflight gate for later training stages.

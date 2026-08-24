@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "missing_or_short_domains": [],
+  "tokenizer_vocab_size": 6400,
+  "tokenizer_bos": "<|im_start|>",
+  "tokenizer_eos": "<|im_end|>",
+  "tokenizer_pad": "<|endoftext|>",
+  "recorded_at": "2026-08-23T13:40:24.341368+00:00"
+}

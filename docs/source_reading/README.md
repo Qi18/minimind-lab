@@ -2,8 +2,8 @@
 
 建议顺序：
 
-1. 数据与 Tokenizer；
-2. 模型结构与前向传播；
+1. [数据与 Tokenizer](01-data-tokenizer.md)；
+2. [模型结构与前向传播](02-model-architecture.md)；
 3. Pretrain；
 4. Full SFT 与 LoRA；
 5. DPO；

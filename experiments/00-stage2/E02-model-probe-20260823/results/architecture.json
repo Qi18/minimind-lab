@@ -1,0 +1,242 @@
+{
+  "recorded_at": "2026-08-23T16:20:41.930039+00:00",
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "gpu": "NVIDIA L20",
+  "dense": {
+    "variant": "dense",
+    "config": {
+      "hidden_size": 768,
+      "layers": 8,
+      "attention_heads": 8,
+      "kv_heads": 4,
+      "head_dim": 96,
+      "intermediate_size": 2432,
+      "experts": 0,
+      "experts_per_token": 0,
+      "flash_sdpa_enabled": true
+    },
+    "parameters": {
+      "total": 63912192,
+      "active_per_token_estimate": 63912192,
+      "by_group": {
+        "embedding_lm_head": 4915200,
+        "attention": 14157312,
+        "norm": 13056,
+        "mlp": 44826624
+      },
+      "single_expert": 0
+    },
+    "probe": {
+      "input_ids": [
+        2,
+        16
+      ],
+      "logits": [
+        2,
+        16,
+        6400
+      ],
+      "hidden_states": [
+        2,
+        16,
+        768
+      ],
+      "loss": 8.928125381469727,
+      "aux_loss": 0.0,
+      "loss_finite": true,
+      "grad_finite": true,
+      "forward_backward_seconds": 0.2148896610015072,
+      "peak_allocated_mib": 655.46875
+    },
+    "tensor_shapes": {
+      "embedding": {
+        "input": [
+          [
+            2,
+            16
+          ]
+        ],
+        "output": [
+          2,
+          16,
+          768
+        ]
+      },
+      "layer0.input_norm": {
+        "input": [
+          [
+            2,
+            16,
+            768
+          ]
+        ],
+        "output": [
+          2,
+          16,
+          768
+        ]
+      },
+      "layer0.attention": {
+        "input": [
+          [
+            2,
+            16,
+            768
+          ],
+          [
+            [
+              16,
+              96
+            ],
+            [
+              16,
+              96
+            ]
+          ],
+          "NoneType",
+          "bool",
+          "NoneType"
+        ],
+        "output": [
+          [
+            2,
+            16,
+            768
+          ],
+          "NoneType"
+        ]
+      },
+      "layer0.post_attention_norm": {
+        "input": [
+          [
+            2,
+            16,
+            768
+          ]
+        ],
+        "output": [
+          2,
+          16,
+          768
+        ]
+      },
+      "layer0.mlp": {
+        "input": [
+          [
+            2,
+            16,
+            768
+          ]
+        ],
+        "output": [
+          2,
+          16,
+          768
+        ]
+      },
+      "final_norm": {
+        "input": [
+          [
+            2,
+            16,
+            768
+          ]
+        ],
+        "output": [
+          2,
+          16,
+          768
+        ]
+      },
+      "lm_head": {
+        "input": [
+          [
+            2,
+            16,
+            768
+          ]
+        ],
+        "output": [
+          2,
+          16,
+          6400
+        ]
+      }
+    },
+    "kv_cache": {
+      "layers": 8,
+      "prefix_layer0_key": [
+        2,
+        8,
+        4,
+        96
+      ],
+      "continued_layer0_key": [
+        2,
+        9,
+        4,
+        96
+      ],
+      "continued_logits": [
+        2,
+        1,
+        6400
+      ]
+    }
+  },
+  "moe": {
+    "variant": "moe",
+    "config": {
+      "hidden_size": 768,
+      "layers": 8,
+      "attention_heads": 8,
+      "kv_heads": 4,
+      "head_dim": 96,
+      "intermediate_size": 2432,
+      "experts": 4,
+      "experts_per_token": 1,
+      "flash_sdpa_enabled": true
+    },
+    "parameters": {
+      "total": 198416640,
+      "active_per_token_estimate": 63936768,
+      "by_group": {
+        "embedding_lm_head": 4915200,
+        "attention": 14157312,
+        "norm": 13056,
+        "mlp": 179331072
+      },
+      "single_expert": 44826624
+    },
+    "probe": {
+      "input_ids": [
+        2,
+        16
+      ],
+      "logits": [
+        2,
+        16,
+        6400
+      ],
+      "hidden_states": [
+        2,
+        16,
+        768
+      ],
+      "loss": 8.932291984558105,
+      "aux_loss": 0.004763144068419933,
+      "loss_finite": true,
+      "grad_finite": true,
+      "forward_backward_seconds": 0.19858014397323132,
+      "peak_allocated_mib": 1592.30908203125
+    },
+    "tensor_shapes": {},
+    "kv_cache": null
+  },
+  "comparison": {
+    "total_parameter_ratio_moe_over_dense": 3.1045194006176473,
+    "active_parameter_ratio_moe_over_dense": 1.0003845275718286,
+    "peak_memory_ratio_moe_over_dense": 2.4292677294398093
+  }
+}
