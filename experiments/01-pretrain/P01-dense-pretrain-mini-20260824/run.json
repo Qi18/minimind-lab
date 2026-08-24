@@ -1,0 +1,15 @@
+{
+  "experiment_id": "P01-dense-pretrain-mini-20260824",
+  "stage": "01-pretrain",
+  "status": "ready",
+  "baseline_lab_commit": "",
+  "minimind_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",
+  "command": "experiments/01-pretrain/P01-dense-pretrain-mini-20260824/command.sh",
+  "artifact_dir": "/data/artifacts/minimind-lab/P01-dense-pretrain-mini-20260824",
+  "resume_checkpoint": "/data/projects/minimind-lab/minimind/checkpoints/p01_pretrain_768_resume.pth",
+  "world_size": 8,
+  "swanlab_run_id": "",
+  "started_at": null,
+  "finished_at": null,
+  "exit_code": null
+}

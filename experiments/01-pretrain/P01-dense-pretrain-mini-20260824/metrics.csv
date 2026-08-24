@@ -1,0 +1,7 @@
+name,value,unit,status,recorded_at
+dataset_lines,1270238,rows,ready,2026-08-24T00:00:00Z
+model_parameters,63912192,parameters,ready,2026-08-24T00:00:00Z
+global_sequence_batch,256,sequences_per_optimizer_step,ready,2026-08-24T00:00:00Z
+max_token_slots_per_optimizer_step,196608,token_slots_per_optimizer_step,ready,2026-08-24T00:00:00Z
+expected_micro_steps,39695,micro_steps,estimated,2026-08-24T00:00:00Z
+expected_optimizer_updates,4962,updates,estimated,2026-08-24T00:00:00Z

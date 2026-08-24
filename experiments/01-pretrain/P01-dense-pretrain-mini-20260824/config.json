@@ -1,0 +1,45 @@
+{
+  "experiment_id": "P01-dense-pretrain-mini-20260824",
+  "stage": "01-pretrain",
+  "status": "ready",
+  "protocol_version": "2026-08-21",
+  "seed": 42,
+  "primary_variable": "first formal Dense pretraining baseline on the mini dataset",
+  "direct_baseline": "none; historical Official Zero is reference-only",
+  "model": {
+    "architecture": "MiniMindForCausalLM Dense",
+    "parameters": 63912192,
+    "hidden_size": 768,
+    "num_hidden_layers": 8,
+    "use_moe": false,
+    "vocab_size": 6400
+  },
+  "training": {
+    "epochs": 1,
+    "per_gpu_batch_size": 4,
+    "world_size": 8,
+    "accumulation_steps": 8,
+    "global_sequence_batch": 256,
+    "max_seq_len": 768,
+    "learning_rate": 0.0005,
+    "grad_clip": 1.0,
+    "dtype": "bfloat16",
+    "num_workers_per_rank": 8,
+    "log_interval_micro_steps": 10,
+    "save_interval_micro_steps": 1000,
+    "from_weight": "none",
+    "expected_micro_steps": 39695,
+    "expected_optimizer_updates": 4962
+  },
+  "dataset": {
+    "repo_id": "jingyaogong/minimind_dataset",
+    "revision": "312afb4f76391145c6902f765bb51691c09a12f5",
+    "file": "pretrain_t2t_mini.jsonl",
+    "line_count": 1270238,
+    "size_bytes": 1241043656,
+    "sha256": "6dd6716c84ab36897bdbfc7f88e04f4441c48c1ab7ecee88ce0b0e7d4685560c"
+  },
+  "hardware": "8x NVIDIA L20 46GB",
+  "tracking": "SwanLab project MiniMind-Lab-Stage3",
+  "notes": "Reproduces the historical Official Zero P01 configuration before later ablations."
+}

@@ -1,0 +1,4 @@
+# sha256 size_bytes path role
+# Filled after checkpoints exist. Expected paths:
+# /data/artifacts/minimind-lab/P01-dense-pretrain-mini-20260824/checkpoints/p01_pretrain_768.pth release-candidate
+# /data/projects/minimind-lab/minimind/checkpoints/p01_pretrain_768_resume.pth in-progress-resume

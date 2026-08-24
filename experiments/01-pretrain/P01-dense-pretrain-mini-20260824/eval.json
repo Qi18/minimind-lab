@@ -1,0 +1,15 @@
+{
+  "status": "not_started",
+  "protocol": "docs/evaluation_protocol.md",
+  "apply_chat_template": false,
+  "tasks": [
+    "ceval-valid",
+    "cmmlu",
+    "arc_easy",
+    "piqa",
+    "openbookqa",
+    "hellaswag",
+    "social_iqa"
+  ],
+  "results": {}
+}
