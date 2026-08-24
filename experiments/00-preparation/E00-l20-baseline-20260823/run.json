@@ -1,6 +1,7 @@
 {
   "experiment_id": "E00-l20-baseline-20260823",
-  "stage": "00-stage0",
+  "stage": "00-preparation",
+  "preparation_step": "stage0-environment",
   "status": "completed",
   "baseline_lab_commit": "7b0375d06375648e186786f831f4964d31d0b4d8",
   "stage0_implementation_commit": "9ca9fe21899fc5e0a4b4b425cfecba03eca4161b",

@@ -128,9 +128,9 @@ Tokenizer 与 rollout engine 在后续 Agent 阶段才介入。
 
 ## 7. 可复现证据
 
-- [数据 manifest](../../experiments/00-stage1/E01-tokenizer-dataset-20260823/data_manifest.json)
-- [数据质量报告](../../experiments/00-stage1/E01-tokenizer-dataset-20260823/data_quality_report.md)
-- [样本变换结果](../../experiments/00-stage1/E01-tokenizer-dataset-20260823/results/sample_transformations.json)
+- [数据 manifest](../../experiments/00-preparation/E01-tokenizer-dataset-20260823/data_manifest.json)
+- [数据质量报告](../../experiments/00-preparation/E01-tokenizer-dataset-20260823/data_quality_report.md)
+- [样本变换结果](../../experiments/00-preparation/E01-tokenizer-dataset-20260823/results/sample_transformations.json)
 - [分析脚本](../../scripts/eval/analyze_tokenizer_dataset.py)
 
 官方原始数据保存在 CPFS `/data/datasets`，不进入 Git。仓库只保存版本、文件大小、SHA256、行数、聚合指标和自行编写的合成 fixtures。

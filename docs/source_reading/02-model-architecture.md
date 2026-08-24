@@ -126,4 +126,4 @@ Seed42 在 step50 保存 model、AdamW optimizer、step、world size 和 SwanLab
 
 Stage2 证明了模型结构、Dense/MoE 分支、KV cache、8 卡 DDP、BF16、SwanLab 和 resume 链路正确。它没有证明模型已经收敛，也不能与 Stage3 的 seq 768 正式 Pretrain 吞吐或质量直接比较。
 
-可复现证据位于 `experiments/00-stage2/E02-model-probe-20260823/`，原始模型与 optimizer checkpoint 只保留在 CPFS，由 `checkpoint-manifest.txt` 记录 SHA256。
+可复现证据位于 `experiments/00-preparation/E02-model-probe-20260823/`，原始模型与 optimizer checkpoint 只保留在 CPFS，由 `checkpoint-manifest.txt` 记录 SHA256。

@@ -1,7 +1,8 @@
 {
   "experiment_id": "E00-l20-baseline-20260823",
-  "stage": "00-stage0",
-  "status": "running",
+  "stage": "00-preparation",
+  "preparation_step": "stage0-environment",
+  "status": "completed",
   "protocol_version": "2026-08-21",
   "expected_gpu_count": 8,
   "dtype": "bfloat16",

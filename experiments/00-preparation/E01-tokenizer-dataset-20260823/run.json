@@ -1,6 +1,7 @@
 {
   "experiment_id": "E01-tokenizer-dataset-20260823",
-  "stage": "00-stage1",
+  "stage": "00-preparation",
+  "preparation_step": "stage1-tokenizer-dataset",
   "status": "completed",
   "baseline_lab_commit": "080179c9d1ec2a0752e2a21155af899e7509c5b9",
   "minimind_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",

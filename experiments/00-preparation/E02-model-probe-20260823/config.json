@@ -1,6 +1,7 @@
 {
   "experiment_id": "E02-model-probe-20260823",
-  "stage": "00-stage2",
+  "stage": "00-preparation",
+  "preparation_step": "stage2-model-probe",
   "status": "completed",
   "protocol_version": "2026-08-21",
   "seeds": [

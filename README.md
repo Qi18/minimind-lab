@@ -17,6 +17,7 @@ MiniMind Lab 是一个围绕 64M 级小语言模型展开的可复现实验项�
 - [仓库管理方式](docs/repository-management.md)
 - [统一评测协议](docs/evaluation_protocol.md)
 - [最终报告模板](docs/final_report.md)
+- [训练前准备实验](experiments/00-preparation/README.md)
 - [实验登记规范](experiments/README.md)
 - [源码阅读索引](docs/source_reading/README.md)
 - [MiniMind 上游来源与同步](docs/upstream-minimind.md)
@@ -24,10 +25,11 @@ MiniMind Lab 是一个围绕 64M 级小语言模型展开的可复现实验项�
 ## 实验主线
 
 ```text
-Data / Tokenizer
-        ↓
-Model Architecture
-        ↓
+Preparation
+   ├─ Environment / L20 Baseline
+   ├─ Data / Tokenizer Audit
+   └─ Model / DDP / Resume Probe
+                  ↓
 Pretrain ───────────────→ Base Evaluation
         ↓
 Full SFT

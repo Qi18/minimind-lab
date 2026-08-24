@@ -1,6 +1,7 @@
 {
   "experiment_id": "E01-tokenizer-dataset-20260823",
-  "stage": "00-stage1",
+  "stage": "00-preparation",
+  "preparation_step": "stage1-tokenizer-dataset",
   "status": "completed",
   "protocol_version": "2026-08-21",
   "seed": 42,

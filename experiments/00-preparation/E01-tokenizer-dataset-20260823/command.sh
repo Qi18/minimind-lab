@@ -2,7 +2,7 @@
 set -Eeuo pipefail
 
 ROOT_DIR="$(cd "$(dirname "$0")/../../.." && pwd)"
-EXPERIMENT_DIR="$ROOT_DIR/experiments/00-stage1/E01-tokenizer-dataset-20260823"
+EXPERIMENT_DIR="$ROOT_DIR/experiments/00-preparation/E01-tokenizer-dataset-20260823"
 PYTHON_BIN="${PYTHON_BIN:-/data/venvs/minimind-lab/bin/python}"
 export HF_ENDPOINT="${HF_ENDPOINT:-https://hf-mirror.com}"
 export HF_HOME="${HF_HOME:-/data/cache/huggingface}"

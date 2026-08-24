@@ -58,6 +58,10 @@ agent-dense64m-agentrl-cispo-20260821
 
 ## 4. 实验目录契约
 
+`experiments/00-preparation/` 是训练前准备的统一入口，包含 E00 环境基线、E01 Tokenizer/数据审计和 E02 模型/DDP/resume 探针。它们不是正式模型训练结果；正式训练从 `experiments/01-pretrain/` 的 P01 开始。
+
+准备实验在 `config.json` 和 `run.json` 中的 `stage` 统一记录为 `00-preparation`，具体顺序由 `preparation_step` 和实验 ID 区分；`registry.csv` 保留 stage0/1/2 以便按原执行阶段筛选。
+
 每个正式实验目录至少包含：
 
 ```text

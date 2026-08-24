@@ -1,6 +1,18 @@
 # 实验目录规范
 
-每个实验在对应阶段目录下建立独立目录，名称使用稳定实验 ID，不只使用日期。
+Stage0–2 都是正式训练前的准备验证，统一放在 `00-preparation/`；P01 开始才进入正式训练目录。准备实验仍用 E00/E01/E02 保留执行顺序和职责边界。
+
+```text
+experiments/
+├── 00-preparation/   # E00 环境、E01 数据、E02 模型探针
+├── 01-pretrain/
+├── 02-sft/
+├── 03-dpo/
+├── 04-grpo-cispo/
+└── 05-agentic-rl/
+```
+
+每个实验在对应目录下建立独立目录，名称使用稳定实验 ID，不只使用日期。
 
 ```text
 experiments/<stage>/<experiment-id>/
