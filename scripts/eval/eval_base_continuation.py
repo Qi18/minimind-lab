@@ -36,6 +36,7 @@ def main() -> None:
     with args.output.open("w", encoding="utf-8") as handle:
         for item in PROMPTS:
             encoded = tokenizer(item["prompt"], return_tensors="pt").to(args.device)
+            encoded.pop("token_type_ids", None)
             with torch.inference_mode():
                 generated = model.generate(
                     **encoded,
