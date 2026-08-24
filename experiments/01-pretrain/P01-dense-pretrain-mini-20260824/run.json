@@ -2,7 +2,7 @@
   "experiment_id": "P01-dense-pretrain-mini-20260824",
   "stage": "01-pretrain",
   "status": "ready",
-  "baseline_lab_commit": "",
+  "baseline_lab_commit": "98df41a39636ad21a435437068072ef38584622b",
   "minimind_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",
   "command": "experiments/01-pretrain/P01-dense-pretrain-mini-20260824/command.sh",
   "artifact_dir": "/data/artifacts/minimind-lab/P01-dense-pretrain-mini-20260824",
