@@ -1,7 +1,7 @@
 {
   "experiment_id": "P02-dense-pretrain-full-20260824",
   "stage": "01-pretrain",
-  "status": "planned",
+  "status": "running",
   "protocol_version": "2026-08-21",
   "seed": 42,
   "primary_variable": "pretraining dataset scale: mini to full",

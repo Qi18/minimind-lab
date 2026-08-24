@@ -25,7 +25,7 @@
 
 ## Training result
 
-待正式训练后填写。训练启动前必须通过 L20 preflight、GPU 空闲检查、单实例锁、数据大小/行数/SHA256 校验和 dry-run。
+attempt 2 于 2026-08-24 12:04:45 UTC 从随机权重启动，训练 commit `10e2de6deb1d3dc827e896149b1d3e8ba1c3a85c`。step 10→100→180 的 loss 为 8.5419→7.3531→6.9985；8 张 L20 均约 99% 利用率、单卡约 3,476 MiB，早期 ETA 约 302 分钟。该窗口只证明训练健康，不能提前判定收敛。
 
 ## Evaluation result
 

@@ -1,17 +1,17 @@
 {
   "experiment_id": "P02-dense-pretrain-full-20260824",
   "stage": "01-pretrain",
-  "status": "planned",
+  "status": "running",
   "baseline_experiment": "P01-dense-pretrain-mini-20260824",
   "baseline_lab_commit": "fd5f5c41d47b9e9eab9fc1f6e1eb13c568b5cb3c",
-  "training_lab_commit": null,
+  "training_lab_commit": "10e2de6deb1d3dc827e896149b1d3e8ba1c3a85c",
   "minimind_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",
   "command": "experiments/01-pretrain/P02-dense-pretrain-full-20260824/command.sh",
   "evaluation_command": "experiments/01-pretrain/P02-dense-pretrain-full-20260824/eval/command.sh",
   "artifact_dir": "/data/artifacts/minimind-lab/P02-dense-pretrain-full-20260824",
   "resume_checkpoint": "/data/projects/minimind-lab/minimind/checkpoints/p02_pretrain_768_resume.pth",
   "world_size": 8,
-  "swanlab_run_id": null,
+  "swanlab_run_id": "bs7n0qfcxykk13fammxis",
   "attempts": [
     {
       "attempt": 1,
@@ -19,10 +19,20 @@
       "finished_at": "2026-08-24T11:59:20Z",
       "exit_code": 1,
       "completed_training_steps": 0,
+      "swanlab_run_id": "ij3ujuvmbni6fouaz0r1f",
       "failure": "default rootfs datasets Arrow cache exhausted the 10GB Pod root filesystem"
+    },
+    {
+      "attempt": 2,
+      "started_at": "2026-08-24T12:04:45Z",
+      "finished_at": null,
+      "exit_code": null,
+      "completed_training_steps": null,
+      "swanlab_run_id": "bs7n0qfcxykk13fammxis",
+      "failure": null
     }
   ],
-  "started_at": null,
+  "started_at": "2026-08-24T12:04:45Z",
   "finished_at": null,
   "exit_code": null
 }
