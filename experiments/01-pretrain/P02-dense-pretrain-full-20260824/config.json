@@ -24,6 +24,7 @@
     "learning_rate": 0.0005,
     "grad_clip": 1.0,
     "dtype": "bfloat16",
+    "datasets_cache": "/data/cache/huggingface/datasets",
     "num_workers_per_rank": 8,
     "log_interval_micro_steps": 10,
     "save_interval_micro_steps": 1000,

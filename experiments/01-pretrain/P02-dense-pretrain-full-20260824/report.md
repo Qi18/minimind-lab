@@ -37,7 +37,9 @@
 
 ## Failures and anomalies
 
-暂无。
+首次正式启动在进入第一个训练 step 前失败：8 个 rank 使用默认 `/root/.cache/huggingface/datasets` 并发生成 full JSON 的 Arrow cache，rank 7 报 `No space left on device`。GPU 尚未进入训练，未生成 checkpoint。
+
+修复为强制 cache 位于 CPFS `/data/cache/huggingface/datasets`，并在 torchrun 前通过单进程预构建并验证 8,468,827 行共享 Arrow cache。只删除了本次失败产生的 217,068,495-byte 临时 cache，历史 cache 未动。
 
 ## Conclusion
 

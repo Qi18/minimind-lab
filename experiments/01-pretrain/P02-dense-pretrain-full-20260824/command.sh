@@ -17,6 +17,9 @@ HARDWARE_LOG="$ARTIFACT_DIR/logs/nvidia-smi.csv"
 RUNTIME_MANIFEST="$ARTIFACT_DIR/runtime-manifest.txt"
 MONITOR_PID=""
 
+export HF_HOME="${HF_HOME:-/data/cache/huggingface}"
+export HF_DATASETS_CACHE="${HF_DATASETS_CACHE:-$HF_HOME/datasets}"
+
 fail() {
   printf 'error=%s\n' "$1" >&2
   exit 1
@@ -47,6 +50,12 @@ actual_line_count="$(wc -l < "$DATA_PATH" | tr -d ' ')"
 [[ "$actual_line_count" == "$EXPECTED_DATA_LINES" ]] || fail "dataset_line_count_mismatch:$actual_line_count"
 actual_sha256="$(sha256sum "$DATA_PATH" | awk '{print $1}')"
 [[ "$actual_sha256" == "$EXPECTED_DATA_SHA256" ]] || fail "dataset_sha256_mismatch:$actual_sha256"
+[[ "$HF_DATASETS_CACHE" == /data/* ]] || fail "hf_datasets_cache_must_be_under_data:$HF_DATASETS_CACHE"
+
+"$PYTHON_BIN" "$ROOT_DIR/experiments/01-pretrain/$EXPERIMENT_ID/prepare_pretrain_cache.py" \
+  --data-path "$DATA_PATH" \
+  --cache-dir "$HF_DATASETS_CACHE" \
+  --expected-rows "$EXPECTED_DATA_LINES"
 
 mkdir -p "$ARTIFACT_DIR/checkpoints" "$ARTIFACT_DIR/logs"
 {

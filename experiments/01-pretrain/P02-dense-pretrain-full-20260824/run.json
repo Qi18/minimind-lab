@@ -12,6 +12,16 @@
   "resume_checkpoint": "/data/projects/minimind-lab/minimind/checkpoints/p02_pretrain_768_resume.pth",
   "world_size": 8,
   "swanlab_run_id": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-08-24T11:58:05Z",
+      "finished_at": "2026-08-24T11:59:20Z",
+      "exit_code": 1,
+      "completed_training_steps": 0,
+      "failure": "default rootfs datasets Arrow cache exhausted the 10GB Pod root filesystem"
+    }
+  ],
   "started_at": null,
   "finished_at": null,
   "exit_code": null
