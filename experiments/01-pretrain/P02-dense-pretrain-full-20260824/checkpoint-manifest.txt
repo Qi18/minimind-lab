@@ -1,0 +1,3 @@
+# sha256 size_bytes path role
+# Planned inference checkpoint: /data/artifacts/minimind-lab/P02-dense-pretrain-full-20260824/checkpoints/p02_pretrain_768.pth
+# Planned resume checkpoint: /data/projects/minimind-lab/minimind/checkpoints/p02_pretrain_768_resume.pth

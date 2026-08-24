@@ -1,0 +1,17 @@
+{
+  "status": "not_started",
+  "protocol": "docs/evaluation_protocol.md",
+  "apply_chat_template": false,
+  "metric_rule": "acc_norm when available, otherwise acc",
+  "tasks": [
+    "ceval-valid",
+    "cmmlu",
+    "arc_easy",
+    "piqa",
+    "openbookqa",
+    "hellaswag",
+    "social_iqa"
+  ],
+  "direct_baseline": "P01-dense-pretrain-mini-20260824",
+  "results": {}
+}

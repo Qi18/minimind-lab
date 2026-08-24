@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "source": "huggingface",
+  "endpoint": "https://hf-mirror.com",
+  "repo_id": "jingyaogong/minimind_dataset",
+  "revision": "312afb4f76391145c6902f765bb51691c09a12f5",
+  "downloaded_at": "2026-08-24T11:50:54Z",
+  "files": [
+    {
+      "name": "pretrain_t2t.jsonl",
+      "role": "full_pretrain",
+      "path": "/data/datasets/minimind/312afb4f76391145c6902f765bb51691c09a12f5/pretrain_t2t.jsonl",
+      "size_bytes": 8275074893,
+      "sha256": "31efc9a6fa7430769c0e78cde1c8ec0273ac7bbad20614c0ee58bccef327cc9d",
+      "line_count": 8468827,
+      "first_record_keys": ["text"],
+      "last_record_keys": ["text"]
+    }
+  ]
+}
