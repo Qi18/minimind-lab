@@ -20,7 +20,9 @@
 
 ## Training result
 
-状态：等待启动。预计约 39,695 micro-steps、4,962 optimizer updates；实际耗时以启动后的稳定窗口重新估算。
+状态：运行中。2026-08-24 03:16:40 UTC 从随机权重启动，训练 commit `64d2908c8300985357993a66011e2b6114104fd1`，SwanLab run `7iochx9kfe75qa2pt6d1u`。
+
+早期窗口已通过：step 10→100→470 的 loss 为 8.3476→7.2536→5.9830；step 480 日志 ETA 约 45 分钟。8 张卡利用率约 98–99%，单卡显存约 3,492 MiB，未观察到 OOM、NaN 或训练中 NCCL 错误。该窗口只证明训练健康，不能提前判定收敛。
 
 ## Evaluation result
 

@@ -5,3 +5,8 @@ global_sequence_batch,256,sequences_per_optimizer_step,ready,2026-08-24T00:00:00
 max_token_slots_per_optimizer_step,196608,token_slots_per_optimizer_step,ready,2026-08-24T00:00:00Z
 expected_micro_steps,39695,micro_steps,estimated,2026-08-24T00:00:00Z
 expected_optimizer_updates,4962,updates,estimated,2026-08-24T00:00:00Z
+early_loss_step_10,8.3476,loss,observed,2026-08-24T03:18:00Z
+early_loss_step_100,7.2536,loss,observed,2026-08-24T03:18:00Z
+early_loss_step_470,5.9830,loss,observed,2026-08-24T03:18:00Z
+early_eta_step_480,45,minutes,estimated,2026-08-24T03:18:00Z
+early_gpu_memory_per_rank,3492,MiB,observed,2026-08-24T03:18:00Z

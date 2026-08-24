@@ -1,1 +1,1 @@
-# Add the public SwanLab run URL after the run starts.
+https://swanlab.cn/@richliu0153/MiniMind-Lab-Stage3/runs/7iochx9kfe75qa2pt6d1u
