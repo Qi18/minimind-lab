@@ -18,6 +18,7 @@
 - Training：1 epoch，每卡 batch 2，累积 1，global sequence batch 16，BF16，lr 1e-5
 - Expected：56,608 microsteps / optimizer updates
 - SwanLab：project `MiniMind-Lab`，run `S01-SFT-Mini-64M-Seq768`
+- SwanLab URL：<https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/p2ttzc7ycn5tpaegt4odo>
 
 本次先复现历史 SFT 参数，不同时更改 epoch、batch、学习率或数据规模。代码默认的 2 epoch / batch 16 留作后续消融候选。
 
@@ -44,4 +45,4 @@
 
 ## Conclusion
 
-状态：ready。只有训练、SwanLab、checkpoint manifest、Chat/Tool 和官方七项全部完成后，才可标记为 Official Zero completed。
+状态：running。训练从 `2026-08-25T13:05:26Z` 开始；只有 SwanLab、checkpoint manifest、Chat/Tool 和官方七项全部完成后，才可标记为 Official Zero completed。

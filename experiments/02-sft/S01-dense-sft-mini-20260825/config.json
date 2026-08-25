@@ -1,7 +1,7 @@
 {
   "experiment_id": "S01-dense-sft-mini-20260825",
   "stage": "02-sft",
-  "status": "ready",
+  "status": "running",
   "protocol_version": "2026-08-21",
   "seed": 42,
   "primary_variable": "one-epoch Full SFT on sft_t2t_mini initialized from P01",
