@@ -1,0 +1,54 @@
+{
+  "experiment_id": "S01R1-dense-sft-mini-20260825",
+  "stage": "02-sft",
+  "status": "prepared",
+  "protocol_version": "2026-08-25-sft-repair-v1",
+  "seed": 42,
+  "direct_baseline": "P01-dense-pretrain-mini-20260824",
+  "invalidated_predecessor": "S01-dense-sft-mini-20260825",
+  "model": {
+    "architecture": "MiniMindForCausalLM Dense",
+    "parameters": 63912192,
+    "hidden_size": 768,
+    "num_hidden_layers": 8,
+    "use_moe": false,
+    "vocab_size": 6400
+  },
+  "training": {
+    "epochs": 2,
+    "per_gpu_batch_size": "selected_by_probe_from_[4,8,16,32]",
+    "world_size": 8,
+    "accumulation_steps": 1,
+    "max_seq_len": 768,
+    "learning_rate": 0.00001,
+    "grad_clip": 1.0,
+    "dtype": "bfloat16",
+    "log_interval_optimizer_steps": 100,
+    "eval_interval_optimizer_steps": 500,
+    "save_interval_optimizer_steps": 1000
+  },
+  "validation": {
+    "size": 10000,
+    "split_algorithm": "torch.randperm",
+    "split_seed": 42,
+    "augmentation": false,
+    "metric": "token_weighted_cross_entropy_aggregated_across_8_ranks",
+    "checkpoints": ["best_validation", "last"]
+  },
+  "dataset": {
+    "repo_id": "jingyaogong/minimind_dataset",
+    "revision": "312afb4f76391145c6902f765bb51691c09a12f5",
+    "file": "sft_t2t_mini.jsonl",
+    "line_count": 905718,
+    "sha256": "abb1e76b2056e14728beb96b7b3c491a0bef1ed3e34a9b381b28f29fa518"
+  },
+  "initialization": {
+    "experiment_id": "P01-dense-pretrain-mini-20260824",
+    "sha256": "71efd40d9fcd494bc5472891b66ea7f17167ae27ac341968bcd258a5a24b94e9"
+  },
+  "hardware": "8x NVIDIA L20 46GB",
+  "tracking": {
+    "provider": "SwanLab",
+    "project": "MiniMind-Lab"
+  }
+}
