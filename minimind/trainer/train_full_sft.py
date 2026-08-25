@@ -104,6 +104,7 @@ if __name__ == "__main__":
     parser.add_argument('--from_resume', default=0, type=int, choices=[0, 1], help="是否自动检测&续训（0=否，1=是）")
     parser.add_argument("--use_wandb", action="store_true", help="是否使用wandb")
     parser.add_argument("--wandb_project", type=str, default="MiniMind-Full-SFT", help="wandb项目名")
+    parser.add_argument("--wandb_run_name", type=str, default="", help="SwanLab运行名；为空时使用源码默认名称")
     parser.add_argument("--use_compile", default=0, type=int, choices=[0, 1], help="是否使用torch.compile加速（0=否，1=是）")
     args = parser.parse_args()
 
@@ -128,8 +129,8 @@ if __name__ == "__main__":
         import swanlab as wandb
         wandb_id = ckp_data.get('wandb_id') if ckp_data else None
         resume = 'must' if wandb_id else None
-        wandb_run_name = f"MiniMind-Full-SFT-Epoch-{args.epochs}-BatchSize-{args.batch_size}-LearningRate-{args.learning_rate}"
-        wandb.init(project=args.wandb_project, name=wandb_run_name, id=wandb_id, resume=resume)
+        wandb_run_name = args.wandb_run_name or f"MiniMind-Full-SFT-Epoch-{args.epochs}-BatchSize-{args.batch_size}-LearningRate-{args.learning_rate}"
+        wandb.init(project=args.wandb_project, name=wandb_run_name, id=wandb_id, resume=resume, config=vars(args))
     
     # ========== 5. 定义模型、数据、优化器 ==========
     model, tokenizer = init_model(lm_config, args.from_weight, device=args.device)

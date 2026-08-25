@@ -1,0 +1,17 @@
+{
+  "experiment_id": "S01-dense-sft-mini-20260825",
+  "stage": "02-sft",
+  "status": "ready",
+  "baseline_lab_commit": "782e5f1ee86eb608c254478f12edb217579f59c5",
+  "minimind_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",
+  "command": "experiments/02-sft/S01-dense-sft-mini-20260825/command.sh",
+  "artifact_dir": "/data/artifacts/minimind-lab/S01-dense-sft-mini-20260825",
+  "base_checkpoint": "/data/artifacts/minimind-lab/P01-dense-pretrain-mini-20260824/checkpoints/p01_pretrain_768.pth",
+  "checkpoint": "/data/artifacts/minimind-lab/S01-dense-sft-mini-20260825/checkpoints/s01_full_sft_768.pth",
+  "resume_checkpoint": "/data/projects/minimind-lab-stage4-s01/minimind/checkpoints/s01_full_sft_768_resume.pth",
+  "world_size": 8,
+  "swanlab_run_id": "",
+  "started_at": null,
+  "finished_at": null,
+  "exit_code": null
+}
