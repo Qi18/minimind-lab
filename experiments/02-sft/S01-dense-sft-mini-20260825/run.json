@@ -1,7 +1,7 @@
 {
   "experiment_id": "S01-dense-sft-mini-20260825",
   "stage": "02-sft",
-  "status": "running",
+  "status": "invalidated",
   "baseline_lab_commit": "782e5f1ee86eb608c254478f12edb217579f59c5",
   "training_lab_commit": "e146c1f8925f4cc4974705463dda5883d2cec5a4",
   "minimind_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",
@@ -13,6 +13,9 @@
   "world_size": 8,
   "swanlab_run_id": "p2ttzc7ycn5tpaegt4odo",
   "started_at": "2026-08-25T13:05:26Z",
-  "finished_at": null,
-  "exit_code": null
+  "finished_at": "2026-08-25T14:10:51Z",
+  "exit_code": 0,
+  "invalidated_at": "2026-08-25T15:09:14Z",
+  "invalidation_reason": "No deterministic validation split or validation loss; per-step loss remained high-variance with batch_size=2, so convergence and checkpoint selection could not be established.",
+  "artifact_policy": "Preserve logs and checkpoint as diagnostic-only; exclude from release and primary comparisons."
 }

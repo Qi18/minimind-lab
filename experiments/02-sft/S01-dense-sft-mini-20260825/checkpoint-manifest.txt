@@ -1,1 +1,2 @@
 # sha256 size_bytes path role
+50859557d6fb03604a005c7e3aca6d8ab7ce41780f0c94fb7691cc18ede70419 137684380 /data/artifacts/minimind-lab/S01-dense-sft-mini-20260825/checkpoints/s01_full_sft_768.pth diagnostic-invalidated-not-for-release

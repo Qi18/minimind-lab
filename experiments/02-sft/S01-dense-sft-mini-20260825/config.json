@@ -1,7 +1,7 @@
 {
   "experiment_id": "S01-dense-sft-mini-20260825",
   "stage": "02-sft",
-  "status": "running",
+  "status": "invalidated",
   "protocol_version": "2026-08-21",
   "seed": 42,
   "primary_variable": "one-epoch Full SFT on sft_t2t_mini initialized from P01",
@@ -50,5 +50,5 @@
     "project": "MiniMind-Lab",
     "run_name": "S01-SFT-Mini-64M-Seq768"
   },
-  "notes": "Historical Official Zero SFT values: per-GPU batch 2, accumulation 1, seq_len 768, one epoch. This run freezes that baseline before any SFT hyperparameter ablation."
+  "notes": "Custom 8xL20 diagnostic configuration. The per-GPU batch 2 and one-epoch setting were not sourced from an official MiniMind training recipe. The run was invalidated because it had no deterministic validation loss and its noisy single-batch loss could not establish convergence."
 }

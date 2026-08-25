@@ -152,15 +152,15 @@ GPU 数量和梯度累积不会增加唯一训练数据量。报告 Token/parame
 
 - 验证 L20 8 张 GPU、CUDA、BF16、NCCL all-reduce、CPFS 和 `/dev/shm`；
 - 验证 SwanLab 登录，但不把 API key 放入命令、日志或仓库；
-- 盘点是否仍存在 Official Zero 数据、日志、checkpoint 和 SwanLab run；
+- 盘点是否仍存在旧 mini 路线的数据、日志、checkpoint 和 SwanLab run；
 - 为每个正式训练脚本加入 GPU 空闲门禁、单实例锁和 SIGTERM 安全退出；
 - 建立 `scripts/launch/`、`scripts/sync/` 和实验目录模板。
 
-### 6.3 历史 Official Zero
+### 6.3 旧内部试跑记录
 
-历史配置是：
+旧笔记曾记录以下参数，但没有官方来源，不能称为官方配置或官方复现：
 
-| 项目 | 历史实验值 |
+| 项目 | 旧内部试跑值 |
 |---|---|
 | 模型 | Dense 约 63.91M，hidden 768，8 层 |
 | 硬件 | 8×L20 |
@@ -169,7 +169,7 @@ GPU 数量和梯度累积不会增加唯一训练数据量。报告 Token/parame
 | SFT | 每卡 batch 2，累积 1，seq 768，1 epoch |
 | 数据 | `pretrain_t2t_mini` + `sft_t2t_mini` |
 
-历史状态只能写成“曾运行并恢复”，只有重新找到完成日志、权重、SwanLab 和评测后才能升级为“已完成”。
+这些值只能作为内部试跑线索；每次正式实验必须重新说明配置依据并完成独立验收。
 
 ### 6.4 阶段门
 
@@ -234,7 +234,7 @@ GPU 数量和梯度累积不会增加唯一训练数据量。报告 Token/parame
 
 ### 9.1 代码默认与 Lab 基线
 
-当前代码默认是 `epochs=2`、每进程 `batch_size=32`、`accumulation_steps=8`、`max_seq_len=340`、`lr=5e-4`。P01 不直接照搬默认值，而是先复现历史 Official Zero 配置：
+当前代码默认是 `epochs=2`、每进程 `batch_size=32`、`accumulation_steps=8`、`max_seq_len=340`、`lr=5e-4`。P01 是自定义 8×L20 基线：通过每卡 batch 4 和累积 8 保持 global sequence batch 256，但 epoch 1 和 seq_len 768 均不同于源码默认值：
 
 ```bash
 cd /data/projects/minimind-lab/minimind/trainer
@@ -270,11 +270,13 @@ torchrun --nproc_per_node=8 train_pretrain.py \
 - Base 评测、系统指标和 checkpoint manifest 完成；
 - 选出 `P01 release candidate` 后才能进入 S01。
 
-## 10. Stage 4：Dense SFT mini（S01）与 Zero 验收
+## 10. Stage 4：Dense SFT mini（S01）与 MiniMind Zero 路线验收
 
 ### 10.1 训练基线
 
-当前代码默认 `epochs=2/batch=16/seq=768/lr=1e-5`。历史实验值是每卡 batch 2、累积 1、1 epoch；首次正式复现优先使用历史值，并把代码默认作为后续消融候选。
+当前代码默认 `epochs=2/batch=16/seq=768/lr=1e-5`。在 8 卡 DDP 中，`batch` 是每进程值，直接使用默认值会得到 global batch 128。
+
+`S01-dense-sft-mini-20260825` 使用的每卡 batch 2、累积 1、1 epoch 是本项目自定义配置，不是官方历史配方；该运行因缺少 validation loss、无法可靠判断收敛而作废。后续必须先运行 batch probe，再按实验目录中的 `repair-plan.md` 建立新实验目录重跑。
 
 初始化必须是 P01 选中的 `pretrain` 权重，不能从随机权重训练 SFT。
 
@@ -298,7 +300,7 @@ torchrun --nproc_per_node=8 train_pretrain.py \
 - 形成可交互 Zero 模型；
 - Tool Call 基础格式可用；
 - 明确 SFT 带来的目标收益和 Base 回归；
-- Official Zero 才能标记为完成。
+- 只有 mini Pretrain + mini SFT 的训练、validation、Chat/Tool 和通用回归全部通过，MiniMind Zero 路线才能标记为完成。
 
 ## 11. Stage 5：完整数据 Dense（P02/S02）
 
@@ -603,7 +605,7 @@ GitHub 不保存权重、优化器状态、原始数据和完整日志。
 | 周 | 训练主线 | 源码阅读 | 交付物 |
 |---|---|---|---|
 | 1 | 环境、历史盘点、数据探针 | Dataset、Tokenizer、checkpoint | manifest、数据报告、smoke |
-| 2 | P01 + S01 Official Zero | 模型结构、Pretrain、SFT | Zero 基线、源码笔记 |
+| 2 | P01 + S01 mini 路线 | 模型结构、Pretrain、SFT | MiniMind Zero 基线、源码笔记 |
 | 3 | P02 完整 Pretrain | optimizer、DDP、吞吐 | mini/full Base 对照 |
 | 4 | S02 + Tool baseline | chat template、LoRA | Full SFT、领域方案 |
 | 5 | DPO + PPO smoke | DPO、Reward/Critic、GAE | preference/RL 基线 |
@@ -668,11 +670,11 @@ GitHub 不保存权重、优化器状态、原始数据和完整日志。
 
 ## 26. 下一步执行顺序
 
-1. 在 L20 盘点旧 Official Zero 资产和当前数据；
+1. 在 L20 盘点旧 mini 路线资产和当前数据；
 2. 建立 Stage 0 环境与实验模板；
 3. 完成 Data/Tokenizer 报告；
 4. 运行 100-step 模型与恢复探针；
-5. 决定复用历史 P01，还是从头重跑 Official Zero；
+5. 决定旧内部试跑是否仅保留为诊断证据，正式配置必须重新冻结；
 6. P01/S01 通过统一评测后，再启动完整数据 P02/S02。
 
-在第 5 步完成前，不把历史 Official Zero 标记为完成，也不启动新的全量后训练。
+在第 5 步完成前，不把 MiniMind Zero 路线标记为完成，也不启动新的全量后训练。
