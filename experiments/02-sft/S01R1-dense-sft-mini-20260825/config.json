@@ -1,7 +1,7 @@
 {
   "experiment_id": "S01R1-dense-sft-mini-20260825",
   "stage": "02-sft",
-  "status": "prepared",
+  "status": "ready",
   "protocol_version": "2026-08-25-sft-repair-v1",
   "seed": 42,
   "direct_baseline": "P01-dense-pretrain-mini-20260824",
@@ -16,7 +16,9 @@
   },
   "training": {
     "epochs": 2,
-    "per_gpu_batch_size": "selected_by_probe_from_[4,8,16,32]",
+    "per_gpu_batch_size": 16,
+    "global_batch_size": 128,
+    "expected_optimizer_steps": 13994,
     "world_size": 8,
     "accumulation_steps": 1,
     "max_seq_len": 768,
@@ -49,6 +51,7 @@
   "hardware": "8x NVIDIA L20 46GB",
   "tracking": {
     "provider": "SwanLab",
-    "project": "MiniMind-Lab"
+    "project": "MiniMind-Lab",
+    "run_name": "S01R1-SFT-Mini-64M-B16x8"
   }
 }
