@@ -1,0 +1,6 @@
+{
+  "status": "not_applicable",
+  "checkpoint_type": "base",
+  "reason": "P01 Base only requires the official seven-task benchmark and fixed continuation probes; Chat, Tool, RL and Agent held-out evaluations do not apply.",
+  "samples_path": "eval/samples.jsonl"
+}

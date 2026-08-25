@@ -122,7 +122,8 @@ def main() -> None:
     (experiment / "eval.json").write_text(json.dumps(eval_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     run_payload = {
         "experiment_id": experiment.name,
-        "stage": "00-stage2",
+        "stage": "00-preparation",
+        "preparation_step": "stage2-model-probe",
         "status": "completed",
         "baseline_lab_commit": "9961a5119e4249c48da923f3630c2e8ba362df15",
         "lab_commit": args.lab_commit,

@@ -2,7 +2,7 @@
 set -Eeuo pipefail
 
 ROOT_DIR="$(cd "$(dirname "$0")/../../.." && pwd)"
-EXPERIMENT_DIR="$ROOT_DIR/experiments/00-stage2/E02-model-probe-20260823"
+EXPERIMENT_DIR="$ROOT_DIR/experiments/00-preparation/E02-model-probe-20260823"
 PYTHON_BIN="${PYTHON_BIN:-/data/venvs/minimind-lab/bin/python}"
 DATA_REVISION="312afb4f76391145c6902f765bb51691c09a12f5"
 SOURCE_DATA="/data/datasets/minimind/$DATA_REVISION/pretrain_t2t_mini.jsonl"

@@ -1,0 +1,50 @@
+{
+  "status": "completed",
+  "protocol": "docs/evaluation_protocol.md",
+  "evaluation_lab_commit": "0ed9783b3e067b5edd0e02ec9bc778db87011d0a",
+  "harness_commit": "6d642546f4688648fced259eb3302efd36ece5af",
+  "apply_chat_template": false,
+  "metric_rule": "acc_norm when available, otherwise acc",
+  "tasks": [
+    "ceval-valid",
+    "cmmlu",
+    "arc_easy",
+    "piqa",
+    "openbookqa",
+    "hellaswag",
+    "social_iqa"
+  ],
+  "results_percent": {
+    "ceval-valid": 23.402674591381872,
+    "cmmlu": 25.073389742704194,
+    "arc_easy": 28.03030303030303,
+    "piqa": 51.84983677910773,
+    "openbookqa": 29.0,
+    "hellaswag": 28.87870942043418,
+    "social_iqa": 33.879222108495394,
+    "macro_average": 31.444876524632342
+  },
+  "official_minimind_3_percent": {
+    "ceval-valid": 24.89,
+    "cmmlu": 25.38,
+    "arc_easy": 28.49,
+    "piqa": 50.65,
+    "openbookqa": 23.6,
+    "hellaswag": 28.28,
+    "social_iqa": 34.19,
+    "macro_average": 30.782857142857143
+  },
+  "delta_vs_official_percentage_points": {
+    "ceval-valid": -1.49,
+    "cmmlu": -0.31,
+    "arc_easy": -0.46,
+    "piqa": 1.2,
+    "openbookqa": 5.4,
+    "hellaswag": 0.6,
+    "social_iqa": -0.31,
+    "macro_average": 0.6620193817751989
+  },
+  "raw_results": "eval/official_benchmarks.json",
+  "manifest": "eval/eval_manifest.json",
+  "notes": "Official MiniMind scores do not pin the harness commit or dataset revisions; deltas are task-and-call aligned, not a bitwise reproduction."
+}
