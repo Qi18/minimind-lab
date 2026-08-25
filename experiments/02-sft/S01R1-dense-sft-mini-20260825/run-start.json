@@ -1,0 +1,14 @@
+{
+  "experiment_id": "S01R1-dense-sft-mini-20260825",
+  "status": "running",
+  "started_at": "2026-08-25T15:56:01Z",
+  "lab_commit": "276d8f14c5cf43479b696805f9970b373c681613",
+  "per_gpu_batch_size": 16,
+  "global_batch_size": 128,
+  "expected_optimizer_steps": 13994,
+  "p01_baseline_validation_loss": 2.4692051353198985,
+  "step_500_validation_loss": 1.9341631857948016,
+  "step_500_relative_improvement_percent": 21.66859050597995,
+  "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/s2zj3jb9n8uh9v7raemx5",
+  "artifact_dir": "/data/artifacts/minimind-lab/S01R1-dense-sft-mini-20260825"
+}

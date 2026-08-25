@@ -1,7 +1,7 @@
 {
   "experiment_id": "S01R1-dense-sft-mini-20260825",
   "stage": "02-sft",
-  "status": "ready",
+  "status": "running",
   "protocol_version": "2026-08-25-sft-repair-v1",
   "seed": 42,
   "direct_baseline": "P01-dense-pretrain-mini-20260824",
