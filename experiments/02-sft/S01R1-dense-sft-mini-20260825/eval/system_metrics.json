@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "device": "cuda:0",
+  "gpu": "NVIDIA L20",
+  "dtype": "float16",
+  "warmup_runs": 5,
+  "measured_runs": 20,
+  "prompt": "用一句话解释机器学习。",
+  "max_new_tokens": 64,
+  "first_token_latency_seconds": {
+    "median": 0.0038560994998988463,
+    "p95": 0.003932933000214689
+  },
+  "total_latency_seconds": {
+    "median": 0.2359794465005507,
+    "p95": 0.23967126000025019
+  },
+  "decode_tokens_per_second": {
+    "median": 271.21007078545586,
+    "p95": 272.6647678154905
+  },
+  "peak_allocated_memory_mib": 131.69189453125,
+  "peak_reserved_memory_mib": 170.0,
+  "torch": "2.6.0+cu124",
+  "transformers": "4.51.1"
+}

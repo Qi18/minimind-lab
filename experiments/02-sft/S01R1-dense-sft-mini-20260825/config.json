@@ -1,7 +1,7 @@
 {
   "experiment_id": "S01R1-dense-sft-mini-20260825",
   "stage": "02-sft",
-  "status": "running",
+  "status": "completed",
   "protocol_version": "2026-08-25-sft-repair-v1",
   "seed": 42,
   "direct_baseline": "P01-dense-pretrain-mini-20260824",
@@ -42,7 +42,7 @@
     "revision": "312afb4f76391145c6902f765bb51691c09a12f5",
     "file": "sft_t2t_mini.jsonl",
     "line_count": 905718,
-    "sha256": "abb1e76b2056e14728beb96b7b3c491a0bef1ed3e34a9b381b28f29fa518"
+    "sha256": "abb1e76b2056e14728beb78db96b7b3c491a0bef1ed3e34a9b381b28f29fa518"
   },
   "initialization": {
     "experiment_id": "P01-dense-pretrain-mini-20260824",
@@ -53,5 +53,24 @@
     "provider": "SwanLab",
     "project": "MiniMind-Lab",
     "run_name": "S01R1-SFT-Mini-64M-B16x8"
+  },
+  "results": {
+    "training_finished_at": "2026-08-25T16:31:17Z",
+    "evaluation_finished_at": "2026-08-27T08:18:57Z",
+    "validation_baseline_loss": 2.4692051353198985,
+    "best_validation_loss": 1.7024041173267253,
+    "final_validation_loss": 1.7024041173267253,
+    "relative_validation_improvement_percent": 31.054569222489086,
+    "official_seven_task_macro_average_percent": 32.0401331108466,
+    "p01_macro_delta_percentage_points": 0.5952565862142593,
+    "chat_success_rate": 0.1,
+    "tool_end_to_end_success_rate": 0.375,
+    "release_candidate": false,
+    "acceptance": {
+      "training_convergence": "passed",
+      "general_capability_regression": "passed",
+      "chat_behavior": "failed",
+      "tool_behavior": "failed"
+    }
   }
 }
