@@ -1,0 +1,54 @@
+{
+  "experiment_id": "S01-dense-sft-mini-20260825",
+  "stage": "02-sft",
+  "status": "invalidated",
+  "protocol_version": "2026-08-21",
+  "seed": 42,
+  "primary_variable": "one-epoch Full SFT on sft_t2t_mini initialized from P01",
+  "direct_baseline": "P01-dense-pretrain-mini-20260824",
+  "model": {
+    "architecture": "MiniMindForCausalLM Dense",
+    "parameters": 63912192,
+    "hidden_size": 768,
+    "num_hidden_layers": 8,
+    "use_moe": false,
+    "vocab_size": 6400
+  },
+  "training": {
+    "epochs": 1,
+    "per_gpu_batch_size": 2,
+    "world_size": 8,
+    "accumulation_steps": 1,
+    "global_sequence_batch": 16,
+    "max_seq_len": 768,
+    "learning_rate": 0.00001,
+    "grad_clip": 1.0,
+    "dtype": "bfloat16",
+    "num_workers_per_rank": 8,
+    "log_interval_micro_steps": 10,
+    "save_interval_micro_steps": 1000,
+    "from_weight": "pretrain",
+    "expected_micro_steps": 56608,
+    "expected_optimizer_updates": 56608
+  },
+  "dataset": {
+    "repo_id": "jingyaogong/minimind_dataset",
+    "revision": "312afb4f76391145c6902f765bb51691c09a12f5",
+    "file": "sft_t2t_mini.jsonl",
+    "line_count": 905718,
+    "size_bytes": 1739201170,
+    "sha256": "abb1e76b2056e14728beb78db96b7b3c491a0bef1ed3e34a9b381b28f29fa518"
+  },
+  "initialization": {
+    "experiment_id": "P01-dense-pretrain-mini-20260824",
+    "checkpoint": "/data/artifacts/minimind-lab/P01-dense-pretrain-mini-20260824/checkpoints/p01_pretrain_768.pth",
+    "sha256": "71efd40d9fcd494bc5472891b66ea7f17167ae27ac341968bcd258a5a24b94e9"
+  },
+  "hardware": "8x NVIDIA L20 46GB",
+  "tracking": {
+    "provider": "SwanLab",
+    "project": "MiniMind-Lab",
+    "run_name": "S01-SFT-Mini-64M-Seq768"
+  },
+  "notes": "Custom 8xL20 diagnostic configuration. The per-GPU batch 2 and one-epoch setting were not sourced from an official MiniMind training recipe. The run was invalidated because it had no deterministic validation loss and its noisy single-batch loss could not establish convergence."
+}

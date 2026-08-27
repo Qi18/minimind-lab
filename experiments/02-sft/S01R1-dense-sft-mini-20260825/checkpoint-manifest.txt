@@ -1,0 +1,7 @@
+# sha256 size_bytes path role
+239d48e4a8e7a5abab02a72549b34b4996f2a3c9439da3df0c98952dc7f9e24a 137684570 /data/artifacts/minimind-lab/S01R1-dense-sft-mini-20260825/checkpoints/s01r1_best_val_768.pth evaluated-best-validation
+6295edbedb1c68c63948bfb519687eba0f9e0d53e9d991bb281d788b8fca16fd 137684190 /data/artifacts/minimind-lab/S01R1-dense-sft-mini-20260825/checkpoints/s01r1_last_768.pth redundant-last
+
+# The two files contain 91 tensor keys and are tensor-identical; serialization metadata makes file hashes differ.
+# Retention: keep best-validation as the reproducible experiment artifact. Last may be removed after this report is merged.
+# Release: neither checkpoint is a release candidate because Chat and Tool behavior acceptance failed.

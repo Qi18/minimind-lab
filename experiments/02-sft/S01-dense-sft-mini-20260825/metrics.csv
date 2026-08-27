@@ -1,0 +1,12 @@
+name,value,unit,status,recorded_at
+completed_micro_steps,56608,count,diagnostic,2026-08-25T14:10:51Z
+wall_clock,3925,seconds,diagnostic,2026-08-25T14:10:51Z
+gpu_hours,8.7222,gpu-hour,diagnostic,2026-08-25T14:10:51Z
+gpu_utilization_mean,97.069,percent,diagnostic,2026-08-25T14:10:51Z
+peak_gpu_memory,3815,MiB,diagnostic,2026-08-25T14:10:51Z
+loss_mean_first_100_logged,2.033034,nll,diagnostic,2026-08-25T14:10:51Z
+loss_std_first_100_logged,0.340600,nll,diagnostic,2026-08-25T14:10:51Z
+loss_mean_last_100_logged_excluding_final,1.649577,nll,diagnostic,2026-08-25T14:10:51Z
+loss_std_last_100_logged_excluding_final,0.405479,nll,diagnostic,2026-08-25T14:10:51Z
+raw_final_single_batch_loss,0.0254,nll,nonrepresentative,2026-08-25T14:10:51Z
+validation_loss,not_recorded,nll,invalidating,2026-08-25T14:10:51Z

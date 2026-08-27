@@ -1,0 +1,88 @@
+{
+  "experiment_id": "S01R1-dense-sft-mini-20260825",
+  "checkpoint_id": "s01r1_best_val_768",
+  "direct_baseline": "P01-dense-pretrain-mini-20260824",
+  "protocol_version": "2026-08-25-sft-repair-v1+eval-2026-08-27",
+  "status": "completed",
+  "training_lab_commit": "276d8f14c5cf43479b696805f9970b373c681613",
+  "evaluation_lab_commit": "0001250724075a56e58d2bd3d706f2ebbfd09b2c",
+  "minimind_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",
+  "checkpoint": {
+    "path": "/data/artifacts/minimind-lab/S01R1-dense-sft-mini-20260825/checkpoints/s01r1_best_val_768.pth",
+    "sha256": "239d48e4a8e7a5abab02a72549b34b4996f2a3c9439da3df0c98952dc7f9e24a",
+    "size_bytes": 137684570,
+    "parameters": 63912192,
+    "selection_rule": "lowest token-weighted validation loss"
+  },
+  "export": {
+    "path": "/data/artifacts/minimind-lab/S01R1-dense-sft-mini-20260825/exported-chat",
+    "architecture": "Qwen3ForCausalLM with MiniMind-compatible weights",
+    "dtype": "float16",
+    "tokenizer_vocab_size": 6400
+  },
+  "harness": {
+    "name": "lm-evaluation-harness",
+    "version": "0.4.12",
+    "commit": "6d642546f4688648fced259eb3302efd36ece5af",
+    "tasks": [
+      "ceval-valid",
+      "cmmlu",
+      "arc_easy",
+      "piqa",
+      "openbookqa",
+      "hellaswag",
+      "social_iqa"
+    ],
+    "metric_rule": "acc_norm when provided by the task, otherwise acc",
+    "num_fewshot": 0,
+    "apply_chat_template": true,
+    "batch_size": 16,
+    "device": "cuda:0",
+    "dtype": "auto (resolved to torch.float16)",
+    "seed": 42,
+    "limit": null,
+    "command": "HF_DATASETS_OFFLINE=1 HF_HUB_OFFLINE=1 CUDA_VISIBLE_DEVICES=0 lm-eval run --model hf --model_args pretrained=<exported-chat> dtype=auto trust_remote_code=True --tasks ceval-valid cmmlu arc_easy piqa openbookqa hellaswag social_iqa --batch_size 16 --device cuda:0 --trust_remote_code --apply_chat_template --seed 42 --output_path <artifact-eval-dir>"
+  },
+  "behavior_evaluation": {
+    "chat_cases": 10,
+    "tool_cases": 8,
+    "decoding": "greedy",
+    "open_thinking": false,
+    "max_new_tokens": 192,
+    "seed": 42,
+    "freeze_commit": "a41170b",
+    "implementation_fix_commit": "0001250",
+    "freeze_path": "eval/freeze.md"
+  },
+  "datasets": [
+    {"task": "ceval-valid", "dataset_path": "ceval/ceval-exam", "split": "val", "samples": 1346, "revision": "not pinned by harness", "cache_fingerprint": "617524a00b307ff6f9933702f724131fe12ca7ce"},
+    {"task": "cmmlu", "dataset_path": "haonan-li/cmmlu", "split": "test", "samples": 11582, "revision": "not pinned by harness", "archive_sha256": "22ecf70b28bef447ee7d8aa5fe144f56996762f901a8537b03b7693773c672a6"},
+    {"task": "arc_easy", "dataset_path": "allenai/ai2_arc", "dataset_name": "ARC-Easy", "split": "test", "samples": 2376, "revision": "not pinned by harness"},
+    {"task": "piqa", "dataset_path": "baber/piqa", "split": "validation", "samples": 1838, "revision": "not pinned by harness"},
+    {"task": "openbookqa", "dataset_path": "allenai/openbookqa", "dataset_name": "main", "split": "test", "samples": 500, "revision": "not pinned by harness"},
+    {"task": "hellaswag", "dataset_path": "Rowan/hellaswag", "split": "validation", "samples": 10042, "revision": "not pinned by harness"},
+    {"task": "social_iqa", "dataset_path": "allenai/social_i_qa", "split": "validation", "samples": 1954, "revision": "not pinned by harness"}
+  ],
+  "environment": {
+    "gpu": "1x NVIDIA L20",
+    "nvidia_driver": "535.161.08",
+    "cuda_runtime": "12.4",
+    "torch": "2.6.0+cu124",
+    "transformers": "4.51.1",
+    "datasets": "3.6.0",
+    "typing_extensions": "4.16.0"
+  },
+  "evaluation_started_at": "2026-08-27T08:13:50Z",
+  "evaluation_finished_at": "2026-08-27T08:18:57Z",
+  "outputs": {
+    "official_benchmarks.json": "d8f82c5c0173053c1a077345855ab03cfddabd891e284c7d7d88f153aac8aeec",
+    "task_eval.json": "f36cb392b404b1cfc944fc5a51343565017c35666e148b183927c66a86f30eed",
+    "system_metrics.json": "d08aeb9c9d8e7928988e8366a8281041fe6ef27c5153e1afc109d2966e9ef0b1",
+    "samples.jsonl": "2a3528855f7a03de39676a593ce278bc7813c29a2b902b495e69eca04a1b9db0"
+  },
+  "data_loading_notes": [
+    "The scoring run reused the complete P01 local cache in offline mode.",
+    "The harness does not pin dataset revisions, so comparisons to the MiniMind README are task-and-call aligned rather than bitwise reproductions.",
+    "S01R1 applies the tokenizer chat template as required for SFT checkpoints; P01 is a Base checkpoint evaluated without it."
+  ]
+}

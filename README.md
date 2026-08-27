@@ -51,7 +51,7 @@ DPO、GRPO/CISPO 和 Agentic RL 默认从同一个 Full SFT 基线分支，避�
 |---|---|---|---:|---:|---:|---|---|
 | Pretrain mini | Random | `pretrain_t2t_mini` 1,270,238 行 | 45.83 min / 6.11 GPU-hours | 七项宏平均 31.44 | 无自身基线；官方口径参考 +0.66 pp | [run](https://swanlab.cn/@richliu0153/MiniMind-Lab-Stage3/runs/7iochx9kfe75qa2pt6d1u) | L20 保留，SHA `71efd40d` |
 | Pretrain full | Random | 待填写 | 待填写 | 待评测 | - | 待填写 | 待填写 |
-| Full SFT | Pretrain | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
+| Full SFT mini（S01R1） | P01 64M | `sft_t2t_mini` 905,718 行 | 35.27 min / 4.70 GPU-hours | val loss 1.7024；Chat 10%；Tool E2E 37.5% | 七项宏平均 32.04，较 P01 +0.60 pp；发布验收失败 | [run](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/s2zj3jb9n8uh9v7raemx5) | L20 保留 best，SHA `239d48e4` |
 | LoRA | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
 | DPO | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
 | GRPO / CISPO | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |

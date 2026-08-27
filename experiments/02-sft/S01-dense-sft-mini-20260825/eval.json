@@ -1,0 +1,8 @@
+{
+  "status": "skipped_invalidated",
+  "protocol": "docs/evaluation_protocol.md",
+  "results": {},
+  "reason": "Training configuration failed the convergence observability gate before model-quality evaluation.",
+  "release_eligible": false,
+  "primary_comparison_eligible": false
+}
