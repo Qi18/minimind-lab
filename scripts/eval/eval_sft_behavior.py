@@ -90,6 +90,7 @@ def percentile(values, q):
 def generate(model, tokenizer, messages, tools, device, max_new_tokens):
     prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True, tools=tools, open_thinking=False)
     encoded = tokenizer(prompt, return_tensors="pt", truncation=True).to(device)
+    encoded.pop("token_type_ids", None)
     with torch.inference_mode():
         output = model.generate(
             **encoded,
@@ -263,6 +264,7 @@ def run_tool_case(model, tokenizer, case, device, max_new_tokens):
 def timed_greedy(model, tokenizer, prompt, device, max_new_tokens=64):
     text = tokenizer.apply_chat_template([{"role": "user", "content": prompt}], tokenize=False, add_generation_prompt=True, open_thinking=False)
     encoded = tokenizer(text, return_tensors="pt").to(device)
+    encoded.pop("token_type_ids", None)
     started = time.perf_counter()
     with torch.inference_mode():
         output = model(**encoded, use_cache=True)
