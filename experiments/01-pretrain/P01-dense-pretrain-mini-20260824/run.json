@@ -12,7 +12,10 @@
   "checkpoint": "/data/artifacts/minimind-lab/P01-dense-pretrain-mini-20260824/checkpoints/p01_pretrain_768.pth",
   "resume_checkpoint": "/data/projects/minimind-lab/minimind/checkpoints/p01_pretrain_768_resume.pth",
   "world_size": 8,
-  "swanlab_run_id": "7iochx9kfe75qa2pt6d1u",
+  "swanlab_run_id": "nfax3tyg0j217j1cz8y0b",
+  "swanlab_run_name": "P01-Pretrain-Mini-64M-Seq768",
+  "source_swanlab_project": "MiniMind-Lab-Stage3",
+  "source_swanlab_run_id": "7iochx9kfe75qa2pt6d1u",
   "started_at": "2026-08-24T03:16:40Z",
   "finished_at": "2026-08-24T04:02:29.607865Z",
   "exit_code": 0

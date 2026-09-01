@@ -1,7 +1,7 @@
 {
   "experiment_id": "P02-dense-pretrain-full-20260824",
   "stage": "01-pretrain",
-  "status": "running",
+  "status": "completed",
   "protocol_version": "2026-08-21",
   "seed": 42,
   "primary_variable": "pretraining dataset scale: mini to full",
@@ -31,6 +31,7 @@
     "from_weight": "none",
     "expected_micro_steps": 264651,
     "expected_optimizer_updates": 33082,
+    "completed_micro_steps": 264651,
     "estimated_wall_minutes_from_p01": 305.5
   },
   "dataset": {
@@ -42,6 +43,6 @@
     "sha256": "31efc9a6fa7430769c0e78cde1c8ec0273ac7bbad20614c0ee58bccef327cc9d"
   },
   "hardware": "8x NVIDIA L20 46GB",
-  "tracking": "SwanLab project MiniMind-Lab-Stage5",
+  "tracking": "SwanLab project MiniMind-Lab (migrated from MiniMind-Lab-Stage5)",
   "notes": "Keep the complete P01 training configuration, including max_seq_len=768, and change only the dataset from mini to full. The source recommendation near 380 is intentionally not adopted in this comparison."
 }

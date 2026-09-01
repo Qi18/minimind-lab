@@ -1,3 +1,6 @@
 # sha256 size_bytes path role
-# Planned inference checkpoint: /data/artifacts/minimind-lab/P02-dense-pretrain-full-20260824/checkpoints/p02_pretrain_768.pth
-# Planned resume checkpoint: /data/projects/minimind-lab/minimind/checkpoints/p02_pretrain_768_resume.pth
+7065a461ca8c29eedb38264f329a0daa99a2f429277720925966b840572d28f4 137684380 /data/artifacts/minimind-lab/P02-dense-pretrain-full-20260824/checkpoints/p02_pretrain_768.pth candidate-base
+d3ae7a37b39295e1c88732a9ed10f87232d4511f9b1da65ccd1fe34e45ab46e1 649065380 /data/projects/minimind-lab/minimind/checkpoints/p02_pretrain_768_resume.pth resumable-training-state
+
+# Retention: keep the 131 MiB inference checkpoint for P01/P02 SFT comparison.
+# The 619 MiB resume file is not a release artifact and can be removed after downstream initialization is verified.
