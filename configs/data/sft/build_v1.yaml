@@ -1,0 +1,119 @@
+schema_version: 2
+name: minimind-sft-v1-32m-formal-build
+status: design_pending_implementation
+trainable: false
+seed: 42
+sequence_length: 768
+
+contracts:
+  sources: configs/data/sft/sources_v1.yaml
+  acceptance: configs/data/sft/acceptance_v1.yaml
+  contamination: configs/data/sft/contamination_v1.yaml
+
+paths:
+  # This verified cache keeps its historical directory name. It is raw input,
+  # not a 160M training-budget contract.
+  raw_root: /data/datasets/minimind-lab/data-v1/sft-v1-160m
+  work_root: /data/datasets/minimind-lab/data-v1/sft-v1-32m/work
+  final_root: /data/datasets/minimind-lab/data-v1/sft-v1-32m/final
+
+stage_budgets:
+  unit: shifted_assistant_loss_target_tokens
+  smoke:
+    train: 1000000
+    purpose: validate_schema_loader_and_auditor
+  pilot:
+    train: 8000000
+    purpose: validate_mix_capacity_and_training_signal
+  formal_v1:
+    train: 32000000
+    validation: 160000
+    test: 160000
+    purpose: first_formal_comparable_sft_dataset
+  optional_scale:
+    train: 64000000
+    enabled: false
+    gate: fixed_eval_improves_without_base_benchmark_regression
+
+# Provisional until capacity profiling and the 8M pilot freeze the allocation.
+planned_mix:
+  chinese_general: 0.30
+  english_general: 0.15
+  multiturn: 0.10
+  strict_format: 0.15
+  math: 0.10
+  tool_call: 0.10
+  summarization_translation: 0.05
+  code: 0.05
+
+canonical_training_schema:
+  top_level_keys_exact: [conversations]
+  message_keys_exact: [role, content, reasoning_content, tools, tool_calls]
+  optional_message_values: explicit_null
+  allowed_roles: [system, user, assistant, tool]
+  provenance_storage: sidecar_only
+
+pipeline:
+  - freeze_source_revisions_and_licenses
+  - materialize_raw_sources
+  - normalize_to_canonical_conversations
+  - reject_incomplete_turns_tools_and_zero_target_rows
+  - compute_shifted_assistant_loss_target_tokens
+  - form_exact_and_near_duplicate_origin_groups
+  - assign_groups_to_deterministic_splits
+  - remove_fixed_evaluation_contamination
+  - allocate_bucket_quotas_without_origin_reuse
+  - write_training_payload_and_provenance_sidecars
+  - run_independent_full_audit
+  - write_success_marker_only_after_acceptance
+
+gates:
+  invalid_json_max: 0
+  invalid_conversation_max: 0
+  zero_shifted_assistant_target_rows_max: 0
+  incomplete_assistant_turns_max: 0
+  partial_tool_exchanges_max: 0
+  exact_cross_split_overlap_max: 0
+  near_cross_split_overlap_max: 0
+  fixed_eval_overlap_max: 0
+  non_assistant_supervised_tokens_max: 0
+  trainer_resplit_allowed: false
+  record_reuse_across_buckets_or_splits: false
+  scan_order_changes_result_max: 0
+
+implementation:
+  raw_source_resolver: scripts/data/sft/resolve_sources.py
+  raw_materializer: scripts/data/sft/materialize_raw.py
+  formal_builder: null
+  independent_auditor: null
+  blockers:
+    - formal_builder_not_implemented
+    - independent_auditor_not_implemented
+    - harness_commit_not_frozen
+    - prompt_builder_sha256_not_frozen
+    - source_capacity_and_final_mix_not_frozen
+  accepted_marker_must_not_exist: true
+
+outputs:
+  training_payloads:
+    - train.jsonl
+    - validation.jsonl
+    - test.jsonl
+  sidecars:
+    - provenance.jsonl
+    - manifest.json
+    - audit_report.json
+    - contamination_report.json
+    - capacity_profile.json
+  marker:
+    path: _SUCCESS
+    required_status: accepted
+    writer: independent_auditor
+
+release_rule:
+  trainable_only_if:
+    - implementation.formal_builder_is_non_null
+    - implementation.independent_auditor_is_non_null
+    - all_acceptance_gates_pass
+    - marker_exists_with_status_accepted
+  current_decision: reject_training_use

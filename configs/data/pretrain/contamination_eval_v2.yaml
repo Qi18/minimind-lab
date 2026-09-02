@@ -1,0 +1,78 @@
+schema_version: 2
+metadata_endpoint: "https://hf-mirror.com"
+task_alignment:
+  task_names: [ceval-valid, cmmlu, arc_easy, piqa, openbookqa, hellaswag, social_iqa]
+  harness_commit: null
+  note: "MiniMind does not pin lm-evaluation-harness; freeze its commit before formal scoring."
+
+matching:
+  exact_min_normalized_chars: 1
+  containment_min_normalized_chars: 20
+
+near_duplicate:
+  seed: 42
+  num_perm: 128
+  char_ngram: 5
+  min_normalized_chars: 20
+  jaccard_threshold: 0.80
+  containment_threshold: 0.90
+  max_examples_per_source: 5
+
+quality_gates:
+  exact_overlap_max: 0
+  containment_overlap_max: 0
+  near_duplicate_overlap_max: 0
+
+sources:
+  - id: ceval_valid
+    task: ceval-valid
+    repo_id: ceval/ceval-exam
+    revision: 617524a00b307ff6f9933702f724131fe12ca7ce
+    all_configs: true
+    split: val
+    query_fields: [question]
+
+  - id: cmmlu
+    task: cmmlu
+    repo_id: haonan-li/cmmlu
+    revision: efcc940752ea4a1ea94d2727f11f83858d64fc8e
+    all_configs: true
+    split: test
+    query_fields: [Question]
+
+  - id: arc_easy
+    task: arc_easy
+    repo_id: allenai/ai2_arc
+    revision: 210d026faf9955653af8916fad021475a3f00453
+    config: ARC-Easy
+    split: test
+    query_fields: [question]
+
+  - id: piqa
+    task: piqa
+    repo_id: baber/piqa
+    revision: 142f6d7367fd9877f0fb3b5734ea6a545f54cdd1
+    split: validation
+    query_fields: [goal]
+
+  - id: openbookqa
+    task: openbookqa
+    repo_id: allenai/openbookqa
+    revision: 388097ea7776314e93a529163e0fea805b8a6454
+    config: main
+    split: test
+    query_fields: [question_stem]
+
+  - id: hellaswag
+    task: hellaswag
+    repo_id: Rowan/hellaswag
+    revision: 218ec52e09a7e7462a5400043bb9a69a41d06b76
+    split: validation
+    query_fields: [ctx]
+
+  - id: social_iqa
+    task: social_iqa
+    repo_id: allenai/social_i_qa
+    revision: 8835ceb9141d7896d9d968634a9b21ae440e3ec5
+    split: validation
+    query_fields: [context, question]

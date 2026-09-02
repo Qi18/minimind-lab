@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-30T16:06:12.695712+00:00",
+  "tokenizer": "minimind/model",
+  "tokenizer_class": "PreTrainedTokenizerFast",
+  "vocab_size": 6400,
+  "tokenizer_files": {
+    "tokenizer.json": {
+      "size_bytes": 451182,
+      "sha256": "71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668"
+    },
+    "tokenizer_config.json": {
+      "size_bytes": 13308,
+      "sha256": "d7cd6a60c9f191c4f9ffec69b2eb289ad2f960366724f328b681ae1e46e4c110"
+    }
+  },
+  "sequence_length": 768,
+  "pretrain": {
+    "totals": {
+      "rows_read": 1000,
+      "valid_rows": 1000,
+      "invalid_json": 0,
+      "empty_text": 0,
+      "raw_tokens": 4832923,
+      "processed_tokens": 662052,
+      "truncated_rows": 673,
+      "sequence_length": 768,
+      "truncation_rate": 0.673
+    },
+    "sources": [
+      {
+        "source": "chinese_webtext2",
+        "path": "/data/datasets/minimind-lab/data-v1/raw-pretrain-samples/chinese_webtext2.jsonl",
+        "sha256": "facf03f538d283074babba9291baf7daefc7d53aaa5fe5db24a14c463806402d",
+        "rows_read": 200,
+        "valid_rows": 200,
+        "raw_tokens": 151359,
+        "processed_tokens": 108005,
+        "truncated_rows": 63,
+        "raw_length": {
+          "min": 180,
+          "p50": 537,
+          "p95": 2007,
+          "max": 5629,
+          "mean": 756.795
+        },
+        "processed_length": {
+          "min": 182,
+          "p50": 539,
+          "p95": 768,
+          "max": 768,
+          "mean": 540.025
+        }
+      },
+      {
+        "source": "finemath",
+        "path": "/data/datasets/minimind-lab/data-v1/raw-pretrain-samples/finemath.jsonl",
+        "sha256": "d24888fcc0ff1a7a751da92781e897c55e8279773aecf50a8948288a8f3339b3",
+        "rows_read": 200,
+        "valid_rows": 200,
+        "raw_tokens": 353152,
+        "processed_tokens": 136694,
+        "truncated_rows": 142,
+        "raw_length": {
+          "min": 100,
+          "p50": 1214,
+          "p95": 3691,
+          "max": 22913,
+          "mean": 1765.76
+        },
+        "processed_length": {
+          "min": 102,
+          "p50": 768,
+          "p95": 768,
+          "max": 768,
+          "mean": 683.47
+        }
+      },
+      {
+        "source": "fineweb_edu",
+        "path": "/data/datasets/minimind-lab/data-v1/raw-pretrain-samples/fineweb_edu.jsonl",
+        "sha256": "73bf99fe2d6325eb6b4c7f37a6a20031db7b4a626faa7d28b74021f8d045f383",
+        "rows_read": 200,
+        "valid_rows": 200,
+        "raw_tokens": 261770,
+        "processed_tokens": 124485,
+        "truncated_rows": 108,
+        "raw_length": {
+          "min": 125,
+          "p50": 793,
+          "p95": 3412,
+          "max": 22617,
+          "mean": 1308.85
+        },
+        "processed_length": {
+          "min": 127,
+          "p50": 768,
+          "p95": 768,
+          "max": 768,
+          "mean": 622.425
+        }
+      },
+      {
+        "source": "wikipedia_en",
+        "path": "/data/datasets/minimind-lab/data-v1/raw-pretrain-samples/wikipedia_en.jsonl",
+        "sha256": "f856e420167ef5a933d037a8ab3099781b6fe0e17001f1a9cd0e62355ba74941",
+        "rows_read": 200,
+        "valid_rows": 200,
+        "raw_tokens": 2172203,
+        "processed_tokens": 149948,
+        "truncated_rows": 189,
+        "raw_length": {
+          "min": 116,
+          "p50": 8160,
+          "p95": 29799,
+          "max": 44524,
+          "mean": 10861.015
+        },
+        "processed_length": {
+          "min": 118,
+          "p50": 768,
+          "p95": 768,
+          "max": 768,
+          "mean": 749.74
+        }
+      },
+      {
+        "source": "wikipedia_zh",
+        "path": "/data/datasets/minimind-lab/data-v1/raw-pretrain-samples/wikipedia_zh.jsonl",
+        "sha256": "8c2a3990e4cbf8c5d2d84bfaa9ff30d50a509a71618c6de73f7275cf1d973bdb",
+        "rows_read": 200,
+        "valid_rows": 200,
+        "raw_tokens": 1894439,
+        "processed_tokens": 142920,
+        "truncated_rows": 171,
+        "raw_length": {
+          "min": 38,
+          "p50": 5534,
+          "p95": 34755,
+          "max": 58727,
+          "mean": 9472.195
+        },
+        "processed_length": {
+          "min": 40,
+          "p50": 768,
+          "p95": 768,
+          "max": 768,
+          "mean": 714.6
+        }
+      }
+    ]
+  },
+  "sft": {
+    "totals": {
+      "rows_read": 5292,
+      "valid_rows": 5292,
+      "input_tokens": 2091820,
+      "assistant_target_tokens": 1618976,
+      "truncated_rows": 1085,
+      "sequence_length": 768,
+      "zero_target_rows": 0,
+      "target_retention": 1.0,
+      "truncation_rate": 0.205026
+    },
+    "input_length": {
+      "min": 26,
+      "p50": 350,
+      "p95": 768,
+      "max": 768,
+      "mean": 395.28
+    },
+    "assistant_target_length": {
+      "min": 3,
+      "p50": 243,
+      "p95": 707,
+      "max": 753,
+      "mean": 305.929
+    },
+    "sources": [
+      {
+        "rows": 190,
+        "input_tokens": 30591,
+        "assistant_target_tokens": 24053,
+        "source": "alpaca_gpt4_zh",
+        "target_tokens_per_row": 126.595
+      },
+      {
+        "rows": 176,
+        "input_tokens": 22625,
+        "assistant_target_tokens": 15201,
+        "source": "code_alpaca_20k",
+        "target_tokens_per_row": 86.369
+      },
+      {
+        "rows": 162,
+        "input_tokens": 113740,
+        "assistant_target_tokens": 41977,
+        "truncated_rows": 96,
+        "source": "glaive_function_calling_v2_conversations",
+        "target_tokens_per_row": 259.117
+      },
+      {
+        "rows": 181,
+        "input_tokens": 42044,
+        "assistant_target_tokens": 25213,
+        "source": "gsm8k",
+        "target_tokens_per_row": 139.298
+      },
+      {
+        "rows": 180,
+        "input_tokens": 41204,
+        "assistant_target_tokens": 15776,
+        "source": "mbpp",
+        "target_tokens_per_row": 87.644
+      },
+      {
+        "rows": 3428,
+        "input_tokens": 1610154,
+        "assistant_target_tokens": 1367776,
+        "truncated_rows": 810,
+        "source": "oasst1_conversations",
+        "target_tokens_per_row": 399.001
+      },
+      {
+        "rows": 449,
+        "input_tokens": 43095,
+        "assistant_target_tokens": 16873,
+        "source": "strict_format_v1",
+        "target_tokens_per_row": 37.579
+      },
+      {
+        "rows": 363,
+        "input_tokens": 64024,
+        "assistant_target_tokens": 20993,
+        "truncated_rows": 22,
+        "source": "translation_bilingual_v1",
+        "target_tokens_per_row": 57.832
+      },
+      {
+        "rows": 163,
+        "input_tokens": 124343,
+        "assistant_target_tokens": 91114,
+        "truncated_rows": 157,
+        "source": "ultrachat_200k",
+        "target_tokens_per_row": 558.982
+      }
+    ],
+    "training_semantics": {
+      "augment": false,
+      "chat_template": true,
+      "assistant_mask": "MiniMind SFTDataset.generate_labels equivalent"
+    }
+  }
+}

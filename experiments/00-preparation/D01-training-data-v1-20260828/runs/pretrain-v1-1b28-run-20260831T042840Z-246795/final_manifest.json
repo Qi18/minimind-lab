@@ -1,0 +1,3240 @@
+{
+  "builder_version": "pretrain-v1-builder-3",
+  "candidate_fingerprint": "e34aa411eefb0edf88a761d5b93c440eb906cb59e0d40ea933426375e22b93f8",
+  "candidate_manifest": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/work/candidates/manifest.json",
+  "candidate_manifest_sha256": "07e2d6638d061a53524cc2c9dfb87e0d7a2e9507677ad4f7d83324fb1815b125",
+  "config": "/data/projects/minimind-lab-data-v1/configs/data/pretrain_v1.yaml",
+  "config_sha256": "c566581f20e0084f887cf60eea2225ba4d21dde0348d3f2d71676c54617a50dc",
+  "created_at": "2026-08-31T06:06:33.577821+00:00",
+  "external_audit": {
+    "benchmark_contamination": "pending",
+    "required_before_release": true
+  },
+  "fingerprint": "e1c2bec940bce1920062e1ec08dea6ba49917c1d559694c7df19fa4f106a2b3f",
+  "hash_domains": {
+    "mix": "minimind-pretrain-v1-mix",
+    "sample": "minimind-pretrain-v1-sample",
+    "split": "minimind-pretrain-v1-split"
+  },
+  "loader_data_path": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/final/train-*-of-00040.jsonl",
+  "loader_validation_path": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/final/validation-*-of-00001.jsonl",
+  "mix_key": "active_v1_mix",
+  "schema_version": 2,
+  "scripts": {
+    "auditor": {
+      "path": "scripts/data/audit_pretrain_v1.py",
+      "sha256": "0c158c9499b17a6901c844c46d914ab09aa1eb1d19d8238cc442dcb1e9ef023c"
+    },
+    "builder": {
+      "path": "scripts/data/build_pretrain_v1.py",
+      "sha256": "573723a093e69d5985a42437d0f3e611a4de393bb49d81b47d7127904d8d0de3",
+      "version": "pretrain-v1-builder-3"
+    }
+  },
+  "sequence_length": 768,
+  "sharding": {
+    "assignment": "deterministic_hash_order_row_round_robin",
+    "expected_mean_train_loss_target_tokens_per_shard": 32000000.0,
+    "filename_format": "{split}-{index:05d}-of-{num_shards:05d}.jsonl",
+    "names": {
+      "train": [
+        "train-00000-of-00040.jsonl",
+        "train-00001-of-00040.jsonl",
+        "train-00002-of-00040.jsonl",
+        "train-00003-of-00040.jsonl",
+        "train-00004-of-00040.jsonl",
+        "train-00005-of-00040.jsonl",
+        "train-00006-of-00040.jsonl",
+        "train-00007-of-00040.jsonl",
+        "train-00008-of-00040.jsonl",
+        "train-00009-of-00040.jsonl",
+        "train-00010-of-00040.jsonl",
+        "train-00011-of-00040.jsonl",
+        "train-00012-of-00040.jsonl",
+        "train-00013-of-00040.jsonl",
+        "train-00014-of-00040.jsonl",
+        "train-00015-of-00040.jsonl",
+        "train-00016-of-00040.jsonl",
+        "train-00017-of-00040.jsonl",
+        "train-00018-of-00040.jsonl",
+        "train-00019-of-00040.jsonl",
+        "train-00020-of-00040.jsonl",
+        "train-00021-of-00040.jsonl",
+        "train-00022-of-00040.jsonl",
+        "train-00023-of-00040.jsonl",
+        "train-00024-of-00040.jsonl",
+        "train-00025-of-00040.jsonl",
+        "train-00026-of-00040.jsonl",
+        "train-00027-of-00040.jsonl",
+        "train-00028-of-00040.jsonl",
+        "train-00029-of-00040.jsonl",
+        "train-00030-of-00040.jsonl",
+        "train-00031-of-00040.jsonl",
+        "train-00032-of-00040.jsonl",
+        "train-00033-of-00040.jsonl",
+        "train-00034-of-00040.jsonl",
+        "train-00035-of-00040.jsonl",
+        "train-00036-of-00040.jsonl",
+        "train-00037-of-00040.jsonl",
+        "train-00038-of-00040.jsonl",
+        "train-00039-of-00040.jsonl"
+      ],
+      "validation": [
+        "validation-00000-of-00001.jsonl"
+      ]
+    },
+    "num_train_shards": 40,
+    "num_validation_shards": 1,
+    "train_glob": "train-*-of-00040.jsonl",
+    "validation_glob": "validation-*-of-00001.jsonl",
+    "validation_loss_target_tokens": 6400000
+  },
+  "status": "pending_external_audit",
+  "tokenizer": {
+    "files": {
+      "tokenizer.json": {
+        "sha256": "71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668",
+        "size_bytes": 451182
+      },
+      "tokenizer_config.json": {
+        "sha256": "d7cd6a60c9f191c4f9ffec69b2eb289ad2f960366724f328b681ae1e46e4c110",
+        "size_bytes": 13308
+      }
+    },
+    "path": "/data/projects/minimind-lab-data-v1/minimind/model"
+  },
+  "train": {
+    "budget_loss_target_tokens": 1280000000,
+    "selection": {
+      "chinese_webtext2": {
+        "candidates_considered": 1140906,
+        "dedup_rejected": 1338,
+        "loss_target_tokens": 576000000,
+        "nonpad_input_tokens": 577139568,
+        "output": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/.final.tmp-e1c2bec940bc/.selected/train-chinese_webtext2.jsonl",
+        "output_sha256": "a13e02e0f69926b4374e52e623918d80f1e819b6ef4a6ddc09b5315a0e500fb1",
+        "padded_compute_tokens": 875188224,
+        "quota_loss_target_tokens": 576000000,
+        "raw_tokens": 574860509,
+        "rows": 1139568,
+        "selected_budget": 576000000,
+        "split": "train",
+        "status": "ok",
+        "text_tokens": 574860432
+      },
+      "finemath": {
+        "candidates_considered": 198535,
+        "dedup_rejected": 361,
+        "loss_target_tokens": 128000000,
+        "nonpad_input_tokens": 128198174,
+        "output": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/.final.tmp-e1c2bec940bc/.selected/train-finemath.jsonl",
+        "output_sha256": "c59666d1f8bbbcecb0caa6a021bbf9ae02cceefd8bda3ba9af257641dbdf9437",
+        "padded_compute_tokens": 152197632,
+        "quota_loss_target_tokens": 128000000,
+        "raw_tokens": 127801728,
+        "rows": 198174,
+        "selected_budget": 128000000,
+        "split": "train",
+        "status": "ok",
+        "text_tokens": 127801826
+      },
+      "fineweb_edu": {
+        "candidates_considered": 620133,
+        "dedup_rejected": 946,
+        "loss_target_tokens": 384000000,
+        "nonpad_input_tokens": 384619187,
+        "output": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/.final.tmp-e1c2bec940bc/.selected/train-fineweb_edu.jsonl",
+        "output_sha256": "c1bf2f8f7f1302ac7fb0b8de8335660978d3fa730bbc7e41cf680b2014850733",
+        "padded_compute_tokens": 475535616,
+        "quota_loss_target_tokens": 384000000,
+        "raw_tokens": 383380818,
+        "rows": 619187,
+        "selected_budget": 384000000,
+        "split": "train",
+        "status": "ok",
+        "text_tokens": 383380813
+      },
+      "stack_v3_code": {
+        "candidates_considered": 98900,
+        "dedup_rejected": 144,
+        "loss_target_tokens": 64000000,
+        "nonpad_input_tokens": 64098756,
+        "output": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/.final.tmp-e1c2bec940bc/.selected/train-stack_v3_code.jsonl",
+        "output_sha256": "0bef27cfc62fcc567e8b36591e5c3c82e35a5c3dca54266b476d1bfec423588a",
+        "padded_compute_tokens": 75844608,
+        "quota_loss_target_tokens": 64000000,
+        "raw_tokens": 63901360,
+        "rows": 98756,
+        "selected_budget": 64000000,
+        "split": "train",
+        "status": "ok",
+        "text_tokens": 63901244
+      },
+      "wikipedia_en": {
+        "candidates_considered": 119830,
+        "dedup_rejected": 51,
+        "loss_target_tokens": 64000000,
+        "nonpad_input_tokens": 64119779,
+        "output": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/.final.tmp-e1c2bec940bc/.selected/train-wikipedia_en.jsonl",
+        "output_sha256": "4cf41db583c5bb3e4d1e1611b1e5a42de538574f72c52b8f37750622b68a449b",
+        "padded_compute_tokens": 91990272,
+        "quota_loss_target_tokens": 64000000,
+        "raw_tokens": 63880268,
+        "rows": 119779,
+        "selected_budget": 64000000,
+        "split": "train",
+        "status": "ok",
+        "text_tokens": 63880221
+      },
+      "wikipedia_zh": {
+        "candidates_considered": 138034,
+        "dedup_rejected": 35,
+        "loss_target_tokens": 64000000,
+        "nonpad_input_tokens": 64137999,
+        "output": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/.final.tmp-e1c2bec940bc/.selected/train-wikipedia_zh.jsonl",
+        "output_sha256": "05f0f35be6b99d29012483fd8bf8c6eaa4ab944b2d12f581d3f26b65baa886f1",
+        "padded_compute_tokens": 105983232,
+        "quota_loss_target_tokens": 64000000,
+        "raw_tokens": 63862318,
+        "rows": 137999,
+        "selected_budget": 64000000,
+        "split": "train",
+        "status": "ok",
+        "text_tokens": 63862001
+      }
+    },
+    "shards": [
+      {
+        "created_at": "2026-08-31T06:06:20.039876+00:00",
+        "file": "train-00000-of-00040.jsonl",
+        "meta_file": "train-00000-of-00040.jsonl.meta.json",
+        "meta_sha256": "9a20708abf140b79146082041d378f66c19ce9279b272b9a0037dc79122c6d50",
+        "provenance_file": "provenance/train-00000-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "5341c6119cc9586278d1fc874e319d724727bf5a19721ecc4cdd8b28d8f1ac8c",
+        "provenance_size_bytes": 33166057,
+        "sequence_length": 768,
+        "sha256": "e3b91f4937d0f849165839a22bc28af8c488ac8405c07a415ace907f106fdd15",
+        "size_bytes": 94609120,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14426884,
+            "nonpad_input_tokens": 14455397,
+            "padded_compute_tokens": 21897984,
+            "raw_tokens": 14398373,
+            "rows": 28513,
+            "text_tokens": 14398371
+          },
+          "finemath": {
+            "loss_target_tokens": 3232223,
+            "nonpad_input_tokens": 3237241,
+            "padded_compute_tokens": 3853824,
+            "raw_tokens": 3227201,
+            "rows": 5018,
+            "text_tokens": 3227205
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9515114,
+            "nonpad_input_tokens": 9530488,
+            "padded_compute_tokens": 11807232,
+            "raw_tokens": 9499740,
+            "rows": 15374,
+            "text_tokens": 9499740
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1577285,
+            "nonpad_input_tokens": 1579717,
+            "padded_compute_tokens": 1867776,
+            "raw_tokens": 1574856,
+            "rows": 2432,
+            "text_tokens": 1574853
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1606518,
+            "nonpad_input_tokens": 1609532,
+            "padded_compute_tokens": 2314752,
+            "raw_tokens": 1603505,
+            "rows": 3014,
+            "text_tokens": 1603504
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1606825,
+            "nonpad_input_tokens": 1610311,
+            "padded_compute_tokens": 2677248,
+            "raw_tokens": 1603350,
+            "rows": 3486,
+            "text_tokens": 1603339
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31964849,
+          "nonpad_input_tokens": 32022686,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31907025,
+          "rows": 57837,
+          "text_tokens": 31907012
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:20.314957+00:00",
+        "file": "train-00001-of-00040.jsonl",
+        "meta_file": "train-00001-of-00040.jsonl.meta.json",
+        "meta_sha256": "88064ef91b8a574275a072a6b8aca60b5c555ca2e0a2547a92ed681c4c1a6cc2",
+        "provenance_file": "provenance/train-00001-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "539550440f0e7bd6b29e19aaab67f7b0a1f7c105da5fd82c071bfe1baeb390e1",
+        "provenance_size_bytes": 33171789,
+        "sequence_length": 768,
+        "sha256": "f50b3bc8997755ce542e2bc907ba0bc8cf026a92de9572d05bfe45c6ca6b9cf6",
+        "size_bytes": 94933108,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14457935,
+            "nonpad_input_tokens": 14486426,
+            "padded_compute_tokens": 21881088,
+            "raw_tokens": 14429446,
+            "rows": 28491,
+            "text_tokens": 14429444
+          },
+          "finemath": {
+            "loss_target_tokens": 3187889,
+            "nonpad_input_tokens": 3192831,
+            "padded_compute_tokens": 3795456,
+            "raw_tokens": 3182947,
+            "rows": 4942,
+            "text_tokens": 3182947
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9660898,
+            "nonpad_input_tokens": 9676430,
+            "padded_compute_tokens": 11928576,
+            "raw_tokens": 9645366,
+            "rows": 15532,
+            "text_tokens": 9645366
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1644551,
+            "nonpad_input_tokens": 1647078,
+            "padded_compute_tokens": 1940736,
+            "raw_tokens": 1642031,
+            "rows": 2527,
+            "text_tokens": 1642024
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1560166,
+            "nonpad_input_tokens": 1563090,
+            "padded_compute_tokens": 2245632,
+            "raw_tokens": 1557242,
+            "rows": 2924,
+            "text_tokens": 1557242
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1583224,
+            "nonpad_input_tokens": 1586645,
+            "padded_compute_tokens": 2627328,
+            "raw_tokens": 1579812,
+            "rows": 3421,
+            "text_tokens": 1579803
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32094663,
+          "nonpad_input_tokens": 32152500,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 32036844,
+          "rows": 57837,
+          "text_tokens": 32036826
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:20.589084+00:00",
+        "file": "train-00002-of-00040.jsonl",
+        "meta_file": "train-00002-of-00040.jsonl.meta.json",
+        "meta_sha256": "ee56cde41f70660da4abd4b5fd71aff6eb1feba755b0c030d64c6be71f38ad6c",
+        "provenance_file": "provenance/train-00002-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "75b369285bfd5379fb18a80c72287bbba1d821a7464b6ee383a8cf4321edfd44",
+        "provenance_size_bytes": 33169301,
+        "sequence_length": 768,
+        "sha256": "8745050b5bd69fe50489db8cd429d6ae3de7c4b4d8a41e807440ebbebd61030b",
+        "size_bytes": 94856232,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14481394,
+            "nonpad_input_tokens": 14509936,
+            "padded_compute_tokens": 21920256,
+            "raw_tokens": 14452854,
+            "rows": 28542,
+            "text_tokens": 14452852
+          },
+          "finemath": {
+            "loss_target_tokens": 3165402,
+            "nonpad_input_tokens": 3170278,
+            "padded_compute_tokens": 3744768,
+            "raw_tokens": 3160525,
+            "rows": 4876,
+            "text_tokens": 3160526
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9667920,
+            "nonpad_input_tokens": 9683462,
+            "padded_compute_tokens": 11936256,
+            "raw_tokens": 9652378,
+            "rows": 15542,
+            "text_tokens": 9652378
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1609148,
+            "nonpad_input_tokens": 1611652,
+            "padded_compute_tokens": 1923072,
+            "raw_tokens": 1606646,
+            "rows": 2504,
+            "text_tokens": 1606644
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1563295,
+            "nonpad_input_tokens": 1566232,
+            "padded_compute_tokens": 2255616,
+            "raw_tokens": 1560358,
+            "rows": 2937,
+            "text_tokens": 1560358
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1587834,
+            "nonpad_input_tokens": 1591270,
+            "padded_compute_tokens": 2638848,
+            "raw_tokens": 1584404,
+            "rows": 3436,
+            "text_tokens": 1584398
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32074993,
+          "nonpad_input_tokens": 32132830,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 32017165,
+          "rows": 57837,
+          "text_tokens": 32017156
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:20.818087+00:00",
+        "file": "train-00003-of-00040.jsonl",
+        "meta_file": "train-00003-of-00040.jsonl.meta.json",
+        "meta_sha256": "773f7f4d355e0a305777628698e87e89c72c7b8db4414e76122fbf6bf9e63c6a",
+        "provenance_file": "provenance/train-00003-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "61dfb939e0ef6f33dde1a2aed1b25a731e1060ce34aec0668570aec97a09252e",
+        "provenance_size_bytes": 33171738,
+        "sequence_length": 768,
+        "sha256": "83276313de8d01bc438bb50e1d8c1cb361ca6e312c734e7c757bdabdb75cd1a5",
+        "size_bytes": 94836454,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14315487,
+            "nonpad_input_tokens": 14343840,
+            "padded_compute_tokens": 21775104,
+            "raw_tokens": 14287134,
+            "rows": 28353,
+            "text_tokens": 14287134
+          },
+          "finemath": {
+            "loss_target_tokens": 3217178,
+            "nonpad_input_tokens": 3222155,
+            "padded_compute_tokens": 3822336,
+            "raw_tokens": 3212198,
+            "rows": 4977,
+            "text_tokens": 3212201
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9647049,
+            "nonpad_input_tokens": 9662540,
+            "padded_compute_tokens": 11897088,
+            "raw_tokens": 9631558,
+            "rows": 15491,
+            "text_tokens": 9631558
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1621760,
+            "nonpad_input_tokens": 1624272,
+            "padded_compute_tokens": 1929216,
+            "raw_tokens": 1619251,
+            "rows": 2512,
+            "text_tokens": 1619248
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1615016,
+            "nonpad_input_tokens": 1617979,
+            "padded_compute_tokens": 2275584,
+            "raw_tokens": 1612054,
+            "rows": 2963,
+            "text_tokens": 1612053
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1676280,
+            "nonpad_input_tokens": 1679821,
+            "padded_compute_tokens": 2719488,
+            "raw_tokens": 1672746,
+            "rows": 3541,
+            "text_tokens": 1672739
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32092770,
+          "nonpad_input_tokens": 32150607,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 32034941,
+          "rows": 57837,
+          "text_tokens": 32034933
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:21.091143+00:00",
+        "file": "train-00004-of-00040.jsonl",
+        "meta_file": "train-00004-of-00040.jsonl.meta.json",
+        "meta_sha256": "056f4bb18fd87e4bc1070e5cc082e1a4dc3a0b099e153089c909e26a9a60abed",
+        "provenance_file": "provenance/train-00004-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "82d39c276f2bde7555a8ac88e5a7c4a75230b4cea50d421e4ae8fff1b483b9fb",
+        "provenance_size_bytes": 33164359,
+        "sequence_length": 768,
+        "sha256": "84473b019ec44ee95b7e723d346dddbfcc37ef039bb3a214a191ec92293b19a0",
+        "size_bytes": 94704531,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14467651,
+            "nonpad_input_tokens": 14496197,
+            "padded_compute_tokens": 21923328,
+            "raw_tokens": 14439107,
+            "rows": 28546,
+            "text_tokens": 14439105
+          },
+          "finemath": {
+            "loss_target_tokens": 3235642,
+            "nonpad_input_tokens": 3240632,
+            "padded_compute_tokens": 3832320,
+            "raw_tokens": 3230652,
+            "rows": 4990,
+            "text_tokens": 3230652
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9562129,
+            "nonpad_input_tokens": 9577558,
+            "padded_compute_tokens": 11849472,
+            "raw_tokens": 9546701,
+            "rows": 15429,
+            "text_tokens": 9546700
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1557970,
+            "nonpad_input_tokens": 1560387,
+            "padded_compute_tokens": 1856256,
+            "raw_tokens": 1555552,
+            "rows": 2417,
+            "text_tokens": 1555553
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1569201,
+            "nonpad_input_tokens": 1572166,
+            "padded_compute_tokens": 2277120,
+            "raw_tokens": 1566237,
+            "rows": 2965,
+            "text_tokens": 1566236
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1600346,
+            "nonpad_input_tokens": 1603836,
+            "padded_compute_tokens": 2680320,
+            "raw_tokens": 1596866,
+            "rows": 3490,
+            "text_tokens": 1596856
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31992939,
+          "nonpad_input_tokens": 32050776,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31935115,
+          "rows": 57837,
+          "text_tokens": 31935102
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:21.362765+00:00",
+        "file": "train-00005-of-00040.jsonl",
+        "meta_file": "train-00005-of-00040.jsonl.meta.json",
+        "meta_sha256": "07b887a3bb875e0652c0c32a4a03ab341440ee8d679d2cc37b8604234801d1bd",
+        "provenance_file": "provenance/train-00005-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "5126ebf3328ed69d47543c168bb5e264771e7947cdef41d05ba05c4b50a8510e",
+        "provenance_size_bytes": 33166664,
+        "sequence_length": 768,
+        "sha256": "76f2e2c4e3bacdbdd4fd5b3e8fc91425f8065c9c3f3063f2b8ef1cd6cf551f4a",
+        "size_bytes": 94957705,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14534895,
+            "nonpad_input_tokens": 14563523,
+            "padded_compute_tokens": 21986304,
+            "raw_tokens": 14506269,
+            "rows": 28628,
+            "text_tokens": 14506267
+          },
+          "finemath": {
+            "loss_target_tokens": 3208467,
+            "nonpad_input_tokens": 3213427,
+            "padded_compute_tokens": 3809280,
+            "raw_tokens": 3203504,
+            "rows": 4960,
+            "text_tokens": 3203507
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9604624,
+            "nonpad_input_tokens": 9620108,
+            "padded_compute_tokens": 11891712,
+            "raw_tokens": 9589140,
+            "rows": 15484,
+            "text_tokens": 9589140
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1624089,
+            "nonpad_input_tokens": 1626549,
+            "padded_compute_tokens": 1889280,
+            "raw_tokens": 1621631,
+            "rows": 2460,
+            "text_tokens": 1621629
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1554529,
+            "nonpad_input_tokens": 1557446,
+            "padded_compute_tokens": 2240256,
+            "raw_tokens": 1551614,
+            "rows": 2917,
+            "text_tokens": 1551612
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1576477,
+            "nonpad_input_tokens": 1579865,
+            "padded_compute_tokens": 2601984,
+            "raw_tokens": 1573098,
+            "rows": 3388,
+            "text_tokens": 1573089
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32103081,
+          "nonpad_input_tokens": 32160918,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 32045256,
+          "rows": 57837,
+          "text_tokens": 32045244
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:21.615142+00:00",
+        "file": "train-00006-of-00040.jsonl",
+        "meta_file": "train-00006-of-00040.jsonl.meta.json",
+        "meta_sha256": "45a76166a89f0c4ddddc31a20362f9710d1c58c4723a4970cf590cbaa1d5609e",
+        "provenance_file": "provenance/train-00006-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "8c6c0656ab789549646c9054b8c99c889f8ead3e8ad987245dbc6fecda6bc485",
+        "provenance_size_bytes": 33162363,
+        "sequence_length": 768,
+        "sha256": "9275fb6efebcf1da5ee8a7f0c4438557ac079403bfe05f38d64a2f00875a10c8",
+        "size_bytes": 94491885,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14411300,
+            "nonpad_input_tokens": 14439804,
+            "padded_compute_tokens": 21891072,
+            "raw_tokens": 14382800,
+            "rows": 28504,
+            "text_tokens": 14382796
+          },
+          "finemath": {
+            "loss_target_tokens": 3275980,
+            "nonpad_input_tokens": 3281046,
+            "padded_compute_tokens": 3890688,
+            "raw_tokens": 3270909,
+            "rows": 5066,
+            "text_tokens": 3270914
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9521019,
+            "nonpad_input_tokens": 9536470,
+            "padded_compute_tokens": 11866368,
+            "raw_tokens": 9505568,
+            "rows": 15451,
+            "text_tokens": 9505568
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1551478,
+            "nonpad_input_tokens": 1553874,
+            "padded_compute_tokens": 1840128,
+            "raw_tokens": 1549083,
+            "rows": 2396,
+            "text_tokens": 1549082
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1582591,
+            "nonpad_input_tokens": 1585579,
+            "padded_compute_tokens": 2294784,
+            "raw_tokens": 1579604,
+            "rows": 2988,
+            "text_tokens": 1579603
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1596445,
+            "nonpad_input_tokens": 1599877,
+            "padded_compute_tokens": 2635776,
+            "raw_tokens": 1593021,
+            "rows": 3432,
+            "text_tokens": 1593013
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31938813,
+          "nonpad_input_tokens": 31996650,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31880985,
+          "rows": 57837,
+          "text_tokens": 31880976
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:21.913782+00:00",
+        "file": "train-00007-of-00040.jsonl",
+        "meta_file": "train-00007-of-00040.jsonl.meta.json",
+        "meta_sha256": "9f68958708013e39adb20b9e371534ef9093b5789acc2a473dd7fd9dac631d55",
+        "provenance_file": "provenance/train-00007-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "f98ea9047ca84c580d7aa319e66f3990e338cde91c9095b187a7dfe6a2b00522",
+        "provenance_size_bytes": 33174980,
+        "sequence_length": 768,
+        "sha256": "7484ea8a9db6deb3a6df246e3e30976a89bec8be1b5a2e5a991c5f0ec6ae6c0f",
+        "size_bytes": 94496573,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14267720,
+            "nonpad_input_tokens": 14295988,
+            "padded_compute_tokens": 21709824,
+            "raw_tokens": 14239455,
+            "rows": 28268,
+            "text_tokens": 14239452
+          },
+          "finemath": {
+            "loss_target_tokens": 3174003,
+            "nonpad_input_tokens": 3178930,
+            "padded_compute_tokens": 3783936,
+            "raw_tokens": 3169074,
+            "rows": 4927,
+            "text_tokens": 3169076
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9631771,
+            "nonpad_input_tokens": 9647320,
+            "padded_compute_tokens": 11941632,
+            "raw_tokens": 9616222,
+            "rows": 15549,
+            "text_tokens": 9616222
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1656055,
+            "nonpad_input_tokens": 1658620,
+            "padded_compute_tokens": 1969920,
+            "raw_tokens": 1653495,
+            "rows": 2565,
+            "text_tokens": 1653490
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1626406,
+            "nonpad_input_tokens": 1629440,
+            "padded_compute_tokens": 2330112,
+            "raw_tokens": 1623372,
+            "rows": 3034,
+            "text_tokens": 1623372
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1612979,
+            "nonpad_input_tokens": 1616473,
+            "padded_compute_tokens": 2683392,
+            "raw_tokens": 1609495,
+            "rows": 3494,
+            "text_tokens": 1609485
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31968934,
+          "nonpad_input_tokens": 32026771,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31911113,
+          "rows": 57837,
+          "text_tokens": 31911097
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:22.184652+00:00",
+        "file": "train-00008-of-00040.jsonl",
+        "meta_file": "train-00008-of-00040.jsonl.meta.json",
+        "meta_sha256": "d25f69b7efa926f7bd439d1c5e5037eb7f08c5690d7e29c613ebea586c493b45",
+        "provenance_file": "provenance/train-00008-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "aa4b49f562258866435bbeb8913f112c95260ce0b7924cd80bec597b4046b8eb",
+        "provenance_size_bytes": 33165805,
+        "sequence_length": 768,
+        "sha256": "74db590fe6fd77e45ab96252502bcb9e2d102f52973ce00c9b7d8404a11f1b38",
+        "size_bytes": 94840327,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14494830,
+            "nonpad_input_tokens": 14523492,
+            "padded_compute_tokens": 22012416,
+            "raw_tokens": 14466170,
+            "rows": 28662,
+            "text_tokens": 14466168
+          },
+          "finemath": {
+            "loss_target_tokens": 3218351,
+            "nonpad_input_tokens": 3223329,
+            "padded_compute_tokens": 3823104,
+            "raw_tokens": 3213373,
+            "rows": 4978,
+            "text_tokens": 3213373
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9580582,
+            "nonpad_input_tokens": 9596023,
+            "padded_compute_tokens": 11858688,
+            "raw_tokens": 9565141,
+            "rows": 15441,
+            "text_tokens": 9565141
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1572610,
+            "nonpad_input_tokens": 1575054,
+            "padded_compute_tokens": 1876992,
+            "raw_tokens": 1570168,
+            "rows": 2444,
+            "text_tokens": 1570166
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1591034,
+            "nonpad_input_tokens": 1593983,
+            "padded_compute_tokens": 2264832,
+            "raw_tokens": 1588087,
+            "rows": 2949,
+            "text_tokens": 1588085
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1555499,
+            "nonpad_input_tokens": 1558862,
+            "padded_compute_tokens": 2582784,
+            "raw_tokens": 1552141,
+            "rows": 3363,
+            "text_tokens": 1552136
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32012906,
+          "nonpad_input_tokens": 32070743,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31955080,
+          "rows": 57837,
+          "text_tokens": 31955069
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:22.499251+00:00",
+        "file": "train-00009-of-00040.jsonl",
+        "meta_file": "train-00009-of-00040.jsonl.meta.json",
+        "meta_sha256": "3d7dcd7341f12dd4c93fcf348a215c8b4a8dcb8541d884fc0f04fb9f47a79d81",
+        "provenance_file": "provenance/train-00009-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "a9d94647edfc415cc66e18e08ae2b8ce45ab349fc326607c2717b20c85fecb4a",
+        "provenance_size_bytes": 33164735,
+        "sequence_length": 768,
+        "sha256": "3b009068bb8e0d6ed96d27318282470b736cb6f5e83bb0926229745ca70555fe",
+        "size_bytes": 94616149,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14309833,
+            "nonpad_input_tokens": 14338203,
+            "padded_compute_tokens": 21788160,
+            "raw_tokens": 14281464,
+            "rows": 28370,
+            "text_tokens": 14281463
+          },
+          "finemath": {
+            "loss_target_tokens": 3255406,
+            "nonpad_input_tokens": 3260461,
+            "padded_compute_tokens": 3882240,
+            "raw_tokens": 3250351,
+            "rows": 5055,
+            "text_tokens": 3250351
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9664391,
+            "nonpad_input_tokens": 9679954,
+            "padded_compute_tokens": 11952384,
+            "raw_tokens": 9648828,
+            "rows": 15563,
+            "text_tokens": 9648828
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1594671,
+            "nonpad_input_tokens": 1597118,
+            "padded_compute_tokens": 1879296,
+            "raw_tokens": 1592225,
+            "rows": 2447,
+            "text_tokens": 1592224
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1601119,
+            "nonpad_input_tokens": 1604147,
+            "padded_compute_tokens": 2325504,
+            "raw_tokens": 1598091,
+            "rows": 3028,
+            "text_tokens": 1598091
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1559279,
+            "nonpad_input_tokens": 1562653,
+            "padded_compute_tokens": 2591232,
+            "raw_tokens": 1555909,
+            "rows": 3374,
+            "text_tokens": 1555905
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31984699,
+          "nonpad_input_tokens": 32042536,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31926868,
+          "rows": 57837,
+          "text_tokens": 31926862
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:22.772647+00:00",
+        "file": "train-00010-of-00040.jsonl",
+        "meta_file": "train-00010-of-00040.jsonl.meta.json",
+        "meta_sha256": "28a7c2b2ea48fd0114afcb6b3aea662213a31e64054048a2388f38a184449c58",
+        "provenance_file": "provenance/train-00010-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "7afd1d18972c68aaf61359c606a0960d44e2bacaed0630bf22dd01ae4d3e4585",
+        "provenance_size_bytes": 33176571,
+        "sequence_length": 768,
+        "sha256": "b10b4c2d6e28fdf9cb1e33fe8acb47ddf31a45e8fe33e62abb1746adaa953d3a",
+        "size_bytes": 94617995,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14509323,
+            "nonpad_input_tokens": 14537974,
+            "padded_compute_tokens": 22003968,
+            "raw_tokens": 14480673,
+            "rows": 28651,
+            "text_tokens": 14480672
+          },
+          "finemath": {
+            "loss_target_tokens": 3209737,
+            "nonpad_input_tokens": 3214749,
+            "padded_compute_tokens": 3849216,
+            "raw_tokens": 3204717,
+            "rows": 5012,
+            "text_tokens": 3204725
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9442727,
+            "nonpad_input_tokens": 9457970,
+            "padded_compute_tokens": 11706624,
+            "raw_tokens": 9427484,
+            "rows": 15243,
+            "text_tokens": 9427484
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1635274,
+            "nonpad_input_tokens": 1637808,
+            "padded_compute_tokens": 1946112,
+            "raw_tokens": 1632740,
+            "rows": 2534,
+            "text_tokens": 1632740
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1579349,
+            "nonpad_input_tokens": 1582295,
+            "padded_compute_tokens": 2262528,
+            "raw_tokens": 1576404,
+            "rows": 2946,
+            "text_tokens": 1576403
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1605650,
+            "nonpad_input_tokens": 1609101,
+            "padded_compute_tokens": 2650368,
+            "raw_tokens": 1602207,
+            "rows": 3451,
+            "text_tokens": 1602199
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31982060,
+          "nonpad_input_tokens": 32039897,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31924225,
+          "rows": 57837,
+          "text_tokens": 31924223
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:23.041616+00:00",
+        "file": "train-00011-of-00040.jsonl",
+        "meta_file": "train-00011-of-00040.jsonl.meta.json",
+        "meta_sha256": "20bce9a3ad5dcc0ea0261d3b32b3b21852bf1ff0f8611d255db1411bceab833e",
+        "provenance_file": "provenance/train-00011-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "fd86ae8fa5956bf7b06667a86eb76cae7dd1a1badfa33e3528992d7d3c364dc9",
+        "provenance_size_bytes": 33168760,
+        "sequence_length": 768,
+        "sha256": "ab30f3288e16b10bc7cfe6e7946a2746ce953b63a73e86ce8901d69af98833f0",
+        "size_bytes": 94775116,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14482377,
+            "nonpad_input_tokens": 14511031,
+            "padded_compute_tokens": 22006272,
+            "raw_tokens": 14453725,
+            "rows": 28654,
+            "text_tokens": 14453723
+          },
+          "finemath": {
+            "loss_target_tokens": 3135161,
+            "nonpad_input_tokens": 3140005,
+            "padded_compute_tokens": 3720192,
+            "raw_tokens": 3130313,
+            "rows": 4844,
+            "text_tokens": 3130317
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9530898,
+            "nonpad_input_tokens": 9546293,
+            "padded_compute_tokens": 11823360,
+            "raw_tokens": 9515503,
+            "rows": 15395,
+            "text_tokens": 9515503
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1607908,
+            "nonpad_input_tokens": 1610379,
+            "padded_compute_tokens": 1897728,
+            "raw_tokens": 1605438,
+            "rows": 2471,
+            "text_tokens": 1605437
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1636710,
+            "nonpad_input_tokens": 1639752,
+            "padded_compute_tokens": 2336256,
+            "raw_tokens": 1633670,
+            "rows": 3042,
+            "text_tokens": 1633668
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1611513,
+            "nonpad_input_tokens": 1614944,
+            "padded_compute_tokens": 2635008,
+            "raw_tokens": 1608087,
+            "rows": 3431,
+            "text_tokens": 1608082
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32004567,
+          "nonpad_input_tokens": 32062404,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31946736,
+          "rows": 57837,
+          "text_tokens": 31946730
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:23.266759+00:00",
+        "file": "train-00012-of-00040.jsonl",
+        "meta_file": "train-00012-of-00040.jsonl.meta.json",
+        "meta_sha256": "70b001a80ebae28c678dca4059e6e8a2489a8dcaae4776050892e32a891bca9a",
+        "provenance_file": "provenance/train-00012-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "8cf0a023c305c4b00f83a22b392d86b79f6b6c757b75d90498b24632347dfdb4",
+        "provenance_size_bytes": 33164369,
+        "sequence_length": 768,
+        "sha256": "7e6dfc23bd64f6e35d238f67d0b1f6570fcb84402db07adc91dd0b6910fa38d4",
+        "size_bytes": 94660520,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14297089,
+            "nonpad_input_tokens": 14325456,
+            "padded_compute_tokens": 21785856,
+            "raw_tokens": 14268724,
+            "rows": 28367,
+            "text_tokens": 14268722
+          },
+          "finemath": {
+            "loss_target_tokens": 3185942,
+            "nonpad_input_tokens": 3190869,
+            "padded_compute_tokens": 3783936,
+            "raw_tokens": 3181013,
+            "rows": 4927,
+            "text_tokens": 3181015
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9682749,
+            "nonpad_input_tokens": 9698364,
+            "padded_compute_tokens": 11992320,
+            "raw_tokens": 9667134,
+            "rows": 15615,
+            "text_tokens": 9667134
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1588301,
+            "nonpad_input_tokens": 1590753,
+            "padded_compute_tokens": 1883136,
+            "raw_tokens": 1585853,
+            "rows": 2452,
+            "text_tokens": 1585849
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1660152,
+            "nonpad_input_tokens": 1663205,
+            "padded_compute_tokens": 2344704,
+            "raw_tokens": 1657100,
+            "rows": 3053,
+            "text_tokens": 1657099
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1586431,
+            "nonpad_input_tokens": 1589854,
+            "padded_compute_tokens": 2628864,
+            "raw_tokens": 1583019,
+            "rows": 3423,
+            "text_tokens": 1583008
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32000664,
+          "nonpad_input_tokens": 32058501,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31942843,
+          "rows": 57837,
+          "text_tokens": 31942827
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:23.493475+00:00",
+        "file": "train-00013-of-00040.jsonl",
+        "meta_file": "train-00013-of-00040.jsonl.meta.json",
+        "meta_sha256": "4f44624f5bbe481d279a4d55279d1ba1639fb0ab7652155f0ae8d3af476b45d5",
+        "provenance_file": "provenance/train-00013-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "12847fe36f5e1d47440a4119cb55c49ba377002128ae241a8e50a6b5656c1ae6",
+        "provenance_size_bytes": 33171972,
+        "sequence_length": 768,
+        "sha256": "bd7252368efc422e1cc127238fc03faaaf57c2ca43defff9acced93d5dbc9238",
+        "size_bytes": 94450578,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14355265,
+            "nonpad_input_tokens": 14383748,
+            "padded_compute_tokens": 21874944,
+            "raw_tokens": 14326784,
+            "rows": 28483,
+            "text_tokens": 14326782
+          },
+          "finemath": {
+            "loss_target_tokens": 3158279,
+            "nonpad_input_tokens": 3163181,
+            "padded_compute_tokens": 3764736,
+            "raw_tokens": 3153373,
+            "rows": 4902,
+            "text_tokens": 3153377
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9601342,
+            "nonpad_input_tokens": 9616792,
+            "padded_compute_tokens": 11865600,
+            "raw_tokens": 9585892,
+            "rows": 15450,
+            "text_tokens": 9585892
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1626498,
+            "nonpad_input_tokens": 1629018,
+            "padded_compute_tokens": 1935360,
+            "raw_tokens": 1623979,
+            "rows": 2520,
+            "text_tokens": 1623978
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1614506,
+            "nonpad_input_tokens": 1617512,
+            "padded_compute_tokens": 2308608,
+            "raw_tokens": 1611501,
+            "rows": 3006,
+            "text_tokens": 1611500
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1594143,
+            "nonpad_input_tokens": 1597619,
+            "padded_compute_tokens": 2669568,
+            "raw_tokens": 1590677,
+            "rows": 3476,
+            "text_tokens": 1590667
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31950033,
+          "nonpad_input_tokens": 32007870,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31892206,
+          "rows": 57837,
+          "text_tokens": 31892196
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:23.766735+00:00",
+        "file": "train-00014-of-00040.jsonl",
+        "meta_file": "train-00014-of-00040.jsonl.meta.json",
+        "meta_sha256": "12500ce5c48993531f5906f1c52ee65ded7e52dc1fe757d12ca8d2361e3f2f66",
+        "provenance_file": "provenance/train-00014-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "fbfad37c37c219c479980409129ec7c99a9ebb32bfd5d11b05d50cc507041590",
+        "provenance_size_bytes": 33161976,
+        "sequence_length": 768,
+        "sha256": "819814f0f75b876950eb2c68e972e69a3f013c23d0023798cc3991824cdacec3",
+        "size_bytes": 94618164,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14418816,
+            "nonpad_input_tokens": 14447366,
+            "padded_compute_tokens": 21926400,
+            "raw_tokens": 14390273,
+            "rows": 28550,
+            "text_tokens": 14390266
+          },
+          "finemath": {
+            "loss_target_tokens": 3173292,
+            "nonpad_input_tokens": 3178235,
+            "padded_compute_tokens": 3796224,
+            "raw_tokens": 3168347,
+            "rows": 4943,
+            "text_tokens": 3168349
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9643394,
+            "nonpad_input_tokens": 9658936,
+            "padded_compute_tokens": 11936256,
+            "raw_tokens": 9627852,
+            "rows": 15542,
+            "text_tokens": 9627852
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1561187,
+            "nonpad_input_tokens": 1563602,
+            "padded_compute_tokens": 1854720,
+            "raw_tokens": 1558775,
+            "rows": 2415,
+            "text_tokens": 1558772
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1588215,
+            "nonpad_input_tokens": 1591194,
+            "padded_compute_tokens": 2287872,
+            "raw_tokens": 1585239,
+            "rows": 2979,
+            "text_tokens": 1585236
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1564710,
+            "nonpad_input_tokens": 1568118,
+            "padded_compute_tokens": 2617344,
+            "raw_tokens": 1561314,
+            "rows": 3408,
+            "text_tokens": 1561302
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31949614,
+          "nonpad_input_tokens": 32007451,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31891800,
+          "rows": 57837,
+          "text_tokens": 31891777
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:24.207629+00:00",
+        "file": "train-00015-of-00040.jsonl",
+        "meta_file": "train-00015-of-00040.jsonl.meta.json",
+        "meta_sha256": "d6213a65f3c4e6b0a0b83a6e2a1a2776c8d9ad41066bacfefeaaef321dd97a1a",
+        "provenance_file": "provenance/train-00015-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "09c0e61de7ec507ef65b4ce6aa75292cbe56c808160f2180465ce568c0bb0785",
+        "provenance_size_bytes": 33168767,
+        "sequence_length": 768,
+        "sha256": "b69a130bf2dce74aeec4c5eab305bffaab42b3c2b9e09246336b800ff921b404",
+        "size_bytes": 94684150,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14435643,
+            "nonpad_input_tokens": 14464146,
+            "padded_compute_tokens": 21890304,
+            "raw_tokens": 14407141,
+            "rows": 28503,
+            "text_tokens": 14407140
+          },
+          "finemath": {
+            "loss_target_tokens": 3229651,
+            "nonpad_input_tokens": 3234656,
+            "padded_compute_tokens": 3843840,
+            "raw_tokens": 3224644,
+            "rows": 5005,
+            "text_tokens": 3224646
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9575055,
+            "nonpad_input_tokens": 9590477,
+            "padded_compute_tokens": 11844096,
+            "raw_tokens": 9559633,
+            "rows": 15422,
+            "text_tokens": 9559633
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1603142,
+            "nonpad_input_tokens": 1605611,
+            "padded_compute_tokens": 1896192,
+            "raw_tokens": 1600679,
+            "rows": 2469,
+            "text_tokens": 1600673
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1555597,
+            "nonpad_input_tokens": 1558545,
+            "padded_compute_tokens": 2264064,
+            "raw_tokens": 1552649,
+            "rows": 2948,
+            "text_tokens": 1552649
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1620165,
+            "nonpad_input_tokens": 1623655,
+            "padded_compute_tokens": 2680320,
+            "raw_tokens": 1616689,
+            "rows": 3490,
+            "text_tokens": 1616675
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32019253,
+          "nonpad_input_tokens": 32077090,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31961435,
+          "rows": 57837,
+          "text_tokens": 31961416
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:24.723766+00:00",
+        "file": "train-00016-of-00040.jsonl",
+        "meta_file": "train-00016-of-00040.jsonl.meta.json",
+        "meta_sha256": "61adb09a39a4ddec9ca7f365ac65417eeb9d435654f2fe2305930c7416ecd2dc",
+        "provenance_file": "provenance/train-00016-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "196ea6631b27d2cd1337d94e436c9b2c85f3b857ba110f595523ca74b83e68ac",
+        "provenance_size_bytes": 33171929,
+        "sequence_length": 768,
+        "sha256": "ecc070f01c39a67cd34e0ef0f5f916bd2a2c195fd42e78e67631e1c2a12634e7",
+        "size_bytes": 94739552,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14445218,
+            "nonpad_input_tokens": 14473715,
+            "padded_compute_tokens": 21885696,
+            "raw_tokens": 14416723,
+            "rows": 28497,
+            "text_tokens": 14416721
+          },
+          "finemath": {
+            "loss_target_tokens": 3172303,
+            "nonpad_input_tokens": 3177230,
+            "padded_compute_tokens": 3783936,
+            "raw_tokens": 3167375,
+            "rows": 4927,
+            "text_tokens": 3167376
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9565853,
+            "nonpad_input_tokens": 9581288,
+            "padded_compute_tokens": 11854080,
+            "raw_tokens": 9550418,
+            "rows": 15435,
+            "text_tokens": 9550418
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1630785,
+            "nonpad_input_tokens": 1633291,
+            "padded_compute_tokens": 1924608,
+            "raw_tokens": 1628282,
+            "rows": 2506,
+            "text_tokens": 1628279
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1658240,
+            "nonpad_input_tokens": 1661311,
+            "padded_compute_tokens": 2358528,
+            "raw_tokens": 1655169,
+            "rows": 3071,
+            "text_tokens": 1655169
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1564550,
+            "nonpad_input_tokens": 1567951,
+            "padded_compute_tokens": 2611968,
+            "raw_tokens": 1561156,
+            "rows": 3401,
+            "text_tokens": 1561149
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32036949,
+          "nonpad_input_tokens": 32094786,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31979123,
+          "rows": 57837,
+          "text_tokens": 31979112
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:25.215755+00:00",
+        "file": "train-00017-of-00040.jsonl",
+        "meta_file": "train-00017-of-00040.jsonl.meta.json",
+        "meta_sha256": "8c3f3d440b3ae2b1c573135df4ddcdf4250a751c53c6841814896df065f3fba1",
+        "provenance_file": "provenance/train-00017-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "988dce53b81ad9544574018a31a1fc50953af9e562934d7059587a7ea20e5fba",
+        "provenance_size_bytes": 33175259,
+        "sequence_length": 768,
+        "sha256": "e41c0eb49d960f0b48414d9140f382b1fcb3129f3b4e0e96abf66f39fe51203a",
+        "size_bytes": 94504153,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14369849,
+            "nonpad_input_tokens": 14398311,
+            "padded_compute_tokens": 21858816,
+            "raw_tokens": 14341391,
+            "rows": 28462,
+            "text_tokens": 14341387
+          },
+          "finemath": {
+            "loss_target_tokens": 3212939,
+            "nonpad_input_tokens": 3217893,
+            "padded_compute_tokens": 3804672,
+            "raw_tokens": 3207985,
+            "rows": 4954,
+            "text_tokens": 3207985
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9511264,
+            "nonpad_input_tokens": 9526637,
+            "padded_compute_tokens": 11806464,
+            "raw_tokens": 9495891,
+            "rows": 15373,
+            "text_tokens": 9495891
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1656976,
+            "nonpad_input_tokens": 1659516,
+            "padded_compute_tokens": 1950720,
+            "raw_tokens": 1654439,
+            "rows": 2540,
+            "text_tokens": 1654436
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1626656,
+            "nonpad_input_tokens": 1629706,
+            "padded_compute_tokens": 2342400,
+            "raw_tokens": 1623607,
+            "rows": 3050,
+            "text_tokens": 1623606
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1581127,
+            "nonpad_input_tokens": 1584585,
+            "padded_compute_tokens": 2655744,
+            "raw_tokens": 1577676,
+            "rows": 3458,
+            "text_tokens": 1577669
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31958811,
+          "nonpad_input_tokens": 32016648,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31900989,
+          "rows": 57837,
+          "text_tokens": 31900974
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:25.501482+00:00",
+        "file": "train-00018-of-00040.jsonl",
+        "meta_file": "train-00018-of-00040.jsonl.meta.json",
+        "meta_sha256": "18bc575f26ab2c3a03afd375a319193b249678faea8c5e6efdabe3ebe9f2baa8",
+        "provenance_file": "provenance/train-00018-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "7c93c26e362b9c897bce74e667a7e9c2052b0d482317e573d274aff78c14a77d",
+        "provenance_size_bytes": 33162308,
+        "sequence_length": 768,
+        "sha256": "e9ab5c41e4c4e3f13f6777561e33b025f6a0a24ff2421a81375d1f0a9d253e02",
+        "size_bytes": 94880865,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14409648,
+            "nonpad_input_tokens": 14438117,
+            "padded_compute_tokens": 21864192,
+            "raw_tokens": 14381179,
+            "rows": 28469,
+            "text_tokens": 14381179
+          },
+          "finemath": {
+            "loss_target_tokens": 3200779,
+            "nonpad_input_tokens": 3205706,
+            "padded_compute_tokens": 3783936,
+            "raw_tokens": 3195853,
+            "rows": 4927,
+            "text_tokens": 3195852
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9677807,
+            "nonpad_input_tokens": 9693363,
+            "padded_compute_tokens": 11947008,
+            "raw_tokens": 9662252,
+            "rows": 15556,
+            "text_tokens": 9662251
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1554114,
+            "nonpad_input_tokens": 1556531,
+            "padded_compute_tokens": 1856256,
+            "raw_tokens": 1551701,
+            "rows": 2417,
+            "text_tokens": 1551697
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1633125,
+            "nonpad_input_tokens": 1636154,
+            "padded_compute_tokens": 2326272,
+            "raw_tokens": 1630097,
+            "rows": 3029,
+            "text_tokens": 1630096
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1596782,
+            "nonpad_input_tokens": 1600221,
+            "padded_compute_tokens": 2641152,
+            "raw_tokens": 1593352,
+            "rows": 3439,
+            "text_tokens": 1593343
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32072255,
+          "nonpad_input_tokens": 32130092,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 32014434,
+          "rows": 57837,
+          "text_tokens": 32014418
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:25.929811+00:00",
+        "file": "train-00019-of-00040.jsonl",
+        "meta_file": "train-00019-of-00040.jsonl.meta.json",
+        "meta_sha256": "4d8aa8b58b6611c8b953bc488f250ecab089179a5abaf80e1dd598499b62c0fa",
+        "provenance_file": "provenance/train-00019-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "865ba0a882264058f529da60a8441f2fb1693a32bb964841fe5692e311e62f31",
+        "provenance_size_bytes": 33167292,
+        "sequence_length": 768,
+        "sha256": "1611a7390c1a1aecc75bbe2992e7dbc78e19ec8f2546fdcc75bfc204b32f04fc",
+        "size_bytes": 94502884,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14291077,
+            "nonpad_input_tokens": 14319413,
+            "padded_compute_tokens": 21762048,
+            "raw_tokens": 14262743,
+            "rows": 28336,
+            "text_tokens": 14262741
+          },
+          "finemath": {
+            "loss_target_tokens": 3173823,
+            "nonpad_input_tokens": 3178760,
+            "padded_compute_tokens": 3791616,
+            "raw_tokens": 3168884,
+            "rows": 4937,
+            "text_tokens": 3168886
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9707388,
+            "nonpad_input_tokens": 9723040,
+            "padded_compute_tokens": 12020736,
+            "raw_tokens": 9691737,
+            "rows": 15652,
+            "text_tokens": 9691736
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1626158,
+            "nonpad_input_tokens": 1628654,
+            "padded_compute_tokens": 1916928,
+            "raw_tokens": 1623668,
+            "rows": 2496,
+            "text_tokens": 1623662
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1562669,
+            "nonpad_input_tokens": 1565599,
+            "padded_compute_tokens": 2250240,
+            "raw_tokens": 1559739,
+            "rows": 2930,
+            "text_tokens": 1559739
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1623750,
+            "nonpad_input_tokens": 1627236,
+            "padded_compute_tokens": 2677248,
+            "raw_tokens": 1620270,
+            "rows": 3486,
+            "text_tokens": 1620264
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31984865,
+          "nonpad_input_tokens": 32042702,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31927041,
+          "rows": 57837,
+          "text_tokens": 31927028
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:26.199001+00:00",
+        "file": "train-00020-of-00040.jsonl",
+        "meta_file": "train-00020-of-00040.jsonl.meta.json",
+        "meta_sha256": "bb7fa3be8a40a915621da73b7abef9093942659a8b05cd0d140c96a952bd02a9",
+        "provenance_file": "provenance/train-00020-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "f0a9c2390b337e7aff78835d09db65796545d4dbdedf39d0b310dee87b8cce74",
+        "provenance_size_bytes": 33160256,
+        "sequence_length": 768,
+        "sha256": "49a30ae1da9e3ed5a1bffdd07de82697452cc6845c4dd12fbfaaffe0934832bb",
+        "size_bytes": 94411809,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14423340,
+            "nonpad_input_tokens": 14451961,
+            "padded_compute_tokens": 21980928,
+            "raw_tokens": 14394722,
+            "rows": 28621,
+            "text_tokens": 14394719
+          },
+          "finemath": {
+            "loss_target_tokens": 3247971,
+            "nonpad_input_tokens": 3252977,
+            "padded_compute_tokens": 3844608,
+            "raw_tokens": 3242959,
+            "rows": 5006,
+            "text_tokens": 3242965
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9528956,
+            "nonpad_input_tokens": 9544347,
+            "padded_compute_tokens": 11820288,
+            "raw_tokens": 9513565,
+            "rows": 15391,
+            "text_tokens": 9513565
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1516772,
+            "nonpad_input_tokens": 1519135,
+            "padded_compute_tokens": 1814784,
+            "raw_tokens": 1514414,
+            "rows": 2363,
+            "text_tokens": 1514409
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1573835,
+            "nonpad_input_tokens": 1576793,
+            "padded_compute_tokens": 2271744,
+            "raw_tokens": 1570878,
+            "rows": 2958,
+            "text_tokens": 1570877
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1599564,
+            "nonpad_input_tokens": 1603062,
+            "padded_compute_tokens": 2686464,
+            "raw_tokens": 1596074,
+            "rows": 3498,
+            "text_tokens": 1596066
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31890438,
+          "nonpad_input_tokens": 31948275,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31832612,
+          "rows": 57837,
+          "text_tokens": 31832601
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:26.470041+00:00",
+        "file": "train-00021-of-00040.jsonl",
+        "meta_file": "train-00021-of-00040.jsonl.meta.json",
+        "meta_sha256": "b366143d63e4a0c841cde7fd814356a8d941959c4dbaf9f7fc91685f9bbb8ac5",
+        "provenance_file": "provenance/train-00021-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "901cf7f82479115fa7caab7226d9102f120d148aa003bfe1caeeee44a9055df7",
+        "provenance_size_bytes": 33161656,
+        "sequence_length": 768,
+        "sha256": "61c523d4b9ba2de2ab35a10255e0e67ba66cef28d30c22bfc29f882ffa415bb6",
+        "size_bytes": 94874177,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14345503,
+            "nonpad_input_tokens": 14373858,
+            "padded_compute_tokens": 21776640,
+            "raw_tokens": 14317148,
+            "rows": 28355,
+            "text_tokens": 14317148
+          },
+          "finemath": {
+            "loss_target_tokens": 3217977,
+            "nonpad_input_tokens": 3222936,
+            "padded_compute_tokens": 3808512,
+            "raw_tokens": 3213018,
+            "rows": 4959,
+            "text_tokens": 3213018
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9686613,
+            "nonpad_input_tokens": 9702222,
+            "padded_compute_tokens": 11987712,
+            "raw_tokens": 9671004,
+            "rows": 15609,
+            "text_tokens": 9671004
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1567121,
+            "nonpad_input_tokens": 1569539,
+            "padded_compute_tokens": 1857024,
+            "raw_tokens": 1564705,
+            "rows": 2418,
+            "text_tokens": 1564703
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1628192,
+            "nonpad_input_tokens": 1631222,
+            "padded_compute_tokens": 2327040,
+            "raw_tokens": 1625163,
+            "rows": 3030,
+            "text_tokens": 1625162
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1610997,
+            "nonpad_input_tokens": 1614463,
+            "padded_compute_tokens": 2661888,
+            "raw_tokens": 1607536,
+            "rows": 3466,
+            "text_tokens": 1607531
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32056403,
+          "nonpad_input_tokens": 32114240,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31998574,
+          "rows": 57837,
+          "text_tokens": 31998566
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:26.737665+00:00",
+        "file": "train-00022-of-00040.jsonl",
+        "meta_file": "train-00022-of-00040.jsonl.meta.json",
+        "meta_sha256": "325657a5d0ce9048fe1f759737cd71d77b9dba216d89c9681ec6fb0200d3b79d",
+        "provenance_file": "provenance/train-00022-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "eeff1c33d92f2c3f4cfd979449b6bda523f29e38dee8c63bb26853db2a3f65c9",
+        "provenance_size_bytes": 33164317,
+        "sequence_length": 768,
+        "sha256": "1477209381cfc559f405d901041f0d0f770851dc1367106d992fe7025ab721d6",
+        "size_bytes": 94239555,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14383789,
+            "nonpad_input_tokens": 14412389,
+            "padded_compute_tokens": 21964800,
+            "raw_tokens": 14355194,
+            "rows": 28600,
+            "text_tokens": 14355189
+          },
+          "finemath": {
+            "loss_target_tokens": 3171706,
+            "nonpad_input_tokens": 3176596,
+            "padded_compute_tokens": 3755520,
+            "raw_tokens": 3166814,
+            "rows": 4890,
+            "text_tokens": 3166816
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9575464,
+            "nonpad_input_tokens": 9590963,
+            "padded_compute_tokens": 11903232,
+            "raw_tokens": 9559965,
+            "rows": 15499,
+            "text_tokens": 9559965
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1582806,
+            "nonpad_input_tokens": 1585244,
+            "padded_compute_tokens": 1872384,
+            "raw_tokens": 1580372,
+            "rows": 2438,
+            "text_tokens": 1580368
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1535396,
+            "nonpad_input_tokens": 1538316,
+            "padded_compute_tokens": 2242560,
+            "raw_tokens": 1532477,
+            "rows": 2920,
+            "text_tokens": 1532476
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1610433,
+            "nonpad_input_tokens": 1613923,
+            "padded_compute_tokens": 2680320,
+            "raw_tokens": 1606949,
+            "rows": 3490,
+            "text_tokens": 1606943
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31859594,
+          "nonpad_input_tokens": 31917431,
+          "padded_compute_tokens": 44418816,
+          "raw_tokens": 31801771,
+          "rows": 57837,
+          "text_tokens": 31801757
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:27.005844+00:00",
+        "file": "train-00023-of-00040.jsonl",
+        "meta_file": "train-00023-of-00040.jsonl.meta.json",
+        "meta_sha256": "fce033931842a5e1dbc343faede7a13767bb3d6443bc99b979c8d4550154f3cd",
+        "provenance_file": "provenance/train-00023-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "09de55ba0d29c5de4931b8127c2e830714069aea1a97422d8aa7ed0d34033201",
+        "provenance_size_bytes": 33170537,
+        "sequence_length": 768,
+        "sha256": "9cfd826a410ba7181ef4bb199242a2229ce820f57c8ef29865de8b744bb08fda",
+        "size_bytes": 94679153,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14347529,
+            "nonpad_input_tokens": 14375894,
+            "padded_compute_tokens": 21784320,
+            "raw_tokens": 14319165,
+            "rows": 28365,
+            "text_tokens": 14319164
+          },
+          "finemath": {
+            "loss_target_tokens": 3262826,
+            "nonpad_input_tokens": 3267821,
+            "padded_compute_tokens": 3836160,
+            "raw_tokens": 3257828,
+            "rows": 4995,
+            "text_tokens": 3257831
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9553422,
+            "nonpad_input_tokens": 9568815,
+            "padded_compute_tokens": 11821824,
+            "raw_tokens": 9538029,
+            "rows": 15393,
+            "text_tokens": 9538029
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1636620,
+            "nonpad_input_tokens": 1639108,
+            "padded_compute_tokens": 1910784,
+            "raw_tokens": 1634135,
+            "rows": 2488,
+            "text_tokens": 1634132
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1639946,
+            "nonpad_input_tokens": 1643041,
+            "padded_compute_tokens": 2376960,
+            "raw_tokens": 1636852,
+            "rows": 3095,
+            "text_tokens": 1636851
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1617779,
+            "nonpad_input_tokens": 1621279,
+            "padded_compute_tokens": 2688000,
+            "raw_tokens": 1614288,
+            "rows": 3500,
+            "text_tokens": 1614279
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32058122,
+          "nonpad_input_tokens": 32115958,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 32000297,
+          "rows": 57836,
+          "text_tokens": 32000286
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:27.231283+00:00",
+        "file": "train-00024-of-00040.jsonl",
+        "meta_file": "train-00024-of-00040.jsonl.meta.json",
+        "meta_sha256": "9af7bdc1b639a3c377b6d7ae44a15216fe9dc4af87ad4d9d48ca7c32443a7cb5",
+        "provenance_file": "provenance/train-00024-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "b2c17aa00e45e29fc312dac61789192195a40176027587cb544900424f3a4846",
+        "provenance_size_bytes": 33158267,
+        "sequence_length": 768,
+        "sha256": "4ba66008d12640f9cfedd03caf72ed0f4d268a42d7a09e00df6f0804623a2f94",
+        "size_bytes": 94804875,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14448015,
+            "nonpad_input_tokens": 14476550,
+            "padded_compute_tokens": 21914880,
+            "raw_tokens": 14419482,
+            "rows": 28535,
+            "text_tokens": 14419480
+          },
+          "finemath": {
+            "loss_target_tokens": 3129534,
+            "nonpad_input_tokens": 3134405,
+            "padded_compute_tokens": 3740928,
+            "raw_tokens": 3124662,
+            "rows": 4871,
+            "text_tokens": 3124663
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9703682,
+            "nonpad_input_tokens": 9719312,
+            "padded_compute_tokens": 12003840,
+            "raw_tokens": 9688052,
+            "rows": 15630,
+            "text_tokens": 9688052
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1573841,
+            "nonpad_input_tokens": 1576241,
+            "padded_compute_tokens": 1843200,
+            "raw_tokens": 1571442,
+            "rows": 2400,
+            "text_tokens": 1571441
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1604910,
+            "nonpad_input_tokens": 1607908,
+            "padded_compute_tokens": 2302464,
+            "raw_tokens": 1601916,
+            "rows": 2998,
+            "text_tokens": 1601912
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1580589,
+            "nonpad_input_tokens": 1583991,
+            "padded_compute_tokens": 2612736,
+            "raw_tokens": 1577196,
+            "rows": 3402,
+            "text_tokens": 1577187
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32040571,
+          "nonpad_input_tokens": 32098407,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 31982750,
+          "rows": 57836,
+          "text_tokens": 31982735
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:27.779375+00:00",
+        "file": "train-00025-of-00040.jsonl",
+        "meta_file": "train-00025-of-00040.jsonl.meta.json",
+        "meta_sha256": "565759f0855753d3354bf4a1ab32da6731c10df812928454c697b80a81231618",
+        "provenance_file": "provenance/train-00025-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "b947e24a5140425c1baf1c17451b51232ee09ccc8c3d63c377920fb8cdb9e407",
+        "provenance_size_bytes": 33167712,
+        "sequence_length": 768,
+        "sha256": "97a5bff0cfcf5ba46924587e2073a8985f249d6ee91a2eda4ebd1f8892823dc7",
+        "size_bytes": 94437670,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14390499,
+            "nonpad_input_tokens": 14419131,
+            "padded_compute_tokens": 21989376,
+            "raw_tokens": 14361867,
+            "rows": 28632,
+            "text_tokens": 14361867
+          },
+          "finemath": {
+            "loss_target_tokens": 3164208,
+            "nonpad_input_tokens": 3169138,
+            "padded_compute_tokens": 3786240,
+            "raw_tokens": 3159274,
+            "rows": 4930,
+            "text_tokens": 3159278
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9598803,
+            "nonpad_input_tokens": 9614209,
+            "padded_compute_tokens": 11831808,
+            "raw_tokens": 9583397,
+            "rows": 15406,
+            "text_tokens": 9583397
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1602449,
+            "nonpad_input_tokens": 1604916,
+            "padded_compute_tokens": 1894656,
+            "raw_tokens": 1599984,
+            "rows": 2467,
+            "text_tokens": 1599982
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1550695,
+            "nonpad_input_tokens": 1553599,
+            "padded_compute_tokens": 2230272,
+            "raw_tokens": 1547794,
+            "rows": 2904,
+            "text_tokens": 1547791
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1619411,
+            "nonpad_input_tokens": 1622908,
+            "padded_compute_tokens": 2685696,
+            "raw_tokens": 1615922,
+            "rows": 3497,
+            "text_tokens": 1615914
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31926065,
+          "nonpad_input_tokens": 31983901,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 31868238,
+          "rows": 57836,
+          "text_tokens": 31868229
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:28.052394+00:00",
+        "file": "train-00026-of-00040.jsonl",
+        "meta_file": "train-00026-of-00040.jsonl.meta.json",
+        "meta_sha256": "e67a47fa29e5b4bad3c2a9adc917edd2a297d82d11fcafe7f0a692e56a71d017",
+        "provenance_file": "provenance/train-00026-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "e137843e0868bff7967309121b436b6d59b31e9345eb963cbee436137f6fc2a0",
+        "provenance_size_bytes": 33173860,
+        "sequence_length": 768,
+        "sha256": "7849a08c688dc613a6f9c1ec616545700faa31b9ffdfca6ac914e0d8191c355b",
+        "size_bytes": 94718759,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14412706,
+            "nonpad_input_tokens": 14441237,
+            "padded_compute_tokens": 21911808,
+            "raw_tokens": 14384177,
+            "rows": 28531,
+            "text_tokens": 14384175
+          },
+          "finemath": {
+            "loss_target_tokens": 3235478,
+            "nonpad_input_tokens": 3240477,
+            "padded_compute_tokens": 3839232,
+            "raw_tokens": 3230475,
+            "rows": 4999,
+            "text_tokens": 3230479
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9533924,
+            "nonpad_input_tokens": 9549252,
+            "padded_compute_tokens": 11771904,
+            "raw_tokens": 9518596,
+            "rows": 15328,
+            "text_tokens": 9518596
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1634045,
+            "nonpad_input_tokens": 1636569,
+            "padded_compute_tokens": 1938432,
+            "raw_tokens": 1631522,
+            "rows": 2524,
+            "text_tokens": 1631521
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1618612,
+            "nonpad_input_tokens": 1621644,
+            "padded_compute_tokens": 2328576,
+            "raw_tokens": 1615581,
+            "rows": 3032,
+            "text_tokens": 1615580
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1628031,
+            "nonpad_input_tokens": 1631453,
+            "padded_compute_tokens": 2628096,
+            "raw_tokens": 1624618,
+            "rows": 3422,
+            "text_tokens": 1624609
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32062796,
+          "nonpad_input_tokens": 32120632,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 32004969,
+          "rows": 57836,
+          "text_tokens": 32004960
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:28.375886+00:00",
+        "file": "train-00027-of-00040.jsonl",
+        "meta_file": "train-00027-of-00040.jsonl.meta.json",
+        "meta_sha256": "ce6e53ce87c313e519bc71f4c544740cf66603697e67b296ab336c4d8dacb9be",
+        "provenance_file": "provenance/train-00027-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "7006ae9026a2f3280b9afd44a0722150a5aa01c163aa9a95ed231e23ea8e8c25",
+        "provenance_size_bytes": 33174015,
+        "sequence_length": 768,
+        "sha256": "16d5ee7aef83cfd8edcd23f5ae19763bd313ed5bd01dc1a457b5ee6c2162f598",
+        "size_bytes": 94854595,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14492549,
+            "nonpad_input_tokens": 14521074,
+            "padded_compute_tokens": 21907200,
+            "raw_tokens": 14464025,
+            "rows": 28525,
+            "text_tokens": 14464024
+          },
+          "finemath": {
+            "loss_target_tokens": 3256399,
+            "nonpad_input_tokens": 3261450,
+            "padded_compute_tokens": 3879168,
+            "raw_tokens": 3251346,
+            "rows": 5051,
+            "text_tokens": 3251348
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9561957,
+            "nonpad_input_tokens": 9577333,
+            "padded_compute_tokens": 11808768,
+            "raw_tokens": 9546581,
+            "rows": 15376,
+            "text_tokens": 9546581
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1641425,
+            "nonpad_input_tokens": 1643956,
+            "padded_compute_tokens": 1943808,
+            "raw_tokens": 1638897,
+            "rows": 2531,
+            "text_tokens": 1638894
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1540441,
+            "nonpad_input_tokens": 1543362,
+            "padded_compute_tokens": 2243328,
+            "raw_tokens": 1537522,
+            "rows": 2921,
+            "text_tokens": 1537520
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1594986,
+            "nonpad_input_tokens": 1598418,
+            "padded_compute_tokens": 2635776,
+            "raw_tokens": 1591562,
+            "rows": 3432,
+            "text_tokens": 1591554
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32087757,
+          "nonpad_input_tokens": 32145593,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 32029933,
+          "rows": 57836,
+          "text_tokens": 32029921
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:28.648152+00:00",
+        "file": "train-00028-of-00040.jsonl",
+        "meta_file": "train-00028-of-00040.jsonl.meta.json",
+        "meta_sha256": "c0f18efd9f9ef7c70ef1fed39ac1cdc2acf8dd0d5bdced67fbd594a040a4ac13",
+        "provenance_file": "provenance/train-00028-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "b3e0f509049707a4a4b4e9f3de97d116624465df384d40ffe10007c973002deb",
+        "provenance_size_bytes": 33165773,
+        "sequence_length": 768,
+        "sha256": "356d2125952bf5173f50a6fd128c7fd3bf878ed04484b5ab0da1db5690a9fea0",
+        "size_bytes": 94430269,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14377515,
+            "nonpad_input_tokens": 14405904,
+            "padded_compute_tokens": 21802752,
+            "raw_tokens": 14349129,
+            "rows": 28389,
+            "text_tokens": 14349126
+          },
+          "finemath": {
+            "loss_target_tokens": 3138607,
+            "nonpad_input_tokens": 3143475,
+            "padded_compute_tokens": 3738624,
+            "raw_tokens": 3133731,
+            "rows": 4868,
+            "text_tokens": 3133739
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9549976,
+            "nonpad_input_tokens": 9565426,
+            "padded_compute_tokens": 11865600,
+            "raw_tokens": 9534526,
+            "rows": 15450,
+            "text_tokens": 9534526
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1580847,
+            "nonpad_input_tokens": 1583294,
+            "padded_compute_tokens": 1879296,
+            "raw_tokens": 1578403,
+            "rows": 2447,
+            "text_tokens": 1578400
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1649824,
+            "nonpad_input_tokens": 1652939,
+            "padded_compute_tokens": 2392320,
+            "raw_tokens": 1646710,
+            "rows": 3115,
+            "text_tokens": 1646709
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1640607,
+            "nonpad_input_tokens": 1644174,
+            "padded_compute_tokens": 2739456,
+            "raw_tokens": 1637043,
+            "rows": 3567,
+            "text_tokens": 1637040
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31937376,
+          "nonpad_input_tokens": 31995212,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 31879542,
+          "rows": 57836,
+          "text_tokens": 31879540
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:28.919697+00:00",
+        "file": "train-00029-of-00040.jsonl",
+        "meta_file": "train-00029-of-00040.jsonl.meta.json",
+        "meta_sha256": "6d98cfcebe982f71c8d6e2fc395eadf5d08bb7557095935a72f7636ee2375906",
+        "provenance_file": "provenance/train-00029-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "2939e555af025cf378c3aa9cdc80a26209c903b5f6459c8958ac99ef89364ad9",
+        "provenance_size_bytes": 33167048,
+        "sequence_length": 768,
+        "sha256": "6568a648b2433bb3de8bca0aee20570135d9564bf862fb0611ff2b53fcf2ee7e",
+        "size_bytes": 94812711,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14349239,
+            "nonpad_input_tokens": 14377624,
+            "padded_compute_tokens": 21799680,
+            "raw_tokens": 14320854,
+            "rows": 28385,
+            "text_tokens": 14320854
+          },
+          "finemath": {
+            "loss_target_tokens": 3224497,
+            "nonpad_input_tokens": 3229457,
+            "padded_compute_tokens": 3809280,
+            "raw_tokens": 3219532,
+            "rows": 4960,
+            "text_tokens": 3219537
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9698131,
+            "nonpad_input_tokens": 9713758,
+            "padded_compute_tokens": 12001536,
+            "raw_tokens": 9682504,
+            "rows": 15627,
+            "text_tokens": 9682504
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1611413,
+            "nonpad_input_tokens": 1613907,
+            "padded_compute_tokens": 1915392,
+            "raw_tokens": 1608922,
+            "rows": 2494,
+            "text_tokens": 1608919
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1612708,
+            "nonpad_input_tokens": 1615715,
+            "padded_compute_tokens": 2309376,
+            "raw_tokens": 1609703,
+            "rows": 3007,
+            "text_tokens": 1609701
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1563146,
+            "nonpad_input_tokens": 1566509,
+            "padded_compute_tokens": 2582784,
+            "raw_tokens": 1559787,
+            "rows": 3363,
+            "text_tokens": 1559783
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32059134,
+          "nonpad_input_tokens": 32116970,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 32001302,
+          "rows": 57836,
+          "text_tokens": 32001298
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:29.186883+00:00",
+        "file": "train-00030-of-00040.jsonl",
+        "meta_file": "train-00030-of-00040.jsonl.meta.json",
+        "meta_sha256": "17b86852cc66b05388397dcd71eba521fd482ed8cab6a4fdd970a8d0b7bab71f",
+        "provenance_file": "provenance/train-00030-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "eda0b8a1f998afc862721e71803bcb8f9ecec8c9fd47cd68cc576184d8d4f4eb",
+        "provenance_size_bytes": 33158870,
+        "sequence_length": 768,
+        "sha256": "0ebad12691949c756188a3b2257d5b4d94b09b049d84b96f4bd0d20f9bb25de1",
+        "size_bytes": 94820876,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14424043,
+            "nonpad_input_tokens": 14452467,
+            "padded_compute_tokens": 21829632,
+            "raw_tokens": 14395619,
+            "rows": 28424,
+            "text_tokens": 14395619
+          },
+          "finemath": {
+            "loss_target_tokens": 3154315,
+            "nonpad_input_tokens": 3159239,
+            "padded_compute_tokens": 3781632,
+            "raw_tokens": 3149391,
+            "rows": 4924,
+            "text_tokens": 3149391
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9699017,
+            "nonpad_input_tokens": 9714650,
+            "padded_compute_tokens": 12006144,
+            "raw_tokens": 9683384,
+            "rows": 15633,
+            "text_tokens": 9683384
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1550249,
+            "nonpad_input_tokens": 1552651,
+            "padded_compute_tokens": 1844736,
+            "raw_tokens": 1547851,
+            "rows": 2402,
+            "text_tokens": 1547847
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1614785,
+            "nonpad_input_tokens": 1617785,
+            "padded_compute_tokens": 2304000,
+            "raw_tokens": 1611786,
+            "rows": 3000,
+            "text_tokens": 1611785
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1593116,
+            "nonpad_input_tokens": 1596569,
+            "padded_compute_tokens": 2651904,
+            "raw_tokens": 1589672,
+            "rows": 3453,
+            "text_tokens": 1589663
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32035525,
+          "nonpad_input_tokens": 32093361,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 31977703,
+          "rows": 57836,
+          "text_tokens": 31977689
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:29.789791+00:00",
+        "file": "train-00031-of-00040.jsonl",
+        "meta_file": "train-00031-of-00040.jsonl.meta.json",
+        "meta_sha256": "e45ff50b6ae74b656fc6cedffea1ce9749da20fb31588a944ec048bcd25039dd",
+        "provenance_file": "provenance/train-00031-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "7e17739125257efde54be1a8cba7123ce0c1b539acb10b1432c634705052a1bd",
+        "provenance_size_bytes": 33164348,
+        "sequence_length": 768,
+        "sha256": "110c3ca6e3bcb642e67b08d86a1145af92293ba4771211dddf0f72b850703158",
+        "size_bytes": 94655698,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14469861,
+            "nonpad_input_tokens": 14498440,
+            "padded_compute_tokens": 21948672,
+            "raw_tokens": 14441285,
+            "rows": 28579,
+            "text_tokens": 14441282
+          },
+          "finemath": {
+            "loss_target_tokens": 3236971,
+            "nonpad_input_tokens": 3241990,
+            "padded_compute_tokens": 3854592,
+            "raw_tokens": 3231948,
+            "rows": 5019,
+            "text_tokens": 3231952
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9556326,
+            "nonpad_input_tokens": 9571733,
+            "padded_compute_tokens": 11832576,
+            "raw_tokens": 9540919,
+            "rows": 15407,
+            "text_tokens": 9540919
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1565695,
+            "nonpad_input_tokens": 1568121,
+            "padded_compute_tokens": 1863168,
+            "raw_tokens": 1563271,
+            "rows": 2426,
+            "text_tokens": 1563269
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1610712,
+            "nonpad_input_tokens": 1613732,
+            "padded_compute_tokens": 2319360,
+            "raw_tokens": 1607693,
+            "rows": 3020,
+            "text_tokens": 1607692
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1561575,
+            "nonpad_input_tokens": 1564960,
+            "padded_compute_tokens": 2599680,
+            "raw_tokens": 1558195,
+            "rows": 3385,
+            "text_tokens": 1558190
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32001140,
+          "nonpad_input_tokens": 32058976,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 31943311,
+          "rows": 57836,
+          "text_tokens": 31943304
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:30.060548+00:00",
+        "file": "train-00032-of-00040.jsonl",
+        "meta_file": "train-00032-of-00040.jsonl.meta.json",
+        "meta_sha256": "65303bc2699a8716f9745f18768d00b80f780d82db596319b8c21f398ff48643",
+        "provenance_file": "provenance/train-00032-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "b3a3302575d3229201518e41df0cf8a16b41aa47e453817f1776f8f55eb6edb8",
+        "provenance_size_bytes": 33172148,
+        "sequence_length": 768,
+        "sha256": "ff917748b4ef775bacc3287a755e53a210afa33fb0cf50185a092139ca7cd36a",
+        "size_bytes": 94674786,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14434322,
+            "nonpad_input_tokens": 14462768,
+            "padded_compute_tokens": 21846528,
+            "raw_tokens": 14405878,
+            "rows": 28446,
+            "text_tokens": 14405876
+          },
+          "finemath": {
+            "loss_target_tokens": 3247428,
+            "nonpad_input_tokens": 3252442,
+            "padded_compute_tokens": 3850752,
+            "raw_tokens": 3242412,
+            "rows": 5014,
+            "text_tokens": 3242414
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9575400,
+            "nonpad_input_tokens": 9590786,
+            "padded_compute_tokens": 11816448,
+            "raw_tokens": 9560014,
+            "rows": 15386,
+            "text_tokens": 9560014
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1613961,
+            "nonpad_input_tokens": 1616465,
+            "padded_compute_tokens": 1923072,
+            "raw_tokens": 1611460,
+            "rows": 2504,
+            "text_tokens": 1611457
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1567607,
+            "nonpad_input_tokens": 1570556,
+            "padded_compute_tokens": 2264832,
+            "raw_tokens": 1564659,
+            "rows": 2949,
+            "text_tokens": 1564658
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1627484,
+            "nonpad_input_tokens": 1631021,
+            "padded_compute_tokens": 2716416,
+            "raw_tokens": 1623957,
+            "rows": 3537,
+            "text_tokens": 1623947
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32066202,
+          "nonpad_input_tokens": 32124038,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 32008380,
+          "rows": 57836,
+          "text_tokens": 32008366
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:30.411958+00:00",
+        "file": "train-00033-of-00040.jsonl",
+        "meta_file": "train-00033-of-00040.jsonl.meta.json",
+        "meta_sha256": "14104239e5efaaaa84b9f66816b66e9dbd4fe8d473e1300fbbfa9e350da16253",
+        "provenance_file": "provenance/train-00033-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "a438c97369c317728ecfbc30743ff8750293ba5978c6d4a02fbd732c7f8a8428",
+        "provenance_size_bytes": 33166940,
+        "sequence_length": 768,
+        "sha256": "a52eb146702275f5068f851a884694e353bf2899f1baa894d6a0cb5cb69e4b17",
+        "size_bytes": 94539710,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14349890,
+            "nonpad_input_tokens": 14378385,
+            "padded_compute_tokens": 21884160,
+            "raw_tokens": 14321399,
+            "rows": 28495,
+            "text_tokens": 14321395
+          },
+          "finemath": {
+            "loss_target_tokens": 3222590,
+            "nonpad_input_tokens": 3227559,
+            "padded_compute_tokens": 3816192,
+            "raw_tokens": 3217617,
+            "rows": 4969,
+            "text_tokens": 3217621
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9553506,
+            "nonpad_input_tokens": 9568911,
+            "padded_compute_tokens": 11831040,
+            "raw_tokens": 9538101,
+            "rows": 15405,
+            "text_tokens": 9538101
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1589546,
+            "nonpad_input_tokens": 1591999,
+            "padded_compute_tokens": 1883904,
+            "raw_tokens": 1587094,
+            "rows": 2453,
+            "text_tokens": 1587093
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1615259,
+            "nonpad_input_tokens": 1618286,
+            "padded_compute_tokens": 2324736,
+            "raw_tokens": 1612235,
+            "rows": 3027,
+            "text_tokens": 1612232
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1641995,
+            "nonpad_input_tokens": 1645482,
+            "padded_compute_tokens": 2678016,
+            "raw_tokens": 1638515,
+            "rows": 3487,
+            "text_tokens": 1638508
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31972786,
+          "nonpad_input_tokens": 32030622,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 31914961,
+          "rows": 57836,
+          "text_tokens": 31914950
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:30.708452+00:00",
+        "file": "train-00034-of-00040.jsonl",
+        "meta_file": "train-00034-of-00040.jsonl.meta.json",
+        "meta_sha256": "a1217e674e60c7693fa64ff73ec239891fbb01c72afdece4e655f28c73c1f8c1",
+        "provenance_file": "provenance/train-00034-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "fbbb390b31ebc8df99ee98a25cef882fc1d3c033319c78d5b294165d5e936bc6",
+        "provenance_size_bytes": 33169592,
+        "sequence_length": 768,
+        "sha256": "bad709c6669e34c03a8203c83d38154390cf7b1758015ac2a0335407304c9ad3",
+        "size_bytes": 94437434,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14322768,
+            "nonpad_input_tokens": 14351241,
+            "padded_compute_tokens": 21867264,
+            "raw_tokens": 14294296,
+            "rows": 28473,
+            "text_tokens": 14294295
+          },
+          "finemath": {
+            "loss_target_tokens": 3109392,
+            "nonpad_input_tokens": 3114199,
+            "padded_compute_tokens": 3691776,
+            "raw_tokens": 3104583,
+            "rows": 4807,
+            "text_tokens": 3104585
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9629599,
+            "nonpad_input_tokens": 9645164,
+            "padded_compute_tokens": 11953920,
+            "raw_tokens": 9614035,
+            "rows": 15565,
+            "text_tokens": 9614034
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1632319,
+            "nonpad_input_tokens": 1634835,
+            "padded_compute_tokens": 1932288,
+            "raw_tokens": 1629810,
+            "rows": 2516,
+            "text_tokens": 1629803
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1604475,
+            "nonpad_input_tokens": 1607470,
+            "padded_compute_tokens": 2300160,
+            "raw_tokens": 1601483,
+            "rows": 2995,
+            "text_tokens": 1601480
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1633849,
+            "nonpad_input_tokens": 1637329,
+            "padded_compute_tokens": 2672640,
+            "raw_tokens": 1630374,
+            "rows": 3480,
+            "text_tokens": 1630369
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31932402,
+          "nonpad_input_tokens": 31990238,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 31874581,
+          "rows": 57836,
+          "text_tokens": 31874566
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:30.977533+00:00",
+        "file": "train-00035-of-00040.jsonl",
+        "meta_file": "train-00035-of-00040.jsonl.meta.json",
+        "meta_sha256": "1957404b078f46f00329255294a08c4234b368302c055280cfc482945b7517c8",
+        "provenance_file": "provenance/train-00035-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "94db96bbd01db6e1231b0998fd24661873957018d5328613c42c09dfce81ced1",
+        "provenance_size_bytes": 33173051,
+        "sequence_length": 768,
+        "sha256": "985dbc8336fcc0883f1e380219ae7928f77cf0de4522dbd7cc7f0a27f1223f4a",
+        "size_bytes": 94590615,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14370535,
+            "nonpad_input_tokens": 14399010,
+            "padded_compute_tokens": 21868800,
+            "raw_tokens": 14342062,
+            "rows": 28475,
+            "text_tokens": 14342060
+          },
+          "finemath": {
+            "loss_target_tokens": 3198355,
+            "nonpad_input_tokens": 3203280,
+            "padded_compute_tokens": 3782400,
+            "raw_tokens": 3193430,
+            "rows": 4925,
+            "text_tokens": 3193430
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9578089,
+            "nonpad_input_tokens": 9593553,
+            "padded_compute_tokens": 11876352,
+            "raw_tokens": 9562625,
+            "rows": 15464,
+            "text_tokens": 9562625
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1654512,
+            "nonpad_input_tokens": 1657053,
+            "padded_compute_tokens": 1951488,
+            "raw_tokens": 1651973,
+            "rows": 2541,
+            "text_tokens": 1651971
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1594052,
+            "nonpad_input_tokens": 1597030,
+            "padded_compute_tokens": 2287104,
+            "raw_tokens": 1591076,
+            "rows": 2978,
+            "text_tokens": 1591074
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1607941,
+            "nonpad_input_tokens": 1611394,
+            "padded_compute_tokens": 2651904,
+            "raw_tokens": 1604498,
+            "rows": 3453,
+            "text_tokens": 1604488
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32003484,
+          "nonpad_input_tokens": 32061320,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 31945664,
+          "rows": 57836,
+          "text_tokens": 31945648
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:31.248887+00:00",
+        "file": "train-00036-of-00040.jsonl",
+        "meta_file": "train-00036-of-00040.jsonl.meta.json",
+        "meta_sha256": "d09f28cd65a88e58c1e59875f60b974ce6c09dcfa9f920c29676c505a9cae870",
+        "provenance_file": "provenance/train-00036-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "4711c27525725fa6a185f006a6d864d028b8aa83db5db60729155e5f6db3bc51",
+        "provenance_size_bytes": 33164073,
+        "sequence_length": 768,
+        "sha256": "e24a321bf55d9b4bb7031c0459519ef2030b797bc3ef9eda2b6173f0565056c2",
+        "size_bytes": 94678315,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14355631,
+            "nonpad_input_tokens": 14384080,
+            "padded_compute_tokens": 21848832,
+            "raw_tokens": 14327183,
+            "rows": 28449,
+            "text_tokens": 14327182
+          },
+          "finemath": {
+            "loss_target_tokens": 3177396,
+            "nonpad_input_tokens": 3182333,
+            "padded_compute_tokens": 3791616,
+            "raw_tokens": 3172457,
+            "rows": 4937,
+            "text_tokens": 3172459
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9684315,
+            "nonpad_input_tokens": 9699912,
+            "padded_compute_tokens": 11978496,
+            "raw_tokens": 9668718,
+            "rows": 15597,
+            "text_tokens": 9668718
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1576426,
+            "nonpad_input_tokens": 1578884,
+            "padded_compute_tokens": 1887744,
+            "raw_tokens": 1573972,
+            "rows": 2458,
+            "text_tokens": 1573968
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1635229,
+            "nonpad_input_tokens": 1638261,
+            "padded_compute_tokens": 2328576,
+            "raw_tokens": 1632198,
+            "rows": 3032,
+            "text_tokens": 1632197
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1574829,
+            "nonpad_input_tokens": 1578192,
+            "padded_compute_tokens": 2582784,
+            "raw_tokens": 1571476,
+            "rows": 3363,
+            "text_tokens": 1571466
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32003826,
+          "nonpad_input_tokens": 32061662,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 31946004,
+          "rows": 57836,
+          "text_tokens": 31945990
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:31.517779+00:00",
+        "file": "train-00037-of-00040.jsonl",
+        "meta_file": "train-00037-of-00040.jsonl.meta.json",
+        "meta_sha256": "86de33ee19104fc3a260f995a93c2fe5ab393edaacd1c7ea82804a6eed4b989c",
+        "provenance_file": "provenance/train-00037-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "97e3cd3e8be4c40b2dc65f6d8bfe01b3ad16c66c54afdba3927bdc5b784fc44b",
+        "provenance_size_bytes": 33169094,
+        "sequence_length": 768,
+        "sha256": "1eb8700a345d4a170470ce41bb4eb035bf23f82a3c284b6988180ec502ded130",
+        "size_bytes": 94644016,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14347339,
+            "nonpad_input_tokens": 14375698,
+            "padded_compute_tokens": 21779712,
+            "raw_tokens": 14318981,
+            "rows": 28359,
+            "text_tokens": 14318980
+          },
+          "finemath": {
+            "loss_target_tokens": 3210228,
+            "nonpad_input_tokens": 3215177,
+            "padded_compute_tokens": 3800832,
+            "raw_tokens": 3205274,
+            "rows": 4949,
+            "text_tokens": 3205279
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9579573,
+            "nonpad_input_tokens": 9595064,
+            "padded_compute_tokens": 11897088,
+            "raw_tokens": 9564082,
+            "rows": 15491,
+            "text_tokens": 9564082
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1601537,
+            "nonpad_input_tokens": 1604026,
+            "padded_compute_tokens": 1911552,
+            "raw_tokens": 1599052,
+            "rows": 2489,
+            "text_tokens": 1599048
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1627025,
+            "nonpad_input_tokens": 1630051,
+            "padded_compute_tokens": 2323968,
+            "raw_tokens": 1623999,
+            "rows": 3026,
+            "text_tokens": 1623999
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1649190,
+            "nonpad_input_tokens": 1652712,
+            "padded_compute_tokens": 2704896,
+            "raw_tokens": 1645678,
+            "rows": 3522,
+            "text_tokens": 1645668
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 32014892,
+          "nonpad_input_tokens": 32072728,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 31957066,
+          "rows": 57836,
+          "text_tokens": 31957056
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:31.971509+00:00",
+        "file": "train-00038-of-00040.jsonl",
+        "meta_file": "train-00038-of-00040.jsonl.meta.json",
+        "meta_sha256": "fb8149a04f6dc1da12bebea718bdf19cf52bb0cffe28fd4ee99c088d2c769d34",
+        "provenance_file": "provenance/train-00038-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "e7d706e8e0092d94147f5963e33ef2ab1513ad6b8bf728dcf5811b73aa933c96",
+        "provenance_size_bytes": 33166020,
+        "sequence_length": 768,
+        "sha256": "c5b901c4be3b800a64935b55188357a935542e024318bd3111286bbe893f4cfd",
+        "size_bytes": 94379654,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14431373,
+            "nonpad_input_tokens": 14459967,
+            "padded_compute_tokens": 21960192,
+            "raw_tokens": 14402782,
+            "rows": 28594,
+            "text_tokens": 14402779
+          },
+          "finemath": {
+            "loss_target_tokens": 3186222,
+            "nonpad_input_tokens": 3191187,
+            "padded_compute_tokens": 3813120,
+            "raw_tokens": 3181257,
+            "rows": 4965,
+            "text_tokens": 3181257
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9522651,
+            "nonpad_input_tokens": 9538084,
+            "padded_compute_tokens": 11852544,
+            "raw_tokens": 9507219,
+            "rows": 15433,
+            "text_tokens": 9507218
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1602488,
+            "nonpad_input_tokens": 1604935,
+            "padded_compute_tokens": 1879296,
+            "raw_tokens": 1600043,
+            "rows": 2447,
+            "text_tokens": 1600041
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1574844,
+            "nonpad_input_tokens": 1577799,
+            "padded_compute_tokens": 2269440,
+            "raw_tokens": 1571889,
+            "rows": 2955,
+            "text_tokens": 1571889
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1585998,
+            "nonpad_input_tokens": 1589440,
+            "padded_compute_tokens": 2643456,
+            "raw_tokens": 1582563,
+            "rows": 3442,
+            "text_tokens": 1582556
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31903576,
+          "nonpad_input_tokens": 31961412,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 31845753,
+          "rows": 57836,
+          "text_tokens": 31845740
+        }
+      },
+      {
+        "created_at": "2026-08-31T06:06:32.244610+00:00",
+        "file": "train-00039-of-00040.jsonl",
+        "meta_file": "train-00039-of-00040.jsonl.meta.json",
+        "meta_sha256": "46c0ddacd34d515e0393b169a1a771fa24fa4598e38bab204f17a8a7ddda1361",
+        "provenance_file": "provenance/train-00039-of-00040.jsonl.provenance.jsonl",
+        "provenance_sha256": "87475b77750b076440ec31754be99a76121f8c02929626967a19e38ac571c88a",
+        "provenance_size_bytes": 33162026,
+        "sequence_length": 768,
+        "sha256": "d1aa9f6daf77cf8aec64763e771bc1c492f313783c61134e4b4d1591ea811f6e",
+        "size_bytes": 94528723,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 14341320,
+            "nonpad_input_tokens": 14369807,
+            "padded_compute_tokens": 21878016,
+            "raw_tokens": 14312833,
+            "rows": 28487,
+            "text_tokens": 14312833
+          },
+          "finemath": {
+            "loss_target_tokens": 3185453,
+            "nonpad_input_tokens": 3190422,
+            "padded_compute_tokens": 3816192,
+            "raw_tokens": 3180482,
+            "rows": 4969,
+            "text_tokens": 3180484
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 9636622,
+            "nonpad_input_tokens": 9652180,
+            "padded_compute_tokens": 11948544,
+            "raw_tokens": 9621064,
+            "rows": 15558,
+            "text_tokens": 9621064
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 1565968,
+            "nonpad_input_tokens": 1568394,
+            "padded_compute_tokens": 1863168,
+            "raw_tokens": 1563546,
+            "rows": 2426,
+            "text_tokens": 1563542
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 1616359,
+            "nonpad_input_tokens": 1619403,
+            "padded_compute_tokens": 2337792,
+            "raw_tokens": 1613315,
+            "rows": 3044,
+            "text_tokens": 1613315
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 1554471,
+            "nonpad_input_tokens": 1557823,
+            "padded_compute_tokens": 2574336,
+            "raw_tokens": 1551126,
+            "rows": 3352,
+            "text_tokens": 1551119
+          }
+        },
+        "split": "train",
+        "stats": {
+          "loss_target_tokens": 31900193,
+          "nonpad_input_tokens": 31958029,
+          "padded_compute_tokens": 44418048,
+          "raw_tokens": 31842366,
+          "rows": 57836,
+          "text_tokens": 31842357
+        }
+      }
+    ],
+    "stats": {
+      "loss_target_tokens": 1280000000,
+      "nonpad_input_tokens": 1282313463,
+      "padded_compute_tokens": 1776739584,
+      "raw_tokens": 1277687001,
+      "rows": 2313463,
+      "text_tokens": 1277686537
+    }
+  },
+  "validation": {
+    "budget_loss_target_tokens": 6400000,
+    "selection": {
+      "chinese_webtext2": {
+        "candidates_considered": 41445,
+        "dedup_rejected": 35761,
+        "loss_target_tokens": 2880000,
+        "nonpad_input_tokens": 2885684,
+        "output": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/.final.tmp-e1c2bec940bc/.selected/validation-chinese_webtext2.jsonl",
+        "output_sha256": "7ffcb371b8d5c196cb22ec6b8f8173d9e0117e0ca5af1ba9ce026516ea6788a8",
+        "padded_compute_tokens": 4365312,
+        "quota_loss_target_tokens": 2880000,
+        "raw_tokens": 2874317,
+        "rows": 5684,
+        "selected_budget": 2880000,
+        "split": "validation",
+        "status": "ok",
+        "text_tokens": 2874316
+      },
+      "finemath": {
+        "candidates_considered": 7172,
+        "dedup_rejected": 6177,
+        "loss_target_tokens": 640000,
+        "nonpad_input_tokens": 640995,
+        "output": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/.final.tmp-e1c2bec940bc/.selected/validation-finemath.jsonl",
+        "output_sha256": "d506f4a3cfb6b07d28f79afe21eb87f4b2d60b5c6f72f6a276978fba3d11dd68",
+        "padded_compute_tokens": 764160,
+        "quota_loss_target_tokens": 640000,
+        "raw_tokens": 639005,
+        "rows": 995,
+        "selected_budget": 640000,
+        "split": "validation",
+        "status": "ok",
+        "text_tokens": 639005
+      },
+      "fineweb_edu": {
+        "candidates_considered": 23188,
+        "dedup_rejected": 20137,
+        "loss_target_tokens": 1920000,
+        "nonpad_input_tokens": 1923051,
+        "output": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/.final.tmp-e1c2bec940bc/.selected/validation-fineweb_edu.jsonl",
+        "output_sha256": "622dbeedd2bc574a227968601ea21dc297ba23319cb1d4f5153ad1d71fa1da57",
+        "padded_compute_tokens": 2343168,
+        "quota_loss_target_tokens": 1920000,
+        "raw_tokens": 1916949,
+        "rows": 3051,
+        "selected_budget": 1920000,
+        "split": "validation",
+        "status": "ok",
+        "text_tokens": 1916949
+      },
+      "stack_v3_code": {
+        "candidates_considered": 3497,
+        "dedup_rejected": 3000,
+        "loss_target_tokens": 320000,
+        "nonpad_input_tokens": 320497,
+        "output": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/.final.tmp-e1c2bec940bc/.selected/validation-stack_v3_code.jsonl",
+        "output_sha256": "3bb05983217be6676e28c6b2ab053bd2f0785758e01f122b765867bd9959cebb",
+        "padded_compute_tokens": 381696,
+        "quota_loss_target_tokens": 320000,
+        "raw_tokens": 319503,
+        "rows": 497,
+        "selected_budget": 320000,
+        "split": "validation",
+        "status": "ok",
+        "text_tokens": 319503
+      },
+      "wikipedia_en": {
+        "candidates_considered": 4734,
+        "dedup_rejected": 4133,
+        "loss_target_tokens": 320000,
+        "nonpad_input_tokens": 320601,
+        "output": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/.final.tmp-e1c2bec940bc/.selected/validation-wikipedia_en.jsonl",
+        "output_sha256": "1da33da4deb3807fadcdf0a19778d9d9adab2f06ebfe6e8ebdc12d89e6ea2dc3",
+        "padded_compute_tokens": 461568,
+        "quota_loss_target_tokens": 320000,
+        "raw_tokens": 319401,
+        "rows": 601,
+        "selected_budget": 320000,
+        "split": "validation",
+        "status": "ok",
+        "text_tokens": 319399
+      },
+      "wikipedia_zh": {
+        "candidates_considered": 5423,
+        "dedup_rejected": 4727,
+        "loss_target_tokens": 320000,
+        "nonpad_input_tokens": 320695,
+        "output": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/.final.tmp-e1c2bec940bc/.selected/validation-wikipedia_zh.jsonl",
+        "output_sha256": "c1a4402968c818103fb1d4d3de7ee1bf17d7ff3926313ff1235f0a72448d507b",
+        "padded_compute_tokens": 533760,
+        "quota_loss_target_tokens": 320000,
+        "raw_tokens": 319310,
+        "rows": 695,
+        "selected_budget": 320000,
+        "split": "validation",
+        "status": "ok",
+        "text_tokens": 319305,
+        "unrepresentable_prefix": 1
+      }
+    },
+    "shards": [
+      {
+        "created_at": "2026-08-31T06:06:33.505618+00:00",
+        "file": "validation-00000-of-00001.jsonl",
+        "meta_file": "validation-00000-of-00001.jsonl.meta.json",
+        "meta_sha256": "0b76946c35c2cd24c60abc0ec29f9fcf31bc8c56fdc6cbd69a72fb32cb3d4ec9",
+        "provenance_file": "provenance/validation-00000-of-00001.jsonl.provenance.jsonl",
+        "provenance_sha256": "13ec844275fd514081ad1b31b31807356f4571faaa40f630ef7a039bcfc60cb7",
+        "provenance_size_bytes": 6609549,
+        "sequence_length": 768,
+        "sha256": "dbbbfff0b0864aa1db904a590676bce1ed5d3fb3f270e3a76b89ae86738bbcd0",
+        "size_bytes": 18946885,
+        "sources": {
+          "chinese_webtext2": {
+            "loss_target_tokens": 2880000,
+            "nonpad_input_tokens": 2885684,
+            "padded_compute_tokens": 4365312,
+            "raw_tokens": 2874317,
+            "rows": 5684,
+            "text_tokens": 2874316
+          },
+          "finemath": {
+            "loss_target_tokens": 640000,
+            "nonpad_input_tokens": 640995,
+            "padded_compute_tokens": 764160,
+            "raw_tokens": 639005,
+            "rows": 995,
+            "text_tokens": 639005
+          },
+          "fineweb_edu": {
+            "loss_target_tokens": 1920000,
+            "nonpad_input_tokens": 1923051,
+            "padded_compute_tokens": 2343168,
+            "raw_tokens": 1916949,
+            "rows": 3051,
+            "text_tokens": 1916949
+          },
+          "stack_v3_code": {
+            "loss_target_tokens": 320000,
+            "nonpad_input_tokens": 320497,
+            "padded_compute_tokens": 381696,
+            "raw_tokens": 319503,
+            "rows": 497,
+            "text_tokens": 319503
+          },
+          "wikipedia_en": {
+            "loss_target_tokens": 320000,
+            "nonpad_input_tokens": 320601,
+            "padded_compute_tokens": 461568,
+            "raw_tokens": 319401,
+            "rows": 601,
+            "text_tokens": 319399
+          },
+          "wikipedia_zh": {
+            "loss_target_tokens": 320000,
+            "nonpad_input_tokens": 320695,
+            "padded_compute_tokens": 533760,
+            "raw_tokens": 319310,
+            "rows": 695,
+            "text_tokens": 319305
+          }
+        },
+        "split": "validation",
+        "stats": {
+          "loss_target_tokens": 6400000,
+          "nonpad_input_tokens": 6411523,
+          "padded_compute_tokens": 8849664,
+          "raw_tokens": 6388485,
+          "rows": 11523,
+          "text_tokens": 6388477
+        }
+      }
+    ],
+    "stats": {
+      "loss_target_tokens": 6400000,
+      "nonpad_input_tokens": 6411523,
+      "padded_compute_tokens": 8849664,
+      "raw_tokens": 6388485,
+      "rows": 11523,
+      "text_tokens": 6388477
+    }
+  }
+}

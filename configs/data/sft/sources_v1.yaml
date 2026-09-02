@@ -1,0 +1,270 @@
+schema_version: 1
+name: minimind-sft-v1-raw
+dataset_stage: raw_not_trainable
+target_scope: train
+target_assistant_tokens: 32000000
+validation_assistant_tokens: 160000
+test_assistant_tokens: 160000
+acceptance_contract: configs/data/sft/acceptance_v1.yaml
+sequence_length: 768
+seed: 42
+metadata_endpoint: https://hf-mirror.com
+output_root: /data/datasets/minimind-lab/data-v1/sft-v1-160m
+output_root_status: legacy_raw_cache_reused_not_budget_contract
+
+policies:
+  sequential_materialization: true
+  raw_data_in_git: false
+  pin_revision: true
+  require_declared_license: true
+  object_tmp_done_required: true
+  raw_is_trainable: false
+  final_training_top_level_keys: [conversations]
+  final_message_keys: [role, content, reasoning_content, tools, tool_calls]
+  final_optional_message_values_use_null: true
+  provenance_storage: sidecar_only
+
+# These weights are a target plan, not yet an accepted capacity allocation.
+planned_mix:
+  chinese_general: 0.30
+  english_general: 0.15
+  multiturn: 0.10
+  strict_format: 0.15
+  math: 0.10
+  tool_call: 0.10
+  summarization_translation: 0.05
+  code: 0.05
+
+# Raw materialization is needed to measure capacity, so these gates are separate.
+raw_materialization_blockers: []
+final_build_blockers:
+  - id: source_capacity_not_frozen
+    severity: fatal
+    reason: Full-source assistant-token capacity has not been measured against the planned mix.
+  - id: formal_builder_not_implemented
+    severity: fatal
+    reason: Raw sources cannot become canonical deterministic train/validation/test payloads yet.
+  - id: independent_auditor_not_implemented
+    severity: fatal
+    reason: No independent component can currently issue an accepted marker.
+
+partition_policies:
+  - id: ultrachat_prompt_id_english_multiturn_v2
+    source_id: ultrachat_200k
+    status: pending_v2_profiler
+    partition_key: prompt_id
+    assignment: sha256_utf8_mod_5
+    partitions:
+      english_general: [0, 1, 2]
+      multiturn: [3, 4]
+    ratio: "3:2"
+    group_all_chunks_by_partition_key: true
+    origin_exclusive: true
+    no_record_reuse: true
+    reason: The v1 report measured all UltraChat rows as English general; v2 must apply this deterministic partition before exact dedup and capacity accounting.
+
+sources:
+  - id: ultrachat_200k
+    repo_id: HuggingFaceH4/ultrachat_200k
+    revision: 8049631c405ae6576f93f445c6b8166f76f5505a
+    license: mit
+    enabled_for_proxy: true  # compatibility with resolve_sources.py; this is a formal raw source
+    purpose: english_general
+    materialization:
+      mode: hf_stream
+      config: default
+      split: train_sft
+      output: raw/ultrachat_200k.jsonl
+      required_fields: [messages, prompt, prompt_id]
+
+  - id: oasst1
+    repo_id: OpenAssistant/oasst1
+    revision: fdf72ae0827c1cda404aff25b6603abec9e3399b
+    license: apache-2.0
+    enabled_for_proxy: true
+    purpose: multiturn
+    materialization:
+      mode: reuse_jsonl
+      split: train
+      output: raw/oasst1_train.jsonl
+      required_fields: [message_id, message_tree_id, role, text]
+      reuse_path: /data/datasets/minimind-lab/data-v1/raw-full/oasst1_train.jsonl
+      expected_rows: 84437
+      expected_bytes: 137489537
+      expected_sha256: 41d3aa121cf5c7715410b92d1d1f31f93e5e3043469831e74f62136aa5f8f84e
+
+  - id: gsm8k
+    repo_id: openai/gsm8k
+    revision: 740312add88f781978c0658806c59bc2815b9866
+    license: mit
+    enabled_for_proxy: true
+    purpose: math
+    materialization:
+      mode: hf_stream
+      config: main
+      split: train
+      output: raw/gsm8k.jsonl
+      required_fields: [question, answer]
+
+  - id: mbpp
+    repo_id: google-research-datasets/mbpp
+    revision: 4bb6404fdc6cacfda99d4ac4205087b89d32030c
+    license: cc-by-4.0
+    enabled_for_proxy: true
+    purpose: code
+    materialization:
+      mode: hf_stream
+      config: full
+      split: train
+      output: raw/mbpp.jsonl
+      required_fields: [task_id, text, code, test_list]
+
+  - id: code_alpaca_20k
+    repo_id: sahil2801/CodeAlpaca-20k
+    revision: 152bb5e9a29651266b018106053980070a0521a1
+    license: cc-by-4.0
+    enabled_for_proxy: true
+    purpose: code
+    materialization:
+      mode: hf_stream
+      split: train
+      output: raw/code_alpaca_20k.jsonl
+      required_fields: [instruction, input, output]
+
+  - id: alpaca_gpt4_zh
+    repo_id: silk-road/alpaca-data-gpt4-chinese
+    revision: 81a6dfd72f416aff605e7d189bfbbc46a2511fee
+    license: apache-2.0
+    enabled_for_proxy: true
+    purpose: chinese_general
+    materialization:
+      mode: hf_stream
+      split: train
+      output: raw/alpaca_gpt4_zh.jsonl
+      required_fields: [instruction_zh, input_zh, output_zh]
+
+  - id: glaive_function_calling_v2
+    repo_id: glaiveai/glaive-function-calling-v2
+    revision: e7f4b6456019f5d8bcb991ef0dd67d8ff23221ac
+    license: apache-2.0
+    enabled_for_proxy: true
+    purpose: tool_call
+    materialization:
+      mode: hf_stream
+      split: train
+      output: raw/glaive_function_calling_v2.jsonl
+      required_fields: [chat, system]
+
+  - id: databricks_dolly_15k
+    repo_id: databricks/databricks-dolly-15k
+    revision: bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a
+    license: cc-by-sa-3.0
+    enabled_for_proxy: true
+    purpose: summarization_translation
+    materialization:
+      mode: hf_stream
+      split: train
+      output: raw/databricks_dolly_15k.jsonl
+      required_fields: [instruction, context, response, category]
+      selection:
+        field: category
+        equals: summarization
+
+  - id: tigerbot_alpaca_zh_0_5m
+    repo_id: TigerResearch/tigerbot-alpaca-zh-0.5m
+    revision: 14101774e35107ba5a18566da1e8e64d0b8f0174
+    license: apache-2.0
+    enabled_for_proxy: true
+    purpose: chinese_general
+    materialization:
+      mode: hf_stream
+      split: train
+      output: raw/tigerbot_alpaca_zh_0_5m.jsonl
+      required_fields: [instruction, input, output]
+
+  - id: numinamath_cot
+    repo_id: AI-MO/NuminaMath-CoT
+    revision: 9d8d210c9f6a36c8f3cd84045668c9b7800ef517
+    license: apache-2.0
+    enabled_for_proxy: true
+    purpose: math
+    materialization:
+      mode: hf_stream
+      split: train
+      output: raw/numinamath_cot.jsonl
+      required_fields: [source, problem, solution, messages]
+    profile_policy:
+      exclude_source_tags: [gsm8k, math]
+      source_tag_comparison: strip_then_casefold_exact
+      reasoning_policy:
+        status: pending_parse_gate
+        preferred_input: messages
+        fallback_fields: [problem, solution]
+        fail_closed: true
+        reason: No reasoning tokens count until the v2 adapter proves a supported messages or problem-solution schema and closed assistant supervision.
+
+  - id: magicoder_evol_instruct_110k
+    repo_id: ise-uiuc/Magicoder-Evol-Instruct-110K
+    revision: b0079beaa0361d82412520b873715bee59cc7dd4
+    license: apache-2.0
+    enabled_for_proxy: true
+    purpose: code
+    materialization:
+      mode: hf_stream
+      split: train
+      output: raw/magicoder_evol_instruct_110k.jsonl
+      required_fields: [instruction, response]
+
+  - id: tulu_3_sft_personas_instruction_following
+    repo_id: allenai/tulu-3-sft-personas-instruction-following
+    revision: fe0c7d350c9b4542b8d829a6f1daa1c259f0ba0e
+    license: odc-by
+    enabled_for_proxy: true
+    purpose: strict_format
+    materialization:
+      mode: hf_stream
+      split: train
+      output: raw/tulu_3_sft_personas_instruction_following.jsonl
+      required_fields: [id, prompt, messages, constraints]
+
+  - id: cnn_dailymail_summary
+    repo_id: abisee/cnn_dailymail
+    revision: 96df5e686bee6baa90b8bee7c28b81fa3fa6223d
+    license: apache-2.0
+    enabled_for_proxy: true
+    purpose: summarization_translation
+    materialization:
+      mode: hf_stream
+      config: 3.0.0
+      split: train
+      output: raw/cnn_dailymail_3_0_0.jsonl
+      required_fields: [article, highlights, id]
+
+derived_stages:
+  - id: strict_format_v1
+    required_for_final: false
+    status: baseline_only_not_final
+    reason: The 500-row v1 generator remains only as D03 evidence and is not eligible for the formal v2 build.
+  - id: strict_format_v2
+    required_for_final: true
+    status: pending_v2_profiler
+    donor_sources: [tulu_3_sft_personas_instruction_following]
+    donor_policy:
+      origin_exclusive: true
+      no_record_reuse: true
+      origin_group_key: [source_id, id]
+      verified_transforms_only: true
+      required_transform_evidence: [transform_id, transform_version, input_digest, output_digest, verifier_status]
+      fail_closed: true
+    reason: A donor origin may contribute either its original record or one verified transformed record, never both or across multiple buckets/splits.
+  - id: translation_bilingual_v1
+    required_for_final: true
+    status: deferred
+    input_source: alpaca_gpt4_zh
+    reason: Derived after the pinned Chinese source is materialized and verified.
+  - id: summarization_v1
+    required_for_final: true
+    status: source_selected
+    input_source: databricks_dolly_15k
+    filter: {category: summarization}
+    reason: Pinned source selected; capacity remains subject to the formal tokenizer profile.

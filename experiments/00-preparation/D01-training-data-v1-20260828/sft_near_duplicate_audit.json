@@ -1,0 +1,1120 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-30T15:56:07.781594+00:00",
+  "inputs": {
+    "train": {
+      "path": "/data/datasets/minimind-lab/data-v1/token-filtered/sft_v1.train.jsonl",
+      "sha256": "af657cbfbfd1aa52c7e25f789b610e73cb6efbb0dcecf40a0afb1850c0c3cbe2"
+    },
+    "validation": {
+      "path": "/data/datasets/minimind-lab/data-v1/token-filtered/sft_v1.validation.jsonl",
+      "sha256": "b071361e1fe75eed979eabffd8fe060ff395f3676c5727d8805cecfe9e098e3c"
+    },
+    "test": {
+      "path": "/data/datasets/minimind-lab/data-v1/token-filtered/sft_v1.test.jsonl",
+      "sha256": "4eea0091cbacb4a0518547aa3b167f4572670abd79d83f533c288917bcc3d567"
+    }
+  },
+  "settings": {
+    "seed": 42,
+    "num_perm": 128,
+    "char_ngram": 5,
+    "min_normalized_chars": 50,
+    "jaccard_threshold": 0.85,
+    "fingerprint": "concatenated user messages per conversation"
+  },
+  "records": 5908,
+  "counts": {
+    "short_records_near_check_skipped": 1410,
+    "exact_user_prompt": 46,
+    "within_split_exact_user_prompt": 46,
+    "near_duplicate_user_prompt": 11,
+    "within_split_near_duplicate_user_prompt": 11
+  },
+  "examples": [
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 306,
+        "source": "oasst1_conversations",
+        "source_record_hash": "3e962cf10c22d85f1e05ae95a9b74657",
+        "raw": "你好"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 438,
+        "source": "oasst1_conversations",
+        "source_record_hash": "5e416b79a1bbccc2df76d47cacbd56de",
+        "raw": "你好"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 391,
+        "source": "oasst1_conversations",
+        "source_record_hash": "6c0d826050967f0f745e184744ef3af0",
+        "raw": "how are you?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 989,
+        "source": "oasst1_conversations",
+        "source_record_hash": "6fa8defcc11f8108789a0a260b1b4049",
+        "raw": "How are you?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 306,
+        "source": "oasst1_conversations",
+        "source_record_hash": "3e962cf10c22d85f1e05ae95a9b74657",
+        "raw": "你好"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 1168,
+        "source": "oasst1_conversations",
+        "source_record_hash": "0039fce872dedbf5768ab2388166d421",
+        "raw": "你好"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 306,
+        "source": "oasst1_conversations",
+        "source_record_hash": "3e962cf10c22d85f1e05ae95a9b74657",
+        "raw": "你好"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 1314,
+        "source": "oasst1_conversations",
+        "source_record_hash": "83955c9297f89a987c089d813ffac4f2",
+        "raw": "你好"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 306,
+        "source": "oasst1_conversations",
+        "source_record_hash": "3e962cf10c22d85f1e05ae95a9b74657",
+        "raw": "你好"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 1357,
+        "source": "oasst1_conversations",
+        "source_record_hash": "f0d19061c03653a0eedaa31c799f0caa",
+        "raw": "你好"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 1101,
+        "source": "oasst1_conversations",
+        "source_record_hash": "6b77d5e6f54bd0054fbcabbcd0f027f1",
+        "raw": "hello"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 1622,
+        "source": "oasst1_conversations",
+        "source_record_hash": "8f753b1b3bc9d68145821e90773d483b",
+        "raw": "Hello"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 565,
+        "source": "oasst1_conversations",
+        "source_record_hash": "4663b9ef659b20c0195eeb7743f13c6b",
+        "raw": "What is your name?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 1801,
+        "source": "oasst1_conversations",
+        "source_record_hash": "575c2e128dbf4588f5deec6312fab218",
+        "raw": "what is your name"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 1101,
+        "source": "oasst1_conversations",
+        "source_record_hash": "6b77d5e6f54bd0054fbcabbcd0f027f1",
+        "raw": "hello"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 1824,
+        "source": "oasst1_conversations",
+        "source_record_hash": "8f138b307fe42ca08db41a57bda8cd6f",
+        "raw": "Hello"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 1101,
+        "source": "oasst1_conversations",
+        "source_record_hash": "6b77d5e6f54bd0054fbcabbcd0f027f1",
+        "raw": "hello"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 2167,
+        "source": "oasst1_conversations",
+        "source_record_hash": "07f4bfa375f7ae08563891a736eea95a",
+        "raw": "hello!"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 306,
+        "source": "oasst1_conversations",
+        "source_record_hash": "3e962cf10c22d85f1e05ae95a9b74657",
+        "raw": "你好"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 2205,
+        "source": "oasst1_conversations",
+        "source_record_hash": "f4e7410a1a4d46b35f3ed9b5d71e0d28",
+        "raw": "你好"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 861,
+        "source": "oasst1_conversations",
+        "source_record_hash": "54487fa594e2b540a19e9094c4c50aac",
+        "raw": "hello, how are you?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 2338,
+        "source": "oasst1_conversations",
+        "source_record_hash": "1fd339ff7612cd72bc02498745680e61",
+        "raw": "Hello, how are you?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 1189,
+        "source": "oasst1_conversations",
+        "source_record_hash": "5811b17f8684bb6c0cb18c52a1cf4cea",
+        "raw": "What is the air-speed velocity of an unladen swallow?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 2456,
+        "source": "oasst1_conversations",
+        "source_record_hash": "69409fa3ce8cc5c2ea9a152d3ba85eba",
+        "raw": "What is the airspeed velocity of an unladen swallow?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 306,
+        "source": "oasst1_conversations",
+        "source_record_hash": "3e962cf10c22d85f1e05ae95a9b74657",
+        "raw": "你好"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 2461,
+        "source": "oasst1_conversations",
+        "source_record_hash": "e5934bc168427b9fc7a3602cab733a4e",
+        "raw": "你好"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 861,
+        "source": "oasst1_conversations",
+        "source_record_hash": "54487fa594e2b540a19e9094c4c50aac",
+        "raw": "hello, how are you?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 2579,
+        "source": "oasst1_conversations",
+        "source_record_hash": "7342fc2726d34dd89e53202baf968d32",
+        "raw": "Hello how are you"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 306,
+        "source": "oasst1_conversations",
+        "source_record_hash": "3e962cf10c22d85f1e05ae95a9b74657",
+        "raw": "你好"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 2726,
+        "source": "oasst1_conversations",
+        "source_record_hash": "c3c3c627b77321287abb03ded3054ec2",
+        "raw": "你好"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 2839,
+        "source": "oasst1_conversations",
+        "source_record_hash": "e50eb3d15d32ebeea1487d1c123d4c4d",
+        "raw": "What is the tallest building in the world?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 2891,
+        "source": "oasst1_conversations",
+        "source_record_hash": "1a449933c1600d15de09fbd270d6fb31",
+        "raw": "What is the tallest building in the world?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 391,
+        "source": "oasst1_conversations",
+        "source_record_hash": "6c0d826050967f0f745e184744ef3af0",
+        "raw": "how are you?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3008,
+        "source": "oasst1_conversations",
+        "source_record_hash": "ba5f875d80ca3e70349c9125c0e8b672",
+        "raw": "how are you"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 990,
+        "source": "oasst1_conversations",
+        "source_record_hash": "c7d6b77c7b5924afa00ad832c976de8e",
+        "raw": "hi"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3076,
+        "source": "oasst1_conversations",
+        "source_record_hash": "c111421e89c99ad7390b2a52f2862e8d",
+        "raw": "hi"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 565,
+        "source": "oasst1_conversations",
+        "source_record_hash": "4663b9ef659b20c0195eeb7743f13c6b",
+        "raw": "What is your name?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3130,
+        "source": "oasst1_conversations",
+        "source_record_hash": "23bc3e397dd24c6974ee7db6fcf16efd",
+        "raw": "What is your name?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 2390,
+        "source": "oasst1_conversations",
+        "source_record_hash": "12b8c4f1a102fa3cbcb898ac68b7b7f1",
+        "raw": "1+1 等于几"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3196,
+        "source": "oasst1_conversations",
+        "source_record_hash": "cd65c47480fbdd70353bb1d6d364685a",
+        "raw": "1+1等于几"
+      }
+    },
+    {
+      "kind": "near_duplicate_user_prompt",
+      "scope": "within_split",
+      "score": 0.850394,
+      "left": {
+        "split": "train",
+        "line_number": 1883,
+        "source": "oasst1_conversations",
+        "source_record_hash": "53767ba247e2e9f98e2c5e057ace4ad6",
+        "raw": "I want you to act as an advertiser. You will create a campaign to promote a product or service of your choice. You will choose a target audience, develop key messages and slogans, select the media channels for promotion, and decide on any additional activities needed to reach your goals. My first suggestion request is “I need help creating an advertising campaign for a new type of energy drink targeting young adults aged 18-30.”\nNow how would I launch the same campaign, but targeted towards 31-45 year olds?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3340,
+        "source": "oasst1_conversations",
+        "source_record_hash": "05cb0b67cb34ca6c354a6d3cfcc06f2a",
+        "raw": "I want you to act as an advertiser. You will create a campaign to promote a product or service of your choice. You will choose a target audience, develop key messages and slogans, select the media channels for promotion, and decide on any additional activities needed to reach your goals. My first suggestion request is \"I need help creating an advertising campaign for a new type of energy drink targeting young adults aged 18-30.\""
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 1234,
+        "source": "oasst1_conversations",
+        "source_record_hash": "39845179f24a5bfe79706384add54913",
+        "raw": "what is the weather today?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3424,
+        "source": "oasst1_conversations",
+        "source_record_hash": "af46dc14f6149294148c5ac8b8133a7e",
+        "raw": "What is the weather today?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 306,
+        "source": "oasst1_conversations",
+        "source_record_hash": "3e962cf10c22d85f1e05ae95a9b74657",
+        "raw": "你好"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3453,
+        "source": "oasst1_conversations",
+        "source_record_hash": "ee8621e5d51e1eeb85a9bdabb4b8bee3",
+        "raw": "你好"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 391,
+        "source": "oasst1_conversations",
+        "source_record_hash": "6c0d826050967f0f745e184744ef3af0",
+        "raw": "how are you?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3459,
+        "source": "oasst1_conversations",
+        "source_record_hash": "926cf63fe2cb8e432010d2cb3e8ed068",
+        "raw": "How are you"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 2218,
+        "source": "oasst1_conversations",
+        "source_record_hash": "2ef31426ba92dec1b25a41a8118ebdfa",
+        "raw": "How old is earth?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3513,
+        "source": "oasst1_conversations",
+        "source_record_hash": "d02a144a0b70e7e6e1ec396e2a1bc694",
+        "raw": "How old is earth"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 306,
+        "source": "oasst1_conversations",
+        "source_record_hash": "3e962cf10c22d85f1e05ae95a9b74657",
+        "raw": "你好"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3521,
+        "source": "oasst1_conversations",
+        "source_record_hash": "d4401f1be63d91389963d02cdf0ce0d8",
+        "raw": "你好"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 990,
+        "source": "oasst1_conversations",
+        "source_record_hash": "c7d6b77c7b5924afa00ad832c976de8e",
+        "raw": "hi"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3547,
+        "source": "oasst1_conversations",
+        "source_record_hash": "9998cd9842b0ffe1ba966f594ec72736",
+        "raw": "hi"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3608,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "80309723b6953932ccfba78a0a8982d3",
+        "raw": "Can you order a pizza for me?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3621,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "34804d5b86cc82f3d365ef9d53d40e23",
+        "raw": "Can you order a pizza for me?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3608,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "80309723b6953932ccfba78a0a8982d3",
+        "raw": "Can you order a pizza for me?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3624,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "0b46dacdafd602725252e4c707b16fbe",
+        "raw": "Can you order a pizza for me?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3592,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "c19c11f68e943012649b321d3f8acfc9",
+        "raw": "Can you book a flight for me from New York to London?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3625,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "7d72ef30c99050dac7a6ea1a50fdaa65",
+        "raw": "Can you book a flight for me from New York to London?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3598,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "a225081a82c56a8868fb23acb37cae62",
+        "raw": "Can you please order a pizza for me?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3633,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "9e0e43d1ba4453bc5c08ef334e575446",
+        "raw": "Can you please order a pizza for me?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3608,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "80309723b6953932ccfba78a0a8982d3",
+        "raw": "Can you order a pizza for me?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3635,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "07d6505fd0bb951756b9b8b10786edb5",
+        "raw": "Can you order a pizza for me?"
+      }
+    },
+    {
+      "kind": "near_duplicate_user_prompt",
+      "scope": "within_split",
+      "score": 0.911765,
+      "left": {
+        "split": "train",
+        "line_number": 3605,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "941097b3d8df0f950ff6940feab84b6a",
+        "raw": "Hey, can you tell me the current price of Apple's stock?\nThat's great! Can you also tell me the current price of Microsoft's stock?\nThank you for the information!"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3650,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "c8b4f6badbcacec8aaa0ccd1ed50f9bd",
+        "raw": "Hi, can you tell me the current price of Apple's stock?\nThat's great. Can you also tell me the price of Microsoft's stock?\nThank you for the information."
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3592,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "c19c11f68e943012649b321d3f8acfc9",
+        "raw": "Can you book a flight for me from New York to London?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3656,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "daed5a6a84fe95a84c677eb28dd9e755",
+        "raw": "Can you book a flight for me from New York to London?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3598,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "a225081a82c56a8868fb23acb37cae62",
+        "raw": "Can you please order a pizza for me?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3657,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "07e41c3f827e2936d4099be63a007fc6",
+        "raw": "Can you please order a pizza for me?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3598,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "a225081a82c56a8868fb23acb37cae62",
+        "raw": "Can you please order a pizza for me?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3658,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "67a1d4a4cb1f815c63e1ad8dd5ce9fc9",
+        "raw": "Can you please order a pizza for me?"
+      }
+    },
+    {
+      "kind": "near_duplicate_user_prompt",
+      "scope": "within_split",
+      "score": 0.858696,
+      "left": {
+        "split": "train",
+        "line_number": 3611,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "681016d46d45ebde65496ccff76f7fdd",
+        "raw": "Hi, I need help with calculating a tip. My bill amount is $50 and I want to give a 15% tip.\nThat's great! Thanks for the help."
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3660,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "e0602d59d1303933b14a459d29a01ca3",
+        "raw": "Hi, I need help with calculating a tip. My bill amount is $50 and I want to give a 15% tip.\nGreat, thanks for the help!"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3652,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "184b5f720c2222d7b84a452d5761d41a",
+        "raw": "Can you please book a flight for me from New York to London?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3664,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "1274cb3998c03824b5a3ca3acb6d2d68",
+        "raw": "Can you please book a flight for me from New York to London?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3608,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "80309723b6953932ccfba78a0a8982d3",
+        "raw": "Can you order a pizza for me?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3681,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "a60dd72d4b9ebd87d8d927d35ef5bbae",
+        "raw": "Can you order a pizza for me?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3682,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "9201f9ffa2f87a7b6778b86ee281b0e3",
+        "raw": "Hi, I need a new password. Can you generate one for me?\nI would like it to be 12 characters long."
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3692,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "b827c6ef6773e64bef51a1e008c49d49",
+        "raw": "Hi, I need a new password. Can you generate one for me?\nI would like it to be 12 characters long."
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3682,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "9201f9ffa2f87a7b6778b86ee281b0e3",
+        "raw": "Hi, I need a new password. Can you generate one for me?\nI would like it to be 12 characters long."
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3707,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "b648cb9459a182703456654853d557bf",
+        "raw": "Hi, I need a new password. Can you generate one for me?\nI would like it to be 12 characters long."
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3652,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "184b5f720c2222d7b84a452d5761d41a",
+        "raw": "Can you please book a flight for me from New York to London?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3714,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "f9c3a20160df49a13812119fb6d6fd2a",
+        "raw": "Can you please book a flight for me from New York to London?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3652,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "184b5f720c2222d7b84a452d5761d41a",
+        "raw": "Can you please book a flight for me from New York to London?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3721,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "cec52566bc746a9b0cc500b71d5e23bb",
+        "raw": "Can you please book a flight for me from New York to London?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3608,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "80309723b6953932ccfba78a0a8982d3",
+        "raw": "Can you order a pizza for me?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3731,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "27f4d5b31a5f910e8c8c99ae1f17902f",
+        "raw": "Can you order a pizza for me?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "train",
+        "line_number": 3652,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "184b5f720c2222d7b84a452d5761d41a",
+        "raw": "Can you please book a flight for me from New York to London?"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 3733,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "23cfb98d9d58bc8131ce1a7424738b6e",
+        "raw": "Can you please book a flight for me from New York to London?"
+      }
+    },
+    {
+      "kind": "near_duplicate_user_prompt",
+      "scope": "within_split",
+      "score": 0.92,
+      "left": {
+        "split": "train",
+        "line_number": 4301,
+        "source": "translation_bilingual_v1",
+        "source_record_hash": "fc28cb8c868609e09d0c08b99662f42b",
+        "raw": "Translate the following English text into Simplified Chinese. Return only the translation.\n\n0, 2, 3, 4, 8."
+      },
+      "right": {
+        "split": "train",
+        "line_number": 4353,
+        "source": "translation_bilingual_v1",
+        "source_record_hash": "b5b4e603880d86b8bc7b0f53897e289c",
+        "raw": "Translate the following English text into Simplified Chinese. Return only the translation.\n\n1"
+      }
+    },
+    {
+      "kind": "near_duplicate_user_prompt",
+      "scope": "within_split",
+      "score": 0.851852,
+      "left": {
+        "split": "train",
+        "line_number": 4353,
+        "source": "translation_bilingual_v1",
+        "source_record_hash": "b5b4e603880d86b8bc7b0f53897e289c",
+        "raw": "Translate the following English text into Simplified Chinese. Return only the translation.\n\n1"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 4376,
+        "source": "translation_bilingual_v1",
+        "source_record_hash": "650cbf0880f7a5f86d7c82308142badb",
+        "raw": "Translate the following English text into Simplified Chinese. Return only the translation.\n\nTu me manques."
+      }
+    },
+    {
+      "kind": "near_duplicate_user_prompt",
+      "scope": "within_split",
+      "score": 0.932432,
+      "left": {
+        "split": "train",
+        "line_number": 4353,
+        "source": "translation_bilingual_v1",
+        "source_record_hash": "b5b4e603880d86b8bc7b0f53897e289c",
+        "raw": "Translate the following English text into Simplified Chinese. Return only the translation.\n\n1"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 4383,
+        "source": "translation_bilingual_v1",
+        "source_record_hash": "69208abb56c067c4cc84a178e3a08fbb",
+        "raw": "Translate the following English text into Simplified Chinese. Return only the translation.\n\nTrue"
+      }
+    },
+    {
+      "kind": "near_duplicate_user_prompt",
+      "scope": "within_split",
+      "score": 0.862745,
+      "left": {
+        "split": "train",
+        "line_number": 4411,
+        "source": "translation_bilingual_v1",
+        "source_record_hash": "55e379b987f77ea7c55fcd910b8a81ef",
+        "raw": "Translate the following English text into Simplified Chinese. Return only the translation.\n\nSummarize the following article in your own words."
+      },
+      "right": {
+        "split": "train",
+        "line_number": 4504,
+        "source": "translation_bilingual_v1",
+        "source_record_hash": "511b69aa57b940002895f7a1bc068e23",
+        "raw": "Translate the following English text into Simplified Chinese. Return only the translation.\n\nSummarize the following article"
+      }
+    },
+    {
+      "kind": "near_duplicate_user_prompt",
+      "scope": "within_split",
+      "score": 0.884615,
+      "left": {
+        "split": "train",
+        "line_number": 4353,
+        "source": "translation_bilingual_v1",
+        "source_record_hash": "b5b4e603880d86b8bc7b0f53897e289c",
+        "raw": "Translate the following English text into Simplified Chinese. Return only the translation.\n\n1"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 4544,
+        "source": "translation_bilingual_v1",
+        "source_record_hash": "5ce902d312899bba51c7b01a2a0748c5",
+        "raw": "Translate the following English text into Simplified Chinese. Return only the translation.\n\nNegative"
+      }
+    },
+    {
+      "kind": "near_duplicate_user_prompt",
+      "scope": "within_split",
+      "score": 0.879032,
+      "left": {
+        "split": "train",
+        "line_number": 3668,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "56fae354429b213ba455d2bd8c336c3f",
+        "raw": "Hi, I need to know the distance between New York and Los Angeles.\nThat's quite a distance! How about the distance from London to Paris?\nThank you for the information!"
+      },
+      "right": {
+        "split": "train",
+        "line_number": 5292,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "c4be0436f3c8f8b15393c3631c4fac8a",
+        "raw": "Hi, I need to know the distance between New York and Los Angeles.\nThat's quite a distance! What about the distance from London to Paris?\nThank you for the information!"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "validation",
+        "line_number": 35,
+        "source": "oasst1_conversations",
+        "source_record_hash": "c180c66e182d766103796557977c64fd",
+        "raw": "what is the meaning of life?"
+      },
+      "right": {
+        "split": "validation",
+        "line_number": 140,
+        "source": "oasst1_conversations",
+        "source_record_hash": "6ae86d8fb56e17451634faf15024b9d9",
+        "raw": "what is the meaning of life?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "validation",
+        "line_number": 222,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "69fddc40d89dc17b8c1353ceef5ced9b",
+        "raw": "I need a random number between 1 and 100.\nCan you generate another random number but this time between 200 and 300?\nThank you, that's all I needed."
+      },
+      "right": {
+        "split": "validation",
+        "line_number": 223,
+        "source": "glaive_function_calling_v2_conversations",
+        "source_record_hash": "608df6b057eaeeddb1816eabb2c9821d",
+        "raw": "I need a random number between 1 and 100.\nCan you generate another random number but this time between 200 and 300?\nThank you, that's all I needed."
+      }
+    },
+    {
+      "kind": "near_duplicate_user_prompt",
+      "scope": "within_split",
+      "score": 0.956522,
+      "left": {
+        "split": "test",
+        "line_number": 1,
+        "source": "oasst1_conversations",
+        "source_record_hash": "b79fb5961edeb962af7c74b75dc09f1b",
+        "raw": "I want you to act as a Linux terminal. I will type commands and you will reply with what the terminal should show. I want you to only reply with the terminal output inside one unique code block, and nothing else. Do not write explanations. Do not type commands unless I instruct you to do so. When I need to tell you something in English I will do so by putting text inside curly brackets {like this}. My first command is pwd."
+      },
+      "right": {
+        "split": "test",
+        "line_number": 2,
+        "source": "oasst1_conversations",
+        "source_record_hash": "401d3c39f3696a7eeacb6c55aa4e11da",
+        "raw": "I want you to act as a Linux terminal. I will type commands and you will reply with what the terminal should show. I want you to only reply with the terminal output inside one unique code block, and nothing else. Do no write explanations. Do not type commands unless I instruct you to do so. When I need to tell you something in English I will do so by putting text inside curly brackets {like this}. My first command is pwd.\nsudo -i"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "test",
+        "line_number": 152,
+        "source": "oasst1_conversations",
+        "source_record_hash": "adc986234fa61ac70aac008e2f2d6e51",
+        "raw": "who are you ?"
+      },
+      "right": {
+        "split": "test",
+        "line_number": 155,
+        "source": "oasst1_conversations",
+        "source_record_hash": "bdfcc28fda9e910d8c37ffe137ddbe9a",
+        "raw": "Who are you?"
+      }
+    },
+    {
+      "kind": "exact_user_prompt",
+      "scope": "within_split",
+      "score": 1.0,
+      "left": {
+        "split": "test",
+        "line_number": 152,
+        "source": "oasst1_conversations",
+        "source_record_hash": "adc986234fa61ac70aac008e2f2d6e51",
+        "raw": "who are you ?"
+      },
+      "right": {
+        "split": "test",
+        "line_number": 190,
+        "source": "oasst1_conversations",
+        "source_record_hash": "20bb3175a4e756c4a6e24f7e85543f92",
+        "raw": "Who are you?"
+      }
+    },
+    {
+      "kind": "near_duplicate_user_prompt",
+      "scope": "within_split",
+      "score": 0.902516,
+      "left": {
+        "split": "test",
+        "line_number": 2,
+        "source": "oasst1_conversations",
+        "source_record_hash": "401d3c39f3696a7eeacb6c55aa4e11da",
+        "raw": "I want you to act as a Linux terminal. I will type commands and you will reply with what the terminal should show. I want you to only reply with the terminal output inside one unique code block, and nothing else. Do no write explanations. Do not type commands unless I instruct you to do so. When I need to tell you something in English I will do so by putting text inside curly brackets {like this}. My first command is pwd.\nsudo -i"
+      },
+      "right": {
+        "split": "test",
+        "line_number": 195,
+        "source": "oasst1_conversations",
+        "source_record_hash": "25c6168a98a75508f3e8f0fb7dacb1d9",
+        "raw": "I want you to act as a Linux terminal. I will type commands and you will reply with what the terminal should show. I want you to only reply with the terminal output inside a unique code block, and nothing else. Do no write explanations. Do not type commands unless I instruct you to do so. When I need to tell you something in English I will do so by putting text inside curly brackets {like this}. My first command is pwd.\nsudo rm -rf / --no-preserve-root"
+      }
+    }
+  ],
+  "scope_note": "Report-only lexical audit. Matches are not removed automatically; review source priority and conversation grouping before changing splits."
+}

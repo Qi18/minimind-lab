@@ -1,0 +1,569 @@
+{
+  "created_at": "2026-08-31T10:41:05.529757+00:00",
+  "external_audit": {
+    "benchmark_contamination": "pending"
+  },
+  "hash_domains": {
+    "mix": "minimind-pretrain-v1-mix",
+    "sample": "minimind-pretrain-v1-sample",
+    "split": "minimind-pretrain-v1-split"
+  },
+  "independent_tokenizer_recount": {
+    "train": {
+      "expected_loss_target_tokens": 1280000000,
+      "shards": [
+        {
+          "file": "train-00000-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31880185,
+            "nonpad_input_tokens": 31938023,
+            "padded_compute_tokens": 44419584,
+            "rows": 57838,
+            "text_tokens": 31822347
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00001-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32023134,
+            "nonpad_input_tokens": 32080972,
+            "padded_compute_tokens": 44419584,
+            "rows": 57838,
+            "text_tokens": 31965296
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00002-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32038540,
+            "nonpad_input_tokens": 32096378,
+            "padded_compute_tokens": 44419584,
+            "rows": 57838,
+            "text_tokens": 31980702
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00003-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32127084,
+            "nonpad_input_tokens": 32184921,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 32069247
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00004-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32044668,
+            "nonpad_input_tokens": 32102505,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31986831
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00005-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32058818,
+            "nonpad_input_tokens": 32116655,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 32000981
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00006-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31970137,
+            "nonpad_input_tokens": 32027974,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31912300
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00007-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32106908,
+            "nonpad_input_tokens": 32164745,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 32049071
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00008-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31933749,
+            "nonpad_input_tokens": 31991586,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31875912
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00009-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31928037,
+            "nonpad_input_tokens": 31985874,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31870200
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00010-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31924257,
+            "nonpad_input_tokens": 31982094,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31866420
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00011-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31966592,
+            "nonpad_input_tokens": 32024429,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31908755
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00012-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31924899,
+            "nonpad_input_tokens": 31982736,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31867062
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00013-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31981035,
+            "nonpad_input_tokens": 32038872,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31923198
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00014-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32057658,
+            "nonpad_input_tokens": 32115495,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31999821
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00015-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32064562,
+            "nonpad_input_tokens": 32122399,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 32006725
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00016-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31999619,
+            "nonpad_input_tokens": 32057456,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31941782
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00017-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31958423,
+            "nonpad_input_tokens": 32016260,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31900586
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00018-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31950081,
+            "nonpad_input_tokens": 32007918,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31892244
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00019-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31941486,
+            "nonpad_input_tokens": 31999323,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31883649
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00020-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32049936,
+            "nonpad_input_tokens": 32107773,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31992099
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00021-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32145499,
+            "nonpad_input_tokens": 32203336,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 32087662
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00022-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31975857,
+            "nonpad_input_tokens": 32033694,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31918020
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00023-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31944274,
+            "nonpad_input_tokens": 32002111,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31886437
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00024-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31933854,
+            "nonpad_input_tokens": 31991691,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31876017
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00025-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32015799,
+            "nonpad_input_tokens": 32073636,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31957962
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00026-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32006750,
+            "nonpad_input_tokens": 32064587,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31948913
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00027-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31979538,
+            "nonpad_input_tokens": 32037375,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31921701
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00028-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32086720,
+            "nonpad_input_tokens": 32144557,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 32028883
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00029-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32004414,
+            "nonpad_input_tokens": 32062251,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31946577
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00030-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32001961,
+            "nonpad_input_tokens": 32059798,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31944124
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00031-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32037203,
+            "nonpad_input_tokens": 32095040,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31979366
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00032-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31969288,
+            "nonpad_input_tokens": 32027125,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31911451
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00033-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31961499,
+            "nonpad_input_tokens": 32019336,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31903662
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00034-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31942723,
+            "nonpad_input_tokens": 32000560,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31884886
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00035-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32001537,
+            "nonpad_input_tokens": 32059374,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31943700
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00036-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32004451,
+            "nonpad_input_tokens": 32062288,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31946614
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00037-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32020141,
+            "nonpad_input_tokens": 32077978,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31962304
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00038-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 31985662,
+            "nonpad_input_tokens": 32043499,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31927825
+          },
+          "status": "ok"
+        },
+        {
+          "file": "train-00039-of-00040.jsonl",
+          "stats": {
+            "loss_target_tokens": 32053022,
+            "nonpad_input_tokens": 32110859,
+            "padded_compute_tokens": 44418816,
+            "rows": 57837,
+            "text_tokens": 31995185
+          },
+          "status": "ok"
+        }
+      ],
+      "stats": {
+        "loss_target_tokens": 1280000000,
+        "nonpad_input_tokens": 1282313483,
+        "padded_compute_tokens": 1776754944,
+        "rows": 2313483,
+        "text_tokens": 1277686517
+      },
+      "status": "ok"
+    },
+    "validation": {
+      "expected_loss_target_tokens": 6400000,
+      "shards": [
+        {
+          "file": "validation-00000-of-00001.jsonl",
+          "stats": {
+            "loss_target_tokens": 6400000,
+            "nonpad_input_tokens": 6411525,
+            "padded_compute_tokens": 8851200,
+            "rows": 11525,
+            "text_tokens": 6388475
+          },
+          "status": "ok"
+        }
+      ],
+      "stats": {
+        "loss_target_tokens": 6400000,
+        "nonpad_input_tokens": 6411525,
+        "padded_compute_tokens": 8851200,
+        "rows": 11525,
+        "text_tokens": 6388475
+      },
+      "status": "ok"
+    }
+  },
+  "loader_dry_run": {
+    "hook": "/data/projects/minimind-lab-data-v1/minimind/dataset/lm_dataset.py:PretrainDataset",
+    "quoted_glob": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/final-remix-v1/train-*-of-00040.jsonl",
+    "rows": 2313483,
+    "sample_shape": [
+      768
+    ],
+    "status": "ok"
+  },
+  "manifest_sha256": "1d14286c760e33884a5bc8d8afd1ac95e9d084f1b52b9bf2f582fc3743b694d6",
+  "scripts": {
+    "auditor": {
+      "path": "scripts/data/audit_pretrain_v1.py",
+      "sha256": "ba1b200d5fb4ea23b3598714b5a19fe51325fa7db47937411b40cc8916823bae"
+    },
+    "builder": {
+      "path": "scripts/data/build_pretrain_v1.py",
+      "sha256": "573723a093e69d5985a42437d0f3e611a4de393bb49d81b47d7127904d8d0de3",
+      "version": "pretrain-v1-builder-3"
+    }
+  },
+  "sharding": {
+    "assignment": "deterministic_hash_order_row_round_robin",
+    "expected_mean_train_loss_target_tokens_per_shard": 32000000.0,
+    "filename_format": "{split}-{index:05d}-of-{num_shards:05d}.jsonl",
+    "names": {
+      "train": [
+        "train-00000-of-00040.jsonl",
+        "train-00001-of-00040.jsonl",
+        "train-00002-of-00040.jsonl",
+        "train-00003-of-00040.jsonl",
+        "train-00004-of-00040.jsonl",
+        "train-00005-of-00040.jsonl",
+        "train-00006-of-00040.jsonl",
+        "train-00007-of-00040.jsonl",
+        "train-00008-of-00040.jsonl",
+        "train-00009-of-00040.jsonl",
+        "train-00010-of-00040.jsonl",
+        "train-00011-of-00040.jsonl",
+        "train-00012-of-00040.jsonl",
+        "train-00013-of-00040.jsonl",
+        "train-00014-of-00040.jsonl",
+        "train-00015-of-00040.jsonl",
+        "train-00016-of-00040.jsonl",
+        "train-00017-of-00040.jsonl",
+        "train-00018-of-00040.jsonl",
+        "train-00019-of-00040.jsonl",
+        "train-00020-of-00040.jsonl",
+        "train-00021-of-00040.jsonl",
+        "train-00022-of-00040.jsonl",
+        "train-00023-of-00040.jsonl",
+        "train-00024-of-00040.jsonl",
+        "train-00025-of-00040.jsonl",
+        "train-00026-of-00040.jsonl",
+        "train-00027-of-00040.jsonl",
+        "train-00028-of-00040.jsonl",
+        "train-00029-of-00040.jsonl",
+        "train-00030-of-00040.jsonl",
+        "train-00031-of-00040.jsonl",
+        "train-00032-of-00040.jsonl",
+        "train-00033-of-00040.jsonl",
+        "train-00034-of-00040.jsonl",
+        "train-00035-of-00040.jsonl",
+        "train-00036-of-00040.jsonl",
+        "train-00037-of-00040.jsonl",
+        "train-00038-of-00040.jsonl",
+        "train-00039-of-00040.jsonl"
+      ],
+      "validation": [
+        "validation-00000-of-00001.jsonl"
+      ]
+    },
+    "num_train_shards": 40,
+    "num_validation_shards": 1,
+    "train_glob": "train-*-of-00040.jsonl",
+    "validation_glob": "validation-*-of-00001.jsonl",
+    "validation_loss_target_tokens": 6400000
+  },
+  "status": "pending_external_audit"
+}

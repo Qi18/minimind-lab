@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-28T11:50:30.776164+00:00",
+  "input": "/data/datasets/minimind/312afb4f76391145c6902f765bb51691c09a12f5/sft_t2t_mini.jsonl",
+  "max_records": null,
+  "rows_read": 905718,
+  "valid_rows": 905718,
+  "invalid_json_lines": 0,
+  "empty_lines": 0,
+  "invalid_schema_rows": 0,
+  "missing_assistant_rows": 5,
+  "assistant_target_retention": 0.999994,
+  "exact_duplicate_rows": 47439,
+  "exact_duplicate_rate": 0.052377,
+  "tool_rows": 76578,
+  "tool_rate": 0.084549,
+  "reasoning_rows": 273823,
+  "reasoning_rate": 0.302327,
+  "mcq_rows": 3371,
+  "mcq_rate": 0.003722,
+  "assistant_characters": 432635206,
+  "role_counts": {
+    "user": 1172003,
+    "assistant": 1249691,
+    "system": 84832,
+    "tool": 77784
+  },
+  "turn_count_top20": [
+    [
+      2,
+      698064
+    ],
+    [
+      5,
+      76462
+    ],
+    [
+      4,
+      62914
+    ],
+    [
+      6,
+      24304
+    ],
+    [
+      8,
+      13931
+    ],
+    [
+      10,
+      8954
+    ],
+    [
+      3,
+      6362
+    ],
+    [
+      12,
+      5956
+    ],
+    [
+      14,
+      3812
+    ],
+    [
+      16,
+      2771
+    ],
+    [
+      7,
+      1252
+    ],
+    [
+      11,
+      672
+    ],
+    [
+      9,
+      130
+    ],
+    [
+      13,
+      115
+    ],
+    [
+      15,
+      13
+    ],
+    [
+      20,
+      3
+    ],
+    [
+      22,
+      3
+    ]
+  ],
+  "scope_note": "Duplicate rate is exact after whitespace/case normalization; near-duplicate and benchmark contamination are separate gates."
+}

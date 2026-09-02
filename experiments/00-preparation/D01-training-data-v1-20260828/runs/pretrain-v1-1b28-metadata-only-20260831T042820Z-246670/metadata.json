@@ -1,0 +1,72 @@
+{
+  "commands": {
+    "path": "/data/projects/minimind-lab-data-v1/experiments/00-preparation/D01-training-data-v1-20260828/runs/pretrain-v1-1b28-metadata-only-20260831T042820Z-246670/commands.tsv",
+    "sha256": "c976b8dbbb7c10a2b6bd64833a3e09ca77927707f2cce039a69be0123816d828"
+  },
+  "git": {
+    "dirty": true,
+    "head": "222e39c934d7bb4d96472ceb40d22f8aa7fc578b"
+  },
+  "host": "l20-server-20260827",
+  "inputs": {
+    "auditor": {
+      "path": "/data/projects/minimind-lab-data-v1/scripts/data/audit_pretrain_v1.py",
+      "sha256": "0c158c9499b17a6901c844c46d914ab09aa1eb1d19d8238cc442dcb1e9ef023c"
+    },
+    "builder": {
+      "path": "/data/projects/minimind-lab-data-v1/scripts/data/build_pretrain_v1.py",
+      "sha256": "573723a093e69d5985a42437d0f3e611a4de393bb49d81b47d7127904d8d0de3"
+    },
+    "eval_config": {
+      "path": "/data/projects/minimind-lab-data-v1/configs/data/contamination_eval_v2.yaml",
+      "sha256": "318f5af2aeae8ea50c9f1bc6a3f078e0a75730bc4c984a53cd37ff391cad41df"
+    },
+    "pretrain_config": {
+      "path": "/data/projects/minimind-lab-data-v1/configs/data/pretrain_v1.yaml",
+      "sha256": "c566581f20e0084f887cf60eea2225ba4d21dde0348d3f2d71676c54617a50dc"
+    },
+    "sources_config": {
+      "path": "/data/projects/minimind-lab-data-v1/configs/data/pretrain_shards_v1.yaml",
+      "sha256": "bd781d77b164d73962ff46a987ea1cf8232fbda9b5fff22d01aeeb28d60448fe"
+    },
+    "tokenizer": {
+      "path": "/data/projects/minimind-lab-data-v1/minimind/model",
+      "tokenizer_config_sha256": "d7cd6a60c9f191c4f9ffec69b2eb289ad2f960366724f328b681ae1e46e4c110",
+      "tokenizer_json_sha256": "71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668"
+    }
+  },
+  "launcher": {
+    "path": "experiments/00-preparation/D01-training-data-v1-20260828/launch_pretrain_v1_1b28.sh",
+    "sha256": "d604c30ac1b581c2f4076f5e2ae3f45448ac06f4d4a23b333121c7f589fae3d8"
+  },
+  "mode": "metadata-only",
+  "paths": {
+    "data_root": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28",
+    "final_root": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/final",
+    "repo_root": "/data/projects/minimind-lab-data-v1",
+    "work_root": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/work"
+  },
+  "run_id": "pretrain-v1-1b28-metadata-only-20260831T042820Z-246670",
+  "runtime": {
+    "policy": {
+      "audit": {
+        "kill_after_seconds": 30,
+        "terminate_signal": "TERM",
+        "timeout_binary": "/usr/bin/timeout",
+        "timeout_seconds": 21600
+      },
+      "hf_hub": {
+        "disable_xet": true,
+        "download_timeout_seconds": 60,
+        "etag_timeout_seconds": 20
+      }
+    },
+    "python": "/data/venvs/minimind-lab/bin/python"
+  },
+  "schema_version": 1,
+  "security": {
+    "credentials_recorded": false,
+    "environment_recorded": false
+  },
+  "started_at_utc": "2026-08-31T04:28:20Z"
+}

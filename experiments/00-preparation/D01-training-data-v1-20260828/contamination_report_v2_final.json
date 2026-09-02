@@ -1,0 +1,143 @@
+{
+  "schema_version": 2,
+  "created_at": "2026-08-30T16:12:10.742870+00:00",
+  "endpoint": "https://hf-mirror.com",
+  "input": "/data/datasets/minimind-lab/data-v1/prepared",
+  "input_scope": "all_sft_splits",
+  "train_rows": 5907,
+  "unique_train_user_prompts": 8255,
+  "settings": {
+    "seed": 42,
+    "num_perm": 128,
+    "char_ngram": 5,
+    "min_normalized_chars": 20,
+    "jaccard_threshold": 0.8,
+    "containment_threshold": 0.9,
+    "max_examples_per_source": 5
+  },
+  "task_alignment": {
+    "task_names": [
+      "ceval-valid",
+      "cmmlu",
+      "arc_easy",
+      "piqa",
+      "openbookqa",
+      "hellaswag",
+      "social_iqa"
+    ],
+    "harness_commit": null,
+    "note": "MiniMind does not pin lm-evaluation-harness; freeze its commit before formal scoring."
+  },
+  "datasketch_version": "1.6.4",
+  "totals": {
+    "rows": 29638,
+    "empty_queries": 0,
+    "exact_overlap": 0,
+    "containment_overlap": 0,
+    "near_duplicate_overlap": 0,
+    "short_queries_near_check_skipped": 6137
+  },
+  "load_errors": [],
+  "passed": true,
+  "sources": [
+    {
+      "id": "ceval_valid",
+      "task": "ceval-valid",
+      "repo_id": "ceval/ceval-exam",
+      "revision": "617524a00b307ff6f9933702f724131fe12ca7ce",
+      "split": "val",
+      "configs": 52,
+      "rows": 1346,
+      "short_queries_near_check_skipped": 491,
+      "exact_overlap": 0,
+      "containment_overlap": 0,
+      "near_duplicate_overlap": 0,
+      "examples": []
+    },
+    {
+      "id": "cmmlu",
+      "task": "cmmlu",
+      "repo_id": "haonan-li/cmmlu",
+      "revision": "efcc940752ea4a1ea94d2727f11f83858d64fc8e",
+      "split": "test",
+      "configs": 67,
+      "rows": 11582,
+      "short_queries_near_check_skipped": 5135,
+      "exact_overlap": 0,
+      "containment_overlap": 0,
+      "near_duplicate_overlap": 0,
+      "examples": []
+    },
+    {
+      "id": "arc_easy",
+      "task": "arc_easy",
+      "repo_id": "allenai/ai2_arc",
+      "revision": "210d026faf9955653af8916fad021475a3f00453",
+      "split": "test",
+      "configs": 1,
+      "rows": 2376,
+      "short_queries_near_check_skipped": 9,
+      "exact_overlap": 0,
+      "containment_overlap": 0,
+      "near_duplicate_overlap": 0,
+      "examples": []
+    },
+    {
+      "id": "piqa",
+      "task": "piqa",
+      "repo_id": "baber/piqa",
+      "revision": "142f6d7367fd9877f0fb3b5734ea6a545f54cdd1",
+      "split": "validation",
+      "configs": 1,
+      "rows": 1838,
+      "short_queries_near_check_skipped": 443,
+      "exact_overlap": 0,
+      "containment_overlap": 0,
+      "near_duplicate_overlap": 0,
+      "examples": []
+    },
+    {
+      "id": "openbookqa",
+      "task": "openbookqa",
+      "repo_id": "allenai/openbookqa",
+      "revision": "388097ea7776314e93a529163e0fea805b8a6454",
+      "split": "test",
+      "configs": 1,
+      "rows": 500,
+      "short_queries_near_check_skipped": 59,
+      "exact_overlap": 0,
+      "containment_overlap": 0,
+      "near_duplicate_overlap": 0,
+      "examples": []
+    },
+    {
+      "id": "hellaswag",
+      "task": "hellaswag",
+      "repo_id": "Rowan/hellaswag",
+      "revision": "218ec52e09a7e7462a5400043bb9a69a41d06b76",
+      "split": "validation",
+      "configs": 1,
+      "rows": 10042,
+      "exact_overlap": 0,
+      "containment_overlap": 0,
+      "near_duplicate_overlap": 0,
+      "examples": []
+    },
+    {
+      "id": "social_iqa",
+      "task": "social_iqa",
+      "repo_id": "allenai/social_i_qa",
+      "revision": "8835ceb9141d7896d9d968634a9b21ae440e3ec5",
+      "split": "validation",
+      "configs": 1,
+      "rows": 1954,
+      "exact_overlap": 0,
+      "containment_overlap": 0,
+      "near_duplicate_overlap": 0,
+      "examples": []
+    }
+  ],
+  "training_record_hashes_to_quarantine": [],
+  "training_records_to_quarantine": 0,
+  "scope_note": "Exact uses NFKC alphanumeric normalization. Containment uses character n-gram set containment; near duplicate uses character n-gram Jaccard. This is a deterministic screening gate, not semantic plagiarism detection."
+}

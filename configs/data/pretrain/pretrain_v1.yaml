@@ -1,0 +1,81 @@
+schema_version: 2
+name: minimind-pretrain-v1
+model_scope: 64m-dense
+tokenizer: minimind/model
+sequence_length: 768
+seed: 42
+
+token_accounting:
+  primary_metric: loss_target_tokens
+  loss_target_tokens_per_row: "min(tokenizer(text), sequence_length - 2) + 1"
+  nonpad_input_tokens_per_row: "loss_target_tokens + 1"
+  padded_compute_tokens_per_row: sequence_length
+  note: "The +1 loss target is EOS; BOS is input context and is not a shifted loss target."
+
+budgets:
+  proxy_rows_per_source: 200
+  legacy_pilot_visible_nonpad_input_tokens: 320000000
+  observed_pilot_loss_target_tokens: 319468462
+  full_loss_target_tokens: 1280000000
+  validation_loss_target_tokens: 6400000
+
+planned_mix:
+  chinese_web: {weight: 0.45, sources: [chinese_webtext2]}
+  english_education: {weight: 0.30, sources: [fineweb_edu]}
+  encyclopedia:
+    weight: 0.10
+    sources: [wikipedia_zh, wikipedia_en]
+    source_weights: {wikipedia_zh: 0.50, wikipedia_en: 0.50}
+  math: {weight: 0.10, sources: [finemath]}
+  code: {weight: 0.05, sources: [stack_v3_code]}
+
+active_v1_mix:
+  chinese_web: {weight: 0.45, sources: [chinese_webtext2]}
+  english_education: {weight: 0.30, sources: [fineweb_edu]}
+  encyclopedia:
+    weight: 0.10
+    sources: [wikipedia_zh, wikipedia_en]
+    source_weights: {wikipedia_zh: 0.50, wikipedia_en: 0.50}
+  math: {weight: 0.10, sources: [finemath]}
+  code: {weight: 0.05, sources: [stack_v3_code]}
+
+chunking:
+  enabled: true
+  max_text_tokens: 766
+  method: tokenizer_aligned_decode_and_recount
+  preserve_document_tail: true
+  output_schema: [text]
+
+sampling:
+  seed: 42
+  sample_hash: sha256
+  sample_hash_domain: minimind-pretrain-v1-sample
+  mix_hash_domain: minimind-pretrain-v1-mix
+  split_hash_domain: minimind-pretrain-v1-split
+  candidate_multiplier: 1.15
+  boundary: fixed_multi_object_pool_with_bounded_hash_candidate_window
+  note: "Hash selection is performed inside a bounded candidate window from each pinned object. This removes direct first-N selection but is not a full-object random sample."
+
+sharding:
+  assignment: deterministic_hash_order_row_round_robin
+  filename_format: "{split}-{index:05d}-of-{num_shards:05d}.jsonl"
+  num_train_shards: 40
+  num_validation_shards: 1
+  train_glob: "train-*-of-00040.jsonl"
+  validation_glob: "validation-*-of-00001.jsonl"
+  expected_mean_train_loss_target_tokens_per_shard: 32000000
+  final_rows_text_only: true
+  provenance_sidecar_required: true
+
+quality_gates:
+  invalid_json_rate_max: 0.0
+  empty_text_rate_max: 0.0
+  exact_training_visible_duplicate_max: 0
+  train_validation_exact_overlap_max: 0
+  exact_eval_overlap_max: 0
+  per_source_overshoot_tokens_max: 767
+  independent_tokenizer_recount_required: true
+  loader_glob_dry_run_required: true
+  source_revision_required: true
+  declared_license_required: true
+  success_marker_required: true

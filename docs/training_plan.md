@@ -57,6 +57,8 @@ Dense 与 MoE 共同使用官方 `len_vocab=6400`、`max_pos=32768`、`rope_thet
 
 ## 3. 数据路线
 
+数据工程的正式实现与验收按阶段拆分维护：[Pretrain v1 数据协议](data/pretrain/data_protocol.md)记录已接受的 1.28B 构建证据，[SFT v1 数据协议](data/sft/data_protocol.md)记录重新设计后的 1M → 8M → 32M 门控路线。下面的 MiniMind 官方文件表保留为训练路线背景，不代表本项目正式数据已经完成。
+
 | 文件 | 源码文档规模 | 用途 | 进入阶段 |
 |---|---:|---|---|
 | `pretrain_t2t_mini.jsonl` | 约 1.2GB | 快速 Pretrain 基线 | P01 |

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-30T15:53:30.986980+00:00",
+  "source_counts_after_dedup": {
+    "ultrachat_200k": 200,
+    "oasst1_conversations": 3855,
+    "glaive_function_calling_v2_conversations": 200,
+    "strict_format_v1": 500,
+    "translation_bilingual_v1": 400,
+    "gsm8k": 200,
+    "alpaca_gpt4_zh": 200,
+    "mbpp": 200,
+    "code_alpaca_20k": 200
+  },
+  "split_counts": {
+    "train": 5330,
+    "test": 309,
+    "validation": 316
+  },
+  "invalid_counts": {},
+  "exact_duplicate_counts": {},
+  "deferred_sources": {},
+  "split_policy": "blake2b(NFKC lowercase alphanumeric concatenated user messages) modulo 1000 -> 900/50/50",
+  "outputs": {
+    "train": {
+      "path": "/data/datasets/minimind-lab/data-v1/normalized/sft_proxy_v1.train.jsonl",
+      "rows": 5330,
+      "size_bytes": 9074896,
+      "sha256": "91adbe96c680d1e94d572fc58f25f476a32c82dcffa2c99a530bdeb54e6ca2ba"
+    },
+    "validation": {
+      "path": "/data/datasets/minimind-lab/data-v1/normalized/sft_proxy_v1.validation.jsonl",
+      "rows": 316,
+      "size_bytes": 577021,
+      "sha256": "7795995a330d5b072fb9071b19148b93f9315e738a32b5cd1605dda7d6927265"
+    },
+    "test": {
+      "path": "/data/datasets/minimind-lab/data-v1/normalized/sft_proxy_v1.test.jsonl",
+      "rows": 309,
+      "size_bytes": 556680,
+      "sha256": "76a4f481d0c71edac843f6b39052a5f9200067167888eeac38df9073eaf5be99"
+    }
+  }
+}

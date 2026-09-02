@@ -1,0 +1,247 @@
+{
+  "experiment_id": "P03-dense-pretrain-v1-1b28-20260901",
+  "stage": "01-pretrain",
+  "status": "planned",
+  "protocol_version": "2026-09-01",
+  "experiment_class": "quality-cost new baseline",
+  "causal_claim_boundary": "This is not a single-variable data A/B against P01 or P02 because the dataset composition, validation protocol, training entry, and micro-batch decomposition differ.",
+  "seed": 42,
+  "model": {
+    "architecture": "MiniMindForCausalLM Dense",
+    "parameters": 63912192,
+    "hidden_size": 768,
+    "num_hidden_layers": 8,
+    "use_moe": false,
+    "vocab_size": 6400,
+    "initialization": "random"
+  },
+  "hardware": {
+    "accelerators": "8x NVIDIA L20 46GB",
+    "world_size": 8,
+    "dtype": "bfloat16"
+  },
+  "dataset": {
+    "name": "pretrain-v1-1b28/final-remix-v1",
+    "root": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/final-remix-v1",
+    "accepted_marker": "_SUCCESS",
+    "accepted_marker_sha256": "8c9c728ed063b214ebb74e905e0f6ccc4a510c7078408b87cda5d0c990639c7c",
+    "accepted_status": "accepted",
+    "dataset_fingerprint": "cd018f6d0a047284f5f77d240d2583a1673c9d9a923536e9da7e4b1e4ead70bd",
+    "manifest_sha256": "1d14286c760e33884a5bc8d8afd1ac95e9d084f1b52b9bf2f582fc3743b694d6",
+    "train_glob": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/final-remix-v1/train-*-of-00040.jsonl",
+    "validation_glob": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/final-remix-v1/validation-*-of-00001.jsonl",
+    "train_shards": 40,
+    "validation_shards": 1,
+    "verified_shard_bytes": 3804930498,
+    "train_rows": 2313483,
+    "train_loss_target_tokens": 1280000000,
+    "train_padded_compute_tokens": 1776754944,
+    "validation_rows": 11525,
+    "validation_loss_target_tokens": 6400000,
+    "validation_padded_compute_tokens": 8851200,
+    "sequence_length": 768
+  },
+  "training": {
+    "epochs": 1,
+    "world_size": 8,
+    "global_sequence_batch": 256,
+    "max_seq_len": 768,
+    "learning_rate": 0.0005,
+    "learning_rate_schedule": "MiniMind cosine from 5e-4 to 5e-5 over the resolved full one-epoch optimizer schedule",
+    "scheduler_unit": "optimizer_step",
+    "resolved_total_optimizer_steps": 9038,
+    "max_steps_semantics": "absolute optimizer-step exit bound only; it never shortens the scheduler denominator",
+    "grad_clip": 1.0,
+    "optimizer": "torch.optim.AdamW defaults",
+    "dtype": "bfloat16",
+    "num_workers_per_rank": 8,
+    "log_interval_optimizer_steps": 10,
+    "save_interval_optimizer_steps": 250,
+    "eval_interval_optimizer_steps": 1000,
+    "from_weight": "none",
+    "candidate_profiles": [
+      {
+        "priority": 1,
+        "per_gpu_batch_size": 32,
+        "accumulation_steps": 1,
+        "global_sequence_batch": 256,
+        "micro_steps_per_epoch": 9038,
+        "optimizer_steps_per_epoch": 9038
+      },
+      {
+        "priority": 2,
+        "use_only_if_previous_profile_ooms": true,
+        "per_gpu_batch_size": 16,
+        "accumulation_steps": 2,
+        "global_sequence_batch": 256,
+        "micro_steps_per_epoch": 18075,
+        "optimizer_steps_per_epoch": 9038
+      },
+      {
+        "priority": 3,
+        "use_only_if_previous_profile_ooms": true,
+        "per_gpu_batch_size": 8,
+        "accumulation_steps": 4,
+        "global_sequence_batch": 256,
+        "micro_steps_per_epoch": 36149,
+        "optimizer_steps_per_epoch": 9038
+      }
+    ],
+    "distributed_sampler_padding": {
+      "train_rows_exposed": 2313488,
+      "duplicate_exposures": 5,
+      "reason": "DistributedSampler gives every rank the same number of training samples; validation does not use this sampler."
+    }
+  },
+  "probe": {
+    "required_optimizer_steps": 100,
+    "graceful_exit_required": true,
+    "scheduler_total_optimizer_steps": 9038,
+    "required_metrics": [
+      "train_loss",
+      "learning_rate",
+      "valid_tokens_per_second",
+      "padded_tokens_per_second",
+      "micro_step_seconds",
+      "optimizer_step_seconds",
+      "peak_memory_mib",
+      "active_training_seconds",
+      "training_loop_wall_seconds",
+      "active_padded_tokens_per_second",
+      "training_loop_padded_tokens_per_second",
+      "final_validation_loss",
+      "final_validation_perplexity"
+    ],
+    "required_artifacts": [
+      "isolated checkpoint",
+      "isolated resume state",
+      "metrics.jsonl",
+      "per-attempt driver.log",
+      "per-attempt nvidia-smi.csv",
+      "per-attempt runtime-manifest.json",
+      "per-attempt exit-status.json with launcher_wall_seconds"
+    ],
+    "formal_requires_same_profile_probe": true,
+    "formal_probe_gate": "exit 0, optimizer_step 100, full scheduler denominator 9038, exact final validation, matching dataset/trainer/protocol/command SHA"
+  },
+  "validation": {
+    "split": "independent accepted validation glob",
+    "distribution": "rank-stride disjoint indices with no padding or repeated samples",
+    "model_forward": "unwrapped raw model under no_grad",
+    "aggregation": "all-reduce summed NLL and valid target-token count, then divide once",
+    "expected_rows": 11525,
+    "expected_target_tokens": 6400000,
+    "final_validation_required": true
+  },
+  "tracking": {
+    "provider": "SwanLab",
+    "project": "MiniMind-Lab",
+    "probe_run_name_template": "P03-Pretrain-V1-1B28-Full-64M-Seq768-Probe-B{batch}x8-A{accum}-S100",
+    "formal_run_name_template": "P03-Pretrain-V1-1B28-Full-64M-Seq768-B{batch}x8-A{accum}"
+  },
+  "output_policy": {
+    "root": "/data/artifacts/minimind-lab/P03-dense-pretrain-v1-1b28-20260901",
+    "probe_and_formal_are_isolated": true,
+    "does_not_reuse_p01_or_p02": true,
+    "group": "Pretrain",
+    "tags": "pretrain,P03,full,64M,seq768,{probe_or_formal}",
+    "checkpoint_only_after_optimizer_step": true,
+    "pure_inference_checkpoint_dtype": "float16",
+    "resume_checkpoint_model_dtype": "original training dtype (FP32 master weights)",
+    "resume_checkpoint_atomic": true,
+    "resume_contract_pins": [
+      "dataset_fingerprint",
+      "trainer_sha256",
+      "protocol_sha256",
+      "world_size",
+      "batch/accumulation/sequence/epochs/schedule"
+    ],
+    "resume_attempt_logs_are_segmented": true
+  },
+  "evaluation": {
+    "checkpoint_type": "Base",
+    "harness": "lm-evaluation-harness 0.4.12",
+    "harness_commit": "6d642546f4688648fced259eb3302efd36ece5af",
+    "num_fewshot": 0,
+    "apply_chat_template": false,
+    "batch_size": 16,
+    "device": "cuda:0",
+    "seed": 42,
+    "metric_rule": "acc_norm when available, otherwise acc",
+    "tasks": [
+      "ceval-valid",
+      "cmmlu",
+      "arc_easy",
+      "piqa",
+      "openbookqa",
+      "hellaswag",
+      "social_iqa"
+    ],
+    "expected_samples": 29638,
+    "expected_requests": 112919,
+    "greedy_continuation_prompts": 5
+  },
+  "baselines": {
+    "p02": {
+      "experiment_id": "P02-dense-pretrain-full-20260824",
+      "new_validation_nll": null,
+      "new_validation_nll_state": "must be measured with the P03 exact validation protocol before acceptance is decided",
+      "seven_task_percent": {
+        "ceval-valid": 23.03120356612184,
+        "cmmlu": 25.125194266965983,
+        "arc_easy": 28.914141414141414,
+        "piqa": 51.4689880304679,
+        "openbookqa": 26.6,
+        "hellaswag": 28.40071698864768,
+        "social_iqa": 32.80450358239509,
+        "macro_average": 30.90639254981998
+      },
+      "median_gpu_util_percent": 99.0,
+      "padded_throughput_tokens_per_second": 379311.321992835,
+      "padded_throughput_denominator": "17147.02 seconds end-to-end wall clock"
+    },
+    "p01": {
+      "experiment_id": "P01-dense-pretrain-mini-20260824",
+      "seven_task_macro_percent": 31.444876524632342
+    }
+  },
+  "acceptance_gates": {
+    "technical_complete": {
+      "process_exit_code": 0,
+      "completed_optimizer_steps": 9038,
+      "forbid": [
+        "NaN",
+        "Inf",
+        "OOM",
+        "NCCL failure"
+      ],
+      "strict_export_and_sha_required": true,
+      "required_timing_metrics": [
+        "active_training_seconds",
+        "training_loop_wall_seconds",
+        "launcher_wall_seconds",
+        "active_padded_tokens_per_second",
+        "training_loop_padded_tokens_per_second"
+      ],
+      "validation_rows": 11525,
+      "validation_target_tokens": 6400000,
+      "seven_task_samples": 29638,
+      "seven_task_requests": 112919
+    },
+    "experiment_accepted": {
+      "validation_nll_must_be_lte_p02_same_split": true,
+      "seven_task_macro_percent_min": 30.91,
+      "max_per_task_regression_vs_p02_percentage_points": 2.0
+    },
+    "release_candidate": {
+      "seven_task_macro_percent_min": 31.44,
+      "greedy_nonempty_min_of_5": 3,
+      "obvious_repetition_regression_forbidden": true,
+      "median_gpu_util_percent_min": 95.0,
+      "padded_throughput_gate_status": "indicative reference only; not a hard same-protocol gate",
+      "p02_end_to_end_padded_throughput_reference": 379311.321992835,
+      "p02_90_percent_reference": 341380.18979355146,
+      "throughput_protocol_note": "P02 divides padded token-slots by 17147.02s launcher end-to-end wall; P03 reports active training, training-loop wall, and launcher wall separately. Do not claim a same-protocol comparison until both runs share one wall-clock boundary."
+    }
+  }
+}

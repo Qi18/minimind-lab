@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-28T14:15:32.209481+00:00",
+  "endpoint": "https://hf-mirror.com",
+  "source_config": "configs/data/sources_v1.yaml",
+  "all_enabled_sources_sampled": true,
+  "sources": [
+    {
+      "id": "chinese_webtext2",
+      "repo_id": "CASIA-LM/ChineseWebText2.0",
+      "status": "skipped",
+      "reason": "disabled in source config"
+    },
+    {
+      "id": "fineweb_edu",
+      "repo_id": "HuggingFaceFW/fineweb-edu",
+      "status": "skipped",
+      "reason": "disabled in source config"
+    },
+    {
+      "id": "finemath",
+      "repo_id": "HuggingFaceTB/finemath",
+      "status": "skipped",
+      "reason": "disabled in source config"
+    },
+    {
+      "id": "wikipedia_zh",
+      "repo_id": "wikimedia/wikipedia",
+      "status": "skipped",
+      "reason": "disabled in source config"
+    },
+    {
+      "id": "wikipedia_en",
+      "repo_id": "wikimedia/wikipedia",
+      "status": "skipped",
+      "reason": "disabled in source config"
+    },
+    {
+      "id": "ultrachat_200k",
+      "repo_id": "HuggingFaceH4/ultrachat_200k",
+      "revision": "8049631c405ae6576f93f445c6b8166f76f5505a",
+      "config": "default",
+      "split": "train_sft",
+      "requested_rows": 200,
+      "path": "/data/datasets/minimind-lab/data-v1/raw-samples/ultrachat_200k.jsonl",
+      "status": "ok",
+      "rows": 200,
+      "fields": [
+        "messages",
+        "prompt",
+        "prompt_id"
+      ],
+      "size_bytes": 1345984,
+      "sha256": "7fb1eac2595e98c3af4f7c75850b3ccfec370d228ffb5b6dcb68f8c5636e5216",
+      "elapsed_seconds": 14.269
+    },
+    {
+      "id": "oasst1",
+      "repo_id": "OpenAssistant/oasst1",
+      "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+      "config": null,
+      "split": "train",
+      "requested_rows": 200,
+      "path": "/data/datasets/minimind-lab/data-v1/raw-samples/oasst1.jsonl",
+      "status": "ok",
+      "rows": 200,
+      "fields": [
+        "created_date",
+        "deleted",
+        "detoxify",
+        "emojis",
+        "labels",
+        "lang",
+        "message_id",
+        "message_tree_id",
+        "model_name",
+        "parent_id",
+        "rank",
+        "review_count",
+        "review_result",
+        "role",
+        "synthetic",
+        "text",
+        "tree_state",
+        "user_id"
+      ],
+      "size_bytes": 325225,
+      "sha256": "303cb29761c120ef3b7f6cc873b991262b2c49d55f520ae0d0135c3ee944eeb9",
+      "elapsed_seconds": 9.859
+    },
+    {
+      "id": "gsm8k",
+      "repo_id": "openai/gsm8k",
+      "revision": "740312add88f781978c0658806c59bc2815b9866",
+      "config": "main",
+      "split": "train",
+      "requested_rows": 200,
+      "path": "/data/datasets/minimind-lab/data-v1/raw-samples/gsm8k.jsonl",
+      "status": "ok",
+      "rows": 200,
+      "fields": [
+        "answer",
+        "question"
+      ],
+      "size_bytes": 113974,
+      "sha256": "b9ee6012f2b82f66d4a4390bb73363de03b85c289af62bbad53e84bd4df3465c",
+      "elapsed_seconds": 6.816
+    },
+    {
+      "id": "mbpp",
+      "repo_id": "google-research-datasets/mbpp",
+      "revision": "4bb6404fdc6cacfda99d4ac4205087b89d32030c",
+      "config": "full",
+      "split": "train",
+      "requested_rows": 200,
+      "path": "/data/datasets/minimind-lab/data-v1/raw-samples/mbpp.jsonl",
+      "status": "ok",
+      "rows": 200,
+      "fields": [
+        "challenge_test_list",
+        "code",
+        "task_id",
+        "test_list",
+        "test_setup_code",
+        "text"
+      ],
+      "size_bytes": 113372,
+      "sha256": "50c7bfc95136279fa1b8837212023d848a7998d16659f12a87920baa5794b865",
+      "elapsed_seconds": 5.135
+    },
+    {
+      "id": "code_alpaca_20k",
+      "repo_id": "sahil2801/CodeAlpaca-20k",
+      "revision": "152bb5e9a29651266b018106053980070a0521a1",
+      "config": null,
+      "split": "train",
+      "requested_rows": 200,
+      "path": "/data/datasets/minimind-lab/data-v1/raw-samples/code_alpaca_20k.jsonl",
+      "status": "ok",
+      "rows": 200,
+      "fields": [
+        "input",
+        "instruction",
+        "output"
+      ],
+      "size_bytes": 70487,
+      "sha256": "3f4edc288c3e6ad118e2d49c63aa254e8d3e92d294e8ac1264977e811a77b3ea",
+      "elapsed_seconds": 29.152
+    },
+    {
+      "id": "alpaca_gpt4_zh",
+      "repo_id": "silk-road/alpaca-data-gpt4-chinese",
+      "revision": "81a6dfd72f416aff605e7d189bfbbc46a2511fee",
+      "config": null,
+      "split": "train",
+      "requested_rows": 200,
+      "path": "/data/datasets/minimind-lab/data-v1/raw-samples/alpaca_gpt4_zh.jsonl",
+      "status": "ok",
+      "rows": 200,
+      "fields": [
+        "input",
+        "input_zh",
+        "instruction",
+        "instruction_zh",
+        "output",
+        "output_zh"
+      ],
+      "size_bytes": 249303,
+      "sha256": "fb46a1aeff31703c742ff9e5fc9ee764ec56e9a1efb0ce85976ccb936a7348fa",
+      "elapsed_seconds": 6.354
+    },
+    {
+      "id": "glaive_function_calling_v2",
+      "repo_id": "glaiveai/glaive-function-calling-v2",
+      "revision": "e7f4b6456019f5d8bcb991ef0dd67d8ff23221ac",
+      "config": null,
+      "split": "train",
+      "requested_rows": 200,
+      "path": "/data/datasets/minimind-lab/data-v1/raw-samples/glaive_function_calling_v2.jsonl",
+      "status": "ok",
+      "rows": 200,
+      "fields": [
+        "chat",
+        "system"
+      ],
+      "size_bytes": 526888,
+      "sha256": "125da90f1f984cf9260a8cc4f11f22cd835a2e54bb454264412adeea73caa25b",
+      "elapsed_seconds": 16.977
+    },
+    {
+      "id": "xlam_function_calling_60k",
+      "repo_id": "Salesforce/xlam-function-calling-60k",
+      "status": "skipped",
+      "reason": "Requires Hugging Face access approval; do not silently replace it."
+    }
+  ]
+}

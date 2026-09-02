@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-30T16:06:01.572191+00:00",
+  "policy": "quarantine complete conversations in any split named by the benchmark contamination report",
+  "contamination_report": "experiments/00-preparation/D01-training-data-v1-20260828/contamination_report_v2_before_filter.json",
+  "contamination_report_sha256": "125fa449f929be23fbfbfc3e951db7bed66a378b663338ec964946f2eabfaadd",
+  "requested_record_hashes": [
+    "c46f25ecc18bb9639dea30cd4cfb8144"
+  ],
+  "matched_record_hashes": [
+    "c46f25ecc18bb9639dea30cd4cfb8144"
+  ],
+  "missing_record_hashes": [],
+  "unexpected_record_hashes": [],
+  "splits": {
+    "train": {
+      "input": "/data/datasets/minimind-lab/data-v1/token-filtered/sft_v1.train.jsonl",
+      "input_sha256": "af657cbfbfd1aa52c7e25f789b610e73cb6efbb0dcecf40a0afb1850c0c3cbe2",
+      "output": "/data/datasets/minimind-lab/data-v1/prepared/sft_v1.train.jsonl",
+      "output_sha256": "af657cbfbfd1aa52c7e25f789b610e73cb6efbb0dcecf40a0afb1850c0c3cbe2",
+      "rows_read": 5292,
+      "rows_written": 5292
+    },
+    "validation": {
+      "input": "/data/datasets/minimind-lab/data-v1/token-filtered/sft_v1.validation.jsonl",
+      "input_sha256": "b071361e1fe75eed979eabffd8fe060ff395f3676c5727d8805cecfe9e098e3c",
+      "output": "/data/datasets/minimind-lab/data-v1/prepared/sft_v1.validation.jsonl",
+      "output_sha256": "b071361e1fe75eed979eabffd8fe060ff395f3676c5727d8805cecfe9e098e3c",
+      "rows_read": 309,
+      "rows_written": 309
+    },
+    "test": {
+      "input": "/data/datasets/minimind-lab/data-v1/token-filtered/sft_v1.test.jsonl",
+      "input_sha256": "4eea0091cbacb4a0518547aa3b167f4572670abd79d83f533c288917bcc3d567",
+      "output": "/data/datasets/minimind-lab/data-v1/prepared/sft_v1.test.jsonl",
+      "output_sha256": "d422a22589bd27cc9e319c004a4325d3b04826c0594d84f593583790339d1341",
+      "rows_read": 307,
+      "rows_written": 306,
+      "rows_quarantined": 1
+    }
+  },
+  "quarantine": {
+    "path": "/data/datasets/minimind-lab/data-v1/prepared/quarantine/sft_eval_overlap.jsonl",
+    "rows": 1,
+    "sha256": "eb4fc5137284fb9c207bd10bbe5edb5a94df4c1bb6f5c8bf8c82e5a140c16c23"
+  },
+  "passed": true
+}

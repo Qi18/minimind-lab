@@ -1,0 +1,59 @@
+{
+  "commands": {
+    "path": "/data/projects/minimind-lab-data-v1/experiments/00-preparation/D01-training-data-v1-20260828/runs/pretrain-v1-1b28-self-test-failure-20260831T040346Z-237956/commands.tsv",
+    "sha256": "5710f083f797076539c26acf4b210270972fa69182561c2a5a82be141088bf2e"
+  },
+  "git": {
+    "dirty": true,
+    "head": "222e39c934d7bb4d96472ceb40d22f8aa7fc578b"
+  },
+  "host": "l20-server-20260827",
+  "inputs": {
+    "auditor": {
+      "path": "/data/projects/minimind-lab-data-v1/scripts/data/audit_pretrain_v1.py",
+      "sha256": "593746e19d921509da809c131e0f6832b15229e22724dc22e6a21902c9ceb49c"
+    },
+    "builder": {
+      "path": "/data/projects/minimind-lab-data-v1/scripts/data/build_pretrain_v1.py",
+      "sha256": "dc4d10e6df6b65a397a03829a224fb38516b11041a010f69d2e6a26a594f5f55"
+    },
+    "eval_config": {
+      "path": "/data/projects/minimind-lab-data-v1/configs/data/contamination_eval_v2.yaml",
+      "sha256": "318f5af2aeae8ea50c9f1bc6a3f078e0a75730bc4c984a53cd37ff391cad41df"
+    },
+    "pretrain_config": {
+      "path": "/data/projects/minimind-lab-data-v1/configs/data/pretrain_v1.yaml",
+      "sha256": "c566581f20e0084f887cf60eea2225ba4d21dde0348d3f2d71676c54617a50dc"
+    },
+    "sources_config": {
+      "path": "/data/projects/minimind-lab-data-v1/configs/data/pretrain_shards_v1.yaml",
+      "sha256": "bd781d77b164d73962ff46a987ea1cf8232fbda9b5fff22d01aeeb28d60448fe"
+    },
+    "tokenizer": {
+      "path": "/data/projects/minimind-lab-data-v1/minimind/model",
+      "tokenizer_config_sha256": "d7cd6a60c9f191c4f9ffec69b2eb289ad2f960366724f328b681ae1e46e4c110",
+      "tokenizer_json_sha256": "71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668"
+    }
+  },
+  "launcher": {
+    "path": "experiments/00-preparation/D01-training-data-v1-20260828/launch_pretrain_v1_1b28.sh",
+    "sha256": "8fa23a97f86897eb7d81ddb08cab597655a08d7b3ae7880303004244bbfe2dac"
+  },
+  "mode": "self-test-failure",
+  "paths": {
+    "data_root": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28",
+    "final_root": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/final",
+    "repo_root": "/data/projects/minimind-lab-data-v1",
+    "work_root": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/work"
+  },
+  "run_id": "pretrain-v1-1b28-self-test-failure-20260831T040346Z-237956",
+  "runtime": {
+    "python": "/data/venvs/minimind-lab/bin/python"
+  },
+  "schema_version": 1,
+  "security": {
+    "credentials_recorded": false,
+    "environment_recorded": false
+  },
+  "started_at_utc": "2026-08-31T04:03:46Z"
+}
