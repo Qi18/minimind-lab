@@ -1,0 +1,836 @@
+{
+  "audit_wall_seconds": 2124.6824007750256,
+  "auditor_version": "p02-full-audit-1.0.0",
+  "benchmark_contamination": {
+    "full_scan": {
+      "counts": {
+        "containment_overlap": 115,
+        "documents_audited": 8468827
+      },
+      "counts_by_source": {
+        "arc_easy": {
+          "containment_overlap": 72
+        },
+        "cmmlu": {
+          "containment_overlap": 8
+        },
+        "openbookqa": {
+          "containment_overlap": 21
+        },
+        "piqa": {
+          "containment_overlap": 14
+        }
+      },
+      "examples_by_source": {
+        "arc_easy": [
+          {
+            "document": "将以下句子翻译成英语。\n我喜欢在晚上看星星。I like to watch stars at night.很好，接下来请列出三个关于星星的事实。Sure, here are three facts about stars:1. Stars are massive, luminous spheres of plasma held together by gravity.2. The color of a star indicates its temperature, with blue being the hottest and red being the coolest.3. Stars produce energy by undergoing nuclear fusion reactions in their cores, which convert hydrogen into helium.Do you have any other questions or instructions?",
+            "eval": "The color of a star indicates its",
+            "kind": "containment_overlap",
+            "line": 520564,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "Is the following statement true or false? \"The Sun is a star.\"The statement \"The Sun is a star\" is true. The Sun is classified as a G-type main-sequence star (G dwarf), and it is the central star of our solar system.",
+            "eval": "The Sun is classified as",
+            "kind": "containment_overlap",
+            "line": 3650629,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "If you have 4 apples and you eat an apple. Which statement is true?If you had 4 apples and you ate one, the true statement would be: \"You now have 3 apples left.\"",
+            "eval": "Which statement is true?",
+            "kind": "containment_overlap",
+            "line": 3722342,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "Which of the following statements is true according to the text?I'm sorry, but you haven't provided any text or statements to evaluate. Please provide the text or statements you're referring to so I can help you determine which statement is true.",
+            "eval": "Which statement is true?",
+            "kind": "containment_overlap",
+            "line": 3948825,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "which of the following is true and why:I'm sorry, but you haven't provided any options for me to evaluate. Please provide the options you're referring to, and I'll be happy to help you determine which statement is true and why.",
+            "eval": "Which statement is true?",
+            "kind": "containment_overlap",
+            "line": 3991447,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          }
+        ],
+        "cmmlu": [
+          {
+            "document": "可被计算机直接执行的程序由_______语言编写的程序。可被计算机直接执行的程序是由机器语言编写的程序。机器语言是计算机硬件唯一能够直接识别和执行的指令集，它由二进制代码组成，每条指令对应计算机硬件的一个具体操作。",
+            "eval": "可被计算机直接执⾏的程序由（ ）语⾔编写的程序",
+            "kind": "containment_overlap",
+            "line": 3673390,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "Windows 的剪贴板是用于临时存放信息的____。Windows 的剪贴板是用于临时存放信息的一个内存区域。剪贴板可以保存文本、图片、文件或对象，并允许用户在不同的应用程序或文档之间进行复制、剪切和粘贴操作。当用户执行复制或剪切操作时，所选内容将被存储在剪贴板中，直到用户执行另一次复制或剪切操作，或者关闭计算机。",
+            "eval": "Windows的剪贴板是⽤于临时存放信息的",
+            "kind": "containment_overlap",
+            "line": 3689139,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "WindowsNT提供的分布式安全环境又被称为\\:Windows NT提供的分布式安全环境又被称为域（Domain）。在Windows NT网络中，域是基本的管理单位，它包含了一组由单一的Windows NT服务器（域控制器）管理的计算机。域控制器负责验证用户和计算机的身份，管理域资源的访问控制，并维护域的目录信息。域内的用户和资源可以跨多台计算机进行访问和管理，提供了集中式管理和安全策略的实施。",
+            "eval": "WindowsNT提供的分布式安全环境又被称为",
+            "kind": "containment_overlap",
+            "line": 3731120,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "法国科学家路易·巴斯德说：“在观察事物之际，机遇偏爱有准备的头脑。”这句话强调了这句话强调了理论知识和实践准备对于发现和理解事物的重要性。路易·巴斯德，作为微生物学的奠基人之一，强调了在进行观察和研究时，具备相关知识和准备的头脑能够帮助人们更有效地发现和理解事物的本质。这不仅仅适用于科学研究，也适用于其他领域，如艺术创作、商业决策、教育等。具备相关背景知识和技能的个体，更有可能抓住机遇，做出有意义的发现或决策。因此，这句话鼓励人们通过不断学习和准备，提高自己发现和解决问题的能力。",
+            "eval": "法国科学家路易·巴斯德说：“在观察事物之际，机遇偏爱有准备的头脑。”这句话强调了",
+            "kind": "containment_overlap",
+            "line": 3814889,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "宋代王安石的《元日》诗中写道“爆竹声中一岁除，春风送暖入屠苏”，这里的“屠苏”指的是什么？这里的“屠苏”指的是古代的一种酒。在古代，人们在新年时会喝屠苏酒，认为这样可以驱邪避疫，带来好运。在《元日》这首诗中，王安石用“春风送暖入屠苏”来描绘新年到来的景象，表达了对新年的美好祝愿。",
+            "eval": "“爆竹声中一岁除，春风送暖入屠苏”，这里的“屠苏”指的是",
+            "kind": "containment_overlap",
+            "line": 3924878,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          }
+        ],
+        "openbookqa": [
+          {
+            "document": "输出：Verdadera.指令：将以下句子判断为真还是假：“All mammals give birth to live young”。输入：",
+            "eval": "Mammals give birth to live",
+            "kind": "containment_overlap",
+            "line": 764803,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "输出：Verdadeira.指令：将以下句子判断为真还是假：“All mammals give birth to live young”。输入：",
+            "eval": "Mammals give birth to live",
+            "kind": "containment_overlap",
+            "line": 766880,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "请认真思考，并且给出你的解答过程：Does a kangaroo incubate its offspring?Incubation is the process of hatching offspring from eggs. Kangaroos are mammals. Mammals give birth to live offspring.所以，答案是：no",
+            "eval": "Mammals give birth to live",
+            "kind": "containment_overlap",
+            "line": 2049290,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "因结构和遗传上的特殊性，高等植物叶绿体在重组蛋白表达方面具有独特优势，外源基因表达量高、定点整合，而且叶绿体母系遗传特性保证了生物安全性。Higher plant chloroplasts have unique advantages in the expression of recombinant proteins due to their special structures and inherited characteristics: such as high expression, site-specific integration, and the maternal inheritance characteristics of exogenous genes. The maternal inheritance of chloroplast is helpful for biological safety of transgene escaping by pollens.",
+            "eval": "Inherited characteristics",
+            "kind": "containment_overlap",
+            "line": 5679106,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "a. Photosynthesisb. Geneticsc. Ecosystemd. Geology1. The study of heredity and inherited characteristics2. The branch of biology that deals with the relations of organisms to one another and to their physical surroundings3. The process by which green plants and some other organisms use sunlight to synthesize foods with the help of chlorophyll4. The science that deals with the Earth's physical structure and substance, its history, and the processes that act on it.a-3, b-1, c-2, d-4",
+            "eval": "Inherited characteristics",
+            "kind": "containment_overlap",
+            "line": 6980118,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          }
+        ],
+        "piqa": [
+          {
+            "document": "将以下中文文本翻译成英文：多喝热水可以预防感冒。Drinking hot water can prevent colds.那热水需要喝多少度的呢？Drinking water that is between 50-60°C is recommended for preventing colds, but drinking water that is too hot can be harmful to your body. It is best to drink water that is comfortably warm, around 40-50°C.好的，那如果我已经感冒了该怎么办？If you already have a cold, it is important to rest and drink plenty of fluids, such as water or warm soups, to help alleviate symptoms. You can also take over-the-counter medications like pain relievers",
+            "eval": "Eat a well balanced diet",
+            "kind": "containment_overlap",
+            "line": 450735,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "Due to the fact that prices of food are on the rise, it is impertive for families to find various ways to save money on groceries.隨著食品價格上漲，家庭必須尋找各種方法省錢購買食品。",
+            "eval": "Save money on groceries?",
+            "kind": "containment_overlap",
+            "line": 1906767,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "对给定的文本进行重写，使其更具可读性和流畅度。原始文本：In order to maintain optimal health, one should engage in regular physical exercise and consume a balanced diet.To maintain good health, it is important to regularly exercise and eat a well-balanced diet.",
+            "eval": "Eat a well balanced diet",
+            "kind": "containment_overlap",
+            "line": 2830881,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "Write a how to guide of how to make macaroni and cheese.Sure, I'd be happy to help you with that",
+            "eval": "How to make macaroni and cheese.",
+            "kind": "containment_overlap",
+            "line": 3682157,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          },
+          {
+            "document": "帮我生成一篇英语随笔，主题是健康好的，请给我一些更具体的信息，例如题目、字数和内容方向。题目是“健康的生活方式”，字数不要超过500。内容方向包括健康饮食、定期锻炼、合理的作息时间和养成良好的心理习惯等。 好的，以下是您的文章：\nHealthy Lifestyle\nA healthy lifestyle is essential for everyone. It requires a balance of good nutrition, regular exercise, sufficient rest, and positive mental habits. First, good nutrition is the foundation of a healthy lifestyle. It is important to eat a well-balanced diet that includes plenty of fruits, vegetables, whole grains, and lean protein. Secondly, regular exercise is cr",
+            "eval": "Eat a well balanced diet",
+            "kind": "containment_overlap",
+            "line": 4345057,
+            "shard": "pretrain_t2t.jsonl",
+            "split": "train"
+          }
+        ]
+      },
+      "scope": "exact and containment over every valid P02 row"
+    },
+    "load_errors": [],
+    "matching": {
+      "configured_explicitly": true,
+      "containment_min_normalized_chars": 20,
+      "exact_min_normalized_chars": 1
+    },
+    "near_duplicate": {
+      "audited_documents": 20480,
+      "boundary": "Near-duplicate matching is sampled, not a full-corpus claim. The sample size equals 40 P03 train shards x 512 rows.",
+      "counts": {
+        "documents_audited": 20480
+      },
+      "counts_by_source": {},
+      "eligible_documents": 8465397,
+      "examples_by_source": {},
+      "method": "deterministic_bottom_k_single_physical_file",
+      "requested_documents": 20480
+    },
+    "pattern_entries": 29638,
+    "patterns_unique": 29322,
+    "sources": [
+      {
+        "config_names": [
+          "accountant",
+          "advanced_mathematics",
+          "art_studies",
+          "basic_medicine",
+          "business_administration",
+          "chinese_language_and_literature",
+          "civil_servant",
+          "clinical_medicine",
+          "college_chemistry",
+          "college_economics",
+          "college_physics",
+          "college_programming",
+          "computer_architecture",
+          "computer_network",
+          "discrete_mathematics",
+          "education_science",
+          "electrical_engineer",
+          "environmental_impact_assessment_engineer",
+          "fire_engineer",
+          "high_school_biology",
+          "high_school_chemistry",
+          "high_school_chinese",
+          "high_school_geography",
+          "high_school_history",
+          "high_school_mathematics",
+          "high_school_physics",
+          "high_school_politics",
+          "ideological_and_moral_cultivation",
+          "law",
+          "legal_professional",
+          "logic",
+          "mao_zedong_thought",
+          "marxism",
+          "metrology_engineer",
+          "middle_school_biology",
+          "middle_school_chemistry",
+          "middle_school_geography",
+          "middle_school_history",
+          "middle_school_mathematics",
+          "middle_school_physics",
+          "middle_school_politics",
+          "modern_chinese_history",
+          "operating_system",
+          "physician",
+          "plant_protection",
+          "probability_and_statistics",
+          "professional_tour_guide",
+          "sports_science",
+          "tax_accountant",
+          "teacher_qualification",
+          "urban_and_rural_planner",
+          "veterinary_medicine"
+        ],
+        "configs": 52,
+        "configs_failed": 0,
+        "configs_succeeded": 52,
+        "elapsed_seconds": 168.982,
+        "id": "ceval_valid",
+        "queries": 1346,
+        "repo_id": "ceval/ceval-exam",
+        "revision": "617524a00b307ff6f9933702f724131fe12ca7ce",
+        "rows": 1346,
+        "split": "val",
+        "task": "ceval-valid"
+      },
+      {
+        "config_names": [
+          "agronomy",
+          "anatomy",
+          "ancient_chinese",
+          "arts",
+          "astronomy",
+          "business_ethics",
+          "chinese_civil_service_exam",
+          "chinese_driving_rule",
+          "chinese_food_culture",
+          "chinese_foreign_policy",
+          "chinese_history",
+          "chinese_literature",
+          "chinese_teacher_qualification",
+          "clinical_knowledge",
+          "college_actuarial_science",
+          "college_education",
+          "college_engineering_hydrology",
+          "college_law",
+          "college_mathematics",
+          "college_medical_statistics",
+          "college_medicine",
+          "computer_science",
+          "computer_security",
+          "conceptual_physics",
+          "construction_project_management",
+          "economics",
+          "education",
+          "electrical_engineering",
+          "elementary_chinese",
+          "elementary_commonsense",
+          "elementary_information_and_technology",
+          "elementary_mathematics",
+          "ethnology",
+          "food_science",
+          "genetics",
+          "global_facts",
+          "high_school_biology",
+          "high_school_chemistry",
+          "high_school_geography",
+          "high_school_mathematics",
+          "high_school_physics",
+          "high_school_politics",
+          "human_sexuality",
+          "international_law",
+          "journalism",
+          "jurisprudence",
+          "legal_and_moral_basis",
+          "logical",
+          "machine_learning",
+          "management",
+          "marketing",
+          "marxist_theory",
+          "modern_chinese",
+          "nutrition",
+          "philosophy",
+          "professional_accounting",
+          "professional_law",
+          "professional_medicine",
+          "professional_psychology",
+          "public_relations",
+          "security_study",
+          "sociology",
+          "sports_science",
+          "traditional_chinese_medicine",
+          "virology",
+          "world_history",
+          "world_religions"
+        ],
+        "configs": 67,
+        "configs_failed": 0,
+        "configs_succeeded": 67,
+        "elapsed_seconds": 93.164,
+        "id": "cmmlu",
+        "queries": 11582,
+        "repo_id": "haonan-li/cmmlu",
+        "revision": "efcc940752ea4a1ea94d2727f11f83858d64fc8e",
+        "rows": 11582,
+        "split": "test",
+        "task": "cmmlu"
+      },
+      {
+        "config_names": [
+          "ARC-Easy"
+        ],
+        "configs": 1,
+        "configs_failed": 0,
+        "configs_succeeded": 1,
+        "elapsed_seconds": 8.317,
+        "id": "arc_easy",
+        "queries": 2376,
+        "repo_id": "allenai/ai2_arc",
+        "revision": "210d026faf9955653af8916fad021475a3f00453",
+        "rows": 2376,
+        "split": "test",
+        "task": "arc_easy"
+      },
+      {
+        "config_names": [
+          null
+        ],
+        "configs": 1,
+        "configs_failed": 0,
+        "configs_succeeded": 1,
+        "elapsed_seconds": 10.617,
+        "id": "piqa",
+        "queries": 1838,
+        "repo_id": "baber/piqa",
+        "revision": "142f6d7367fd9877f0fb3b5734ea6a545f54cdd1",
+        "rows": 1838,
+        "split": "validation",
+        "task": "piqa"
+      },
+      {
+        "config_names": [
+          "main"
+        ],
+        "configs": 1,
+        "configs_failed": 0,
+        "configs_succeeded": 1,
+        "elapsed_seconds": 7.026,
+        "id": "openbookqa",
+        "queries": 500,
+        "repo_id": "allenai/openbookqa",
+        "revision": "388097ea7776314e93a529163e0fea805b8a6454",
+        "rows": 500,
+        "split": "test",
+        "task": "openbookqa"
+      },
+      {
+        "config_names": [
+          null
+        ],
+        "configs": 1,
+        "configs_failed": 0,
+        "configs_succeeded": 1,
+        "elapsed_seconds": 9.364,
+        "id": "hellaswag",
+        "queries": 10042,
+        "repo_id": "Rowan/hellaswag",
+        "revision": "218ec52e09a7e7462a5400043bb9a69a41d06b76",
+        "rows": 10042,
+        "split": "validation",
+        "task": "hellaswag"
+      },
+      {
+        "config_names": [
+          null
+        ],
+        "configs": 1,
+        "configs_failed": 0,
+        "configs_succeeded": 1,
+        "elapsed_seconds": 5.522,
+        "id": "social_iqa",
+        "queries": 1954,
+        "repo_id": "allenai/social_i_qa",
+        "revision": "8835ceb9141d7896d9d968634a9b21ae440e3ec5",
+        "rows": 1954,
+        "split": "validation",
+        "task": "social_iqa"
+      }
+    ],
+    "validation_errors": []
+  },
+  "counterfactual_seq380_not_trained": {
+    "boundary": "Counterfactual recomputation only; P02 was trained at seq_len=768.",
+    "loss_target_tokens": 1821654600,
+    "loss_target_utilization": 0.5660557116985436,
+    "nonpad_input_tokens": 1830123427,
+    "nonpad_input_utilization": 0.5686872906459121,
+    "padded_compute_tokens": 3218154260,
+    "truncated_row_fraction": 0.1351842468856667,
+    "truncated_rows": 1144852
+  },
+  "derived_training_efficiency": {
+    "boundary": "Dataset totals exclude the five sampler-padding repetitions needed to make 8,468,827 rows divisible across 8 ranks; impact is negligible but the values are not claimed as exact runtime token counters.",
+    "effective_loss_target_throughput_per_second": 117849.34391742303,
+    "effective_nonpad_input_throughput_per_second": 118343.23857633886,
+    "historical_wall_seconds": 17147.030945,
+    "padded_token_slot_throughput_per_second": 379311.0980473594
+  },
+  "finished_at": "2026-09-02T04:38:06.465171+00:00",
+  "inputs": {
+    "auditor": "/data/artifacts/minimind-lab/P02-dense-pretrain-full-20260824/audit/protocol/audit_p02_data.py",
+    "auditor_sha256": "88526d82c814e885d2471760a88b8a9ddbd0b3cd49ecbccb2d55a5cab7ae460f",
+    "benchmark_cache": {
+      "loaded_existing": true,
+      "path": "/data/artifacts/minimind-lab/P02-dense-pretrain-full-20260824/audit/pinned-benchmark-patterns.json",
+      "sha256": "d5c43ce673a1d20418921196a2b4e3d84e1a39ae487b16876fbb97c24040c74b"
+    },
+    "data": "/data/datasets/minimind/312afb4f76391145c6902f765bb51691c09a12f5/pretrain_t2t.jsonl",
+    "eval_config": "/data/artifacts/minimind-lab/P02-dense-pretrain-full-20260824/audit/protocol/contamination_eval_v2.yaml",
+    "eval_config_sha256": "fd75962084334194d5d2399508dc916c4b6f9a04146b9368ec6ec91b8976859a",
+    "max_rows": 0,
+    "sequence_length": 768,
+    "shared_auditor": "/data/artifacts/minimind-lab/P02-dense-pretrain-full-20260824/audit/protocol/audit_pretrain_v1.py",
+    "shared_auditor_sha256": "ba1b200d5fb4ea23b3598714b5a19fe51325fa7db47937411b40cc8916823bae",
+    "tokenizer": "/data/projects/minimind-lab/minimind/model",
+    "tokenizer_batch_size": 512,
+    "tokenizer_fingerprint": {
+      "files": {
+        "tokenizer.json": {
+          "sha256": "71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668",
+          "size_bytes": 451182
+        },
+        "tokenizer_config.json": {
+          "sha256": "d7cd6a60c9f191c4f9ffec69b2eb289ad2f960366724f328b681ae1e46e4c110",
+          "size_bytes": 13308
+        }
+      },
+      "path": "/data/projects/minimind-lab/minimind/model"
+    },
+    "validation": {
+      "duplicate_chunks": 0,
+      "invalid_rows": 0,
+      "path": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/final-remix-v1/validation-00000-of-00001.jsonl",
+      "rows": 11525,
+      "sha256": "0a7e8503f01bc185740b3e26e26326c43ca00309452ae1eec081d2ac2d9105cb",
+      "unique_training_visible_chunks": 11525
+    }
+  },
+  "integrity": {
+    "complete_scan": true,
+    "expected_rows": 8468827,
+    "expected_sha256": "31efc9a6fa7430769c0e78cde1c8ec0273ac7bbad20614c0ee58bccef327cc9d",
+    "observed_physical_lines": 8468827,
+    "observed_sha256": "31efc9a6fa7430769c0e78cde1c8ec0273ac7bbad20614c0ee58bccef327cc9d",
+    "rows_match": true,
+    "sha256_match": true,
+    "size_bytes": 8275074893
+  },
+  "lengths": {
+    "raw_text_tokens": {
+      "count": 8468827,
+      "max": 17792,
+      "mean": 259.82155143799724,
+      "min": 1,
+      "p50": 209,
+      "p90": 418,
+      "p95": 571,
+      "p99": 1434,
+      "percentile_method": "nearest_rank",
+      "sum": 2200383770
+    },
+    "training_visible_text_tokens": {
+      "count": 8468827,
+      "max": 766,
+      "mean": 237.61230687555667,
+      "min": 1,
+      "p50": 209,
+      "p90": 418,
+      "p95": 571,
+      "p99": 766,
+      "percentile_method": "nearest_rank",
+      "sum": 2012297520
+    },
+    "unicode_codepoints": {
+      "count": 8468827,
+      "max": 25582,
+      "mean": 383.03274491260714,
+      "min": 5,
+      "p50": 294,
+      "p90": 606,
+      "p95": 1295,
+      "p99": 2080,
+      "percentile_method": "nearest_rank",
+      "sum": 3243838052
+    },
+    "utf8_text_bytes": {
+      "count": 8468827,
+      "max": 33375,
+      "mean": 961.1030271370522,
+      "min": 5,
+      "p50": 753,
+      "p90": 1455,
+      "p95": 1988,
+      "p99": 5930,
+      "percentile_method": "nearest_rank",
+      "sum": 8139415266
+    }
+  },
+  "quality": {
+    "blank_lines": 0,
+    "empty_text_rows": 0,
+    "invalid_json_lines": 0,
+    "invalid_schema_rows": 0,
+    "invalid_utf8_lines": 0,
+    "nonblank_rows": 8468827,
+    "physical_lines": 8468827,
+    "valid_rows": 8468827
+  },
+  "schema_version": 1,
+  "script_composition_proxy": {
+    "ascii_latin_chars": 481478684,
+    "boundary": "Unicode-script counts are objective content proxies, not language labels and not source-mixture provenance.",
+    "cjk_chars": 2212304509,
+    "digit_chars": 64441087,
+    "other_unicode_alnum_chars": 7229915,
+    "rows_with_ascii_latin": 3850217,
+    "rows_with_both_cjk_and_ascii_latin": 3289334,
+    "rows_with_cjk": 7905302
+  },
+  "source_provenance": {
+    "boundary": "The pinned file has only a text field. Exact constituent datasets, weights, row-level lineage, and per-source licenses cannot be reconstructed.",
+    "dataset_card_description": [
+      "general text corpora",
+      "reorganized dialogue corpora",
+      "distillation supplements",
+      "public sources including Jiangshu and Magpie-Align"
+    ],
+    "exact_source_weights": null,
+    "file": "pretrain_t2t.jsonl",
+    "per_row_source_labels": false,
+    "repo_id": "jingyaogong/minimind_dataset",
+    "revision": "312afb4f76391145c6902f765bb51691c09a12f5",
+    "status": "not_recoverable_from_the_pinned_artifact"
+  },
+  "split_and_overlap": {
+    "boundary": "The P03 validation set was built after P02. This overlap audit improves comparability but does not create a historical P02 validation split.",
+    "p02_occurrences_overlapping_shared_validation": 0,
+    "p02_unique_chunks_overlapping_shared_validation": 0,
+    "retroactive_shared_validation": {
+      "duplicate_chunks": 0,
+      "invalid_rows": 0,
+      "path": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/final-remix-v1/validation-00000-of-00001.jsonl",
+      "rows": 11525,
+      "sha256": "0a7e8503f01bc185740b3e26e26326c43ca00309452ae1eec081d2ac2d9105cb",
+      "unique_training_visible_chunks": 11525
+    },
+    "training_time_independent_validation_split": false,
+    "training_time_split_status": "absent"
+  },
+  "started_at": "2026-09-02T04:02:41.782782+00:00",
+  "status": "completed",
+  "token_accounting_actual_seq768": {
+    "discarded_tail_fraction_of_raw_tokens": 0.08547883899361791,
+    "discarded_tail_tokens": 188086250,
+    "exact_duplicate_chunks": 1433,
+    "exact_duplicate_examples": [
+      {
+        "line": 5688227,
+        "text": "指令：ដោយបានផ្តល់ឱ្យកថាខណ្ឌនេះ សង្ខេបចំណុចសំខាន់ៗរបស់វា។输入：អេក្រង់កុំព្យូទ័រទំនើបមានគុណសម្បត្តិជាងម៉ូនីទ័រ CRT បែបប្រពៃណី ដូចជាមានជើងតូច ការប្រើប្រាស់ថាមពលទាប ចល័តបានប្រសើរជាងមុន និងគុណភាពបង្ហាញខ្ពស់។ លើសពីនេះ បច្ចេកវិទ្យា LCD កាន់តែមានតម្លៃសមរម្យ ដែលអនុញ្ញាតឱ្យមានការទទួលយកកាន់តែទូលំទូលាយនៅក្នុងវិស័យអ្"
+      },
+      {
+        "line": 5688316,
+        "text": "指令：ដោយបានផ្តល់ឱ្យកថាខណ្ឌនេះ សង្ខេបចំណុចសំខាន់ៗរបស់វា។输入：អេក្រង់កុំព្យូទ័រទំនើបមានគុណសម្បត្តិជាងម៉ូនីទ័រ CRT បែបប្រពៃណី ដូចជាមានជើងតូច ការប្រើប្រាស់ថាមពលទាប ចល័តបានប្រសើរជាងមុន និងគុណភាពបង្ហាញខ្ពស់។ លើសពីនេះ បច្ចេកវិទ្យា LCD កាន់តែមានតម្លៃសមរម្យ ដែលអនុញ្ញាតឱ្យមានការទទួលយកកាន់តែទូលំទូលាយនៅក្នុងវិស័យអ្"
+      },
+      {
+        "line": 5703323,
+        "text": "ഫിഫയുടെ വനിതാ ലോകകപ്പിന്റെ എട്ടാമത്തെ പതിപ്പാണ് 2019 ഫിഫ വനിതാ ലോകകപ്പ്. നാലു വർഷത്തിലൊരിക്കൽ നടക്കുന്ന മത്സരത്തിൽ സ്ത്രീകളുടെ ദേശീയ ടീമുകൾ പങ്കെടുക്കുന്നു. ഫിഫയുടെ നേതൃത്യത്തിലാണ് വനിതാ ലോകകപ്പ് മത്സരം നടക്കുന്നതിനാൽ ഇത് ഫിഫ വനിതാ ലോകകപ്പ് എന്നറിയപ്പെടുന്നു.2019 ജൂൺ 7 മുതൽ ജൂലൈ 7 വരെയാണ് 2019 ഫിഫ വ"
+      },
+      {
+        "line": 5703326,
+        "text": "രണ്ടാം ലോക മഹായുദ്ധത്തിന്റെ സമയത്ത് സോവിയറ്റ് യൂണിയനെ ആക്രമിക്കാൻ ജർമ്മനി തയ്യാറാക്കിയ പദ്ധതിയുടെ രഹസ്യനാമമാണ് ഓപ്പറേഷൻ ബാർബറോസ. അച്ചുതണ്ട് ശക്തികളുടെ കീഴിലുള്ള നാലു ലക്ഷത്തോളം വരുന്ന സൈനികർ റഷ്യയുടെ സൈനിക അതിർത്തിയിലേക്ക് ആക്രമണം നടത്തി.巴巴羅薩行動（德语：）是第二次世界大戰期間纳粹德国入侵蘇聯所使用的作戰代號，整場行動於1941年6月22日展開，其名稱來自於"
+      },
+      {
+        "line": 5703328,
+        "text": "13-ആമത് യുവേഫ യൂറോപ്യൻ ഫുട്ബോൾ ചാമ്പ്യൻഷിപ്പ് ആണ് യുവേഫ യൂറോ 2008 എന്ന് അറിയപ്പെടുന്നത്. ഓസ്ട്രിയ, സ്വിറ്റ്സർലാന്റ് എന്നീ രാജ്യങ്ങളിൽ നടന്ന ചാമ്പ്യൻഷിപ്പിൽ സ്പെയിൻ ജേതാക്കളായി. 2008 ജൂൺ 30നു വിയന്നയിലെ ഏൺസ്റ്റ് ഹാപ്പൽ സ്റ്റേഡിയനിൽ നടന്ന ഫൈനലിൽ ജർമ്മനിയെ എതിരില്ലാത്ത ഒരു ഗോളിന് പരാജയപ്പെടുത്തിയാണ്‌ സ"
+      },
+      {
+        "line": 5703329,
+        "text": "ഗ്രീക്കുകാർ ട്രോയിക്കെതിരെ നടത്തിയ യുദ്ധത്തെയാണ് ട്രോജൻ യുദ്ധമായി ഗ്രീക്ക് പുരാണത്തിൽ പരാമർശിക്കുന്നത് . ട്രോയിയുടെ രാജകുമാരനായ പാരിസ് , സ്പാർട്ടയുടെ രാജാവായ മെനിലോസിന്റെ ഭാര്യ ഹെലനെ അപഹരിച്ചു കൊണ്ടുപോയതിനാലുള്ള അപമാനത്താലാണ് യുദ്ധം ആരംഭിച്ചത്.1194–1184 ക്രി.മു ആണ് യുദ്ധം നടന്നതെന്ന് പുരാണത്തിൽ പറയു"
+      },
+      {
+        "line": 5703330,
+        "text": "16-ആം നൂറ്റാണ്ടിൽ യൂറോപ്പിൽ ഉരുത്തിരിഞു വന്ന ശാസ്ത്രീയ ചിന്താഗതികളെയും അതിന്റെ ഭാഗമായി രൂപംകൊണ്ട സമൂഹിക മാറ്റങ്ങളെയുമാണ് ശാസ്ത്രീയ വിപ്ലവം എന്നു പറയുന്നത്. കോപ്പർ നിക്കസ് എന്ന് ശാസ്ത്രഞ്ജൻ തന്റെ സൂര്യ കേന്ദ്രീകൃത സിദ്ന്ദമാണ് ശാസ്ത്രീയ വിപ്ലവത്തിന് തുടക്കമിട്ടത്.科學革命（），指近世歷史上，現代科學在歐洲萌芽的這段時期。在那段時期中，數學"
+      },
+      {
+        "line": 5703331,
+        "text": "ഗ്രീക്ക് വിപ്ലവകാരികൾ ഓട്ടോമൻ സാമ്രാജ്യത്തിനെതിരെ 1821നും 1832നും ഇടയിൽ നടത്തിയ വിജയകരമായ സായുധ സ്വാതന്ത്ര സമരമാണ് ഗ്രീക്ക് വിപ്ലവം അഥവാ ഗ്രീക്ക് സ്വാതന്ത്ര്യസമരം.ഫ്രാൻസ്,ഇംഗ്ലണ്ട്,റഷ്യ എന്നീ രാഷ്ട്രങ്ങളും ഓട്ടൊമൻ സാമ്രാജ്യത്തെയും അതിന്റെ സാമന്ത രാഷ്ട്രങ്ങളെയും പരാജയപ്പെടുത്തുന്നതിൽ ഗ്രീക്ക് ദേശീയവാ"
+      },
+      {
+        "line": 5703333,
+        "text": "മുഗൾ ചക്രവർത്തിയായ അക്ബറിന്റെ സൈന്യവും ഹെമു എന്ന് അറിയപ്പെട്ട സൂരി സാമ്രാജ്യത്തിലെ സാമ്രാട്ട് ഹേം ചന്ദർ വിക്രമാദിത്യന്റെ സൈന്യവും തമ്മിൽ 1556 നവംബർ 5-നു നടന്ന യുദ്ധമാണ് രണ്ടാം പാനിപ്പത്ത് യുദ്ധം.. യുദ്ധാനന്തരം മുഗളർ തങ്ങൾക്കു നഷ്ടപ്പെട്ട ദില്ലിയും ആഗ്രയും തിരിച്ചുപിടിക്കുകയും കൂടുതൽ മേഖലകളിലേക്ക് അവ"
+      },
+      {
+        "line": 5703336,
+        "text": "2022 ഫിഫ ലോകകപ്പ് ഫിഫ ലോകകപ്പിന്റെ 22-ാം പതിപ്പാണ്. മത്സരം 2022 ൽ ഖത്തറിൽ നടക്കും. അറബ് ലോകത്ത് മുസ്ലീം ഭൂരിപക്ഷ രാജ്യത്ത് നടക്കുന്ന ആദ്യ ലോകകപ്പുമായിരിക്കും ഇത്. 2002 ൽ ദക്ഷിണ കൊറിയയിലും ജപ്പാനിലും നടന്ന ടൂർണമെന്റിന് ശേഷം ഏഷ്യയിൽ നടക്കുന്ന രണ്ടാമത്തെ ലോകകപ്പാണിത്. കൂടാതെ, 32 ടീമുകൾ ഉൾപ്പെടുന്ന അവസാ"
+      }
+    ],
+    "loss_target_tokens": 2020766347,
+    "loss_target_utilization": 0.31069310791088106,
+    "nonpad_input_tokens": 2029235174,
+    "nonpad_input_utilization": 0.31199519124421443,
+    "p03_validation_overlap_examples": [],
+    "p03_validation_overlap_occurrences": 0,
+    "p03_validation_overlap_unique_chunks": 0,
+    "padded_compute_tokens": 6504059136,
+    "raw_text_tokens": 2200383770,
+    "top_training_visible_tokens": [
+      {
+        "count": 86354185,
+        "decoded": "，",
+        "token_id": 294
+      },
+      {
+        "count": 59608819,
+        "decoded": "。",
+        "token_id": 302
+      },
+      {
+        "count": 35434804,
+        "decoded": "的",
+        "token_id": 296
+      },
+      {
+        "count": 25336223,
+        "decoded": "和",
+        "token_id": 334
+      },
+      {
+        "count": 18202894,
+        "decoded": "、",
+        "token_id": 345
+      },
+      {
+        "count": 17438601,
+        "decoded": "：",
+        "token_id": 337
+      },
+      {
+        "count": 17405108,
+        "decoded": " ",
+        "token_id": 256
+      },
+      {
+        "count": 17028407,
+        "decoded": ".",
+        "token_id": 49
+      },
+      {
+        "count": 14409189,
+        "decoded": "\n",
+        "token_id": 234
+      },
+      {
+        "count": 11965562,
+        "decoded": "在",
+        "token_id": 369
+      },
+      {
+        "count": 9593554,
+        "decoded": "是",
+        "token_id": 357
+      },
+      {
+        "count": 7676173,
+        "decoded": "中",
+        "token_id": 388
+      },
+      {
+        "count": 7263635,
+        "decoded": "了",
+        "token_id": 423
+      },
+      {
+        "count": 7246269,
+        "decoded": "我",
+        "token_id": 463
+      },
+      {
+        "count": 7245082,
+        "decoded": ",",
+        "token_id": 47
+      },
+      {
+        "count": 6502294,
+        "decoded": "等",
+        "token_id": 464
+      },
+      {
+        "count": 6316098,
+        "decoded": "一",
+        "token_id": 349
+      },
+      {
+        "count": 6160485,
+        "decoded": "？",
+        "token_id": 776
+      },
+      {
+        "count": 5808208,
+        "decoded": "有",
+        "token_id": 398
+      },
+      {
+        "count": 5473112,
+        "decoded": "可以",
+        "token_id": 410
+      },
+      {
+        "count": 5435191,
+        "decoded": "2",
+        "token_id": 53
+      },
+      {
+        "count": 5268454,
+        "decoded": "人",
+        "token_id": 447
+      },
+      {
+        "count": 5116080,
+        "decoded": "为",
+        "token_id": 418
+      },
+      {
+        "count": 5071467,
+        "decoded": "1",
+        "token_id": 52
+      },
+      {
+        "count": 4692782,
+        "decoded": "-",
+        "token_id": 48
+      },
+      {
+        "count": 4624993,
+        "decoded": ":",
+        "token_id": 61
+      },
+      {
+        "count": 4571006,
+        "decoded": "上",
+        "token_id": 562
+      },
+      {
+        "count": 4547803,
+        "decoded": "并",
+        "token_id": 797
+      },
+      {
+        "count": 4532339,
+        "decoded": "3",
+        "token_id": 54
+      },
+      {
+        "count": 4399158,
+        "decoded": "来",
+        "token_id": 509
+      }
+    ],
+    "truncated_row_fraction": 0.03920212326925559,
+    "truncated_rows": 331996,
+    "truncated_text_tokens": 2012297520,
+    "unicode_codepoints_per_raw_token": 1.4742146784694745,
+    "unique_training_visible_chunks": 8467394,
+    "unique_vocabulary_tokens_observed": 6351,
+    "utf8_bytes_per_raw_token": 3.699088939380788,
+    "vocabulary_coverage": 0.99234375,
+    "vocabulary_size": 6400
+  }
+}

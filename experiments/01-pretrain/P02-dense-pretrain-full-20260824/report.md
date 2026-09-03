@@ -23,6 +23,14 @@
 - SHA-256：`31efc9a6fa7430769c0e78cde1c8ec0273ac7bbad20614c0ee58bccef327cc9d`，与官方 LFS oid 一致；
 - 首尾记录字段均为 `text`。
 
+## Retrospective full-data audit
+
+2026-09-02 按 MiniMind 实际 seq768 tokenization 对全部 8,468,827 行补审：得到 2,020,766,347 个 shifted loss target、6,504,059,136 个 padded compute slots，target 利用率 31.07%；331,996 行发生截断，丢弃 188,086,250 个 raw tail tokens。全量还发现 1,433 个 training-visible exact duplicate；与后来建立的 11,525 行共享 validation exact overlap 为 0。
+
+固定七项 benchmark 的 full exact equality 为 0，但 query-in-document containment 为 115；20,480 行确定性 near-duplicate 样本中为 0。部分 containment 是明确题干重合，部分是通用短语碰撞，不能全部断言为确定泄漏，但 P02 不满足 P03 的零重复、零 containment 数据门槛。P02 单文件没有逐行来源、精确 source mix 或 license provenance；完整口径、P02/P03 对比和证据 SHA 见 [eval/data_audit_summary.md](eval/data_audit_summary.md)。
+
+同一 P03 共享 validation（6.4M targets）上，P01/P02/P03 的 NLL 分别为 3.56414/3.19096/2.60432，PPL 分别为 35.3092/24.3117/13.5221。P02 相对 P01 的 token-level 泛化有提升，但仍弱于 P03；该 validation 在 P02 训练后建立，不是 P02 当时的训练期验证集。
+
 ## Training result
 
 attempt 2 于 2026-08-24 12:04:45 UTC 从随机权重启动，训练 commit `10e2de6deb1d3dc827e896149b1d3e8ba1c3a85c`。step 10→100→180 的 loss 为 8.5419→7.3531→6.9985；8 张 L20 均约 99% 利用率、单卡约 3,476 MiB，早期 ETA 约 302 分钟。该窗口只证明训练健康，不能提前判定收敛。
@@ -67,5 +75,7 @@ attempt 2 正常完成，无 OOM、NaN、NCCL 退出或重复训练任务。正�
 ## Conclusion
 
 P02 已完成训练、checkpoint 校验、SwanLab 统一归档、固定续写、七项评测和系统指标闭环。虽然 full 数据将训练末段平均 loss 从 P01 的 2.0440 降到 1.7157，数据规模扩大 6.67 倍也带来约 6.91% 的 token-slot 吞吐提升，但七项宏平均下降 0.54 个百分点，五个固定续写全部立即 EOS。因此在当前 64M、1 epoch、seq 768 配置下，单独扩大预训练数据没有改善综合 Base 能力，也不能用更低 training loss 推断泛化更好。
+
+补全数据审计后还可进一步确认：P02 虽有 2.021B 有效 target，但 padding 后仅 31.07% 槽位形成 loss target，且存在 1,433 个 exact duplicate 和 115 个 benchmark containment 命中。P02 应保留为历史基线，不应视为满足当前 P03 数据验收规范的主线数据实验。
 
 下一阶段不应只凭 loss 自动选择 P02。SFT 应固定同一数据与超参数，分别从 P01 和 P02 初始化做一组 Base-checkpoint 对照；若资源只允许保留一条主线，P01 是当前七项宏平均更高的基线。
