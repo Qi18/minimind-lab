@@ -96,7 +96,7 @@ P02 的 5 个 greedy Base 续写全部首 token 输出 EOS；P03 为 4/5 非空�
 3. 目前最可信的结论是“P03 整体数据管线优于 P02 基线”，不能归因到某一个数据源或单一超参数；要做因果归因，需固定训练入口与 token budget，对 source mix、packing 和去重分别消融。
 4. P03 的 Base 生成仍有明显重复，不能据此宣称 Chat 能力完成；Pretrain 的验收结果只支持把 P03 作为下一阶段 SFT 的首选 Base checkpoint。
 
-证据位置：P02 正式结果位于 Git ref `stage5/p02-dense-pretrain-full`；P02 数据审计位于 `stash@{0}`（未纳入 main）；P03 正式结果位于 Git ref `data/v1`。在这些证据合并到 main 前，可分别使用 `git show <ref>:<path>` 回读，不能把当前 `main` 描述为已完整收录全部实验资产。
+证据位置（2026-09-03 起全部在 main）：P02 正式结果与数据审计位于 `experiments/01-pretrain/P02-dense-pretrain-full-20260824/`（审计脚本 `audit_p02_data.py`、`eval/data_audit_full.json`、`eval/data_audit_summary.md`、`eval/validation_shared_p03.json`）；P03 正式结果位于 `experiments/01-pretrain/P03-dense-pretrain-v1-1b28-20260901/`，其中 `report.md`/`run.json`/`metrics.csv`/`swanlab-url.txt` 仍待回填，因此 registry 状态为 `awaiting-report`。
 
 ## 9. 发布资产
 

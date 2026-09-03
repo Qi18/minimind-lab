@@ -9,7 +9,7 @@ Pretrain 与 SFT 的样本结构、Token 口径、构建阶段和验收条件不
 
 ## 共享入口
 
-- [完整训练与源码学习计划](../training_plan.md)
+- [完整实验与源码学习计划](../experiment_plan.md)
 - [统一评测计划](../evaluation_protocol.md)
 - [正式数据脚本说明](../../scripts/data/README.md)
 - Python 数据依赖：`configs/data/requirements.txt`

@@ -1,9 +1,9 @@
 # Phase 0 阶段报告：环境、数据与代码探针（E00 / E01 / E02）
 
 - 阶段范围：`experiment_plan.md` 第 5 节
-- 报告状态：draft（证据缺口已修；剩余卡点只有“本报告与修复改动尚未合入 main”，见 §8）
+- 报告状态：draft（证据缺口已修；本报告与修复改动已于 2026-09-03 合入 main，计划 16.4 的硬门已过，见 §8）
 - 出具日期：2026-09-03
-- Lab commit：`8ab347c`（工作区含未提交改动）；MiniMind upstream：`393e387e9ad99f0f04c296e4c5e7353f4444629f`
+- Lab commit：`90a5c12`（main，本报告描述的 E00–E02 资产已全部落库）；MiniMind upstream：`393e387e9ad99f0f04c296e4c5e7353f4444629f`
 - 数据 revision：`jingyaogong/minimind_dataset@312afb4f76391145c6902f765bb51691c09a12f5`
 
 ## 1. 阶段目标与研究问题
@@ -210,15 +210,16 @@ Dataset 语义（`results/sample_transformations.json` + 合成 fixture）：Pre
 
 ## 8. 下一阶段前置条件与未解决问题
 
-Phase 0 报告转 accepted 前必须完成（前三项已于 2026-09-03 完成）：
+Phase 0 报告转 accepted 前必须完成（前四项已于 2026-09-03 完成）：
 
 1. ~~**回填 E00 的 SwanLab 证据**~~：已完成。`metrics.csv` / `environment.json` / `swanlab-url.txt` / `report.md` 现均记录“04:22:35Z 未登录 → 05:18:03Z 复检 pass，首批云端 run 在 E02”；registry 的 E00/E01 `swanlab_url` 已按计划 16.5 填写而非留空（§6）。
-2. **提交已修改但未落库的文件**（待执行）：`experiments/00-preparation/E01-…/eval.json`、`E02-…/eval.json` 与 `scripts/eval/summarize_model_probe.py` 已把 `protocol` 从 `docs/training_plan.md#…` 改指 `docs/experiment_plan.md`，加上本次对 E00 artifact 与 registry 的修正，目前全部仍是工作区改动。
+2. ~~**提交已修改但未落库的文件**~~：已完成。`experiments/00-preparation/E01-…/eval.json`、`E02-…/eval.json` 与 `scripts/eval/summarize_model_probe.py` 已把 `protocol` 从 `docs/training_plan.md#…` 改指 `docs/experiment_plan.md`，连同 E00 artifact 与 registry 的修正一起落库（commit `dea2824`）。
 3. ~~**修复源码阅读笔记的引用断裂**~~：已完成。`docs/source_reading/`（README + 00/01/02）与 `docs/upstream-minimind.md` 已从 HEAD 恢复，因为它们是计划 §17 要求的阶段产物且被 README、`repository-management.md`、E01/E02 报告引用；只保留删除 `docs/training_plan.md`（已被 `experiment_plan.md` 取代，全仓无剩余引用）。同时把 `docs/source_reading/README.md` 的序列补上遗漏的 `00-training-runtime.md`，并在仓库 README 加上阶段报告索引链接。
-4. **合入 main**（待执行）：`docs/experiment_plan.md` 与整个 `docs/phases/`（含本报告）目前是未跟踪文件。按计划 16.4，阶段报告合入 main 是进入下一个 Phase 的硬门。
+4. ~~**合入 main**~~：已完成。`docs/experiment_plan.md` 与整个 `docs/phases/`（含本报告）已于 commit `2584c5c` 落库并推送 origin/main，满足计划 16.4。
 
 留给后续阶段的未解决问题：
 
+- **D01–D05 数据准备实验未登记**（2026-09-03 新暴露）：合并 `data/v1` 后，`experiments/00-preparation/` 多出 D01（Pretrain v1 数据，`accepted`）与 D02–D05（SFT v1 物化与容量剖析，均为 not-trainable 中间态）五个目录，但 `experiments/registry.csv` 和本目录 README 的表都只有 E00–E02。这五个目录的自有状态词（`accepted`、`implementation_only`、`capacity_profiled_not_trainable`、`configured_not_materialized_not_profiled`）与 `experiments/README.md` 的 status 词表不同体系，补登记前需先定下“数据工程实验是否进 registry、进则用哪套状态词”，不宜先写行造成 schema 漂移。
 - **Phase 2 需要的官方 SFT 事实 Phase 0 没有给**：assistant target 总量、mask 正确率、跨 split 重复与固定 benchmark 污染都没做全量审计，只有 fixture 级的 33 valid / 95 ignored 与 2,000 条长度抽样。计划 7.4 的审计必须补做。
 - **官方全量 SFT 数据当前不可得**：`/data/datasets/minimind/312afb4f…/` 只有 `sft_t2t_mini.jsonl`（905,718 行），没有 `sft_t2t.jsonl`。计划 7.3 的 S04「官方全量 32M assistant targets」要先确认该文件能否下载并校验；否则 32M 预算只能从 mini 中抽取，且必须在 Phase 2 报告里改写口径。
 - **Agent RL / DPO 的长样本截断风险**已量化（29.3% / 15.75% 超 768）但未处理，Phase 5/6 启动前需要决定截断策略或提高 `max_seq_len`。
@@ -226,12 +227,12 @@ Phase 0 报告转 accepted 前必须完成（前三项已于 2026-09-03 完成�
 
 ## 9. 证据索引
 
-- Git：Lab commit `8ab347c`（main，含未提交改动）；实验 commit `9ca9fe2`（E00）、`080179c`（E01）、`5ccb667`（E02）；MiniMind upstream `393e387e9ad99f0f04c296e4c5e7353f4444629f`。
+- Git：Lab commit `90a5c12`（main，已合入 `stage5/p02-dense-pretrain-full` 与 `data/v1`）；本报告与计划拆分落库于 `2584c5c`，E00 证据修复于 `dea2824`；实验 commit `9ca9fe2`（E00）、`080179c`（E01）、`5ccb667`（E02）；MiniMind upstream `393e387e9ad99f0f04c296e4c5e7353f4444629f`。
 - 实验目录：`experiments/00-preparation/{E00-l20-baseline-20260823,E01-tokenizer-dataset-20260823,E02-model-probe-20260823}/`；索引 `experiments/00-preparation/README.md`；registry `experiments/registry.csv` 第 2–4 行。
 - eval / 结果 manifest：E00 `eval.json`（`status: not_applicable`）、`environment.json`、`metrics.csv`；E01 `data_manifest.json`、`results/{dataset_audit,compression_metrics,sample_transformations,summary}.json`、`data_quality_report.md`；E02 `results/{architecture,probe-data-manifest,summary,summary-seed42/43/44,metrics-seed42/43/44}`。
 - artifacts：`/data/artifacts/minimind-lab/E02-model-probe-20260823/`（`probe-data.pt` SHA-256 `287f5352ff98…`；`checkpoints/seed42-resume.pt` SHA-256 `9036139bc52f…`，767,063,342 B）。
 - 交叉验证数据：`/data/artifacts/minimind-lab/phase1-aux/pretrain_mini_target_audit.json`（Phase 1 全量精算）。
-- 源码阅读笔记（2026-09-03 已从 HEAD 恢复到工作区）：`docs/source_reading/{README,00-training-runtime,01-data-tokenizer,02-model-architecture}.md`。
+- 源码阅读笔记（2026-09-03 已恢复并落库于 `2584c5c`）：`docs/source_reading/{README,00-training-runtime,01-data-tokenizer,02-model-architecture}.md`。
 - SwanLab：见 §2.1 与 [`swanlab-runs.md`](swanlab-runs.md)。
 
 ## 修订记录
@@ -241,3 +242,4 @@ Phase 0 报告转 accepted 前必须完成（前三项已于 2026-09-03 完成�
 | 2026-09-03 | 首次出具（draft） | 补齐 Phase 0 阶段报告，并记录 3 处证据缺口与 2 项 partial 门 |
 | 2026-09-03 | 修复§8 第 1、3 条：回填 E00 的 SwanLab 时间线证据（artifact + report + registry），恢复 `docs/source_reading/` 与 `docs/upstream-minimind.md`；同步更新 §2.1、§5、§6、§9 | 消除“报告与 artifact 矛盾”和“产物引用断裂”两处证据缺口 |
 | 2026-09-03 | §7 修正 SwanLab project 结论：P01/P02 的 run 已同步到统一 project，原写“三者无法叠图”不准确 | 排查 registry 缺行时发现 stage5 收口 commit `5761979` 已做过 project 合并 |
+| 2026-09-03 | §8 第 2、4 条标为已完成，§9 更新 Git 坐标；新增未解决问题“D01–D05 数据准备实验未登记” | 阶段报告与修复已合入 main；合并 `data/v1` 后新增五个未入 registry 的数据实验目录 |
