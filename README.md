@@ -13,7 +13,8 @@ MiniMind Lab 是一个围绕 64M 级小语言模型展开的可复现实验项�
 
 ## 仓库导航
 
-- [训练与源码学习规划](docs/training_plan.md)
+- [统一实验与学习计划](docs/experiment_plan.md)
+- [阶段报告索引](docs/phases/README.md)
 - [仓库管理方式](docs/repository-management.md)
 - [统一评测协议](docs/evaluation_protocol.md)
 - [最终报告模板](docs/final_report.md)
