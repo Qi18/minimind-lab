@@ -1,0 +1,46 @@
+{
+  "experiment_id": "P02-dense-pretrain-full-20260824",
+  "stage": "01-pretrain",
+  "status": "completed",
+  "baseline_experiment": "P01-dense-pretrain-mini-20260824",
+  "baseline_lab_commit": "fd5f5c41d47b9e9eab9fc1f6e1eb13c568b5cb3c",
+  "training_lab_commit": "10e2de6deb1d3dc827e896149b1d3e8ba1c3a85c",
+  "minimind_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",
+  "command": "experiments/01-pretrain/P02-dense-pretrain-full-20260824/command.sh",
+  "evaluation_command": "experiments/01-pretrain/P02-dense-pretrain-full-20260824/eval/command.sh",
+  "artifact_dir": "/data/artifacts/minimind-lab/P02-dense-pretrain-full-20260824",
+  "checkpoint": "/data/artifacts/minimind-lab/P02-dense-pretrain-full-20260824/checkpoints/p02_pretrain_768.pth",
+  "resume_checkpoint": "/data/projects/minimind-lab/minimind/checkpoints/p02_pretrain_768_resume.pth",
+  "world_size": 8,
+  "evaluation_lab_commit": "e4dc359faa3a0a015d52c459058f03e01fb3d20f",
+  "swanlab_run_id": "3i1muwq039fpfv89fq4ru",
+  "swanlab_run_name": "P02-Pretrain-Full-64M-Seq768",
+  "source_swanlab_project": "MiniMind-Lab-Stage5",
+  "source_swanlab_run_id": "bs7n0qfcxykk13fammxis",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-08-24T11:58:05Z",
+      "finished_at": "2026-08-24T11:59:20Z",
+      "exit_code": 1,
+      "completed_training_steps": 0,
+      "swanlab_run_id": "ij3ujuvmbni6fouaz0r1f",
+      "synced_swanlab_run_id": "q2lnh08i1dkvwtgey5d7z",
+      "synced_swanlab_run_name": "P02-Pretrain-Full-64M-Seq768-Failed-Cache",
+      "synced_swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/q2lnh08i1dkvwtgey5d7z",
+      "failure": "default rootfs datasets Arrow cache exhausted the 10GB Pod root filesystem"
+    },
+    {
+      "attempt": 2,
+      "started_at": "2026-08-24T12:04:45Z",
+      "finished_at": "2026-08-24T16:50:32.030945Z",
+      "exit_code": 0,
+      "completed_training_steps": 264651,
+      "swanlab_run_id": "bs7n0qfcxykk13fammxis",
+      "failure": null
+    }
+  ],
+  "started_at": "2026-08-24T12:04:45Z",
+  "finished_at": "2026-08-24T16:50:32.030945Z",
+  "exit_code": 0
+}

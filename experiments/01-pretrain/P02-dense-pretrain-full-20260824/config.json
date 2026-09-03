@@ -1,0 +1,48 @@
+{
+  "experiment_id": "P02-dense-pretrain-full-20260824",
+  "stage": "01-pretrain",
+  "status": "completed",
+  "protocol_version": "2026-08-21",
+  "seed": 42,
+  "primary_variable": "pretraining dataset scale: mini to full",
+  "direct_baseline": "P01-dense-pretrain-mini-20260824",
+  "model": {
+    "architecture": "MiniMindForCausalLM Dense",
+    "parameters": 63912192,
+    "hidden_size": 768,
+    "num_hidden_layers": 8,
+    "use_moe": false,
+    "vocab_size": 6400
+  },
+  "training": {
+    "epochs": 1,
+    "per_gpu_batch_size": 4,
+    "world_size": 8,
+    "accumulation_steps": 8,
+    "global_sequence_batch": 256,
+    "max_seq_len": 768,
+    "learning_rate": 0.0005,
+    "grad_clip": 1.0,
+    "dtype": "bfloat16",
+    "datasets_cache": "/data/cache/huggingface/datasets",
+    "num_workers_per_rank": 8,
+    "log_interval_micro_steps": 10,
+    "save_interval_micro_steps": 1000,
+    "from_weight": "none",
+    "expected_micro_steps": 264651,
+    "expected_optimizer_updates": 33082,
+    "completed_micro_steps": 264651,
+    "estimated_wall_minutes_from_p01": 305.5
+  },
+  "dataset": {
+    "repo_id": "jingyaogong/minimind_dataset",
+    "revision": "312afb4f76391145c6902f765bb51691c09a12f5",
+    "file": "pretrain_t2t.jsonl",
+    "line_count": 8468827,
+    "size_bytes": 8275074893,
+    "sha256": "31efc9a6fa7430769c0e78cde1c8ec0273ac7bbad20614c0ee58bccef327cc9d"
+  },
+  "hardware": "8x NVIDIA L20 46GB",
+  "tracking": "SwanLab project MiniMind-Lab (migrated from MiniMind-Lab-Stage5)",
+  "notes": "Keep the complete P01 training configuration, including max_seq_len=768, and change only the dataset from mini to full. The source recommendation near 380 is intentionally not adopted in this comparison."
+}

@@ -1,0 +1,5 @@
+{"id": "zh_capital", "prompt": "中国的首都是", "continuation": "", "generated_tokens": 1, "decoding": "greedy", "max_new_tokens": 64, "chat_template": false, "seed": 42, "recorded_at": "2026-08-25T03:50:21.384896+00:00"}
+{"id": "en_capital", "prompt": "The capital of France is", "continuation": "", "generated_tokens": 1, "decoding": "greedy", "max_new_tokens": 64, "chat_template": false, "seed": 42, "recorded_at": "2026-08-25T03:50:21.390995+00:00"}
+{"id": "arithmetic", "prompt": "1 + 1 =", "continuation": "", "generated_tokens": 1, "decoding": "greedy", "max_new_tokens": 64, "chat_template": false, "seed": 42, "recorded_at": "2026-08-25T03:50:21.396296+00:00"}
+{"id": "science", "prompt": "水在标准大气压下的沸点是", "continuation": "", "generated_tokens": 1, "decoding": "greedy", "max_new_tokens": 64, "chat_template": false, "seed": 42, "recorded_at": "2026-08-25T03:50:21.401630+00:00"}
+{"id": "code", "prompt": "def fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n", "continuation": "", "generated_tokens": 1, "decoding": "greedy", "max_new_tokens": 64, "chat_template": false, "seed": 42, "recorded_at": "2026-08-25T03:50:21.407357+00:00"}

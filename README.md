@@ -50,15 +50,18 @@ DPO、GRPO/CISPO 和 Agentic RL 默认从同一个 Full SFT 基线分支，避�
 
 | 阶段 | 初始化权重 | 数据 | 训练成本 | 目标指标 | 通用能力回归 | SwanLab | 权重 |
 |---|---|---|---:|---:|---:|---|---|
-| Pretrain mini | Random | `pretrain_t2t_mini` 1,270,238 行 | 45.83 min / 6.11 GPU-hours | 七项宏平均 31.44 | 无自身基线；官方口径参考 +0.66 pp | [run](https://swanlab.cn/@richliu0153/MiniMind-Lab-Stage3/runs/7iochx9kfe75qa2pt6d1u) | L20 保留，SHA `71efd40d` |
-| Pretrain full | Random | 待填写 | 待填写 | 待评测 | - | 待填写 | 待填写 |
-| Full SFT mini（S01R1） | P01 64M | `sft_t2t_mini` 905,718 行 | 35.27 min / 4.70 GPU-hours | val loss 1.7024；Chat 10%；Tool E2E 37.5% | 七项宏平均 32.04，较 P01 +0.60 pp；发布验收失败 | [run](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/s2zj3jb9n8uh9v7raemx5) | L20 保留 best，SHA `239d48e4` |
+| Pretrain mini（P01） | Random | `pretrain_t2t_mini` 1,270,238 行 | 45.83 min / 6.11 GPU-hours | 七项宏平均 31.44 | 无自身基线；官方口径参考 +0.66 pp | [run](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/nfax3tyg0j217j1cz8y0b) | L20 保留，SHA `71efd40d` |
+| Pretrain full（P02） | Random | `pretrain_t2t` 8,468,827 行 | 285.78 min / 38.10 GPU-hours | 七项宏平均 30.91 | 相对 P01 -0.54 pp；官方口径参考 +0.12 pp | [run](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3i1muwq039fpfv89fq4ru) | L20 保留，SHA `7065a461` |
+| Pretrain v1（P03） | Random | `pretrain-v1-1b28/final-remix-v1` 2,313,483 行 / 1.280B targets | 46.37 min / 6.18 GPU-hours | 七项宏平均 31.52；共享 validation NLL 2.60432 | 相对 P02 +0.62 pp，相对 P01 +0.08 pp | [run](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/qdpjh47fjt98184oos4bl) | L20 保留，SHA `0cfb7fc8` |
+| Full SFT mini（S01R1，基于 P01） | P01 64M | `sft_t2t_mini` 905,718 行 | 35.27 min / 4.70 GPU-hours | val loss 1.7024；Chat 10%；Tool E2E 37.5% | 七项宏平均 32.04，较 P01 +0.60 pp；发布验收失败 | [run](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/s2zj3jb9n8uh9v7raemx5) | L20 保留 best，SHA `239d48e4` |
 | LoRA | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
 | DPO | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
 | GRPO / CISPO | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
 | Agentic RL | Full SFT | 待填写 | 待填写 | Tool Success 待评测 | 待评测 | 待填写 | 待填写 |
 
 表格只填写已经完成并能追溯到实验目录的结果。
+
+当前预训练结论：full 数据规模是 mini 的 6.67 倍，P02 末段平均 training loss 更低，但七项宏平均低于 P01，五个固定 Base 续写也全部立即 EOS。后续 SFT 将固定数据与超参数，分别从 P01/P02 初始化做对照，避免只凭 training loss 选择 Base checkpoint。
 
 ## 克隆
 
