@@ -11,6 +11,8 @@
 
 训练 loss、reward、主观样例和 SwanLab 曲线只能解释训练过程，不能单独作为模型效果结论。所有正式结论必须来自固定评测集，并同时报告绝对分数、相对变化和成本。
 
+训练/验证/测试切分和固定评测污染门禁分别由 [Pretrain 数据协议](data/pretrain/data_protocol.md) 与 [SFT 数据协议](data/sft/data_protocol.md) 管理；本文只定义跨训练阶段保持一致的评分与对比口径。
+
 当前主协议不把 DCLM CORE、IFEval、HumanEval 或其他外部模型排行榜作为完成门槛。它们可作为后续扩展，不能与 MiniMind 官方七项分数混成一个总分。
 
 ## 2. 两条评测轨道

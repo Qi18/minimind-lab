@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-30T15:55:34.422258+00:00",
+  "policy": "union exact and char-5-gram Jaccard near-duplicate user-prompt components before deterministic 900/50/50 split assignment",
+  "settings": {
+    "seed": 42,
+    "num_perm": 128,
+    "char_ngram": 5,
+    "min_normalized_chars": 50,
+    "jaccard_threshold": 0.85
+  },
+  "inputs": {
+    "train": {
+      "path": "/data/datasets/minimind-lab/data-v1/normalized/sft_proxy_v1.train.jsonl",
+      "sha256": "91adbe96c680d1e94d572fc58f25f476a32c82dcffa2c99a530bdeb54e6ca2ba"
+    },
+    "validation": {
+      "path": "/data/datasets/minimind-lab/data-v1/normalized/sft_proxy_v1.validation.jsonl",
+      "sha256": "7795995a330d5b072fb9071b19148b93f9315e738a32b5cd1605dda7d6927265"
+    },
+    "test": {
+      "path": "/data/datasets/minimind-lab/data-v1/normalized/sft_proxy_v1.test.jsonl",
+      "sha256": "76a4f481d0c71edac843f6b39052a5f9200067167888eeac38df9073eaf5be99"
+    }
+  },
+  "records": 5955,
+  "components": 5895,
+  "multi_record_components": 28,
+  "largest_component": 10,
+  "edge_counts": {
+    "short_records_near_check_skipped": 1454,
+    "exact_edges": 48,
+    "near_duplicate_edges": 21
+  },
+  "moved_counts": {
+    "train->test": 2,
+    "validation->train": 1
+  },
+  "split_counts": {
+    "train": 5329,
+    "test": 311,
+    "validation": 315
+  },
+  "outputs": {
+    "train": {
+      "path": "/data/datasets/minimind-lab/data-v1/grouped/sft_proxy_v1.train.jsonl",
+      "rows": 5329,
+      "size_bytes": 9075907,
+      "sha256": "65cd1148df76ef3f049615a26b7f34d59e414f361b27398611c187ecef10d981"
+    },
+    "validation": {
+      "path": "/data/datasets/minimind-lab/data-v1/grouped/sft_proxy_v1.validation.jsonl",
+      "rows": 315,
+      "size_bytes": 574629,
+      "sha256": "80e3ab1efa9689ec860ae0ba974d311bcea7548d9f9073af993431964b22fae2"
+    },
+    "test": {
+      "path": "/data/datasets/minimind-lab/data-v1/grouped/sft_proxy_v1.test.jsonl",
+      "rows": 311,
+      "size_bytes": 558061,
+      "sha256": "40a133552ca92eebfd2c847e987dccf15d9ee114823c6d662d6000bc0d05860e"
+    }
+  }
+}

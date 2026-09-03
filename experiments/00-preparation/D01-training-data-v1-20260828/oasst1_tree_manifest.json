@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-28T11:21:16.450961+00:00",
+  "endpoint": "https://hf-mirror.com",
+  "repo_id": "OpenAssistant/oasst1",
+  "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+  "split": "train",
+  "allowed_languages": [
+    "en",
+    "zh"
+  ],
+  "raw_rows": 84437,
+  "eligible_nodes": 41725,
+  "roots": 3867,
+  "conversations": 3855,
+  "exact_duplicate_conversations_removed": 0,
+  "incomplete_roots": 12,
+  "language_counts_all_rows": {
+    "en": 39283,
+    "es": 22763,
+    "de": 3050,
+    "ru": 7242,
+    "ja": 363,
+    "pt-BR": 1165,
+    "ca": 1158,
+    "fr": 2474,
+    "pl": 304,
+    "vi": 191,
+    "zh": 3314,
+    "hu": 75,
+    "ko": 24,
+    "eu": 250,
+    "it": 554,
+    "uk-UA": 587,
+    "id": 12,
+    "ar": 56,
+    "fi": 18,
+    "tr": 37,
+    "da": 44,
+    "th": 1460,
+    "sv": 1,
+    "cs": 12
+  },
+  "selection_policy": "one root-to-leaf path per tree; prefer reviewed, lower-rank, non-synthetic child",
+  "raw_file": {
+    "path": "/data/datasets/minimind-lab/data-v1/raw-full/oasst1_train.jsonl",
+    "size_bytes": 137489537,
+    "sha256": "41d3aa121cf5c7715410b92d1d1f31f93e5e3043469831e74f62136aa5f8f84e"
+  },
+  "conversation_file": {
+    "path": "/data/datasets/minimind-lab/data-v1/raw-samples/oasst1_conversations.jsonl",
+    "size_bytes": 8145623,
+    "sha256": "c42cbe801a20b29b689acc6a9f4c8850d9ddb3c8f8e168545e5a194536a42e18"
+  }
+}

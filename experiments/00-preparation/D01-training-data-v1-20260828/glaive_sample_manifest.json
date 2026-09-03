@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-28T11:46:49.118605+00:00",
+  "endpoint": "https://hf-mirror.com",
+  "source_config": "/data/projects/minimind-lab-data-v1/configs/data/sources_v1.yaml",
+  "all_enabled_sources_sampled": true,
+  "sources": [
+    {
+      "id": "glaive_function_calling_v2",
+      "repo_id": "glaiveai/glaive-function-calling-v2",
+      "revision": "e7f4b6456019f5d8bcb991ef0dd67d8ff23221ac",
+      "config": null,
+      "split": "train",
+      "requested_rows": 200,
+      "path": "/data/datasets/minimind-lab/data-v1/raw-samples/glaive_function_calling_v2.jsonl",
+      "status": "ok",
+      "rows": 200,
+      "fields": [
+        "chat",
+        "system"
+      ],
+      "size_bytes": 526888,
+      "sha256": "125da90f1f984cf9260a8cc4f11f22cd835a2e54bb454264412adeea73caa25b",
+      "elapsed_seconds": 21.591
+    }
+  ]
+}

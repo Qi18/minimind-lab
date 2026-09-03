@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-28T11:32:42.789792+00:00",
+  "endpoint": "https://hf-mirror.com",
+  "source_config": "/data/projects/minimind-lab-data-v1/configs/data/sources_v1.yaml",
+  "all_enabled_sources_sampled": true,
+  "sources": [
+    {
+      "id": "alpaca_gpt4_zh",
+      "repo_id": "silk-road/alpaca-data-gpt4-chinese",
+      "revision": "81a6dfd72f416aff605e7d189bfbbc46a2511fee",
+      "config": null,
+      "split": "train",
+      "requested_rows": 200,
+      "path": "/data/datasets/minimind-lab/data-v1/raw-samples/alpaca_gpt4_zh.jsonl",
+      "status": "ok",
+      "rows": 200,
+      "fields": [
+        "input",
+        "input_zh",
+        "instruction",
+        "instruction_zh",
+        "output",
+        "output_zh"
+      ],
+      "size_bytes": 249303,
+      "sha256": "fb46a1aeff31703c742ff9e5fc9ee764ec56e9a1efb0ce85976ccb936a7348fa",
+      "elapsed_seconds": 8.942
+    }
+  ]
+}

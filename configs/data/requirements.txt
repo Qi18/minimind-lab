@@ -1,0 +1,6 @@
+datasets==3.6.0
+transformers==4.57.6
+datasketch==1.6.4
+pyarrow==20.0.0
+fsspec==2024.6.1
+PyYAML==6.0.2

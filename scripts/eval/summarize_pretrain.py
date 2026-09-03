@@ -26,9 +26,12 @@ def main() -> None:
     parser.add_argument("--world-size", type=int, default=8)
     parser.add_argument("--per-gpu-batch-size", type=int, default=4)
     parser.add_argument("--max-seq-len", type=int, default=768)
+    parser.add_argument("--gpu-sample-interval-seconds", type=float, default=10.0)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
 
+    if args.gpu_sample_interval_seconds <= 0:
+        parser.error("--gpu-sample-interval-seconds must be positive")
     points = []
     text = args.driver_log.read_text(encoding="utf-8", errors="replace")
     for match in LOSS_RE.finditer(text):
@@ -85,7 +88,7 @@ def main() -> None:
         "token_slot_throughput_per_second_upper_bound": total_token_slots / wall_seconds,
         "token_slot_throughput_note": "Upper bound based on padded sequence slots; it is not effective non-padding token throughput.",
         "gpu_telemetry": {
-            "sample_interval_seconds": 10,
+            "sample_interval_seconds": args.gpu_sample_interval_seconds,
             "rows": len(gpu_rows),
             "active_rows": len(active),
             "mean_gpu_util_percent_active": mean(row["gpu_util"] for row in active),

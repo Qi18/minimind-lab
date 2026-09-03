@@ -1,0 +1,103 @@
+{
+  "commands": {
+    "path": "/data/projects/minimind-lab-data-v1/experiments/00-preparation/D01-training-data-v1-20260828/runs/pretrain-v1-remix-run-20260831T085409Z-311234/commands.tsv",
+    "sha256": "850fe4bf603aad6a7207fac279fe5442e55099820edabce911f9213e12afc2d5"
+  },
+  "git": {
+    "dirty": true,
+    "head": "222e39c934d7bb4d96472ceb40d22f8aa7fc578b"
+  },
+  "host": "l20-server-20260827",
+  "inputs": {
+    "auditor": {
+      "path": "/data/projects/minimind-lab-data-v1/scripts/data/audit_pretrain_v1.py",
+      "sha256": "ba1b200d5fb4ea23b3598714b5a19fe51325fa7db47937411b40cc8916823bae"
+    },
+    "builder": {
+      "path": "/data/projects/minimind-lab-data-v1/scripts/data/build_pretrain_v1.py",
+      "sha256": "573723a093e69d5985a42437d0f3e611a4de393bb49d81b47d7127904d8d0de3"
+    },
+    "candidate_manifest": {
+      "path": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/work/candidates/manifest.json",
+      "sha256": "07e2d6638d061a53524cc2c9dfb87e0d7a2e9507677ad4f7d83324fb1815b125"
+    },
+    "eval_config": {
+      "path": "/data/projects/minimind-lab-data-v1/configs/data/contamination_eval_v2.yaml",
+      "sha256": "fd75962084334194d5d2399508dc916c4b6f9a04146b9368ec6ec91b8976859a"
+    },
+    "pretrain_config": {
+      "path": "/data/projects/minimind-lab-data-v1/configs/data/pretrain_v1.yaml",
+      "sha256": "c566581f20e0084f887cf60eea2225ba4d21dde0348d3f2d71676c54617a50dc"
+    },
+    "remixer": {
+      "path": "/data/projects/minimind-lab-data-v1/scripts/data/remix_pretrain_v1.py",
+      "sha256": "7d2064c10d80afb74cce51264e7ee2c4523bcded89ef3c49d0e024e2392e6c9f"
+    },
+    "sources_config": {
+      "path": "/data/projects/minimind-lab-data-v1/configs/data/pretrain_shards_v1.yaml",
+      "sha256": "bd781d77b164d73962ff46a987ea1cf8232fbda9b5fff22d01aeeb28d60448fe"
+    },
+    "tokenizer": {
+      "path": "/data/projects/minimind-lab-data-v1/minimind/model",
+      "tokenizer_config_sha256": "d7cd6a60c9f191c4f9ffec69b2eb289ad2f960366724f328b681ae1e46e4c110",
+      "tokenizer_json_sha256": "71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668"
+    }
+  },
+  "launcher": {
+    "path": "/data/projects/minimind-lab-data-v1/experiments/00-preparation/D01-training-data-v1-20260828/launch_pretrain_v1_remix.sh",
+    "sha256": "f8e51c4760d8b31625d5e63a0e9cc3744409dcecf5b1f66a745e062f97417265"
+  },
+  "mode": "run",
+  "paths": {
+    "audit_report": "/data/projects/minimind-lab-data-v1/experiments/00-preparation/D01-training-data-v1-20260828/pretrain_v1_remix_audit.json",
+    "build_manifest": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/final-remix-v1/manifest.json",
+    "data_root": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28",
+    "final_root": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/final-remix-v1",
+    "repo_root": "/data/projects/minimind-lab-data-v1",
+    "success_marker": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/final-remix-v1/_SUCCESS",
+    "verification_report": "/data/projects/minimind-lab-data-v1/experiments/00-preparation/D01-training-data-v1-20260828/pretrain_v1_remix_verification.json",
+    "work_root": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/work"
+  },
+  "run_artifacts": {
+    "commands": {
+      "path": "/data/projects/minimind-lab-data-v1/experiments/00-preparation/D01-training-data-v1-20260828/runs/pretrain-v1-remix-run-20260831T085409Z-311234/commands.tsv",
+      "sha256": "850fe4bf603aad6a7207fac279fe5442e55099820edabce911f9213e12afc2d5"
+    },
+    "events": {
+      "path": "/data/projects/minimind-lab-data-v1/experiments/00-preparation/D01-training-data-v1-20260828/runs/pretrain-v1-remix-run-20260831T085409Z-311234/events.tsv"
+    },
+    "log": {
+      "path": "/data/projects/minimind-lab-data-v1/experiments/00-preparation/D01-training-data-v1-20260828/runs/pretrain-v1-remix-run-20260831T085409Z-311234/run.log"
+    },
+    "metadata": {
+      "path": "/data/projects/minimind-lab-data-v1/experiments/00-preparation/D01-training-data-v1-20260828/runs/pretrain-v1-remix-run-20260831T085409Z-311234/metadata.json"
+    },
+    "status": {
+      "path": "/data/projects/minimind-lab-data-v1/experiments/00-preparation/D01-training-data-v1-20260828/runs/pretrain-v1-remix-run-20260831T085409Z-311234/status.env"
+    }
+  },
+  "run_id": "pretrain-v1-remix-run-20260831T085409Z-311234",
+  "runtime": {
+    "policy": {
+      "audit": {
+        "kill_after_seconds": 30,
+        "terminate_signal": "TERM",
+        "timeout_binary": "/usr/bin/timeout",
+        "timeout_seconds": 21600
+      },
+      "hf_hub": {
+        "disable_xet": true,
+        "download_timeout_seconds": 60,
+        "endpoint": "https://hf-mirror.com",
+        "etag_timeout_seconds": 20
+      }
+    },
+    "python": "/data/venvs/minimind-lab/bin/python"
+  },
+  "schema_version": 1,
+  "security": {
+    "credentials_recorded": false,
+    "environment_recorded": false
+  },
+  "started_at_utc": "2026-08-31T08:54:09Z"
+}

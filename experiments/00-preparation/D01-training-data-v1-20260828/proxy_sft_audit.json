@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-28T14:15:58.262033+00:00",
+  "input": "/data/datasets/minimind-lab/data-v1/normalized/sft_proxy_v1.train.jsonl",
+  "max_records": null,
+  "rows_read": 5369,
+  "valid_rows": 5369,
+  "invalid_json_lines": 0,
+  "empty_lines": 0,
+  "invalid_schema_rows": 0,
+  "missing_assistant_rows": 0,
+  "assistant_target_retention": 1.0,
+  "exact_duplicate_rows": 0,
+  "exact_duplicate_rate": 0.0,
+  "tool_rows": 100,
+  "tool_rate": 0.018625,
+  "reasoning_rows": 0,
+  "reasoning_rate": 0.0,
+  "mcq_rows": 11,
+  "mcq_rate": 0.002049,
+  "assistant_characters": 6105500,
+  "role_counts": {
+    "user": 7698,
+    "assistant": 7853,
+    "system": 185,
+    "tool": 144
+  },
+  "turn_count_top20": [
+    [
+      2,
+      3388
+    ],
+    [
+      4,
+      1642
+    ],
+    [
+      6,
+      101
+    ],
+    [
+      8,
+      53
+    ],
+    [
+      11,
+      43
+    ],
+    [
+      5,
+      36
+    ],
+    [
+      9,
+      34
+    ],
+    [
+      7,
+      29
+    ],
+    [
+      3,
+      20
+    ],
+    [
+      13,
+      7
+    ],
+    [
+      12,
+      6
+    ],
+    [
+      10,
+      5
+    ],
+    [
+      14,
+      4
+    ],
+    [
+      15,
+      1
+    ]
+  ],
+  "scope_note": "Duplicate rate is exact after whitespace/case normalization; near-duplicate and benchmark contamination are separate gates."
+}

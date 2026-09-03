@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "experiment_id": "D04-sft-source-expansion-20260901",
+  "protocol_version": "2026-09-01-sft-source-expansion-v2",
+  "status": "configured_not_materialized_not_profiled",
+  "source_config": "configs/data/sft_v1_full_sources.yaml",
+  "canonical_plan": "configs/data/sft_v1.yaml",
+  "source_registry": "configs/data/sources_v1.yaml",
+  "materialization_entrypoint": "experiments/00-preparation/D02-sft-data-v1-20260901/command.sh",
+  "automatic_run": false,
+  "baseline": {
+    "experiment_id": "D03-sft-capacity-20260901",
+    "capacity_report": "experiments/00-preparation/D03-sft-capacity-20260901/capacity_report.json",
+    "capacity_report_sha256": "6ce01f4960a125ed6a3013c2674a71402355663a7e8088f3e224aa04dd080ab2",
+    "total_required_assistant_tokens": 161600000,
+    "total_available_assistant_tokens": 238791045,
+    "total_gate_passed": true,
+    "bucket_shortfalls": {
+      "chinese_general": {
+        "target_assistant_tokens": 48480000,
+        "available_assistant_tokens": 8181944,
+        "shortfall_assistant_tokens": 40298056
+      },
+      "multiturn": {
+        "target_assistant_tokens": 16160000,
+        "available_assistant_tokens": 1430203,
+        "shortfall_assistant_tokens": 14729797
+      },
+      "strict_format": {
+        "target_assistant_tokens": 24240000,
+        "available_assistant_tokens": 18732,
+        "shortfall_assistant_tokens": 24221268
+      },
+      "math": {
+        "target_assistant_tokens": 16160000,
+        "available_assistant_tokens": 1013421,
+        "shortfall_assistant_tokens": 15146579
+      },
+      "summarization_translation": {
+        "target_assistant_tokens": 8080000,
+        "available_assistant_tokens": 5922924,
+        "shortfall_assistant_tokens": 2157076
+      },
+      "code": {
+        "target_assistant_tokens": 8080000,
+        "available_assistant_tokens": 1710629,
+        "shortfall_assistant_tokens": 6369371
+      }
+    }
+  },
+  "source_order_policy": "existing_sources_first_then_supplements",
+  "supplemental_sources": [
+    {
+      "id": "tigerbot_alpaca_zh_0_5m",
+      "repo_id": "TigerResearch/tigerbot-alpaca-zh-0.5m",
+      "revision": "14101774e35107ba5a18566da1e8e64d0b8f0174",
+      "license": "apache-2.0",
+      "purpose": "chinese_general",
+      "raw_output": "raw/tigerbot_alpaca_zh_0_5m.jsonl",
+      "required_fields": [
+        "instruction",
+        "input",
+        "output"
+      ],
+      "status": "pinned_materialization_pending"
+    },
+    {
+      "id": "numinamath_cot",
+      "repo_id": "AI-MO/NuminaMath-CoT",
+      "revision": "9d8d210c9f6a36c8f3cd84045668c9b7800ef517",
+      "license": "apache-2.0",
+      "purpose": "math",
+      "raw_output": "raw/numinamath_cot.jsonl",
+      "required_fields": [
+        "source",
+        "problem",
+        "solution",
+        "messages"
+      ],
+      "status": "pinned_reasoning_parse_gate_pending"
+    },
+    {
+      "id": "magicoder_evol_instruct_110k",
+      "repo_id": "ise-uiuc/Magicoder-Evol-Instruct-110K",
+      "revision": "b0079beaa0361d82412520b873715bee59cc7dd4",
+      "license": "apache-2.0",
+      "purpose": "code",
+      "raw_output": "raw/magicoder_evol_instruct_110k.jsonl",
+      "required_fields": [
+        "instruction",
+        "response"
+      ],
+      "status": "pinned_materialization_pending"
+    },
+    {
+      "id": "tulu_3_sft_personas_instruction_following",
+      "repo_id": "allenai/tulu-3-sft-personas-instruction-following",
+      "revision": "fe0c7d350c9b4542b8d829a6f1daa1c259f0ba0e",
+      "license": "odc-by",
+      "purpose": "strict_format",
+      "raw_output": "raw/tulu_3_sft_personas_instruction_following.jsonl",
+      "required_fields": [
+        "id",
+        "prompt",
+        "messages",
+        "constraints"
+      ],
+      "status": "pinned_materialization_pending"
+    },
+    {
+      "id": "cnn_dailymail_summary",
+      "repo_id": "abisee/cnn_dailymail",
+      "revision": "96df5e686bee6baa90b8bee7c28b81fa3fa6223d",
+      "license": "apache-2.0",
+      "purpose": "summarization_translation",
+      "raw_output": "raw/cnn_dailymail_3_0_0.jsonl",
+      "required_fields": [
+        "article",
+        "highlights",
+        "id"
+      ],
+      "materialization_config": "3.0.0",
+      "license_evidence": "hf_cardData_and_license_tag",
+      "status": "pinned_materialization_pending"
+    }
+  ],
+  "v2_policies": {
+    "ultrachat_partition": {
+      "status": "pending_v2_profiler",
+      "key": "prompt_id",
+      "assignment": "sha256_utf8_mod_5",
+      "english_general_remainders": [
+        0,
+        1,
+        2
+      ],
+      "multiturn_remainders": [
+        3,
+        4
+      ],
+      "ratio": "3:2",
+      "origin_exclusive": true,
+      "no_record_reuse": true
+    },
+    "strict_format_v2": {
+      "status": "pending_v2_profiler",
+      "origin_exclusive": true,
+      "no_record_reuse": true,
+      "verified_transforms_only": true,
+      "required_transform_evidence": [
+        "transform_id",
+        "transform_version",
+        "input_digest",
+        "output_digest",
+        "verifier_status"
+      ],
+      "fail_closed": true
+    },
+    "numinamath_reasoning": {
+      "status": "pending_parse_gate",
+      "exclude_source_tags": [
+        "gsm8k",
+        "math"
+      ],
+      "source_tag_comparison": "strip_then_casefold_exact",
+      "accepted_inputs": [
+        "messages",
+        "problem_solution"
+      ],
+      "fail_closed": true
+    }
+  },
+  "unresolved": [
+    {
+      "id": "summarization_translation_source_selected_capacity_pending",
+      "baseline_shortfall_assistant_tokens": 2157076,
+      "selected_source": "cnn_dailymail_summary",
+      "severity": "fatal",
+      "reason": "The source is pinned, but its eligible assistant-token capacity has not been measured by the v2 profiler."
+    },
+    {
+      "id": "source_expansion_v2_capacity_not_profiled",
+      "severity": "fatal"
+    }
+  ],
+  "resource_policy": {
+    "source_concurrency": 1,
+    "nice": 10,
+    "ionice_class": "best-effort",
+    "ionice_priority": 7,
+    "automatic_materialization": false,
+    "automatic_profile": false
+  }
+}

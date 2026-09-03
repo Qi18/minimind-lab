@@ -1,0 +1,499 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-31T03:32:02.764442+00:00",
+  "status": "ok",
+  "endpoint": "https://hf-mirror.com",
+  "config": "configs/data/pretrain_shards_v1.yaml",
+  "config_sha256": "0bf553ab2b71f649c58194a07b5b11a6bbe7a9a57b36a2020d154eec43a43093",
+  "expected_objects": 54,
+  "verified_objects": 54,
+  "errors": [],
+  "objects": [
+    {
+      "source": "chinese_webtext2",
+      "repo_id": "CASIA-LM/ChineseWebText2.0",
+      "revision": "9b647306646e5ddd85cc239870fc39bfb60e9531",
+      "path": "ChineseWebText2.0/part-0042.jsonl.gz",
+      "status": 200,
+      "size_bytes": 11453257528,
+      "etag": "ead3a60b08b073054c0dfc71c980df0b7683f437c7ceadeb83257e29508466ce"
+    },
+    {
+      "source": "chinese_webtext2",
+      "repo_id": "CASIA-LM/ChineseWebText2.0",
+      "revision": "9b647306646e5ddd85cc239870fc39bfb60e9531",
+      "path": "ChineseWebText2.0/part-0060.jsonl.gz",
+      "status": 200,
+      "size_bytes": 7330510476,
+      "etag": "b1372c95c9af385cafaaac0bb380e78c1d20d81cfc6918164960677ccf7ab776"
+    },
+    {
+      "source": "chinese_webtext2",
+      "repo_id": "CASIA-LM/ChineseWebText2.0",
+      "revision": "9b647306646e5ddd85cc239870fc39bfb60e9531",
+      "path": "ChineseWebText2.0/part-0063.jsonl.gz",
+      "status": 200,
+      "size_bytes": 11519563757,
+      "etag": "b479f04d3cef29f6f250e60f6e2462eefabc8c47be0694886509fc2915ebaa42"
+    },
+    {
+      "source": "chinese_webtext2",
+      "repo_id": "CASIA-LM/ChineseWebText2.0",
+      "revision": "9b647306646e5ddd85cc239870fc39bfb60e9531",
+      "path": "ChineseWebText2.0/part-0066.jsonl.gz",
+      "status": 200,
+      "size_bytes": 11516157885,
+      "etag": "bb080622c1f8f6b95a50ab953027f2ffc500e1d31c4f7b4ee6c758e6c00b29d4"
+    },
+    {
+      "source": "chinese_webtext2",
+      "repo_id": "CASIA-LM/ChineseWebText2.0",
+      "revision": "9b647306646e5ddd85cc239870fc39bfb60e9531",
+      "path": "ChineseWebText2.0/part-0068.jsonl.gz",
+      "status": 200,
+      "size_bytes": 11518227099,
+      "etag": "bb8fa0efea5d6765010818288a150c7ef197cf99c8a1303587df0737d0365fd9"
+    },
+    {
+      "source": "chinese_webtext2",
+      "repo_id": "CASIA-LM/ChineseWebText2.0",
+      "revision": "9b647306646e5ddd85cc239870fc39bfb60e9531",
+      "path": "ChineseWebText2.0/part-0090.jsonl.gz",
+      "status": 200,
+      "size_bytes": 16044025325,
+      "etag": "3a66bb3ace7a8dd7ef69c22f2989949e9ec2caeaa8d53230a7de0a71efc8f467"
+    },
+    {
+      "source": "chinese_webtext2",
+      "repo_id": "CASIA-LM/ChineseWebText2.0",
+      "revision": "9b647306646e5ddd85cc239870fc39bfb60e9531",
+      "path": "ChineseWebText2.0/part-0109.jsonl.gz",
+      "status": 200,
+      "size_bytes": 11446095233,
+      "etag": "d25e80936e6bda31daa91ab97d2443bde5de6143cb2ce646fbaf1794455e450d"
+    },
+    {
+      "source": "chinese_webtext2",
+      "repo_id": "CASIA-LM/ChineseWebText2.0",
+      "revision": "9b647306646e5ddd85cc239870fc39bfb60e9531",
+      "path": "ChineseWebText2.0/part-0127.jsonl.gz",
+      "status": 200,
+      "size_bytes": 11748567671,
+      "etag": "23d9756ecf78b23088d417b83569df1908b4ac56d5b390ab90f7b358da52e159"
+    },
+    {
+      "source": "finemath",
+      "repo_id": "HuggingFaceTB/finemath",
+      "revision": "e92b25a616738fe95dc186b64dfb19f9c8525594",
+      "path": "finemath-4plus/train-00014-of-00064.parquet",
+      "status": 200,
+      "size_bytes": 285892807,
+      "etag": "55ba9bd95a65c76594e84783ca0caf9c942d79089eb0a860ecd03b39ac043164"
+    },
+    {
+      "source": "finemath",
+      "repo_id": "HuggingFaceTB/finemath",
+      "revision": "e92b25a616738fe95dc186b64dfb19f9c8525594",
+      "path": "finemath-4plus/train-00024-of-00064.parquet",
+      "status": 200,
+      "size_bytes": 287841727,
+      "etag": "639dfaa6f68ddcc7ad26ac371ff3a16eddef4d67968f1c684b0b9ba17db21814"
+    },
+    {
+      "source": "finemath",
+      "repo_id": "HuggingFaceTB/finemath",
+      "revision": "e92b25a616738fe95dc186b64dfb19f9c8525594",
+      "path": "finemath-4plus/train-00028-of-00064.parquet",
+      "status": 200,
+      "size_bytes": 285140740,
+      "etag": "f10d7b70faa334744015e86bf267e998a5a1b05af7003a1988f3456e99545ddc"
+    },
+    {
+      "source": "finemath",
+      "repo_id": "HuggingFaceTB/finemath",
+      "revision": "e92b25a616738fe95dc186b64dfb19f9c8525594",
+      "path": "finemath-4plus/train-00033-of-00064.parquet",
+      "status": 200,
+      "size_bytes": 287898199,
+      "etag": "b5640455f97ce7836187e76105583edb34e3d7fe1c097fb34535c991eb748600"
+    },
+    {
+      "source": "finemath",
+      "repo_id": "HuggingFaceTB/finemath",
+      "revision": "e92b25a616738fe95dc186b64dfb19f9c8525594",
+      "path": "finemath-4plus/train-00045-of-00064.parquet",
+      "status": 200,
+      "size_bytes": 285137076,
+      "etag": "bad9874e781c1b4b811f360a45a0e0cd9e88435cb7c308515a0782d633aaab20"
+    },
+    {
+      "source": "finemath",
+      "repo_id": "HuggingFaceTB/finemath",
+      "revision": "e92b25a616738fe95dc186b64dfb19f9c8525594",
+      "path": "finemath-4plus/train-00050-of-00064.parquet",
+      "status": 200,
+      "size_bytes": 288979859,
+      "etag": "f186b3de08216882d3ae0d891a75b71baddfee26b0614ccce7e72b666ccf3590"
+    },
+    {
+      "source": "finemath",
+      "repo_id": "HuggingFaceTB/finemath",
+      "revision": "e92b25a616738fe95dc186b64dfb19f9c8525594",
+      "path": "finemath-4plus/train-00058-of-00064.parquet",
+      "status": 200,
+      "size_bytes": 288566069,
+      "etag": "0e0186336aa1897145830e1a064c29ff2f6796b2a09df61f36e93299aecac83f"
+    },
+    {
+      "source": "finemath",
+      "repo_id": "HuggingFaceTB/finemath",
+      "revision": "e92b25a616738fe95dc186b64dfb19f9c8525594",
+      "path": "finemath-4plus/train-00062-of-00064.parquet",
+      "status": 200,
+      "size_bytes": 287258638,
+      "etag": "aeb2c3981fcdecc8931c53006eb9064da5b3e8609af3fd86cd23bc8f6f07670f"
+    },
+    {
+      "source": "fineweb_edu",
+      "repo_id": "HuggingFaceFW/fineweb-edu",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "path": "sample/10BT/000_00000.parquet",
+      "status": 200,
+      "size_bytes": 2152819114,
+      "etag": "75e3d0530e0153b1260904449807a6aca765eb899b669cf3d1da290e52eedae8"
+    },
+    {
+      "source": "fineweb_edu",
+      "repo_id": "HuggingFaceFW/fineweb-edu",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "path": "sample/10BT/001_00000.parquet",
+      "status": 200,
+      "size_bytes": 2152222432,
+      "etag": "e9960557cb2dc32fbb60dcd731f26a567939acf5400da272a02e0a2129372c0b"
+    },
+    {
+      "source": "fineweb_edu",
+      "repo_id": "HuggingFaceFW/fineweb-edu",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "path": "sample/10BT/002_00000.parquet",
+      "status": 200,
+      "size_bytes": 2151796315,
+      "etag": "b56d6a2de6a9a15410ecc04eaad89793f13cf6afc45f443b8038eaf55abfcd98"
+    },
+    {
+      "source": "fineweb_edu",
+      "repo_id": "HuggingFaceFW/fineweb-edu",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "path": "sample/10BT/003_00000.parquet",
+      "status": 200,
+      "size_bytes": 2152437524,
+      "etag": "ca982a0f681ea39281d11e4a6014c2fafcf4fd7c88286a8177037ce2dc3807ee"
+    },
+    {
+      "source": "fineweb_edu",
+      "repo_id": "HuggingFaceFW/fineweb-edu",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "path": "sample/10BT/007_00000.parquet",
+      "status": 200,
+      "size_bytes": 2150686637,
+      "etag": "19f91b798330994561c1c1705125da9a1549e11d4a4371cf5e2431a4ef205ab9"
+    },
+    {
+      "source": "fineweb_edu",
+      "repo_id": "HuggingFaceFW/fineweb-edu",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "path": "sample/10BT/011_00000.parquet",
+      "status": 200,
+      "size_bytes": 2152323681,
+      "etag": "0f9bd4e342170467f48336ddee9e1505828d4ab30ac7f73a268a4bd2dc501097"
+    },
+    {
+      "source": "fineweb_edu",
+      "repo_id": "HuggingFaceFW/fineweb-edu",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "path": "sample/10BT/012_00000.parquet",
+      "status": 200,
+      "size_bytes": 2152069689,
+      "etag": "181c1963a4b5c59790df3bd8420f083781cb35b86d7ff90697be7008195c0b9a"
+    },
+    {
+      "source": "fineweb_edu",
+      "repo_id": "HuggingFaceFW/fineweb-edu",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "path": "sample/10BT/013_00000.parquet",
+      "status": 200,
+      "size_bytes": 540632672,
+      "etag": "0d70822e81b2820f6c6414389b0b3450741ff9be8022c41e2cf81601089fe3e4"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-01280-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 364686502,
+      "etag": "fcff043aeaeafc23f01b911b95624ad9fab3436ff55638538dbbb210f0a860da"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-01394-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 307510159,
+      "etag": "87d7702c9a905f1e8224aac8dca28d5ea88f000b110f7aa2e8cb6f8c40a3cc78"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-02516-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 525888712,
+      "etag": "2e67a687bfe67ee381495adf7363e600a3b63b1d2e77a988045ddf2182a5b104"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-03088-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 425944672,
+      "etag": "a8e8473d4448cd82c744253a2b2a5ada652d0fd1a8cc80dbea641625c2f87677"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-03266-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 374602806,
+      "etag": "96b6c1ab43b16aaa16533b1d55c7d26f97f2284cd2c247f0125db09f582ac49f"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-03736-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 476207640,
+      "etag": "5c5b66ab7cc0ffb1a541e8e0b8a5e4a1004a4ab9ca2565b254fd1f02b1e04426"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-04300-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 324083888,
+      "etag": "89e254316beb91bc42b267c50029a506e32bcd505da4377f639ec8a83f10771c"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-04382-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 686945774,
+      "etag": "ab6fd6990019b0adbe2c4d6bded2f4a64a02861f3f1c144c1f979a2eaf68e289"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-04847-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 384510822,
+      "etag": "0aa7e30f0706b0aaf9127befa5b0f710ce896ce5fb1d8a5e42632b4b90dd710a"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-05196-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 345239626,
+      "etag": "dd6f9c670f4a81b7c96e80d7813f0b41ccfd930f16f890e3f047beb0681cc360"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-06013-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 562365555,
+      "etag": "185530852971b02f86aa129269d4d029157a7d4294c2089ec7aeb09107074188"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-06212-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 360584451,
+      "etag": "ded4be780e38a3fd442904ce83b38fe78eebe794210f907a99286bd453b6fa57"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-06681-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 472882479,
+      "etag": "7a40fd1eb641890a62b9c38bd2eb7e5e1e8295d8ebdccba6299f66dc9d505fea"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-06890-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 389463171,
+      "etag": "dd37fcad7ff90d57aeecd90feb0a53c2f31b8d5015a0ea4633daca32b7f46b54"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-07228-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 423331068,
+      "etag": "55278b5f7e9a2f0b2dd0d3d187afa7f09f6ddc454a95d8c018ccfe09c42c5f33"
+    },
+    {
+      "source": "stack_v3_code",
+      "repo_id": "HuggingFaceCode/stack-v3-train",
+      "revision": "df4b205fbba4cc1c2fd1f205b10d66f730798bb9",
+      "path": "data/part-07450-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet",
+      "status": 200,
+      "size_bytes": 413846983,
+      "etag": "9921084a6bc65b264dd763db04d0eca8784bf313f13541cbe770f957a0ff5e28"
+    },
+    {
+      "source": "wikipedia_en",
+      "repo_id": "wikimedia/wikipedia",
+      "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "path": "20231101.en/train-00004-of-00041.parquet",
+      "status": 200,
+      "size_bytes": 306945391,
+      "etag": "d1b7e5963da9ee771ba2d011ba49e9950556d185b9a20d8a1dfbfdc943382258"
+    },
+    {
+      "source": "wikipedia_en",
+      "repo_id": "wikimedia/wikipedia",
+      "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "path": "20231101.en/train-00009-of-00041.parquet",
+      "status": 200,
+      "size_bytes": 227378231,
+      "etag": "cb4b9a088483593fb1afe759a3af37573308227fda03c47eedff0582adfafac6"
+    },
+    {
+      "source": "wikipedia_en",
+      "repo_id": "wikimedia/wikipedia",
+      "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "path": "20231101.en/train-00018-of-00041.parquet",
+      "status": 200,
+      "size_bytes": 231055386,
+      "etag": "88188e68f1ddea134ddd843ccd4aa1c9b71ded8b32f57c07738f1c8c503ae934"
+    },
+    {
+      "source": "wikipedia_en",
+      "repo_id": "wikimedia/wikipedia",
+      "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "path": "20231101.en/train-00024-of-00041.parquet",
+      "status": 200,
+      "size_bytes": 220729597,
+      "etag": "35eccf4b459d13f0ef86ed09a6557d50c32ee7a5362def643836c9e898880431"
+    },
+    {
+      "source": "wikipedia_en",
+      "repo_id": "wikimedia/wikipedia",
+      "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "path": "20231101.en/train-00025-of-00041.parquet",
+      "status": 200,
+      "size_bytes": 221292721,
+      "etag": "508bb42e11caf1f8cc1bc3319a4a8e83ef0afa93127f38fed2a306537fc11d25"
+    },
+    {
+      "source": "wikipedia_en",
+      "repo_id": "wikimedia/wikipedia",
+      "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "path": "20231101.en/train-00026-of-00041.parquet",
+      "status": 200,
+      "size_bytes": 208188233,
+      "etag": "06c8408a3a1748690e3754c75cfc1210802e4edcf8ee8f594576d38eacbbcf5c"
+    },
+    {
+      "source": "wikipedia_en",
+      "repo_id": "wikimedia/wikipedia",
+      "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "path": "20231101.en/train-00035-of-00041.parquet",
+      "status": 200,
+      "size_bytes": 224459876,
+      "etag": "2e29cb763778125014c90a59f235910ed7560ecc35acb841622ff2d54f0fbfae"
+    },
+    {
+      "source": "wikipedia_en",
+      "repo_id": "wikimedia/wikipedia",
+      "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "path": "20231101.en/train-00040-of-00041.parquet",
+      "status": 200,
+      "size_bytes": 421630218,
+      "etag": "de5b3eeccf11c7b0084cb0f01306ef48405e9034629f4ea487ddb4d63d545b0b"
+    },
+    {
+      "source": "wikipedia_zh",
+      "repo_id": "wikimedia/wikipedia",
+      "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "path": "20231101.zh/train-00000-of-00006.parquet",
+      "status": 200,
+      "size_bytes": 587109027,
+      "etag": "b0d23cb09980c13fd4d62474d107b1840278bb98659d67d98a075a9a8fdf9dbe"
+    },
+    {
+      "source": "wikipedia_zh",
+      "repo_id": "wikimedia/wikipedia",
+      "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "path": "20231101.zh/train-00001-of-00006.parquet",
+      "status": 200,
+      "size_bytes": 263629009,
+      "etag": "c2990be75b62edd4cb3dcf61d323e506f5bd2f37dca080e4ab61c0b536ece8d5"
+    },
+    {
+      "source": "wikipedia_zh",
+      "repo_id": "wikimedia/wikipedia",
+      "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "path": "20231101.zh/train-00002-of-00006.parquet",
+      "status": 200,
+      "size_bytes": 126796358,
+      "etag": "fde1999ae11dde51bd26b4b2d2a5f74f6edad0ffe299296d3f51e27ee514e143"
+    },
+    {
+      "source": "wikipedia_zh",
+      "repo_id": "wikimedia/wikipedia",
+      "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "path": "20231101.zh/train-00003-of-00006.parquet",
+      "status": 200,
+      "size_bytes": 262039932,
+      "etag": "aa851efe44c460efd1682d719eaa839d60878056a96e711fdae5830e881cb875"
+    },
+    {
+      "source": "wikipedia_zh",
+      "repo_id": "wikimedia/wikipedia",
+      "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "path": "20231101.zh/train-00004-of-00006.parquet",
+      "status": 200,
+      "size_bytes": 256719920,
+      "etag": "224094e114cc4b66540e6c9e3fb50c36c4e2ca4effd722ad4f64203c05bf62a4"
+    },
+    {
+      "source": "wikipedia_zh",
+      "repo_id": "wikimedia/wikipedia",
+      "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "path": "20231101.zh/train-00005-of-00006.parquet",
+      "status": 200,
+      "size_bytes": 224856014,
+      "etag": "90401f227e885013f5508a2a56af0fb8d9e2e016be6d44b0a97c1112ca2f8582"
+    }
+  ]
+}

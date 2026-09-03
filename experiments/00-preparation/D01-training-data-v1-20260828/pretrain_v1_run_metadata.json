@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-08-31T03:52:17+00:00",
+  "reason": "Snapshot of the interrupted formal Pretrain v1 materialization before accounting-contract repair.",
+  "run": {
+    "launcher_pid_file": "experiments/00-preparation/D01-training-data-v1-20260828/pretrain_v1_1b28.pid",
+    "recorded_launcher_pid": 231089,
+    "process_running_at_snapshot": false,
+    "log": "experiments/00-preparation/D01-training-data-v1-20260828/pretrain_v1_1b28.log",
+    "status": "stopped_before_contract_fix"
+  },
+  "inputs_before_contract_fix": {
+    "builder": {
+      "path": "scripts/data/build_pretrain_v1.py",
+      "sha256": "7d96779963072bdfb5ac11f0ad705240522aa5e7a550a75dec4b4990d6a7f126",
+      "builder_version": "pretrain-v1-builder-2"
+    },
+    "auditor": {
+      "path": "scripts/data/audit_pretrain_v1.py",
+      "sha256": "82d9ce38b2a343e13693d3740c8c99db8e61a2e20613f2cfdcdb5939c3615978"
+    },
+    "pretrain_config": {
+      "path": "configs/data/pretrain_v1.yaml",
+      "sha256": "a64d8799849e552bfae523f32c56224b410583f2a249146f86beec8cf82ee068"
+    },
+    "sources_config": {
+      "path": "configs/data/pretrain_shards_v1.yaml",
+      "sha256": "24ac2607e0b54d5dccd24b9b6706409476bdfc268967165eac9c7620798fc13d"
+    }
+  },
+  "contract_repair_start": {
+    "recorded_at": "2026-08-31T04:16:00+00:00",
+    "builder": {
+      "path": "scripts/data/build_pretrain_v1.py",
+      "sha256": "15d75a7f39500d761c953aec69426443b746a39f8af88c51d19fa4d807196e3f",
+      "builder_version": "pretrain-v1-builder-2",
+      "note": "Canonical token field rename had been applied; fingerprint and hash-domain contract repair had not."
+    },
+    "auditor": {
+      "path": "scripts/data/audit_pretrain_v1.py",
+      "sha256": "80b7c29f7ea1915c50e1f7c0e5f7e8c58dbef62752084efeec3d95768c92eaa7",
+      "note": "Recorded for provenance only; audit_pretrain_v1.py is outside this repair's edit scope."
+    },
+    "process_running_at_snapshot": false
+  },
+  "contract_repair_result": {
+    "recorded_at": "2026-08-31T04:17:46Z",
+    "status": "validated_ready_for_rebuild",
+    "formal_1b28_rebuild_started": false,
+    "formal_success_marker_present": false,
+    "builder": {
+      "path": "scripts/data/build_pretrain_v1.py",
+      "sha256": "573723a093e69d5985a42437d0f3e611a4de393bb49d81b47d7127904d8d0de3",
+      "builder_version": "pretrain-v1-builder-3",
+      "object_fingerprint_scope": "config, sources, tokenizer, hash domains, builder version and builder SHA"
+    },
+    "auditor": {
+      "path": "scripts/data/audit_pretrain_v1.py",
+      "sha256": "8ba935a29fbc1ad75d282daf6ac510a5247281ce6321a0d5891cb6f786a0293c",
+      "fingerprint_scope": "recorded in final manifest; actual audit execution SHA is bound by _SUCCESS"
+    },
+    "configs": {
+      "pretrain_v1_sha256": "c566581f20e0084f887cf60eea2225ba4d21dde0348d3f2d71676c54617a50dc",
+      "pretrain_shards_v1_sha256": "bd781d77b164d73962ff46a987ea1cf8232fbda9b5fff22d01aeeb28d60448fe"
+    },
+    "launcher": {
+      "path": "experiments/00-preparation/D01-training-data-v1-20260828/launch_pretrain_v1_1b28.sh",
+      "sha256": "8fa23a97f86897eb7d81ddb08cab597655a08d7b3ae7880303004244bbfe2dac"
+    },
+    "validation": {
+      "py_compile": "passed",
+      "builder_self_test": "passed",
+      "resume_invalidation": "passed",
+      "auditor_only_change_keeps_valid_done": true,
+      "builder_change_invalidates_valid_done": true,
+      "old_contract_done_invalidated": true,
+      "old_candidate_files_preserved": 2,
+      "new_first_object_fingerprint": "eef76d03b2f8f892a2b807eb4b81c8e57c5b86ec34662c01f08a64cfaccf6c3d",
+      "builder_to_auditor_positive_smoke_manifest_sha256": "44166fe51980f226f262dcb8f699980757a3e6924d5b7ce3d6c98e95a368c9b4",
+      "quota_tamper_rejected_without_marker": true,
+      "provenance_tamper_rejected_without_marker": true
+    }
+  },
+  "completed_old_contract_objects": [
+    {
+      "source": "chinese_webtext2",
+      "object": "000-part-0109.jsonl.gz",
+      "loss_target_tokens": 83214506,
+      "done_fingerprint": "e0177c134171c9627f31d635c6c9f54055eadf2338733841759f844ba5eeedc0",
+      "output_sha256": "1ec393450f43538b71502f88170677f5bc3b78d7ac12971b6cec2ea0313440ce"
+    },
+    {
+      "source": "chinese_webtext2",
+      "object": "001-part-0127.jsonl.gz",
+      "loss_target_tokens": 83214595,
+      "done_fingerprint": "49e5aa2332f38a6e2f5846bf7212addcdd6bdcd350d2ce4e419cc6395bc5af91",
+      "output_sha256": "7f81501ea8aafe0b8c00c80b67a39385f971d3c7ddc7f696166d1b032e178fc1"
+    }
+  ],
+  "reuse_policy": "Keep the files for provenance, but the repaired builder must reject these done fingerprints and rebuild them."
+}

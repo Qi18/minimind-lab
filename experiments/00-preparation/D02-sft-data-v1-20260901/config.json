@@ -1,0 +1,28 @@
+{
+  "experiment_id": "D02-sft-data-v1-20260901",
+  "stage": "00-preparation",
+  "status": "raw_materialization_complete_capacity_pending",
+  "protocol_version": "2026-09-01-sft-raw-v1",
+  "source_config": "configs/data/sft_v1_full_sources.yaml",
+  "output_root": "/data/datasets/minimind-lab/data-v1/sft-v1-160m",
+  "target_assistant_tokens": 160000000,
+  "sequence_length": 768,
+  "seed": 42,
+  "resource_policy": {
+    "source_concurrency": 1,
+    "nice": 10,
+    "ionice_class": "best-effort",
+    "ionice_priority": 7,
+    "reason": "P03 pretraining may be active on the same L20 Pod"
+  },
+  "training_schema_contract": {
+    "top_level_keys": ["conversations"],
+    "message_keys": ["role", "content", "reasoning_content", "tools", "tool_calls"],
+    "optional_values": "explicit null",
+    "provenance": "sidecar only"
+  },
+  "raw_materialization_blockers": [],
+  "final_build_blockers": [
+    "source_capacity_not_frozen"
+  ]
+}

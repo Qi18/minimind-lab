@@ -1,0 +1,157 @@
+{
+  "schema_version": 2,
+  "experiment_id": "D05-sft-capacity-v2-20260901",
+  "protocol_version": "2026-09-01-sft-capacity-v2",
+  "source_config": "configs/data/sft_v1_full_sources.yaml",
+  "acceptance_config": "configs/data/sft_v1_acceptance.yaml",
+  "data_root": "/data/datasets/minimind-lab/data-v1/sft-v1-160m",
+  "tokenizer": "minimind/model",
+  "sequence_length": 768,
+  "target_assistant_tokens": 160000000,
+  "seed": 42,
+  "oasst_languages": [
+    "en",
+    "zh"
+  ],
+  "required_v2_source_ids": [
+    "tigerbot_alpaca_zh_0_5m",
+    "numinamath_cot",
+    "magicoder_evol_instruct_110k",
+    "tulu_3_sft_personas_instruction_following",
+    "cnn_dailymail_summary"
+  ],
+  "source_order": [
+    "ultrachat_200k",
+    "oasst1",
+    "gsm8k",
+    "mbpp",
+    "code_alpaca_20k",
+    "alpaca_gpt4_zh",
+    "glaive_function_calling_v2",
+    "databricks_dolly_15k",
+    "tigerbot_alpaca_zh_0_5m",
+    "numinamath_cot",
+    "magicoder_evol_instruct_110k",
+    "tulu_3_sft_personas_instruction_following",
+    "cnn_dailymail_summary"
+  ],
+  "supplemental_sources": [],
+  "ultrachat_partition": {
+    "hash": "sha256_utf8",
+    "key": "prompt_id",
+    "modulus": 5,
+    "english_general_residues": [
+      0,
+      1,
+      2
+    ],
+    "multiturn_residues": [
+      3,
+      4
+    ]
+  },
+  "numina": {
+    "excluded_source_tags": [
+      "gsm8k",
+      "math"
+    ],
+    "source_tag_comparison": "strip_then_casefold_exact",
+    "messages_problem_solution_roundtrip_required": true,
+    "accepted_final_parsers": [
+      "balanced_boxed_terminal",
+      "explicit_terminal_marker"
+    ],
+    "unparsed_policy": "fail_closed"
+  },
+  "dedup_priority": {
+    "sources": [
+      "ultrachat_200k",
+      "oasst1",
+      "gsm8k",
+      "mbpp",
+      "code_alpaca_20k",
+      "alpaca_gpt4_zh",
+      "glaive_function_calling_v2",
+      "databricks_dolly_15k",
+      "tigerbot_alpaca_zh_0_5m",
+      "numinamath_cot",
+      "magicoder_evol_instruct_110k",
+      "cnn_dailymail_summary",
+      "translation_bilingual_v1",
+      "tulu_3_sft_personas_instruction_following"
+    ],
+    "buckets": [
+      "chinese_general",
+      "english_general",
+      "multiturn",
+      "math",
+      "code",
+      "tool_call",
+      "summarization_translation",
+      "strict_format"
+    ],
+    "variants": [
+      "original",
+      "reasoning_final",
+      "translation",
+      "strict_derived"
+    ],
+    "claim": "one_variant_per_origin_group_then_global_exact_digest",
+    "stable_independent_of_scan_order": true
+  },
+  "derived": {
+    "translation": {
+      "id": "translation_bilingual_v1",
+      "input_source": "alpaca_gpt4_zh",
+      "bucket": "summarization_translation",
+      "origin_claim": "same_as_donor"
+    },
+    "strict_format": {
+      "id": "strict_format_v2",
+      "donor_sources": [
+        "tulu_3_sft_personas_instruction_following"
+      ],
+      "origin_exclusive": true,
+      "no_record_reuse": true,
+      "verified_transforms_only": true,
+      "baseline_projection_id": "strict_format_v1",
+      "current_generator_rows": 500,
+      "seed": 42,
+      "target_assistant_tokens": 24000000,
+      "capacity_semantics": "v1_baseline_projection_only_not_v2_actual"
+    }
+  },
+  "tulu_constraint_policy": {
+    "report_fields": [
+      "declared",
+      "supported",
+      "verified"
+    ],
+    "natural_language_constraint_is_not_verification": true,
+    "incomplete_verifier_policy": "fail_closed",
+    "actual_capacity_until_fully_verified": 0
+  },
+  "sqlite_work_dir": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/work/capacity-v2",
+  "capacity_report": "experiments/00-preparation/D05-sft-capacity-v2-20260901/capacity_report.json",
+  "training_schema_contract": {
+    "top_level_keys": [
+      "conversations"
+    ],
+    "message_keys": [
+      "role",
+      "content",
+      "reasoning_content",
+      "tools",
+      "tool_calls"
+    ],
+    "optional_values": "explicit null",
+    "provenance": "sidecar only"
+  },
+  "resource_policy": {
+    "source_concurrency": 1,
+    "nice": 10,
+    "ionice_class": "best-effort",
+    "ionice_priority": 7,
+    "network_allowed": false
+  }
+}

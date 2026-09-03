@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "experiment_id": "D03-sft-capacity-20260901",
+  "protocol_version": "2026-09-01-sft-capacity-v1",
+  "source_config": "configs/data/sft_v1_full_sources.yaml",
+  "acceptance_config": "configs/data/sft_v1_acceptance.yaml",
+  "data_root": "/data/datasets/minimind-lab/data-v1/sft-v1-160m",
+  "tokenizer": "minimind/model",
+  "sequence_length": 768,
+  "target_assistant_tokens": 160000000,
+  "seed": 42,
+  "oasst_languages": [
+    "en",
+    "zh"
+  ],
+  "source_order": [
+    "ultrachat_200k",
+    "oasst1",
+    "gsm8k",
+    "mbpp",
+    "code_alpaca_20k",
+    "alpaca_gpt4_zh",
+    "glaive_function_calling_v2",
+    "databricks_dolly_15k"
+  ],
+  "supplemental_sources": [
+    {
+      "id": "databricks_dolly_15k",
+      "repo_id": "databricks/databricks-dolly-15k",
+      "revision": "bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a",
+      "license": "cc-by-sa-3.0",
+      "purpose": "summarization_translation",
+      "materialization": {
+        "mode": "hf_stream",
+        "config": null,
+        "split": "train",
+        "output": "raw/databricks_dolly_15k.jsonl",
+        "required_fields": [
+          "instruction",
+          "context",
+          "response",
+          "category"
+        ]
+      }
+    }
+  ],
+  "derived": {
+    "translation": {
+      "id": "translation_bilingual_v1",
+      "input_source": "alpaca_gpt4_zh",
+      "bucket": "summarization_translation"
+    },
+    "strict_format": {
+      "id": "strict_format_v1",
+      "current_generator_rows": 500,
+      "seed": 42,
+      "target_assistant_tokens": 24000000
+    }
+  },
+  "sqlite_work_dir": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/work/capacity",
+  "capacity_report": "experiments/00-preparation/D03-sft-capacity-20260901/capacity_report.json",
+  "training_schema_contract": {
+    "top_level_keys": [
+      "conversations"
+    ],
+    "message_keys": [
+      "role",
+      "content",
+      "reasoning_content",
+      "tools",
+      "tool_calls"
+    ],
+    "optional_values": "explicit null",
+    "provenance": "sidecar only"
+  },
+  "resource_policy": {
+    "source_concurrency": 1,
+    "nice": 10,
+    "ionice_class": "best-effort",
+    "ionice_priority": 7,
+    "network_allowed": false
+  }
+}

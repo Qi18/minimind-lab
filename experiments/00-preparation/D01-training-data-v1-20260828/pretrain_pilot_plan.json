@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-30T15:39:30.532232+00:00",
+  "status": "planning_estimate_not_materialized",
+  "model_scope": "64m-dense",
+  "sequence_length": 768,
+  "target_processed_tokens": 320000000,
+  "active_mix": {
+    "chinese_web": {
+      "weight": 0.45,
+      "sources": [
+        "chinese_webtext2"
+      ]
+    },
+    "english_education": {
+      "weight": 0.35,
+      "sources": [
+        "fineweb_edu"
+      ]
+    },
+    "encyclopedia": {
+      "weight": 0.1,
+      "sources": [
+        "wikipedia_zh",
+        "wikipedia_en"
+      ]
+    },
+    "math": {
+      "weight": 0.1,
+      "sources": [
+        "finemath"
+      ]
+    }
+  },
+  "categories": [
+    {
+      "category": "chinese_web",
+      "weight": 0.45,
+      "target_processed_tokens": 144000000,
+      "source_allocation_policy": "equal_within_category",
+      "sources": [
+        {
+          "source": "chinese_webtext2",
+          "target_processed_tokens": 144000000,
+          "proxy_rows_measured": 200,
+          "proxy_mean_processed_tokens_per_row": 540.025,
+          "proxy_truncation_rate": 0.315,
+          "estimated_rows": 266655,
+          "estimated_processed_tokens": 144000366,
+          "estimated_overshoot_tokens": 366
+        }
+      ]
+    },
+    {
+      "category": "english_education",
+      "weight": 0.35,
+      "target_processed_tokens": 112000000,
+      "source_allocation_policy": "equal_within_category",
+      "sources": [
+        {
+          "source": "fineweb_edu",
+          "target_processed_tokens": 112000000,
+          "proxy_rows_measured": 200,
+          "proxy_mean_processed_tokens_per_row": 622.425,
+          "proxy_truncation_rate": 0.54,
+          "estimated_rows": 179942,
+          "estimated_processed_tokens": 112000399,
+          "estimated_overshoot_tokens": 399
+        }
+      ]
+    },
+    {
+      "category": "encyclopedia",
+      "weight": 0.1,
+      "target_processed_tokens": 32000000,
+      "source_allocation_policy": "equal_within_category",
+      "sources": [
+        {
+          "source": "wikipedia_zh",
+          "target_processed_tokens": 16000000,
+          "proxy_rows_measured": 200,
+          "proxy_mean_processed_tokens_per_row": 714.6,
+          "proxy_truncation_rate": 0.855,
+          "estimated_rows": 22391,
+          "estimated_processed_tokens": 16000609,
+          "estimated_overshoot_tokens": 609
+        },
+        {
+          "source": "wikipedia_en",
+          "target_processed_tokens": 16000000,
+          "proxy_rows_measured": 200,
+          "proxy_mean_processed_tokens_per_row": 749.74,
+          "proxy_truncation_rate": 0.945,
+          "estimated_rows": 21341,
+          "estimated_processed_tokens": 16000201,
+          "estimated_overshoot_tokens": 201
+        }
+      ]
+    },
+    {
+      "category": "math",
+      "weight": 0.1,
+      "target_processed_tokens": 32000000,
+      "source_allocation_policy": "equal_within_category",
+      "sources": [
+        {
+          "source": "finemath",
+          "target_processed_tokens": 32000000,
+          "proxy_rows_measured": 200,
+          "proxy_mean_processed_tokens_per_row": 683.47,
+          "proxy_truncation_rate": 0.71,
+          "estimated_rows": 46820,
+          "estimated_processed_tokens": 32000065,
+          "estimated_overshoot_tokens": 65
+        }
+      ]
+    }
+  ],
+  "estimated_total_rows": 537149,
+  "estimated_processed_tokens": 320001640,
+  "config": "configs/data/pretrain_v1.yaml",
+  "config_sha256": "a20b233d8e731ce327827a62ae29b572ed7a07241e21e15d5b33392eecac3ede",
+  "tokenizer_stats": "experiments/00-preparation/D01-training-data-v1-20260828/prepared_tokenizer_stats.json",
+  "tokenizer_stats_sha256": "dbd881a0c0f04e4e8281ecfb41f970e2c28d22de99261ba1314dae6619811cde",
+  "assumptions": [
+    "row estimates use the first 200 fixed proxy rows per source",
+    "each document is head-truncated independently to sequence_length",
+    "Wikipedia zh/en split the encyclopedia category equally",
+    "estimates must be replaced by exact tokenizer counts after materialization"
+  ]
+}

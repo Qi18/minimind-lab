@@ -1,0 +1,787 @@
+{
+  "created_at": "2026-09-01T10:22:39.216896+00:00",
+  "exact_digest_policy": "SHA256 of canonical training payload; SQLite PRIMARY KEY; first source in deterministic precedence owns collisions",
+  "final_build_allowed": false,
+  "final_build_blockers": [
+    {
+      "id": "capacity_shortfall:chinese_general",
+      "severity": "fatal",
+      "shortfall_assistant_tokens": 40298056
+    },
+    {
+      "id": "capacity_shortfall:multiturn",
+      "severity": "fatal",
+      "shortfall_assistant_tokens": 14729797
+    },
+    {
+      "id": "capacity_shortfall:strict_format",
+      "severity": "fatal",
+      "shortfall_assistant_tokens": 24221268
+    },
+    {
+      "id": "capacity_shortfall:math",
+      "severity": "fatal",
+      "shortfall_assistant_tokens": 15146579
+    },
+    {
+      "id": "capacity_shortfall:summarization_translation",
+      "severity": "fatal",
+      "shortfall_assistant_tokens": 2157076
+    },
+    {
+      "id": "capacity_shortfall:code",
+      "severity": "fatal",
+      "shortfall_assistant_tokens": 6369371
+    },
+    {
+      "id": "strict_format_full_generation_not_materialized",
+      "projected_rows": 640615,
+      "severity": "fatal"
+    },
+    {
+      "id": "source_capacity_mix_not_frozen",
+      "reason": "A1 only measures capacity; A2/A3 must resolve derived data and freeze quotas before formal build.",
+      "severity": "fatal"
+    }
+  ],
+  "global": {
+    "assistant_target_tokens": 238791045,
+    "eligible_capacity": {
+      "available_assistant_target_tokens": 238791045,
+      "meets_total_requirement": true,
+      "note": "The total gate does not replace every split/bucket quota and no-record-reuse gates.",
+      "required_assistant_target_tokens": 161600000,
+      "shortfall_assistant_target_tokens": 0,
+      "surplus_assistant_target_tokens": 77191045
+    },
+    "exact_duplicate_chunks": 13857,
+    "unique_chunks": 728644
+  },
+  "heldout_target_assistant_tokens": 1600000,
+  "network_used": false,
+  "planned_mix_buckets": {
+    "chinese_general": {
+      "available_assistant_tokens": 8181944,
+      "capacity_ratio": 0.168769,
+      "shortfall_assistant_tokens": 40298056,
+      "source_ids": [
+        "alpaca_gpt4_zh"
+      ],
+      "subitems": {
+        "alpaca_gpt4_zh": 8181944
+      },
+      "target_assistant_tokens": 48480000,
+      "weight": 0.3
+    },
+    "code": {
+      "available_assistant_tokens": 1710629,
+      "capacity_ratio": 0.211712,
+      "shortfall_assistant_tokens": 6369371,
+      "source_ids": [
+        "mbpp",
+        "code_alpaca_20k"
+      ],
+      "subitems": {
+        "code_alpaca_20k": 1677587,
+        "mbpp": 33042
+      },
+      "target_assistant_tokens": 8080000,
+      "weight": 0.05
+    },
+    "english_general": {
+      "available_assistant_tokens": 189041351,
+      "capacity_ratio": 7.798736,
+      "shortfall_assistant_tokens": 0,
+      "source_ids": [
+        "ultrachat_200k"
+      ],
+      "subitems": {
+        "ultrachat_200k": 189041351
+      },
+      "target_assistant_tokens": 24240000,
+      "weight": 0.15
+    },
+    "math": {
+      "available_assistant_tokens": 1013421,
+      "capacity_ratio": 0.062712,
+      "shortfall_assistant_tokens": 15146579,
+      "source_ids": [
+        "gsm8k"
+      ],
+      "subitems": {
+        "gsm8k": 1013421
+      },
+      "target_assistant_tokens": 16160000,
+      "weight": 0.1
+    },
+    "multiturn": {
+      "available_assistant_tokens": 1430203,
+      "capacity_ratio": 0.088503,
+      "shortfall_assistant_tokens": 14729797,
+      "source_ids": [
+        "oasst1"
+      ],
+      "subitems": {
+        "oasst1": 1430203
+      },
+      "target_assistant_tokens": 16160000,
+      "weight": 0.1
+    },
+    "strict_format": {
+      "available_assistant_tokens": 18732,
+      "capacity_ratio": 0.000773,
+      "shortfall_assistant_tokens": 24221268,
+      "source_ids": [
+        "strict_format_v1"
+      ],
+      "subitems": {
+        "strict_format_v1": 18732
+      },
+      "target_assistant_tokens": 24240000,
+      "weight": 0.15
+    },
+    "summarization_translation": {
+      "available_assistant_tokens": 5922924,
+      "capacity_ratio": 0.733035,
+      "shortfall_assistant_tokens": 2157076,
+      "source_ids": [
+        "databricks_dolly_15k",
+        "translation_bilingual_v1"
+      ],
+      "subitems": {
+        "databricks_dolly_15k": 110800,
+        "translation_bilingual_v1": 5812124
+      },
+      "target_assistant_tokens": 8080000,
+      "weight": 0.05
+    },
+    "tool_call": {
+      "available_assistant_tokens": 31471841,
+      "capacity_ratio": 1.947515,
+      "shortfall_assistant_tokens": 0,
+      "source_ids": [
+        "glaive_function_calling_v2"
+      ],
+      "subitems": {
+        "glaive_function_calling_v2": 31471841
+      },
+      "target_assistant_tokens": 16160000,
+      "weight": 0.1
+    }
+  },
+  "profile_config": "/data/projects/minimind-lab-data-v1/experiments/00-preparation/D03-sft-capacity-20260901/config.json",
+  "profile_config_sha256": "8f67e09560f93c870dced9ccba9e248a3ff047cd73dd1a1872594f6888e7e72b",
+  "profiler": "/data/projects/minimind-lab-data-v1/scripts/data/profile_sft_v1_capacity.py",
+  "profiler_sha256": "686a096133a84a2c988054e93e13592a998f6bc49744b88b97de95e0d8592bd3",
+  "protocol_version": "2026-09-01-sft-capacity-v1",
+  "rendering_gates": {
+    "assistant_marker_equals_assistant_messages": true,
+    "complete_turn_splitting": true,
+    "every_assistant_span_closed_by_eos": true,
+    "rendered_tokens_max": 768,
+    "shifted_valid_targets_min": 1
+  },
+  "schema_version": 1,
+  "sequence_length": 768,
+  "source_config": {
+    "acceptance": {
+      "bucket_weights": {
+        "chinese_general": 0.3,
+        "code": 0.05,
+        "english_general": 0.15,
+        "math": 0.1,
+        "multiturn": 0.1,
+        "strict_format": 0.15,
+        "summarization_translation": 0.05,
+        "tool_call": 0.1
+      },
+      "path": "/data/projects/minimind-lab-data-v1/configs/data/sft_v1_acceptance.yaml",
+      "quota_rule": {
+        "maximum_overshoot": "less_than_one_selected_complete_record",
+        "minimum": "target"
+      },
+      "record_reuse_across_buckets_or_splits": false,
+      "sha256": "97d266633e4b9fb8787779459ba3edc7d88f8a47fa3f74cb64dfd8c54a452cd6",
+      "split_budgets": {
+        "test": 800000,
+        "train": 160000000,
+        "validation": 800000
+      },
+      "total_eligible_assistant_tokens": 161600000
+    },
+    "path": "/data/projects/minimind-lab-data-v1/configs/data/sft_v1_full_sources.yaml",
+    "planned_mix": {
+      "chinese_general": 0.3,
+      "code": 0.05,
+      "english_general": 0.15,
+      "math": 0.1,
+      "multiturn": 0.1,
+      "strict_format": 0.15,
+      "summarization_translation": 0.05,
+      "tool_call": 0.1
+    },
+    "sequence_length": 768,
+    "sha256": "d5d284f0c6984758ec300db574c351b001a4f76ffd4cbb791e2c8caafe62dcb7",
+    "target_assistant_tokens": 160000000
+  },
+  "source_precedence_for_exact_dedup": [
+    "ultrachat_200k",
+    "oasst1",
+    "gsm8k",
+    "mbpp",
+    "code_alpaca_20k",
+    "alpaca_gpt4_zh",
+    "glaive_function_calling_v2",
+    "databricks_dolly_15k",
+    "translation_bilingual_v1",
+    "strict_format_v1"
+  ],
+  "sources": {
+    "alpaca_gpt4_zh": {
+      "adapted_conversations": 52049,
+      "assistant_markers": 51957,
+      "assistant_messages": 51957,
+      "assistant_target_tokens": 8181944,
+      "assistant_target_tokens_before_exact_dedup": 8185245,
+      "chunks_before_exact_dedup": 52006,
+      "closed_assistant_spans": 51957,
+      "conversations_dropped_all_turns": 43,
+      "conversations_with_overlength_turns": 43,
+      "dropped_overlength_turns": 43,
+      "duplicate_first_source": {
+        "alpaca_gpt4_zh": 49
+      },
+      "exact_duplicate_assistant_target_tokens": 3301,
+      "exact_duplicate_chunks": 49,
+      "invalid_examples": [],
+      "invalid_total": 0,
+      "max_rendered_tokens": 768,
+      "planned_mix_bucket": "chinese_general",
+      "purpose": "chinese_general",
+      "raw_evidence": {
+        "bytes": 78401244,
+        "done_path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/alpaca_gpt4_zh.jsonl.done.json",
+        "license": "apache-2.0",
+        "path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/alpaca_gpt4_zh.jsonl",
+        "required_fields": [
+          "input_zh",
+          "instruction_zh",
+          "output_zh"
+        ],
+        "revision": "81a6dfd72f416aff605e7d189bfbbc46a2511fee",
+        "rows": 52049,
+        "sha256": "18882029d73f63025bedb212dab339ab4d3d19d1c73298ce726b064bb5e73637"
+      },
+      "raw_rows_read": 52049,
+      "rendered_tokens": 9857054,
+      "source_id": "alpaca_gpt4_zh",
+      "unique_chunks": 51957
+    },
+    "code_alpaca_20k": {
+      "adapted_conversations": 20022,
+      "assistant_markers": 19993,
+      "assistant_messages": 19993,
+      "assistant_target_tokens": 1677587,
+      "assistant_target_tokens_before_exact_dedup": 1677587,
+      "chunks_before_exact_dedup": 19993,
+      "closed_assistant_spans": 19993,
+      "conversations_dropped_all_turns": 23,
+      "conversations_with_overlength_turns": 23,
+      "dropped_overlength_turns": 23,
+      "duplicate_first_source": {},
+      "invalid_conversations": 6,
+      "invalid_examples": [
+        {
+          "error": "assistant message has no supervised content",
+          "kind": "invalid_conversations",
+          "reference": 7955
+        },
+        {
+          "error": "assistant message has no supervised content",
+          "kind": "invalid_conversations",
+          "reference": 9030
+        },
+        {
+          "error": "assistant message has no supervised content",
+          "kind": "invalid_conversations",
+          "reference": 13138
+        },
+        {
+          "error": "assistant message has no supervised content",
+          "kind": "invalid_conversations",
+          "reference": 13841
+        },
+        {
+          "error": "assistant message has no supervised content",
+          "kind": "invalid_conversations",
+          "reference": 16248
+        }
+      ],
+      "invalid_total": 6,
+      "max_rendered_tokens": 765,
+      "planned_mix_bucket": "code",
+      "purpose": "code",
+      "raw_evidence": {
+        "bytes": 7030293,
+        "done_path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/code_alpaca_20k.jsonl.done.json",
+        "license": "cc-by-4.0",
+        "path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/code_alpaca_20k.jsonl",
+        "required_fields": [
+          "input",
+          "instruction",
+          "output"
+        ],
+        "revision": "152bb5e9a29651266b018106053980070a0521a1",
+        "rows": 20022,
+        "sha256": "7a213e61a8a23633a1b9a9aab424b7f0c717865eb159be7c5e3f2061e991973b"
+      },
+      "raw_rows_read": 20022,
+      "rendered_tokens": 2563398,
+      "source_id": "code_alpaca_20k",
+      "unique_chunks": 19993
+    },
+    "databricks_dolly_15k": {
+      "adapted_conversations": 1188,
+      "assistant_markers": 885,
+      "assistant_messages": 885,
+      "assistant_target_tokens": 110800,
+      "assistant_target_tokens_before_exact_dedup": 110800,
+      "chunks_before_exact_dedup": 885,
+      "closed_assistant_spans": 885,
+      "conversations_dropped_all_turns": 303,
+      "conversations_with_overlength_turns": 303,
+      "dolly_category:brainstorming": 1766,
+      "dolly_category:classification": 2136,
+      "dolly_category:closed_qa": 1773,
+      "dolly_category:creative_writing": 709,
+      "dolly_category:general_qa": 2191,
+      "dolly_category:information_extraction": 1506,
+      "dolly_category:open_qa": 3742,
+      "dolly_category:summarization": 1188,
+      "dropped_overlength_turns": 303,
+      "duplicate_first_source": {},
+      "filtered_non_summarization_rows": 13823,
+      "invalid_examples": [],
+      "invalid_total": 0,
+      "max_rendered_tokens": 766,
+      "planned_mix_bucket": "summarization_translation",
+      "purpose": "summarization_translation",
+      "raw_evidence": {
+        "bytes": 13017646,
+        "done_path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/databricks_dolly_15k.jsonl.done.json",
+        "license": "cc-by-sa-3.0",
+        "path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/databricks_dolly_15k.jsonl",
+        "required_fields": [
+          "category",
+          "context",
+          "instruction",
+          "response"
+        ],
+        "revision": "bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a",
+        "rows": 15011,
+        "sha256": "bfa74f316db5fe54a140b0298b41e25f35a15d8da9b85576719dee5d4ea4b80e"
+      },
+      "raw_rows_read": 15011,
+      "rendered_tokens": 377228,
+      "source_id": "databricks_dolly_15k",
+      "unique_chunks": 885
+    },
+    "glaive_function_calling_v2": {
+      "adapted_conversations": 112936,
+      "assistant_markers": 242798,
+      "assistant_messages": 242798,
+      "assistant_target_tokens": 31471841,
+      "assistant_target_tokens_before_exact_dedup": 32744706,
+      "chunks_before_exact_dedup": 137413,
+      "closed_assistant_spans": 242798,
+      "conversations_dropped_all_turns": 16061,
+      "conversations_split": 35745,
+      "conversations_with_overlength_turns": 31218,
+      "dropped_overlength_turns": 44792,
+      "duplicate_first_source": {
+        "glaive_function_calling_v2": 13440
+      },
+      "exact_duplicate_assistant_target_tokens": 1272865,
+      "exact_duplicate_chunks": 13440,
+      "function_call_parse_errors": 25,
+      "invalid_adapter_rows": 24,
+      "invalid_conversations": 3214,
+      "invalid_examples": [
+        {
+          "error": "tool call has no system tool definitions",
+          "kind": "invalid_conversations",
+          "reference": 158
+        },
+        {
+          "error": "turn has no assistant message",
+          "kind": "invalid_conversations",
+          "reference": 196
+        },
+        {
+          "error": "tool call has no system tool definitions",
+          "kind": "invalid_conversations",
+          "reference": 199
+        },
+        {
+          "error": "tool call has no system tool definitions",
+          "kind": "invalid_conversations",
+          "reference": 227
+        },
+        {
+          "error": "turn has no assistant message",
+          "kind": "invalid_conversations",
+          "reference": 261
+        }
+      ],
+      "invalid_total": 3263,
+      "max_rendered_tokens": 768,
+      "multiturn_chunks": 45062,
+      "planned_mix_bucket": "tool_call",
+      "purpose": "tool_call",
+      "raw_evidence": {
+        "bytes": 268044140,
+        "done_path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/glaive_function_calling_v2.jsonl.done.json",
+        "license": "apache-2.0",
+        "path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/glaive_function_calling_v2.jsonl",
+        "required_fields": [
+          "chat",
+          "system"
+        ],
+        "revision": "e7f4b6456019f5d8bcb991ef0dd67d8ff23221ac",
+        "rows": 112960,
+        "sha256": "46a9be44d6db353b336f5b9c0028e836620907f6012d3bedf1f97b3187e7da21"
+      },
+      "raw_rows_read": 112960,
+      "rendered_tokens": 72250589,
+      "source_id": "glaive_function_calling_v2",
+      "tool_chunks": 36021,
+      "unique_chunks": 123973
+    },
+    "gsm8k": {
+      "adapted_conversations": 7473,
+      "assistant_markers": 7473,
+      "assistant_messages": 7473,
+      "assistant_target_tokens": 1013421,
+      "assistant_target_tokens_before_exact_dedup": 1013421,
+      "chunks_before_exact_dedup": 7473,
+      "closed_assistant_spans": 7473,
+      "dropped_overlength_turns": 0,
+      "duplicate_first_source": {},
+      "invalid_examples": [],
+      "invalid_total": 0,
+      "max_rendered_tokens": 626,
+      "planned_mix_bucket": "math",
+      "purpose": "math",
+      "raw_evidence": {
+        "bytes": 4161937,
+        "done_path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/gsm8k.jsonl.done.json",
+        "license": "mit",
+        "path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/gsm8k.jsonl",
+        "required_fields": [
+          "answer",
+          "question"
+        ],
+        "revision": "740312add88f781978c0658806c59bc2815b9866",
+        "rows": 7473,
+        "sha256": "9556bf9d7dba73d7fcaaeff6ca814c71684db1d8e8d485d83ec62f1c428b888d"
+      },
+      "raw_rows_read": 7473,
+      "rendered_tokens": 1690450,
+      "source_id": "gsm8k",
+      "unique_chunks": 7473
+    },
+    "mbpp": {
+      "adapted_conversations": 374,
+      "assistant_markers": 374,
+      "assistant_messages": 374,
+      "assistant_target_tokens": 33042,
+      "assistant_target_tokens_before_exact_dedup": 33042,
+      "chunks_before_exact_dedup": 374,
+      "closed_assistant_spans": 374,
+      "dropped_overlength_turns": 0,
+      "duplicate_first_source": {},
+      "invalid_examples": [],
+      "invalid_total": 0,
+      "max_rendered_tokens": 578,
+      "planned_mix_bucket": "code",
+      "purpose": "code",
+      "raw_evidence": {
+        "bytes": 213530,
+        "done_path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/mbpp.jsonl.done.json",
+        "license": "cc-by-4.0",
+        "path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/mbpp.jsonl",
+        "required_fields": [
+          "code",
+          "task_id",
+          "test_list",
+          "text"
+        ],
+        "revision": "4bb6404fdc6cacfda99d4ac4205087b89d32030c",
+        "rows": 374,
+        "sha256": "ed96f616fad7da6e881ec9a03c9d1ba0713ed444329133961cd259f05c9fc172"
+      },
+      "raw_rows_read": 374,
+      "rendered_tokens": 86445,
+      "source_id": "mbpp",
+      "unique_chunks": 374
+    },
+    "oasst1": {
+      "adapted_conversations": 3855,
+      "assistant_markers": 5212,
+      "assistant_messages": 5212,
+      "assistant_target_tokens": 1430203,
+      "assistant_target_tokens_before_exact_dedup": 1430203,
+      "chunks_before_exact_dedup": 4115,
+      "closed_assistant_spans": 5212,
+      "conversations_dropped_all_turns": 229,
+      "conversations_split": 485,
+      "conversations_with_overlength_turns": 445,
+      "dropped_overlength_turns": 482,
+      "duplicate_first_source": {},
+      "invalid_examples": [],
+      "invalid_total": 0,
+      "max_rendered_tokens": 768,
+      "multiturn_chunks": 1086,
+      "oasst_rebuild": {
+        "eligible_nodes": 41725,
+        "incomplete_roots": 12,
+        "language_counts_all_rows": {
+          "ar": 56,
+          "ca": 1158,
+          "cs": 12,
+          "da": 44,
+          "de": 3050,
+          "en": 39283,
+          "es": 22763,
+          "eu": 250,
+          "fi": 18,
+          "fr": 2474,
+          "hu": 75,
+          "id": 12,
+          "it": 554,
+          "ja": 363,
+          "ko": 24,
+          "pl": 304,
+          "pt-BR": 1165,
+          "ru": 7242,
+          "sv": 1,
+          "th": 1460,
+          "tr": 37,
+          "uk-UA": 587,
+          "vi": 191,
+          "zh": 3314
+        },
+        "languages": [
+          "en",
+          "zh"
+        ],
+        "network_used": false,
+        "roots": 3867,
+        "selection_policy": "one deterministic root-to-leaf path per tree; prefer reviewed, lower-rank, non-synthetic child"
+      },
+      "planned_mix_bucket": "multiturn",
+      "purpose": "multiturn",
+      "raw_evidence": {
+        "bytes": 137489537,
+        "done_path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/oasst1_train.jsonl.done.json",
+        "license": "apache-2.0",
+        "path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/oasst1_train.jsonl",
+        "required_fields": [
+          "message_id",
+          "message_tree_id",
+          "role",
+          "text"
+        ],
+        "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+        "rows": 84437,
+        "sha256": "41d3aa121cf5c7715410b92d1d1f31f93e5e3043469831e74f62136aa5f8f84e"
+      },
+      "raw_rows_read": 84437,
+      "rendered_tokens": 1664430,
+      "source_id": "oasst1",
+      "unique_chunks": 4115
+    },
+    "strict_format_v1": {
+      "adapted_conversations": 500,
+      "assistant_markers": 500,
+      "assistant_messages": 500,
+      "assistant_target_tokens": 18732,
+      "assistant_target_tokens_before_exact_dedup": 18732,
+      "chunks_before_exact_dedup": 500,
+      "closed_assistant_spans": 500,
+      "dropped_overlength_turns": 0,
+      "duplicate_first_source": {},
+      "generator_rows_requested": 500,
+      "invalid_examples": [],
+      "invalid_total": 0,
+      "max_rendered_tokens": 126,
+      "planned_mix_bucket": "strict_format",
+      "purpose": "strict_format",
+      "rendered_tokens": 47751,
+      "source_id": "strict_format_v1",
+      "strict_category:arithmetic_json": 100,
+      "strict_category:bullets": 100,
+      "strict_category:csv": 100,
+      "strict_category:json": 100,
+      "strict_category:xml": 100,
+      "unique_chunks": 500
+    },
+    "translation_bilingual_v1": {
+      "adapted_conversations": 104096,
+      "assistant_markers": 95242,
+      "assistant_messages": 95242,
+      "assistant_target_tokens": 5812124,
+      "assistant_target_tokens_before_exact_dedup": 5820146,
+      "chunks_before_exact_dedup": 95610,
+      "closed_assistant_spans": 95242,
+      "conversations_dropped_all_turns": 8486,
+      "conversations_with_overlength_turns": 8486,
+      "dropped_overlength_turns": 8486,
+      "duplicate_first_source": {
+        "translation_bilingual_v1": 368
+      },
+      "exact_duplicate_assistant_target_tokens": 8022,
+      "exact_duplicate_chunks": 368,
+      "invalid_examples": [],
+      "invalid_total": 0,
+      "max_rendered_tokens": 768,
+      "missing_aligned_pairs": 2,
+      "planned_mix_bucket": "summarization_translation",
+      "purpose": "translation",
+      "raw_evidence": {
+        "bytes": 78401244,
+        "done_path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/alpaca_gpt4_zh.jsonl.done.json",
+        "license": "apache-2.0",
+        "path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/alpaca_gpt4_zh.jsonl",
+        "required_fields": [
+          "input_zh",
+          "instruction_zh",
+          "output_zh"
+        ],
+        "revision": "81a6dfd72f416aff605e7d189bfbbc46a2511fee",
+        "rows": 52049,
+        "sha256": "18882029d73f63025bedb212dab339ab4d3d19d1c73298ce726b064bb5e73637"
+      },
+      "raw_rows_read": 52049,
+      "rendered_tokens": 15863490,
+      "source_id": "translation_bilingual_v1",
+      "translation_field:instruction": 52049,
+      "translation_field:output": 52047,
+      "unique_chunks": 95242
+    },
+    "ultrachat_200k": {
+      "adapted_conversations": 207865,
+      "assistant_markers": 519464,
+      "assistant_messages": 519464,
+      "assistant_target_tokens": 189041351,
+      "assistant_target_tokens_before_exact_dedup": 189041351,
+      "chunks_before_exact_dedup": 424132,
+      "closed_assistant_spans": 519464,
+      "conversations_dropped_all_turns": 13401,
+      "conversations_split": 130646,
+      "conversations_with_overlength_turns": 101394,
+      "dropped_overlength_turns": 138261,
+      "duplicate_first_source": {},
+      "invalid_conversations": 23,
+      "invalid_examples": [
+        {
+          "error": "turn has no assistant message",
+          "kind": "invalid_conversations",
+          "reference": 12619
+        },
+        {
+          "error": "turn has no assistant message",
+          "kind": "invalid_conversations",
+          "reference": 18426
+        },
+        {
+          "error": "turn has no assistant message",
+          "kind": "invalid_conversations",
+          "reference": 26363
+        },
+        {
+          "error": "turn has no assistant message",
+          "kind": "invalid_conversations",
+          "reference": 36177
+        },
+        {
+          "error": "turn has no assistant message",
+          "kind": "invalid_conversations",
+          "reference": 38928
+        }
+      ],
+      "invalid_total": 23,
+      "max_rendered_tokens": 768,
+      "multiturn_chunks": 79918,
+      "planned_mix_bucket": "english_general",
+      "purpose": "english_general",
+      "raw_evidence": {
+        "bytes": 1441838789,
+        "done_path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/ultrachat_200k.jsonl.done.json",
+        "license": "mit",
+        "path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/ultrachat_200k.jsonl",
+        "required_fields": [
+          "messages",
+          "prompt",
+          "prompt_id"
+        ],
+        "revision": "8049631c405ae6576f93f445c6b8166f76f5505a",
+        "rows": 207865,
+        "sha256": "b6ebc10839a3f05505c70c8a1fecaab6e580d339009a2db86de4de7f416cbe51"
+      },
+      "raw_rows_read": 207865,
+      "rendered_tokens": 227804772,
+      "source_id": "ultrachat_200k",
+      "unique_chunks": 424132
+    }
+  },
+  "status": "capacity_profiled_not_trainable",
+  "strict_format_projection": {
+    "current_generator_rows": 500,
+    "measured_assistant_target_tokens": 18732,
+    "measured_unique_chunks": 500,
+    "projected_rows_for_total_eligible_target": 647022,
+    "projected_rows_for_train_target": 640615,
+    "projection_assumption": "linear scaling at the measured deterministic generator assistant-target-token average",
+    "total_eligible_target_assistant_tokens": 24240000,
+    "train_target_assistant_tokens": 24000000
+  },
+  "summarization_translation_breakdown": {
+    "combined": 5922924,
+    "summarization": 110800,
+    "translation": 5812124
+  },
+  "target_assistant_tokens": 160000000,
+  "tokenizer": {
+    "class": "PreTrainedTokenizerFast",
+    "files": {
+      "tokenizer.json": {
+        "sha256": "71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668",
+        "size_bytes": 451182
+      },
+      "tokenizer_config.json": {
+        "sha256": "d7cd6a60c9f191c4f9ffec69b2eb289ad2f960366724f328b681ae1e46e4c110",
+        "size_bytes": 13308
+      }
+    },
+    "path": "/data/projects/minimind-lab-data-v1/minimind/model",
+    "vocab_size": 6400
+  },
+  "total_eligible_target_assistant_tokens": 161600000,
+  "train_target_assistant_tokens": 160000000,
+  "trainable": false,
+  "training_schema_contract": {
+    "message_keys": [
+      "role",
+      "content",
+      "reasoning_content",
+      "tools",
+      "tool_calls"
+    ],
+    "optional_values": "explicit null",
+    "provenance": "sidecar only in the later formal builder",
+    "top_level_keys": [
+      "conversations"
+    ]
+  }
+}

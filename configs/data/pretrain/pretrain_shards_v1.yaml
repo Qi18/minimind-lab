@@ -1,0 +1,116 @@
+schema_version: 2
+endpoint: "https://hf-mirror.com"
+object_selection:
+  seed: 42
+  algorithm: "lowest_sha256(seed|fixed-object-v1|path)"
+  note: "Paths are materialized explicitly below; the algorithm documents how the fixed pool was selected."
+sources:
+  - id: chinese_webtext2
+    repo_id: CASIA-LM/ChineseWebText2.0
+    revision: 9b647306646e5ddd85cc239870fc39bfb60e9531
+    declared_license: apache-2.0
+    format: jsonl_gzip
+    text_field: text
+    objects:
+      - {path: ChineseWebText2.0/part-0109.jsonl.gz}
+      - {path: ChineseWebText2.0/part-0127.jsonl.gz}
+      - {path: ChineseWebText2.0/part-0063.jsonl.gz}
+      - {path: ChineseWebText2.0/part-0068.jsonl.gz}
+      - {path: ChineseWebText2.0/part-0066.jsonl.gz}
+      - {path: ChineseWebText2.0/part-0042.jsonl.gz}
+      - {path: ChineseWebText2.0/part-0090.jsonl.gz}
+      - {path: ChineseWebText2.0/part-0060.jsonl.gz}
+
+  - id: fineweb_edu
+    repo_id: HuggingFaceFW/fineweb-edu
+    revision: 87f09149ef4734204d70ed1d046ddc9ca3f2b8f9
+    declared_license: odc-by
+    format: parquet
+    text_field: text
+    objects:
+      - {path: sample/10BT/012_00000.parquet}
+      - {path: sample/10BT/011_00000.parquet}
+      - {path: sample/10BT/007_00000.parquet}
+      - {path: sample/10BT/013_00000.parquet}
+      - {path: sample/10BT/002_00000.parquet}
+      - {path: sample/10BT/003_00000.parquet}
+      - {path: sample/10BT/001_00000.parquet}
+      - {path: sample/10BT/000_00000.parquet}
+
+  - id: wikipedia_zh
+    repo_id: wikimedia/wikipedia
+    revision: b04c8d1ceb2f5cd4588862100d08de323dccfbaa
+    declared_license: [cc-by-sa-3.0, gfdl]
+    format: parquet
+    text_field: text
+    objects:
+      - {path: 20231101.zh/train-00001-of-00006.parquet}
+      - {path: 20231101.zh/train-00004-of-00006.parquet}
+      - {path: 20231101.zh/train-00002-of-00006.parquet}
+      - {path: 20231101.zh/train-00000-of-00006.parquet}
+      - {path: 20231101.zh/train-00005-of-00006.parquet}
+      - {path: 20231101.zh/train-00003-of-00006.parquet}
+
+  - id: wikipedia_en
+    repo_id: wikimedia/wikipedia
+    revision: b04c8d1ceb2f5cd4588862100d08de323dccfbaa
+    declared_license: [cc-by-sa-3.0, gfdl]
+    format: parquet
+    text_field: text
+    objects:
+      - {path: 20231101.en/train-00018-of-00041.parquet}
+      - {path: 20231101.en/train-00035-of-00041.parquet}
+      - {path: 20231101.en/train-00040-of-00041.parquet}
+      - {path: 20231101.en/train-00009-of-00041.parquet}
+      - {path: 20231101.en/train-00024-of-00041.parquet}
+      - {path: 20231101.en/train-00025-of-00041.parquet}
+      - {path: 20231101.en/train-00004-of-00041.parquet}
+      - {path: 20231101.en/train-00026-of-00041.parquet}
+
+  - id: finemath
+    repo_id: HuggingFaceTB/finemath
+    revision: e92b25a616738fe95dc186b64dfb19f9c8525594
+    declared_license: odc-by
+    format: parquet
+    text_field: text
+    objects:
+      - {path: finemath-4plus/train-00033-of-00064.parquet}
+      - {path: finemath-4plus/train-00028-of-00064.parquet}
+      - {path: finemath-4plus/train-00050-of-00064.parquet}
+      - {path: finemath-4plus/train-00045-of-00064.parquet}
+      - {path: finemath-4plus/train-00024-of-00064.parquet}
+      - {path: finemath-4plus/train-00014-of-00064.parquet}
+      - {path: finemath-4plus/train-00062-of-00064.parquet}
+      - {path: finemath-4plus/train-00058-of-00064.parquet}
+
+  - id: stack_v3_code
+    repo_id: HuggingFaceCode/stack-v3-train
+    revision: df4b205fbba4cc1c2fd1f205b10d66f730798bb9
+    release: "The Stack v3.1"
+    declared_license: odc-by
+    format: parquet
+    text_field: content
+    record_layout: stack_v3_files
+    filters:
+      license_type: permissive
+      is_vendor: false
+      require_detected_licenses: true
+      allowed_languages_count: 14
+      allowed_languages: [Python, "C++", C, JavaScript, Java, SQL, PHP, "C#", TypeScript, Shell, Swift, Go, Rust, Ruby]
+    objects:
+      - {path: data/part-03266-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}
+      - {path: data/part-03088-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}
+      - {path: data/part-04847-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}
+      - {path: data/part-07450-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}
+      - {path: data/part-01280-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}
+      - {path: data/part-07228-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}
+      - {path: data/part-06681-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}
+      - {path: data/part-01394-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}
+      - {path: data/part-06013-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}
+      - {path: data/part-05196-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}
+      - {path: data/part-03736-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}
+      - {path: data/part-06890-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}
+      - {path: data/part-04300-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}
+      - {path: data/part-02516-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}
+      - {path: data/part-04382-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}
+      - {path: data/part-06212-990b4288-3824-41ac-94a0-b6fd6fa23ffe-c000.snappy.parquet}

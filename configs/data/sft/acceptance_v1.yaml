@@ -1,0 +1,168 @@
+schema_version: 1
+name: minimind-sft-v1-32m-formal-acceptance
+status: design_pending_implementation
+data_config: configs/data/sft/build_v1.yaml
+source_config: configs/data/sft/sources_v1.yaml
+tokenizer: minimind/model
+sequence_length: 768
+seed: 42
+
+budgets:
+  unit: shifted_assistant_loss_target_tokens
+  train: 32000000
+  validation: 160000
+  test: 160000
+  bucket_weights:
+    chinese_general: 0.30
+    english_general: 0.15
+    multiturn: 0.10
+    strict_format: 0.15
+    math: 0.10
+    tool_call: 0.10
+    summarization_translation: 0.05
+    code: 0.05
+  quota_rule:
+    minimum: target
+    maximum_overshoot: less_than_one_selected_complete_record
+  record_reuse_across_buckets_or_splits: false
+
+capacity_gate:
+  report: capacity_profile.json
+  count_only:
+    - schema_valid
+    - exact_deduplicated
+    - complete_turn
+    - fits_sequence_length
+    - shifted_assistant_targets_gt_zero
+  every_split_bucket_must_meet_quota: true
+  source_capacity_must_be_measured_before_selection: true
+
+training_schema_gate:
+  top_level_keys_exact: [conversations]
+  message_keys_exact: [role, content, reasoning_content, tools, tool_calls]
+  optional_message_values: explicit_null
+  allowed_roles: [system, user, assistant, tool]
+  invalid_json_max: 0
+  invalid_conversation_max: 0
+  tool_call_parse_errors_max: 0
+  tool_call_response_pair_errors_max: 0
+  provenance_in_training_payload: false
+
+tokenizer_gate:
+  trainer_loader: minimind.dataset.lm_dataset.SFTDataset
+  sequence_length: 768
+  shifted_label_rule: labels[..., 1:] != -100
+  zero_target_rows_max: 0
+  non_assistant_supervised_tokens_max: 0
+  assistant_eos_unsupervised_max: 0
+  loader_profiler_token_mismatch_max: 0
+  train_time_augmentation: false
+
+complete_turn_gate:
+  truncation_policy: complete_turn_only
+  truncated_mid_message_max: 0
+  incomplete_assistant_eos_max: 0
+  partial_tool_exchange_max: 0
+
+origin_and_selection_gate:
+  one_bucket_per_origin_group: true
+  one_variant_family_per_origin_group: true
+  stable_dedup_priority_required: true
+  scan_order_changes_result_max: 0
+
+dedup_and_split_gate:
+  exact_conversation_duplicate_rate_max: 0.0
+  exact_user_prompt_overlap_across_splits_max: 0
+  near_user_prompt_overlap_across_splits_max: 0
+  near_grouping:
+    fingerprint: concatenated_normalized_user_messages
+    char_ngram: 5
+    min_normalized_chars: 50
+    jaccard_threshold: 0.85
+    num_perm: 128
+    seed: 42
+  group_exact_and_near_components_before_split: true
+  select_at_most_one_origin_per_near_component: true
+  selected_near_duplicate_pairs_max: 0
+  split_files_are_independent: true
+  trainer_must_not_resplit: true
+  test_must_not_select_checkpoints: true
+
+contamination_gate:
+  exact_overlap_max: 0
+  containment_overlap_max: 0
+  near_overlap_max: 0
+  eval_config: configs/data/sft/contamination_v1.yaml
+  fixed_evaluation_sets:
+    - ceval-valid
+    - cmmlu-test
+    - arc-easy-test
+    - openbookqa-test
+    - hellaswag-validation
+    - piqa-validation
+    - social-iqa-validation
+    - gsm8k-test
+    - mbpp-test
+  require_dataset_revisions: true
+  require_prompt_builder_sha: true
+  require_harness_commit: true
+  scan_scope: full_final_train_validation_test
+
+source_and_provenance_gate:
+  require_40_char_source_revision: true
+  require_declared_and_resolved_license_match: true
+  require_raw_rows_bytes_sha256: true
+  provenance_storage: sidecar_only
+  provenance_required_fields:
+    - source_id
+    - repo_id
+    - revision
+    - license
+    - source_record_locator
+    - source_record_sha256
+    - upstream_id
+    - origin_group_id
+    - raw_sha256
+    - transform_chain
+    - variant_family
+    - bucket
+    - split
+  derived_data_must_bind_generator_sha_seed_and_source: true
+
+derived_quality_gate:
+  reasoning:
+    required_source: numina_math_cot
+    excluded_numina_source_tags: [gsm8k, math]
+    minimum_reasoning_target_tokens: 8000000
+    final_answer_parse_policy: high_confidence_only
+    reasoning_final_roundtrip_failures_max: 0
+    reasoning_and_final_inside_assistant_target: true
+  strict_format:
+    projection_counts_as_capacity: false
+    actual_materialized_unique_capacity_required: true
+    unsupported_constraint_counts_as_capacity: false
+    verifier_failures_max: 0
+    minimum_verified_transform_families: 3
+    maximum_single_transform_family_fraction: 0.50
+    origin_reuse_max: 0
+    native_bucket_overlap_max: 0
+    variants_per_origin_max: 1
+  translation:
+    aligned_fields_required: true
+    empty_or_identical_pairs_max: 0
+  summarization:
+    source_category_must_equal: summarization
+  ultrachat_partition:
+    group_key: prompt_id
+    cross_bucket_group_overlap_max: 0
+    multiturn_min_assistant_messages_per_chunk: 2
+
+finalization_gate:
+  builder_status: pending_external_audit
+  independent_auditor_required: true
+  marker: _SUCCESS
+  marker_status: accepted
+  reject_tmp_or_partial_files: true
+  bind_config_source_tokenizer_builder_auditor_sha: true
+  bind_split_rows_bytes_sha256_tokens_bucket_mix: true
+  bind_eval_config_prompt_builder_and_harness_sha: true

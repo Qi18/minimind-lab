@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "resolved_at": "2026-08-28T14:20:08.503028+00:00",
+  "endpoint": "https://hf-mirror.com",
+  "source_config": "configs/data/sources_v1.yaml",
+  "all_enabled_sources_ready": true,
+  "sources": [
+    {
+      "id": "chinese_webtext2",
+      "repo_id": "CASIA-LM/ChineseWebText2.0",
+      "declared_revision": "9b647306646e5ddd85cc239870fc39bfb60e9531",
+      "declared_license": "apache-2.0",
+      "enabled_for_proxy": false,
+      "status": "ok",
+      "resolved_revision": "9b647306646e5ddd85cc239870fc39bfb60e9531",
+      "resolved_license": "apache-2.0",
+      "gated": false,
+      "private": false,
+      "disabled": false,
+      "revision_match": true,
+      "license_match": true
+    },
+    {
+      "id": "fineweb_edu",
+      "repo_id": "HuggingFaceFW/fineweb-edu",
+      "declared_revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "declared_license": "odc-by",
+      "enabled_for_proxy": false,
+      "status": "ok",
+      "resolved_revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "resolved_license": "odc-by",
+      "gated": false,
+      "private": false,
+      "disabled": false,
+      "revision_match": true,
+      "license_match": true
+    },
+    {
+      "id": "finemath",
+      "repo_id": "HuggingFaceTB/finemath",
+      "declared_revision": "e92b25a616738fe95dc186b64dfb19f9c8525594",
+      "declared_license": "odc-by",
+      "enabled_for_proxy": false,
+      "status": "ok",
+      "resolved_revision": "e92b25a616738fe95dc186b64dfb19f9c8525594",
+      "resolved_license": "odc-by",
+      "gated": false,
+      "private": false,
+      "disabled": false,
+      "revision_match": true,
+      "license_match": true
+    },
+    {
+      "id": "wikipedia_zh",
+      "repo_id": "wikimedia/wikipedia",
+      "declared_revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "declared_license": [
+        "cc-by-sa-3.0",
+        "gfdl"
+      ],
+      "enabled_for_proxy": false,
+      "status": "ok",
+      "resolved_revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "resolved_license": [
+        "cc-by-sa-3.0",
+        "gfdl"
+      ],
+      "gated": false,
+      "private": false,
+      "disabled": false,
+      "revision_match": true,
+      "license_match": true
+    },
+    {
+      "id": "wikipedia_en",
+      "repo_id": "wikimedia/wikipedia",
+      "declared_revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "declared_license": [
+        "cc-by-sa-3.0",
+        "gfdl"
+      ],
+      "enabled_for_proxy": false,
+      "status": "ok",
+      "resolved_revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "resolved_license": [
+        "cc-by-sa-3.0",
+        "gfdl"
+      ],
+      "gated": false,
+      "private": false,
+      "disabled": false,
+      "revision_match": true,
+      "license_match": true
+    },
+    {
+      "id": "ultrachat_200k",
+      "repo_id": "HuggingFaceH4/ultrachat_200k",
+      "declared_revision": "8049631c405ae6576f93f445c6b8166f76f5505a",
+      "declared_license": "mit",
+      "enabled_for_proxy": true,
+      "status": "ok",
+      "resolved_revision": "8049631c405ae6576f93f445c6b8166f76f5505a",
+      "resolved_license": "mit",
+      "gated": false,
+      "private": false,
+      "disabled": false,
+      "revision_match": true,
+      "license_match": true
+    },
+    {
+      "id": "oasst1",
+      "repo_id": "OpenAssistant/oasst1",
+      "declared_revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+      "declared_license": "apache-2.0",
+      "enabled_for_proxy": true,
+      "status": "ok",
+      "resolved_revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+      "resolved_license": "apache-2.0",
+      "gated": false,
+      "private": false,
+      "disabled": false,
+      "revision_match": true,
+      "license_match": true
+    },
+    {
+      "id": "gsm8k",
+      "repo_id": "openai/gsm8k",
+      "declared_revision": "740312add88f781978c0658806c59bc2815b9866",
+      "declared_license": "mit",
+      "enabled_for_proxy": true,
+      "status": "ok",
+      "resolved_revision": "740312add88f781978c0658806c59bc2815b9866",
+      "resolved_license": [
+        "mit"
+      ],
+      "gated": false,
+      "private": false,
+      "disabled": false,
+      "revision_match": true,
+      "license_match": true
+    },
+    {
+      "id": "mbpp",
+      "repo_id": "google-research-datasets/mbpp",
+      "declared_revision": "4bb6404fdc6cacfda99d4ac4205087b89d32030c",
+      "declared_license": "cc-by-4.0",
+      "enabled_for_proxy": true,
+      "status": "ok",
+      "resolved_revision": "4bb6404fdc6cacfda99d4ac4205087b89d32030c",
+      "resolved_license": [
+        "cc-by-4.0"
+      ],
+      "gated": false,
+      "private": false,
+      "disabled": false,
+      "revision_match": true,
+      "license_match": true
+    },
+    {
+      "id": "code_alpaca_20k",
+      "repo_id": "sahil2801/CodeAlpaca-20k",
+      "declared_revision": "152bb5e9a29651266b018106053980070a0521a1",
+      "declared_license": "cc-by-4.0",
+      "enabled_for_proxy": true,
+      "status": "ok",
+      "resolved_revision": "152bb5e9a29651266b018106053980070a0521a1",
+      "resolved_license": "cc-by-4.0",
+      "gated": false,
+      "private": false,
+      "disabled": false,
+      "revision_match": true,
+      "license_match": true
+    },
+    {
+      "id": "alpaca_gpt4_zh",
+      "repo_id": "silk-road/alpaca-data-gpt4-chinese",
+      "declared_revision": "81a6dfd72f416aff605e7d189bfbbc46a2511fee",
+      "declared_license": "apache-2.0",
+      "enabled_for_proxy": true,
+      "status": "ok",
+      "resolved_revision": "81a6dfd72f416aff605e7d189bfbbc46a2511fee",
+      "resolved_license": "apache-2.0",
+      "gated": false,
+      "private": false,
+      "disabled": false,
+      "revision_match": true,
+      "license_match": true
+    },
+    {
+      "id": "glaive_function_calling_v2",
+      "repo_id": "glaiveai/glaive-function-calling-v2",
+      "declared_revision": "e7f4b6456019f5d8bcb991ef0dd67d8ff23221ac",
+      "declared_license": "apache-2.0",
+      "enabled_for_proxy": true,
+      "status": "ok",
+      "resolved_revision": "e7f4b6456019f5d8bcb991ef0dd67d8ff23221ac",
+      "resolved_license": "apache-2.0",
+      "gated": false,
+      "private": false,
+      "disabled": false,
+      "revision_match": true,
+      "license_match": true
+    },
+    {
+      "id": "xlam_function_calling_60k",
+      "repo_id": "Salesforce/xlam-function-calling-60k",
+      "declared_revision": "26d14ebfe18b1f7b524bd39b404b50af5dc97866",
+      "declared_license": "cc-by-4.0",
+      "enabled_for_proxy": false,
+      "status": "ok",
+      "resolved_revision": "26d14ebfe18b1f7b524bd39b404b50af5dc97866",
+      "resolved_license": "cc-by-4.0",
+      "gated": "auto",
+      "private": false,
+      "disabled": false,
+      "revision_match": true,
+      "license_match": true
+    }
+  ]
+}

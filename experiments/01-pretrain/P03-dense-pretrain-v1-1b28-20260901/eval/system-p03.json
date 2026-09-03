@@ -1,0 +1,34 @@
+{
+  "status": "completed",
+  "started_at": "2026-09-01T08:07:46.518696Z",
+  "finished_at": "2026-09-01T08:54:08.449093Z",
+  "wall_seconds": 2781.930397,
+  "wall_minutes": 46.36550661666667,
+  "train_gpu_hours": 6.182067548888889,
+  "logged_points": 904,
+  "final_step": 9038,
+  "total_steps": 9038,
+  "final_loss": 2.5997,
+  "final_learning_rate": 5e-05,
+  "loss_mean_last_logged_points": {
+    "100": 2.608002,
+    "1000": 2.898444911504425
+  },
+  "loss_mean_first_100_logged_points": 4.050219,
+  "checkpoint_size_bytes": 137685299,
+  "token_slot_throughput_per_second_upper_bound": 638744.6306766819,
+  "token_slot_throughput_note": "Upper bound based on padded sequence slots; it is not effective non-padding token throughput.",
+  "gpu_telemetry": {
+    "sample_interval_seconds": 2.0,
+    "rows": 11080,
+    "active_rows": 10945,
+    "mean_gpu_util_percent_active": 99.63864778437643,
+    "median_gpu_util_percent_active": 100.0,
+    "mean_memory_used_mib_active": 15605.909913202375,
+    "peak_memory_used_mib": 16676.0,
+    "mean_power_w_per_gpu_active": 271.6892462311558,
+    "peak_power_w": 322.32,
+    "mean_temperature_c_active": 57.675102786660574,
+    "peak_temperature_c": 63.0
+  }
+}

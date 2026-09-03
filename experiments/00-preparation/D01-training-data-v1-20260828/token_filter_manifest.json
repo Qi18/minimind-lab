@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-30T15:55:49.351874+00:00",
+  "tokenizer": "minimind/model",
+  "sequence_length": 768,
+  "policy": "keep rows with at least one MiniMind assistant target after head truncation",
+  "splits": {
+    "train": {
+      "input": "/data/datasets/minimind-lab/data-v1/grouped/sft_proxy_v1.train.jsonl",
+      "input_sha256": "65cd1148df76ef3f049615a26b7f34d59e414f361b27398611c187ecef10d981",
+      "output": "/data/datasets/minimind-lab/data-v1/token-filtered/sft_v1.train.jsonl",
+      "output_sha256": "af657cbfbfd1aa52c7e25f789b610e73cb6efbb0dcecf40a0afb1850c0c3cbe2",
+      "rows_read": 5329,
+      "truncated_rows": 1122,
+      "rows_written": 5292,
+      "assistant_target_tokens": 1618976,
+      "zero_target_rows": 37,
+      "sources": {
+        "alpaca_gpt4_zh": {
+          "rows_read": 190,
+          "rows_written": 190,
+          "assistant_target_tokens": 24053
+        },
+        "code_alpaca_20k": {
+          "rows_read": 176,
+          "rows_written": 176,
+          "assistant_target_tokens": 15201
+        },
+        "glaive_function_calling_v2_conversations": {
+          "rows_read": 179,
+          "rows_written": 162,
+          "assistant_target_tokens": 41977,
+          "truncated_rows": 113,
+          "zero_target_rows": 17
+        },
+        "gsm8k": {
+          "rows_read": 181,
+          "rows_written": 181,
+          "assistant_target_tokens": 25213
+        },
+        "mbpp": {
+          "rows_read": 180,
+          "rows_written": 180,
+          "assistant_target_tokens": 15776
+        },
+        "oasst1_conversations": {
+          "rows_read": 3437,
+          "rows_written": 3428,
+          "assistant_target_tokens": 1367776,
+          "truncated_rows": 819,
+          "zero_target_rows": 9
+        },
+        "strict_format_v1": {
+          "rows_read": 449,
+          "rows_written": 449,
+          "assistant_target_tokens": 16873
+        },
+        "translation_bilingual_v1": {
+          "rows_read": 363,
+          "rows_written": 363,
+          "assistant_target_tokens": 20993,
+          "truncated_rows": 22
+        },
+        "ultrachat_200k": {
+          "rows_read": 174,
+          "truncated_rows": 168,
+          "rows_written": 163,
+          "assistant_target_tokens": 91114,
+          "zero_target_rows": 11
+        }
+      }
+    },
+    "validation": {
+      "input": "/data/datasets/minimind-lab/data-v1/grouped/sft_proxy_v1.validation.jsonl",
+      "input_sha256": "80e3ab1efa9689ec860ae0ba974d311bcea7548d9f9073af993431964b22fae2",
+      "output": "/data/datasets/minimind-lab/data-v1/token-filtered/sft_v1.validation.jsonl",
+      "output_sha256": "b071361e1fe75eed979eabffd8fe060ff395f3676c5727d8805cecfe9e098e3c",
+      "rows_read": 315,
+      "truncated_rows": 78,
+      "rows_written": 309,
+      "assistant_target_tokens": 102306,
+      "zero_target_rows": 6,
+      "sources": {
+        "alpaca_gpt4_zh": {
+          "rows_read": 3,
+          "rows_written": 3,
+          "assistant_target_tokens": 517
+        },
+        "code_alpaca_20k": {
+          "rows_read": 18,
+          "rows_written": 18,
+          "assistant_target_tokens": 1504
+        },
+        "glaive_function_calling_v2_conversations": {
+          "rows_read": 9,
+          "truncated_rows": 5,
+          "rows_written": 8,
+          "assistant_target_tokens": 2057,
+          "zero_target_rows": 1
+        },
+        "gsm8k": {
+          "rows_read": 8,
+          "rows_written": 8,
+          "assistant_target_tokens": 970
+        },
+        "mbpp": {
+          "rows_read": 5,
+          "rows_written": 5,
+          "assistant_target_tokens": 346
+        },
+        "oasst1_conversations": {
+          "rows_read": 214,
+          "rows_written": 212,
+          "assistant_target_tokens": 88973,
+          "truncated_rows": 58,
+          "zero_target_rows": 2
+        },
+        "strict_format_v1": {
+          "rows_read": 27,
+          "rows_written": 27,
+          "assistant_target_tokens": 999
+        },
+        "translation_bilingual_v1": {
+          "rows_read": 19,
+          "truncated_rows": 3,
+          "rows_written": 19,
+          "assistant_target_tokens": 1988
+        },
+        "ultrachat_200k": {
+          "rows_read": 12,
+          "truncated_rows": 12,
+          "rows_written": 9,
+          "assistant_target_tokens": 4952,
+          "zero_target_rows": 3
+        }
+      }
+    },
+    "test": {
+      "input": "/data/datasets/minimind-lab/data-v1/grouped/sft_proxy_v1.test.jsonl",
+      "input_sha256": "40a133552ca92eebfd2c847e987dccf15d9ee114823c6d662d6000bc0d05860e",
+      "output": "/data/datasets/minimind-lab/data-v1/token-filtered/sft_v1.test.jsonl",
+      "output_sha256": "4eea0091cbacb4a0518547aa3b167f4572670abd79d83f533c288917bcc3d567",
+      "rows_read": 311,
+      "rows_written": 307,
+      "assistant_target_tokens": 101071,
+      "truncated_rows": 72,
+      "zero_target_rows": 4,
+      "sources": {
+        "alpaca_gpt4_zh": {
+          "rows_read": 7,
+          "rows_written": 7,
+          "assistant_target_tokens": 1157
+        },
+        "code_alpaca_20k": {
+          "rows_read": 6,
+          "rows_written": 6,
+          "assistant_target_tokens": 229
+        },
+        "glaive_function_calling_v2_conversations": {
+          "rows_read": 12,
+          "truncated_rows": 9,
+          "zero_target_rows": 1,
+          "rows_written": 11,
+          "assistant_target_tokens": 4188
+        },
+        "gsm8k": {
+          "rows_read": 11,
+          "rows_written": 11,
+          "assistant_target_tokens": 1669
+        },
+        "mbpp": {
+          "rows_read": 15,
+          "rows_written": 15,
+          "assistant_target_tokens": 991
+        },
+        "oasst1_conversations": {
+          "rows_read": 204,
+          "rows_written": 203,
+          "assistant_target_tokens": 84452,
+          "truncated_rows": 49,
+          "zero_target_rows": 1
+        },
+        "strict_format_v1": {
+          "rows_read": 24,
+          "rows_written": 24,
+          "assistant_target_tokens": 860
+        },
+        "translation_bilingual_v1": {
+          "rows_read": 18,
+          "rows_written": 18,
+          "assistant_target_tokens": 802
+        },
+        "ultrachat_200k": {
+          "rows_read": 14,
+          "truncated_rows": 14,
+          "rows_written": 12,
+          "assistant_target_tokens": 6723,
+          "zero_target_rows": 2
+        }
+      }
+    }
+  },
+  "quarantine": {
+    "path": "/data/datasets/minimind-lab/data-v1/token-filtered/quarantine/sft_zero_target.jsonl",
+    "rows": 47,
+    "sha256": "66621d4de527bdcc55823bf9c01ae52eb446d9ddd21ab9682c4470a308a72c8d"
+  },
+  "render_errors": 0,
+  "passed": true
+}
