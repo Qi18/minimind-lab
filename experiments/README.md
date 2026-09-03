@@ -28,6 +28,10 @@ experiments/<stage>/<experiment-id>/
 
 `registry.csv` 是全局索引。实验开始时登记为 `planned/running`，完成统一评测和报告后才能改为 `completed`。
 
+`status` 取值：`planned`、`running`、`awaiting-report`（训练与评测已完成，但实验目录的 `report.md` / `run.json` / `metrics.csv` 尚未回填）、`completed`、`invalidated`。
+
+`swanlab_url` 不留空：无云端 run 写 `n/a-no-cloud-run`，不训练模型的准备实验写 `n/a-no-training`（对应计划 16.5）。`lab_commit` 是定位证据的唯一可靠指针：当某个实验的资产尚未合入 `main`（例如 P02 在 `stage5/p02-dense-pretrain-full`、P03 在 `data/v1`），`report_path` 指的是该 ref 上的路径，用 `git show <ref>:<path>` 回读，不能假设 `main` 已收录。
+
 使用模板创建实验，避免遗漏追溯文件：
 
 ```bash

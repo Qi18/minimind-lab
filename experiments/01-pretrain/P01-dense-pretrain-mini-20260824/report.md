@@ -16,7 +16,7 @@
 - 数据：`pretrain_t2t_mini.jsonl`，1,270,238 行，1,241,043,656 bytes；
 - 数据 SHA-256：`6dd6716c84ab36897bdbfc7f88e04f4441c48c1ab7ecee88ce0b0e7d4685560c`；
 - 训练 commit：`64d2908c8300985357993a66011e2b6114104fd1`；
-- SwanLab：[run 7iochx9kfe75qa2pt6d1u](https://swanlab.cn/@richliu0153/MiniMind-Lab-Stage3/runs/7iochx9kfe75qa2pt6d1u)。
+- SwanLab：[P01-Pretrain-Mini-64M-Seq768](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/nfax3tyg0j217j1cz8y0b)（由原 `MiniMind-Lab-Stage3/7iochx9kfe75qa2pt6d1u` 同步）。
 
 ## Training result
 

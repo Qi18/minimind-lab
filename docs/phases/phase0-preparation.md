@@ -205,7 +205,7 @@ Dataset 语义（`results/sample_transformations.json` + 合成 fixture）：Pre
 - E01 的 `data_manifest.json` 只覆盖 6 个文件。官方全量 `pretrain_t2t.jsonl`（8,275,074,893 B，2026-08-24 下载，P02 使用）不在其中，其身份记录在 P02 资产而非 Phase 0，因此"官方数据身份已固定"这句话严格只对上述 6 个文件成立。
 - MoE 在本阶段只做了结构拆解与单卡 forward/backward，没有训练、吞吐或质量结论；上游"原生 PyTorch MoE 约慢 50%"未验证，留给 Phase 7。
 - 环境记录是 2026-08-23 的快照。到 2026-09-03，`/data/venvs/minimind-lab` 在当前会话环境中已不存在，Phase 1 的补充审计改用系统 `python3` + transformers 4.51.1，与本阶段记录的 4.57.6 不同版本——跨阶段复算必须各自标注版本，不能默认"同一环境"。
-- Phase 0 没有固定 SwanLab project 命名口径，这直接导致 P01 落在 `MiniMind-Lab-Stage3`、P02/P03 落在 `MiniMind-Lab`，三者无法在 SwanLab 界面叠图（见 Phase 1 报告 §2.1）。
+- Phase 0 没有固定 SwanLab project 命名口径，导致 P01 最初落在 `MiniMind-Lab-Stage3`、P02 落在 `MiniMind-Lab-Stage5`，直到 2026-09-01 才被手工同步到统一 project `MiniMind-Lab`（stage5 收口 commit `5761979`）。代价是旧 run id 作废、早期文档与 registry 全部需返工回填（见 Phase 1 报告 §2.1）；阶段开始前就定下 tracking 命名口径是一条应当写进 Phase 0 的验收项。
 - 公开记录不保存公网 IP、ACL、集群 ID、账号或凭据；E00 中与网络白名单相关的细节被刻意省略，这部分不可复现由安全约束造成，不是证据缺失。
 
 ## 8. 下一阶段前置条件与未解决问题
@@ -240,3 +240,4 @@ Phase 0 报告转 accepted 前必须完成（前三项已于 2026-09-03 完成�
 |---|---|---|
 | 2026-09-03 | 首次出具（draft） | 补齐 Phase 0 阶段报告，并记录 3 处证据缺口与 2 项 partial 门 |
 | 2026-09-03 | 修复§8 第 1、3 条：回填 E00 的 SwanLab 时间线证据（artifact + report + registry），恢复 `docs/source_reading/` 与 `docs/upstream-minimind.md`；同步更新 §2.1、§5、§6、§9 | 消除“报告与 artifact 矛盾”和“产物引用断裂”两处证据缺口 |
+| 2026-09-03 | §7 修正 SwanLab project 结论：P01/P02 的 run 已同步到统一 project，原写“三者无法叠图”不准确 | 排查 registry 缺行时发现 stage5 收口 commit `5761979` 已做过 project 合并 |
