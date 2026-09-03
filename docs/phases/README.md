@@ -7,7 +7,7 @@
 | Phase | 阶段 | 报告 | 状态 |
 |---|---|---|---|
 | 0 | 环境、数据与代码探针 | [`phase0-preparation.md`](phase0-preparation.md) | draft |
-| 1 | Pretrain 基线与数据重做 | [`phase1-pretrain.md`](phase1-pretrain.md) | draft |
+| 1 | Pretrain 基线与数据重做 | [`phase1-pretrain.md`](phase1-pretrain.md) | accepted |
 | 2 | SFT（官方数据优先，必要时自建） | `phase2-sft.md` | 未开始 |
 | 3 | Full FT vs LoRA | `phase3-lora.md` | 未开始 |
 | 4 | DPO 偏好优化 | `phase4-dpo.md` | 未开始 |

@@ -1,7 +1,7 @@
 {
   "experiment_id": "P03-dense-pretrain-v1-1b28-20260901",
   "stage": "01-pretrain",
-  "status": "planned",
+  "status": "completed",
   "protocol_version": "2026-09-01",
   "experiment_class": "quality-cost new baseline",
   "causal_claim_boundary": "This is not a single-variable data A/B against P01 or P02 because the dataset composition, validation protocol, training entry, and micro-batch decomposition differ.",
@@ -184,8 +184,8 @@
   "baselines": {
     "p02": {
       "experiment_id": "P02-dense-pretrain-full-20260824",
-      "new_validation_nll": null,
-      "new_validation_nll_state": "must be measured with the P03 exact validation protocol before acceptance is decided",
+      "new_validation_nll": 3.1909593534211815,
+      "new_validation_nll_state": "measured with the P03 exact validation protocol",
       "seven_task_percent": {
         "ceval-valid": 23.03120356612184,
         "cmmlu": 25.125194266965983,

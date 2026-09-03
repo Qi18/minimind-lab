@@ -1,0 +1,5 @@
+# sha256 size_bytes path role
+0cfb7fc8fd9b3111f30b5528a1c8aacf8d6f633c8cde13c707c7cb44c83fd4fd 137685299 /data/artifacts/minimind-lab/P03-dense-pretrain-v1-1b28-20260901/formal-b32-a1-epoch1/checkpoints/p03_formal_b32_a1_768.pth final_inference_checkpoint
+e245d275308a0fd2bca8f25be95b94da52e0bbae2f0269993057e80443a1f407 137686154 /data/artifacts/minimind-lab/P03-dense-pretrain-v1-1b28-20260901/formal-b32-a1-epoch1/checkpoints/p03_formal_b32_a1_best_val_768.pth best_validation_checkpoint
+8dbfa7e402f108be38427b77966b88814f2bbdd40ac9b0fa4630dbd17790f374 786719813 /data/artifacts/minimind-lab/P03-dense-pretrain-v1-1b28-20260901/formal-b32-a1-epoch1/resume/p03_formal_b32_a1_768_resume.pth resume_checkpoint
+fe6df50779ad9622bae2079dfeb3e52e0e2d74881edc7824903a754a8f8ddf07 127834168 /data/artifacts/minimind-lab/P03-dense-pretrain-v1-1b28-20260901/formal-b32-a1-epoch1/exported-base/model.safetensors hf_export

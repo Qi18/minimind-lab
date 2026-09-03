@@ -1,0 +1,3 @@
+probe: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/d9is4iayxaw41ba95u92s
+formal: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/qdpjh47fjt98184oos4bl
+evaluation: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/k9st16wqu3i7ijy2d7q9h

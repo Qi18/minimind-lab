@@ -1,6 +1,15 @@
 # P03 Dense Pretrain V1 1B28（8×L20）
 
-状态：训练前方案已冻结；尚未启动 100-step probe 或正式训练。
+状态：正式训练与统一评测已完成；实验通过 accepted 门，因固定续写仍明显复读，未标记为 release candidate。
+
+## 已完成结果
+
+- `B32×8/A1` 100-step probe 和 9,038-step 正式训练均正常退出；
+- final validation NLL/PPL：`2.60432 / 13.5221`；
+- 七项 Base 0-shot macro：`31.52%`；
+- wall：46.45 分钟，8 卡合计 6.19 GPU-hours；
+- 5 个固定 greedy prompt 为 4/5 非空、0 个立即 EOS，但仍存在明显复读；
+- 正式结论、验收边界和证据见 [`report.md`](report.md)、[`run.json`](run.json) 与 [`artifacts_manifest.json`](artifacts_manifest.json)。
 
 ## 目的与结论边界
 
@@ -72,7 +81,7 @@ launcher 会先验证同 profile probe 的 exit 0、`optimizer_step=100`、9,038
 
 probe/formal 的目录、checkpoint 和 SwanLab run name 相互隔离，也不覆盖 P01/P02。正式 run 每 250 optimizer steps 保存可续训状态，每 1,000 步精确 validation，结束时必做 final validation/checkpoint。纯推理 checkpoint 保持 FP16；resume state 以原始训练 dtype 保存模型主权重并包含 optimizer/scaler，使用临时文件加原子替换。续训必须使用同一 profile、同一目录并显式设 `FROM_RESUME=1`；resume contract 会额外固定 dataset fingerprint、trainer SHA 和 protocol SHA，拒绝 world size、batch、accumulation、seq、epoch 或完整 schedule 变化。每次续训写入新的 attempt 子目录，不覆盖既有 driver/runtime/GPU/exit 日志。
 
-预估纯训练 78–84 分钟；计入 validation、导出和七项评测后约 90–105 分钟，以 probe step time 修正。
+训练前曾预估纯训练 78–84 分钟；实际 launcher wall 为 46.45 分钟。该差异保留用于说明 probe 之后的时间估算需要按实测 profile 更新。
 
 ## Validation、记录与产物
 
@@ -85,7 +94,9 @@ SwanLab project 固定为 `MiniMind-Lab`；run names 区分 `Probe` 与 `Full`�
 固定 Base 协议：lm-evaluation-harness 0.4.12（commit `6d642546f4688648fced259eb3302efd36ece5af`）、0-shot、无 chat template、batch 16、单卡 L20、seed 42；七项 C-Eval、CMMLU、ARC-Easy、PIQA、OpenBookQA、HellaSwag、Social IQA，共 29,638 samples/112,919 requests。导出必须 strict load 并记录 checkpoint/export SHA；另做 5 个固定 greedy continuation。
 
 1. 技术完成：exit 0、9,038 updates、无 NaN/Inf/OOM/NCCL failure、strict export+SHA、validation 11,525 rows/6.4M targets、七项 29,638 samples/112,919 requests。
-2. 实验接受：同一新 validation NLL ≤ P02；七项 macro ≥ 30.91%；任一任务相对 P02 不退化超过 2pp。P02 新 validation NLL 尚待同协议补测，写入前不能判定该门。
+2. 实验接受：已通过。同一 validation 上 P03 NLL 2.60432 ≤ P02 3.19096；七项 macro 31.52% ≥ 30.91%；任一任务相对 P02 回退不超过 2pp。
 3. Release candidate：macro ≥ 31.44%；5 个 greedy 至少 3 个非空且无明显重复退化；median GPU util ≥ 95%。P02 的 379,311.32 token-slots/s 使用 `6,504,059,136 / 17,147.02s` 的 launcher 端到端口径，90% 为 341,380.19；P03 当前把 active、training-loop wall 和 launcher wall 分开报告，因此该数值只作参考，不作为“同口径”硬门，直至两者按同一 wall-clock 边界重算。
 
-机器可读冻结项和 P01/P02 基线见 `config.json`。
+3. Release candidate：未通过。macro、非空续写数量和 GPU 利用率达到数值门，但固定续写仍有明显重复。
+
+机器可读冻结项和 P01/P02 基线见 `config.json`；实际运行状态以 `run.json` 为准。

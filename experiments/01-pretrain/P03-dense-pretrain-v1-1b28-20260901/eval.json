@@ -1,0 +1,47 @@
+{
+  "status": "completed",
+  "protocol": "docs/evaluation_protocol.md",
+  "evaluation_lab_commit": "222e39c934d7bb4d96472ceb40d22f8aa7fc578b",
+  "harness_commit": "6d642546f4688648fced259eb3302efd36ece5af",
+  "apply_chat_template": false,
+  "metric_rule": "acc_norm when available, otherwise acc",
+  "tasks": [
+    "ceval-valid",
+    "cmmlu",
+    "arc_easy",
+    "piqa",
+    "openbookqa",
+    "hellaswag",
+    "social_iqa"
+  ],
+  "direct_baselines": [
+    "P01-dense-pretrain-mini-20260824",
+    "P02-dense-pretrain-full-20260824"
+  ],
+  "validation": {
+    "rows": 11525,
+    "target_tokens": 6400000,
+    "nll": 2.604323646843452,
+    "ppl": 13.522076510058342,
+    "raw_result": "eval/validation-p03-exact.json"
+  },
+  "results_percent": {
+    "ceval-valid": 23.179791976225854,
+    "cmmlu": 25.634605422206874,
+    "arc_easy": 31.64983164983165,
+    "piqa": 51.90424374319913,
+    "openbookqa": 26.0,
+    "hellaswag": 28.00238996215893,
+    "social_iqa": 34.28863868986694,
+    "macro_average": 31.52278592049848
+  },
+  "fixed_greedy_continuations": {
+    "prompts": 5,
+    "immediate_eos": 0,
+    "non_empty": 4,
+    "obvious_repetition": 5,
+    "release_candidate_gate": "failed"
+  },
+  "raw_results": "eval/official-seven-p03.json",
+  "notes": "P03 passed technical completion and experiment acceptance, but failed the release-candidate generation-quality gate because all fixed greedy continuations were degenerate."
+}

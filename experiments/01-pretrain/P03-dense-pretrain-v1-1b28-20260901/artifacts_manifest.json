@@ -1,0 +1,21 @@
+{
+  "experiment_id": "P03-dense-pretrain-v1-1b28-20260901",
+  "status": "verified",
+  "verified_at": "2026-09-03",
+  "artifact_root": "/data/artifacts/minimind-lab/P03-dense-pretrain-v1-1b28-20260901/formal-b32-a1-epoch1",
+  "files": [
+    {"role": "final_inference_checkpoint", "storage": "cpfs", "path": "/data/artifacts/minimind-lab/P03-dense-pretrain-v1-1b28-20260901/formal-b32-a1-epoch1/checkpoints/p03_formal_b32_a1_768.pth", "size_bytes": 137685299, "sha256": "0cfb7fc8fd9b3111f30b5528a1c8aacf8d6f633c8cde13c707c7cb44c83fd4fd"},
+    {"role": "best_validation_checkpoint", "storage": "cpfs", "path": "/data/artifacts/minimind-lab/P03-dense-pretrain-v1-1b28-20260901/formal-b32-a1-epoch1/checkpoints/p03_formal_b32_a1_best_val_768.pth", "size_bytes": 137686154, "sha256": "e245d275308a0fd2bca8f25be95b94da52e0bbae2f0269993057e80443a1f407"},
+    {"role": "resume_checkpoint", "storage": "cpfs", "path": "/data/artifacts/minimind-lab/P03-dense-pretrain-v1-1b28-20260901/formal-b32-a1-epoch1/resume/p03_formal_b32_a1_768_resume.pth", "size_bytes": 786719813, "sha256": "8dbfa7e402f108be38427b77966b88814f2bbdd40ac9b0fa4630dbd17790f374"},
+    {"role": "hf_export", "storage": "cpfs", "path": "/data/artifacts/minimind-lab/P03-dense-pretrain-v1-1b28-20260901/formal-b32-a1-epoch1/exported-base/model.safetensors", "size_bytes": 127834168, "sha256": "fe6df50779ad9622bae2079dfeb3e52e0e2d74881edc7824903a754a8f8ddf07"},
+    {"role": "full_training_metrics", "storage": "cpfs", "path": "/data/artifacts/minimind-lab/P03-dense-pretrain-v1-1b28-20260901/formal-b32-a1-epoch1/metrics.jsonl", "size_bytes": 551153, "sha256": "1d999b19f12fc193c4a3e3a856799c21263f8082571a4c09d377b4c3c67ee18d"},
+    {"role": "validation_eval", "storage": "git", "path": "eval/validation-p03-exact.json", "size_bytes": 2248, "sha256": "5553c9cd1f77f1ba9cd2b09d8e98df7f08d5967eee42da1c40e3757d6f973ca9"},
+    {"role": "seven_task_eval", "storage": "git", "path": "eval/official-seven-p03.json", "size_bytes": 329245, "sha256": "19b18bede468d61b5a1b046487d8e527551b649fd323d01c7adc58a67dda88b1"},
+    {"role": "fixed_continuations", "storage": "git", "path": "eval/continuations-p03-5.jsonl", "size_bytes": 2258, "sha256": "25de7cf2827bbaa9671bf20352c65c04bf575e937ff99a2111b31c1dca0fe117"},
+    {"role": "latency_eval", "storage": "git", "path": "eval/latency-p03-warmup5-measure20.json", "size_bytes": 10743, "sha256": "f395ff1742a89b535eb05518d43b213468c8ba782d27d9aea580cad073c73cce"},
+    {"role": "system_metrics", "storage": "git", "path": "eval/system-p03.json", "size_bytes": 1198, "sha256": "545ffca6bdfedf534eca4995cc57a4656557dd2f4f664fb9a58a62b416981fa6"},
+    {"role": "swanlab_eval_receipt", "storage": "git", "path": "eval/swanlab-p03-eval.json", "size_bytes": 6521, "sha256": "7b30b98ebfabbf1ba1d52b50bb3224542b33c47bff8c147e5f5935be5379e618"}
+  ],
+  "public_checkpoint_url": null,
+  "notes": "Large weights and full logs remain on CPFS; Git stores compact evidence and hashes. No public model upload is claimed."
+}

@@ -1,7 +1,7 @@
 # Phase 1 阶段报告：Pretrain 基线（P01 / P02 / P03）
 
 - 阶段范围：`experiment_plan.md` 第 6 节
-- 报告状态：draft（P02/P03 实验目录已于 2026-09-03 合入 main；P03 在 registry 中仍为 `awaiting-report`，缺 `report.md` / `run.json` / `metrics.csv` / `swanlab-url.txt` / `eval.json` / `checkpoint-manifest.txt`）
+- 报告状态：accepted
 - 出具日期：2026-09-03
 - 数据/权重口径：MiniMind upstream `393e387e9ad99f0f04c296e4c5e7353f4444629f`，模型固定 63,912,192 参数（hidden 768、8 layers、vocab 6400），硬件固定 8×NVIDIA L20 + BF16 + seq 768 + 全局 sequence batch 256 + lr 5e-4 + seed 42 + 1 epoch
 
@@ -27,7 +27,7 @@ Phase 1 的目标是产出一个可以支撑后续 SFT 的 Base checkpoint，并
 |---|---|---|---|---|
 | P01-dense-pretrain-mini-20260824 | completed（已在 main） | random-init | `pretrain_t2t_mini@312afb4f` | `experiments/01-pretrain/P01-dense-pretrain-mini-20260824/report.md` |
 | P02-dense-pretrain-full-20260824 | completed（2026-09-03 已合入 main，含原 `stash@{0}` 的数据审计） | random-init | `pretrain_t2t@312afb4f` | `experiments/01-pretrain/P02-dense-pretrain-full-20260824/report.md` |
-| P03-dense-pretrain-v1-1b28-20260901 | awaiting-report（2026-09-03 已合入 main，追溯文件未回填） | random-init | `pretrain-v1-1b28/final-remix-v1` | `experiments/01-pretrain/P03-dense-pretrain-v1-1b28-20260901/README.md`（尚无 `report.md`） |
+| P03-dense-pretrain-v1-1b28-20260901 | completed / accepted（非 release candidate） | random-init | `pretrain-v1-1b28/final-remix-v1` | `experiments/01-pretrain/P03-dense-pretrain-v1-1b28-20260901/report.md` |
 
 ### 2.1 SwanLab run
 
@@ -42,7 +42,7 @@ Workspace `@richliu0153`；完整索引见 [`swanlab-runs.md`](swanlab-runs.md)�
 | P03 | formal（1 epoch） | MiniMind-Lab | https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/qdpjh47fjt98184oos4bl |
 | P03 | eval logging | MiniMind-Lab | https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/k9st16wqu3i7ijy2d7q9h |
 
-P03 实验目录目前没有 `swanlab-url.txt`，上表 P03 的三条 URL 来自 artifacts driver.log 和本地 `swanlog/`；Phase 1 收口必须回填到实验目录。P01/P02 的 run 已于 2026-09-01（stage5 收口 commit `5761979`）从 `MiniMind-Lab-Stage3/7iochx9kfe75qa2pt6d1u` 与 `MiniMind-Lab-Stage5/bs7n0qfcxykk13fammxis` 同步到统一 project `MiniMind-Lab`，因此三个实验现在同 project，旧 run id 以 `source_swanlab_run_id` 保留在 P01 的 `run.json`。但三者的训练数据、有效 target 预算与训练入口不同，**同 project 不等于可按 step 叠图比较**，跨实验结论仍只以本报告的固定评测数字为准。
+P03 的 probe、formal、evaluation 三条 URL 已回填到实验目录的 `swanlab-url.txt` 和 `run.json`。P01/P02 的 run 已于 2026-09-01（stage5 收口 commit `5761979`）从 `MiniMind-Lab-Stage3/7iochx9kfe75qa2pt6d1u` 与 `MiniMind-Lab-Stage5/bs7n0qfcxykk13fammxis` 同步到统一 project `MiniMind-Lab`，因此三个实验现在同 project，旧 run id 以 `source_swanlab_run_id` 保留在 P01 的 `run.json`。但三者的训练数据、有效 target 预算与训练入口不同，**同 project 不等于可按 step 叠图比较**，跨实验结论仍只以本报告的固定评测数字为准。
 
 ## 3. 三份预训练数据对比
 
@@ -203,8 +203,8 @@ P03 训练前预注册的验收门（见 P03 README）逐条判定：
 进入 Phase 2（SFT，先用官方数据）前必须完成：
 
 1. ~~把 P02（含 `stash@{0}` 的数据审计）与 P03 的全部资产合入 main~~：已完成。2026-09-03 以两次 `--no-ff` 合并把 `stage5/p02-dense-pretrain-full` 与 `data/v1` 并入 main，`stash@{0}` 的 P02 数据审计（`audit_p02_data.py` + `eval/data_audit_{full.json,summary.md}` + `eval/validation_shared_p03.json`）单独落库，registry 两行的 `report_path` 现已可在 main 直接打开；
-2. 补齐 P03 实验目录缺失的追溯文件：`report.md`、`run.json`、`metrics.csv`、`swanlab-url.txt`（probe / formal / eval 三条，与 registry 的 `swanlab_url` 一致）、`eval.json` 与 `checkpoint-manifest.txt`；当前目录只有 `README.md`、`command.sh`、`config.json` 与 `eval/`，`validate_experiment.py` 因此仍报 missing files，registry 也只能保持 `awaiting-report`；
-3. 确认 P03 checkpoint 与 exported-base 的 SHA-256 记录在 checkpoint manifest 中（当前 checkpoint `0cfb7fc8fd9b3111f30b5528a1c8aacf8d6f633c8cde13c707c7cb44c83fd4fd`）；
+2. ~~补齐 P03 实验目录的标准追溯文件~~：已完成。顶层 `report.md`、`run.json`、`metrics.csv`、`swanlab-url.txt`（probe / formal / eval 三条）、`eval.json` 与 `checkpoint-manifest.txt` 均已生成，registry 状态已改为 `completed`；
+3. ~~确认 P03 checkpoint 与 exported-base 的 SHA-256 记录在 checkpoint manifest 中~~：已完成。正式 checkpoint SHA-256 为 `0cfb7fc8fd9b3111f30b5528a1c8aacf8d6f633c8cde13c707c7cb44c83fd4fd`，HF export `model.safetensors` SHA-256 为 `fe6df50779ad9622bae2079dfeb3e52e0e2d74881edc7824903a754a8f8ddf07`；
 4. 明确 SFT 从 P03 出发、数据先用官方 `sft_t2t_mini` / `sft_t2t`；如资源允许，用 8M targets 的 SFT smoke 同时从 P01 和 P03 初始化，验证“Base 选择”是否影响 SFT 结果——因为七项 macro 上 P03 仅比 P01 高 0.08pp，这个前提值得一次低成本核对（对应计划 7.3 的 S04B）；
 5. 按计划 7.4 先审计官方 SFT 数据的 assistant targets、mask、重复与污染，不先构建自建数据；只有官方数据未过门槛且失败可归因到数据时，才在 Phase 2 内构建 SFT-v1（计划 7.6–7.8）。
 
@@ -221,7 +221,7 @@ P03 训练前预注册的验收门（见 P03 README）逐条判定：
 | P01 全部资产 | `experiments/01-pretrain/P01-dense-pretrain-mini-20260824/`（main） |
 | P02 报告与评测 | `experiments/01-pretrain/P02-dense-pretrain-full-20260824/`（main，来自合并 `stage5/p02-dense-pretrain-full`） |
 | P02 数据审计补充 | 同目录 `audit_p02_data.py`、`eval/data_audit_full.json`、`eval/data_audit_summary.md`、`eval/validation_shared_p03.json`（原 `stash@{0}`，2026-09-03 落库） |
-| P03 配置/命令/评测 | `experiments/01-pretrain/P03-dense-pretrain-v1-1b28-20260901/`（main，来自合并 `data/v1`） |
+| P03 完整追溯包 | `experiments/01-pretrain/P03-dense-pretrain-v1-1b28-20260901/`（配置、命令、run、metrics、eval、报告、checkpoint manifest、SwanLab URL） |
 | v1 数据审计 | `experiments/00-preparation/D01-training-data-v1-20260828/pretrain_v1_remix_audit.json` |
 | 共享 validation 三方回溯结果 | `.../P03-.../eval/validation-p0{1,2,3}-exact.json` |
 | P03 系统指标 | `.../P03-.../eval/system-p03.json` |
@@ -236,3 +236,4 @@ P03 训练前预注册的验收门（见 P03 README）逐条判定：
 | 2026-09-03 | 首版：三次 pretrain 与三份数据的横向对比 | Phase 1 收口 |
 | 2026-09-03 | §2.1 修正 P01 的 run（`MiniMind-Lab/nfax3tyg0j217j1cz8y0b`，旧 URL 已作废）；§8 第 1、2 条改为反映 registry 已补 P02/P03 行、P03 仍缺四份追溯文件 | main 之前未同步 stage5 收口的 SwanLab project 合并，且 registry 缺 P02/P03 行 |
 | 2026-09-03 | P02/P03 资产合入 main 后同步状态行、§2.1 表、§8 第 1/2 条与 §9 证据索引，把「Git ref / stash」改为 main 内路径 | `stage5/p02-dense-pretrain-full`、`data/v1` 与 `stash@{0}` 已合入 main（合并 commit `6e1c67e`、`90a5c12`，审计落库 `c58a50f`） |
+| 2026-09-03 | P03 追溯文件、三条 SwanLab URL、评测索引及 checkpoint/export SHA 全部补齐；统一校验通过后完成 Phase 1 内容验收 | P03 已从 `awaiting-report` 收口为 `completed / accepted`，但固定续写重复门仍失败 |
