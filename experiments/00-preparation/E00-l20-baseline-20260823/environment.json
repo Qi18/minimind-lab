@@ -44,7 +44,13 @@
       "finite": true,
       "peak_mib": 406.41
     },
-    "swanlab_login": "blocked"
+    "swanlab_login": "blocked",
+    "swanlab_login_recheck": {
+      "status": "pass",
+      "checked_at": "2026-08-23T05:18:03Z",
+      "method": "forced preflight_l20.py re-run after logging in on the Pod",
+      "first_cloud_runs": "E02-model-probe-20260823 seed42/seed43/seed44"
+    }
   },
   "known_environment_issue": {
     "package": "litellm",

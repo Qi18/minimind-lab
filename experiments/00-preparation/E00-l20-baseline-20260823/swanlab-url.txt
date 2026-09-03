@@ -1,1 +1,12 @@
-# Pending: Stage 0 found that the current L20 Pod is not logged in to SwanLab.
+# No cloud SwanLab run: Stage 0 validates the environment and does not train a model.
+#
+# SwanLab login timeline on this Pod:
+#   2026-08-23T04:22:35Z  blocked  first preflight check found the Pod not logged in
+#   2026-08-23T05:18:03Z  pass     forced preflight_l20.py re-run, swanlab cloud verify passed
+#
+# The first cloud runs of this Lab are produced by E02-model-probe-20260823:
+#   seed42 https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/iq14wfm1nc1ca8iigdbop
+#   seed43 https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/is8yx09hw3341ar8qvvfa
+#   seed44 https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/kngkosspce6sfuzkoztzm
+#
+# Credentials are never written to this repository, logs or CPFS.

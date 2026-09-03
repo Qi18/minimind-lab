@@ -22,6 +22,8 @@ Stage 0 已完成。环境、NCCL、源码运行时、实验模板和 SwanLab �
 
 网络切换后 ACK API 白名单已恢复，但公开实验记录不保存公网 IP、ACL、集群 ID、账号或凭据。
 
+SwanLab 登录有两个时间点：04:22:35Z 首次检查为未登录（`metrics.csv` 的 `swanlab_login_first_check`、`environment.json` 的 `smoke_tests.swanlab_login`），在 Pod 上完成登录后 05:18:03Z 强制复检为 pass（`environment.json` 的 `smoke_tests.swanlab_login_recheck`）。Stage 0 不训练模型，因此没有云端 run，`swanlab-url.txt` 只记录该时间线以及首批云端 run（E02 的 seed42/43/44）的位置。
+
 ## 独立环境
 
 - 环境路径：/data/venvs/minimind-lab。

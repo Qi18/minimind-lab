@@ -110,7 +110,7 @@ def main() -> None:
 
     eval_payload = {
         "status": "completed",
-        "protocol": "docs/training_plan.md#8-stage-2模型结构与最小训练探针",
+        "protocol": "docs/experiment_plan.md",
         "results": {
             "stage_gate": "pass",
             "architecture": "results/architecture.json",

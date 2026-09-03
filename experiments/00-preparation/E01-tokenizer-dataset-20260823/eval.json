@@ -1,6 +1,6 @@
 {
   "status": "completed",
-  "protocol": "docs/training_plan.md#7-stage-1tokenizer-与-dataset",
+  "protocol": "docs/experiment_plan.md",
   "results": {
     "data_manifest": "data_manifest.json",
     "dataset_audit": "results/dataset_audit.json",
