@@ -24,16 +24,17 @@
 | 对比组 | 实验 | 直接基线 | 主要变量 | 主要结论 |
 |---|---|---|---|---|
 | Pretrain 数据 | P02 full | P01 mini | Pretrain 数据规模 | Base 能力与单位成本变化 |
-| SFT 数据 | S02 full | S01 mini | SFT 数据规模 | Chat/Tool 能力与遗忘 |
-| 领域训练 | Full FT | S02 | 全参数领域训练 | 领域收益与通用回归 |
-| 参数高效训练 | LoRA | S02 | LoRA 适配 | 领域收益、显存和耗时 |
-| 偏好优化 | DPO | S02 | Preference optimization | 目标任务收益与通用回归 |
-| PPO | PPO | S02 | Actor/Critic RL | held-out reward、准确率与成本 |
-| Policy optimization | GRPO | S02 | GRPO objective | held-out 任务收益与稳定性 |
+| 官方 SFT | S02 official full | P03 Base | 官方完整 SFT | Chat/Tool 能力与遗忘 |
+| SFT 数据 A/B | S04 custom pilot | S03 official pilot | 等 assistant-target 的数据差异 | Chat/Tool 能力与遗忘 |
+| 领域训练 | Full FT | S10 release | 全参数领域训练 | 领域收益与通用回归 |
+| 参数高效训练 | LoRA | S10 release | LoRA 适配 | 领域收益、显存和耗时 |
+| 偏好优化 | DPO | S10 release | Preference optimization | 目标任务收益与通用回归 |
+| PPO | PPO | S10 release | Actor/Critic RL | held-out reward、准确率与成本 |
+| Policy optimization | GRPO | S10 release | GRPO objective | held-out 任务收益与稳定性 |
 | Loss 对照 | CISPO | GRPO | `loss_type=cispo` | 与 GRPO 的效果/稳定性差异 |
 | 模型结构 | MoE | 同预算 Dense | Dense/MoE | 质量、吞吐、显存和激活参数 |
 | 蒸馏 | Distill | 同结构未蒸馏学生 | CE + KL | 学生质量与训练成本变化 |
-| Agentic RL | Agent RL | S02 Tool 或对应 RL 基线 | 多轮工具环境训练 | 端到端任务成功率变化 |
+| Agentic RL | Agent RL | S10 Tool 或对应 RL 基线 | 多轮工具环境训练 | 端到端任务成功率变化 |
 
 每个对比只能主动改变一个主要变量。若同时更换数据、初始化权重、训练 Token、评测模板或推理后端，则只能记录为新基线，不能声称单变量收益。
 
@@ -68,7 +69,7 @@
 | Checkpoint | 官方七项 | Chat/Tool 固定集 | RL held-out | Agent held-out | 系统指标 |
 |---|---|---|---|---|---|
 | P01/P02 Base | 必测，不加 chat template | 不测 | 不测 | 不测 | 必测 |
-| S01/S02 | 必测，加 chat template | 必测 | S02 作为基线 | S02 Tool 作为基线 | 必测 |
+| S01–S10 | 必测，加 chat template | 必测 | S10 作为后训练基线 | S10 Tool 作为基线 | 必测 |
 | Full FT/LoRA | 必测通用回归 | 必测领域集 | 不测 | 不测 | 必测 |
 | DPO | 必测通用回归 | 必测目标集 | 可选 | 不测 | 必测 |
 | PPO | 必测通用回归 | 必测目标集 | 必测 | 不测 | 必测 |
@@ -77,7 +78,7 @@
 | Distill | 必测 | 按 teacher/student 任务执行 | 不测 | 不测 | 必测 |
 | Agentic RL | 必测通用回归 | 必测 Tool 基线 | 若复用 RL 任务则必测 | 必测 | 必测 |
 
-P01/P02、S01/S02 是主线结果；后训练 checkpoint 必须与其**直接初始化基线**比较，不能只和更早或结构不同的模型比较。
+P01/P02/P03、S10 是主线结果；后训练 checkpoint 必须与其**直接初始化基线**比较，不能只和更早或结构不同的模型比较。
 
 ## 4. 官方七项运行口径
 

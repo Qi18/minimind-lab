@@ -1,6 +1,6 @@
 {
-  "experiment_id": "S07R2-targeted-chat-curriculum-20260907",
-  "base_checkpoint": "S07R1 step 1374",
+  "experiment_id": "S09-targeted-chat-curriculum-20260907",
+  "base_checkpoint": "S08 step 1374",
   "dataset": "sft-chat-repair-v3",
   "train_rows": 29800,
   "validation_rows": 1088,

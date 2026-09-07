@@ -2,7 +2,7 @@
 set -Eeuo pipefail
 
 ROOT_DIR="$(cd "$(dirname "$0")/../../.." && pwd)"
-EXPERIMENT_ID="S05B-dense-sft-custom-pilot-8m-20260904"
+EXPERIMENT_ID="S04-dense-sft-custom-pilot-8m-20260904"
 ARTIFACT_DIR="/data/artifacts/minimind-lab/$EXPERIMENT_ID"
 CHECKPOINT="$ARTIFACT_DIR/checkpoints/s05b_best_val_768.pth"
 EXPORT_DIR="$ARTIFACT_DIR/exported-chat"
@@ -53,7 +53,7 @@ mkdir -p "$ARTIFACT_DIR/eval" "$BEHAVIOR_DIR" "$OFFICIAL_DIR"
     --official "$RESULT_JSON" \
     --behavior "$BEHAVIOR_DIR/task_eval.json" \
     --system "$BEHAVIOR_DIR/system_metrics.json" \
-    --project MiniMind-Lab --experiment-name "S05B-Eval-CustomPilot-8M-P03-64M" --group S05 \
+    --project MiniMind-Lab --experiment-name "S04-Eval-CustomPilot-8M-P03-64M" --group S03-S04-equal-budget \
     --output "$SWANLAB_RECEIPT"
 
   printf 'evaluation_finished_at=%s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)"

@@ -2,8 +2,8 @@
 set -Eeuo pipefail
 
 ROOT_DIR="$(cd "$(dirname "$0")/../../.." && pwd)"
-EXPERIMENT_ID="S05B-dense-sft-custom-pilot-8m-20260904"
-DATA_DIR="/data/datasets/minimind-lab/data-v1/sft-v1-32m/final/pilot"
+EXPERIMENT_ID="S03-dense-sft-official-pilot-8m-20260904"
+DATA_DIR="/data/datasets/minimind-lab/data-v1/sft-v1-32m/final/official-pilot"
 TRAIN_DATA="$DATA_DIR/train.jsonl"
 VALIDATION_DATA="$DATA_DIR/validation.jsonl"
 TEST_DATA="$DATA_DIR/test.jsonl"
@@ -56,23 +56,23 @@ export TRANSFORMERS_OFFLINE=1 HF_DATASETS_OFFLINE=1
   printf 'dataset_manifest_sha256=%s\n' "$(sha256sum "$DATA_DIR/manifest.json" | awk '{print $1}')"
   printf 'trainer_sha256=%s\n' "$(sha256sum "$ROOT_DIR/minimind/trainer/train_sft_with_validation.py" | awk '{print $1}')"
   printf 'swanlab_project=%s\n' MiniMind-Lab
-  printf 'swanlab_run_name=%s\n' S05B-SFT-CustomPilot-8M-P03-64M-LR5e-5-B24x8
+  printf 'swanlab_run_name=%s\n' S03-SFT-OfficialPilot-8M-P03-64M-LR5e-5-B8x8
 } > "$RUNTIME_MANIFEST"
 nvidia-smi --query-gpu=timestamp,index,utilization.gpu,memory.used --format=csv,noheader,nounits --loop=5 > "$ARTIFACT_DIR/logs/nvidia-smi.csv" &
 MONITOR_PID="$!"
 cd "$ROOT_DIR/minimind/trainer"
 set +e
 "$ROOT_DIR/scripts/launch/run_guarded.py" -- python3 -m torch.distributed.run --nproc_per_node=8 train_sft_with_validation.py \
-  --epochs 1 --batch_size 24 --accumulation_steps 1 --max_seq_len 768 \
+  --epochs 1 --batch_size 8 --accumulation_steps 1 --max_seq_len 768 \
   --hidden_size 768 --num_hidden_layers 8 --use_moe 0 --dtype bfloat16 \
   --learning_rate 5e-5 --grad_clip 1.0 --num_workers 8 --train_augment 0 \
   --log_interval 10 --eval_interval 50 --save_interval 1000 \
   --data_path "$TRAIN_DATA" --validation_data_path "$VALIDATION_DATA" \
-  --save_dir "$ARTIFACT_DIR/checkpoints" --save_weight s05b_last \
-  --best_weight s05b_best_val --from_weight pretrain \
+  --save_dir "$ARTIFACT_DIR/checkpoints" --save_weight s05a_last \
+  --best_weight s05a_best_val --from_weight pretrain \
   --split_seed 42 --split_manifest "$SPLIT_MANIFEST" \
   --metrics_path "$METRICS_PATH" --use_swanlab --swanlab_project MiniMind-Lab \
-  --swanlab_run_name S05B-SFT-CustomPilot-8M-P03-64M-LR5e-5-B24x8 2>&1 | tee "$TRAIN_LOG"
+  --swanlab_run_name S03-SFT-OfficialPilot-8M-P03-64M-LR5e-5-B8x8 2>&1 | tee "$TRAIN_LOG"
 rc="$?"
 set -e
 printf 'finished_at=%s\nexit_code=%s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$rc" >> "$RUNTIME_MANIFEST"

@@ -89,17 +89,17 @@ P02 的 5 个 greedy Base 续写全部首 token 输出 EOS；P03 为 4/5 非空�
 
 Phase 2 先建立官方数据基线，再通过等预算 A/B、行为修复课程和独立 IFEval 收口。官方完整 SFT 实际约含 2.4007B assistant targets，并非原计划的 32M；虽然 loss 收敛，但固定集只有 Chat 2/10、格式 0/6、重复异常 7/10、Tool E2E 5/8，说明同分布 loss 不能替代能力评测。
 
-S05A/S05B 在 8M assistant-target 预算下比较官方与自建 pilot，两者均未过行为门，当前自建通用数据没有独立收益。S07/S07R1 依次修复低唯一性与模板多样性，S07R2 step 400 才通过固定行为门；随后 S08 使用 41,720 条、4.163M assistant targets 的 verifier-backed 指令课程，在与冻结 IFEval prompt 零 exact/normalized overlap 的前提下进行独立验收。
+S03/S04 在 8M assistant-target 预算下比较官方与自建 pilot，两者均未过行为门，当前自建通用数据没有独立收益。S07/S08 依次修复低唯一性与模板多样性，S09 step 400 才通过固定行为门；随后 S10 使用 41,720 条、4.163M assistant targets 的 verifier-backed 指令课程，在与冻结 IFEval prompt 零 exact/normalized overlap 的前提下进行独立验收。
 
 | Checkpoint | IFEval prompt strict | instruction strict | Chat | 格式 | 重复异常 | Tool E2E | 七项 macro（chat template） |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | P03 | 10.54% | 23.02% | 0/10 | 0/6 | 9/10 | 0/8 | 未按同协议纳入此表 |
-| S07R2 step 400 | 11.09% | 22.30% | **10/10** | **6/6** | **0/10** | **7/8** | 32.9926% |
-| **S08 release** | **17.38%** | **29.98%** | **8/10** | **5/6** | **1/10** | **7/8** | **33.0024%** |
+| S09 step 400 | 11.09% | 22.30% | **10/10** | **6/6** | **0/10** | **7/8** | 32.9926% |
+| **S10 release** | **17.38%** | **29.98%** | **8/10** | **5/6** | **1/10** | **7/8** | **33.0024%** |
 
-S08 相对 S07R2 的 IFEval prompt strict 提升 6.29pp（60/541 → 94/541），instruction strict 提升 7.68pp，七项 macro 基本不变；因此选择 S08 为 S★。其状态是 `accepted with limitations`：提升集中在 detectable content、format、punctuation 和 case，language 无提升，keywords 与 length constraints 分别回退 3.1pp 和 3.5pp，固定行为也较 S07R2 有轻微回退但仍过门。
+S10 相对 S09 的 IFEval prompt strict 提升 6.29pp（60/541 → 94/541），instruction strict 提升 7.68pp，七项 macro 基本不变；因此选择 S10 为 S★。其状态是 `accepted with limitations`：提升集中在 detectable content、format、punctuation 和 case，language 无提升，keywords 与 length constraints 分别回退 3.1pp 和 3.5pp，固定行为也较 S09 有轻微回退但仍过门。
 
-结论边界：S08 证明 verifier-backed 课程可以提升同类可验证指令遵循，不能宣称开放域对话或所有通用能力全面提升。后续 LoRA、DPO、GRPO/CISPO 与 Agentic RL 默认从 S08 独立分叉。详细记录见 `docs/phases/phase2-sft.md` 和 `experiments/02-sft/S08-ifeval-curriculum-v4-20260907/report.md`。
+结论边界：S10 证明 verifier-backed 课程可以提升同类可验证指令遵循，不能宣称开放域对话或所有通用能力全面提升。后续 LoRA、DPO、GRPO/CISPO 与 Agentic RL 默认从 S10 独立分叉。详细记录见 `docs/phases/phase2-sft.md` 和 `experiments/02-sft/S10-ifeval-curriculum-v4-20260907/report.md`。
 
 ## 7. 失败实验与问题排查
 
@@ -110,9 +110,9 @@ S08 相对 S07R2 的 IFEval prompt strict 提升 6.29pp（60/541 → 94/541）�
 1. P02 的“行数更大、training loss 更低”没有转化为更好的泛化：其有效 target 利用率仅 31.07%，且存在 exact duplicate 与 benchmark containment 命中。
 2. P03 用 1.280B targets 和 9,038 updates，将共享 validation NLL 从 3.19096 降到 2.60432，七项宏平均从 30.91% 提升到 31.52%，训练 wall 从 285.78 分钟缩短到 46.37 分钟。
 3. 目前最可信的结论是“P03 整体数据管线优于 P02 基线”，不能归因到某一个数据源或单一超参数；要做因果归因，需固定训练入口与 token budget，对 source mix、packing 和去重分别消融。
-4. P03 的 Base 生成仍有明显重复，但 Phase 2 已用 S08 完成 SFT 收口：IFEval prompt strict 较 S07R2 提升 6.29pp，七项 macro 稳定，行为门继续通过；该结论仅适用于可验证指令遵循，不能外推为开放域 Chat 全面提升。
+4. P03 的 Base 生成仍有明显重复，但 Phase 2 已用 S10 完成 SFT 收口：IFEval prompt strict 较 S09 提升 6.29pp，七项 macro 稳定，行为门继续通过；该结论仅适用于可验证指令遵循，不能外推为开放域 Chat 全面提升。
 
-证据位置：P02 正式结果与数据审计位于 `experiments/01-pretrain/P02-dense-pretrain-full-20260824/`；P03 正式结果位于 `experiments/01-pretrain/P03-dense-pretrain-v1-1b28-20260901/`，registry 状态为 `completed`；Phase 2 权威报告位于 `docs/phases/phase2-sft.md`，S08 的配置、命令、checkpoint manifest 和报告位于 `experiments/02-sft/S08-ifeval-curriculum-v4-20260907/`，完整原始日志和逐题评测保留在 CPFS artifacts。
+证据位置：P02 正式结果与数据审计位于 `experiments/01-pretrain/P02-dense-pretrain-full-20260824/`；P03 正式结果位于 `experiments/01-pretrain/P03-dense-pretrain-v1-1b28-20260901/`，registry 状态为 `completed`；Phase 2 权威报告位于 `docs/phases/phase2-sft.md`，S10 的配置、命令、checkpoint manifest 和报告位于 `experiments/02-sft/S10-ifeval-curriculum-v4-20260907/`，完整原始日志和逐题评测保留在 CPFS artifacts。
 
 ## 9. 发布资产
 

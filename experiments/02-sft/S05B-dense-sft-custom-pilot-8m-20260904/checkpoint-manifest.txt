@@ -1,3 +1,0 @@
-base 0cfb7fc8fd9b3111f30b5528a1c8aacf8d6f633c8cde13c707c7cb44c83fd4fd /data/artifacts/minimind-lab/P03-dense-pretrain-v1-1b28-20260901/formal-b32-a1-epoch1/checkpoints/p03_formal_b32_a1_768.pth
-best eaec972098a4ee383f6f754933cf6f77cc27cb3f6e3ef8865981153f79f8789a /data/artifacts/minimind-lab/S05B-dense-sft-custom-pilot-8m-20260904/checkpoints/s05b_best_val_768.pth
-last 3c33540034060a83dbbea377c4ba983b36045f20b4ac46b5f039962bd1c56190 /data/artifacts/minimind-lab/S05B-dense-sft-custom-pilot-8m-20260904/checkpoints/s05b_last_768.pth

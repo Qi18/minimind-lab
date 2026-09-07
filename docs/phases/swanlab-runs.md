@@ -17,16 +17,21 @@ Workspace 固定为 `@richliu0153`。完整 URL 形如 `https://swanlab.cn/@rich
 | P03-dense-pretrain-v1-1b28-20260901 | formal（1 epoch） | MiniMind-Lab | `qdpjh47fjt98184oos4bl` | `/data/artifacts/minimind-lab/P03-dense-pretrain-v1-1b28-20260901/formal-b32-a1-epoch1/attempts/20260901T080746Z-542788/driver.log` |
 | P03-dense-pretrain-v1-1b28-20260901 | eval logging（`P03-Eval-V1-1B28-64M-Seq768`） | MiniMind-Lab | `k9st16wqu3i7ijy2d7q9h` | `swanlog/run-20260901_110827-k9st16wqu3i7ijy2d7q9h/backup.swanlab` |
 
-| S01-dense-sft-official-mini-smoke-20260903 | 官方 mini SFT smoke | MiniMind-Lab | `e4php2e6` | `experiments/02-sft/S01-dense-sft-official-mini-smoke-20260903/swanlab-url.txt` |
-| S05A-dense-sft-official-pilot-8m-20260904 | 官方 pilot 训练 | MiniMind-Lab | `7duhsb00` | `swanlab-url.txt` |
-| S05A-dense-sft-official-pilot-8m-20260904 | 官方 pilot 评测 | MiniMind-Lab | `50vjh86o` | `swanlab-url.txt` |
-| S05B-dense-sft-custom-pilot-8m-20260904 | 自建 pilot 训练 | MiniMind-Lab | `h0k5g99o` | `swanlab-url.txt` |
-| S05B-dense-sft-custom-pilot-8m-20260904 | 自建 pilot 评测 | MiniMind-Lab | `3jawb0uu` | `swanlab-url.txt` |
-| S07R2-targeted-chat-curriculum-20260907 | 定向课程训练 | MiniMind-Lab | `ipqdqgzl` | `swanlab-url.txt` |
-| S07R2-targeted-chat-curriculum-20260907 | 行为/七项评测 | MiniMind-Lab | `pgl5rv0h` | `swanlab-url.txt` |
-| S07R2-targeted-chat-curriculum-20260907 | P03/S01/S07R2 IFEval 对比 | MiniMind-Lab | `x6ps9jxa` | CPFS eval receipt |
-| S08-ifeval-curriculum-v4-20260907 | IFEval 课程训练 | MiniMind-Lab | `bxdob3rh` | `swanlab-url.txt` |
-| S08-ifeval-curriculum-v4-20260907 | IFEval/七项/行为评测 | MiniMind-Lab | `encs5zuk` | `swanlab-url.txt` |
+| S01-dense-sft-official-mini-smoke-20260903 | 官方 mini SFT smoke（run 已删除，保留历史 receipt） | MiniMind-Lab | `e4php2e6` | `experiments/02-sft/S01-dense-sft-official-mini-smoke-20260903/swanlab-url.txt` |
+| S02-dense-sft-official-full-1epoch-20260904 | 官方完整 SFT | MiniMind-Lab | `7ngous7e` | CPFS driver log |
+| S03-dense-sft-official-pilot-8m-20260904 | 官方 pilot 训练 | MiniMind-Lab | `7duhsb00` | `swanlab-url.txt` |
+| S03-dense-sft-official-pilot-8m-20260904 | 官方 pilot 评测 | MiniMind-Lab | `50vjh86o` | `swanlab-url.txt` |
+| S04-dense-sft-custom-pilot-8m-20260904 | 自建 pilot 训练 | MiniMind-Lab | `h0k5g99o` | `swanlab-url.txt` |
+| S04-dense-sft-custom-pilot-8m-20260904 | 自建 pilot 评测 | MiniMind-Lab | `3jawb0uu` | `swanlab-url.txt` |
+| S05-official-pilot-replay32m-lr1e5-20260907 | 官方 pilot 32M 低 LR 重放 | MiniMind-Lab | `0cj157tn` | CPFS train log |
+| S06-official-base-official-pilot8m-20260907 | 官方 Base 对照 | MiniMind-Lab | `ucxyuqmu` | CPFS train log |
+| S07-chat-repair-v1-20260907 | Chat 修复 v1 | MiniMind-Lab | `i4z0joa4` | CPFS train log |
+| S08-chat-repair-v2-20260907 | Chat 修复 v2 | MiniMind-Lab | `4kuy7jzj` | CPFS train log |
+| S09-targeted-chat-curriculum-20260907 | 定向课程训练 | MiniMind-Lab | `ipqdqgzl` | `swanlab-url.txt` |
+| S09-targeted-chat-curriculum-20260907 | 行为/七项评测 | MiniMind-Lab | `pgl5rv0h` | `swanlab-url.txt` |
+| S09-targeted-chat-curriculum-20260907 | P03/S02/S09 IFEval 对比 | MiniMind-Lab | `x6ps9jxa` | CPFS eval receipt |
+| S10-ifeval-curriculum-v4-20260907 | IFEval 课程训练 | MiniMind-Lab | `bxdob3rh` | `swanlab-url.txt` |
+| S10-ifeval-curriculum-v4-20260907 | IFEval/七项/行为评测 | MiniMind-Lab | `encs5zuk` | `swanlab-url.txt` |
 ## 待修正的录入缺口
 
 - ~~E00 的机器可读证据与报告矛盾~~（2026-09-03 已修）：`metrics.csv` 拆为 `swanlab_login_first_check`（blocked, 04:22:35Z）与 `swanlab_login`（pass, 05:18:03Z），`environment.json` 新增 `swanlab_login_recheck`，`swanlab-url.txt` 改记时间线与首批云端 run（E02 三 seed）。

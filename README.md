@@ -56,7 +56,7 @@ DPO、GRPO/CISPO 和 Agentic RL 默认从同一个 Full SFT 基线分支，避�
 | Pretrain mini（P01） | Random | `pretrain_t2t_mini` 1,270,238 行 | 45.83 min / 6.11 GPU-hours | 七项宏平均 31.44 | 无自身基线；官方口径参考 +0.66 pp | [run](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/nfax3tyg0j217j1cz8y0b) | L20 保留，SHA `71efd40d` |
 | Pretrain full（P02） | Random | `pretrain_t2t` 8,468,827 行 | 285.78 min / 38.10 GPU-hours | 七项宏平均 30.91 | 相对 P01 -0.54 pp；官方口径参考 +0.12 pp | [run](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3i1muwq039fpfv89fq4ru) | L20 保留，SHA `7065a461` |
 | Pretrain v1（P03） | Random | `pretrain-v1-1b28/final-remix-v1` 2,313,483 行 / 1.280B targets | 46.37 min / 6.18 GPU-hours | 七项宏平均 31.52；共享 validation NLL 2.60432 | 相对 P02 +0.62 pp，相对 P01 +0.08 pp | [run](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/qdpjh47fjt98184oos4bl) | L20 保留，SHA `0cfb7fc8` |
-| Full SFT（S08 release） | S07R2 step 400 / P03 64M | `ifeval-curriculum-v4` 41,720 行 / 4.163M assistant targets | 7×L20，3 epochs / 1,116 steps / 3.73 min | IFEval prompt strict 17.38%，较 S07R2 +6.29 pp；Chat 8/10；Tool E2E 7/8 | 七项 chat-template macro 33.00，与 S07R2 持平；语言/关键词/长度仍有限 | [train](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/bxdob3rh) / [eval](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/encs5zuk) | L20 保留 release，SHA `46aeab66` |
+| Full SFT（S10 release） | S09 step 400 / P03 64M | `ifeval-curriculum-v4` 41,720 行 / 4.163M assistant targets | 7×L20，3 epochs / 1,116 steps / 3.73 min | IFEval prompt strict 17.38%，较 S09 +6.29 pp；Chat 8/10；Tool E2E 7/8 | 七项 chat-template macro 33.00，与 S09 持平；语言/关键词/长度仍有限 | [train](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/bxdob3rh) / [eval](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/encs5zuk) | L20 保留 release，SHA `46aeab66` |
 | LoRA | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
 | DPO | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
 | GRPO / CISPO | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
@@ -64,7 +64,7 @@ DPO、GRPO/CISPO 和 Agentic RL 默认从同一个 Full SFT 基线分支，避�
 
 表格只填写已经完成并能追溯到实验目录的结果。
 
-当前结论：P03 的数据利用率和共享 validation 明显优于 P02，并作为 SFT 主线 Base。S08 已作为 Phase 2 release checkpoint：独立 IFEval prompt strict 相对 S07R2 提升 6.29pp，七项 macro 保持稳定，Chat/格式/重复/Tool 继续过门；阶段状态为 accepted with limitations，因为绝对 IFEval 仍低，语言、关键词和长度约束尚未解决。
+当前结论：P03 的数据利用率和共享 validation 明显优于 P02，并作为 SFT 主线 Base。S10 已作为 Phase 2 release checkpoint：独立 IFEval prompt strict 相对 S09 提升 6.29pp，七项 macro 保持稳定，Chat/格式/重复/Tool 继续过门；阶段状态为 accepted with limitations，因为绝对 IFEval 仍低，语言、关键词和长度约束尚未解决。
 
 ## 克隆
 

@@ -1,7 +1,7 @@
 {
-  "experiment_id": "S08-ifeval-curriculum-v4-20260907",
+  "experiment_id": "S10-ifeval-curriculum-v4-20260907",
   "objective": "Improve held-out IFEval without copying benchmark prompts",
-  "base_checkpoint": "/data/artifacts/minimind-lab/S07R2-targeted-chat-curriculum-20260907/checkpoints/s07r2_best_val_768.pth",
+  "base_checkpoint": "/data/artifacts/minimind-lab/S09-targeted-chat-curriculum-20260907/checkpoints/s07r2_best_val_768.pth",
   "dataset": "/data/datasets/minimind-lab/data-v1/sft-ifeval-curriculum-v4",
   "train_rows": 41720,
   "validation_rows": 1539,

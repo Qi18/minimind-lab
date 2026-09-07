@@ -1,12 +1,12 @@
-# S05B 自建 SFT-v1 8M 实验报告
+# S04 自建 SFT-v1 8M 实验报告
 
 ## 结论
 
-训练和共同评测均完成，但没有通过预注册晋级门。相对 S05A，自建数据改善了复读异常和少量 Tool 行为，却没有改善 Chat 或严格格式，七项 macro 略低；因此当前 SFT-v1 不构建 32M，也不启动 S06。
+训练和共同评测均完成，但没有通过预注册晋级门。相对 S03，自建数据改善了复读异常和少量 Tool 行为，却没有改善 Chat 或严格格式，七项 macro 略低；因此当前 SFT-v1 不构建 32M，也不进入正式扩量。
 
 ## 公平对照
 
-| 控制项 | S05A 官方 | S05B 自建 |
+| 控制项 | S03 官方 | S04 自建 |
 |---|---:|---:|
 | shifted assistant targets | 8,000,634 | 8,001,601 |
 | 日志实际 targets | 7,982,796 | 7,977,587 |
@@ -25,11 +25,11 @@
 - 收敛：独立 validation loss `2.463244 -> 1.765359`，峰值显存 9,806 MiB；无 NaN、OOM 或梯度异常。
 - best checkpoint：`s05b_best_val_768.pth`，SHA-256 `eaec972098a4ee383f6f754933cf6f77cc27cb3f6e3ef8865981153f79f8789a`。
 
-validation 来自各自数据分布，不能用 S05B 的较低 NLL 直接证明数据优于 S05A；决策只使用同一套冻结行为集和七项 benchmark。
+validation 来自各自数据分布，不能用 S04 的较低 NLL 直接证明数据优于 S03；决策只使用同一套冻结行为集和七项 benchmark。
 
 ## 共同评测与决策
 
-| 指标 | S05A | S05B | B - A |
+| 指标 | S03 | S04 | B - A |
 |---|---:|---:|---:|
 | Chat | 0/10 | 0/10 | 0 |
 | 严格格式 | 0/6 | 0/6 | 0 |
@@ -37,9 +37,9 @@ validation 来自各自数据分布，不能用 S05B 的较低 NLL 直接证明�
 | Tool E2E | 0/8 | 1/8 | +1 |
 | 七项 macro | 31.7673% | 31.6290% | -0.1383pp |
 
-S05B 七项明细：C-Eval 23.1798%、CMMLU 25.6173%、ARC-Easy 31.4815%、PIQA 52.7203%、OpenBookQA 26.2000%、HellaSwag 27.8132%、SocialIQA 34.3910%。
+S04 七项明细：C-Eval 23.1798%、CMMLU 25.6173%、ARC-Easy 31.4815%、PIQA 52.7203%、OpenBookQA 26.2000%、HellaSwag 27.8132%、SocialIQA 34.3910%。
 
-相对 P03，S05B 七项 macro 仅提升 0.1062pp；相对当前官方全量 S01-formal，低 0.2378pp。S01-formal 仍是当前较强参考（Chat 2/10、Tool E2E 5/8、macro 31.8668%），但它本身也未通过完整能力门。
+相对 P03，S04 七项 macro 仅提升 0.1062pp；相对当前官方全量 S02-formal，低 0.2378pp。S02-formal 仍是当前较强参考（Chat 2/10、Tool E2E 5/8、macro 31.8668%），但它本身也未通过完整能力门。
 
 ## 失败归因边界
 
@@ -53,10 +53,10 @@ S05B 七项明细：C-Eval 23.1798%、CMMLU 25.6173%、ARC-Easy 31.4815%、PIQA 
 
 ## 下一轮入口
 
-不扩大到 32M。先执行 SFT-v2 数据修复：分桶做人工语义抽检，提高短答案/EOS、严格格式和可执行 Tool 轨迹的有效监督密度；在同一 8M 预算内做 S05B-R1，每 2M targets 跑一次冻结行为评测。只有 Chat、格式和 Tool 同时相对 S05A 有实质提升，且七项额外回退不超过 1pp，才允许进入 S06。
+不扩大到 32M。先执行 SFT-v2 数据修复：分桶做人工语义抽检，提高短答案/EOS、严格格式和可执行 Tool 轨迹的有效监督密度；在同一 8M 预算内做 S04-R1，每 2M targets 跑一次冻结行为评测。只有 Chat、格式和 Tool 同时相对 S03 有实质提升，且七项额外回退不超过 1pp，才允许进入正式扩量；该条件最终未满足。
 
 ## 追溯
 
 - 训练 SwanLab：<https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/h0k5g99o>
 - 评测 SwanLab：<https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3jawb0uu>
-- 完整日志、指标、导出模型和评测：`/data/artifacts/minimind-lab/S05B-dense-sft-custom-pilot-8m-20260904/`
+- 完整日志、指标、导出模型和评测：`/data/artifacts/minimind-lab/S04-dense-sft-custom-pilot-8m-20260904/`

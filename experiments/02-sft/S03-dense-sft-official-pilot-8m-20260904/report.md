@@ -1,8 +1,8 @@
-# S05A 官方 SFT 8M 实验报告
+# S03 官方 SFT 8M 实验报告
 
 ## 结论
 
-训练和共同评测均完成，但没有通过 SFT 能力门禁。S05A 是本轮官方数据对照，不是可接受的最终 Chat checkpoint。
+训练和共同评测均完成，但没有通过 SFT 能力门禁。S03 是本轮官方数据对照，不是可接受的最终 Chat checkpoint。
 
 ## 数据与训练
 
@@ -15,7 +15,7 @@
 
 ## 共同评测
 
-| 指标 | S05A |
+| 指标 | S03 |
 |---|---:|
 | Chat | 0/10 |
 | 严格格式 | 0/6 |
@@ -29,4 +29,4 @@
 
 - 训练 SwanLab：<https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/7duhsb00>
 - 评测 SwanLab：<https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/50vjh86o>
-- 完整日志、指标、导出模型和评测：`/data/artifacts/minimind-lab/S05A-dense-sft-official-pilot-8m-20260904/`
+- 完整日志、指标、导出模型和评测：`/data/artifacts/minimind-lab/S03-dense-sft-official-pilot-8m-20260904/`

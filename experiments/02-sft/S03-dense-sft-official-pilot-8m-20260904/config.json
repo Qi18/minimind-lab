@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "experiment_id": "S05B-dense-sft-custom-pilot-8m-20260904",
+  "experiment_id": "S03-dense-sft-official-pilot-8m-20260904",
   "status": "completed",
-  "comparison": "S05 equal-assistant-target data A/B",
+  "comparison": "S03/S04 equal-assistant-target data A/B",
   "data": {
-    "label": "custom SFT-v1 pilot",
-    "directory": "/data/datasets/minimind-lab/data-v1/sft-v1-32m/final/pilot",
-    "train_rows": 55661,
-    "shifted_assistant_targets": 8001601,
+    "label": "official-pilot",
+    "directory": "/data/datasets/minimind-lab/data-v1/sft-v1-32m/final/official-pilot",
+    "train_rows": 18218,
+    "shifted_assistant_targets": 8000634,
     "audit_required": true,
     "contamination_hits_required": 0
   },
@@ -17,12 +17,12 @@
   },
   "training": {
     "epochs": 1,
-    "batch_size_per_gpu": 24,
+    "batch_size_per_gpu": 8,
     "world_size": 8,
     "accumulation_steps": 1,
-    "global_sequence_batch": 192,
-    "expected_optimizer_steps_drop_last": 289,
-    "estimated_assistant_targets_per_update": 27687.2,
+    "global_sequence_batch": 64,
+    "expected_optimizer_steps_drop_last": 284,
+    "estimated_assistant_targets_per_update": 28171.25,
     "learning_rate": 0.00005,
     "scheduler": "MiniMind get_lr cosine schedule normalized to total optimizer steps",
     "max_seq_len": 768,
@@ -32,14 +32,13 @@
   },
   "fairness_note": "Sequence batch is scaled by each dataset's mean supervised-target density; total assistant targets, assistant targets/update, initialization, LR schedule, sequence length, seed, template and evaluation protocol are controlled.",
   "swanlab_project": "MiniMind-Lab",
-  "swanlab_run_name": "S05B-SFT-CustomPilot-8M-P03-64M-LR5e-5-B24x8",
+  "swanlab_run_name": "S03-SFT-OfficialPilot-8M-P03-64M-LR5e-5-B8x8",
   "result": {
-    "optimizer_steps": 289,
-    "logged_assistant_targets": 7977587,
-    "best_validation_loss": 1.7653585990635459,
+    "optimizer_steps": 284,
+    "logged_assistant_targets": 7982796,
+    "best_validation_loss": 2.179557889766756,
     "behavior_gate": "failed",
-    "seven_macro_percent": 31.62901948135958,
-    "promotion_decision": "rejected_do_not_start_S06",
-    "checkpoint_sha256": "eaec972098a4ee383f6f754933cf6f77cc27cb3f6e3ef8865981153f79f8789a"
+    "seven_macro_percent": 31.76733766189325,
+    "checkpoint_sha256": "61d5231697746d1b987cc81c6814cfdddd2371cab8bc7fc3ce7deb596b72ba65"
   }
 }
