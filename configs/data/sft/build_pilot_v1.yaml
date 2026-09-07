@@ -1,0 +1,73 @@
+schema_version: 2
+name: minimind-sft-v1-8m-pilot
+status: capacity_frozen_build_pending
+trainable: false
+seed: 42
+sequence_length: 768
+
+contracts:
+  sources: configs/data/sft/sources_v1.yaml
+  acceptance: configs/data/sft/acceptance_pilot_v1.yaml
+  contamination: configs/data/sft/contamination_v1.yaml
+
+paths:
+  raw_root: /data/datasets/minimind-lab/data-v1/sft-v1-160m
+  work_root: /data/datasets/minimind-lab/data-v1/sft-v1-32m/work
+  final_root: /data/datasets/minimind-lab/data-v1/sft-v1-32m/final
+
+stage_budgets:
+  unit: shifted_assistant_loss_target_tokens
+  pilot:
+    train: 8000000
+    validation: 40000
+    test: 40000
+    purpose: compare_custom_8m_against_official_8m_from_same_base
+
+planned_mix:
+  chinese_general: 0.30
+  english_general: 0.17
+  multiturn: 0.15
+  strict_format: 0.08
+  math: 0.10
+  tool_call: 0.10
+  summarization_translation: 0.05
+  code: 0.05
+
+capacity_evidence:
+  measured_with:
+    builder: scripts/data/sft/build_sft_v1.py
+    strict_verifier_version: strict-v1.2
+    tokenizer: minimind/model
+    sequence_length: 768
+  strict_format:
+    train_available_targets: 737059
+    validation_available_targets: 14264
+    test_available_targets: 15480
+    train_required_targets: 640000
+    validation_required_targets: 3200
+    test_required_targets: 3200
+  decision: freeze_8_percent_for_pilot_do_not_weaken_verifier
+
+pipeline:
+  - normalize_to_canonical_conversations
+  - keep_complete_turns_only
+  - compute_shifted_assistant_loss_target_tokens
+  - deterministic_split_before_selection
+  - exact_and_near_prompt_deduplication
+  - allocate_frozen_bucket_quotas
+  - write_payload_manifest_capacity_and_provenance
+  - run_fixed_eval_contamination_audit
+  - run_independent_full_audit
+
+implementation:
+  formal_builder: scripts/data/sft/build_sft_v1.py
+  independent_auditor: scripts/data/sft/audit_sft_v1.py
+  contamination_auditor: scripts/data/sft/audit_contamination_v1.py
+  blockers: []
+
+release_rule:
+  marker: _SUCCESS
+  marker_status: accepted
+  trainer_augmentation: false
+  trainer_resplit_allowed: false
+  current_decision: build_pending_audit

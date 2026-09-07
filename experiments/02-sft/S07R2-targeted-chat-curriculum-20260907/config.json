@@ -1,0 +1,18 @@
+{
+  "experiment_id": "S07R2-targeted-chat-curriculum-20260907",
+  "base_checkpoint": "S07R1 step 1374",
+  "dataset": "sft-chat-repair-v3",
+  "train_rows": 29800,
+  "validation_rows": 1088,
+  "epochs": 5,
+  "world_size": 7,
+  "physical_gpus": [1, 2, 3, 4, 5, 6, 7],
+  "micro_batch_per_gpu": 16,
+  "global_batch": 112,
+  "learning_rate": 0.000008,
+  "dtype": "bfloat16",
+  "max_seq_len": 768,
+  "seed": 20260907,
+  "selected_checkpoint_step": 400,
+  "selection_reason": "same behavior acceptance as final with smaller broad-validation regression"
+}

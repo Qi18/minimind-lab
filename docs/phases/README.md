@@ -8,15 +8,15 @@
 |---|---|---|---|
 | 0 | 环境、数据与代码探针 | [`phase0-preparation.md`](phase0-preparation.md) | draft |
 | 1 | Pretrain 基线与数据重做 | [`phase1-pretrain.md`](phase1-pretrain.md) | accepted |
-| 2 | SFT（官方数据优先，必要时自建） | `phase2-sft.md` | 未开始 |
-| 3 | Full FT vs LoRA | `phase3-lora.md` | 未开始 |
+| 2 | SFT（官方数据基线、定向课程与 IFEval） | [`phase2-sft.md`](phase2-sft.md) | accepted with limitations |
+| 3 | Full FT vs LoRA | [`phase3-lora.md`](phase3-lora.md) | 进行中（训练 blocked） |
 | 4 | DPO 偏好优化 | `phase4-dpo.md` | 未开始 |
 | 5 | GRPO/CISPO 可验证强化学习 | `phase5-verifiable-rl.md` | 未开始 |
 | 6 | Agent SFT 与 Agentic RL | `phase6-agentic.md` | 未开始 |
 | 7 | Dense vs MoE | `phase7-moe.md` | 未开始 |
 | 8 | 蒸馏：off-policy 与 on-policy（依赖 MoE teacher） | `phase8-distill.md` | 未开始 |
 
-状态取值：未开始 / 进行中 / 待出具 / draft / accepted / 已跳过。报告出具或状态变化的当天更新本表。
+状态取值：未开始 / 进行中 / 待出具 / draft / accepted / accepted with limitations / 已跳过。报告出具或状态变化的当天更新本表。
 
 Phase 2 内含一个条件分支：只有官方 SFT 数据未过门槛且失败可归因到数据时才构建 SFT-v1；无论是否触发，结论都写在同一份 `phase2-sft.md`（见 [`../experiment_plan.md`](../experiment_plan.md) 7.5）。
 

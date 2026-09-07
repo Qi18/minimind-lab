@@ -26,10 +26,10 @@ policies:
 
 # These weights are a target plan, not yet an accepted capacity allocation.
 planned_mix:
-  chinese_general: 0.30
+  chinese_general: 0.25
   english_general: 0.15
   multiturn: 0.10
-  strict_format: 0.15
+  strict_format: 0.20
   math: 0.10
   tool_call: 0.10
   summarization_translation: 0.05
@@ -41,12 +41,6 @@ final_build_blockers:
   - id: source_capacity_not_frozen
     severity: fatal
     reason: Full-source assistant-token capacity has not been measured against the planned mix.
-  - id: formal_builder_not_implemented
-    severity: fatal
-    reason: Raw sources cannot become canonical deterministic train/validation/test payloads yet.
-  - id: independent_auditor_not_implemented
-    severity: fatal
-    reason: No independent component can currently issue an accepted marker.
 
 partition_policies:
   - id: ultrachat_prompt_id_english_multiturn_v2

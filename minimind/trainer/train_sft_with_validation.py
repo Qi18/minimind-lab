@@ -84,6 +84,14 @@ def evaluate(model, loader, autocast_ctx, device):
     return global_nll / max(global_tokens, 1), int(global_tokens), elapsed
 
 
+def sha256_file(path):
+    digest = hashlib.sha256()
+    with open(path, "rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
 def build_split(total_size, validation_size, seed, manifest_path):
     if validation_size <= 0 or validation_size >= total_size:
         raise ValueError(f"validation_size must be in [1, {total_size - 1}]")
@@ -110,8 +118,8 @@ def build_split(total_size, validation_size, seed, manifest_path):
 def main():
     parser = argparse.ArgumentParser(description="MiniMind Full SFT with deterministic validation")
     parser.add_argument("--save_dir", required=True)
-    parser.add_argument("--save_weight", default="s01r1_last")
-    parser.add_argument("--best_weight", default="s01r1_best_val")
+    parser.add_argument("--save_weight", default="sft_last")
+    parser.add_argument("--best_weight", default="sft_best_val")
     parser.add_argument("--epochs", type=int, default=2)
     parser.add_argument("--batch_size", type=int, default=16)
     parser.add_argument("--learning_rate", type=float, default=1e-5)
@@ -124,10 +132,12 @@ def main():
     parser.add_argument("--eval_interval", type=int, default=500)
     parser.add_argument("--save_interval", type=int, default=1000)
     parser.add_argument("--hidden_size", type=int, default=768)
+    parser.add_argument("--train_augment", type=int, default=1, choices=[0, 1])
     parser.add_argument("--num_hidden_layers", type=int, default=8)
     parser.add_argument("--max_seq_len", type=int, default=768)
     parser.add_argument("--use_moe", type=int, default=0, choices=[0, 1])
     parser.add_argument("--data_path", required=True)
+    parser.add_argument("--validation_data_path")
     parser.add_argument("--from_weight", default="pretrain")
     parser.add_argument("--validation_size", type=int, default=10000)
     parser.add_argument("--split_seed", type=int, default=42)
@@ -135,7 +145,7 @@ def main():
     parser.add_argument("--metrics_path", required=True)
     parser.add_argument("--use_swanlab", action="store_true")
     parser.add_argument("--swanlab_project", default="MiniMind-Lab")
-    parser.add_argument("--swanlab_run_name", default="S01R1-dense-sft-mini")
+    parser.add_argument("--swanlab_run_name", default="dense-sft")
     parser.add_argument("--use_compile", type=int, default=0, choices=[0, 1])
     args = parser.parse_args()
 
@@ -158,13 +168,35 @@ def main():
     )
     model, tokenizer = init_model(lm_config, args.from_weight, device=args.device)
 
-    train_base = SFTDataset(args.data_path, tokenizer, max_length=args.max_seq_len, augment=True)
-    validation_base = SFTDataset(args.data_path, tokenizer, max_length=args.max_seq_len, augment=False)
-    train_indices, validation_indices, split_sha = build_split(
-        len(train_base), args.validation_size, args.split_seed, args.split_manifest
-    )
-    train_dataset = Subset(train_base, train_indices)
-    validation_dataset = Subset(validation_base, validation_indices)
+    train_base = SFTDataset(args.data_path, tokenizer, max_length=args.max_seq_len, augment=bool(args.train_augment))
+    if args.validation_data_path:
+        train_dataset = train_base
+        validation_dataset = SFTDataset(
+            args.validation_data_path,
+            tokenizer,
+            max_length=args.max_seq_len,
+            augment=False,
+        )
+        split_sha = sha256_file(args.validation_data_path)
+        if is_main_process():
+            os.makedirs(os.path.dirname(args.split_manifest), exist_ok=True)
+            with open(args.split_manifest, "w", encoding="utf-8") as handle:
+                json.dump({
+                    "algorithm": "explicit_validation_file",
+                    "seed": None,
+                    "train_path": os.path.abspath(args.data_path),
+                    "train_size": len(train_dataset),
+                    "validation_path": os.path.abspath(args.validation_data_path),
+                    "validation_size": len(validation_dataset),
+                    "validation_sha256": split_sha,
+                }, handle, ensure_ascii=False, indent=2)
+    else:
+        validation_base = SFTDataset(args.data_path, tokenizer, max_length=args.max_seq_len, augment=False)
+        train_indices, validation_indices, split_sha = build_split(
+            len(train_base), args.validation_size, args.split_seed, args.split_manifest
+        )
+        train_dataset = Subset(train_base, train_indices)
+        validation_dataset = Subset(validation_base, validation_indices)
     train_sampler = DistributedSampler(train_dataset, shuffle=True, seed=args.split_seed) if dist.is_initialized() else None
     validation_sampler = DistributedSampler(validation_dataset, shuffle=False) if dist.is_initialized() else None
     train_loader = DataLoader(
@@ -205,19 +237,19 @@ def main():
 
     total_optimizer_steps = math.ceil(len(train_loader) / args.accumulation_steps) * args.epochs
     global_step = 0
-    best_validation_loss = float("inf")
     optimizer.zero_grad(set_to_none=True)
 
     baseline_loss, baseline_tokens, baseline_seconds = evaluate(model, validation_loader, autocast_ctx, device)
     append_metric(args.metrics_path, {
         "event": "validation",
-        "phase": "p01_baseline",
+        "phase": "sft_baseline",
         "global_step": 0,
         "validation_loss": baseline_loss,
         "validation_tokens": baseline_tokens,
         "validation_seconds": baseline_seconds,
     }, swanlab)
-    Logger(f"P01 baseline validation_loss={baseline_loss:.6f}, tokens={baseline_tokens}")
+    Logger(f"SFT baseline validation_loss={baseline_loss:.6f}, tokens={baseline_tokens}")
+    best_validation_loss = baseline_loss
 
     window_nll = 0.0
     window_tokens = 0
@@ -232,6 +264,11 @@ def main():
             input_ids = input_ids.to(device, non_blocking=True)
             labels = labels.to(device, non_blocking=True)
             valid_tokens = labels[..., 1:].ne(-100).sum().item()
+            global_valid_tokens = valid_tokens
+            if dist.is_initialized():
+                token_count = torch.tensor(float(valid_tokens), dtype=torch.float64, device=device)
+                dist.all_reduce(token_count, op=dist.ReduceOp.SUM)
+                global_valid_tokens = token_count.item()
             next_global_step = global_step + 1
             lr = get_lr(next_global_step, total_optimizer_steps, args.learning_rate)
             for group in optimizer.param_groups:
@@ -239,7 +276,11 @@ def main():
 
             with autocast_ctx:
                 result = model(input_ids, labels=labels)
-                objective = (result.loss + result.aux_loss) / args.accumulation_steps
+                world_size = dist.get_world_size() if dist.is_initialized() else 1
+                token_weight = valid_tokens * world_size / max(global_valid_tokens, 1)
+                objective = (
+                    result.loss * token_weight + result.aux_loss
+                ) / args.accumulation_steps
             scaler.scale(objective).backward()
             window_nll += result.loss.item() * valid_tokens
             window_tokens += valid_tokens

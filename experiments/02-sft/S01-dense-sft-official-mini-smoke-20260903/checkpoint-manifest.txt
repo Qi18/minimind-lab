@@ -1,0 +1,6 @@
+best_checkpoint=/data/artifacts/minimind-lab/S01-dense-sft-official-mini-smoke-20260903/checkpoints/s01_best_val_768.pth
+best_checkpoint_sha256=c3cb6200ea516d6c5776ab687588832eb253a7f9a0b6fd3ac7fe746b839483b9
+best_checkpoint_bytes=137684380
+last_checkpoint=/data/artifacts/minimind-lab/S01-dense-sft-official-mini-smoke-20260903/checkpoints/s01_last_768.pth
+last_checkpoint_sha256=ac6b69c3564136771a7728d13472e315be6642dfeb48a12e5ee7b983e40d97a4
+last_checkpoint_bytes=137684000

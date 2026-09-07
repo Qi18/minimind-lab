@@ -184,6 +184,9 @@ def build_metrics(args: argparse.Namespace) -> tuple[dict[str, float], list[str]
     if args.system:
         flatten_numeric("eval/system", load_json(args.system), metrics)
         sources.append(args.system.name)
+    if args.behavior:
+        flatten_numeric("eval/behavior", load_json(args.behavior), metrics)
+        sources.append(args.behavior.name)
     if not metrics:
         raise ValueError("no metrics collected; provide at least one input artifact")
     return dict(sorted(metrics.items())), sources
@@ -209,6 +212,7 @@ def main() -> None:
     parser.add_argument("--continuation", type=Path)
     parser.add_argument("--latency", type=Path)
     parser.add_argument("--system", type=Path)
+    parser.add_argument("--behavior", type=Path)
     parser.add_argument("--project", default=PROJECT)
     parser.add_argument("--experiment-name", default=EXPERIMENT_NAME)
     parser.add_argument("--group", default=GROUP)
@@ -224,7 +228,7 @@ def main() -> None:
             raise FileExistsError(f"output already exists (use --overwrite): {output}")
         output.parent.mkdir(parents=True, exist_ok=True)
 
-    for argument in ("validation", "official", "continuation", "latency", "system"):
+    for argument in ("validation", "official", "continuation", "latency", "system", "behavior"):
         path = getattr(args, argument)
         if path is not None:
             resolved = path.resolve()
@@ -238,7 +242,7 @@ def main() -> None:
             "size_bytes": getattr(args, argument).stat().st_size,
             "sha256": sha256(getattr(args, argument)),
         }
-        for argument in ("validation", "official", "continuation", "latency", "system")
+        for argument in ("validation", "official", "continuation", "latency", "system", "behavior")
         if getattr(args, argument) is not None
     }
 

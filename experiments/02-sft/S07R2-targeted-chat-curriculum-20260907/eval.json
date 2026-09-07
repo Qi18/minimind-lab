@@ -1,0 +1,17 @@
+{
+  "status": "accepted_with_targeted-diagnostic-limitation",
+  "selected_checkpoint_step": 400,
+  "chat_success": "10/10",
+  "format_success": "6/6",
+  "repetition_anomalies": "0/10",
+  "tool_argument_validity": 0.875,
+  "tool_end_to_end": 0.875,
+  "seven_task_macro_percent": 31.879398031856294,
+  "p03_macro_percent": 31.52278592049848,
+  "macro_delta_pp": 0.356612111357814,
+  "max_single_task_drop_pp": 1.893939393939394,
+  "baseline_validation_loss": 1.0643300506294107,
+  "step400_validation_loss": 1.0738274743222742,
+  "fixed_prompt_exact_overlap": 0,
+  "limitation": "Core concepts from the frozen behavior suite were trained through paraphrases; use the official seven-task result as the independent retention check."
+}

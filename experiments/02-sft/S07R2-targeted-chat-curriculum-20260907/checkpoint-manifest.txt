@@ -1,0 +1,5 @@
+selected=/data/artifacts/minimind-lab/S07R2-targeted-chat-curriculum-20260907/checkpoints/s07r2_best_val_768.pth
+selected_step=400
+sha256=57adcf7ec8adba23c2ff935050969d5e211152d0af83f114aabe4d7199acea52
+size_bytes=137684570
+retention=keep

@@ -56,9 +56,7 @@
 | P01 Dense Pretrain Mini | 已完成并合入 main | Mini Pretrain 历史基线 |
 | P02 Dense Pretrain Full | 训练、评测和补充审计完成，待收口 | 旧 full 数据负实验 |
 | P03 Dense Pretrain V1 1B28 | 训练与完整评测完成，待收口 | 后续正式 Base |
-| S01 Dense SFT Mini | invalidated | 保留失败证据 |
-| S01R1 Dense SFT Mini | 已完成并合入 main | 旧 SFT 历史基线 |
-| SFT-v1 自建数据 | 条件触发，未启动 | 仅在官方 SFT 数据未过门槛且失败可归因到数据时构建 |
+| Phase 2 SFT | accepted with limitations | S08 release；IFEval prompt strict 17.38%，七项 chat-template macro 33.00% |
 
 P03 当前结果：63,912,192 参数、9,038 optimizer steps、46.37 分钟、6.18 GPU-hours、validation NLL 2.6043、PPL 13.52、七项 Base macro 31.52%。在正式收口前，这些数字仍需由 main 中的 registry、报告和 manifest 可追溯。
 
@@ -191,41 +189,40 @@ Phase 1 不是一次训练，而是三次预训练加一次数据重做：先用
 
 Phase 2 回答一个完整问题：把 P03 变成可交互、可遵循的模型需要什么数据。执行顺序固定为先官方数据、后自建数据——与 Phase 1 一致，先用现成数据把 mask、训练、评测和判定门跑通并拿到可比基线，只有官方数据未过门槛且失败可归因到数据时才构建 SFT-v1。自建数据是本阶段的条件分支，不是默认动作。
 
-### 7.1 起点与历史参照
+### 7.1 起点
 
 - 初始权重固定为 P03；
-- S01R1（P01 + 官方 mini SFT、2 epochs、lr 1e-5）是唯一已完成的 SFT 参照：七项 macro 31.44 → 32.04，但 Chat 通过 1/10、格式约束 0/6、重复异常 8/10、Tool 端到端 37.5%。它的 Base 和评测口径都与本阶段不同，只作参考，不作对照组。
 
 ### 7.2 阶段路线
 
 ```text
-S02 smoke（官方 mini，约 1M）
+S01-smoke（官方 mini，约 1M）
       ↓
-S03 LR probe（官方 mini，8M × 3）
+S01-LR probe（官方 mini，8M × 3）
       ↓
-S04 官方全量正式 SFT（32M）
-      ├── 过门槛 → S★ = S04，Phase 2 收口，不构建自建数据
+S01-formal 官方全量正式 SFT（32M）
+      ├── 过门槛 → S★ = S01-formal，Phase 2 收口，不构建自建数据
       └── 未过门槛且归因到数据 → SFT-v1（7.6–7.8）
                                     ↓
                           S05A/S05B 等预算 A/B → S06
                                     ↓
-                          S★ = S04 与 S06 中更优者
+                          S★ = S01-formal 与 S06 中更优者
 ```
 
 ### 7.3 官方数据实验序列
 
 | 实验 | 初始权重 | 数据 | assistant targets | 目的 |
 |---|---|---|---:|---|
-| S02 | P03 | 官方 mini | 约 1M | smoke：mask、loss、数值稳定、strict load、resume、生成、SwanLab |
-| S03A/B/C | P03 | 官方 mini | 各 8M | LR probe：`1e-5` / `3e-5` / `5e-5` |
-| S04 | P03 | 官方全量 | 32M | 官方数据的正式 SFT |
-| S04B 可选 | P01 | 与 S04 完全同配置 | 32M | 核对 Base 选择是否影响 SFT 结果（P03 与 P01 七项仅差 0.08pp） |
+| S01-smoke | P03 | 官方 mini | 约 1M | smoke：mask、loss、数值稳定、strict load、resume、生成、SwanLab |
+| S01-LR-A/B/C | P03 | 官方 mini | 各 8M | LR probe：`1e-5` / `3e-5` / `5e-5` |
+| S01-formal | P03 | 官方全量 | 32M | 官方数据的正式 SFT |
+| S01-formal-B 可选 | P01 | 与 S01-formal 完全同配置 | 32M | 核对 Base 选择是否影响 SFT 结果（P03 与 P01 七项仅差 0.08pp） |
 
-S02 不用于宣称任何能力。S03 按 validation NLL、指令/格式通过率、Tool 合法率和 Base 保留选配置，不按最低 train loss；S04 用胜出配置训练 32M targets，只有 32M 相比 8M 继续稳定提升且不加剧遗忘时才考虑更大预算。
+S01-smoke 不用于宣称任何能力。S01-LR 按 validation NLL、指令/格式通过率、Tool 合法率和 Base 保留选配置，不按最低 train loss；S01-formal 用胜出配置训练 32M targets，只有 32M 相比 8M 继续稳定提升且不加剧遗忘时才考虑更大预算。
 
 ### 7.4 官方 SFT 数据必须先量化的事实
 
-在 S04 之前用与 Phase 1 相同的定义审计官方 SFT 数据，否则无法区分“数据不好”和“训练不好”：
+在 S01-formal 之前用与 Phase 1 相同的定义审计官方 SFT 数据，否则无法区分“数据不好”和“训练不好”：
 
 - shifted assistant target tokens 总量、每行 targets 与有效利用率；
 - 非 assistant token 被监督的数量（必须为 0）；
@@ -235,9 +232,9 @@ S02 不用于宣称任何能力。S03 按 validation NLL、指令/格式通过�
 
 ### 7.5 官方数据验收门与自建数据触发条件
 
-预注册门槛（S04 相对 P03，均用本 Lab 固定行为集与评测口径）：Tool schema 合法率 ≥80%；七项 macro ≥30.0%，相对 P03 回退不超过约 1.5pp，任一单项不回退超过 4pp；固定生成无空回答、无明显复读、无长度膨胀；Chat 通过 ≥7/10、格式约束 ≥4/6、重复异常 ≤2/10、Tool 端到端成功 ≥60%。S01R1 的 1/10、0/6、8/10、37.5% 只作量级参考，不作门槛基准。
+预注册门槛（S01-formal 相对 P03，均用本 Lab 固定行为集与评测口径）：Tool schema 合法率 ≥80%；七项 macro ≥30.0%，相对 P03 回退不超过约 1.5pp，任一单项不回退超过 4pp；固定生成无空回答、无明显复读、无长度膨胀；Chat 通过 ≥7/10、格式约束 ≥4/6、重复异常 ≤2/10、Tool 端到端成功 ≥60%。
 
-- 全部通过：S04 即最佳 SFT checkpoint（下称 S★），Phase 2 直接收口，7.6–7.8 不执行，阶段报告需写明“官方数据已达门槛，未构建自建数据”；
+- 全部通过：S01-formal 即最佳 SFT checkpoint（下称 S★），Phase 2 直接收口，7.6–7.8 不执行，阶段报告需写明“官方数据已达门槛，未构建自建数据”；
 - 未通过且 7.4 的审计把失败归因到数据（污染、重复、mask 错误、targets 结构缺失、bucket 覆盖不足）：进入 7.6，启动理由与要修的具体缺陷写在 Phase 2 报告；
 - 未通过但可归因到 LR、模板、checkpoint 选择或评测口径：先修正重跑官方数据实验，不启动数据自建。
 
@@ -283,11 +280,13 @@ S02 不用于宣称任何能力。S03 按 validation NLL、指令/格式通过�
 | S05A | P03 | 官方 SFT 数据 | 8M |
 | S05B | P03 | SFT-v1-pilot | 8M |
 
-S05A 复用 7.3 中胜出 LR 的 8M run，配置完全一致时直接引用，不重跑。固定模型、seed、batch、LR、scheduler、seq、steps、chat template、checkpoint 选择和评测集，只回答“自建 SFT 数据是否优于官方数据”。
+S05A 只有在数据快照、审计状态和训练配置完全一致时才能复用 7.3 的胜出 LR run；只要正式对照使用了新的 accepted 数据快照，就必须重跑。固定模型、seed、LR、scheduler、seq、chat template、checkpoint 选择、总 assistant targets 和评测集，只回答“自建 SFT 数据是否优于官方数据”。
 
-- 只有 S05B 胜出才构建 SFT-v1-formal 并训练 S06（32M targets，配置与 S04 一致）；
-- S05B 未胜出时，阶段结论是“自建数据在当前预算下无收益”，S★ 仍为 S04，不得靠加预算掩盖；
-- S06 与 S04 取更优者为 S★；只有 32M 相比 8M 继续稳定提升且不加剧遗忘，才构建 64M。
+公平 batch 按“每次 optimizer update 的 shifted assistant targets”定义，而不是按样本条数定义：当两套数据的平均监督回答长度不同时，允许调整每卡 sequence batch，使 assistant targets/update 与 optimizer steps 的差异均不超过 2%，并在配置和报告中披露；否则较短回答的数据会因为多出约数倍更新次数而获得不公平优势。
+
+- 只有 S05B 胜出才构建 SFT-v1-formal 并训练 S06（32M targets，配置与 S01-formal 一致）；
+- S05B 未胜出时，阶段结论是“自建数据在当前预算下无收益”，S★ 仍为 S01-formal，不得靠加预算掩盖；
+- S06 与 S01-formal 取更优者为 S★；只有 32M 相比 8M 继续稳定提升且不加剧遗忘，才构建 64M。
 
 预注册验收门与 7.5 一致，并追加：S05B 相对 S05A 在指令/格式/Tool 主指标上提升，且七项 macro 不额外回退超过 1pp。
 
@@ -297,6 +296,13 @@ S05A 复用 7.3 中胜出 LR 的 8M run，配置完全一致时直接引用，�
 
 Phase 2 阶段报告必须同时收口两件事：官方数据能达到的能力上限，以及自建数据是否被触发、触发后是否带来独立收益。
 
+### 7.10 实际执行与收口（2026-09-07）
+
+名义上的 32M 计划没有被补写成实际执行：官方完整数据实际约含 2.4007B assistant targets。官方完整 SFT 虽然 loss 收敛，但仅达到 Chat 2/10、格式 0/6、重复异常 7/10、Tool E2E 5/8，因此触发数据与能力修复分支。
+
+最终 release 为 S08：以 S07R2 step 400 为起点，在 41,720 条、4.163M assistant targets 的 verifier-backed 课程上训练；与冻结 IFEval 541 prompts 的 exact/normalized overlap 为 0。统一评测得到 prompt strict 17.38%、instruction strict 29.98%，分别较 S07R2 提升 6.29pp 和 7.68pp；七项 chat-template macro 33.0024%，Chat 8/10、格式 5/6、重复异常 1/10、Tool E2E 7/8。
+
+因此 Phase 2 状态为 `accepted with limitations`，S★ 固定为 S08。限制是绝对 IFEval 仍低，language 无提升，keywords 与 length constraints 略有回退；这不阻塞后续 Phase，但后续结论必须保留该边界。权威阶段报告见 `docs/phases/phase2-sft.md`。
 ## 8. Phase 3：Full FT vs LoRA
 
 LoRA 是明确领域上的效率实验，不替代主线 Full SFT。从 S★ 出发，在完全相同的领域 train/validation/test、targets 和评测上比较：
@@ -543,9 +549,9 @@ experiments/<stage>/<experiment-id>/
 
 1. 将 P02 审计、报告与证据收口到 main；
 2. 修正 P03 状态，补齐 report、registry、checkpoint/export manifest 并合入 main；
-3. 审计官方 SFT 数据（见 7.4）并执行 S02 smoke；
-4. 完成 S03 LR probe（官方 mini，8M targets）；
-5. 训练 S04（官方全量 32M）并按 7.5 逐条判定；
+3. 审计官方 SFT 数据（见 7.4）并执行 S01-smoke；
+4. 完成 S01-LR probe（官方 mini，8M targets）；
+5. 训练 S01-formal（官方全量 32M）并按 7.5 逐条判定；
 6. 仅当 7.5 把失败归因到数据时，构建 SFT-v1 smoke/pilot，执行 S05A/S05B 等预算 A/B，必要时训练 S06；随后出具 Phase 2 报告并确定 S★；
 7. 建立 Agent SFT 工具基线和独立 Agent eval；
 8. 执行 Full FT vs LoRA（Phase 3）；

@@ -1,0 +1,49 @@
+schema_version: 1
+name: minimind-official-sft-32m-formal
+status: frozen_before_build
+seed: 42
+sequence_length: 768
+
+source:
+  repo_id: jingyaogong/minimind_dataset
+  revision: 312afb4f76391145c6902f765bb51691c09a12f5
+  path: /data/datasets/minimind/312afb4f76391145c6902f765bb51691c09a12f5/sft_t2t.jsonl
+  rows: 5109432
+  bytes: 14096018369
+  blob_sha256: b5dab3d590b3b4ae3bfeec891ba0c76b0de5acbec4f4b078dcd3912eb1735c79
+  license_status: mixed_upstream_not_resolved_control_use_only
+
+sampling:
+  method: sha256_seed_and_one_based_line_number
+  rate: 0.04
+  parse_only_sampled_rows: true
+  complete_turn_only: true
+
+budgets:
+  unit: shifted_assistant_loss_target_tokens
+  train: 32000000
+  validation: 160000
+  test: 160000
+
+paths:
+  work_database: /data/datasets/minimind-lab/data-v1/sft-v1-32m/work/official-formal-v2-candidates.sqlite
+  final_root: /data/datasets/minimind-lab/data-v1/sft-v1-32m/final/official-formal
+
+contracts:
+  acceptance: configs/data/sft/acceptance_official_formal_v1.yaml
+  contamination: configs/data/sft/contamination_v1.yaml
+
+comparison_contract:
+  base_checkpoint: P03
+  tokenizer: minimind/model
+  sequence_length: 768
+  train_target_tokens: 32000000
+  validation_target_tokens: 160000
+  test_target_tokens: 160000
+  trainer_augmentation: false
+  trainer_resplit_allowed: false
+
+implementation:
+  builder: scripts/data/sft/build_official_pilot_v1.py
+  independent_auditor: scripts/data/sft/audit_sft_v1.py
+  contamination_auditor: scripts/data/sft/audit_contamination_v1.py

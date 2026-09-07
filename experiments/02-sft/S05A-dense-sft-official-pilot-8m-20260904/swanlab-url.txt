@@ -1,0 +1,2 @@
+train=https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/7duhsb00
+eval=https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/50vjh86o

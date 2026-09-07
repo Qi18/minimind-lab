@@ -1,6 +1,6 @@
 schema_version: 1
 name: minimind-sft-v1-32m-formal-acceptance
-status: design_pending_implementation
+status: smoke_accepted_formal_gates_pending
 data_config: configs/data/sft/build_v1.yaml
 source_config: configs/data/sft/sources_v1.yaml
 tokenizer: minimind/model
@@ -13,10 +13,10 @@ budgets:
   validation: 160000
   test: 160000
   bucket_weights:
-    chinese_general: 0.30
+    chinese_general: 0.25
     english_general: 0.15
     multiturn: 0.10
-    strict_format: 0.15
+    strict_format: 0.20
     math: 0.10
     tool_call: 0.10
     summarization_translation: 0.05

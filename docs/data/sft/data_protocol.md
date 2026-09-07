@@ -1,8 +1,8 @@
 # SFT v1 数据设计与验收协议
 
-更新时间：2026-09-02
-当前状态：`design_pending_implementation`
-训练资格：`trainable: false`
+更新时间：2026-09-04
+当前状态：`smoke_accepted_pilot_and_formal_pending`
+训练资格：1M smoke 已验收；8M pilot 与 32M formal 暂不可训练
 
 ## 1. 为什么重新设计
 
@@ -27,10 +27,10 @@
 - 污染配置：`configs/data/sft/contamination_v1.yaml`
 - raw resolver：`scripts/data/sft/resolve_sources.py`
 - raw materializer：`scripts/data/sft/materialize_raw.py`
-- formal builder：尚未实现
-- independent auditor：尚未实现
+- formal builder：`scripts/data/sft/build_sft_v1.py`
+- independent auditor：`scripts/data/sft/audit_sft_v1.py`
 
-只要后两项为空，就不得创建 `_SUCCESS`，也不得把 raw cache 或旧 proxy 数据用于正式 SFT。
+builder 只写 pending manifest；独立 auditor 复算训练标签、去重和来源约束，并且仅在污染报告也 accepted 时签发 `_SUCCESS`。
 
 ## 3. 数据构建流水线
 
@@ -91,7 +91,7 @@ freeze source revisions + licenses
 7. 来源 revision、license、行数、字节和 SHA-256 可追溯；
 8. builder 产出的 manifest 只能是 pending，只有独立 auditor 可以签发 accepted marker。
 
-完整阈值以 `configs/data/sft/acceptance_v1.yaml` 为准。`harness_commit` 与 `prompt_builder_sha256` 仍为空，是当前 fatal blocker。
+完整阈值以 `configs/data/sft/acceptance_v1.yaml` 为准。污染协议已冻结到 `lm-eval 0.4.12 / c1133b5` 和查询构建器 SHA-256；当前 blocker 是 strict-format 容量不足，以及 32M 最终 mix 与正式质量阈值尚未冻结。
 
 ## 7. 旧实验如何保留
 
@@ -101,11 +101,27 @@ freeze source revisions + licenses
 - 旧 profiler/生成脚本统一保存在 `experiments/00-preparation/D05-sft-capacity-v2-20260901/tools/`，不得作为正式入口；
 - 历史 JSON、日志和命令保持原样，避免事后改写证据。
 
-## 8. 下一步
+## 8. 2026-09-04 smoke 验收结果
 
-1. 实现 `build_sft_v1.py`，先只产出 1M smoke 和 sidecars；
-2. 独立实现 `audit_sft_v1.py`，不得复用 builder 的最终统计结果；
-3. 冻结 harness commit 和 prompt builder SHA，跑全量污染门禁；
-4. smoke accepted 后构建 8M pilot，完成最小 SFT 与固定评测；
-5. 依据容量、Chat/Tool/格式/数学收益和七项回归冻结 32M mix；
-6. 只有 32M 验收和训练评测完成后，才决定是否做 64M。
+验收产物：`/data/datasets/minimind-lab/data-v1/sft-v1-32m/final/smoke/`
+
+| split | rows | shifted assistant loss-target tokens |
+|---|---:|---:|
+| train | 6,801 | 1,001,279 |
+| validation | 144 | 21,213 |
+| test | 135 | 21,707 |
+
+- 八桶训练 token 配比达到 25/15/10/20/10/10/5/5 的目标，并仅允许单条完整记录造成的最小超配；
+- strict-format 共有 13 个机械验证通过的约束族，train 为 200,086 targets；
+- exact prompt、near prompt、exact conversation 分别拒绝 245、178、20 个候选；
+- 对 31,186 条固定评测查询的 exact、containment、near overlap 均为 0；
+- 独立 auditor failures 为 0，`SFTDataset(max_length=768, augment=False)` 加载抽检通过，`_SUCCESS.status=accepted`。
+
+修正 manifest 路径并冻结状态配置后共完成三次独立重建；四个 payload/sidecar 数据文件的 SHA-256 三次完全一致，证明样本选择未漂移。中间结果保存在 `work/smoke-pre-manifest-fix-20260904/` 和 `work/smoke-pre-config-freeze-20260904/`。
+
+## 9. 下一步
+
+1. 扩展原生 strict-format 约束及机械 verifier；当前采样容量只有 279,871 targets，无法满足 8M pilot 的 1.6M 配额；
+2. 对齐 formal acceptance 中的 reasoning 下限与 10% math 配额，补齐 auditor 尚未覆盖的正式质量门禁；
+3. 容量通过后构建 8M pilot，做训练收敛、Chat/Tool/格式/数学和七项 Base benchmark A/B；
+4. 依据 pilot 收益冻结 32M mix；只有 32M 评测有效后才决定是否扩到 64M。

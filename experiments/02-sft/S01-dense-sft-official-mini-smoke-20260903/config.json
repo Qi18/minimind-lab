@@ -1,0 +1,41 @@
+{
+  "experiment_id": "S01-dense-sft-official-mini-smoke-20260903",
+  "stage": "02-sft",
+  "status": "planned",
+  "purpose": "Engineering smoke only; no capability claim",
+  "initialization": {
+    "experiment_id": "P03-dense-pretrain-v1-1b28-20260901",
+    "checkpoint_sha256": "0cfb7fc8fd9b3111f30b5528a1c8aacf8d6f633c8cde13c707c7cb44c83fd4fd"
+  },
+  "dataset": {
+    "source": "sft_t2t_mini@312afb4f76391145c6902f765bb51691c09a12f5",
+    "source_rows": 905718,
+    "selected_rows": 3000,
+    "validation_rows": 256,
+    "target_budget": "approximately 1M shifted assistant targets",
+    "zero_target_rows_are_rejected": true
+  },
+  "training": {
+    "epochs": 1,
+    "world_size": 8,
+    "per_gpu_batch_size": 8,
+    "accumulation_steps": 1,
+    "max_seq_len": 768,
+    "hidden_size": 768,
+    "num_hidden_layers": 8,
+    "learning_rate": 0.00001,
+    "grad_clip": 1.0,
+    "dtype": "bfloat16",
+    "seed": 42,
+    "train_augment": false,
+    "log_interval": 5,
+    "eval_interval": 10,
+    "save_interval": 20
+  },
+  "tracking": {
+    "provider": "SwanLab",
+    "project": "MiniMind-Lab",
+    "run_name": "S01-SFT-OfficialMini-Smoke-P03-64M-B8x8"
+  },
+  "hardware": "8x NVIDIA L20 46GB"
+}

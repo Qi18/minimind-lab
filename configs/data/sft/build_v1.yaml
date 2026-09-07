@@ -1,6 +1,6 @@
 schema_version: 2
 name: minimind-sft-v1-32m-formal-build
-status: design_pending_implementation
+status: smoke_accepted_pilot_and_formal_pending
 trainable: false
 seed: 42
 sequence_length: 768
@@ -21,9 +21,13 @@ stage_budgets:
   unit: shifted_assistant_loss_target_tokens
   smoke:
     train: 1000000
+    validation: 20000
+    test: 20000
     purpose: validate_schema_loader_and_auditor
   pilot:
     train: 8000000
+    validation: 40000
+    test: 40000
     purpose: validate_mix_capacity_and_training_signal
   formal_v1:
     train: 32000000
@@ -37,10 +41,10 @@ stage_budgets:
 
 # Provisional until capacity profiling and the 8M pilot freeze the allocation.
 planned_mix:
-  chinese_general: 0.30
+  chinese_general: 0.25
   english_general: 0.15
   multiturn: 0.10
-  strict_format: 0.15
+  strict_format: 0.20
   math: 0.10
   tool_call: 0.10
   summarization_translation: 0.05
@@ -84,15 +88,12 @@ gates:
 implementation:
   raw_source_resolver: scripts/data/sft/resolve_sources.py
   raw_materializer: scripts/data/sft/materialize_raw.py
-  formal_builder: null
-  independent_auditor: null
+  formal_builder: scripts/data/sft/build_sft_v1.py
+  independent_auditor: scripts/data/sft/audit_sft_v1.py
   blockers:
-    - formal_builder_not_implemented
-    - independent_auditor_not_implemented
-    - harness_commit_not_frozen
-    - prompt_builder_sha256_not_frozen
     - source_capacity_and_final_mix_not_frozen
-  accepted_marker_must_not_exist: true
+    - strict_format_capacity_below_pilot_and_formal_quota
+  accepted_smoke_marker_exists: true
 
 outputs:
   training_payloads:
@@ -116,4 +117,4 @@ release_rule:
     - implementation.independent_auditor_is_non_null
     - all_acceptance_gates_pass
     - marker_exists_with_status_accepted
-  current_decision: reject_training_use
+  current_decision: smoke_only_accepted_reject_pilot_and_formal_training_use

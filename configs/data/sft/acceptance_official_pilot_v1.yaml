@@ -1,0 +1,59 @@
+schema_version: 1
+name: minimind-official-sft-8m-control-acceptance
+status: frozen_before_build
+data_config: configs/data/sft/build_official_pilot_v1.yaml
+contamination_config: configs/data/sft/contamination_v1.yaml
+tokenizer: minimind/model
+sequence_length: 768
+seed: 42
+
+budgets:
+  unit: shifted_assistant_loss_target_tokens
+  train: 8000000
+  validation: 40000
+  test: 40000
+  bucket_weights:
+    official: 1.0
+  maximum_overshoot: less_than_one_selected_complete_record
+
+schema_and_loader_gate:
+  top_level_keys_exact: [conversations]
+  message_keys_exact: [role, content, reasoning_content, tools, tool_calls]
+  allowed_roles: [system, user, assistant, tool]
+  invalid_json_max: 0
+  invalid_conversation_max: 0
+  zero_shifted_assistant_target_rows_max: 0
+  non_assistant_supervised_tokens_max: 0
+  assistant_eos_unsupervised_max: 0
+  trainer_loader: minimind.dataset.lm_dataset.SFTDataset
+  trainer_augmentation: false
+
+complete_turn_gate:
+  truncation_policy: complete_turn_only
+  truncated_mid_message_max: 0
+  incomplete_assistant_eos_max: 0
+  partial_tool_exchange_max: 0
+
+dedup_and_split_gate:
+  exact_conversation_duplicate_rate_max: 0.0
+  exact_user_prompt_overlap_across_splits_max: 0
+  near_user_prompt_overlap_across_splits_max: 0
+  near_char_ngram: 5
+  near_jaccard_threshold: 0.85
+  trainer_resplit_allowed: false
+
+contamination_gate:
+  scan_scope: full_final_train_validation_test
+  exact_overlap_max: 0
+  containment_overlap_max: 0
+  near_overlap_max: 0
+
+derived_quality_gate:
+  strict_format:
+    minimum_verified_transform_families: 0
+
+finalization_gate:
+  independent_auditor_required: true
+  marker: _SUCCESS
+  marker_status: accepted
+  bind_config_source_tokenizer_builder_auditor_sha: true

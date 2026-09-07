@@ -1,0 +1,21 @@
+{
+  "experiment_id": "S08-ifeval-curriculum-v4-20260907",
+  "objective": "Improve held-out IFEval without copying benchmark prompts",
+  "base_checkpoint": "/data/artifacts/minimind-lab/S07R2-targeted-chat-curriculum-20260907/checkpoints/s07r2_best_val_768.pth",
+  "dataset": "/data/datasets/minimind-lab/data-v1/sft-ifeval-curriculum-v4",
+  "train_rows": 41720,
+  "validation_rows": 1539,
+  "assistant_target_tokens": 4163325,
+  "epochs": 3,
+  "world_size": 7,
+  "physical_gpus": [1, 2, 3, 4, 5, 6, 7],
+  "micro_batch_per_gpu": 16,
+  "global_batch": 112,
+  "learning_rate": 0.00001,
+  "dtype": "bfloat16",
+  "max_seq_len": 768,
+  "train_augment": false,
+  "eval_interval": 200,
+  "seed": 20260907,
+  "selection": "lowest internal validation loss; held-out IFEval is final-only"
+}

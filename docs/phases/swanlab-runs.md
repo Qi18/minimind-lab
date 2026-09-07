@@ -16,9 +16,17 @@ Workspace 固定为 `@richliu0153`。完整 URL 形如 `https://swanlab.cn/@rich
 | P03-dense-pretrain-v1-1b28-20260901 | probe（100 step） | MiniMind-Lab | `d9is4iayxaw41ba95u92s` | `/data/artifacts/minimind-lab/P03-dense-pretrain-v1-1b28-20260901/probe-b32-a1-step100/attempts/20260901T080420Z-540642/driver.log` |
 | P03-dense-pretrain-v1-1b28-20260901 | formal（1 epoch） | MiniMind-Lab | `qdpjh47fjt98184oos4bl` | `/data/artifacts/minimind-lab/P03-dense-pretrain-v1-1b28-20260901/formal-b32-a1-epoch1/attempts/20260901T080746Z-542788/driver.log` |
 | P03-dense-pretrain-v1-1b28-20260901 | eval logging（`P03-Eval-V1-1B28-64M-Seq768`） | MiniMind-Lab | `k9st16wqu3i7ijy2d7q9h` | `swanlog/run-20260901_110827-k9st16wqu3i7ijy2d7q9h/backup.swanlab` |
-| S01-dense-sft-mini-20260825（invalidated） | formal | MiniMind-Lab | `p2ttzc7ycn5tpaegt4odo` | `swanlab-url.txt` |
-| S01R1-dense-sft-mini-20260825 | formal | MiniMind-Lab | `s2zj3jb9n8uh9v7raemx5` | `swanlab-url.txt` |
 
+| S01-dense-sft-official-mini-smoke-20260903 | 官方 mini SFT smoke | MiniMind-Lab | `e4php2e6` | `experiments/02-sft/S01-dense-sft-official-mini-smoke-20260903/swanlab-url.txt` |
+| S05A-dense-sft-official-pilot-8m-20260904 | 官方 pilot 训练 | MiniMind-Lab | `7duhsb00` | `swanlab-url.txt` |
+| S05A-dense-sft-official-pilot-8m-20260904 | 官方 pilot 评测 | MiniMind-Lab | `50vjh86o` | `swanlab-url.txt` |
+| S05B-dense-sft-custom-pilot-8m-20260904 | 自建 pilot 训练 | MiniMind-Lab | `h0k5g99o` | `swanlab-url.txt` |
+| S05B-dense-sft-custom-pilot-8m-20260904 | 自建 pilot 评测 | MiniMind-Lab | `3jawb0uu` | `swanlab-url.txt` |
+| S07R2-targeted-chat-curriculum-20260907 | 定向课程训练 | MiniMind-Lab | `ipqdqgzl` | `swanlab-url.txt` |
+| S07R2-targeted-chat-curriculum-20260907 | 行为/七项评测 | MiniMind-Lab | `pgl5rv0h` | `swanlab-url.txt` |
+| S07R2-targeted-chat-curriculum-20260907 | P03/S01/S07R2 IFEval 对比 | MiniMind-Lab | `x6ps9jxa` | CPFS eval receipt |
+| S08-ifeval-curriculum-v4-20260907 | IFEval 课程训练 | MiniMind-Lab | `bxdob3rh` | `swanlab-url.txt` |
+| S08-ifeval-curriculum-v4-20260907 | IFEval/七项/行为评测 | MiniMind-Lab | `encs5zuk` | `swanlab-url.txt` |
 ## 待修正的录入缺口
 
 - ~~E00 的机器可读证据与报告矛盾~~（2026-09-03 已修）：`metrics.csv` 拆为 `swanlab_login_first_check`（blocked, 04:22:35Z）与 `swanlab_login`（pass, 05:18:03Z），`environment.json` 新增 `swanlab_login_recheck`，`swanlab-url.txt` 改记时间线与首批云端 run（E02 三 seed）。

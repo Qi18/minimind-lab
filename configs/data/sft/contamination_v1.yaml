@@ -1,6 +1,6 @@
 schema_version: 1
 name: minimind-sft-v1-contamination
-status: revisions_frozen_harness_pending
+status: frozen
 metadata_endpoint: https://hf-mirror.com
 
 task_alignment:
@@ -14,8 +14,8 @@ task_alignment:
     - social_iqa
     - gsm8k
     - mbpp
-  harness_commit: null
-  prompt_builder_sha256: null
+  harness_commit: c1133b5
+  prompt_builder_sha256: 576e4a9803b57eaaf420112686bc8c4ea25983923e6572c1b5f02a8097515759
   note: Freeze both fields before the formal contamination audit and scoring.
 
 matching:
