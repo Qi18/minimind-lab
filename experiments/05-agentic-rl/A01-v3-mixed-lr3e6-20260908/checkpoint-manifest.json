@@ -1,0 +1,10 @@
+{
+  "promoted": false,
+  "weights": {
+    "model.safetensors": {
+      "path": "/data/artifacts/minimind-lab/A01-v3-mixed-lr3e6-20260908/checkpoint-570/model.safetensors",
+      "bytes": 255658640,
+      "sha256": "29b3428831f338a55e347ffb59d5837739929c3abcddd1feb8ab9d9dddd03af8"
+    }
+  }
+}

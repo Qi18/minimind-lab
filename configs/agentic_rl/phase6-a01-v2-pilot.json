@@ -1,0 +1,14 @@
+{
+  "base_model": "/data/artifacts/minimind-lab/A01-agent-sft-pilot-20260908/checkpoint-300",
+  "data": "/data/datasets/minimind-lab/phase6/record-agent-v2",
+  "environment": "phase6_agent_v2",
+  "seed": 42,
+  "learning_rate": 0.00001,
+  "micro_batch": 4,
+  "gradient_accumulation": 4,
+  "epochs": 1,
+  "max_length": 1536,
+  "eval_every": 50,
+  "experiment": "A01",
+  "attempt": "v2-pilot"
+}

@@ -1,0 +1,34 @@
+{
+  "artifact_root": "/data/artifacts/minimind-lab/A01-v3-agent-rl-fp32-probe-20260908",
+  "files": {
+    "unit-checks.json": {
+      "sha256": "527607952b84dfd0eac9792cddbb63f59dd4cdb7590b50877f229a9bfe88cf31",
+      "bytes": 218
+    },
+    "mask-ratio-check.json": {
+      "sha256": "732e22e4467fb93d7469cf7854f8bf19c9c82f0fbf6453f35484177a06251637",
+      "bytes": 365
+    },
+    "provenance.json": {
+      "sha256": "7f646ee83bcfb155c2a2e38d93464c50cee72979287750a04788e0652ab22d69",
+      "bytes": 62606
+    },
+    "metrics.jsonl": {
+      "sha256": "bb3c43f4ec7ef3e96012aeb2c7d4864ca44699be700ad3d93e8815df910b1caf",
+      "bytes": 4217
+    },
+    "rollouts.jsonl": {
+      "sha256": "06113462f58f5e6bbe4099f5f496668ad41acdd612028972b49f3feb713aca43",
+      "bytes": 90308
+    },
+    "DONE.json": {
+      "sha256": "1e442cc82e5f5915476f4b3107466e3417352263c29b8878174ccba8336e5d89",
+      "bytes": 262
+    },
+    "swanlab-url.txt": {
+      "sha256": "a0cb92a7e6fcf4d3386073196af58d55742159258f3539cb5fa68931d5968187",
+      "bytes": 59
+    }
+  },
+  "weights_copied": false
+}

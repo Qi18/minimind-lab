@@ -1,0 +1,34 @@
+{
+  "artifact_root": "/data/artifacts/minimind-lab/A01-v3-agent-rl-probe-20260908",
+  "files": {
+    "unit-checks.json": {
+      "sha256": "527607952b84dfd0eac9792cddbb63f59dd4cdb7590b50877f229a9bfe88cf31",
+      "bytes": 218
+    },
+    "mask-ratio-check.json": {
+      "sha256": "f4944942824831a9db1f63acab1cc134e7086c4d857aea7ff86f46f116589655",
+      "bytes": 362
+    },
+    "provenance.json": {
+      "sha256": "3901c67708f7fe74bf4d2fe90bd32d28c3417b2e312f946d76e5f7a44d996f8c",
+      "bytes": 62423
+    },
+    "metrics.jsonl": {
+      "sha256": "13e601812d2d5ca8f76a01cba54f20b3400571a35333feed2aa8391bb46689ce",
+      "bytes": 4201
+    },
+    "rollouts.jsonl": {
+      "sha256": "06113462f58f5e6bbe4099f5f496668ad41acdd612028972b49f3feb713aca43",
+      "bytes": 90308
+    },
+    "DONE.json": {
+      "sha256": "caf899558ed9c0ba080bd7e0744d8cd9e1dce644aacfe4f7236b858a934cf767",
+      "bytes": 263
+    },
+    "swanlab-url.txt": {
+      "sha256": "c6c815e0614e8657bd54370cb1fbf24fd9b3faceb6630269881d10bd5c913fab",
+      "bytes": 59
+    }
+  },
+  "weights_copied": false
+}

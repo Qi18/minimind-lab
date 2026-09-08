@@ -1,0 +1,8 @@
+{
+  "status": "aborted-audit-failed",
+  "optimizer_updates": 38,
+  "outer_steps_completed": 19,
+  "reason": "generation/teacher-forced logprob max delta exceeded preregistered 0.20 threshold",
+  "final_checkpoint_saved": false,
+  "test_opened": false
+}

@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-09-08T10:06:44.607181+00:00",
+  "purpose": "one-time exploratory fixed three-arm comparison, no selection or promotion",
+  "models": {
+    "A01": {
+      "path": "/data/artifacts/minimind-lab/A01-v3-mixed-lr3e6-20260908/checkpoint-570",
+      "sha256": "29b3428831f338a55e347ffb59d5837739929c3abcddd1feb8ab9d9dddd03af8"
+    },
+    "A02": {
+      "path": "/data/artifacts/minimind-lab/A02-agentic-grpo-v2-20260908/model-fp32",
+      "sha256": "502f2100d9fa5e0c217b3e509354e4825522f4816b082e12d85467c8ec500962"
+    },
+    "A03": {
+      "path": "/data/artifacts/minimind-lab/A03-agentic-cispo-v2-20260908/model-fp32",
+      "sha256": "1350d1872eca4b042be2b38f7f5cf477303c0a8647b14edabb2828664e9db43d"
+    }
+  },
+  "data": {
+    "test.jsonl": "34395467603505e10bf1b85111a042f777b64e188eb431dd38e6fa666bfae0d5",
+    "tools-test.jsonl": "9ec123abdcc03b287112eb4e1edf8005ea9fadd9acec2ec2128f42e130731a1c"
+  },
+  "test_previously_opened_by_model": false,
+  "protocol": "docs/phases/phase6-rl-v2-preregister.md",
+  "checkpoints": "fixed final, not validation-selected",
+  "source_sha256": {
+    "scripts/eval/eval_phase6_rl_v2.py": "4d7567acf0fd547f81e986329a9e27c3f46bcb04663899a0166a8b73dcd58a3c",
+    "scripts/eval/eval_phase6_agent.py": "9eb150bdee87adf168e9744de103a565e514d65b31f187d5ce826476af68872a",
+    "scripts/launch/train_phase6_rl_fp32.py": "199d8e2c156612f0b735d6df3534d26e55913e23702508e911cdd33e2dc5526e"
+  }
+}

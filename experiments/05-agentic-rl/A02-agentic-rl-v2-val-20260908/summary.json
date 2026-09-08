@@ -1,0 +1,94 @@
+{
+  "graph": {
+    "tasks": 160,
+    "schema_validity": 0.998220640569395,
+    "expected_call_coverage": 1.0,
+    "tool_selection_accuracy": 0.9982142857142857,
+    "argument_semantic_accuracy": 0.9875,
+    "execution_success": 0.9855072463768116,
+    "end_to_end_success": 0.9875,
+    "final_answer_accuracy": 0.9875,
+    "unfinished_rate": 0.0,
+    "invalid_call_rate": 0.0017793594306049821,
+    "mean_calls": 3.50625,
+    "mean_turns": 4.50625,
+    "mean_generated_tokens": 134.975,
+    "wall_seconds": 17.266370553988963,
+    "observation_usage": "ordered chain and exact final checked; causal counterfactual evaluation pending",
+    "latency_protocol": "batched throughput/amortized time, not single-request latency",
+    "precision": "float32",
+    "decoder": {
+      "greedy": true,
+      "max_new_tokens": 96,
+      "max_turns": 6,
+      "batch_size": 8
+    },
+    "branch_e2e": 1.0,
+    "chain_e2e": 1.0,
+    "redirect_e2e": 0.95,
+    "retry_e2e": 1.0
+  },
+  "tools": {
+    "tasks": 160,
+    "schema_validity": 1.0,
+    "expected_call_coverage": 1.0,
+    "tool_selection_accuracy": 1.0,
+    "argument_semantic_accuracy": 0.9888888888888889,
+    "execution_success": 0.9621621621621622,
+    "end_to_end_success": 0.95,
+    "final_answer_accuracy": 0.95,
+    "unfinished_rate": 0.0125,
+    "invalid_call_rate": 0.0,
+    "mean_calls": 1.15625,
+    "mean_turns": 2.14375,
+    "mean_generated_tokens": 51.46875,
+    "wall_seconds": 8.837889770977199,
+    "observation_usage": "ordered chain and exact final checked; causal counterfactual evaluation pending",
+    "latency_protocol": "batched throughput/amortized time, not single-request latency",
+    "precision": "float32",
+    "decoder": {
+      "greedy": true,
+      "max_new_tokens": 128,
+      "max_turns": 4,
+      "batch_size": 8
+    },
+    "exchange_e2e": 1.0,
+    "math_e2e": 0.95,
+    "multistep_e2e": 0.85,
+    "random_e2e": 1.0,
+    "time_e2e": 0.8,
+    "translate_e2e": 1.0,
+    "unit_e2e": 1.0,
+    "weather_e2e": 1.0
+  },
+  "behavior": {
+    "status": "completed",
+    "seed": 42,
+    "decoding": {
+      "do_sample": false,
+      "max_new_tokens": 128,
+      "open_thinking": false
+    },
+    "chat": {
+      "cases": 10,
+      "success_count": 8,
+      "success_rate": 0.8,
+      "format_cases": 6,
+      "format_success_count": 5,
+      "format_success_rate": 0.8333333333333334,
+      "refusal_anomaly_count": 0,
+      "repetition_anomaly_count": 1
+    },
+    "tool": {
+      "cases": 8,
+      "tool_selection_accuracy": 0.625,
+      "argument_validity_rate": 0.625,
+      "execution_success_rate": 0.625,
+      "final_answer_accuracy": 0.625,
+      "end_to_end_success_rate": 0.625,
+      "unfinished_rate": 0.0,
+      "invalid_tool_call_tag_count": 0
+    },
+    "samples_path": "eval/samples.jsonl"
+  }
+}

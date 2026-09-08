@@ -1,0 +1,9 @@
+{
+  "source": "/data/artifacts/minimind-lab/phase6-general-comparison-20260908",
+  "files": {
+    "summary.json": "4238e6120d0c1faff3aa546b1a367bde3c08fb5d1d019de847187ca5c0fd5542",
+    "report.md": "f53d0ff8a21c67f5a5838c8c797ee0b4f1c71305869df785bec2a0622f753bb8",
+    "ifeval-paired-scores.jsonl": "a264fff9184a498ff6e6d2a8299fee08cd577432df5bb879abef3225949d69ad"
+  },
+  "published": false
+}

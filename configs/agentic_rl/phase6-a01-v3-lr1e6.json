@@ -1,0 +1,15 @@
+{
+  "base_model": "/data/artifacts/minimind-lab/D01-s10-preference-baseline-20260908/exported-fp32",
+  "data": "/data/datasets/minimind-lab/phase6/mixed-agent-v3-r1",
+  "environment": "phase6_agent_v2",
+  "seed": 42,
+  "learning_rate": 0.000001,
+  "micro_batch": 4,
+  "gradient_accumulation": 4,
+  "epochs": 1,
+  "max_length": 1536,
+  "eval_every": 100,
+  "select_final": true,
+  "experiment": "A01",
+  "attempt": "v3-mixed-lr1e6"
+}

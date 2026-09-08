@@ -1,0 +1,14 @@
+{
+  "experiment": "A03",
+  "attempt": "v1-exploratory",
+  "method": "cispo",
+  "base_model": "/data/artifacts/minimind-lab/A01-v3-mixed-lr3e6-20260908/checkpoint-570",
+  "data": "/data/datasets/minimind-lab/phase6/mixed-agent-v3-r1",
+  "seed": 42,
+  "learning_rate": 0.000001,
+  "outer_steps": 32,
+  "group": 4,
+  "inner_updates": 2,
+  "beta": 0.01,
+  "run_name": "A03-Agentic-CISPO-v1-20260908"
+}

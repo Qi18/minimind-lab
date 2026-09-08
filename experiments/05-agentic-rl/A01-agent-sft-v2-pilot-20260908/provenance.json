@@ -1,0 +1,52 @@
+{
+  "config": {
+    "base_model": "/data/artifacts/minimind-lab/A01-agent-sft-pilot-20260908/checkpoint-300",
+    "data": "/data/datasets/minimind-lab/phase6/record-agent-v2",
+    "environment": "phase6_agent_v2",
+    "seed": 42,
+    "learning_rate": 1e-05,
+    "micro_batch": 4,
+    "gradient_accumulation": 4,
+    "epochs": 1,
+    "max_length": 1536,
+    "eval_every": 50,
+    "experiment": "A01",
+    "attempt": "v2-pilot"
+  },
+  "head": "234797da3dd4e9be55c76c771ad854c2124015a4",
+  "base_sha256": "13c537e57200252b117ec7d69ce6a0ecbe7177e1b66bf92ce62ec9be782eaab9",
+  "dataset_manifest": {
+    "seed": 607,
+    "record_overlap": 0,
+    "prompt_overlap": 0,
+    "splits": {
+      "train": {
+        "tasks": 800,
+        "sha256": "10fed0729da91769f49e4e8efb287ef6319ffcb7f6ac01408ccc7488e7c9a315",
+        "decisions": 3600,
+        "decisions_sha256": "5604290babb482e6723af4570cc9e7f19657099b039fbc6fe2e9cea8d118d040"
+      },
+      "val": {
+        "tasks": 160,
+        "sha256": "20c83e44bddb5c3d2db3a97544fb903eeb2ceee331ad318459580ffce96659e8",
+        "decisions": 720,
+        "decisions_sha256": "b57bb99e0a14b4db2511ff8ca5eb48545a0b8907614963c165828fdaa021b70c"
+      },
+      "test": {
+        "tasks": 240,
+        "sha256": "b5b00fb2c3ec21405e22832a3cfa5368701a560374cf19ae1953dd74d7ba338c"
+      }
+    },
+    "max_length": 953,
+    "truncated_rows": 0,
+    "train_supervised_tokens": 107859,
+    "scope": "synthetic graph families with split-specific prompt wording; not broad OOD",
+    "test_policy": "frozen, no model evaluation until design frozen",
+    "oracle": "pass",
+    "counterfactual_validation": {
+      "tasks": 160,
+      "sha256": "08cfd6843cd8166120e800539d9157d3c64e35e90daf89bb4b0811db112a8041",
+      "purpose": "same prompts and records, hidden values changed; never train"
+    }
+  }
+}

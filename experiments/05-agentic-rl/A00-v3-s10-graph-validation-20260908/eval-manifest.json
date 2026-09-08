@@ -1,0 +1,14 @@
+{
+  "model": "/data/artifacts/minimind-lab/D01-s10-preference-baseline-20260908/exported-fp32",
+  "environment": "phase6_agent_v2",
+  "tasks": "/data/datasets/minimind-lab/phase6/mixed-agent-v3-r1/val.jsonl",
+  "tasks_sha256": "8622cd6bf40d337452ea2be2274ae8702378fb63c4f0a9426f02a3e842249832",
+  "dtype": "fp32+bf16-autocast",
+  "seed": 42,
+  "source_sha256": {
+    "scripts/eval/eval_phase6_agent.py": "8209420396698a179fa69b7f8695e73a1c3e1fa3d360a59a4a91f0bab871be4d",
+    "scripts/phase6_agent_v2.py": "67367bb3ae319b62bdbadf9009817a60531acc949dccd2476a9f64b6790e3aff",
+    "scripts/phase6_retention_env.py": "9b28ad3ab95ba61c729c50531019117e34c0bba8e443f219fd2f0973243149ae"
+  },
+  "test_opened": false
+}

@@ -1,0 +1,32 @@
+{
+  "status": "pilot-complete-not-phase-accepted",
+  "best": "/data/artifacts/minimind-lab/A01-v3-mixed-lr3e6-20260908/checkpoint-570",
+  "validation": {
+    "tasks": 160,
+    "schema_validity": 0.99822695035461,
+    "expected_call_coverage": 1.0,
+    "tool_selection_accuracy": 0.9964285714285714,
+    "argument_semantic_accuracy": 0.9803571428571428,
+    "execution_success": 0.9732510288065843,
+    "end_to_end_success": 0.98125,
+    "final_answer_accuracy": 0.98125,
+    "unfinished_rate": 0.00625,
+    "invalid_call_rate": 0.0017730496453900709,
+    "mean_calls": 3.51875,
+    "mean_turns": 4.5125,
+    "mean_generated_tokens": 135.45625,
+    "wall_seconds": 16.197782268980518,
+    "observation_usage": "ordered chain and exact final checked; causal counterfactual evaluation pending",
+    "latency_protocol": "batched throughput/amortized time, not single-request latency",
+    "decoder": {
+      "greedy": true,
+      "max_new_tokens": 96,
+      "max_turns": 6,
+      "batch_size": 8
+    },
+    "branch_e2e": 1.0,
+    "chain_e2e": 1.0,
+    "redirect_e2e": 0.925,
+    "retry_e2e": 1.0
+  }
+}

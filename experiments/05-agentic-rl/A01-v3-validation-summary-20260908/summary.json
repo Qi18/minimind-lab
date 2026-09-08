@@ -1,0 +1,251 @@
+{
+  "candidates": {
+    "lr3e6": {
+      "graph": {
+        "tasks": 160,
+        "schema_validity": 0.99822695035461,
+        "expected_call_coverage": 1.0,
+        "tool_selection_accuracy": 0.9964285714285714,
+        "argument_semantic_accuracy": 0.9803571428571428,
+        "execution_success": 0.9732510288065843,
+        "end_to_end_success": 0.98125,
+        "final_answer_accuracy": 0.98125,
+        "unfinished_rate": 0.00625,
+        "invalid_call_rate": 0.0017730496453900709,
+        "mean_calls": 3.51875,
+        "mean_turns": 4.5125,
+        "mean_generated_tokens": 135.45625,
+        "wall_seconds": 16.197782268980518,
+        "observation_usage": "ordered chain and exact final checked; causal counterfactual evaluation pending",
+        "latency_protocol": "batched throughput/amortized time, not single-request latency",
+        "decoder": {
+          "greedy": true,
+          "max_new_tokens": 96,
+          "max_turns": 6,
+          "batch_size": 8
+        },
+        "branch_e2e": 1.0,
+        "chain_e2e": 1.0,
+        "redirect_e2e": 0.925,
+        "retry_e2e": 1.0
+      },
+      "tools": {
+        "tasks": 160,
+        "schema_validity": 1.0,
+        "expected_call_coverage": 1.0,
+        "tool_selection_accuracy": 1.0,
+        "argument_semantic_accuracy": 0.9888888888888889,
+        "execution_success": 0.978021978021978,
+        "end_to_end_success": 0.95625,
+        "final_answer_accuracy": 0.95625,
+        "unfinished_rate": 0.00625,
+        "invalid_call_rate": 0.0,
+        "mean_calls": 1.1375,
+        "mean_turns": 2.13125,
+        "mean_generated_tokens": 50.8625,
+        "wall_seconds": 10.436948049988132,
+        "observation_usage": "ordered chain and exact final checked; causal counterfactual evaluation pending",
+        "latency_protocol": "batched throughput/amortized time, not single-request latency",
+        "decoder": {
+          "greedy": true,
+          "max_new_tokens": 128,
+          "max_turns": 4,
+          "batch_size": 8
+        },
+        "exchange_e2e": 1.0,
+        "math_e2e": 1.0,
+        "multistep_e2e": 0.8,
+        "random_e2e": 1.0,
+        "time_e2e": 0.85,
+        "translate_e2e": 1.0,
+        "unit_e2e": 1.0,
+        "weather_e2e": 1.0
+      },
+      "behavior": {
+        "status": "completed",
+        "seed": 42,
+        "decoding": {
+          "do_sample": false,
+          "max_new_tokens": 128,
+          "open_thinking": false
+        },
+        "chat": {
+          "cases": 10,
+          "success_count": 8,
+          "success_rate": 0.8,
+          "format_cases": 6,
+          "format_success_count": 5,
+          "format_success_rate": 0.8333333333333334,
+          "refusal_anomaly_count": 0,
+          "repetition_anomaly_count": 1
+        },
+        "tool": {
+          "cases": 8,
+          "tool_selection_accuracy": 0.75,
+          "argument_validity_rate": 0.75,
+          "execution_success_rate": 0.75,
+          "final_answer_accuracy": 0.625,
+          "end_to_end_success_rate": 0.625,
+          "unfinished_rate": 0.0,
+          "invalid_tool_call_tag_count": 0
+        },
+        "samples_path": "eval/samples.jsonl"
+      },
+      "gates": {
+        "graph_e2e": true,
+        "graph_schema": true,
+        "graph_arguments": true,
+        "graph_execution": true,
+        "graph_retry": true,
+        "tools_e2e": true,
+        "legacy_chat": true,
+        "legacy_tool": false,
+        "legacy_format": true,
+        "legacy_repetition": true
+      },
+      "all_gates": false,
+      "final_checkpoint": {
+        "path": "/data/artifacts/minimind-lab/A01-v3-mixed-lr3e6-20260908/checkpoint-570",
+        "step": 570,
+        "validation_nll": 0.378755072142493
+      },
+      "train_last": {
+        "step": 570,
+        "train/loss": 0.6551342275935284,
+        "train/grad_norm": 8.457535743713379,
+        "train/target_tokens": 406611,
+        "system/peak_allocated_mib": 3095.55224609375,
+        "system/elapsed_seconds": 120.86183614196489,
+        "validation/nll": 0.378755072142493
+      },
+      "swanlab_train": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/52u6fhj4",
+      "swanlab_tools": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/hauawrx1"
+    },
+    "lr1e6": {
+      "graph": {
+        "tasks": 160,
+        "schema_validity": 0.9929328621908127,
+        "expected_call_coverage": 0.9982142857142857,
+        "tool_selection_accuracy": 0.9928571428571429,
+        "argument_semantic_accuracy": 0.9642857142857143,
+        "execution_success": 0.9670103092783505,
+        "end_to_end_success": 0.95,
+        "final_answer_accuracy": 0.95,
+        "unfinished_rate": 0.0,
+        "invalid_call_rate": 0.007067137809187279,
+        "mean_calls": 3.5125,
+        "mean_turns": 4.5125,
+        "mean_generated_tokens": 135.9625,
+        "wall_seconds": 16.814368170977104,
+        "observation_usage": "ordered chain and exact final checked; causal counterfactual evaluation pending",
+        "latency_protocol": "batched throughput/amortized time, not single-request latency",
+        "decoder": {
+          "greedy": true,
+          "max_new_tokens": 96,
+          "max_turns": 6,
+          "batch_size": 8
+        },
+        "branch_e2e": 0.925,
+        "chain_e2e": 1.0,
+        "redirect_e2e": 0.925,
+        "retry_e2e": 0.95
+      },
+      "tools": {
+        "tasks": 160,
+        "schema_validity": 1.0,
+        "expected_call_coverage": 1.0,
+        "tool_selection_accuracy": 0.9944444444444445,
+        "argument_semantic_accuracy": 0.9666666666666667,
+        "execution_success": 0.8969072164948454,
+        "end_to_end_success": 0.9125,
+        "final_answer_accuracy": 0.9125,
+        "unfinished_rate": 0.03125,
+        "invalid_call_rate": 0.0,
+        "mean_calls": 1.2125,
+        "mean_turns": 2.18125,
+        "mean_generated_tokens": 53.44375,
+        "wall_seconds": 10.580519127019215,
+        "observation_usage": "ordered chain and exact final checked; causal counterfactual evaluation pending",
+        "latency_protocol": "batched throughput/amortized time, not single-request latency",
+        "decoder": {
+          "greedy": true,
+          "max_new_tokens": 128,
+          "max_turns": 4,
+          "batch_size": 8
+        },
+        "exchange_e2e": 1.0,
+        "math_e2e": 0.85,
+        "multistep_e2e": 0.75,
+        "random_e2e": 0.95,
+        "time_e2e": 0.75,
+        "translate_e2e": 1.0,
+        "unit_e2e": 1.0,
+        "weather_e2e": 1.0
+      },
+      "behavior": {
+        "status": "completed",
+        "seed": 42,
+        "decoding": {
+          "do_sample": false,
+          "max_new_tokens": 128,
+          "open_thinking": false
+        },
+        "chat": {
+          "cases": 10,
+          "success_count": 8,
+          "success_rate": 0.8,
+          "format_cases": 6,
+          "format_success_count": 5,
+          "format_success_rate": 0.8333333333333334,
+          "refusal_anomaly_count": 0,
+          "repetition_anomaly_count": 1
+        },
+        "tool": {
+          "cases": 8,
+          "tool_selection_accuracy": 0.75,
+          "argument_validity_rate": 0.75,
+          "execution_success_rate": 0.75,
+          "final_answer_accuracy": 0.625,
+          "end_to_end_success_rate": 0.625,
+          "unfinished_rate": 0.0,
+          "invalid_tool_call_tag_count": 0
+        },
+        "samples_path": "eval/samples.jsonl"
+      },
+      "gates": {
+        "graph_e2e": true,
+        "graph_schema": true,
+        "graph_arguments": true,
+        "graph_execution": true,
+        "graph_retry": true,
+        "tools_e2e": true,
+        "legacy_chat": true,
+        "legacy_tool": false,
+        "legacy_format": true,
+        "legacy_repetition": true
+      },
+      "all_gates": false,
+      "final_checkpoint": {
+        "path": "/data/artifacts/minimind-lab/A01-v3-mixed-lr1e6-20260908/checkpoint-570",
+        "step": 570,
+        "validation_nll": 0.3801351016007675
+      },
+      "train_last": {
+        "step": 570,
+        "train/loss": 0.6589806032216637,
+        "train/grad_norm": 8.357314109802246,
+        "train/target_tokens": 406611,
+        "system/peak_allocated_mib": 3095.55224609375,
+        "system/elapsed_seconds": 120.86567111703334,
+        "validation/nll": 0.3801351016007675
+      },
+      "swanlab_train": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/5h3qys7d",
+      "swanlab_tools": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/7kagdh51"
+    }
+  },
+  "selected": null,
+  "status": "not-promoted",
+  "test_opened": false,
+  "rl_trained": false,
+  "protocol": "phase6-v3-preregister.md; fixed-final checkpoint"
+}

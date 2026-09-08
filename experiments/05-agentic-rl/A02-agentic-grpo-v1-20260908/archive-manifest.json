@@ -1,0 +1,34 @@
+{
+  "artifact_root": "/data/artifacts/minimind-lab/A02-agentic-grpo-v1-20260908",
+  "files": {
+    "unit-checks.json": {
+      "sha256": "527607952b84dfd0eac9792cddbb63f59dd4cdb7590b50877f229a9bfe88cf31",
+      "bytes": 218
+    },
+    "mask-ratio-check.json": {
+      "sha256": "f4944942824831a9db1f63acab1cc134e7086c4d857aea7ff86f46f116589655",
+      "bytes": 362
+    },
+    "provenance.json": {
+      "sha256": "a70004e9cdd16c7e4f1cf8b37e0b6766aebb395a93657bd8f9c4b6786132fb11",
+      "bytes": 62478
+    },
+    "metrics.jsonl": {
+      "sha256": "7f98b1ee34de92a25b026aa1ce404a5d03c65777110d959a2e97787dc3bfa8e0",
+      "bytes": 14761
+    },
+    "rollouts.jsonl": {
+      "sha256": "757476c977f764f812e308e99e132be1aadf24de99f5bab7cc56288329e147b8",
+      "bytes": 212363
+    },
+    "swanlab-url.txt": {
+      "sha256": "c13d4cc38a82aa390b832794076a06c652db071e11025d4fdac9023125db19ba",
+      "bytes": 59
+    },
+    "FAILURE.json": {
+      "sha256": "8f72a2795e734ea42f3c6c725ff84a894c3aaf1347bf52f95b6afa6d05e662bf",
+      "bytes": 253
+    }
+  },
+  "weights_copied": false
+}

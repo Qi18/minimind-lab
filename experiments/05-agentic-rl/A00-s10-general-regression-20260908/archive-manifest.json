@@ -1,0 +1,547 @@
+{
+  "artifact_root": "/data/artifacts/minimind-lab/phase6-general-S10-20260908",
+  "archived": {
+    "manifest.json": {
+      "source": "/data/artifacts/minimind-lab/phase6-general-S10-20260908/manifest.json",
+      "sha256": "7dc5f3f904f773ccce1937ab643875cb38b6ce1be6fae00598131a7f847e8595",
+      "bytes": 679
+    },
+    "DONE.json": {
+      "source": "/data/artifacts/minimind-lab/phase6-general-S10-20260908/DONE.json",
+      "sha256": "c75e0f30bfe04d40e8957b4e17508a53bfd0361de1099c18ef79c819db44ce73",
+      "bytes": 131
+    },
+    "ifeval-command.json": {
+      "source": "/data/artifacts/minimind-lab/phase6-general-S10-20260908/ifeval-command.json",
+      "sha256": "a48362dc3d6f119246d45fecd6f389b8c94e891f6abaffd015ae0a6392795144",
+      "bytes": 589
+    },
+    "seven-command.json": {
+      "source": "/data/artifacts/minimind-lab/phase6-general-S10-20260908/seven-command.json",
+      "sha256": "90e9f880cc63f3d200c4ce97f9eb5cf2c59908aeb91b5dc4f46c81c5b3580e4d",
+      "bytes": 645
+    },
+    "ifeval-results.json": {
+      "source": "/data/artifacts/minimind-lab/phase6-general-S10-20260908/ifeval/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/results_2026-09-08T12-13-21.006400.json",
+      "sha256": "1ca80fe9efe5ddac20f78d28d35fd6b91f22da3124d1d8de07232889c457128e",
+      "bytes": 14368
+    },
+    "seven-results.json": {
+      "source": "/data/artifacts/minimind-lab/phase6-general-S10-20260908/seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/results_2026-09-08T12-16-16.243052.json",
+      "sha256": "66791212d70a66894c5ac25ddfdcc80ca52795957a95846bedb8008224b4672e",
+      "bytes": 339271
+    }
+  },
+  "full_logs_and_samples": "retained in CPFS only",
+  "published": false,
+  "cpfs_only": {
+    "ifeval.log": {
+      "sha256": "3be52b0647f9109c46569ad6f046f5a9cb26c86da7a3368022f5d8aede974c9c",
+      "bytes": 6588
+    },
+    "seven.log": {
+      "sha256": "abc922aaeb5642f61aa67e81b7d050f784b3d990f40d2d559ada241dae232fcb",
+      "bytes": 246078
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_environmental_impact_assessment_engineer_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "9c9904df8ad3964308d31fef1d1115e87903956c7ef209e26861cea43e2208f4",
+      "bytes": 99081
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_journalism_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "8659222fdd75c61a3d81679bcc77685471adb7cde2f5fe75fa824ac99e4b5f2c",
+      "bytes": 424523
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_computer_security_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "14e3848cb0771ced8fd1d0d610e53254eeafb055b9e152a411aaa66db40a1bcf",
+      "bytes": 518017
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_world_religions_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "b7812d4bbb86cc0926d611a69a5e8509cb22d181990cd02948e2efb1d1ad91ab",
+      "bytes": 374453
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_legal_and_moral_basis_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "4a61264eb699f46c49a4b36bf49a99749331f341b44d903e381535a4d4f26a90",
+      "bytes": 646185
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_probability_and_statistics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "64a0c50c8a9c62a01beddf8780b0407f34cff05f5f2e059f396883ae125a61a1",
+      "bytes": 60117
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_marketing_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "4fb16e9424efeb62151fc2d06ce325d70989a3f5174a6c13f6211afbacd1d2f6",
+      "bytes": 481880
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_sports_science_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "66f0026b32869d6dcb386d560f61865871397f0cfce5fb612ce7b87095d8a3fb",
+      "bytes": 48670
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_food_science_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "c149b4e57f9c995389908c241e5c858937d8590871b7e547a262f1c047b5cb6a",
+      "bytes": 336398
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_high_school_history_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "9f24e34ae1da99bdabcb063e934e40c2fbedc7ab53f22287716c3484e849850f",
+      "bytes": 66220
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_veterinary_medicine_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "6c1cf303be8d5d1dfe534ae9b007d612b5ee5f23e7fbc457428239b7d42608bb",
+      "bytes": 60610
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_chinese_civil_service_exam_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "37e8db70687c1ef1882c992690b7e7c6d70ff03d8f35a49987b5e508f8b48296",
+      "bytes": 665278
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_middle_school_geography_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "e168b01b1123c79560e0bcfd8257772f2c0876d6d62404c326c79099af4d07ca",
+      "bytes": 33055
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_ancient_chinese_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "527ee38a77af9c38ff26f6cf8f4e8839a4132b6630cb34812111fea00281f6c8",
+      "bytes": 418321
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_computer_science_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "559fe9a5b3065167d5d54c540c5c7f7a97fedca3288455a5d94aa20a485f660f",
+      "bytes": 507662
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_hellaswag_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "3adb78ee63bf315c7efd2231781bce8b2efcb98dddaab74b7a9964abc6187cd2",
+      "bytes": 45805784
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_civil_servant_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "b4285d40cea212fac4279b8342bc1832089dcfd372d1be86d44ad5fe99d41a75",
+      "bytes": 183400
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_plant_protection_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "380d18dd925a11c13317083b6c02a648680dda97e35ee92c18660d0f6725e354",
+      "bytes": 54472
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_modern_chinese_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "91fab09423a89e78810049afa9d4129a280b879d782c2739d8996a92372b80bc",
+      "bytes": 344632
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_middle_school_history_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "02f2de2b40ab37391cd2a0366d948f94b2b9754a7bd5053f0888a454f0dffed5",
+      "bytes": 66310
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_philosophy_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "d2549c3a5af3689f438e99488e34476ed699642eb10015e9222dc0718038d5b3",
+      "bytes": 269691
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_arts_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "74e3f357274b955d22e205741ff3804bb4c1c28c91b8f831bca95b0d2f8413b2",
+      "bytes": 368220
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_college_medical_statistics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "c802549f163bb544d1079c4ccd149356cc30fdc52e8a953303e004c0cd821239",
+      "bytes": 293685
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_physician_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "5629687534272c14d5b1d3c5e53ea72d09064e3595a4a7b58bda689b3f8ab53f",
+      "bytes": 124533
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_legal_professional_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "8eec12515d22ea139f0ddc4c242633e585a862c7c883b9bace43bdc2d08ecee4",
+      "bytes": 99586
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_college_engineering_hydrology_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "93fd5c29510cf160a2c5825329274baf0ebeef431dd98da270946b05e77b9333",
+      "bytes": 283977
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_human_sexuality_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "5a4743ca1d2eeb870c4e1dacdf474ac918e04e9d02d1fafc25dc3e7fb891b495",
+      "bytes": 318921
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_education_science_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "adb5dd0c010e03e2d4da0a7d5baa30833e80ca51e293f9e3a23c75127fdd0893",
+      "bytes": 75146
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_mao_zedong_thought_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "4176a77c8ba2beaaf5bde17564d5034866c2b0ebebbb38c0efbd3bd4f279b8c6",
+      "bytes": 71713
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_high_school_geography_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "c2b8d10765bc19515426abd189e7dfb41b11175a23b2473eec806839ff1c2e68",
+      "bytes": 51300
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_virology_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "88c37b1f949dcc34020b7e289e6ea3d14f5bd1a035fb9aafbf55779a16552758",
+      "bytes": 425015
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_high_school_geography_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "75623fac0fb506493f3c0b958b11c7cddd825567c351eb98360ba065ff9da88e",
+      "bytes": 349673
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_chinese_driving_rule_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "08888978fc828dc828aa55181fb15c4764d06549e395b5b2c3f159e4b95a060d",
+      "bytes": 343186
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_electrical_engineering_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "c29aafe8a1c3b9e8ee0b4ee2d70a1f2854380eac41a69c611d5446a6895a7ebd",
+      "bytes": 450758
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_logic_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "01fd4b7b389d8611de373dec2a999b5d62970553421bfcf2111af1a86419041e",
+      "bytes": 113837
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_business_ethics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "2a61b113872b12ccdca38f7e963e2e66d5b59365c1700e57792c3219e958c2c1",
+      "bytes": 525659
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_discrete_mathematics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "183ff97e0e4bbbb526478020ab0e0cb88b13c660164db2746d9939126ea07c0b",
+      "bytes": 43828
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_professional_law_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "a6cea1fbf396c3fbe3240fcf4ecc625d300cfcdc0b5874c11d5459c5ab22601b",
+      "bytes": 704805
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_professional_psychology_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "0e66ffef3782f516dfb5d6866930497472b766bcc28071cc7753a54d2febe116",
+      "bytes": 581158
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_economics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "e14457ae7b2e6bef14dd1d32bb71922534998b0bb5cd7c27024207dc0fd41d8f",
+      "bytes": 419971
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_high_school_biology_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "0bc2efbff675ed462c5699bd2ffa02760515d890baae457f0b556e7c3034a44d",
+      "bytes": 62037
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_jurisprudence_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "153f49b5286c8e3ec8e619199b30452c41c09770c8976be1ec0366b280ceb4ef",
+      "bytes": 1347397
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_high_school_mathematics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "74c35606bd691a1d6d1e2094183f0be9ba9acd53165cdba4ed658c2f0097b07d",
+      "bytes": 56041
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_chinese_language_and_literature_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "6fc45ab4240f6813c580d17367451a2e83311a8a5a572e8698630e2628693f94",
+      "bytes": 55841
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_college_actuarial_science_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "584292267e0f70da9890adbf8973662249927c29587e8215ae2136f4c30d3185",
+      "bytes": 305968
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_teacher_qualification_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "30c79a7ac39baff7552792f5856c9e0d384dc44cdd495878b66534f46cec9219",
+      "bytes": 133818
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_chinese_literature_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "1e9869339cf3a5b72fb19e100113ac7342572c8af396443e81ff9cf43edb4674",
+      "bytes": 521281
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_openbookqa_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "837fb9c7fda1a1cb749392d28c2ddf90c6f4c4b18e8d89bd79aaa9d652286231",
+      "bytes": 806730
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_elementary_commonsense_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "490eb5470fe2b097a7baa0dd73cd5bd25f57b05fc028cc5d28f8b8c02ea99bfe",
+      "bytes": 463359
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_computer_network_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "0af75d1407bf641cab7940df58d9ecabd3c3dd586c99cf1d652ef3c8fd85e97a",
+      "bytes": 50654
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_world_history_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "4d8efa8181273bce4cf3d5299d78792b35fea1495cfb1cdef5a3141723e40c5e",
+      "bytes": 601398
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_chinese_food_culture_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "f0c0f77d23fb22783cdd6413afa3e739f74b08a87e22c49fc309e129bbd047b5",
+      "bytes": 336397
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_chinese_history_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "e721d9a15494694992c0a6a29a609658f1f2a37ac05dcd5d7ef20524378643f1",
+      "bytes": 1169724
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_high_school_biology_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "bca0c7d41cf3298fb0ec7ca562a067c1ad09c47ef97bc1e8a6072284f068b43b",
+      "bytes": 646457
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_college_education_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "896f38a7783b8174fa9dbc286868a1d1fa83d49e91057f69aecb5945142eb023",
+      "bytes": 305171
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_professional_tour_guide_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "b92adec7d586cd52e286ca2aeb575f28845b5cfc78fe9cb0ef92385969b738d8",
+      "bytes": 70534
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_piqa_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "9f25ff91eb0e6db214c626444aa00f0ce0d2c2f70efb84cba24e879776cbb336",
+      "bytes": 2443328
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_social_iqa_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "573ba892a7dc5ccd63dd11f575fc8bb5e47743934f63168137f2f4330451d855",
+      "bytes": 3019690
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_clinical_medicine_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "d308c30f0d707c9c9d9596c92336513443d1fca0ae0963acef62759a522750ff",
+      "bytes": 57185
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_high_school_mathematics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "399e350094987f899d010d3a4a5b24cc2dd6047fdf73daba3d987694c8805c49",
+      "bytes": 398262
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_metrology_engineer_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "5dd20964a79b8219aae661f53eff53e0afd6e3d52d6f42b3a04c281b18d6eb08",
+      "bytes": 70512
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_high_school_chemistry_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "03fdde0a9be434d594f2e63ab493181df472d6519bfffec82a00130e136463d9",
+      "bytes": 59544
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_college_physics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "07c21f2dc8f67eb8c2c20852ca880d5df9faf463cf2e205d521cf90b7ac1d53e",
+      "bytes": 62185
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_college_economics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "af83006df60b9ebdf8192656433c114f5c057f5efa1860213b19b957de8d55bb",
+      "bytes": 163920
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_college_chemistry_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "f8a9b0494ff6e13298632d5e13f48369bbde892e6ef5e48b70a43df82326b5f9",
+      "bytes": 61860
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_nutrition_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "f5bd9e1825a45ab27e4498a363ecd00ffdb838cd85ac9e162694dafb70c243e7",
+      "bytes": 356481
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_college_mathematics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "0dd7ae132df5296845563030d6832d192aa9f089f8a9a813cc51ca59074343a4",
+      "bytes": 341124
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_anatomy_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "95cdf3c7750df3bf200911bb05dd4e131310266677a766858001296c87d4744e",
+      "bytes": 332480
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_college_law_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "ab82265575f0fa257af5e9ad7c84bc9540e82c8b4ce9da332e31532f7b956e75",
+      "bytes": 341967
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_high_school_politics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "1db5348f1c9f17d3e62ba8cf2df3132c39debbf2537dd4406377a0e79cc2aeba",
+      "bytes": 76148
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_chinese_teacher_qualification_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "d87c70a99126773a879759b5cad9da4c37cb2aeda214100cb87d9e1f9f6603e0",
+      "bytes": 540806
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_traditional_chinese_medicine_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "0f23e9440ac28c48551ed72e310149797b9c38817ae76ac6dfc24acd39485024",
+      "bytes": 439053
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_agronomy_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "bb3420c80494b11e725cc7c5a1129b20b4a85bc4b0f86b37d07c8483a9b9f3e9",
+      "bytes": 400008
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_electrical_engineer_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "a4285dc00c9b1aa169dc3d0b9ccda208eec60619930796f5e04db1f2bd4d5e95",
+      "bytes": 104062
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_operating_system_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "102aabbdd0ce736d868e9e7271fea1f4b55729b44466496f556ff8f752d8ee0a",
+      "bytes": 47890
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_conceptual_physics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "fea5f550cf70503825ff3b2659d3025fc59672e2385bdc2f0ccbaaf34e18e170",
+      "bytes": 474740
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_middle_school_physics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "453c7c3dfab11821aa38814666990780192dc2c2435e2352620b38ea57fe7c3b",
+      "bytes": 57800
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_arc_easy_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "4ff8e431fed78826672903e2450c75b434f911cd1e98dc9da62b726c2a1022e1",
+      "bytes": 4837020
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_machine_learning_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "58e72743ac401192f82bc2471693bea7ea466f8f0dca645d285ab5ef17d499b8",
+      "bytes": 352908
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_security_study_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "6e7cde154f05ddaace93f66186e75f51fc01591be4703aaa67bee8be05ac44f2",
+      "bytes": 359655
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_elementary_chinese_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "c845ea3dccee07438c41804b20060800df2233edcb73709468dc7b95a55b8421",
+      "bytes": 632618
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_high_school_physics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "e88331ad16b98030627400b6e9739773b9416d9208b1ae5d75d935d118b64bce",
+      "bytes": 343368
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_fire_engineer_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "669aa195ebf9d9783b4cd332b458aab07a096d05ba2df1f0ed38d710151525dc",
+      "bytes": 102383
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_marxist_theory_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "6ae87ebaa33f8cb6395c770abc2fd0f44119a249c67b394e07727c065d9849fa",
+      "bytes": 528431
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_law_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "af1874dad65e61d14b0634fd758c13065208f0256097012ee84773c6578cd069",
+      "bytes": 79645
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_construction_project_management_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "7f7040625a660b611f67c502de83d7b5ccf95e8e20a4008a13f030763d6996d2",
+      "bytes": 374101
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_elementary_information_and_technology_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "94394ed25e1207f111ed441461dde2d981a0371825b4147e6f7bc1b428cb068f",
+      "bytes": 608464
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_urban_and_rural_planner_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "610edde757737cf6d15acf796f94a6b3f00b42de8636b20a5c84cb9b937125f3",
+      "bytes": 141627
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_high_school_chinese_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "a5e98cd8d21f1359839b2fa45d4ae68164d0853682ec173048fb34f2599c9443",
+      "bytes": 84012
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_middle_school_biology_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "3c595e37abc66c8950c7d1caa9e5d5ac0dc87e85921dc6b986210f313972f272",
+      "bytes": 61012
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_college_medicine_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "245c11f3cd778bbde29eb4896f8e4b0e9135ab73ea53bf77465bd9be5132402f",
+      "bytes": 712690
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_middle_school_chemistry_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "d7fa522124d4e4d75a571cd0a61e08fe00a8ecba6ce4535021ba87de8702e2a1",
+      "bytes": 61329
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_genetics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "60069d0fa53621fce6a39afc339e6259d247152536c88c3d4f382005e3580c82",
+      "bytes": 458704
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_high_school_politics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "82a29660e70d250201e58f9eb197b69c20598b8f9776f8358032fa10fe76382b",
+      "bytes": 545254
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_education_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "c780ce86a92b0a102d82fd913d5a8e54ea1ffdf06f72432041e4fc9ebd971fe1",
+      "bytes": 394513
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_logical_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "d000590482549eb5c0b6581f29b68cd27a2489d6eb67d54d1973223d0a9a8848",
+      "bytes": 319908
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_high_school_physics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "62a201df157a4b24249a529b62e30b57b0026b0ef20d46d60e10e5c8563c1c4f",
+      "bytes": 67797
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_management_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "6fe068ab76b216b2ae08c7aa9ba74a081547a47023d6b05e263347b5a0dae2c7",
+      "bytes": 543248
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_international_law_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "dc9e7d15555fbf338d7d2cc569e6bec8f6e0c418a76ec9b121ceb7ab77fb73e1",
+      "bytes": 530155
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_modern_chinese_history_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "0ad9e2d31008cebd46fe65d651eabe7b0c61d808779aebf27fad580bc962fc62",
+      "bytes": 64239
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_ethnology_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "85c32456df959630fdcc836810035226fbeab4e08a74305f9cc17f54023b8b00",
+      "bytes": 339445
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_elementary_mathematics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "460f247cdc47f15ee41c36594ec8834c60b36717fceef14aa4d6840b8576191c",
+      "bytes": 555534
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_middle_school_politics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "fe69134ce253c8b2d2e4f5c2f81ba60f9751068eb4c371fef93b34b32fd655a0",
+      "bytes": 71509
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_sports_science_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "06f9de5e7fcc1c5a8616641d112dbde01bf38af70234c015ae62c75943376909",
+      "bytes": 399069
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_public_relations_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "e39e9c1ac250e1cb4f87a9bcc85e25d9302c29167458015a4aca96d0e6400f2a",
+      "bytes": 444726
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_middle_school_mathematics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "b002503a96f2a01755d0bc598896e8a9a456375f41207a71af70ff104e6e0256",
+      "bytes": 56104
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_marxism_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "26428742a936f03cea791e382b57a4337b5f0b92760458f5390654018208bd9f",
+      "bytes": 53816
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_ideological_and_moral_cultivation_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "e2270e7b771e15f7952e6c01fbbbba62a0406eb11f7e221c41e0a2cd5b165d64",
+      "bytes": 49259
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_business_administration_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "a1c2e84f5a0486f5f75a9a407538afb8b1df7294115bb77903eb9f0b1b6c0f6f",
+      "bytes": 100696
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_professional_medicine_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "8a838d33293dd2459bd8b1381c69e8343b222befc9be81fa1b33d4c6b1f32ad6",
+      "bytes": 934129
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_sociology_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "f5613add84d021a03857abbaacee5b8da508e9c5a75a2422bf0799ecc69b4dec",
+      "bytes": 562937
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_tax_accountant_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "9fc60d9bdcb494c0f2569e954506fe138ddd27569f079518d4452e49b16f62d2",
+      "bytes": 175119
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_college_programming_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "40db2a87e58dd7c0b8d3ae5ee7dc52d834e7786f5f0511e55b864a418750f4cb",
+      "bytes": 109277
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_accountant_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "cd072db2adb5db11ac07233c7c411aec3fecf8099b51282fcfa6246264f770d4",
+      "bytes": 179264
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_global_facts_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "86f6a0c1a4d81ab99eec7aa555c3a560862ca4fd1fbf27487ef795289564576d",
+      "bytes": 385787
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_chinese_foreign_policy_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "8a9b422cf80813670b5d87fe7016b85d074cfc65efc3ac2d1da50c98e458761f",
+      "bytes": 393590
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_clinical_knowledge_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "48f2ebc2689b7548bc7fb9cfc341d9dafa6e31d72911195afd15beb67569b221",
+      "bytes": 797031
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_professional_accounting_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "d8b365e529b0e5b29428e41cb9b7eabae000b0d6065800482649bdc6784f5ed5",
+      "bytes": 457827
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_high_school_chemistry_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "9758982af9694603a981c5ed11c82eb289cb7beb3e7b126729d962a99806146a",
+      "bytes": 466571
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_cmmlu_astronomy_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "e0bf74fae181fe690972782bd3128bc81e50b6ddf3da207c08ec2b09e349c17a",
+      "bytes": 433351
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_computer_architecture_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "fb26c3f5d15d5c5fc49871d306765ea21b8ad99afde1f41604d4b0bca3d53ff6",
+      "bytes": 55742
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_basic_medicine_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "4811dadae14bc1c2e99b63a052dfe1870d51e31efe5784edcc30b74f03f150ed",
+      "bytes": 44556
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_art_studies_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "0a990b2f1ea18f4c81f2558be27d0dc2fcd5fb1e93b3613b6ac0e044b001f8b9",
+      "bytes": 76984
+    },
+    "seven/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ceval-valid_advanced_mathematics_2026-09-08T12-16-16.243052.jsonl": {
+      "sha256": "bac3a5de096c5fbb59f762fdb664675fe27597b25b8ac9c74c85f3a77ef1320f",
+      "bytes": 59882
+    },
+    "ifeval/__data__artifacts__minimind-lab__D01-s10-preference-baseline-20260908__exported-fp32/samples_ifeval_2026-09-08T12-13-21.006400.jsonl": {
+      "sha256": "b6518c24f349436b0ac1057244cdcd6a0ba2c28d4edfb8d4fdf768af35e026d5",
+      "bytes": 5063803
+    }
+  }
+}

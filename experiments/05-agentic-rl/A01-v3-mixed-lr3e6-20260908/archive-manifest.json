@@ -1,0 +1,65 @@
+{
+  "artifact_root": "/data/artifacts/minimind-lab/A01-v3-mixed-lr3e6-20260908",
+  "files": {
+    "metrics.jsonl": {
+      "sha256": "c8840f383a6c71ebb1412f084805cb48c4aadcd5932e0fc85136c116552bc0f7",
+      "bytes": 119649
+    },
+    "DONE.json": {
+      "sha256": "07e4d000cbee0a44eef642e96ecadb065e9ab1b2bbbe58fe51c71bcd0cff9b87",
+      "bytes": 1097
+    },
+    "alignment-check.json": {
+      "sha256": "264ec50b6783f30b1def397ea10420469cdfc09bf907b2ca4a47446101c5d189",
+      "bytes": 84
+    },
+    "provenance.json": {
+      "sha256": "917f1f61413bca1d49fde5b5b54b4701fcea784712168382769e3841a1031a2f",
+      "bytes": 3833
+    },
+    "best-checkpoint.json": {
+      "sha256": "68f66fc316a3ac47ae10b928a53b94ea7fdaf312b821054fbfe165705c217043",
+      "bytes": 133
+    },
+    "source-snapshot.json": {
+      "sha256": "fd16d59f05d68b63f0c9dd48616f0fdf036f7a6b9b3e33ec77419740ba88def9",
+      "bytes": 28107
+    },
+    "swanlab-url.txt": {
+      "sha256": "ea43e6eb6b1b25ec2cd74bd10663fe7b3b1f85699243c00e6250680b9639af23",
+      "bytes": 59
+    },
+    "validation-agent/summary.json": {
+      "sha256": "9d0be57b6d7d717e7777b0c8aea35a208c55df6654d5029fac38ee4953c7e809",
+      "bytes": 889
+    },
+    "validation-agent/predictions.jsonl": {
+      "sha256": "d9da53d89419f06497d72b0ee3f827358a1db108bd92c1d6bb0fb5fcb207891a",
+      "bytes": 187709
+    },
+    "validation-tools/summary.json": {
+      "sha256": "7a1b8773ecafd857b4a71097f00118cae6befbfc6b649eddabb0b92916a40ce0",
+      "bytes": 927
+    },
+    "validation-tools/predictions.jsonl": {
+      "sha256": "16008913926de9a38635af30eaa91359e50851fe44292c8664c83509b7be1532",
+      "bytes": 116435
+    },
+    "validation-tools/swanlab-url.txt": {
+      "sha256": "26caeeb72ea65d0cf456ed0d36809710aa3711232a6388c863a70b4f6b3d1e51",
+      "bytes": 59
+    },
+    "behavior/task_eval.json": {
+      "sha256": "38829c4b64a3c5016a8b1caaf60d954c8003349d4b3545244d733c7052b6d871",
+      "bytes": 712
+    },
+    "behavior/samples.jsonl": {
+      "sha256": "df47be2da5e024f7d932152ce2140cd0f647e71bb1ee91e7a7ed228e4be74c62",
+      "bytes": 10765
+    },
+    "behavior/system_metrics.json": {
+      "sha256": "8d4b14cc81f9a400626b8d13dd315798f0517c48f7374a85f5867e378ea92ccb",
+      "bytes": 655
+    }
+  }
+}

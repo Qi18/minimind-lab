@@ -1,0 +1,120 @@
+{
+  "config": {
+    "base_model": "/data/artifacts/minimind-lab/D01-s10-preference-baseline-20260908/exported-fp32",
+    "data": "/data/datasets/minimind-lab/phase6/mixed-agent-v3-r1",
+    "environment": "phase6_agent_v2",
+    "seed": 42,
+    "learning_rate": 1e-06,
+    "micro_batch": 4,
+    "gradient_accumulation": 4,
+    "epochs": 1,
+    "max_length": 1536,
+    "eval_every": 100,
+    "select_final": true,
+    "experiment": "A01",
+    "attempt": "v3-mixed-lr1e6"
+  },
+  "head": "234797da3dd4e9be55c76c771ad854c2124015a4",
+  "base_sha256": "851ad62d58986bc72b6d8b0e17ebd06e6635f8f5c7161aff8e50ab1104569bce",
+  "dataset_manifest": {
+    "seed": 608,
+    "sources": {
+      "train": {
+        "path": "/data/datasets/minimind-lab/data-v1/sft-chat-repair-v2/train.jsonl",
+        "sha256": "6250d9548898ac1ebabd23f80560775c16f065a4ac85f5a2deb11f35ac6c61d8",
+        "chat_conversations": 2000,
+        "native_tool_conversations": 600,
+        "decisions": 3815,
+        "note": "historical broad replay; not an unseen-S10 dataset"
+      },
+      "val": {
+        "path": "/data/datasets/minimind-lab/data-v1/sft-chat-repair-v2/validation.jsonl",
+        "sha256": "cca4d6db2935a5d059d58d751b51ac790162a3fa95509255a22fbc40d1e74b9e",
+        "chat_conversations": 150,
+        "native_tool_conversations": 50,
+        "decisions": 286,
+        "note": "historical broad replay; not an unseen-S10 dataset"
+      }
+    },
+    "rejected": {
+      "train": {
+        "prompt_overlap_or_duplicate": 1044,
+        "invalid_native_json_or_schema": 14
+      },
+      "val": {
+        "train_overlap": 81
+      }
+    },
+    "scope": "same graph families; new task IDs; mixed replay is retention, not novel capability evidence",
+    "domains": {
+      "train": {
+        "decisions": {
+          "graph": 3600,
+          "native_tool": 1766,
+          "chat": 2049,
+          "tool": 1700
+        },
+        "assistant_tokens": {
+          "graph": 107871,
+          "native_tool": 67835,
+          "chat": 191528,
+          "tool": 39377
+        },
+        "max_length": 956
+      },
+      "val": {
+        "decisions": {
+          "tool": 340,
+          "chat": 151,
+          "graph": 720,
+          "native_tool": 135
+        },
+        "assistant_tokens": {
+          "tool": 8080,
+          "chat": 13033,
+          "graph": 21534,
+          "native_tool": 5366
+        },
+        "max_length": 951
+      }
+    },
+    "prompt_overlap": 0,
+    "truncated_rows": 0,
+    "test_policy": "frozen; never use for LR/checkpoint selection",
+    "retention_caveat": "broad replay is capability-family targeted and includes old S10 sources; fixed legacy smoke is not independent proof",
+    "files": {
+      "train.jsonl": {
+        "rows": 800,
+        "sha256": "df3b84fa2be4a546e7288e0aa610a9286dbd0b8f141f7849b79afdc6659de913"
+      },
+      "train-decisions.jsonl": {
+        "rows": 9115,
+        "sha256": "8951c11315efa4c367796cc668f5d4c13c4ff494b1fb3ff6c9e2280ee55ad397"
+      },
+      "tools-train.jsonl": {
+        "rows": 800,
+        "sha256": "3b83f75f17d8487e0dcf19a7cc4727126f75eacb366e73a254b94bcf2b74c292"
+      },
+      "val.jsonl": {
+        "rows": 160,
+        "sha256": "8622cd6bf40d337452ea2be2274ae8702378fb63c4f0a9426f02a3e842249832"
+      },
+      "val-decisions.jsonl": {
+        "rows": 1346,
+        "sha256": "201a16f5b5773045e52353c497d05b5a40be6c1a7590667534c2bd04d73f7534"
+      },
+      "tools-val.jsonl": {
+        "rows": 160,
+        "sha256": "8769b782e590fb7cba922548f8e5e68fba2ac86601c730e6eb3d7919d925708e"
+      },
+      "test.jsonl": {
+        "rows": 240,
+        "sha256": "34395467603505e10bf1b85111a042f777b64e188eb431dd38e6fa666bfae0d5"
+      },
+      "tools-test.jsonl": {
+        "rows": 240,
+        "sha256": "9ec123abdcc03b287112eb4e1edf8005ea9fadd9acec2ec2128f42e130731a1c"
+      }
+    }
+  }
+}

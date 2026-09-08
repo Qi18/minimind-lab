@@ -1,0 +1,159 @@
+{
+  "status": "A01 evaluated; Phase6 not accepted; RL held for zero-variance probe",
+  "test": {
+    "A00": {
+      "tasks": 240,
+      "schema_validity": 0.5108695652173914,
+      "expected_call_coverage": 0.18214285714285713,
+      "tool_selection_accuracy": 0.13333333333333333,
+      "argument_semantic_accuracy": 0.10952380952380952,
+      "execution_success": 0.973404255319149,
+      "end_to_end_success": 0.0,
+      "final_answer_accuracy": 0.0,
+      "unfinished_rate": 0.05416666666666667,
+      "invalid_call_rate": 0.4891304347826087,
+      "mean_calls": 0.7833333333333333,
+      "mean_turns": 1.7291666666666667,
+      "mean_generated_tokens": 68.74583333333334,
+      "wall_seconds": 21.802294561988674,
+      "observation_usage": "ordered chain and exact final checked; causal counterfactual evaluation pending",
+      "latency_protocol": "batched throughput/amortized time, not single-request latency",
+      "decoder": {
+        "greedy": true,
+        "max_new_tokens": 96,
+        "max_turns": 6,
+        "batch_size": 8
+      },
+      "branch_e2e": 0.0,
+      "chain_e2e": 0.0,
+      "redirect_e2e": 0.0,
+      "retry_e2e": 0.0
+    },
+    "A01": {
+      "tasks": 240,
+      "schema_validity": 0.9988901220865705,
+      "expected_call_coverage": 1.0,
+      "tool_selection_accuracy": 0.9726190476190476,
+      "argument_semantic_accuracy": 0.9107142857142857,
+      "execution_success": 0.8286802030456852,
+      "end_to_end_success": 0.9041666666666667,
+      "final_answer_accuracy": 0.9041666666666667,
+      "unfinished_rate": 0.09166666666666666,
+      "invalid_call_rate": 0.0011098779134295228,
+      "mean_calls": 3.75,
+      "mean_turns": 4.658333333333333,
+      "mean_generated_tokens": 143.82916666666668,
+      "wall_seconds": 28.81555501394905,
+      "observation_usage": "ordered chain and exact final checked; causal counterfactual evaluation pending",
+      "latency_protocol": "batched throughput/amortized time, not single-request latency",
+      "decoder": {
+        "greedy": true,
+        "max_new_tokens": 96,
+        "max_turns": 6,
+        "batch_size": 8
+      },
+      "branch_e2e": 0.85,
+      "chain_e2e": 0.9,
+      "redirect_e2e": 0.9,
+      "retry_e2e": 0.9666666666666667
+    },
+    "paired_delta": 0.9041666666666667,
+    "paired_bootstrap_ci95": [
+      0.8666666666666667,
+      0.9416666666666667
+    ],
+    "bootstrap_replicates": 10000,
+    "seed": 42
+  },
+  "counterfactual": {
+    "tasks": 160,
+    "both_conditions_success": 159,
+    "both_success_and_final_changes": 159,
+    "interpretation": "hidden-value intervention within this environment, not general causal reasoning"
+  },
+  "rl_probe": {
+    "sampled_e2e": 1.0,
+    "zero_variance_groups": 1.0,
+    "mean_group_reward_std": 0.0,
+    "episodes": 128,
+    "optimizer_updates": 0,
+    "wall_seconds": 8.022306868981104,
+    "greedy_saturation_gate": "held: validation >=98%",
+    "action_tokens": 16924
+  },
+  "behavior": {
+    "A00": {
+      "status": "completed",
+      "seed": 42,
+      "decoding": {
+        "do_sample": false,
+        "max_new_tokens": 128,
+        "open_thinking": false
+      },
+      "chat": {
+        "cases": 10,
+        "success_count": 8,
+        "success_rate": 0.8,
+        "format_cases": 6,
+        "format_success_count": 5,
+        "format_success_rate": 0.8333333333333334,
+        "refusal_anomaly_count": 0,
+        "repetition_anomaly_count": 1
+      },
+      "tool": {
+        "cases": 8,
+        "tool_selection_accuracy": 0.875,
+        "argument_validity_rate": 0.875,
+        "execution_success_rate": 0.875,
+        "final_answer_accuracy": 0.875,
+        "end_to_end_success_rate": 0.875,
+        "unfinished_rate": 0.0,
+        "invalid_tool_call_tag_count": 0
+      },
+      "samples_path": "eval/samples.jsonl"
+    },
+    "A01": {
+      "status": "completed",
+      "seed": 42,
+      "decoding": {
+        "do_sample": false,
+        "max_new_tokens": 128,
+        "open_thinking": false
+      },
+      "chat": {
+        "cases": 10,
+        "success_count": 7,
+        "success_rate": 0.7,
+        "format_cases": 6,
+        "format_success_count": 4,
+        "format_success_rate": 0.6666666666666666,
+        "refusal_anomaly_count": 0,
+        "repetition_anomaly_count": 1
+      },
+      "tool": {
+        "cases": 8,
+        "tool_selection_accuracy": 0.625,
+        "argument_validity_rate": 0.25,
+        "execution_success_rate": 0.375,
+        "final_answer_accuracy": 0.25,
+        "end_to_end_success_rate": 0.125,
+        "unfinished_rate": 0.625,
+        "invalid_tool_call_tag_count": 0
+      },
+      "samples_path": "eval/samples.jsonl"
+    }
+  },
+  "pending": [
+    "IFEval",
+    "seven general benchmarks",
+    "meaningful Agentic RL comparison"
+  ],
+  "swanlab_sources": {
+    "transfer": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/1t7ndogk",
+    "sft": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/mabi301l",
+    "counterfactual": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/miy5qid6",
+    "probe": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/hsn1xolt",
+    "A00_test": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/j3b8qcu0",
+    "A01_test": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/gfltoxnx"
+  }
+}

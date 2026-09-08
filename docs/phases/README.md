@@ -12,7 +12,7 @@
 | 3 | Full FT vs LoRA | [`phase3-lora.md`](phase3-lora.md) | accepted with limitations（负结果收尾） |
 | 4 | DPO 偏好优化 | [phase4-dpo.md](phase4-dpo.md) | completed-not-promoted |
 | 5 | GRPO/CISPO 可验证强化学习 | [`phase5-verifiable-rl.md`](phase5-verifiable-rl.md) | completed-not-promoted |
-| 6 | Agent SFT 与 Agentic RL | `phase6-agentic.md` | 未开始 |
+| 6 | Agent SFT 与 Agentic RL | [phase6-agentic-rl.md](phase6-agentic-rl.md) | completed-not-promoted：实验验收收尾，S10保留 |
 | 7 | Dense vs MoE | `phase7-moe.md` | 未开始 |
 | 8 | 蒸馏：off-policy 与 on-policy（依赖 MoE teacher） | `phase8-distill.md` | 未开始 |
 

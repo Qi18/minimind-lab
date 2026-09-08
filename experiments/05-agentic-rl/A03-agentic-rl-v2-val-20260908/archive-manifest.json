@@ -1,0 +1,50 @@
+{
+  "artifact_root": "/data/artifacts/minimind-lab/A03-agentic-rl-v2-val-20260908",
+  "files": {
+    "DONE.json": {
+      "sha256": "9b90d57406eb2ae848720ecdbff7059bf7f69f9861796aea334d8d0d0551e57e",
+      "bytes": 72
+    },
+    "summary.json": {
+      "sha256": "854b8d9c17a9eed5f5f37c5bdb49346a5dcd1a3aeab84f315f408fed2423c3bd",
+      "bytes": 2805
+    },
+    "eval-manifest.json": {
+      "sha256": "6bf9fd928b0c06474deede38732ff7d22f5360dc1737b86f3372c8645a510ba0",
+      "bytes": 29294
+    },
+    "swanlab-url.txt": {
+      "sha256": "b43227080085bf78f020f477b8ca269e22207be3d9751deb52d7fbbc189d10b4",
+      "bytes": 59
+    },
+    "graph/summary.json": {
+      "sha256": "1b54d65f16a1057d2260389456f1e896a95450b63ca2bd6c2a2b9dbf40a1a86d",
+      "bytes": 922
+    },
+    "graph/predictions.jsonl": {
+      "sha256": "2145c63b43c595d990e8f092915e3796a39d9c794b50cbc73dff5d7b71b63f6e",
+      "bytes": 187178
+    },
+    "tools/summary.json": {
+      "sha256": "8b37c3c902b4ee51c933637c74ab8cfcaa6a75857ed577601ebae7b57ab49d61",
+      "bytes": 946
+    },
+    "tools/predictions.jsonl": {
+      "sha256": "8ee7a821fe4712b04ae69871e9b956c9494bbb0a51c2eeea390eb0505e0cd077",
+      "bytes": 116393
+    },
+    "behavior/task_eval.json": {
+      "sha256": "269b7ea92ba7e78dcc8bfda6f3feb0ec2fa962dd2e2af613a2c194de27d609dc",
+      "bytes": 715
+    },
+    "behavior/samples.jsonl": {
+      "sha256": "773bc848aa01dafff7da816b7c01f11adcb2a8306802d8927dbe4a6a0974b2fa",
+      "bytes": 10859
+    },
+    "behavior/system_metrics.json": {
+      "sha256": "15e054f97f8c2af4ed2f71bfb4641d9acf296f7e0f098cdcb449640248ddd1f2",
+      "bytes": 656
+    }
+  },
+  "weights_copied": false
+}

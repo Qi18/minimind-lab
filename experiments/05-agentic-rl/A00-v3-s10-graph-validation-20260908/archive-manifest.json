@@ -1,0 +1,17 @@
+{
+  "artifact_root": "/data/artifacts/minimind-lab/A00-v3-s10-graph-validation-20260908",
+  "files": {
+    "summary.json": {
+      "sha256": "9d128a85a4e32c2bd158654e84831c6f5da5271b4222f0b6310bdb9a7ec6db80",
+      "bytes": 894
+    },
+    "predictions.jsonl": {
+      "sha256": "591c3d18685f5e7d174e9c9887392ee710090c904be51a4b76c726d90457812c",
+      "bytes": 114757
+    },
+    "swanlab-url.txt": {
+      "sha256": "0aa427f6c507605840dd7f70e64b8c07886907e629c5a8932943575107082d6f",
+      "bytes": 59
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "artifact_root": "/data/artifacts/minimind-lab/phase6-agentic-rl-v2-summary-20260908",
+  "files": {
+    "summary.json": {
+      "sha256": "9c7682395f803ed1a7bf8a94c93e8a217e7e09159637e76899e77998982f9a80",
+      "bytes": 112429
+    },
+    "report.md": {
+      "sha256": "2e4e13e831a3438e76fd89d083ab92777f13a294911f110fe8445a5b85bedf5c",
+      "bytes": 4633
+    },
+    "swanlab-url.txt": {
+      "sha256": "89150fdff02461cd6929590f84bce82c4bcb3e9a8533f22356fad564fd916ea2",
+      "bytes": 33
+    },
+    "upload-status.json": {
+      "sha256": "edb62a02f20475c1e2195815d99b4132979bb26af79523a3e87d75230729cd67",
+      "bytes": 531
+    }
+  },
+  "weights_copied": false
+}

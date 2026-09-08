@@ -1,0 +1,78 @@
+{
+  "phase": 6,
+  "report_status": "accepted-with-limitations",
+  "phase_result": "completed-not-promoted",
+  "user_approved_closeout": true,
+  "release": "S10",
+  "old_tool_gate": {
+    "required": 7,
+    "actual": 5,
+    "total": 8,
+    "passed": false
+  },
+  "general_regression": "completed",
+  "swanlab_summary_upload": "not authorized; remains local-only",
+  "experiment_count": 32,
+  "registry_status_transitions": [
+    {
+      "experiment_id": "A01-v3-mixed-lr3e6-20260908",
+      "previous_status": "completed-not-promoted",
+      "execution_status": "completed",
+      "promotion": "not-promoted",
+      "reason": "separate execution completion from model acceptance; preserve failed audit evidence"
+    },
+    {
+      "experiment_id": "A01-v3-mixed-lr1e6-20260908",
+      "previous_status": "completed-not-promoted",
+      "execution_status": "completed",
+      "promotion": "not-promoted",
+      "reason": "separate execution completion from model acceptance; preserve failed audit evidence"
+    },
+    {
+      "experiment_id": "A01-v3-validation-summary-20260908",
+      "previous_status": "completed-not-promoted",
+      "execution_status": "completed",
+      "promotion": "not-promoted",
+      "reason": "separate execution completion from model acceptance; preserve failed audit evidence"
+    },
+    {
+      "experiment_id": "A02-agentic-grpo-v1-20260908",
+      "previous_status": "aborted-audit-failed",
+      "execution_status": "invalidated",
+      "promotion": "not-promoted",
+      "reason": "separate execution completion from model acceptance; preserve failed audit evidence"
+    },
+    {
+      "experiment_id": "A03-agentic-cispo-v1-20260908",
+      "previous_status": "aborted-audit-failed",
+      "execution_status": "invalidated",
+      "promotion": "not-promoted",
+      "reason": "separate execution completion from model acceptance; preserve failed audit evidence"
+    },
+    {
+      "experiment_id": "A02-agentic-grpo-v2-20260908",
+      "previous_status": "completed-not-promoted",
+      "execution_status": "completed",
+      "promotion": "not-promoted",
+      "reason": "separate execution completion from model acceptance; preserve failed audit evidence"
+    },
+    {
+      "experiment_id": "A03-agentic-cispo-v2-20260908",
+      "previous_status": "completed-not-promoted",
+      "execution_status": "completed",
+      "promotion": "not-promoted",
+      "reason": "separate execution completion from model acceptance; preserve failed audit evidence"
+    },
+    {
+      "experiment_id": "A02-A03-rl-v2-summary-20260908",
+      "previous_status": "completed-not-promoted",
+      "execution_status": "completed",
+      "promotion": "not-promoted",
+      "reason": "separate execution completion from model acceptance; preserve failed audit evidence"
+    }
+  ],
+  "excluded_worktree_files_sha256": {
+    "docs/phases/phase0-preparation.md": "d059d4ee6f1decdec6d503a2842be6eb61476d45a50a636bfa19eb96dc891b05",
+    "scripts/launch/preflight_l20.py": "e8983917722d69d9e1938c5bc7df3498e755a3832ef9899f4af5b0bb1755f53d"
+  }
+}

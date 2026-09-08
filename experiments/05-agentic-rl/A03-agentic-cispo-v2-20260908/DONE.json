@@ -1,0 +1,13 @@
+{
+  "status": "exploratory-complete-not-promoted",
+  "optimizer_updates": 64,
+  "episodes": 512,
+  "sampled_e2e": 0.916015625,
+  "variable_groups": 34,
+  "total_groups": 128,
+  "assistant_tokens": 47250,
+  "wall_seconds": 134.87748427101178,
+  "test_opened": false,
+  "model_path": "/data/artifacts/minimind-lab/A03-agentic-cispo-v2-20260908/model-fp32",
+  "weight_sha256": "1350d1872eca4b042be2b38f7f5cf477303c0a8647b14edabb2828664e9db43d"
+}

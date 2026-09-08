@@ -1,0 +1,50 @@
+{
+  "artifact_root": "/data/artifacts/minimind-lab/A01-agentic-rl-v2-val-20260908",
+  "files": {
+    "DONE.json": {
+      "sha256": "102c008bb3c651db080acd587d542e96740a4c734f3641a1a68f9d3354e059bc",
+      "bytes": 72
+    },
+    "summary.json": {
+      "sha256": "330d684afd9265fa3c488eca122ea43d4e49043a4e818a7de5d9c4c900dc5ddf",
+      "bytes": 2801
+    },
+    "eval-manifest.json": {
+      "sha256": "f7f310f031a9762faf05de43a9ef66feca7ec9503e942a525b1ee861d0d98aa4",
+      "bytes": 29296
+    },
+    "swanlab-url.txt": {
+      "sha256": "2ed3fbb983ae256bb4bda37606e3760f248caef6777410bdfc842ca91d78fb10",
+      "bytes": 59
+    },
+    "graph/summary.json": {
+      "sha256": "48c2e3d88493d3e864efffaac47a71ccc7e32407f95f4b894456f871e1972729",
+      "bytes": 915
+    },
+    "graph/predictions.jsonl": {
+      "sha256": "9796a9bf480ae1bb2169ea7a521f2bb861b2b992c41febf4c9ffdb392c2dce85",
+      "bytes": 187725
+    },
+    "tools/summary.json": {
+      "sha256": "151fbf927765664181f097d793daf64bbe84501240c8150a10e4560df1c8d01d",
+      "bytes": 952
+    },
+    "tools/predictions.jsonl": {
+      "sha256": "a509d4459fa99db8963cf806ed3c3b40b439f35a4fab6307ae3d410e762c5544",
+      "bytes": 116411
+    },
+    "behavior/task_eval.json": {
+      "sha256": "38829c4b64a3c5016a8b1caaf60d954c8003349d4b3545244d733c7052b6d871",
+      "bytes": 712
+    },
+    "behavior/samples.jsonl": {
+      "sha256": "df47be2da5e024f7d932152ce2140cd0f647e71bb1ee91e7a7ed228e4be74c62",
+      "bytes": 10765
+    },
+    "behavior/system_metrics.json": {
+      "sha256": "838483009c15b1b2c8588c8284c70a1213bdd769e6bdacc00cd615a7e50242b9",
+      "bytes": 655
+    }
+  },
+  "weights_copied": false
+}

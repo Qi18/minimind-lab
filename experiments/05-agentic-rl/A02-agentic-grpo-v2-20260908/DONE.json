@@ -1,0 +1,13 @@
+{
+  "status": "exploratory-complete-not-promoted",
+  "optimizer_updates": 64,
+  "episodes": 512,
+  "sampled_e2e": 0.9140625,
+  "variable_groups": 36,
+  "total_groups": 128,
+  "assistant_tokens": 47243,
+  "wall_seconds": 136.83677786099724,
+  "test_opened": false,
+  "model_path": "/data/artifacts/minimind-lab/A02-agentic-grpo-v2-20260908/model-fp32",
+  "weight_sha256": "502f2100d9fa5e0c217b3e509354e4825522f4816b082e12d85467c8ec500962"
+}

@@ -1,0 +1,34 @@
+{
+  "artifact_root": "/data/artifacts/minimind-lab/A03-agentic-cispo-v2-20260908",
+  "files": {
+    "unit-checks.json": {
+      "sha256": "527607952b84dfd0eac9792cddbb63f59dd4cdb7590b50877f229a9bfe88cf31",
+      "bytes": 218
+    },
+    "mask-ratio-check.json": {
+      "sha256": "732e22e4467fb93d7469cf7854f8bf19c9c82f0fbf6453f35484177a06251637",
+      "bytes": 365
+    },
+    "provenance.json": {
+      "sha256": "db3dd096a5dbee9772a52d974d5f0d5d1079df5db06460d467468dc8cc24a2d9",
+      "bytes": 62743
+    },
+    "metrics.jsonl": {
+      "sha256": "5c44d6a751ea1380ae653c86e35afe02d25a8bd501f7f9de6e74479ebc87f6f7",
+      "bytes": 24414
+    },
+    "rollouts.jsonl": {
+      "sha256": "5add70530ab11717164974919a3eb3804750a37b97ab30dc06550af6ac4325c0",
+      "bytes": 360886
+    },
+    "swanlab-url.txt": {
+      "sha256": "cb009ee270c080889fd3e3eba246eaebf7922a0d97ed38cb7796de45cea52b66",
+      "bytes": 59
+    },
+    "DONE.json": {
+      "sha256": "3f430d4f4731b394fc41c457111e4859f8afd90715d2eb953155cf49a5ce5ef7",
+      "bytes": 443
+    }
+  },
+  "weights_copied": false
+}

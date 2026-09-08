@@ -1,0 +1,10 @@
+{
+  "sampled_e2e": 1.0,
+  "zero_variance_groups": 1.0,
+  "mean_group_reward_std": 0.0,
+  "episodes": 128,
+  "optimizer_updates": 0,
+  "wall_seconds": 8.022306868981104,
+  "greedy_saturation_gate": "held: validation >=98%",
+  "action_tokens": 16924
+}

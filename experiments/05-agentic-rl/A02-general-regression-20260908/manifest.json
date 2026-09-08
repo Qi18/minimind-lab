@@ -1,0 +1,18 @@
+{
+  "arm": "A02",
+  "model": "/data/artifacts/minimind-lab/A02-agentic-grpo-v2-20260908/model-fp32",
+  "model_sha256": "502f2100d9fa5e0c217b3e509354e4825522f4816b082e12d85467c8ec500962",
+  "tokenizer_sha256": {
+    "tokenizer.json": "71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668",
+    "tokenizer_config.json": "fc648523cb8a79590f13a38203a9beeb3b52eb8b5461286593d2c7f9fcfd722e"
+  },
+  "source_sha256": "5be26627648e08b26494e333ed66cd2d60bc6076263f7150d73b6a4f4d610ef2",
+  "precision": "float16",
+  "seed": 42,
+  "fewshot": 0,
+  "batch_size": 16,
+  "apply_chat_template": true,
+  "full_dataset": true,
+  "publish": false,
+  "memory_fraction": 0.15
+}

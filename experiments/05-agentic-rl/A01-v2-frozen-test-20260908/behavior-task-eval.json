@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "seed": 42,
+  "decoding": {
+    "do_sample": false,
+    "max_new_tokens": 128,
+    "open_thinking": false
+  },
+  "chat": {
+    "cases": 10,
+    "success_count": 7,
+    "success_rate": 0.7,
+    "format_cases": 6,
+    "format_success_count": 4,
+    "format_success_rate": 0.6666666666666666,
+    "refusal_anomaly_count": 0,
+    "repetition_anomaly_count": 1
+  },
+  "tool": {
+    "cases": 8,
+    "tool_selection_accuracy": 0.625,
+    "argument_validity_rate": 0.25,
+    "execution_success_rate": 0.375,
+    "final_answer_accuracy": 0.25,
+    "end_to_end_success_rate": 0.125,
+    "unfinished_rate": 0.625,
+    "invalid_tool_call_tag_count": 0
+  },
+  "samples_path": "eval/samples.jsonl"
+}

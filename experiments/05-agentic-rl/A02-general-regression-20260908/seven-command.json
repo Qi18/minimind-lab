@@ -1,0 +1,22 @@
+[
+  "/data/venvs/minimind-eval/bin/python",
+  "-u",
+  "-c",
+  "import torch;torch.set_num_threads(4);torch.cuda.set_per_process_memory_fraction(.15);from lm_eval.__main__ import cli_evaluate;cli_evaluate()",
+  "--model",
+  "hf",
+  "--model_args",
+  "pretrained=/data/artifacts/minimind-lab/A02-agentic-grpo-v2-20260908/model-fp32,dtype=float16",
+  "--tasks",
+  "ceval-valid,cmmlu,arc_easy,piqa,openbookqa,hellaswag,social_iqa",
+  "--num_fewshot",
+  "0",
+  "--batch_size",
+  "16",
+  "--apply_chat_template",
+  "--seed",
+  "42",
+  "--log_samples",
+  "--output_path",
+  "/data/artifacts/minimind-lab/phase6-general-A02-20260908/seven"
+]

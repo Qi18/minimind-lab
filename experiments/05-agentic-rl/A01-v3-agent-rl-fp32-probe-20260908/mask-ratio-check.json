@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "repeat_logprob_max_error": 0.0,
+  "generation_teacher_max_error": 2.7179718017578125e-05,
+  "generation_teacher_mean_error": 4.369320626573818e-08,
+  "action_tokens": 1407,
+  "sampling": "temperature1/top_p1/top_k0; actual generation scores audited",
+  "scope": "each assistant action only; prior actions and observations masked in prefix"
+}

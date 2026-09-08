@@ -1,0 +1,29 @@
+{
+  "seed": 606,
+  "scope": "synthetic in-family record-disjoint, not BFCL",
+  "splits": {
+    "train": {
+      "tasks": 2400,
+      "sha256": "1aaa1db5cf66475dc7dee95dd2b8f69b532d918eee3615c75b3cab48b8b7f371",
+      "decisions": 6400,
+      "decisions_sha256": "b1f1dd9538ff96952f7986cad13869567b5a70c6a61e694cfecfda545db1720a"
+    },
+    "val": {
+      "tasks": 240,
+      "sha256": "5f192d815983dc88ca8a65c4171904af8618e71ccc6f86369397585d28a53b00",
+      "decisions": 640,
+      "decisions_sha256": "90d5d3f87199d1c9dbc0c14fab11c7d0e02c728ca1996314b45cca9d4eed48fc"
+    },
+    "test": {
+      "tasks": 300,
+      "sha256": "e22d48b577d800b14ff0914110ee9765b19d80336b506167101179bdf5934f7e"
+    }
+  },
+  "max_sequence_tokens": 590,
+  "p95_sequence_tokens": 585,
+  "truncated_rows": 0,
+  "record_overlap": 0,
+  "prompt_overlap": 0,
+  "oracle_and_padding_checks": "passed",
+  "test_policy": "frozen, not used for checkpoint selection"
+}

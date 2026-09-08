@@ -1,0 +1,14 @@
+{
+  "base_model": "/data/artifacts/minimind-lab/D01-s10-preference-baseline-20260908/exported-fp32",
+  "data": "/data/datasets/minimind-lab/phase6/record-agent-v1",
+  "seed": 42,
+  "learning_rate": 0.00001,
+  "micro_batch": 4,
+  "gradient_accumulation": 4,
+  "epochs": 1,
+  "max_length": 1024,
+  "eval_every": 100,
+  "phase": "Phase6",
+  "experiment": "A01",
+  "status": "pilot"
+}

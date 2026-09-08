@@ -62,3 +62,52 @@ Workspace 固定为 `@richliu0153`。完整 URL 形如 `https://swanlab.cn/@rich
 - R02C-math-grpo-20260908：https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/6t4l6v1o
 - R02D-math-cispo-20260908：https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/k6ez8f9j
 - Phase5-Evaluation-R02A-R02B-R02C-R02D：https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3sfq26tj
+
+## Phase6（2026-09-08）
+
+- A00-s10-agent-baseline-20260908（validation基线）：https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/p3yd932a
+- A01-agent-sft-pilot-20260908（轨迹SFT pilot + validation）：https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/jkra8o25
+
+### Phase6 v2 attempts
+
+- A01-v2-transfer-baseline-20260908 (transfer baseline): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/1t7ndogk
+- A01-agent-sft-v2-pilot-20260908 (SFT pilot): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/mabi301l
+- A01-v2-counterfactual-20260908 (counterfactual evaluation): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/miy5qid6
+- A01-v2-rl-eligibility-probe-20260908 (sampling-only RL eligibility): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/hsn1xolt
+- A00-v2-frozen-test-20260908 (S10 independent test): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/j3b8qcu0
+- A01-v2-frozen-test-20260908 (A01 independent test): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/gfltoxnx
+- A01-v2-evaluation-summary-20260908 (evaluation aggregation): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/8yso53w9
+
+### Phase6 v3 mixed-replay repair
+
+- A01-v3-mixed-lr3e6-20260908 (training + graph validation): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/52u6fhj4
+- A01-v3-mixed-lr3e6-20260908 (multi-tool validation): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/hauawrx1
+- A01-v3-mixed-lr1e6-20260908 (training + graph validation): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/5h3qys7d
+- A01-v3-mixed-lr1e6-20260908 (multi-tool validation): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/7kagdh51
+- A00-v3-s10-graph-validation-20260908 (matched validation baseline): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/1a6xkwzx
+- A00-v3-s10-tools-validation-20260908 (matched validation baseline): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/wtets9k0
+- A01-v3-validation-summary-20260908 (joint gates): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/p6sbux9p
+
+### Phase6 Agentic RL attempts（包含审计失败）
+
+- A01-v3-agent-rl-probe-20260908 (completed): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/0a9nthb8
+- A01-v3-agent-rl-fp32-probe-20260908 (completed): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/494uwnlh
+- A02-agentic-grpo-v1-20260908 (aborted-audit-failed): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/1hza7eyl
+- A03-agentic-cispo-v1-20260908 (aborted-audit-failed): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/fgvlab1b
+- A02-agentic-grpo-v2-20260908 (completed-not-promoted): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/1pxh36vn
+- A03-agentic-cispo-v2-20260908 (completed-not-promoted): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/vdwjd3sg
+- A01-agentic-rl-v2-val-20260908 (completed): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/60s7cgkf
+- A01-agentic-rl-v2-test-20260908 (completed): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/37rec37k
+- A02-agentic-rl-v2-val-20260908 (completed): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/0l8s0wh8
+- A02-agentic-rl-v2-test-20260908 (completed): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/l6kyh7yq
+- A03-agentic-rl-v2-val-20260908 (completed): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/yognri61
+- A03-agentic-rl-v2-test-20260908 (completed): https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/op09vul1
+- A02-A03-rl-v2-summary-20260908 (completed-not-promoted): n/a-local-only-approval-required
+
+### Phase6 general regression（仅L20本地）
+
+- A00-s10-general-regression-20260908: n/a-local-only-no-upload；完整证据见实验目录。
+- A01-general-regression-20260908: n/a-local-only-no-upload；完整证据见实验目录。
+- A02-general-regression-20260908: n/a-local-only-no-upload；完整证据见实验目录。
+- A03-general-regression-20260908: n/a-local-only-no-upload；完整证据见实验目录。
+- A00-A03-general-regression-20260908: n/a-local-only-no-upload；完整证据见实验目录。

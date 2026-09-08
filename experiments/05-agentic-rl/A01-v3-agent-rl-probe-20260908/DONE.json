@@ -1,0 +1,12 @@
+{
+  "status": "probe-complete",
+  "optimizer_updates": 0,
+  "episodes": 128,
+  "sampled_e2e": 0.9453125,
+  "variable_groups": 7,
+  "total_groups": 32,
+  "assistant_tokens": 11866,
+  "wall_seconds": 13.210644692007918,
+  "test_opened": false,
+  "eligible": true
+}

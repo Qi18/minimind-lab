@@ -1,0 +1,17 @@
+{
+  "artifact_root": "/data/artifacts/minimind-lab/A00-v3-s10-tools-validation-20260908",
+  "files": {
+    "summary.json": {
+      "sha256": "ec6333ad7176a07bafcf226225dae4291cf47e5f139a9a5286af9103e254770c",
+      "bytes": 987
+    },
+    "predictions.jsonl": {
+      "sha256": "a7a5e643e17bc57829e9b75a991eee4c025ac086eaa7c6137fa928cf2e1b5620",
+      "bytes": 143146
+    },
+    "swanlab-url.txt": {
+      "sha256": "de0db973d68e6aadd0bb7d2b410bba113a2c78415fdab3738ac3bf00b1fdca92",
+      "bytes": 59
+    }
+  }
+}

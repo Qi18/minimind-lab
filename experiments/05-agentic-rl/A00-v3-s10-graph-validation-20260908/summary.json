@@ -1,0 +1,28 @@
+{
+  "tasks": 160,
+  "schema_validity": 0.4460093896713615,
+  "expected_call_coverage": 0.15178571428571427,
+  "tool_selection_accuracy": 0.11785714285714285,
+  "argument_semantic_accuracy": 0.10178571428571428,
+  "execution_success": 0.9473684210526315,
+  "end_to_end_success": 0.0,
+  "final_answer_accuracy": 0.0,
+  "unfinished_rate": 0.01875,
+  "invalid_call_rate": 0.5539906103286385,
+  "mean_calls": 0.59375,
+  "mean_turns": 1.575,
+  "mean_generated_tokens": 67.45625,
+  "wall_seconds": 14.418081365991384,
+  "observation_usage": "ordered chain and exact final checked; causal counterfactual evaluation pending",
+  "latency_protocol": "batched throughput/amortized time, not single-request latency",
+  "decoder": {
+    "greedy": true,
+    "max_new_tokens": 96,
+    "max_turns": 6,
+    "batch_size": 8
+  },
+  "branch_e2e": 0.0,
+  "chain_e2e": 0.0,
+  "redirect_e2e": 0.0,
+  "retry_e2e": 0.0
+}

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "surrogate_gradients": {
+    "grpo": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "cispo": [
+      -1.0,
+      -2.0,
+      0.09999999403953552
+    ]
+  },
+  "zero_variance_advantage_zero": true
+}

@@ -1,0 +1,13 @@
+{
+  "artifact_root": "/data/artifacts/minimind-lab/phase6-v3-validation-summary-20260908",
+  "files": {
+    "summary.json": {
+      "sha256": "1a7c07a2014a1ece2b60a2def8db4dc7b280350adf025c2f5ad5b0aff6d29136",
+      "bytes": 8560
+    },
+    "swanlab-url.txt": {
+      "sha256": "277454724596a003bd684f30f015876e807afd4fb18c31217af76baf2cd2de8f",
+      "bytes": 59
+    }
+  }
+}

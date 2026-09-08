@@ -61,7 +61,7 @@ DPO、GRPO/CISPO 和 Agentic RL 默认从同一个 Full SFT 基线分支，避�
 | LoRA r16（L02） | S10 | 同L01 | 63.46s / 0.10576 GPU-h；峰值4,464MiB | MBPP 0/500；adapter 0.393M参数 | 七项32.67%；Chat8/10；格式5/6 | [train](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/s0l5ishg) | adapter约779KiB；不替换S10 |
 | DPO（D03） | S10 | official-dpo-v1 14,194 train pairs | 1×L20 / 376.21 s | preference credit 71.8%；对 D02 +16.6pp | 七项 33.032%；盲评 vs D02 score 0.480，未晋级 | [train](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3w1au7dk) / [eval](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/csvnmhkj) | FP32 恢复权重仅 L20 保留；S10 仍为 release |
 | GRPO / CISPO（R02C/R02D） | S10 | verifiable-math-v2：1,000 train / 200 val / 400 test | 1×L20；44.56 s / 43.64 s | pass@1 均 25.0%，但 GRPO 100% 答 A、CISPO 75% 答 B；不晋级 | 七项 33.06% / 33.13%；IFEval 15.34% / 17.19%；Chat 9/10 / 7/10 | [GRPO](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/6t4l6v1o) / [CISPO](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/k6ez8f9j) / [eval](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3sfq26tj) | FP32 仅 L20 保留；S10 仍为 release |
-| Agentic RL | Full SFT | 待填写 | 待填写 | Tool Success 待评测 | 待评测 | 待填写 | 待填写 |
+| Agentic RL（A02/A03） | A01-v3 Agent SFT | 混合graph/tools；128 prompts ×4 rollout | 1×L20共享；136.84s / 134.88s | A01/GRPO 451/480；CISPO461/480（+2.08pp） | CISPO七项33.22%、IFEval15.34%；旧Tool5/8，不晋级 | [GRPO](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/1pxh36vn) / [CISPO](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/vdwjd3sg) | 仅CPFS，S10保留 |
 
 表格只填写已经完成并能追溯到实验目录的结果。
 
@@ -90,3 +90,5 @@ cd minimind-lab
 - L20：数据集、活动 checkpoint、优化器状态、缓存和完整原始日志。
 
 未经评测或无法复现的数字不进入 README 和简历。
+
+[Phase6已按completed-not-promoted收尾](docs/phases/phase6-agentic-rl.md)：CISPO在单seed合成任务中有专项收益，但旧Tool未达7/8门槛；通用回归已完整执行，不替换S10。

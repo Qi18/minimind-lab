@@ -1,0 +1,14 @@
+{
+  "promoted": false,
+  "model_path": "/data/artifacts/minimind-lab/A02-agentic-grpo-v2-20260908/model-fp32",
+  "weight_sha256": "502f2100d9fa5e0c217b3e509354e4825522f4816b082e12d85467c8ec500962",
+  "base_verified_against_preexisting_A01_manifest": {
+    "path": "/data/artifacts/minimind-lab/A01-v3-mixed-lr3e6-20260908/checkpoint-570/model.safetensors",
+    "bytes": 255658640,
+    "sha256": "29b3428831f338a55e347ffb59d5837739929c3abcddd1feb8ab9d9dddd03af8"
+  },
+  "frozen_reference": {
+    "path": "/data/artifacts/minimind-lab/A01-v3-mixed-lr3e6-20260908/checkpoint-570",
+    "sha256": "29b3428831f338a55e347ffb59d5837739929c3abcddd1feb8ab9d9dddd03af8"
+  }
+}

@@ -167,3 +167,9 @@ Phase5 从 S10 独立分叉，在 train-disjoint 的 verifiable-math-v2（1,000/
 | Chat / Tool E2E | 8/10 / 7/8 | 0/10 / 1/8 | 9/10 / 7/8 | 7/10 / 7/8 |
 
 R02C 的 +1.75pp 区间虽高于 0，但 400 条全部答 A；R02D 75% 答 B，且对 R02A 的区间跨 0。两组 pass@4 都下降约 16pp，明确排除“算术能力提升”。SFT control 则证明对 1,000 条单字母监督做 500 次更新会造成灾难性遗忘。阶段按负结果 `completed-not-promoted` 收口，S10 继续作为 release；后续简历可写“建立程序 verifier、发现数据联合混杂和答案位置 reward hacking、用 held-out/分桶/bootstrap/通用回归否决伪提升”，不能写“GRPO/CISPO 提升数学能力”。
+
+## Phase6：Agent SFT与Agentic RL验收（2026-09-08）
+
+阶段按completed-not-promoted收尾。A01和GRPO均451/480，CISPO461/480（+2.0833pp，配对95%CI [+0.8333,+3.5417]）；仅单seed、合成同族任务。
+四臂同协议通用回归：S10/A01/GRPO/CISPO的IFEval strict为17.3752/15.8965/15.8965/15.3420%，七项macro为33.0024/33.2222/33.1674/33.2176%。
+旧Tool仍5/8（门槛7/8），工具选择子指标还下降，模型不晋级；S10保留。训练BF16失败、FP32复验、源代码地图与完整证据见[Phase6正式报告](phases/phase6-agentic-rl.md)。
