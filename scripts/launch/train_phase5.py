@@ -16,6 +16,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from phase5_math_common import parse_choice  # noqa: E402
+from phase5_numeric_common import parse_integer  # noqa: E402
 
 
 def read_jsonl(path):
@@ -46,7 +47,7 @@ def token_logps(model, sequences, attention_mask, completion_ids, input_width):
     return selected, entropy
 
 
-def sample_rollouts(model, tokenizer, prompts, num_generations, max_new_tokens, seed):
+def sample_rollouts(model, tokenizer, prompts, num_generations, max_new_tokens, seed, temperature, top_p):
     model.eval()
     rendered = [
         tokenizer.apply_chat_template(
@@ -64,8 +65,8 @@ def sample_rollouts(model, tokenizer, prompts, num_generations, max_new_tokens, 
             **inputs,
             max_new_tokens=max_new_tokens,
             do_sample=True,
-            temperature=0.8,
-            top_p=0.95,
+            temperature=temperature,
+            top_p=top_p,
             num_return_sequences=num_generations,
             pad_token_id=tokenizer.pad_token_id,
             eos_token_id=tokenizer.eos_token_id,
@@ -124,19 +125,54 @@ def save_model(model, tokenizer, output):
     return target
 
 
+def make_batches(rows, batch_size, seed, stratify_by_answer):
+    rows = list(rows)
+    if not stratify_by_answer:
+        random.Random(seed).shuffle(rows)
+        return [rows[start:start + batch_size] for start in range(0, len(rows), batch_size)]
+    if batch_size % 10:
+        raise ValueError("--stratify-by-answer requires batch-prompts divisible by 10")
+    buckets = {str(value): [] for value in range(10)}
+    for row in rows:
+        if row.get("answer") not in buckets:
+            raise ValueError("stratified numeric training requires answers 0-9")
+        buckets[row["answer"]].append(row)
+    for value, bucket in buckets.items():
+        random.Random(seed + int(value)).shuffle(bucket)
+    groups_per_batch = batch_size // 10
+    batch_count = min(len(bucket) for bucket in buckets.values()) // groups_per_batch
+    batches = []
+    for index in range(batch_count):
+        batch = []
+        for group in range(groups_per_batch):
+            for value in range(10):
+                batch.append(buckets[str(value)][index * groups_per_batch + group])
+        random.Random(seed + 100000 + index).shuffle(batch)
+        batches.append(batch)
+    if sum(len(batch) for batch in batches) != len(rows):
+        raise ValueError("stratified batching would drop rows; balance the dataset first")
+    return batches
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--method", choices=["sft", "grpo", "cispo"], required=True)
+    parser.add_argument("--reward-type", choices=["choice", "integer"], default="choice")
     parser.add_argument("--base-model", type=Path, required=True)
     parser.add_argument("--data", type=Path, required=True)
+    parser.add_argument("--train-file", default="train.jsonl")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--run-name", required=True)
     parser.add_argument("--learning-rate", type=float, default=3e-6)
     parser.add_argument("--batch-prompts", type=int, default=4)
     parser.add_argument("--num-generations", type=int, default=16)
     parser.add_argument("--max-new-tokens", type=int, default=8)
+    parser.add_argument("--rollout-temperature", type=float, default=0.8)
+    parser.add_argument("--rollout-top-p", type=float, default=0.95)
     parser.add_argument("--inner-updates", type=int, default=2)
     parser.add_argument("--beta", type=float, default=0.02)
+    parser.add_argument("--entropy-coef", type=float, default=0.0)
+    parser.add_argument("--stratify-by-answer", action="store_true")
     parser.add_argument("--epsilon", type=float, default=0.2)
     parser.add_argument("--epsilon-high", type=float, default=2.0)
     parser.add_argument("--seed", type=int, default=42)
@@ -150,11 +186,11 @@ def main():
     random.seed(args.seed)
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed_all(args.seed)
-    rows = read_jsonl(args.data / "train.jsonl")
-    random.Random(args.seed).shuffle(rows)
-    total_outer = math.ceil(len(rows) / args.batch_prompts)
+    rows = read_jsonl(args.data / args.train_file)
+    batches = make_batches(rows, args.batch_prompts, args.seed, args.stratify_by_answer)
     if args.max_outer_steps:
-        total_outer = min(total_outer, args.max_outer_steps)
+        batches = batches[:args.max_outer_steps]
+    total_outer = len(batches)
     tokenizer = AutoTokenizer.from_pretrained(args.base_model)
     tokenizer.padding_side = "left"
     model = AutoModelForCausalLM.from_pretrained(args.base_model, torch_dtype=torch.float32).cuda()
@@ -180,8 +216,8 @@ def main():
                 "train_rows": len(rows),
                 "optimizer_updates": total_outer * args.inner_updates,
                 "precision": "float32 parameters with BF16 autocast",
-                "rollout_temperature": 0.8,
-                "rollout_top_p": 0.95,
+                "rollout_temperature": args.rollout_temperature,
+                "rollout_top_p": args.rollout_top_p,
             },
         )
     started = time.monotonic()
@@ -189,10 +225,7 @@ def main():
     completion_tokens = 0
     correct_rollouts = 0
     total_rollouts = 0
-    for outer in range(total_outer):
-        batch = rows[outer * args.batch_prompts:(outer + 1) * args.batch_prompts]
-        if not batch:
-            break
+    for outer, batch in enumerate(batches):
         last = {}
         if args.method == "sft":
             model.train()
@@ -213,9 +246,12 @@ def main():
                 model, tokenizer, [row["prompt"] for row in batch],
                 args.num_generations, args.max_new_tokens,
                 args.seed * 1000000 + outer,
+                args.rollout_temperature, args.rollout_top_p,
             )
+            parser_fn = parse_choice if args.reward_type == "choice" else parse_integer
+            targets = [row["answer"] if args.reward_type == "choice" else int(row["answer"]) for row in batch]
             rewards = torch.tensor(
-                [float(parse_choice(text) == row["answer"]) for i, row in enumerate(batch) for text in rollout["texts"][i * args.num_generations:(i + 1) * args.num_generations]],
+                [float(parser_fn(text) == targets[i]) for i, row in enumerate(batch) for text in rollout["texts"][i * args.num_generations:(i + 1) * args.num_generations]],
                 device=model.device,
             )
             grouped_rewards = rewards.view(len(batch), args.num_generations)
@@ -249,7 +285,7 @@ def main():
                     weight = ratio.clamp(max=args.epsilon_high).detach()
                     objective = weight * advantages.unsqueeze(1) * new_logps
                     clip_fraction = (ratio > args.epsilon_high)[mask].float().mean()
-                per_token_loss = -(objective - args.beta * per_token_kl)
+                per_token_loss = -(objective - args.beta * per_token_kl + args.entropy_coef * entropy)
                 loss = ((per_token_loss * mask).sum(1) / mask.sum(1).clamp(min=1)).mean()
                 loss.backward()
                 grad_norm = torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)

@@ -1,0 +1,35 @@
+{
+  "experiment_id": "R03W-mod10-warmstart-20260908",
+  "status": "planned-probe-selection",
+  "method": "warmstart",
+  "base": "S10 for R03W; selected R03W warm-start for R03A/B/C/D",
+  "dataset": "/data/datasets/minimind-lab/phase5/verifiable-mod10-v1",
+  "reward_type": "integer",
+  "seed": 42,
+  "test_policy": "sealed until R03B/C/D all complete",
+  "formal_common": {
+    "learning_rate": 5e-07,
+    "batch_prompts": 10,
+    "inner_updates": 2,
+    "optimizer_updates": 800,
+    "num_generations": 8,
+    "max_new_tokens": 4,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "beta": 0.05,
+    "entropy_coef": 0.002,
+    "stratify_by_answer": true
+  },
+  "probe_selection": {
+    "outer_steps": [
+      25,
+      50,
+      100,
+      200
+    ],
+    "learning_rate": 2e-06,
+    "batch_prompts": 16,
+    "train_file": "warmstart.jsonl",
+    "criteria": "earliest validation checkpoint with pass@1 >= 10%, sampled accuracy 15-50%, sampled nondegenerate rate >= 50%, Chat >= 7/10, Tool E2E >= 6/8"
+  }
+}

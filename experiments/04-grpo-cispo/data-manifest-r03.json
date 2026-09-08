@@ -1,0 +1,111 @@
+{
+  "name": "verifiable-mod10-v1",
+  "seed": 20260908,
+  "task": "free-form add/sub modulo 10 with exact integer verifier",
+  "reward": "1 only when the entire normalized completion parses to the programmatic integer answer; otherwise 0",
+  "split_policy": "task_key disjoint; each split exactly balanced across operation and answers 0-9",
+  "templates": {
+    "add": [
+      "计算 ({a}+{b}) mod 10。只输出0到9之间的最终数字，不要解释。",
+      "求 {a}+{b} 除以10的余数。只回答一个数字。",
+      "What is ({a}+{b}) modulo 10? Reply with one digit only.",
+      "取 {a} 与 {b} 之和的个位数。严格只输出该数字。"
+    ],
+    "sub": [
+      "计算 ({a}-{b}) mod 10。只输出0到9之间的最终数字，不要解释。",
+      "求 {a}-{b} 除以10的非负余数。只回答一个数字。",
+      "What is ({a}-{b}) modulo 10 using a non-negative remainder? Reply with one digit only.",
+      "取 {a} 减 {b} 后按模10得到的数字。严格只输出该数字。"
+    ]
+  },
+  "files": {
+    "train": {
+      "path": "/data/datasets/minimind-lab/phase5/verifiable-mod10-v1/train.jsonl",
+      "rows": 4000,
+      "bytes": 1062217,
+      "sha256": "e4353c3b9c958bd31b3b6eaeb49b33b5b0e0417d913a3e7d7b1ca201c7cd227a"
+    },
+    "validation": {
+      "path": "/data/datasets/minimind-lab/phase5/verifiable-mod10-v1/validation.jsonl",
+      "rows": 500,
+      "bytes": 135311,
+      "sha256": "a481c0e6034a299612d31e140d1f22b51b84fc8a051fa02813fd0dd1369c1d94"
+    },
+    "test": {
+      "path": "/data/datasets/minimind-lab/phase5/verifiable-mod10-v1/test.jsonl",
+      "rows": 1000,
+      "bytes": 264684,
+      "sha256": "786279e6b65bb6e573ef11568e1022b63903863ba5c6ef62a66ee1e317365c01"
+    },
+    "warmstart": {
+      "path": "/data/datasets/minimind-lab/phase5/verifiable-mod10-v1/warmstart.jsonl",
+      "rows": 5000,
+      "math_rows": 4000,
+      "replay_rows": 1000,
+      "bytes": 1459969,
+      "sha256": "1dcf4d578369ac362093290c282477f581aa4b88aa9ea9aaf17db4d92b6daac4"
+    }
+  },
+  "answer_counts": {
+    "train": {
+      "0": 400,
+      "3": 400,
+      "7": 400,
+      "6": 400,
+      "8": 400,
+      "5": 400,
+      "4": 400,
+      "9": 400,
+      "2": 400,
+      "1": 400
+    },
+    "validation": {
+      "6": 50,
+      "5": 50,
+      "1": 50,
+      "7": 50,
+      "3": 50,
+      "4": 50,
+      "9": 50,
+      "0": 50,
+      "2": 50,
+      "8": 50
+    },
+    "test": {
+      "2": 100,
+      "0": 100,
+      "5": 100,
+      "9": 100,
+      "6": 100,
+      "1": 100,
+      "4": 100,
+      "3": 100,
+      "8": 100,
+      "7": 100
+    }
+  },
+  "operation_counts": {
+    "train": {
+      "add": 2000,
+      "sub": 2000
+    },
+    "validation": {
+      "add": 250,
+      "sub": 250
+    },
+    "test": {
+      "sub": 500,
+      "add": 500
+    }
+  },
+  "warmstart_replay": {
+    "source": "/data/datasets/minimind-lab/data-v1/sft-ifeval-curriculum-v4/train.jsonl",
+    "rows": 1000,
+    "ratio": 0.2,
+    "selection": "deterministic SHA-256; two-turn only; prompt<=360 chars; answer<=240 chars"
+  },
+  "limitations": [
+    "synthetic modular arithmetic is a narrow verifier task",
+    "task-key isolation does not prove semantic absence from all historical S10 corpora"
+  ]
+}

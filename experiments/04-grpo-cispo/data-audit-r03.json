@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "dataset": "/data/datasets/minimind-lab/phase5/verifiable-mod10-v1",
+  "profiles": {
+    "train": {
+      "rows": 4000,
+      "answers": {
+        "0": 400,
+        "3": 400,
+        "7": 400,
+        "6": 400,
+        "8": 400,
+        "5": 400,
+        "4": 400,
+        "9": 400,
+        "2": 400,
+        "1": 400
+      },
+      "operations": {
+        "add": 2000,
+        "sub": 2000
+      },
+      "answer_template_joint_min": 100,
+      "answer_template_joint_max": 100,
+      "unique_task_keys": 4000,
+      "sha256": "e4353c3b9c958bd31b3b6eaeb49b33b5b0e0417d913a3e7d7b1ca201c7cd227a"
+    },
+    "validation": {
+      "rows": 500,
+      "answers": {
+        "6": 50,
+        "5": 50,
+        "1": 50,
+        "7": 50,
+        "3": 50,
+        "4": 50,
+        "9": 50,
+        "0": 50,
+        "2": 50,
+        "8": 50
+      },
+      "operations": {
+        "add": 250,
+        "sub": 250
+      },
+      "answer_template_joint_min": 12,
+      "answer_template_joint_max": 13,
+      "unique_task_keys": 500,
+      "sha256": "a481c0e6034a299612d31e140d1f22b51b84fc8a051fa02813fd0dd1369c1d94"
+    },
+    "test": {
+      "rows": 1000,
+      "answers": {
+        "2": 100,
+        "0": 100,
+        "5": 100,
+        "9": 100,
+        "6": 100,
+        "1": 100,
+        "4": 100,
+        "3": 100,
+        "8": 100,
+        "7": 100
+      },
+      "operations": {
+        "sub": 500,
+        "add": 500
+      },
+      "answer_template_joint_min": 25,
+      "answer_template_joint_max": 25,
+      "unique_task_keys": 1000,
+      "sha256": "786279e6b65bb6e573ef11568e1022b63903863ba5c6ef62a66ee1e317365c01"
+    }
+  },
+  "cross_split_task_overlap": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "warmstart": {
+    "rows": 5000,
+    "composition": {
+      "replay": 1000,
+      "math": 4000
+    },
+    "sha256": "1dcf4d578369ac362093290c282477f581aa4b88aa9ea9aaf17db4d92b6daac4"
+  },
+  "failures": [],
+  "boundary": "Internal task-key isolation only; synthetic mod-10 does not measure general mathematics."
+}

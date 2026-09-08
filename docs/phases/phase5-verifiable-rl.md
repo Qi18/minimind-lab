@@ -86,3 +86,11 @@ R02C 日志点的 degenerate-group rate 均值为 93%，R02D 为 85%；大量 al
 R02C/R02D 都未通过预注册的“相对 A/B 显著提升且不发生答案位置塌缩”条件，不晋级；S10 继续作为 release。R01 的模板—答案位置联合混杂与 R02 的答案位置塌缩都作为 reward-hacking 失败证据保留。完整机器可读证据见 `experiments/04-grpo-cispo/comparison.json`、`paired-bootstrap.json`、各实验的 `eval.json` 与 `metrics.csv`。
 
 本实验只有一个训练 seed，任务是合成四选一加减乘，不是 GSM8K 或自由文本数学推理；不能据此声称 GRPO/CISPO 一般无效，也不能据此比较两种算法的一般优劣。下一轮若重开，应先提高非退化 group 比例、采用需要生成数值/过程的 verifier 任务，并增加 seed 43/44，而不是在本 test 上继续调参。
+
+## R03 重训预注册（2026-09-08）
+
+R02 失败后重新开放 Phase5，但不复用已经打开的 R02 test。R03 改为自由数值 `mod 10` verifier：train 4,000、validation 500、test 1,000，add/sub 与答案 0–9 严格均衡，answer×template 联合计数差不超过 1，跨 split task overlap 为 0。reward 只在整个 completion 可解析为正确整数时为 1，不再接受选项字母或忽略错误数值。
+
+共同 warm-start R03W 从 S10 出发，使用 4,000 条数学监督和 1,000 条 S10 IFEval 课程 replay。只在 validation 比较 25/50/100/200 outer-step probe，选择最早满足 pass@1≥10%、sample accuracy 15%–50%、sample nondegenerate group≥50%、Chat≥7/10、Tool E2E≥6/8 的 checkpoint。正式 R03A（不继续训练）、R03B（SFT control）、R03C（GRPO）、R03D（CISPO）从同一 R03W 分叉。
+
+R03B/C/D 固定 LR 5e-7、batch prompts 10（每批答案0–9各一条）、2 inner updates、800 optimizer updates；RL 固定 8 rollouts/prompt、temperature/top-p 1.0、max_new_tokens 4、beta 0.05、entropy coefficient 0.002。C/D 只有在相对 A/B 的 test pass@1 paired-bootstrap 95% CI 下界均大于0、sample nondegenerate 提升、最大单数字输出占比≤30%，且通用回归门通过时才晋级。test 在 B/C/D 全部完成前封闭，R03 test 不用于超参数调整。

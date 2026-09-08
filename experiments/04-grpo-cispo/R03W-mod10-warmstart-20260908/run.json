@@ -1,0 +1,6 @@
+{
+  "status": "planned-probe-selection",
+  "experiment_id": "R03W-mod10-warmstart-20260908",
+  "method": "warmstart",
+  "test_state": "sealed"
+}
