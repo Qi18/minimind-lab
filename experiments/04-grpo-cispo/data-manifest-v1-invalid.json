@@ -1,5 +1,5 @@
 {
-  "name": "verifiable-math-v2",
+  "name": "verifiable-math-v1",
   "seed": 20260908,
   "generator": "/data/projects/minimind-lab/scripts/data/rl/build_verifiable_math.py",
   "task": "four-way exact-verifier arithmetic multiple choice",
@@ -24,22 +24,22 @@
   },
   "files": {
     "train": {
-      "path": "/data/datasets/minimind-lab/phase5/verifiable-math-v2/train.jsonl",
+      "path": "/data/datasets/minimind-lab/phase5/verifiable-math-v1/train.jsonl",
       "rows": 1000,
-      "bytes": 361275,
-      "sha256": "e06a13acf1ffa0f21caa3c6930fd344e0bb81618bf7fafe37dec068ed60607cb"
+      "bytes": 361229,
+      "sha256": "5ed9f4aa59ab30686e27d40e4d49244e39641f1d8fc8b0a4732931614aa51838"
     },
     "validation": {
-      "path": "/data/datasets/minimind-lab/phase5/verifiable-math-v2/validation.jsonl",
+      "path": "/data/datasets/minimind-lab/phase5/verifiable-math-v1/validation.jsonl",
       "rows": 200,
-      "bytes": 73238,
-      "sha256": "e60ae6b32d90b4176fd3f256c28c28f5f75a8b3d3e50d46f524790158c7ba3ec"
+      "bytes": 73192,
+      "sha256": "aa501045f8ff0cc7d83de70d176f86db452037216f1b27ce5fc6f8be64b0c3df"
     },
     "test": {
-      "path": "/data/datasets/minimind-lab/phase5/verifiable-math-v2/test.jsonl",
+      "path": "/data/datasets/minimind-lab/phase5/verifiable-math-v1/test.jsonl",
       "rows": 400,
-      "bytes": 143920,
-      "sha256": "5e67fa902c4c3c7fe165e4b287ebc1511c52a33545c5c184296e0e682eb997c3"
+      "bytes": 143965,
+      "sha256": "21a9cd6a88414c193e425c7fd3ad355c2e85e86dd24ccf36654aa351e56515b1"
     }
   },
   "limitations": [

@@ -1,0 +1,7 @@
+{
+  "status": "planned",
+  "experiment_id": "R02C-math-grpo-20260908",
+  "method": "grpo",
+  "artifact_dir": "/data/artifacts/minimind-lab/R02C-math-grpo-20260908",
+  "source_head_before_changes": "8fded4b2"
+}

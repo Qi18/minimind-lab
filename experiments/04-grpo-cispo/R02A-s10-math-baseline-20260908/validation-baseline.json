@@ -1,0 +1,86 @@
+{
+  "status": "completed",
+  "candidate": "R02A",
+  "split": "validation",
+  "samples": 200,
+  "protocol": {
+    "correctness": "one unambiguous leading/correct-answer option label equals programmatic answer",
+    "strict_format": "entire normalized completion is one A/B/C/D label",
+    "greedy_pass_at_1": true,
+    "sample_k": 4,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_new_tokens": 8,
+    "seed": 42,
+    "precision": "float32 parameters with BF16 autocast"
+  },
+  "pass_at_1": 0.24,
+  "choice_valid_at_1": 0.955,
+  "strict_format_at_1": 0.0,
+  "sample_accuracy": 0.205,
+  "sample_choice_valid": 0.81875,
+  "sample_strict_format": 0.00875,
+  "pass_at_k": 0.355,
+  "mean_greedy_tokens": 5.6,
+  "greedy_choice_distribution": {
+    "A": 185,
+    "INVALID": 9,
+    "C": 6
+  },
+  "by_operation": {
+    "add": {
+      "samples": 80,
+      "pass_at_1": 0.25
+    },
+    "mul": {
+      "samples": 40,
+      "pass_at_1": 0.25
+    },
+    "sub": {
+      "samples": 80,
+      "pass_at_1": 0.225
+    }
+  },
+  "by_template": {
+    "0": {
+      "samples": 52,
+      "pass_at_1": 0.23076923076923078
+    },
+    "1": {
+      "samples": 48,
+      "pass_at_1": 0.25
+    },
+    "2": {
+      "samples": 48,
+      "pass_at_1": 0.22916666666666666
+    },
+    "3": {
+      "samples": 52,
+      "pass_at_1": 0.25
+    }
+  },
+  "by_answer_position": {
+    "A": {
+      "samples": 50,
+      "pass_at_1": 0.94
+    },
+    "B": {
+      "samples": 50,
+      "pass_at_1": 0.0
+    },
+    "C": {
+      "samples": 50,
+      "pass_at_1": 0.02
+    },
+    "D": {
+      "samples": 50,
+      "pass_at_1": 0.0
+    }
+  },
+  "data_sha256": "e60ae6b32d90b4176fd3f256c28c28f5f75a8b3d3e50d46f524790158c7ba3ec",
+  "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+  "limitations": [
+    "pass@k is empirical any-correct over fixed sampled generations, not an unbiased estimator",
+    "multiple-choice arithmetic does not measure free-form GSM8K reasoning"
+  ]
+}

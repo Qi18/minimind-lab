@@ -72,6 +72,7 @@ def main():
             "operation": Counter(r["operation"] for r in rows),
             "answer_position": Counter(r["answer"] for r in rows),
             "template": Counter(str(r["template_id"]) for r in rows),
+            "answer_template_joint": Counter(f"{r['answer']}:{r['template_id']}" for r in rows),
             "unique_task_keys": len({r["task_key"] for r in rows}),
             "unique_normalized_prompts": len({normalized(r["prompt"]) for r in rows}),
             "answer_value_min": min(r["answer_value"] for r in rows),
@@ -79,6 +80,15 @@ def main():
         }
         if max(profiles[split]["answer_position"].values()) - min(profiles[split]["answer_position"].values()) > 2:
             failures.append(f"{split}: answer positions imbalanced")
+        joint = profiles[split]["answer_template_joint"]
+        if set(joint) != {f"{label}:{template}" for label in "ABCD" for template in range(4)}:
+            failures.append(f"{split}: answer/template joint support incomplete")
+        if max(joint.values()) - min(joint.values()) > 2:
+            failures.append(f"{split}: answer/template joint distribution imbalanced")
+        for template in range(4):
+            labels = {r["answer"] for r in rows if r["template_id"] == template}
+            if labels != set("ABCD"):
+                failures.append(f"{split}: template {template} predicts answer label")
     report = {
         "status": "passed" if not failures else "failed",
         "dataset": str(args.data),
@@ -91,6 +101,7 @@ def main():
             "answer label correctness",
             "task-key and normalized-prompt split isolation",
             "answer-position balance",
+            "answer-position by template joint balance and full support",
         ],
         "failures": failures,
         "boundary": "The audit proves internal Phase5 split isolation, not absence from all historical S10 pretraining/SFT corpora.",

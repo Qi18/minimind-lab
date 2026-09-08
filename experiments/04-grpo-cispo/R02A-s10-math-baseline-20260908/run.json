@@ -1,0 +1,7 @@
+{
+  "status": "planned",
+  "experiment_id": "R02A-s10-math-baseline-20260908",
+  "method": "baseline",
+  "artifact_dir": "/data/artifacts/minimind-lab/R02A-s10-math-baseline-20260908",
+  "source_head_before_changes": "8fded4b2"
+}

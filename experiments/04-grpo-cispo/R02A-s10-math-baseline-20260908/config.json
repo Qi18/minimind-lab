@@ -3,8 +3,8 @@
   "base": "S10",
   "base_checkpoint_sha256": "46aeab66795795aa77d703f08d71b952fe98461040f4560e1301021540710131",
   "base_export_sha256": "851ad62d58986bc72b6d8b0e17ebd06e6635f8f5c7161aff8e50ab1104569bce",
-  "dataset": "verifiable-math-v1",
-  "dataset_path": "/data/datasets/minimind-lab/phase5/verifiable-math-v1",
+  "dataset": "verifiable-math-v2",
+  "dataset_path": "/data/datasets/minimind-lab/phase5/verifiable-math-v2",
   "train_rows": 1000,
   "validation_rows": 200,
   "test_rows": 400,
@@ -19,10 +19,10 @@
   "grpo_epsilon": 0.2,
   "cispo_epsilon_high": 2.0,
   "precision": "float32 parameters with BF16 autocast",
-  "status": "invalidated-data-confound",
+  "status": "planned",
   "selection": "single fixed one-epoch final checkpoint; validation final-only; test opened once after all candidates finish",
-  "experiment_id": "R01A-s10-math-baseline-20260908",
+  "supersedes": "R01 invalidated due v1 template/answer joint confound",
+  "experiment_id": "R02A-s10-math-baseline-20260908",
   "method": "baseline",
-  "physical_gpu": 5,
-  "invalid_reason": "template_id deterministically predicted answer_position in v1"
+  "physical_gpu": 5
 }

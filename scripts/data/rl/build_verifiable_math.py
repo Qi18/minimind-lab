@@ -58,8 +58,10 @@ def distractors(op: str, a: int, b: int, correct: int, seed: int):
 
 def render(op: str, a: int, b: int, split: str, index: int, seed: int):
     correct = value(op, a, b)
-    correct_position = (index + stable(seed, f"position:{split}:{op}") % 4) % 4
-    template_id = (index + stable(seed, f"template:{split}:{op}") % len(TEMPLATES)) % len(TEMPLATES)
+    position_offset = stable(seed, f"position:{split}:{op}") % 4
+    template_offset = stable(seed, f"template:{split}:{op}") % len(TEMPLATES)
+    correct_position = (index + position_offset) % 4
+    template_id = ((index // 4) + template_offset) % len(TEMPLATES)
     wrong = distractors(op, a, b, correct, seed)
     option_values = wrong[:]
     option_values.insert(correct_position, correct)
@@ -94,6 +96,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--seed", type=int, default=20260908)
+    parser.add_argument("--name", default="verifiable-math-v2")
     parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
     if args.output.exists() and any(args.output.iterdir()) and not args.overwrite:
@@ -118,7 +121,7 @@ def main():
         path.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows))
         files[split] = {"path": str(path), "rows": len(rows), "bytes": path.stat().st_size, "sha256": sha(path)}
     manifest = {
-        "name": "verifiable-math-v1",
+        "name": args.name,
         "seed": args.seed,
         "generator": str(Path(__file__).resolve()),
         "task": "four-way exact-verifier arithmetic multiple choice",

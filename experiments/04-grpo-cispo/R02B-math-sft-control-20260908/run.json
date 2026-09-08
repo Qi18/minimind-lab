@@ -1,0 +1,7 @@
+{
+  "status": "planned",
+  "experiment_id": "R02B-math-sft-control-20260908",
+  "method": "sft",
+  "artifact_dir": "/data/artifacts/minimind-lab/R02B-math-sft-control-20260908",
+  "source_head_before_changes": "8fded4b2"
+}

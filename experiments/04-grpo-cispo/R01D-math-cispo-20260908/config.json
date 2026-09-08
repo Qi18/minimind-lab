@@ -19,9 +19,10 @@
   "grpo_epsilon": 0.2,
   "cispo_epsilon_high": 2.0,
   "precision": "float32 parameters with BF16 autocast",
-  "status": "planned",
+  "status": "invalidated-data-confound",
   "selection": "single fixed one-epoch final checkpoint; validation final-only; test opened once after all candidates finish",
   "experiment_id": "R01D-math-cispo-20260908",
   "method": "cispo",
-  "physical_gpu": 4
+  "physical_gpu": 4,
+  "invalid_reason": "template_id deterministically predicted answer_position in v1"
 }

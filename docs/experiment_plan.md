@@ -353,7 +353,7 @@ L00/S10、L01 Full FT、L02 LoRA r16 的训练与独立评测完成，阶段为 
 
 ### 10.1 Phase5 启动（2026-09-08）
 
-已冻结 verifiable-math-v1：train 1,000 / validation 200 / test 400，程序 verifier 与跨 split 审计通过。R01A/B/C/D 从 S10 独立分叉；正式 test 在三组训练完成前保持封闭。固定超参数、可学习性探针、SFT 与 RL 的预算边界和晋级门见 [Phase5报告](phases/phase5-verifiable-rl.md)。
+首轮 v1 因 template/answer 联合混杂在 validation 被判无效，test 未打开。修复后的 verifiable-math-v2 冻结为 train 1,000 / validation 200 / test 400，程序 verifier 与跨 split 审计通过。R01A/B/C/D 从 S10 独立分叉；正式 test 在三组训练完成前保持封闭。固定超参数、可学习性探针、SFT 与 RL 的预算边界和晋级门见 [Phase5报告](phases/phase5-verifiable-rl.md)。
 
 ## 11. Phase 6：Agent SFT 与 Agentic RL
 

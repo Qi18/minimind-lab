@@ -1,7 +1,9 @@
 {
-  "status": "planned",
+  "status": "invalidated-data-confound",
   "experiment_id": "R01C-math-grpo-20260908",
   "method": "grpo",
   "artifact_dir": "/data/artifacts/minimind-lab/R01C-math-grpo-20260908",
-  "source_head_before_changes": "8604d0cb277bc2fa86f1ce30060ee85fcbec5a44"
+  "source_head_before_changes": "8604d0cb277bc2fa86f1ce30060ee85fcbec5a44",
+  "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/89ptosrv",
+  "finding": "v1 independent marginal balance missed a template/answer joint confound; validation exposed systematic label shift before test opened"
 }

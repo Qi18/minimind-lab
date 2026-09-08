@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "dataset": "/data/datasets/minimind-lab/phase5/verifiable-math-v2",
-  "manifest_sha256": "c9f86f573038235cea0c7e994496d0b05cb72b4a5c6ae37241eef254be6cf508",
+  "dataset": "/data/datasets/minimind-lab/phase5/verifiable-math-v1",
+  "manifest_sha256": "9e31093892db4ab1d136e62a74c683e71b55a005e573bda43a2737fa20d6fe55",
   "profiles": {
     "train": {
       "rows": 1000,
@@ -17,28 +17,10 @@
         "C": 250
       },
       "template": {
-        "3": 252,
-        "1": 248,
-        "0": 252,
-        "2": 248
-      },
-      "answer_template_joint": {
-        "D:3": 63,
-        "B:1": 62,
-        "A:0": 63,
-        "D:1": 62,
-        "A:3": 63,
-        "D:0": 63,
-        "B:0": 63,
-        "C:2": 62,
-        "B:3": 63,
-        "C:1": 62,
-        "D:2": 62,
-        "B:2": 62,
-        "A:2": 62,
-        "C:0": 63,
-        "C:3": 63,
-        "A:1": 62
+        "0": 250,
+        "2": 250,
+        "1": 250,
+        "3": 250
       },
       "unique_task_keys": 1000,
       "unique_normalized_prompts": 1000,
@@ -59,28 +41,10 @@
         "C": 50
       },
       "template": {
-        "0": 52,
-        "2": 48,
-        "1": 48,
-        "3": 52
-      },
-      "answer_template_joint": {
-        "A:0": 13,
-        "B:0": 13,
-        "D:0": 13,
-        "A:2": 12,
-        "C:1": 12,
-        "D:2": 12,
-        "D:3": 13,
-        "C:0": 13,
-        "B:2": 12,
-        "C:2": 12,
-        "C:3": 13,
-        "A:1": 12,
-        "B:1": 12,
-        "A:3": 13,
-        "B:3": 13,
-        "D:1": 12
+        "2": 50,
+        "3": 50,
+        "1": 50,
+        "0": 50
       },
       "unique_task_keys": 200,
       "unique_normalized_prompts": 200,
@@ -101,28 +65,10 @@
         "C": 100
       },
       "template": {
-        "0": 100,
-        "3": 96,
-        "2": 100,
-        "1": 104
-      },
-      "answer_template_joint": {
-        "D:0": 25,
-        "B:0": 25,
-        "B:3": 24,
-        "A:2": 25,
-        "B:2": 25,
-        "C:3": 24,
-        "A:0": 25,
-        "B:1": 26,
-        "D:3": 24,
-        "A:1": 26,
-        "D:2": 25,
-        "D:1": 26,
-        "C:2": 25,
-        "A:3": 24,
-        "C:0": 25,
-        "C:1": 26
+        "1": 101,
+        "3": 99,
+        "2": 99,
+        "0": 101
       },
       "unique_task_keys": 400,
       "unique_normalized_prompts": 400,
@@ -143,8 +89,7 @@
     "programmatic arithmetic and option uniqueness",
     "answer label correctness",
     "task-key and normalized-prompt split isolation",
-    "answer-position balance",
-    "answer-position by template joint balance and full support"
+    "answer-position balance"
   ],
   "failures": [],
   "boundary": "The audit proves internal Phase5 split isolation, not absence from all historical S10 pretraining/SFT corpora."
