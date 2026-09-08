@@ -16,5 +16,6 @@
     "independent data audit performed after training",
     "no optimizer/resume state saved",
     "target-GPU guard substituted for global guard on shared node"
-  ]
+  ],
+  "evidence_commit": "0d5125e307463976ed795ab735fc67f4e46f9150"
 }
