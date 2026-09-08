@@ -1,0 +1,89 @@
+{
+  "experiment_id": "D01-s10-preference-baseline-20260908",
+  "preference": {
+    "dpo_loss": 0.6931471824645996,
+    "reward_margin": 0.0,
+    "preference_credit": 0.5,
+    "chosen_reward": 0.0,
+    "rejected_reward": 0.0,
+    "chosen_logp": -692.1574290628433,
+    "rejected_logp": -635.5931868104934,
+    "chosen_nll": 2.2827193545103075,
+    "rejected_nll": 2.2866876197457313,
+    "raw_length_normalized_credit": 0.523,
+    "chosen_tokens": 338.134,
+    "rejected_tokens": 316.084,
+    "pairs": 1000,
+    "chosen_longer_pairs": 526,
+    "chosen_longer_preference_credit": 0.5,
+    "chosen_not_longer_pairs": 474,
+    "chosen_not_longer_preference_credit": 0.5
+  },
+  "seven": {
+    "ceval-valid": 0.2325408618127786,
+    "cmmlu": 0.25254705577620445,
+    "arc_easy": 0.343013468013468,
+    "piqa": 0.5625680087051143,
+    "openbookqa": 0.28,
+    "hellaswag": 0.28211511651065524,
+    "social_iqa": 0.35823950870010235,
+    "macro": 0.33014628850261757
+  },
+  "ifeval": {
+    "prompt_strict": 0.16820702402957485,
+    "instruction_strict": 0.2973621103117506,
+    "prompt_loose": 0.1922365988909427,
+    "instruction_loose": 0.3261390887290168
+  },
+  "behavior": {
+    "status": "completed",
+    "seed": 42,
+    "decoding": {
+      "do_sample": false,
+      "max_new_tokens": 192,
+      "open_thinking": false
+    },
+    "chat": {
+      "cases": 10,
+      "success_count": 8,
+      "success_rate": 0.8,
+      "format_cases": 6,
+      "format_success_count": 5,
+      "format_success_rate": 0.8333333333333334,
+      "refusal_anomaly_count": 0,
+      "repetition_anomaly_count": 1
+    },
+    "tool": {
+      "cases": 8,
+      "tool_selection_accuracy": 0.875,
+      "argument_validity_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "final_answer_accuracy": 0.875,
+      "end_to_end_success_rate": 0.875,
+      "unfinished_rate": 0.0,
+      "invalid_tool_call_tag_count": 0
+    },
+    "samples_path": "eval/samples.jsonl"
+  },
+  "generation": {
+    "samples": 200,
+    "mean_generated_tokens": 140.94,
+    "median_generated_tokens": 192.0,
+    "max_token_cap_count": 123,
+    "empty_response_count": 0,
+    "artifact_sha256": "f2126e112d5fc9b554db16cc2b328de3d7861fe8ad9ac055a05f9d8e8b950af8"
+  },
+  "training": {
+    "updates": 0,
+    "wall_seconds": 0.0,
+    "chosen_targets": 0,
+    "rejected_targets": 0
+  },
+  "checkpoint": {
+    "path": "/data/artifacts/minimind-lab/D01-s10-preference-baseline-20260908/exported-fp32/model.safetensors",
+    "sha256": "851ad62d58986bc72b6d8b0e17ebd06e6635f8f5c7161aff8e50ab1104569bce",
+    "bytes": 255658640,
+    "dtype": "float32"
+  },
+  "swanlab_train_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/os17qekn"
+}

@@ -1,0 +1,91 @@
+{
+  "experiment_id": "D02-chosen-only-sft-20260908",
+  "preference": {
+    "dpo_loss": 0.6957430267706514,
+    "reward_margin": 0.16871839281916617,
+    "preference_credit": 0.552,
+    "chosen_reward": 1.8866707241386176,
+    "rejected_reward": 1.717952331483364,
+    "chosen_logp": -679.5796247282028,
+    "rejected_logp": -624.1401717319488,
+    "chosen_nll": 2.16836097741127,
+    "rejected_nll": 2.1807018432617187,
+    "raw_length_normalized_credit": 0.519,
+    "chosen_tokens": 338.134,
+    "rejected_tokens": 316.084,
+    "pairs": 1000,
+    "chosen_longer_pairs": 526,
+    "chosen_longer_preference_credit": 0.7585551330798479,
+    "chosen_not_longer_pairs": 474,
+    "chosen_not_longer_preference_credit": 0.3227848101265823
+  },
+  "seven": {
+    "ceval-valid": 0.2325408618127786,
+    "cmmlu": 0.2523743740286652,
+    "arc_easy": 0.34595959595959597,
+    "piqa": 0.5620239390642002,
+    "openbookqa": 0.278,
+    "hellaswag": 0.28121888070105555,
+    "social_iqa": 0.3623336745138178,
+    "macro": 0.3306359037257305
+  },
+  "ifeval": {
+    "prompt_strict": 0.1645101663585952,
+    "instruction_strict": 0.29856115107913667,
+    "prompt_loose": 0.1866913123844732,
+    "instruction_loose": 0.3225419664268585
+  },
+  "behavior": {
+    "status": "completed",
+    "seed": 42,
+    "decoding": {
+      "do_sample": false,
+      "max_new_tokens": 192,
+      "open_thinking": false
+    },
+    "chat": {
+      "cases": 10,
+      "success_count": 8,
+      "success_rate": 0.8,
+      "format_cases": 6,
+      "format_success_count": 5,
+      "format_success_rate": 0.8333333333333334,
+      "refusal_anomaly_count": 0,
+      "repetition_anomaly_count": 1
+    },
+    "tool": {
+      "cases": 8,
+      "tool_selection_accuracy": 0.875,
+      "argument_validity_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "final_answer_accuracy": 0.875,
+      "end_to_end_success_rate": 0.875,
+      "unfinished_rate": 0.0,
+      "invalid_tool_call_tag_count": 0
+    },
+    "samples_path": "eval/samples.jsonl"
+  },
+  "generation": {
+    "samples": 200,
+    "mean_generated_tokens": 140.465,
+    "median_generated_tokens": 192.0,
+    "max_token_cap_count": 125,
+    "empty_response_count": 0,
+    "artifact_sha256": "1b028b0aabc5d277c0eb8496496153e38b29106bd5c2026ec06d587b2226438c"
+  },
+  "training": {
+    "updates": 444,
+    "wall_seconds": 182.35015439987183,
+    "chosen_targets": 4765435,
+    "rejected_targets": 0,
+    "peak_memory_mib": 5249.70751953125,
+    "final_logged_train_loss": 1.9509609043598175
+  },
+  "checkpoint": {
+    "path": "/data/artifacts/minimind-lab/D02-chosen-only-sft-20260908/last_fp32_recovered.pth",
+    "sha256": "29f85d70855b0c1cdb4fc1e0e23520b49b5df055456549d1fb4da6b8241e608b",
+    "bytes": 255678448,
+    "dtype": "float32"
+  },
+  "swanlab_train_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/51vdt97x"
+}

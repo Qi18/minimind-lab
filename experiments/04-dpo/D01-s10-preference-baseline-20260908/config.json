@@ -16,7 +16,8 @@
   "train_pairs": 14194,
   "validation_pairs": 1000,
   "test_pairs": 1000,
-  "status": "running",
+  "status": "completed",
   "swanlab_project": "MiniMind-Lab",
-  "checkpoint_selection": "minimum validation reference-relative DPO loss; initialization eligible"
+  "checkpoint_selection": "minimum validation reference-relative DPO loss; initialization eligible",
+  "evaluation_swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/csvnmhkj"
 }

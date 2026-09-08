@@ -1,0 +1,91 @@
+{
+  "experiment_id": "D03-dpo-official-20260908",
+  "preference": {
+    "dpo_loss": 0.5942400034684688,
+    "reward_margin": 0.2954729992682114,
+    "preference_credit": 0.718,
+    "chosen_reward": 0.3086853562342585,
+    "rejected_reward": 0.013212356862000889,
+    "chosen_logp": -690.0995267810822,
+    "rejected_logp": -635.5051044311523,
+    "chosen_nll": 2.2708230536580087,
+    "rejected_nll": 2.282778578162193,
+    "raw_length_normalized_credit": 0.53,
+    "chosen_tokens": 338.134,
+    "rejected_tokens": 316.084,
+    "pairs": 1000,
+    "chosen_longer_pairs": 526,
+    "chosen_longer_preference_credit": 0.6901140684410646,
+    "chosen_not_longer_pairs": 474,
+    "chosen_not_longer_preference_credit": 0.7489451476793249
+  },
+  "seven": {
+    "ceval-valid": 0.2325408618127786,
+    "cmmlu": 0.2524607149024348,
+    "arc_easy": 0.343013468013468,
+    "piqa": 0.5636561479869423,
+    "openbookqa": 0.28,
+    "hellaswag": 0.2818163712407887,
+    "social_iqa": 0.3587512794268168,
+    "macro": 0.33031983476903276
+  },
+  "ifeval": {
+    "prompt_strict": 0.16820702402957485,
+    "instruction_strict": 0.2973621103117506,
+    "prompt_loose": 0.1922365988909427,
+    "instruction_loose": 0.3249400479616307
+  },
+  "behavior": {
+    "status": "completed",
+    "seed": 42,
+    "decoding": {
+      "do_sample": false,
+      "max_new_tokens": 192,
+      "open_thinking": false
+    },
+    "chat": {
+      "cases": 10,
+      "success_count": 8,
+      "success_rate": 0.8,
+      "format_cases": 6,
+      "format_success_count": 5,
+      "format_success_rate": 0.8333333333333334,
+      "refusal_anomaly_count": 0,
+      "repetition_anomaly_count": 1
+    },
+    "tool": {
+      "cases": 8,
+      "tool_selection_accuracy": 0.875,
+      "argument_validity_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "final_answer_accuracy": 0.875,
+      "end_to_end_success_rate": 0.875,
+      "unfinished_rate": 0.0,
+      "invalid_tool_call_tag_count": 0
+    },
+    "samples_path": "eval/samples.jsonl"
+  },
+  "generation": {
+    "samples": 200,
+    "mean_generated_tokens": 139.735,
+    "median_generated_tokens": 192.0,
+    "max_token_cap_count": 121,
+    "empty_response_count": 0,
+    "artifact_sha256": "c02a8fcbd96e88911fefe2b24d99cec40a7f8145ad3281bd2eda691cc6325204"
+  },
+  "training": {
+    "updates": 444,
+    "wall_seconds": 376.2115297317505,
+    "chosen_targets": 4765435,
+    "rejected_targets": 4375948,
+    "peak_memory_mib": 9084.0205078125,
+    "final_logged_train_loss": 0.5711723566055298
+  },
+  "checkpoint": {
+    "path": "/data/artifacts/minimind-lab/D03-dpo-official-20260908/last_fp32_recovered.pth",
+    "sha256": "6acb7c2f97a8065d32372f340db65b1f3d3fe383eec95dba5e37d978557ee187",
+    "bytes": 255678448,
+    "dtype": "float32"
+  },
+  "swanlab_train_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3w1au7dk"
+}

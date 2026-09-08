@@ -1,0 +1,5 @@
+selected_checkpoint=/data/artifacts/minimind-lab/D02-chosen-only-sft-20260908/last_fp32_recovered.pth
+sha256=29f85d70855b0c1cdb4fc1e0e23520b49b5df055456549d1fb4da6b8241e608b
+bytes=255678448
+serialization=float32
+invalidated_fp16=best.pth,last.pth

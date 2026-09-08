@@ -1,0 +1,63 @@
+{
+  "metric": "reference-relative preference credit; ties count 0.5",
+  "pairs": 1000,
+  "comparisons": {
+    "D03_minus_D01": {
+      "mean_difference": 0.218,
+      "bootstrap_95_ci": [
+        0.19,
+        0.246
+      ],
+      "positive": 718,
+      "tie": 0,
+      "negative": 282,
+      "seed": 42,
+      "replicates": 10000
+    },
+    "D03_minus_D02": {
+      "mean_difference": 0.166,
+      "bootstrap_95_ci": [
+        0.128,
+        0.205
+      ],
+      "positive": 290,
+      "tie": 586,
+      "negative": 124,
+      "seed": 42,
+      "replicates": 10000
+    }
+  },
+  "candidates": {
+    "D01-s10-preference-baseline-20260908": {
+      "preference_credit": 0.5,
+      "mean_reward_margin": 0.0,
+      "chosen_longer_credit": 0.5,
+      "chosen_not_longer_credit": 0.5,
+      "margin_length_difference_pearson": null
+    },
+    "D02-chosen-only-sft-20260908": {
+      "preference_credit": 0.552,
+      "mean_reward_margin": 0.16871839281916617,
+      "chosen_longer_credit": 0.7585551330798479,
+      "chosen_not_longer_credit": 0.3227848101265823,
+      "margin_length_difference_pearson": 0.6272104825557807,
+      "fp16_saved_preference_credit": 0.55,
+      "fp32_minus_fp16_credit": 0.0020000000000000018
+    },
+    "D03-dpo-official-20260908": {
+      "preference_credit": 0.718,
+      "mean_reward_margin": 0.2954729992682114,
+      "chosen_longer_credit": 0.6901140684410646,
+      "chosen_not_longer_credit": 0.7489451476793249,
+      "margin_length_difference_pearson": 0.021877564719621104,
+      "fp16_saved_preference_credit": 0.536,
+      "fp32_minus_fp16_credit": 0.18199999999999994
+    }
+  },
+  "limitations": [
+    "single training seed",
+    "bootstrap measures held-out pair sampling only",
+    "D01 relative reward is zero by definition",
+    "test was opened during checkpoint serialization diagnosis; no hyperparameter was tuned after opening it"
+  ]
+}

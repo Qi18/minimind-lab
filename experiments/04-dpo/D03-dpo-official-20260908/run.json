@@ -1,8 +1,8 @@
 {
-  "status": "running",
+  "status": "completed-not-promoted",
   "experiment_id": "D03-dpo-official-20260908",
-  "training_state": "running",
-  "final_evaluation_state": "not-started",
+  "training_state": "completed",
+  "final_evaluation_state": "completed",
   "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3w1au7dk",
   "artifact_dir": "/data/artifacts/minimind-lab/D03-dpo-official-20260908",
   "latest_record": {
@@ -17,5 +17,14 @@
     "peak_memory_mib": 9084.0205078125,
     "wall_seconds": 79.4292004108429
   },
-  "source_head_before_changes": "7d895aefe85b6a93107bb41dae32ac746549d17f"
+  "source_head_before_changes": "7d895aefe85b6a93107bb41dae32ac746549d17f",
+  "selected_checkpoint": {
+    "path": "/data/artifacts/minimind-lab/D03-dpo-official-20260908/last_fp32_recovered.pth",
+    "sha256": "6acb7c2f97a8065d32372f340db65b1f3d3fe383eec95dba5e37d978557ee187",
+    "bytes": 255678448,
+    "dtype": "float32"
+  },
+  "phase_decision": "D03 passes the held-out preference objective but fails the pre-registered blind-quality gate against D02; retain S10 as the release checkpoint.",
+  "training_swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3w1au7dk",
+  "evaluation_swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/csvnmhkj"
 }

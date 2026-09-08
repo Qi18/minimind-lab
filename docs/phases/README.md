@@ -10,7 +10,7 @@
 | 1 | Pretrain 基线与数据重做 | [`phase1-pretrain.md`](phase1-pretrain.md) | accepted |
 | 2 | SFT（官方数据基线、定向课程与 IFEval） | [`phase2-sft.md`](phase2-sft.md) | accepted with limitations |
 | 3 | Full FT vs LoRA | [`phase3-lora.md`](phase3-lora.md) | accepted with limitations（负结果收尾） |
-| 4 | DPO 偏好优化 | [phase4-dpo.md](phase4-dpo.md) | 进行中 |
+| 4 | DPO 偏好优化 | [phase4-dpo.md](phase4-dpo.md) | completed-not-promoted |
 | 5 | GRPO/CISPO 可验证强化学习 | `phase5-verifiable-rl.md` | 未开始 |
 | 6 | Agent SFT 与 Agentic RL | `phase6-agentic.md` | 未开始 |
 | 7 | Dense vs MoE | `phase7-moe.md` | 未开始 |

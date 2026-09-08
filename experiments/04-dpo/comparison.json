@@ -1,0 +1,524 @@
+{
+  "status": "completed-not-promoted",
+  "decision": "D03 passes the held-out preference objective but fails the pre-registered blind-quality gate against D02; retain S10 as the release checkpoint.",
+  "dataset": {
+    "status": "accepted",
+    "source": "/data/datasets/minimind/312afb4f76391145c6902f765bb51691c09a12f5/dpo.jsonl",
+    "source_sha256": "ee934a8a455ccc99d1334d63e1254dd1d64f497fd067cfcbb71e3043f5b46768",
+    "revision": "312afb4f76391145c6902f765bb51691c09a12f5",
+    "source_rows": 17166,
+    "rejected": {
+      "underspecified_short_prompt": 389,
+      "overlength": 432,
+      "identical_answers": 27,
+      "exact_duplicate_prompt": 77,
+      "near_duplicate_prompt": 47
+    },
+    "seed": 42,
+    "max_seq_len": 1024,
+    "files": {
+      "validation.jsonl": {
+        "rows": 1000,
+        "sha256": "6606f506147fcac68556d38e0642ba3bb49f46e9539b75b9fcfb9f7971f33ecf",
+        "targets": {
+          "chosen": 330505,
+          "rejected": 307304
+        }
+      },
+      "test.jsonl": {
+        "rows": 1000,
+        "sha256": "51937c4b7ab5f666676d4a9a5aea2c1dfbae23755ffea93d2c962dff79e49214",
+        "targets": {
+          "chosen": 338134,
+          "rejected": 316084
+        }
+      },
+      "train.jsonl": {
+        "rows": 14194,
+        "sha256": "6f59070edd710c7be4b6085be0794bc363e11a6c0be2680eee59d568bbeb81f2",
+        "targets": {
+          "chosen": 4765435,
+          "rejected": 4375948
+        }
+      }
+    }
+  },
+  "candidates": {
+    "D01": {
+      "experiment_id": "D01-s10-preference-baseline-20260908",
+      "preference": {
+        "dpo_loss": 0.6931471824645996,
+        "reward_margin": 0.0,
+        "preference_credit": 0.5,
+        "chosen_reward": 0.0,
+        "rejected_reward": 0.0,
+        "chosen_logp": -692.1574290628433,
+        "rejected_logp": -635.5931868104934,
+        "chosen_nll": 2.2827193545103075,
+        "rejected_nll": 2.2866876197457313,
+        "raw_length_normalized_credit": 0.523,
+        "chosen_tokens": 338.134,
+        "rejected_tokens": 316.084,
+        "pairs": 1000,
+        "chosen_longer_pairs": 526,
+        "chosen_longer_preference_credit": 0.5,
+        "chosen_not_longer_pairs": 474,
+        "chosen_not_longer_preference_credit": 0.5
+      },
+      "seven": {
+        "ceval-valid": 0.2325408618127786,
+        "cmmlu": 0.25254705577620445,
+        "arc_easy": 0.343013468013468,
+        "piqa": 0.5625680087051143,
+        "openbookqa": 0.28,
+        "hellaswag": 0.28211511651065524,
+        "social_iqa": 0.35823950870010235,
+        "macro": 0.33014628850261757
+      },
+      "ifeval": {
+        "prompt_strict": 0.16820702402957485,
+        "instruction_strict": 0.2973621103117506,
+        "prompt_loose": 0.1922365988909427,
+        "instruction_loose": 0.3261390887290168
+      },
+      "behavior": {
+        "status": "completed",
+        "seed": 42,
+        "decoding": {
+          "do_sample": false,
+          "max_new_tokens": 192,
+          "open_thinking": false
+        },
+        "chat": {
+          "cases": 10,
+          "success_count": 8,
+          "success_rate": 0.8,
+          "format_cases": 6,
+          "format_success_count": 5,
+          "format_success_rate": 0.8333333333333334,
+          "refusal_anomaly_count": 0,
+          "repetition_anomaly_count": 1
+        },
+        "tool": {
+          "cases": 8,
+          "tool_selection_accuracy": 0.875,
+          "argument_validity_rate": 0.875,
+          "execution_success_rate": 0.875,
+          "final_answer_accuracy": 0.875,
+          "end_to_end_success_rate": 0.875,
+          "unfinished_rate": 0.0,
+          "invalid_tool_call_tag_count": 0
+        },
+        "samples_path": "eval/samples.jsonl"
+      },
+      "generation": {
+        "samples": 200,
+        "mean_generated_tokens": 140.94,
+        "median_generated_tokens": 192.0,
+        "max_token_cap_count": 123,
+        "empty_response_count": 0,
+        "artifact_sha256": "f2126e112d5fc9b554db16cc2b328de3d7861fe8ad9ac055a05f9d8e8b950af8"
+      },
+      "training": {
+        "updates": 0,
+        "wall_seconds": 0.0,
+        "chosen_targets": 0,
+        "rejected_targets": 0
+      },
+      "checkpoint": {
+        "path": "/data/artifacts/minimind-lab/D01-s10-preference-baseline-20260908/exported-fp32/model.safetensors",
+        "sha256": "851ad62d58986bc72b6d8b0e17ebd06e6635f8f5c7161aff8e50ab1104569bce",
+        "bytes": 255658640,
+        "dtype": "float32"
+      },
+      "swanlab_train_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/os17qekn"
+    },
+    "D02": {
+      "experiment_id": "D02-chosen-only-sft-20260908",
+      "preference": {
+        "dpo_loss": 0.6957430267706514,
+        "reward_margin": 0.16871839281916617,
+        "preference_credit": 0.552,
+        "chosen_reward": 1.8866707241386176,
+        "rejected_reward": 1.717952331483364,
+        "chosen_logp": -679.5796247282028,
+        "rejected_logp": -624.1401717319488,
+        "chosen_nll": 2.16836097741127,
+        "rejected_nll": 2.1807018432617187,
+        "raw_length_normalized_credit": 0.519,
+        "chosen_tokens": 338.134,
+        "rejected_tokens": 316.084,
+        "pairs": 1000,
+        "chosen_longer_pairs": 526,
+        "chosen_longer_preference_credit": 0.7585551330798479,
+        "chosen_not_longer_pairs": 474,
+        "chosen_not_longer_preference_credit": 0.3227848101265823
+      },
+      "seven": {
+        "ceval-valid": 0.2325408618127786,
+        "cmmlu": 0.2523743740286652,
+        "arc_easy": 0.34595959595959597,
+        "piqa": 0.5620239390642002,
+        "openbookqa": 0.278,
+        "hellaswag": 0.28121888070105555,
+        "social_iqa": 0.3623336745138178,
+        "macro": 0.3306359037257305
+      },
+      "ifeval": {
+        "prompt_strict": 0.1645101663585952,
+        "instruction_strict": 0.29856115107913667,
+        "prompt_loose": 0.1866913123844732,
+        "instruction_loose": 0.3225419664268585
+      },
+      "behavior": {
+        "status": "completed",
+        "seed": 42,
+        "decoding": {
+          "do_sample": false,
+          "max_new_tokens": 192,
+          "open_thinking": false
+        },
+        "chat": {
+          "cases": 10,
+          "success_count": 8,
+          "success_rate": 0.8,
+          "format_cases": 6,
+          "format_success_count": 5,
+          "format_success_rate": 0.8333333333333334,
+          "refusal_anomaly_count": 0,
+          "repetition_anomaly_count": 1
+        },
+        "tool": {
+          "cases": 8,
+          "tool_selection_accuracy": 0.875,
+          "argument_validity_rate": 0.875,
+          "execution_success_rate": 0.875,
+          "final_answer_accuracy": 0.875,
+          "end_to_end_success_rate": 0.875,
+          "unfinished_rate": 0.0,
+          "invalid_tool_call_tag_count": 0
+        },
+        "samples_path": "eval/samples.jsonl"
+      },
+      "generation": {
+        "samples": 200,
+        "mean_generated_tokens": 140.465,
+        "median_generated_tokens": 192.0,
+        "max_token_cap_count": 125,
+        "empty_response_count": 0,
+        "artifact_sha256": "1b028b0aabc5d277c0eb8496496153e38b29106bd5c2026ec06d587b2226438c"
+      },
+      "training": {
+        "updates": 444,
+        "wall_seconds": 182.35015439987183,
+        "chosen_targets": 4765435,
+        "rejected_targets": 0,
+        "peak_memory_mib": 5249.70751953125,
+        "final_logged_train_loss": 1.9509609043598175
+      },
+      "checkpoint": {
+        "path": "/data/artifacts/minimind-lab/D02-chosen-only-sft-20260908/last_fp32_recovered.pth",
+        "sha256": "29f85d70855b0c1cdb4fc1e0e23520b49b5df055456549d1fb4da6b8241e608b",
+        "bytes": 255678448,
+        "dtype": "float32"
+      },
+      "swanlab_train_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/51vdt97x"
+    },
+    "D03": {
+      "experiment_id": "D03-dpo-official-20260908",
+      "preference": {
+        "dpo_loss": 0.5942400034684688,
+        "reward_margin": 0.2954729992682114,
+        "preference_credit": 0.718,
+        "chosen_reward": 0.3086853562342585,
+        "rejected_reward": 0.013212356862000889,
+        "chosen_logp": -690.0995267810822,
+        "rejected_logp": -635.5051044311523,
+        "chosen_nll": 2.2708230536580087,
+        "rejected_nll": 2.282778578162193,
+        "raw_length_normalized_credit": 0.53,
+        "chosen_tokens": 338.134,
+        "rejected_tokens": 316.084,
+        "pairs": 1000,
+        "chosen_longer_pairs": 526,
+        "chosen_longer_preference_credit": 0.6901140684410646,
+        "chosen_not_longer_pairs": 474,
+        "chosen_not_longer_preference_credit": 0.7489451476793249
+      },
+      "seven": {
+        "ceval-valid": 0.2325408618127786,
+        "cmmlu": 0.2524607149024348,
+        "arc_easy": 0.343013468013468,
+        "piqa": 0.5636561479869423,
+        "openbookqa": 0.28,
+        "hellaswag": 0.2818163712407887,
+        "social_iqa": 0.3587512794268168,
+        "macro": 0.33031983476903276
+      },
+      "ifeval": {
+        "prompt_strict": 0.16820702402957485,
+        "instruction_strict": 0.2973621103117506,
+        "prompt_loose": 0.1922365988909427,
+        "instruction_loose": 0.3249400479616307
+      },
+      "behavior": {
+        "status": "completed",
+        "seed": 42,
+        "decoding": {
+          "do_sample": false,
+          "max_new_tokens": 192,
+          "open_thinking": false
+        },
+        "chat": {
+          "cases": 10,
+          "success_count": 8,
+          "success_rate": 0.8,
+          "format_cases": 6,
+          "format_success_count": 5,
+          "format_success_rate": 0.8333333333333334,
+          "refusal_anomaly_count": 0,
+          "repetition_anomaly_count": 1
+        },
+        "tool": {
+          "cases": 8,
+          "tool_selection_accuracy": 0.875,
+          "argument_validity_rate": 0.875,
+          "execution_success_rate": 0.875,
+          "final_answer_accuracy": 0.875,
+          "end_to_end_success_rate": 0.875,
+          "unfinished_rate": 0.0,
+          "invalid_tool_call_tag_count": 0
+        },
+        "samples_path": "eval/samples.jsonl"
+      },
+      "generation": {
+        "samples": 200,
+        "mean_generated_tokens": 139.735,
+        "median_generated_tokens": 192.0,
+        "max_token_cap_count": 121,
+        "empty_response_count": 0,
+        "artifact_sha256": "c02a8fcbd96e88911fefe2b24d99cec40a7f8145ad3281bd2eda691cc6325204"
+      },
+      "training": {
+        "updates": 444,
+        "wall_seconds": 376.2115297317505,
+        "chosen_targets": 4765435,
+        "rejected_targets": 4375948,
+        "peak_memory_mib": 9084.0205078125,
+        "final_logged_train_loss": 0.5711723566055298
+      },
+      "checkpoint": {
+        "path": "/data/artifacts/minimind-lab/D03-dpo-official-20260908/last_fp32_recovered.pth",
+        "sha256": "6acb7c2f97a8065d32372f340db65b1f3d3fe383eec95dba5e37d978557ee187",
+        "bytes": 255678448,
+        "dtype": "float32"
+      },
+      "swanlab_train_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3w1au7dk"
+    }
+  },
+  "preference_comparison": {
+    "metric": "reference-relative preference credit; ties count 0.5",
+    "pairs": 1000,
+    "comparisons": {
+      "D03_minus_D01": {
+        "mean_difference": 0.218,
+        "bootstrap_95_ci": [
+          0.19,
+          0.246
+        ],
+        "positive": 718,
+        "tie": 0,
+        "negative": 282,
+        "seed": 42,
+        "replicates": 10000
+      },
+      "D03_minus_D02": {
+        "mean_difference": 0.166,
+        "bootstrap_95_ci": [
+          0.128,
+          0.205
+        ],
+        "positive": 290,
+        "tie": 586,
+        "negative": 124,
+        "seed": 42,
+        "replicates": 10000
+      }
+    },
+    "candidates": {
+      "D01-s10-preference-baseline-20260908": {
+        "preference_credit": 0.5,
+        "mean_reward_margin": 0.0,
+        "chosen_longer_credit": 0.5,
+        "chosen_not_longer_credit": 0.5,
+        "margin_length_difference_pearson": null
+      },
+      "D02-chosen-only-sft-20260908": {
+        "preference_credit": 0.552,
+        "mean_reward_margin": 0.16871839281916617,
+        "chosen_longer_credit": 0.7585551330798479,
+        "chosen_not_longer_credit": 0.3227848101265823,
+        "margin_length_difference_pearson": 0.6272104825557807,
+        "fp16_saved_preference_credit": 0.55,
+        "fp32_minus_fp16_credit": 0.0020000000000000018
+      },
+      "D03-dpo-official-20260908": {
+        "preference_credit": 0.718,
+        "mean_reward_margin": 0.2954729992682114,
+        "chosen_longer_credit": 0.6901140684410646,
+        "chosen_not_longer_credit": 0.7489451476793249,
+        "margin_length_difference_pearson": 0.021877564719621104,
+        "fp16_saved_preference_credit": 0.536,
+        "fp32_minus_fp16_credit": 0.18199999999999994
+      }
+    },
+    "limitations": [
+      "single training seed",
+      "bootstrap measures held-out pair sampling only",
+      "D01 relative reward is zero by definition",
+      "test was opened during checkpoint serialization diagnosis; no hyperparameter was tuned after opening it"
+    ]
+  },
+  "blind_judge": {
+    "protocol": {
+      "prompts": 200,
+      "selection": "first 200 frozen test rows in deterministic file order",
+      "generation": "greedy, max_new_tokens=192, open_thinking=false",
+      "judge": "Qwen3-8B, blinded A/B, greedy, thinking disabled",
+      "judge_config_sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+      "score": "win=1, tie=0.5, loss=0"
+    },
+    "comparisons": {
+      "D03_vs_D01": {
+        "score": 0.515,
+        "bootstrap_95_ci": [
+          0.4875,
+          0.5425
+        ],
+        "D03_win": 18,
+        "tie": 170,
+        "opponent_win": 12,
+        "samples": 200,
+        "seed": 42,
+        "replicates": 10000,
+        "D03_longer": {
+          "score": 0.5,
+          "bootstrap_95_ci": [
+            0.5,
+            0.5
+          ],
+          "D03_win": 0,
+          "tie": 2,
+          "opponent_win": 0,
+          "samples": 2,
+          "seed": 42,
+          "replicates": 10000
+        },
+        "D03_not_longer": {
+          "score": 0.5151515151515151,
+          "bootstrap_95_ci": [
+            0.4898989898989899,
+            0.5429292929292929
+          ],
+          "D03_win": 18,
+          "tie": 168,
+          "opponent_win": 12,
+          "samples": 198,
+          "seed": 42,
+          "replicates": 10000
+        }
+      },
+      "D03_vs_D02": {
+        "score": 0.48,
+        "bootstrap_95_ci": [
+          0.4525,
+          0.5075
+        ],
+        "D03_win": 13,
+        "tie": 166,
+        "opponent_win": 21,
+        "samples": 200,
+        "seed": 42,
+        "replicates": 10000,
+        "D03_longer": {
+          "score": 0.375,
+          "bootstrap_95_ci": [
+            0.25,
+            0.46875
+          ],
+          "D03_win": 0,
+          "tie": 12,
+          "opponent_win": 4,
+          "samples": 16,
+          "seed": 42,
+          "replicates": 10000
+        },
+        "D03_not_longer": {
+          "score": 0.4891304347826087,
+          "bootstrap_95_ci": [
+            0.4592391304347826,
+            0.5190217391304348
+          ],
+          "D03_win": 13,
+          "tie": 154,
+          "opponent_win": 17,
+          "samples": 184,
+          "seed": 42,
+          "replicates": 10000
+        }
+      }
+    },
+    "generation": {
+      "D01": {
+        "samples": 200,
+        "mean_generated_tokens": 140.94,
+        "median_generated_tokens": 192.0,
+        "max_token_cap_count": 123,
+        "empty_response_count": 0,
+        "artifact_sha256": "f2126e112d5fc9b554db16cc2b328de3d7861fe8ad9ac055a05f9d8e8b950af8"
+      },
+      "D02": {
+        "samples": 200,
+        "mean_generated_tokens": 140.465,
+        "median_generated_tokens": 192.0,
+        "max_token_cap_count": 125,
+        "empty_response_count": 0,
+        "artifact_sha256": "1b028b0aabc5d277c0eb8496496153e38b29106bd5c2026ec06d587b2226438c"
+      },
+      "D03": {
+        "samples": 200,
+        "mean_generated_tokens": 139.735,
+        "median_generated_tokens": 192.0,
+        "max_token_cap_count": 121,
+        "empty_response_count": 0,
+        "artifact_sha256": "c02a8fcbd96e88911fefe2b24d99cec40a7f8145ad3281bd2eda691cc6325204"
+      }
+    },
+    "judgments_sha256": "f8f37d21fc32a0a31419c665329e0ac853e4536d646612c7b08b9f5dee54b2b2",
+    "limitations": [
+      "single judge model and single deterministic decoding",
+      "high tie rate; judge result is not human ground truth",
+      "bootstrap measures only the fixed 200-prompt sampling uncertainty",
+      "the test set was opened only to diagnose checkpoint serialization; no hyperparameter was tuned afterward"
+    ]
+  },
+  "exact_identical_responses_out_of_200": {
+    "D01_D02": 86,
+    "D01_D03": 177,
+    "D02_D03": 85
+  },
+  "serialization_incident": {
+    "cause": "the original training driver called model.half() before saving inference checkpoints, erasing small DPO updates",
+    "impact": "D03 preference credit fell from 0.718 in recovered float32 state to 0.536 in the invalid float16 checkpoint",
+    "fix": "save inference state_dict tensors as float32; recovered final model from resume.pt",
+    "invalidated_files": [
+      "D02 best.pth/last.pth",
+      "D03 best.pth/last.pth"
+    ]
+  },
+  "limitations": [
+    "one training seed",
+    "D02 checkpoint-selection metric was corrected after training because DPO loss is not its training objective",
+    "judge-based wins are not human evaluation"
+  ]
+}

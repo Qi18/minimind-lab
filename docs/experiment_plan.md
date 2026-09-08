@@ -332,9 +332,11 @@ L00/S10、L01 Full FT、L02 LoRA r16 的训练与独立评测完成，阶段为 
 
 评测 held-out preference accuracy、chosen/rejected margin、盲测 win/tie/loss、长度控制胜率、输出长度、拒答率、KL、指令/Tool 和七项回归。DPO 必须同时优于 D01 和 D02，且收益不能主要来自答案变长、模板化或过度拒答。
 
-### 9.1 Phase4 启动（2026-09-08）
+### 9.1 Phase4 实际收口（2026-09-08）
 
-已冻结官方DPO数据：train14,194 / validation1,000 / test1,000，独立审计通过。D01/D02/D03共同从S10启动；首轮LR4e-8、beta0.15、seed42、global batch32。数值smoke已通过。实际配置与待完成的独立偏好/盲评/通用回归见 [Phase4报告](phases/phase4-dpo.md)。
+官方 DPO 数据冻结为 train 14,194 / validation 1,000 / test 1,000，独立审计通过。D01/D02/D03 从 S10 独立启动；LR 4e-8、beta 0.15、seed 42、global batch 32。D03 test preference credit 71.8%，相对 D01/D02 的 paired bootstrap 差值区间均大于 0；七项、IFEval、Chat/Tool 回归门通过。
+
+但 200 条 Qwen3-8B 盲评中，D03 vs D01 score 0.515（95% CI [0.4875, 0.5425]），vs D02 0.480（[0.4525, 0.5075]），未满足“同时优于 D01/D02”的预注册质量门。阶段状态 completed-not-promoted，保留 S10；Phase5 仍从 S10 独立分叉。另发现 FP16 保存会抹除小幅 DPO 更新，已改为 float32 checkpoint，并将旧 D02/D03 FP16 inference 权重作废。完整边界见 [Phase4报告](phases/phase4-dpo.md)。
 
 ## 10. Phase 5：GRPO/CISPO 可验证强化学习
 

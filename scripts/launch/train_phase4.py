@@ -109,7 +109,7 @@ def main():
     if a.max_steps:total=min(total,a.max_steps)
     best=baseline["dpo_loss"]
     def save(name):
-        torch.save({k:v.detach().cpu().half() for k,v in model.state_dict().items()},a.output/(name+".pth"))
+        torch.save({k:v.detach().cpu().float() for k,v in model.state_dict().items()},a.output/(name+".pth"))
     save("best")
     chosen_total=rejected_total=0
     for step in range(1,total+1):

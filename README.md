@@ -59,7 +59,7 @@ DPO、GRPO/CISPO 和 Agentic RL 默认从同一个 Full SFT 基线分支，避�
 | Full SFT（S10 release） | S09 step 400 / P03 64M | `ifeval-curriculum-v4` 41,720 行 / 4.163M assistant targets | 7×L20，3 epochs / 1,116 steps / 3.73 min | IFEval prompt strict 17.38%，较 S09 +6.29 pp；Chat 8/10；Tool E2E 7/8 | 七项 chat-template macro 33.00，与 S09 持平；语言/关键词/长度仍有限 | [train](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/bxdob3rh) / [eval](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/encs5zuk) | L20 保留 release，SHA `46aeab66` |
 | Full FT（L01） | S10 | CodeAlpaca 19,015行 / 4.820M实际targets | 94.65s / 0.15775 GPU-h | MBPP 0/500；val NLL 0.7577 | 七项32.48%；Chat7/10；格式3/6 | [train](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/pz1x0ux9) | CPFS；不替换S10 |
 | LoRA r16（L02） | S10 | 同L01 | 63.46s / 0.10576 GPU-h；峰值4,464MiB | MBPP 0/500；adapter 0.393M参数 | 七项32.67%；Chat8/10；格式5/6 | [train](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/s0l5ishg) | adapter约779KiB；不替换S10 |
-| DPO | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
+| DPO（D03） | S10 | official-dpo-v1 14,194 train pairs | 1×L20 / 376.21 s | preference credit 71.8%；对 D02 +16.6pp | 七项 33.032%；盲评 vs D02 score 0.480，未晋级 | [train](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3w1au7dk) / [eval](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/csvnmhkj) | FP32 恢复权重仅 L20 保留；S10 仍为 release |
 | GRPO / CISPO | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
 | Agentic RL | Full SFT | 待填写 | 待填写 | Tool Success 待评测 | 待评测 | 待填写 | 待填写 |
 
@@ -67,7 +67,9 @@ DPO、GRPO/CISPO 和 Agentic RL 默认从同一个 Full SFT 基线分支，避�
 
 [Phase 3 已收尾](docs/phases/phase3-lora.md)：LoRA本次更省资源，但两组代码正确率均无提升；这是负结果，不作为代码能力提升的简历结论。
 
-当前结论：P03 的数据利用率和共享 validation 明显优于 P02，并作为 SFT 主线 Base。S10 已作为 Phase 2 release checkpoint：独立 IFEval prompt strict 相对 S09 提升 6.29pp，七项 macro 保持稳定，Chat/格式/重复/Tool 继续过门；阶段状态为 accepted with limitations，因为绝对 IFEval 仍低，语言、关键词和长度约束尚未解决。
+[Phase 4 已收尾](docs/phases/phase4-dpo.md)：D03 的 held-out preference credit 达 71.8%，但 200 条盲评没有胜过 D02（score 0.480，95% CI [0.4525, 0.5075]），因此完成但不晋级，继续保留 S10。
+
+当前结论：P03 是 Pretrain 主线，S10 是后训练共同 release。Phase3 的 Full FT/LoRA 代码实验和 Phase4 的 DPO 均已完成但未证明目标能力提升，均不替换 S10。DPO 仅证明离线 preference objective 改善，不能外推为真实对话质量提升。
 
 ## 克隆
 

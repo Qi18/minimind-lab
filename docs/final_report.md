@@ -143,3 +143,12 @@ S10 相对 S09 的 IFEval prompt strict 提升 6.29pp（60/541 → 94/541），i
 | 实际 assistant targets | — | 4,820,231 | 4,820,231 |
 
 LoRA本次耗时/显存分别降低约33%/36%，但两组MBPP均无提升；保留S10。不同LR与单种子限制不支持纯方法因果结论。数据构建、训练、评测和失败分析见 [Phase 3报告](phases/phase3-lora.md)。
+
+
+## Phase 4：DPO 偏好优化收尾（2026-09-08）
+
+D01（S10）、D02（chosen-only SFT）和 D03（DPO）使用同一冻结 official-dpo-v1 数据与统一评测。D03 在 1,000 对 held-out test 上取得 71.8% reference-relative preference credit，相对 D01 +21.8pp（95% CI [19.0, 24.6]）、相对 D02 +16.6pp（[12.8, 20.5]）；七项 macro 33.0320%、IFEval prompt strict 16.8207%、Chat 8/10、Tool E2E 7/8，通用回归稳定。
+
+这一收益没有转化为可证明的回答质量提升：200 条 Qwen3-8B 盲评中，D03 对 D01 为 18胜/170平/12负，score 0.515；对 D02 为 13胜/166平/21负，score 0.480，两组 95% CI 都包含 0.5。D03 与 D01 有 177/200 个输出完全相同。故 Phase4 状态为 completed-not-promoted，继续保留 S10；简历只能表述“建立 DPO 对照与发现离线目标/生成质量脱节”，不能表述“DPO 提升对话质量”。
+
+训练过程还发现原保存逻辑的 model.half() 会抹除微小 DPO 更新：D03 FP16 checkpoint 的 preference credit 从 71.8% 降到 53.6%。已修复为 float32 保存并从 resume state 恢复正式权重。详细数据、训练、盲评及限制见 [Phase4 报告](phases/phase4-dpo.md)。

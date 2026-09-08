@@ -1,0 +1,123 @@
+{
+  "protocol": {
+    "prompts": 200,
+    "selection": "first 200 frozen test rows in deterministic file order",
+    "generation": "greedy, max_new_tokens=192, open_thinking=false",
+    "judge": "Qwen3-8B, blinded A/B, greedy, thinking disabled",
+    "judge_config_sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+    "score": "win=1, tie=0.5, loss=0"
+  },
+  "comparisons": {
+    "D03_vs_D01": {
+      "score": 0.515,
+      "bootstrap_95_ci": [
+        0.4875,
+        0.5425
+      ],
+      "D03_win": 18,
+      "tie": 170,
+      "opponent_win": 12,
+      "samples": 200,
+      "seed": 42,
+      "replicates": 10000,
+      "D03_longer": {
+        "score": 0.5,
+        "bootstrap_95_ci": [
+          0.5,
+          0.5
+        ],
+        "D03_win": 0,
+        "tie": 2,
+        "opponent_win": 0,
+        "samples": 2,
+        "seed": 42,
+        "replicates": 10000
+      },
+      "D03_not_longer": {
+        "score": 0.5151515151515151,
+        "bootstrap_95_ci": [
+          0.4898989898989899,
+          0.5429292929292929
+        ],
+        "D03_win": 18,
+        "tie": 168,
+        "opponent_win": 12,
+        "samples": 198,
+        "seed": 42,
+        "replicates": 10000
+      }
+    },
+    "D03_vs_D02": {
+      "score": 0.48,
+      "bootstrap_95_ci": [
+        0.4525,
+        0.5075
+      ],
+      "D03_win": 13,
+      "tie": 166,
+      "opponent_win": 21,
+      "samples": 200,
+      "seed": 42,
+      "replicates": 10000,
+      "D03_longer": {
+        "score": 0.375,
+        "bootstrap_95_ci": [
+          0.25,
+          0.46875
+        ],
+        "D03_win": 0,
+        "tie": 12,
+        "opponent_win": 4,
+        "samples": 16,
+        "seed": 42,
+        "replicates": 10000
+      },
+      "D03_not_longer": {
+        "score": 0.4891304347826087,
+        "bootstrap_95_ci": [
+          0.4592391304347826,
+          0.5190217391304348
+        ],
+        "D03_win": 13,
+        "tie": 154,
+        "opponent_win": 17,
+        "samples": 184,
+        "seed": 42,
+        "replicates": 10000
+      }
+    }
+  },
+  "generation": {
+    "D01": {
+      "samples": 200,
+      "mean_generated_tokens": 140.94,
+      "median_generated_tokens": 192.0,
+      "max_token_cap_count": 123,
+      "empty_response_count": 0,
+      "artifact_sha256": "f2126e112d5fc9b554db16cc2b328de3d7861fe8ad9ac055a05f9d8e8b950af8"
+    },
+    "D02": {
+      "samples": 200,
+      "mean_generated_tokens": 140.465,
+      "median_generated_tokens": 192.0,
+      "max_token_cap_count": 125,
+      "empty_response_count": 0,
+      "artifact_sha256": "1b028b0aabc5d277c0eb8496496153e38b29106bd5c2026ec06d587b2226438c"
+    },
+    "D03": {
+      "samples": 200,
+      "mean_generated_tokens": 139.735,
+      "median_generated_tokens": 192.0,
+      "max_token_cap_count": 121,
+      "empty_response_count": 0,
+      "artifact_sha256": "c02a8fcbd96e88911fefe2b24d99cec40a7f8145ad3281bd2eda691cc6325204"
+    }
+  },
+  "judgments_sha256": "f8f37d21fc32a0a31419c665329e0ac853e4536d646612c7b08b9f5dee54b2b2",
+  "limitations": [
+    "single judge model and single deterministic decoding",
+    "high tie rate; judge result is not human ground truth",
+    "bootstrap measures only the fixed 200-prompt sampling uncertainty",
+    "the test set was opened only to diagnose checkpoint serialization; no hyperparameter was tuned afterward"
+  ]
+}

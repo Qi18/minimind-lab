@@ -1,0 +1,2 @@
+event,step,loss,lr,grad_norm,chosen_targets,rejected_targets,peak_memory_mib,wall_seconds,dpo_loss,reward_margin,preference_credit
+validation,0,,,,,,,,0.6931471824645996,0.0,0.5
