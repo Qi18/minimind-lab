@@ -1,0 +1,29 @@
+{
+  "status": "running",
+  "experiment_id": "D01-s10-preference-baseline-20260908",
+  "training_state": "completed",
+  "final_evaluation_state": "not-started",
+  "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/os17qekn",
+  "artifact_dir": "/data/artifacts/minimind-lab/D01-s10-preference-baseline-20260908",
+  "latest_record": {
+    "event": "validation",
+    "step": 0,
+    "time": 1788836405.2391822,
+    "dpo_loss": 0.6931471824645996,
+    "reward_margin": 0.0,
+    "preference_credit": 0.5,
+    "chosen_reward": 0.0,
+    "rejected_reward": 0.0,
+    "chosen_nll": 2.2664158638715746,
+    "rejected_nll": 2.2963259850144384,
+    "raw_length_normalized_credit": 0.533,
+    "chosen_tokens": 330.505,
+    "rejected_tokens": 307.304,
+    "pairs": 1000,
+    "chosen_longer_pairs": 515,
+    "chosen_longer_preference_credit": 0.5,
+    "chosen_not_longer_pairs": 485,
+    "chosen_not_longer_preference_credit": 0.5
+  },
+  "source_head_before_changes": "7d895aefe85b6a93107bb41dae32ac746549d17f"
+}

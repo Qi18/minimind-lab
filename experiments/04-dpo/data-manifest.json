@@ -1,0 +1,42 @@
+{
+  "status": "accepted",
+  "source": "/data/datasets/minimind/312afb4f76391145c6902f765bb51691c09a12f5/dpo.jsonl",
+  "source_sha256": "ee934a8a455ccc99d1334d63e1254dd1d64f497fd067cfcbb71e3043f5b46768",
+  "revision": "312afb4f76391145c6902f765bb51691c09a12f5",
+  "source_rows": 17166,
+  "rejected": {
+    "underspecified_short_prompt": 389,
+    "overlength": 432,
+    "identical_answers": 27,
+    "exact_duplicate_prompt": 77,
+    "near_duplicate_prompt": 47
+  },
+  "seed": 42,
+  "max_seq_len": 1024,
+  "files": {
+    "validation.jsonl": {
+      "rows": 1000,
+      "sha256": "6606f506147fcac68556d38e0642ba3bb49f46e9539b75b9fcfb9f7971f33ecf",
+      "targets": {
+        "chosen": 330505,
+        "rejected": 307304
+      }
+    },
+    "test.jsonl": {
+      "rows": 1000,
+      "sha256": "51937c4b7ab5f666676d4a9a5aea2c1dfbae23755ffea93d2c962dff79e49214",
+      "targets": {
+        "chosen": 338134,
+        "rejected": 316084
+      }
+    },
+    "train.jsonl": {
+      "rows": 14194,
+      "sha256": "6f59070edd710c7be4b6085be0794bc363e11a6c0be2680eee59d568bbeb81f2",
+      "targets": {
+        "chosen": 4765435,
+        "rejected": 4375948
+      }
+    }
+  }
+}

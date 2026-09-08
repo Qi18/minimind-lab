@@ -1,0 +1,21 @@
+{
+  "status": "running",
+  "experiment_id": "D03-dpo-official-20260908",
+  "training_state": "running",
+  "final_evaluation_state": "not-started",
+  "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3w1au7dk",
+  "artifact_dir": "/data/artifacts/minimind-lab/D03-dpo-official-20260908",
+  "latest_record": {
+    "event": "train",
+    "step": 100,
+    "time": 1788836474.449158,
+    "loss": 0.633833721280098,
+    "lr": 3.5761472773367666e-08,
+    "grad_norm": 49.50402069091797,
+    "chosen_targets": 1069227,
+    "rejected_targets": 974774,
+    "peak_memory_mib": 9084.0205078125,
+    "wall_seconds": 79.4292004108429
+  },
+  "source_head_before_changes": "7d895aefe85b6a93107bb41dae32ac746549d17f"
+}

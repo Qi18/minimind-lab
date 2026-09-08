@@ -332,6 +332,10 @@ L00/S10、L01 Full FT、L02 LoRA r16 的训练与独立评测完成，阶段为 
 
 评测 held-out preference accuracy、chosen/rejected margin、盲测 win/tie/loss、长度控制胜率、输出长度、拒答率、KL、指令/Tool 和七项回归。DPO 必须同时优于 D01 和 D02，且收益不能主要来自答案变长、模板化或过度拒答。
 
+### 9.1 Phase4 启动（2026-09-08）
+
+已冻结官方DPO数据：train14,194 / validation1,000 / test1,000，独立审计通过。D01/D02/D03共同从S10启动；首轮LR4e-8、beta0.15、seed42、global batch32。数值smoke已通过。实际配置与待完成的独立偏好/盲评/通用回归见 [Phase4报告](phases/phase4-dpo.md)。
+
 ## 10. Phase 5：GRPO/CISPO 可验证强化学习
 
 阅读 reward、reference、group-relative advantage、importance ratio、KL，以及 `train_grpo.py` 中 GRPO/CISPO 的 loss 分支。PPO 作为理解 Actor/Critic、GAE 和 clipped objective 的学习支线，不作为当前主实验的前置条件。

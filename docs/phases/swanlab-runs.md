@@ -45,3 +45,9 @@ Workspace 固定为 `@richliu0153`。完整 URL 形如 `https://swanlab.cn/@rich
 - L00-code-baseline-20260907: n/a-no-training / https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/980w5n9d
 - L01-code-full-ft-20260907: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/pz1x0ux9 / https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/gtetdf4e
 - L02-code-lora-r16-20260907: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/s0l5ishg / https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/8z9jka3t
+
+## Phase4（2026-09-08启动）
+
+- D01-s10-preference-baseline-20260908: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/os17qekn
+- D02-chosen-only-sft-20260908: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/51vdt97x
+- D03-dpo-official-20260908: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3w1au7dk

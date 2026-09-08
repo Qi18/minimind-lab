@@ -8,7 +8,8 @@ experiments/
 ├── 01-pretrain/
 ├── 02-sft/
 ├── 03-lora/         # Phase3 Full FT vs LoRA
-├── 03-dpo/          # 历史目录名，未来Phase4
+├── 03-dpo/          # 历史空占位
+├── 04-dpo/          # Phase4 D01/D02/D03
 ├── 04-grpo-cispo/
 └── 05-agentic-rl/
 ```

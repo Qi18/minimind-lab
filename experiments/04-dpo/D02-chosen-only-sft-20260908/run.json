@@ -1,0 +1,21 @@
+{
+  "status": "running",
+  "experiment_id": "D02-chosen-only-sft-20260908",
+  "training_state": "running",
+  "final_evaluation_state": "not-started",
+  "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/51vdt97x",
+  "artifact_dir": "/data/artifacts/minimind-lab/D02-chosen-only-sft-20260908",
+  "latest_record": {
+    "event": "train",
+    "step": 200,
+    "time": 1788836468.1798508,
+    "loss": 1.9810794293880463,
+    "lr": 2.4916409784527952e-08,
+    "grad_norm": 2.076936721801758,
+    "chosen_targets": 2150736,
+    "rejected_targets": 0,
+    "peak_memory_mib": 5249.70751953125,
+    "wall_seconds": 73.22065949440002
+  },
+  "source_head_before_changes": "7d895aefe85b6a93107bb41dae32ac746549d17f"
+}

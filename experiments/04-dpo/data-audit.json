@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "splits": {
+    "test": {
+      "rows": 1000,
+      "targets": {
+        "chosen": 338134,
+        "rejected": 316084
+      },
+      "prefix_mask_valid": true
+    },
+    "validation": {
+      "rows": 1000,
+      "targets": {
+        "chosen": 330505,
+        "rejected": 307304
+      },
+      "prefix_mask_valid": true
+    },
+    "train": {
+      "rows": 14194,
+      "targets": {
+        "chosen": 4765435,
+        "rejected": 4375948
+      },
+      "prefix_mask_valid": true
+    }
+  },
+  "exact_duplicate_prompts": 0,
+  "near_duplicate_prompts_0_8": 0,
+  "scope": "all Phase4 splits; upstream S10 exposure and arbitrary semantic paraphrases not ruled out"
+}

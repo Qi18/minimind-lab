@@ -1,0 +1,22 @@
+{
+  "experiment_id": "D03-dpo-official-20260908",
+  "phase": 4,
+  "method": "dpo",
+  "base": "S10",
+  "base_sha256": "46aeab66795795aa77d703f08d71b952fe98461040f4560e1301021540710131",
+  "dataset": "/data/datasets/minimind-lab/phase4/official-dpo-v1",
+  "seed": 42,
+  "beta": 0.15,
+  "learning_rate": 4e-08,
+  "batch_size": 8,
+  "global_batch": 32,
+  "epochs": 1,
+  "max_seq_len": 1024,
+  "physical_gpu": 3,
+  "train_pairs": 14194,
+  "validation_pairs": 1000,
+  "test_pairs": 1000,
+  "status": "running",
+  "swanlab_project": "MiniMind-Lab",
+  "checkpoint_selection": "minimum validation reference-relative DPO loss; initialization eligible"
+}
