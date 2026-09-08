@@ -1,0 +1,110 @@
+{
+  "status": "completed",
+  "candidate": "R04A",
+  "split": "test",
+  "samples": 1000,
+  "protocol": {
+    "reward": "strict entire-completion integer exact match",
+    "sample_k": 8,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "max_new_tokens": 1,
+    "seed": 42,
+    "precision": "float32 parameters with BF16 autocast"
+  },
+  "pass_at_1": 0.122,
+  "valid_at_1": 0.84,
+  "sample_accuracy": 0.09625,
+  "sample_valid": 0.747625,
+  "sample_all_zero_rate": 0.604,
+  "sample_all_one_rate": 0.004,
+  "sample_nondegenerate_rate": 0.392,
+  "pass_at_k": 0.396,
+  "mean_greedy_tokens": 1,
+  "greedy_value_distribution": {
+    "9": 109,
+    "2": 54,
+    "3": 69,
+    "INVALID": 160,
+    "0": 53,
+    "1": 88,
+    "4": 163,
+    "7": 88,
+    "8": 94,
+    "5": 66,
+    "99": 1,
+    "6": 55
+  },
+  "by_operation": {
+    "target_extract": {
+      "samples": 1000,
+      "pass_at_1": 0.122
+    }
+  },
+  "by_template": {
+    "0": {
+      "samples": 250,
+      "pass_at_1": 0.16
+    },
+    "1": {
+      "samples": 250,
+      "pass_at_1": 0.056
+    },
+    "2": {
+      "samples": 250,
+      "pass_at_1": 0.184
+    },
+    "3": {
+      "samples": 250,
+      "pass_at_1": 0.088
+    }
+  },
+  "by_answer": {
+    "0": {
+      "samples": 100,
+      "pass_at_1": 0.03
+    },
+    "1": {
+      "samples": 100,
+      "pass_at_1": 0.18
+    },
+    "2": {
+      "samples": 100,
+      "pass_at_1": 0.04
+    },
+    "3": {
+      "samples": 100,
+      "pass_at_1": 0.1
+    },
+    "4": {
+      "samples": 100,
+      "pass_at_1": 0.29
+    },
+    "5": {
+      "samples": 100,
+      "pass_at_1": 0.06
+    },
+    "6": {
+      "samples": 100,
+      "pass_at_1": 0.07
+    },
+    "7": {
+      "samples": 100,
+      "pass_at_1": 0.15
+    },
+    "8": {
+      "samples": 100,
+      "pass_at_1": 0.15
+    },
+    "9": {
+      "samples": 100,
+      "pass_at_1": 0.15
+    }
+  },
+  "data_sha256": "b2394c1103d55a5e7a2faf8bddbc61e6291036061de5d9250d3170cef52a5a7a",
+  "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+  "limitations": [
+    "empirical pass@k is fixed sampled generation, not an unbiased estimator",
+    "exact-integer metrics cover only the configured synthetic task"
+  ]
+}

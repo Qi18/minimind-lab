@@ -1,0 +1,1048 @@
+{
+  "status": "completed-promoted",
+  "decision": "GRPO and CISPO both pass the preregistered promotion gates versus R04A. CISPO has the highest pass@1 point estimate, but its differences versus SFT and GRPO are not statistically significant.",
+  "dataset": {
+    "name": "verifiable-target-extract-v1",
+    "seed": 20260908,
+    "task": "copy the uniquely marked target digit and emit exactly one digit",
+    "reward": "1 only when the entire normalized completion parses to the marked integer; otherwise 0",
+    "split_policy": "prompt and task_key disjoint; each split exactly balanced over answers 0-9",
+    "templates": [
+      "数字序列：{left}[{answer}]{right}。只输出方括号内的一个数字，不要解释。",
+      "读取记录：{left}<TARGET>{answer}</TARGET>{right}。严格只回答 TARGET 标签中的数字。",
+      "候选项：{left}<{answer}>{right}。只返回尖括号标记的一个数字，不要解释。",
+      "校验串：{left}#{answer}#{right}。严格只输出两个 # 之间的数字。"
+    ],
+    "files": {
+      "train": {
+        "path": "/data/datasets/minimind-lab/phase5/verifiable-target-extract-v1/train.jsonl",
+        "rows": 4000,
+        "bytes": 1274000,
+        "sha256": "57e0cb2957e2fc738f8494bf7ada297c86fe074cc86bef59b2ba575716b623b8"
+      },
+      "validation": {
+        "path": "/data/datasets/minimind-lab/phase5/verifiable-target-extract-v1/validation.jsonl",
+        "rows": 500,
+        "bytes": 161750,
+        "sha256": "e9360caa8bcedd1ae7d7d3604db78f057293120187dfb136080d5e08a6fa2e9b"
+      },
+      "test": {
+        "path": "/data/datasets/minimind-lab/phase5/verifiable-target-extract-v1/test.jsonl",
+        "rows": 1000,
+        "bytes": 317500,
+        "sha256": "b2394c1103d55a5e7a2faf8bddbc61e6291036061de5d9250d3170cef52a5a7a"
+      }
+    },
+    "profiles": {
+      "train": {
+        "answers": {
+          "9": 400,
+          "4": 400,
+          "1": 400,
+          "3": 400,
+          "2": 400,
+          "5": 400,
+          "6": 400,
+          "7": 400,
+          "0": 400,
+          "8": 400
+        },
+        "templates": {
+          "3": 1000,
+          "1": 1000,
+          "0": 1000,
+          "2": 1000
+        },
+        "positions": {
+          "5": 667,
+          "3": 698,
+          "0": 642,
+          "4": 685,
+          "1": 684,
+          "2": 624
+        }
+      },
+      "validation": {
+        "answers": {
+          "4": 50,
+          "5": 50,
+          "9": 50,
+          "2": 50,
+          "6": 50,
+          "0": 50,
+          "7": 50,
+          "3": 50,
+          "8": 50,
+          "1": 50
+        },
+        "templates": {
+          "1": 125,
+          "2": 125,
+          "3": 125,
+          "0": 125
+        },
+        "positions": {
+          "2": 85,
+          "3": 77,
+          "4": 79,
+          "0": 75,
+          "5": 96,
+          "1": 88
+        }
+      },
+      "test": {
+        "answers": {
+          "9": 100,
+          "6": 100,
+          "4": 100,
+          "1": 100,
+          "2": 100,
+          "7": 100,
+          "8": 100,
+          "0": 100,
+          "3": 100,
+          "5": 100
+        },
+        "templates": {
+          "2": 250,
+          "3": 250,
+          "1": 250,
+          "0": 250
+        },
+        "positions": {
+          "2": 172,
+          "1": 176,
+          "3": 174,
+          "5": 162,
+          "0": 158,
+          "4": 158
+        }
+      }
+    },
+    "limitations": [
+      "This is a narrow controlled verifier task, not a general reasoning benchmark.",
+      "Synthetic prompt isolation does not imply absence of semantically similar historical data."
+    ]
+  },
+  "data_audit": {
+    "status": "passed",
+    "dataset": "/data/datasets/minimind-lab/phase5/verifiable-target-extract-v1",
+    "profiles": {
+      "train": {
+        "rows": 4000,
+        "answers": {
+          "9": 400,
+          "4": 400,
+          "1": 400,
+          "3": 400,
+          "2": 400,
+          "5": 400,
+          "6": 400,
+          "7": 400,
+          "0": 400,
+          "8": 400
+        },
+        "templates": {
+          "3": 1000,
+          "1": 1000,
+          "0": 1000,
+          "2": 1000
+        },
+        "positions": {
+          "5": 667,
+          "3": 698,
+          "0": 642,
+          "4": 685,
+          "1": 684,
+          "2": 624
+        },
+        "sha256": "57e0cb2957e2fc738f8494bf7ada297c86fe074cc86bef59b2ba575716b623b8"
+      },
+      "validation": {
+        "rows": 500,
+        "answers": {
+          "4": 50,
+          "5": 50,
+          "9": 50,
+          "2": 50,
+          "6": 50,
+          "0": 50,
+          "7": 50,
+          "3": 50,
+          "8": 50,
+          "1": 50
+        },
+        "templates": {
+          "1": 125,
+          "2": 125,
+          "3": 125,
+          "0": 125
+        },
+        "positions": {
+          "2": 85,
+          "3": 77,
+          "4": 79,
+          "0": 75,
+          "5": 96,
+          "1": 88
+        },
+        "sha256": "e9360caa8bcedd1ae7d7d3604db78f057293120187dfb136080d5e08a6fa2e9b"
+      },
+      "test": {
+        "rows": 1000,
+        "answers": {
+          "9": 100,
+          "6": 100,
+          "4": 100,
+          "1": 100,
+          "2": 100,
+          "7": 100,
+          "8": 100,
+          "0": 100,
+          "3": 100,
+          "5": 100
+        },
+        "templates": {
+          "2": 250,
+          "3": 250,
+          "1": 250,
+          "0": 250
+        },
+        "positions": {
+          "2": 172,
+          "1": 176,
+          "3": 174,
+          "5": 162,
+          "0": 158,
+          "4": 158
+        },
+        "sha256": "b2394c1103d55a5e7a2faf8bddbc61e6291036061de5d9250d3170cef52a5a7a"
+      }
+    },
+    "cross_split_task_overlap": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "failures": [],
+    "boundary": "Narrow marked-target extraction; does not measure general reasoning."
+  },
+  "candidates": {
+    "R04A": {
+      "experiment_id": "R04A-s10-target-baseline-20260908",
+      "method": "baseline",
+      "test": {
+        "status": "completed",
+        "candidate": "R04A",
+        "split": "test",
+        "samples": 1000,
+        "protocol": {
+          "reward": "strict entire-completion integer exact match",
+          "sample_k": 8,
+          "temperature": 1.0,
+          "top_p": 1.0,
+          "max_new_tokens": 1,
+          "seed": 42,
+          "precision": "float32 parameters with BF16 autocast"
+        },
+        "pass_at_1": 0.122,
+        "valid_at_1": 0.84,
+        "sample_accuracy": 0.09625,
+        "sample_valid": 0.747625,
+        "sample_all_zero_rate": 0.604,
+        "sample_all_one_rate": 0.004,
+        "sample_nondegenerate_rate": 0.392,
+        "pass_at_k": 0.396,
+        "mean_greedy_tokens": 1,
+        "greedy_value_distribution": {
+          "9": 109,
+          "2": 54,
+          "3": 69,
+          "INVALID": 160,
+          "0": 53,
+          "1": 88,
+          "4": 163,
+          "7": 88,
+          "8": 94,
+          "5": 66,
+          "99": 1,
+          "6": 55
+        },
+        "by_operation": {
+          "target_extract": {
+            "samples": 1000,
+            "pass_at_1": 0.122
+          }
+        },
+        "by_template": {
+          "0": {
+            "samples": 250,
+            "pass_at_1": 0.16
+          },
+          "1": {
+            "samples": 250,
+            "pass_at_1": 0.056
+          },
+          "2": {
+            "samples": 250,
+            "pass_at_1": 0.184
+          },
+          "3": {
+            "samples": 250,
+            "pass_at_1": 0.088
+          }
+        },
+        "by_answer": {
+          "0": {
+            "samples": 100,
+            "pass_at_1": 0.03
+          },
+          "1": {
+            "samples": 100,
+            "pass_at_1": 0.18
+          },
+          "2": {
+            "samples": 100,
+            "pass_at_1": 0.04
+          },
+          "3": {
+            "samples": 100,
+            "pass_at_1": 0.1
+          },
+          "4": {
+            "samples": 100,
+            "pass_at_1": 0.29
+          },
+          "5": {
+            "samples": 100,
+            "pass_at_1": 0.06
+          },
+          "6": {
+            "samples": 100,
+            "pass_at_1": 0.07
+          },
+          "7": {
+            "samples": 100,
+            "pass_at_1": 0.15
+          },
+          "8": {
+            "samples": 100,
+            "pass_at_1": 0.15
+          },
+          "9": {
+            "samples": 100,
+            "pass_at_1": 0.15
+          }
+        },
+        "data_sha256": "b2394c1103d55a5e7a2faf8bddbc61e6291036061de5d9250d3170cef52a5a7a",
+        "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+        "limitations": [
+          "empirical pass@k is fixed sampled generation, not an unbiased estimator",
+          "exact-integer metrics cover only the configured synthetic task"
+        ]
+      },
+      "diagnostics": {
+        "distribution": {
+          "9": 109,
+          "2": 54,
+          "3": 69,
+          "INVALID": 160,
+          "0": 53,
+          "1": 88,
+          "4": 163,
+          "7": 88,
+          "8": 94,
+          "5": 66,
+          "99": 1,
+          "6": 55
+        },
+        "max_digit_share": 0.163,
+        "collapsed": false
+      },
+      "behavior": {
+        "status": "completed",
+        "seed": 42,
+        "decoding": {
+          "do_sample": false,
+          "max_new_tokens": 192,
+          "open_thinking": false
+        },
+        "chat": {
+          "cases": 10,
+          "success_count": 8,
+          "success_rate": 0.8,
+          "format_cases": 6,
+          "format_success_count": 5,
+          "format_success_rate": 0.8333333333333334,
+          "refusal_anomaly_count": 0,
+          "repetition_anomaly_count": 1
+        },
+        "tool": {
+          "cases": 8,
+          "tool_selection_accuracy": 0.875,
+          "argument_validity_rate": 0.875,
+          "execution_success_rate": 0.875,
+          "final_answer_accuracy": 0.875,
+          "end_to_end_success_rate": 0.875,
+          "unfinished_rate": 0.0,
+          "invalid_tool_call_tag_count": 0
+        },
+        "samples_path": "eval/samples.jsonl"
+      },
+      "training": {
+        "method": "baseline",
+        "outer_steps": 0,
+        "optimizer_updates": 0
+      },
+      "checkpoint": {
+        "path": "/data/artifacts/minimind-lab/D01-s10-preference-baseline-20260908/exported-fp32/model.safetensors",
+        "sha256": "851ad62d58986bc72b6d8b0e17ebd06e6635f8f5c7161aff8e50ab1104569bce",
+        "bytes": 255658640,
+        "serialization": "float32"
+      }
+    },
+    "R04B": {
+      "experiment_id": "R04B-target-sft-control-20260908",
+      "method": "sft",
+      "test": {
+        "status": "completed",
+        "candidate": "R04B",
+        "split": "test",
+        "samples": 1000,
+        "protocol": {
+          "reward": "strict entire-completion integer exact match",
+          "sample_k": 8,
+          "temperature": 1.0,
+          "top_p": 1.0,
+          "max_new_tokens": 1,
+          "seed": 42,
+          "precision": "float32 parameters with BF16 autocast"
+        },
+        "pass_at_1": 0.848,
+        "valid_at_1": 1.0,
+        "sample_accuracy": 0.814375,
+        "sample_valid": 0.997625,
+        "sample_all_zero_rate": 0.054,
+        "sample_all_one_rate": 0.625,
+        "sample_nondegenerate_rate": 0.321,
+        "pass_at_k": 0.946,
+        "mean_greedy_tokens": 1,
+        "greedy_value_distribution": {
+          "1": 98,
+          "6": 116,
+          "4": 105,
+          "3": 83,
+          "8": 120,
+          "0": 107,
+          "2": 74,
+          "7": 98,
+          "9": 107,
+          "5": 92
+        },
+        "by_operation": {
+          "target_extract": {
+            "samples": 1000,
+            "pass_at_1": 0.848
+          }
+        },
+        "by_template": {
+          "0": {
+            "samples": 250,
+            "pass_at_1": 0.624
+          },
+          "1": {
+            "samples": 250,
+            "pass_at_1": 1.0
+          },
+          "2": {
+            "samples": 250,
+            "pass_at_1": 0.964
+          },
+          "3": {
+            "samples": 250,
+            "pass_at_1": 0.804
+          }
+        },
+        "by_answer": {
+          "0": {
+            "samples": 100,
+            "pass_at_1": 0.96
+          },
+          "1": {
+            "samples": 100,
+            "pass_at_1": 0.83
+          },
+          "2": {
+            "samples": 100,
+            "pass_at_1": 0.73
+          },
+          "3": {
+            "samples": 100,
+            "pass_at_1": 0.8
+          },
+          "4": {
+            "samples": 100,
+            "pass_at_1": 0.93
+          },
+          "5": {
+            "samples": 100,
+            "pass_at_1": 0.81
+          },
+          "6": {
+            "samples": 100,
+            "pass_at_1": 0.87
+          },
+          "7": {
+            "samples": 100,
+            "pass_at_1": 0.85
+          },
+          "8": {
+            "samples": 100,
+            "pass_at_1": 0.89
+          },
+          "9": {
+            "samples": 100,
+            "pass_at_1": 0.81
+          }
+        },
+        "data_sha256": "b2394c1103d55a5e7a2faf8bddbc61e6291036061de5d9250d3170cef52a5a7a",
+        "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+        "limitations": [
+          "empirical pass@k is fixed sampled generation, not an unbiased estimator",
+          "exact-integer metrics cover only the configured synthetic task"
+        ]
+      },
+      "diagnostics": {
+        "distribution": {
+          "1": 98,
+          "6": 116,
+          "4": 105,
+          "3": 83,
+          "8": 120,
+          "0": 107,
+          "2": 74,
+          "7": 98,
+          "9": 107,
+          "5": 92
+        },
+        "max_digit_share": 0.12,
+        "collapsed": false
+      },
+      "behavior": {
+        "status": "completed",
+        "seed": 42,
+        "decoding": {
+          "do_sample": false,
+          "max_new_tokens": 192,
+          "open_thinking": false
+        },
+        "chat": {
+          "cases": 10,
+          "success_count": 6,
+          "success_rate": 0.6,
+          "format_cases": 6,
+          "format_success_count": 3,
+          "format_success_rate": 0.5,
+          "refusal_anomaly_count": 0,
+          "repetition_anomaly_count": 2
+        },
+        "tool": {
+          "cases": 8,
+          "tool_selection_accuracy": 0.875,
+          "argument_validity_rate": 0.875,
+          "execution_success_rate": 0.875,
+          "final_answer_accuracy": 0.875,
+          "end_to_end_success_rate": 0.875,
+          "unfinished_rate": 0.0,
+          "invalid_tool_call_tag_count": 0
+        },
+        "samples_path": "eval/samples.jsonl"
+      },
+      "training": {
+        "event": "completed",
+        "method": "sft",
+        "outer_steps": 100,
+        "optimizer_updates": 100,
+        "wall_seconds": 3.7130238999961875,
+        "completion_tokens": 1000,
+        "correct_rollouts": 0,
+        "total_rollouts": 0,
+        "mean_training_reward": null,
+        "peak_memory_mib": 1255.306640625,
+        "model_path": "/data/artifacts/minimind-lab/R04B-target-sft-control-20260908/model-fp32",
+        "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/b3v1xgwe"
+      },
+      "checkpoint": {
+        "path": "/data/artifacts/minimind-lab/R04B-target-sft-control-20260908/model-fp32/model.safetensors",
+        "sha256": "88d99aa62018a16c8d0536873010b99db7cac308386d9af60466138997302317",
+        "bytes": 275319536,
+        "serialization": "float32"
+      }
+    },
+    "R04C": {
+      "experiment_id": "R04C-target-grpo-20260908",
+      "method": "grpo",
+      "test": {
+        "status": "completed",
+        "candidate": "R04C",
+        "split": "test",
+        "samples": 1000,
+        "protocol": {
+          "reward": "strict entire-completion integer exact match",
+          "sample_k": 8,
+          "temperature": 1.0,
+          "top_p": 1.0,
+          "max_new_tokens": 1,
+          "seed": 42,
+          "precision": "float32 parameters with BF16 autocast"
+        },
+        "pass_at_1": 0.861,
+        "valid_at_1": 1.0,
+        "sample_accuracy": 0.6715,
+        "sample_valid": 0.98825,
+        "sample_all_zero_rate": 0.05,
+        "sample_all_one_rate": 0.226,
+        "sample_nondegenerate_rate": 0.724,
+        "pass_at_k": 0.95,
+        "mean_greedy_tokens": 1,
+        "greedy_value_distribution": {
+          "9": 124,
+          "6": 100,
+          "4": 114,
+          "8": 102,
+          "2": 115,
+          "7": 91,
+          "0": 93,
+          "3": 100,
+          "1": 54,
+          "5": 107
+        },
+        "by_operation": {
+          "target_extract": {
+            "samples": 1000,
+            "pass_at_1": 0.861
+          }
+        },
+        "by_template": {
+          "0": {
+            "samples": 250,
+            "pass_at_1": 0.868
+          },
+          "1": {
+            "samples": 250,
+            "pass_at_1": 0.924
+          },
+          "2": {
+            "samples": 250,
+            "pass_at_1": 0.9
+          },
+          "3": {
+            "samples": 250,
+            "pass_at_1": 0.752
+          }
+        },
+        "by_answer": {
+          "0": {
+            "samples": 100,
+            "pass_at_1": 0.84
+          },
+          "1": {
+            "samples": 100,
+            "pass_at_1": 0.52
+          },
+          "2": {
+            "samples": 100,
+            "pass_at_1": 0.99
+          },
+          "3": {
+            "samples": 100,
+            "pass_at_1": 0.96
+          },
+          "4": {
+            "samples": 100,
+            "pass_at_1": 0.99
+          },
+          "5": {
+            "samples": 100,
+            "pass_at_1": 0.99
+          },
+          "6": {
+            "samples": 100,
+            "pass_at_1": 0.87
+          },
+          "7": {
+            "samples": 100,
+            "pass_at_1": 0.82
+          },
+          "8": {
+            "samples": 100,
+            "pass_at_1": 0.77
+          },
+          "9": {
+            "samples": 100,
+            "pass_at_1": 0.86
+          }
+        },
+        "data_sha256": "b2394c1103d55a5e7a2faf8bddbc61e6291036061de5d9250d3170cef52a5a7a",
+        "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+        "limitations": [
+          "empirical pass@k is fixed sampled generation, not an unbiased estimator",
+          "exact-integer metrics cover only the configured synthetic task"
+        ]
+      },
+      "diagnostics": {
+        "distribution": {
+          "9": 124,
+          "6": 100,
+          "4": 114,
+          "8": 102,
+          "2": 115,
+          "7": 91,
+          "0": 93,
+          "3": 100,
+          "1": 54,
+          "5": 107
+        },
+        "max_digit_share": 0.124,
+        "collapsed": false
+      },
+      "behavior": {
+        "status": "completed",
+        "seed": 42,
+        "decoding": {
+          "do_sample": false,
+          "max_new_tokens": 192,
+          "open_thinking": false
+        },
+        "chat": {
+          "cases": 10,
+          "success_count": 8,
+          "success_rate": 0.8,
+          "format_cases": 6,
+          "format_success_count": 5,
+          "format_success_rate": 0.8333333333333334,
+          "refusal_anomaly_count": 0,
+          "repetition_anomaly_count": 1
+        },
+        "tool": {
+          "cases": 8,
+          "tool_selection_accuracy": 0.875,
+          "argument_validity_rate": 0.875,
+          "execution_success_rate": 0.875,
+          "final_answer_accuracy": 0.875,
+          "end_to_end_success_rate": 0.875,
+          "unfinished_rate": 0.0,
+          "invalid_tool_call_tag_count": 0
+        },
+        "samples_path": "eval/samples.jsonl"
+      },
+      "training": {
+        "event": "completed",
+        "method": "grpo",
+        "outer_steps": 50,
+        "optimizer_updates": 100,
+        "wall_seconds": 8.127314218028914,
+        "completion_tokens": 4000,
+        "correct_rollouts": 1427,
+        "total_rollouts": 4000,
+        "mean_training_reward": 0.35675,
+        "peak_memory_mib": 3103.9345703125,
+        "model_path": "/data/artifacts/minimind-lab/R04C-target-grpo-20260908/model-fp32",
+        "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/wg8wrx33"
+      },
+      "checkpoint": {
+        "path": "/data/artifacts/minimind-lab/R04C-target-grpo-20260908/model-fp32/model.safetensors",
+        "sha256": "cb48e851cdcc21d4b1ee653e0279bc3e9332d7fdbb50392d7ece9423597aaa50",
+        "bytes": 275319536,
+        "serialization": "float32"
+      },
+      "gates": {
+        "pass1_ci_low_above_r04a": true,
+        "no_digit_collapse": true,
+        "chat_at_least_7_of_10": true,
+        "tool_e2e_at_least_6_of_8": true
+      },
+      "all_gates_pass": true
+    },
+    "R04D": {
+      "experiment_id": "R04D-target-cispo-20260908",
+      "method": "cispo",
+      "test": {
+        "status": "completed",
+        "candidate": "R04D",
+        "split": "test",
+        "samples": 1000,
+        "protocol": {
+          "reward": "strict entire-completion integer exact match",
+          "sample_k": 8,
+          "temperature": 1.0,
+          "top_p": 1.0,
+          "max_new_tokens": 1,
+          "seed": 42,
+          "precision": "float32 parameters with BF16 autocast"
+        },
+        "pass_at_1": 0.867,
+        "valid_at_1": 1.0,
+        "sample_accuracy": 0.691125,
+        "sample_valid": 0.989375,
+        "sample_all_zero_rate": 0.043,
+        "sample_all_one_rate": 0.242,
+        "sample_nondegenerate_rate": 0.715,
+        "pass_at_k": 0.957,
+        "mean_greedy_tokens": 1,
+        "greedy_value_distribution": {
+          "9": 122,
+          "6": 98,
+          "4": 112,
+          "8": 89,
+          "2": 117,
+          "7": 106,
+          "0": 98,
+          "3": 101,
+          "1": 53,
+          "5": 104
+        },
+        "by_operation": {
+          "target_extract": {
+            "samples": 1000,
+            "pass_at_1": 0.867
+          }
+        },
+        "by_template": {
+          "0": {
+            "samples": 250,
+            "pass_at_1": 0.868
+          },
+          "1": {
+            "samples": 250,
+            "pass_at_1": 0.924
+          },
+          "2": {
+            "samples": 250,
+            "pass_at_1": 0.892
+          },
+          "3": {
+            "samples": 250,
+            "pass_at_1": 0.784
+          }
+        },
+        "by_answer": {
+          "0": {
+            "samples": 100,
+            "pass_at_1": 0.87
+          },
+          "1": {
+            "samples": 100,
+            "pass_at_1": 0.51
+          },
+          "2": {
+            "samples": 100,
+            "pass_at_1": 1.0
+          },
+          "3": {
+            "samples": 100,
+            "pass_at_1": 0.97
+          },
+          "4": {
+            "samples": 100,
+            "pass_at_1": 1.0
+          },
+          "5": {
+            "samples": 100,
+            "pass_at_1": 0.99
+          },
+          "6": {
+            "samples": 100,
+            "pass_at_1": 0.85
+          },
+          "7": {
+            "samples": 100,
+            "pass_at_1": 0.89
+          },
+          "8": {
+            "samples": 100,
+            "pass_at_1": 0.74
+          },
+          "9": {
+            "samples": 100,
+            "pass_at_1": 0.85
+          }
+        },
+        "data_sha256": "b2394c1103d55a5e7a2faf8bddbc61e6291036061de5d9250d3170cef52a5a7a",
+        "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+        "limitations": [
+          "empirical pass@k is fixed sampled generation, not an unbiased estimator",
+          "exact-integer metrics cover only the configured synthetic task"
+        ]
+      },
+      "diagnostics": {
+        "distribution": {
+          "9": 122,
+          "6": 98,
+          "4": 112,
+          "8": 89,
+          "2": 117,
+          "7": 106,
+          "0": 98,
+          "3": 101,
+          "1": 53,
+          "5": 104
+        },
+        "max_digit_share": 0.122,
+        "collapsed": false
+      },
+      "behavior": {
+        "status": "completed",
+        "seed": 42,
+        "decoding": {
+          "do_sample": false,
+          "max_new_tokens": 192,
+          "open_thinking": false
+        },
+        "chat": {
+          "cases": 10,
+          "success_count": 8,
+          "success_rate": 0.8,
+          "format_cases": 6,
+          "format_success_count": 5,
+          "format_success_rate": 0.8333333333333334,
+          "refusal_anomaly_count": 0,
+          "repetition_anomaly_count": 1
+        },
+        "tool": {
+          "cases": 8,
+          "tool_selection_accuracy": 0.875,
+          "argument_validity_rate": 0.875,
+          "execution_success_rate": 0.875,
+          "final_answer_accuracy": 0.875,
+          "end_to_end_success_rate": 0.875,
+          "unfinished_rate": 0.0,
+          "invalid_tool_call_tag_count": 0
+        },
+        "samples_path": "eval/samples.jsonl"
+      },
+      "training": {
+        "event": "completed",
+        "method": "cispo",
+        "outer_steps": 50,
+        "optimizer_updates": 100,
+        "wall_seconds": 8.14832577999914,
+        "completion_tokens": 4000,
+        "correct_rollouts": 1470,
+        "total_rollouts": 4000,
+        "mean_training_reward": 0.3675,
+        "peak_memory_mib": 3103.93408203125,
+        "model_path": "/data/artifacts/minimind-lab/R04D-target-cispo-20260908/model-fp32",
+        "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/t023y9g8"
+      },
+      "checkpoint": {
+        "path": "/data/artifacts/minimind-lab/R04D-target-cispo-20260908/model-fp32/model.safetensors",
+        "sha256": "2ab81e8786125c597083b1cb2caae134b60dd2f55bca3175f1d552442e5d5b26",
+        "bytes": 275319536,
+        "serialization": "float32"
+      },
+      "gates": {
+        "pass1_ci_low_above_r04a": true,
+        "no_digit_collapse": true,
+        "chat_at_least_7_of_10": true,
+        "tool_e2e_at_least_6_of_8": true
+      },
+      "all_gates_pass": true
+    }
+  },
+  "paired_bootstrap": {
+    "protocol": {
+      "samples": 1000,
+      "seed": 42,
+      "replicates": 10000,
+      "pairing": "task_id",
+      "metric": "greedy_correct"
+    },
+    "comparisons": {
+      "R04B_vs_R04A": {
+        "mean_difference": 0.726,
+        "bootstrap_95_ci": [
+          0.697,
+          0.753
+        ],
+        "candidate_only_correct": 730,
+        "both_same": 266,
+        "opponent_only_correct": 4,
+        "samples": 1000,
+        "seed": 42,
+        "replicates": 10000
+      },
+      "R04C_vs_R04A": {
+        "mean_difference": 0.739,
+        "bootstrap_95_ci": [
+          0.71,
+          0.766
+        ],
+        "candidate_only_correct": 742,
+        "both_same": 255,
+        "opponent_only_correct": 3,
+        "samples": 1000,
+        "seed": 42,
+        "replicates": 10000
+      },
+      "R04D_vs_R04A": {
+        "mean_difference": 0.745,
+        "bootstrap_95_ci": [
+          0.717,
+          0.771
+        ],
+        "candidate_only_correct": 748,
+        "both_same": 249,
+        "opponent_only_correct": 3,
+        "samples": 1000,
+        "seed": 42,
+        "replicates": 10000
+      },
+      "R04C_vs_R04B": {
+        "mean_difference": 0.013,
+        "bootstrap_95_ci": [
+          -0.014,
+          0.04
+        ],
+        "candidate_only_correct": 102,
+        "both_same": 809,
+        "opponent_only_correct": 89,
+        "samples": 1000,
+        "seed": 42,
+        "replicates": 10000
+      },
+      "R04D_vs_R04B": {
+        "mean_difference": 0.019,
+        "bootstrap_95_ci": [
+          -0.008,
+          0.046
+        ],
+        "candidate_only_correct": 105,
+        "both_same": 809,
+        "opponent_only_correct": 86,
+        "samples": 1000,
+        "seed": 42,
+        "replicates": 10000
+      },
+      "R04D_vs_R04C": {
+        "mean_difference": 0.006,
+        "bootstrap_95_ci": [
+          -0.003,
+          0.015
+        ],
+        "candidate_only_correct": 14,
+        "both_same": 978,
+        "opponent_only_correct": 8,
+        "samples": 1000,
+        "seed": 42,
+        "replicates": 10000
+      }
+    }
+  },
+  "limitations": [
+    "single training seed; no stability claim",
+    "target extraction is a narrow controlled verifier task, not general reasoning",
+    "equal optimizer updates do not imply equal FLOPs or wall-clock compute",
+    "test was opened once after all formal candidates completed"
+  ]
+}

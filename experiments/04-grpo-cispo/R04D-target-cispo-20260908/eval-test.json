@@ -1,0 +1,108 @@
+{
+  "status": "completed",
+  "candidate": "R04D",
+  "split": "test",
+  "samples": 1000,
+  "protocol": {
+    "reward": "strict entire-completion integer exact match",
+    "sample_k": 8,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "max_new_tokens": 1,
+    "seed": 42,
+    "precision": "float32 parameters with BF16 autocast"
+  },
+  "pass_at_1": 0.867,
+  "valid_at_1": 1.0,
+  "sample_accuracy": 0.691125,
+  "sample_valid": 0.989375,
+  "sample_all_zero_rate": 0.043,
+  "sample_all_one_rate": 0.242,
+  "sample_nondegenerate_rate": 0.715,
+  "pass_at_k": 0.957,
+  "mean_greedy_tokens": 1,
+  "greedy_value_distribution": {
+    "9": 122,
+    "6": 98,
+    "4": 112,
+    "8": 89,
+    "2": 117,
+    "7": 106,
+    "0": 98,
+    "3": 101,
+    "1": 53,
+    "5": 104
+  },
+  "by_operation": {
+    "target_extract": {
+      "samples": 1000,
+      "pass_at_1": 0.867
+    }
+  },
+  "by_template": {
+    "0": {
+      "samples": 250,
+      "pass_at_1": 0.868
+    },
+    "1": {
+      "samples": 250,
+      "pass_at_1": 0.924
+    },
+    "2": {
+      "samples": 250,
+      "pass_at_1": 0.892
+    },
+    "3": {
+      "samples": 250,
+      "pass_at_1": 0.784
+    }
+  },
+  "by_answer": {
+    "0": {
+      "samples": 100,
+      "pass_at_1": 0.87
+    },
+    "1": {
+      "samples": 100,
+      "pass_at_1": 0.51
+    },
+    "2": {
+      "samples": 100,
+      "pass_at_1": 1.0
+    },
+    "3": {
+      "samples": 100,
+      "pass_at_1": 0.97
+    },
+    "4": {
+      "samples": 100,
+      "pass_at_1": 1.0
+    },
+    "5": {
+      "samples": 100,
+      "pass_at_1": 0.99
+    },
+    "6": {
+      "samples": 100,
+      "pass_at_1": 0.85
+    },
+    "7": {
+      "samples": 100,
+      "pass_at_1": 0.89
+    },
+    "8": {
+      "samples": 100,
+      "pass_at_1": 0.74
+    },
+    "9": {
+      "samples": 100,
+      "pass_at_1": 0.85
+    }
+  },
+  "data_sha256": "b2394c1103d55a5e7a2faf8bddbc61e6291036061de5d9250d3170cef52a5a7a",
+  "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+  "limitations": [
+    "empirical pass@k is fixed sampled generation, not an unbiased estimator",
+    "exact-integer metrics cover only the configured synthetic task"
+  ]
+}
