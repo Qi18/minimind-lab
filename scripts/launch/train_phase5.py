@@ -94,7 +94,7 @@ def sample_rollouts(model, tokenizer, prompts, num_generations, max_new_tokens, 
     }
 
 
-def sft_batch(tokenizer, rows, device):
+def sft_batch(tokenizer, rows, device, mask_eos=False):
     input_ids, labels = [], []
     for row in rows:
         prompt = tokenizer.apply_chat_template(
@@ -107,8 +107,13 @@ def sft_batch(tokenizer, rows, device):
         full_ids = tokenizer(prompt + row["answer"] + tokenizer.eos_token, add_special_tokens=False).input_ids
         if full_ids[:len(prompt_ids)] != prompt_ids:
             raise RuntimeError("assistant answer changed prompt tokenization boundary")
+        completion_labels = full_ids[len(prompt_ids):]
+        if mask_eos:
+            if not completion_labels or completion_labels[-1] != tokenizer.eos_token_id:
+                raise RuntimeError("completion does not end with eos token")
+            completion_labels = completion_labels[:-1] + [-100]
         input_ids.append(full_ids)
-        labels.append([-100] * len(prompt_ids) + full_ids[len(prompt_ids):])
+        labels.append([-100] * len(prompt_ids) + completion_labels)
     padded = tokenizer.pad({"input_ids": input_ids}, padding=True, return_tensors="pt")
     max_len = padded.input_ids.size(1)
     padded_labels = [label + [-100] * (max_len - len(label)) for label in labels]
@@ -173,6 +178,11 @@ def main():
     parser.add_argument("--beta", type=float, default=0.02)
     parser.add_argument("--entropy-coef", type=float, default=0.0)
     parser.add_argument("--stratify-by-answer", action="store_true")
+    parser.add_argument(
+        "--sft-mask-eos",
+        action="store_true",
+        help="Exclude the final EOS token from SFT loss; useful for exact one-token tasks.",
+    )
     parser.add_argument("--epsilon", type=float, default=0.2)
     parser.add_argument("--epsilon-high", type=float, default=2.0)
     parser.add_argument("--seed", type=int, default=42)
@@ -229,7 +239,7 @@ def main():
         last = {}
         if args.method == "sft":
             model.train()
-            ids, attn, labels = sft_batch(tokenizer, batch, model.device)
+            ids, attn, labels = sft_batch(tokenizer, batch, model.device, args.sft_mask_eos)
             for inner in range(args.inner_updates):
                 optimizer.zero_grad(set_to_none=True)
                 with torch.autocast("cuda", dtype=torch.bfloat16):
