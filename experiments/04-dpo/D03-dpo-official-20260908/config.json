@@ -20,5 +20,6 @@
   "swanlab_project": "MiniMind-Lab",
   "checkpoint_selection": "final float32 state recovered from resume.pt; step400 had marginally lower validation DPO loss but only FP16 best serialization survived",
   "evaluation_swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/csvnmhkj",
-  "checkpoint_serialization_incident": true
+  "checkpoint_serialization_incident": true,
+  "implementation_commit": "235de0fe0877896043caec4f326792e48948a442"
 }

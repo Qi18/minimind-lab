@@ -520,5 +520,6 @@
     "one training seed",
     "D02 checkpoint-selection metric was corrected after training because DPO loss is not its training objective",
     "judge-based wins are not human evaluation"
-  ]
+  ],
+  "implementation_commit": "235de0fe0877896043caec4f326792e48948a442"
 }

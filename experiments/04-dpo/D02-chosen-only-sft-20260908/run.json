@@ -26,5 +26,6 @@
   },
   "phase_decision": "D03 passes the held-out preference objective but fails the pre-registered blind-quality gate against D02; retain S10 as the release checkpoint.",
   "training_swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/51vdt97x",
-  "evaluation_swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/csvnmhkj"
+  "evaluation_swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/csvnmhkj",
+  "implementation_commit": "235de0fe0877896043caec4f326792e48948a442"
 }

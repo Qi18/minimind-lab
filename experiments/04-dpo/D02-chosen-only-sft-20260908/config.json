@@ -20,5 +20,6 @@
   "swanlab_project": "MiniMind-Lab",
   "checkpoint_selection": "fixed one-epoch last checkpoint; corrected after training because DPO validation loss is not the chosen-only objective",
   "evaluation_swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/csvnmhkj",
-  "selection_protocol_deviation": true
+  "selection_protocol_deviation": true,
+  "implementation_commit": "235de0fe0877896043caec4f326792e48948a442"
 }

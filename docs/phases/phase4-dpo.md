@@ -85,3 +85,5 @@ D03 只有 2/200 条比 D01 更长、16/200 条比 D02 更长，盲评结果不�
 训练 run：D01 <https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/os17qekn>；D02 <https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/51vdt97x>；D03 <https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3w1au7dk>；统一评测 <https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/csvnmhkj>。
 
 机器可读证据位于 experiments/04-dpo/comparison.json、preference-comparison.json、blind-judge-summary.json 和各实验 eval.json；完整逐样本结果保留在 CPFS /data/artifacts/minimind-lab/。
+
+实现与收口证据 commit：235de0fe0877896043caec4f326792e48948a442。
