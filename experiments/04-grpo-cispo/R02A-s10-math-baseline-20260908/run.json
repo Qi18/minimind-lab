@@ -1,7 +1,19 @@
 {
-  "status": "planned",
+  "status": "completed",
   "experiment_id": "R02A-s10-math-baseline-20260908",
   "method": "baseline",
   "artifact_dir": "/data/artifacts/minimind-lab/R02A-s10-math-baseline-20260908",
-  "source_head_before_changes": "8fded4b2"
+  "source_head_before_changes": "8fded4b2",
+  "training_state": "n/a",
+  "validation_state": "completed",
+  "test_state": "completed-once-after-all-training",
+  "selected_checkpoint": {
+    "path": "/data/artifacts/minimind-lab/D01-s10-preference-baseline-20260908/exported-fp32/model.safetensors",
+    "sha256": "851ad62d58986bc72b6d8b0e17ebd06e6635f8f5c7161aff8e50ab1104569bce",
+    "bytes": 255658640,
+    "serialization": "float32"
+  },
+  "swanlab_url": "n/a-no-training",
+  "phase_decision": "Neither GRPO nor CISPO passes the pre-registered verifier-task gates. Both collapse to answer-position policies; retain S10 as the release checkpoint.",
+  "evaluation_swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3sfq26tj"
 }

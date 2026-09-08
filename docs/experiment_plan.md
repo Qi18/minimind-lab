@@ -344,16 +344,22 @@ L00/S10、L01 Full FT、L02 LoRA r16 的训练与独立评测完成，阶段为 
 
 | 实验 | 方法 |
 |---|---|
-| R01A | S★ 原始基线 |
-| R01B | 等预算 SFT continuation |
-| R01C | GRPO |
-| R01D | CISPO |
+| R02A | S★ 原始基线 |
+| R02B | 等 prompt batch / update 数的 SFT continuation |
+| R02C | GRPO |
+| R02D | CISPO |
 
 使用 exact match 或程序 verifier 的无污染数学/代码任务；固定初始化、数据、seed、rollout 数、reward 和生成参数，GRPO/CISPO 只改变 loss。报告 held-out pass@1/pass@k、reward、KL、entropy、completion length、group reward std、degenerate group rate 和 reward-hacking 抽查。reward 上升但 held-out 正确率不升，实验失败。
 
 ### 10.1 Phase5 启动（2026-09-08）
 
-首轮 v1 因 template/answer 联合混杂在 validation 被判无效，test 未打开。修复后的 verifiable-math-v2 冻结为 train 1,000 / validation 200 / test 400，程序 verifier 与跨 split 审计通过。R01A/B/C/D 从 S10 独立分叉；正式 test 在三组训练完成前保持封闭。固定超参数、可学习性探针、SFT 与 RL 的预算边界和晋级门见 [Phase5报告](phases/phase5-verifiable-rl.md)。
+首轮 R01/v1 因 template/answer 联合混杂在 validation 被判无效，test 未打开。修复后的 verifiable-math-v2 冻结为 train 1,000 / validation 200 / test 400，程序 verifier 与跨 split 审计通过。正式 R02A/B/C/D 从 S10 独立分叉；正式 test 在三组训练完成前保持封闭。固定超参数、可学习性探针、SFT 与 RL 的预算边界和晋级门见 [Phase5报告](phases/phase5-verifiable-rl.md)。
+
+### 10.2 Phase5 实际收口（2026-09-08）
+
+R02B/C/D 均完成 250 outer steps、500 optimizer updates。R02C GRPO 与 R02D CISPO 的 test pass@1 都是 25.0%，但 R02C 400/400 恒答 A，R02D 的选择分布为 B 300、A 100；对应 pass@4 仅 25.0% / 25.25%，较 S10 的 41.0% 分别下降 16.0 / 15.75pp。R02C 相对 S10 的 pass@1 差值为 +1.75pp（paired bootstrap 95% CI [+0.25,+3.50]），完全由答案位置策略造成；R02D 同为 +1.75pp，但区间 [-4.25,+8.00] 跨 0。
+
+两组的七项、IFEval 与固定 Chat/Tool 回归门基本守住，但均未通过“无答案位置塌缩”的主门；R02B SFT control 还出现 IFEval 16.82%→7.39%、Chat 8/10→0/10、Tool E2E 7/8→1/8 的灾难性遗忘。阶段状态 `completed-not-promoted`，保留 S10。单 seed 与窄域四选一算术只允许得出“当前 verifier-RL 配置失败并暴露稀疏 reward/退化 group 问题”，不能比较 GRPO/CISPO 的一般优劣。
 
 ## 11. Phase 6：Agent SFT 与 Agentic RL
 

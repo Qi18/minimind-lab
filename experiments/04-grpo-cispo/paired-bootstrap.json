@@ -1,0 +1,179 @@
+{
+  "protocol": {
+    "samples": 400,
+    "seed": 42,
+    "replicates": 10000,
+    "pairing": "task_id",
+    "primary_metric": "greedy_correct"
+  },
+  "comparisons": {
+    "R02B_vs_R02A": {
+      "metric": "greedy_correct",
+      "mean_difference": -0.1775,
+      "bootstrap_95_ci": [
+        -0.2275,
+        -0.1275
+      ],
+      "candidate_only_correct": 22,
+      "both_same": 285,
+      "opponent_only_correct": 93,
+      "samples": 400,
+      "seed": 42,
+      "replicates": 10000,
+      "pass_at_4": {
+        "metric": "pass_at_k",
+        "mean_difference": 0.0025,
+        "bootstrap_95_ci": [
+          -0.065,
+          0.07
+        ],
+        "candidate_only_correct": 95,
+        "both_same": 211,
+        "opponent_only_correct": 94,
+        "samples": 400,
+        "seed": 42,
+        "replicates": 10000
+      }
+    },
+    "R02C_vs_R02A": {
+      "metric": "greedy_correct",
+      "mean_difference": 0.0175,
+      "bootstrap_95_ci": [
+        0.0025,
+        0.035
+      ],
+      "candidate_only_correct": 9,
+      "both_same": 389,
+      "opponent_only_correct": 2,
+      "samples": 400,
+      "seed": 42,
+      "replicates": 10000,
+      "pass_at_4": {
+        "metric": "pass_at_k",
+        "mean_difference": -0.16,
+        "bootstrap_95_ci": [
+          -0.1975,
+          -0.1225
+        ],
+        "candidate_only_correct": 2,
+        "both_same": 332,
+        "opponent_only_correct": 66,
+        "samples": 400,
+        "seed": 42,
+        "replicates": 10000
+      }
+    },
+    "R02D_vs_R02A": {
+      "metric": "greedy_correct",
+      "mean_difference": 0.0175,
+      "bootstrap_95_ci": [
+        -0.0425,
+        0.08
+      ],
+      "candidate_only_correct": 79,
+      "both_same": 249,
+      "opponent_only_correct": 72,
+      "samples": 400,
+      "seed": 42,
+      "replicates": 10000,
+      "pass_at_4": {
+        "metric": "pass_at_k",
+        "mean_difference": -0.1575,
+        "bootstrap_95_ci": [
+          -0.22,
+          -0.0925
+        ],
+        "candidate_only_correct": 57,
+        "both_same": 223,
+        "opponent_only_correct": 120,
+        "samples": 400,
+        "seed": 42,
+        "replicates": 10000
+      }
+    },
+    "R02C_vs_R02B": {
+      "metric": "greedy_correct",
+      "mean_difference": 0.195,
+      "bootstrap_95_ci": [
+        0.1425,
+        0.245
+      ],
+      "candidate_only_correct": 100,
+      "both_same": 278,
+      "opponent_only_correct": 22,
+      "samples": 400,
+      "seed": 42,
+      "replicates": 10000,
+      "pass_at_4": {
+        "metric": "pass_at_k",
+        "mean_difference": -0.1625,
+        "bootstrap_95_ci": [
+          -0.235,
+          -0.0875
+        ],
+        "candidate_only_correct": 84,
+        "both_same": 167,
+        "opponent_only_correct": 149,
+        "samples": 400,
+        "seed": 42,
+        "replicates": 10000
+      }
+    },
+    "R02D_vs_R02B": {
+      "metric": "greedy_correct",
+      "mean_difference": 0.195,
+      "bootstrap_95_ci": [
+        0.145,
+        0.245
+      ],
+      "candidate_only_correct": 100,
+      "both_same": 278,
+      "opponent_only_correct": 22,
+      "samples": 400,
+      "seed": 42,
+      "replicates": 10000,
+      "pass_at_4": {
+        "metric": "pass_at_k",
+        "mean_difference": -0.16,
+        "bootstrap_95_ci": [
+          -0.225,
+          -0.095
+        ],
+        "candidate_only_correct": 63,
+        "both_same": 210,
+        "opponent_only_correct": 127,
+        "samples": 400,
+        "seed": 42,
+        "replicates": 10000
+      }
+    },
+    "R02D_vs_R02C": {
+      "metric": "greedy_correct",
+      "mean_difference": 0.0,
+      "bootstrap_95_ci": [
+        -0.06,
+        0.06
+      ],
+      "candidate_only_correct": 75,
+      "both_same": 250,
+      "opponent_only_correct": 75,
+      "samples": 400,
+      "seed": 42,
+      "replicates": 10000,
+      "pass_at_4": {
+        "metric": "pass_at_k",
+        "mean_difference": 0.0025,
+        "bootstrap_95_ci": [
+          -0.0575,
+          0.0625
+        ],
+        "candidate_only_correct": 75,
+        "both_same": 251,
+        "opponent_only_correct": 74,
+        "samples": 400,
+        "seed": 42,
+        "replicates": 10000
+      }
+    }
+  }
+}

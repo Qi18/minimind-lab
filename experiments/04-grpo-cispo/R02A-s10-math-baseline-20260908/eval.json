@@ -1,0 +1,249 @@
+{
+  "experiment_id": "R02A-s10-math-baseline-20260908",
+  "method": "baseline",
+  "validation": {
+    "status": "completed",
+    "candidate": "R02A",
+    "split": "validation",
+    "samples": 200,
+    "protocol": {
+      "correctness": "one unambiguous leading/correct-answer option label equals programmatic answer",
+      "strict_format": "entire normalized completion is one A/B/C/D label",
+      "greedy_pass_at_1": true,
+      "sample_k": 4,
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "max_new_tokens": 8,
+      "seed": 42,
+      "precision": "float32 parameters with BF16 autocast"
+    },
+    "pass_at_1": 0.24,
+    "choice_valid_at_1": 0.955,
+    "strict_format_at_1": 0.0,
+    "sample_accuracy": 0.205,
+    "sample_choice_valid": 0.81875,
+    "sample_strict_format": 0.00875,
+    "pass_at_k": 0.355,
+    "mean_greedy_tokens": 5.6,
+    "greedy_choice_distribution": {
+      "A": 185,
+      "INVALID": 9,
+      "C": 6
+    },
+    "by_operation": {
+      "add": {
+        "samples": 80,
+        "pass_at_1": 0.25
+      },
+      "mul": {
+        "samples": 40,
+        "pass_at_1": 0.25
+      },
+      "sub": {
+        "samples": 80,
+        "pass_at_1": 0.225
+      }
+    },
+    "by_template": {
+      "0": {
+        "samples": 52,
+        "pass_at_1": 0.23076923076923078
+      },
+      "1": {
+        "samples": 48,
+        "pass_at_1": 0.25
+      },
+      "2": {
+        "samples": 48,
+        "pass_at_1": 0.22916666666666666
+      },
+      "3": {
+        "samples": 52,
+        "pass_at_1": 0.25
+      }
+    },
+    "by_answer_position": {
+      "A": {
+        "samples": 50,
+        "pass_at_1": 0.94
+      },
+      "B": {
+        "samples": 50,
+        "pass_at_1": 0.0
+      },
+      "C": {
+        "samples": 50,
+        "pass_at_1": 0.02
+      },
+      "D": {
+        "samples": 50,
+        "pass_at_1": 0.0
+      }
+    },
+    "data_sha256": "e60ae6b32d90b4176fd3f256c28c28f5f75a8b3d3e50d46f524790158c7ba3ec",
+    "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+    "limitations": [
+      "pass@k is empirical any-correct over fixed sampled generations, not an unbiased estimator",
+      "multiple-choice arithmetic does not measure free-form GSM8K reasoning"
+    ]
+  },
+  "test": {
+    "status": "completed",
+    "candidate": "R02A",
+    "split": "test",
+    "samples": 400,
+    "protocol": {
+      "correctness": "one unambiguous leading/correct-answer option label equals programmatic answer",
+      "strict_format": "entire normalized completion is one A/B/C/D label",
+      "greedy_pass_at_1": true,
+      "sample_k": 4,
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "max_new_tokens": 8,
+      "seed": 42,
+      "precision": "float32 parameters with BF16 autocast"
+    },
+    "pass_at_1": 0.2325,
+    "choice_valid_at_1": 0.9775,
+    "strict_format_at_1": 0.0,
+    "sample_accuracy": 0.209375,
+    "sample_choice_valid": 0.78375,
+    "sample_strict_format": 0.003125,
+    "pass_at_k": 0.41,
+    "mean_greedy_tokens": 5.575,
+    "greedy_choice_distribution": {
+      "A": 373,
+      "C": 18,
+      "INVALID": 9
+    },
+    "by_operation": {
+      "add": {
+        "samples": 170,
+        "pass_at_1": 0.24705882352941178
+      },
+      "mul": {
+        "samples": 60,
+        "pass_at_1": 0.23333333333333334
+      },
+      "sub": {
+        "samples": 170,
+        "pass_at_1": 0.21764705882352942
+      }
+    },
+    "by_template": {
+      "0": {
+        "samples": 100,
+        "pass_at_1": 0.2
+      },
+      "1": {
+        "samples": 104,
+        "pass_at_1": 0.25
+      },
+      "2": {
+        "samples": 100,
+        "pass_at_1": 0.23
+      },
+      "3": {
+        "samples": 96,
+        "pass_at_1": 0.25
+      }
+    },
+    "by_answer_position": {
+      "A": {
+        "samples": 100,
+        "pass_at_1": 0.91
+      },
+      "B": {
+        "samples": 100,
+        "pass_at_1": 0.0
+      },
+      "C": {
+        "samples": 100,
+        "pass_at_1": 0.02
+      },
+      "D": {
+        "samples": 100,
+        "pass_at_1": 0.0
+      }
+    },
+    "data_sha256": "5e67fa902c4c3c7fe165e4b287ebc1511c52a33545c5c184296e0e682eb997c3",
+    "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+    "limitations": [
+      "pass@k is empirical any-correct over fixed sampled generations, not an unbiased estimator",
+      "multiple-choice arithmetic does not measure free-form GSM8K reasoning"
+    ]
+  },
+  "choice_diagnostics": {
+    "distribution": {
+      "A": 373,
+      "C": 18,
+      "INVALID": 9
+    },
+    "max_position_share_all_samples": 0.9325,
+    "max_position_share_among_valid": 0.9539641943734015,
+    "unique_valid_choices": 2,
+    "collapsed": true
+  },
+  "seven": {
+    "ceval-valid": 0.2325408618127786,
+    "cmmlu": 0.25254705577620445,
+    "arc_easy": 0.343013468013468,
+    "piqa": 0.5625680087051143,
+    "openbookqa": 0.28,
+    "hellaswag": 0.28211511651065524,
+    "social_iqa": 0.35823950870010235,
+    "macro": 0.33014628850261757,
+    "artifact_sha256": "b7e2af9ff1f5058fb4e2484018275d1e4670e7b78b4e9a0a940c615c6b1e0249"
+  },
+  "ifeval": {
+    "prompt_strict": 0.16820702402957485,
+    "instruction_strict": 0.2973621103117506,
+    "prompt_loose": 0.1922365988909427,
+    "instruction_loose": 0.3261390887290168,
+    "artifact_sha256": "db06a3583b22a525e5d85ed0e6551da7bec231b75bed774b5a3ccccb7605900e"
+  },
+  "behavior": {
+    "status": "completed",
+    "seed": 42,
+    "decoding": {
+      "do_sample": false,
+      "max_new_tokens": 192,
+      "open_thinking": false
+    },
+    "chat": {
+      "cases": 10,
+      "success_count": 8,
+      "success_rate": 0.8,
+      "format_cases": 6,
+      "format_success_count": 5,
+      "format_success_rate": 0.8333333333333334,
+      "refusal_anomaly_count": 0,
+      "repetition_anomaly_count": 1
+    },
+    "tool": {
+      "cases": 8,
+      "tool_selection_accuracy": 0.875,
+      "argument_validity_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "final_answer_accuracy": 0.875,
+      "end_to_end_success_rate": 0.875,
+      "unfinished_rate": 0.0,
+      "invalid_tool_call_tag_count": 0
+    },
+    "samples_path": "eval/samples.jsonl",
+    "artifact_sha256": "342e97a685e5c922d5c1089ad735b2d04dfe271ab54812100d87281901483d8e"
+  },
+  "training": {
+    "method": "baseline",
+    "outer_steps": 0,
+    "optimizer_updates": 0,
+    "wall_seconds": 0.0
+  },
+  "checkpoint": {
+    "path": "/data/artifacts/minimind-lab/D01-s10-preference-baseline-20260908/exported-fp32/model.safetensors",
+    "sha256": "851ad62d58986bc72b6d8b0e17ebd06e6635f8f5c7161aff8e50ab1104569bce",
+    "bytes": 255658640,
+    "serialization": "float32"
+  },
+  "swanlab_train_url": "n/a-no-training"
+}

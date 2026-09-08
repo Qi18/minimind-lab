@@ -60,7 +60,7 @@ DPO、GRPO/CISPO 和 Agentic RL 默认从同一个 Full SFT 基线分支，避�
 | Full FT（L01） | S10 | CodeAlpaca 19,015行 / 4.820M实际targets | 94.65s / 0.15775 GPU-h | MBPP 0/500；val NLL 0.7577 | 七项32.48%；Chat7/10；格式3/6 | [train](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/pz1x0ux9) | CPFS；不替换S10 |
 | LoRA r16（L02） | S10 | 同L01 | 63.46s / 0.10576 GPU-h；峰值4,464MiB | MBPP 0/500；adapter 0.393M参数 | 七项32.67%；Chat8/10；格式5/6 | [train](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/s0l5ishg) | adapter约779KiB；不替换S10 |
 | DPO（D03） | S10 | official-dpo-v1 14,194 train pairs | 1×L20 / 376.21 s | preference credit 71.8%；对 D02 +16.6pp | 七项 33.032%；盲评 vs D02 score 0.480，未晋级 | [train](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3w1au7dk) / [eval](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/csvnmhkj) | FP32 恢复权重仅 L20 保留；S10 仍为 release |
-| GRPO / CISPO | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
+| GRPO / CISPO（R02C/R02D） | S10 | verifiable-math-v2：1,000 train / 200 val / 400 test | 1×L20；44.56 s / 43.64 s | pass@1 均 25.0%，但 GRPO 100% 答 A、CISPO 75% 答 B；不晋级 | 七项 33.06% / 33.13%；IFEval 15.34% / 17.19%；Chat 9/10 / 7/10 | [GRPO](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/6t4l6v1o) / [CISPO](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/k6ez8f9j) / [eval](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3sfq26tj) | FP32 仅 L20 保留；S10 仍为 release |
 | Agentic RL | Full SFT | 待填写 | 待填写 | Tool Success 待评测 | 待评测 | 待填写 | 待填写 |
 
 表格只填写已经完成并能追溯到实验目录的结果。
@@ -69,7 +69,9 @@ DPO、GRPO/CISPO 和 Agentic RL 默认从同一个 Full SFT 基线分支，避�
 
 [Phase 4 已收尾](docs/phases/phase4-dpo.md)：D03 的 held-out preference credit 达 71.8%，但 200 条盲评没有胜过 D02（score 0.480，95% CI [0.4525, 0.5075]），因此完成但不晋级，继续保留 S10。
 
-当前结论：P03 是 Pretrain 主线，S10 是后训练共同 release。Phase3 的 Full FT/LoRA 代码实验和 Phase4 的 DPO 均已完成但未证明目标能力提升，均不替换 S10。DPO 仅证明离线 preference objective 改善，不能外推为真实对话质量提升。
+[Phase 5 已收尾](docs/phases/phase5-verifiable-rl.md)：修复 v1 的模板—答案位置混杂后，R02 的 GRPO/CISPO 在平衡 test 上都只有 25% pass@1，并塌缩为答案位置策略；pass@4 还比 S10 低约 16pp，因此完成但不晋级。
+
+当前结论：P03 是 Pretrain 主线，S10 是后训练共同 release。Phase3–5 均已完成受控对照，但没有新的候选权重通过目标能力门，均不替换 S10；DPO 的离线 preference 改善和 RL 的训练 reward 都不能单独外推为真实能力提升。
 
 ## 克隆
 

@@ -1,6 +1,6 @@
 # Phase 5：GRPO/CISPO 可验证强化学习
 
-状态：进行中；启动日期 2026-09-08。Phase4 的 D03 未晋级，本阶段按总计划从 S10 独立分叉。
+状态：completed-not-promoted；启动并收口于 2026-09-08。Phase4 的 D03 未晋级，本阶段按总计划从 S10 独立分叉；没有候选替换 S10。
 
 ## 预注册问题
 
@@ -58,3 +58,31 @@ test 当时仍封闭。R01 run 和失败报告原样保留，不参与方法结�
 - 七项 macro 相对 S10 不退超过 1pp，IFEval prompt strict 不退超过 2pp；Chat 至少 7/10、格式至少 4/6、Tool E2E 至少 6/8、重复异常最多 2/10。
 
 若 reward 升而 held-out 不升，或只靠答案位置/格式捷径，按负结果收口并保留 S10。test 只在三组训练全部完成后一次性打开，不用来调 LR、beta、clip 或步数。
+
+## 正式结果与收口
+
+R02B/C/D 均正常完成 250 outer steps、500 optimizer updates，FP32 checkpoint 可加载；test 在三组训练结束后只打开一次，未按 test 调参。统一评测 run：[Phase5-Evaluation-R02A-R02B-R02C-R02D](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3sfq26tj)。
+
+| 候选 | 方法 | 训练 wall | train reward | test pass@1 | sampled accuracy | empirical pass@4 | greedy 选择分布 |
+|---|---|---:|---:|---:|---:|---:|---|
+| R02A | S10 不训练 | — | — | 23.25% | 20.94% | 41.00% | A 373 / C 18 / invalid 9 |
+| R02B | SFT control | 15.16 s | — | 5.50% | 14.75% | 41.25% | invalid 302 / D 71 / B 17 / C 10 |
+| R02C | GRPO | 44.56 s | 24.21% | 25.00% | 24.88% | 25.00% | A 400 |
+| R02D | CISPO | 43.64 s | 23.38% | 25.00% | 24.81% | 25.25% | B 300 / A 100 |
+
+成对 bootstrap 使用相同 400 个 task、seed 42、10,000 次重采样。R02C−R02A 的 greedy pass@1 为 +1.75pp，95% CI [+0.25,+3.50]，但其 400/400 恒答 A；R02D−R02A 也是 +1.75pp，CI [-4.25,+8.00]。两组的 pass@4 相对 R02A 分别下降 16.00pp（[-19.75,-12.25]）和 15.75pp（[-22.00,-9.25]）。因此数值上的 25% 是平衡四选一任务的答案位置策略，不是算术泛化。
+
+| 候选 | 七项 macro | IFEval prompt strict | Chat | 格式 | Tool E2E | 主门 |
+|---|---:|---:|---:|---:|---:|---|
+| R02A / S10 | 33.0146% | 16.8207% | 8/10 | 5/6 | 7/8 | baseline |
+| R02B / SFT | 32.9025% | 7.3937% | 0/10 | 0/6 | 1/8 | 失败：灾难性遗忘 |
+| R02C / GRPO | 33.0599% | 15.3420% | 9/10 | 6/6 | 7/8 | 失败：100% 答 A |
+| R02D / CISPO | 33.1256% | 17.1904% | 7/10 | 4/6 | 7/8 | 失败：75% 答 B，CI 跨 0 |
+
+R02C 日志点的 degenerate-group rate 均值为 93%，R02D 为 85%；大量 all-zero/all-one group 使 group-relative advantage 失去学习信号。CISPO 后半程 logged reward 高于前半程（32.09% vs 19.01%），但 held-out 仍只是位置塌缩，直接说明训练 reward 不能作为收口指标。
+
+### 判定
+
+R02C/R02D 都未通过预注册的“相对 A/B 显著提升且不发生答案位置塌缩”条件，不晋级；S10 继续作为 release。R01 的模板—答案位置联合混杂与 R02 的答案位置塌缩都作为 reward-hacking 失败证据保留。完整机器可读证据见 `experiments/04-grpo-cispo/comparison.json`、`paired-bootstrap.json`、各实验的 `eval.json` 与 `metrics.csv`。
+
+本实验只有一个训练 seed，任务是合成四选一加减乘，不是 GSM8K 或自由文本数学推理；不能据此声称 GRPO/CISPO 一般无效，也不能据此比较两种算法的一般优劣。下一轮若重开，应先提高非退化 group 比例、采用需要生成数值/过程的 verifier 任务，并增加 seed 43/44，而不是在本 test 上继续调参。

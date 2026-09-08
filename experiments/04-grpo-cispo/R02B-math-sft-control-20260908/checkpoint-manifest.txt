@@ -1,0 +1,4 @@
+selected_checkpoint=/data/artifacts/minimind-lab/R02B-math-sft-control-20260908/model-fp32/model.safetensors
+sha256=37ec69a7f1a35e043898b46f0acb9ac7528f9c1a124c46c827b63484767e684a
+bytes=275319536
+serialization=float32

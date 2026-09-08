@@ -152,3 +152,18 @@ D01（S10）、D02（chosen-only SFT）和 D03（DPO）使用同一冻结 offici
 这一收益没有转化为可证明的回答质量提升：200 条 Qwen3-8B 盲评中，D03 对 D01 为 18胜/170平/12负，score 0.515；对 D02 为 13胜/166平/21负，score 0.480，两组 95% CI 都包含 0.5。D03 与 D01 有 177/200 个输出完全相同。故 Phase4 状态为 completed-not-promoted，继续保留 S10；简历只能表述“建立 DPO 对照与发现离线目标/生成质量脱节”，不能表述“DPO 提升对话质量”。
 
 训练过程还发现原保存逻辑的 model.half() 会抹除微小 DPO 更新：D03 FP16 checkpoint 的 preference credit 从 71.8% 降到 53.6%。已修复为 float32 保存并从 resume state 恢复正式权重。详细数据、训练、盲评及限制见 [Phase4 报告](phases/phase4-dpo.md)。
+
+## Phase 5：可验证 GRPO/CISPO 收尾（2026-09-08）
+
+Phase5 从 S10 独立分叉，在 train-disjoint 的 verifiable-math-v2（1,000/200/400）上比较不训练基线、SFT continuation、GRPO 与 CISPO。首轮 R01/v1 因模板能确定性预测答案位置，在 validation 发现后整体作废且没有打开 test；R02/v2 增加 16 个 answer-position×template 联合单元审计后重新训练。
+
+| 指标 | R02A S10 | R02B SFT | R02C GRPO | R02D CISPO |
+|---|---:|---:|---:|---:|
+| test pass@1 | 23.25% | 5.50% | 25.00% | 25.00% |
+| sampled accuracy | 20.94% | 14.75% | 24.88% | 24.81% |
+| empirical pass@4 | 41.00% | 41.25% | 25.00% | 25.25% |
+| 七项 macro | 33.0146% | 32.9025% | 33.0599% | 33.1256% |
+| IFEval prompt strict | 16.8207% | 7.3937% | 15.3420% | 17.1904% |
+| Chat / Tool E2E | 8/10 / 7/8 | 0/10 / 1/8 | 9/10 / 7/8 | 7/10 / 7/8 |
+
+R02C 的 +1.75pp 区间虽高于 0，但 400 条全部答 A；R02D 75% 答 B，且对 R02A 的区间跨 0。两组 pass@4 都下降约 16pp，明确排除“算术能力提升”。SFT control 则证明对 1,000 条单字母监督做 500 次更新会造成灾难性遗忘。阶段按负结果 `completed-not-promoted` 收口，S10 继续作为 release；后续简历可写“建立程序 verifier、发现数据联合混杂和答案位置 reward hacking、用 held-out/分桶/bootstrap/通用回归否决伪提升”，不能写“GRPO/CISPO 提升数学能力”。

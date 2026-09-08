@@ -1,0 +1,1459 @@
+{
+  "status": "completed-not-promoted",
+  "decision": "Neither GRPO nor CISPO passes the pre-registered verifier-task gates. Both collapse to answer-position policies; retain S10 as the release checkpoint.",
+  "dataset": {
+    "name": "verifiable-math-v2",
+    "seed": 20260908,
+    "generator": "/data/projects/minimind-lab/scripts/data/rl/build_verifiable_math.py",
+    "task": "four-way exact-verifier arithmetic multiple choice",
+    "reward": "1 when one unambiguous leading/correct-answer option label matches the programmatic answer; otherwise 0; strict-letter format is tracked separately",
+    "split_policy": "task_key disjoint, stratified by operation, deterministic SHA-256 ordering",
+    "counts": {
+      "train": {
+        "mul": 200,
+        "sub": 400,
+        "add": 400
+      },
+      "validation": {
+        "add": 80,
+        "mul": 40,
+        "sub": 80
+      },
+      "test": {
+        "sub": 170,
+        "add": 170,
+        "mul": 60
+      }
+    },
+    "files": {
+      "train": {
+        "path": "/data/datasets/minimind-lab/phase5/verifiable-math-v2/train.jsonl",
+        "rows": 1000,
+        "bytes": 361275,
+        "sha256": "e06a13acf1ffa0f21caa3c6930fd344e0bb81618bf7fafe37dec068ed60607cb"
+      },
+      "validation": {
+        "path": "/data/datasets/minimind-lab/phase5/verifiable-math-v2/validation.jsonl",
+        "rows": 200,
+        "bytes": 73238,
+        "sha256": "e60ae6b32d90b4176fd3f256c28c28f5f75a8b3d3e50d46f524790158c7ba3ec"
+      },
+      "test": {
+        "path": "/data/datasets/minimind-lab/phase5/verifiable-math-v2/test.jsonl",
+        "rows": 400,
+        "bytes": 143920,
+        "sha256": "5e67fa902c4c3c7fe165e4b287ebc1511c52a33545c5c184296e0e682eb997c3"
+      }
+    },
+    "limitations": [
+      "synthetic narrow-domain arithmetic is not GSM8K reasoning",
+      "historical S10 training data cannot be proven semantically disjoint",
+      "multiple-choice accuracy may not transfer to free-form arithmetic"
+    ]
+  },
+  "data_audit": {
+    "status": "passed",
+    "dataset": "/data/datasets/minimind-lab/phase5/verifiable-math-v2",
+    "manifest_sha256": "c9f86f573038235cea0c7e994496d0b05cb72b4a5c6ae37241eef254be6cf508",
+    "profiles": {
+      "train": {
+        "rows": 1000,
+        "operation": {
+          "mul": 200,
+          "sub": 400,
+          "add": 400
+        },
+        "answer_position": {
+          "D": 250,
+          "B": 250,
+          "A": 250,
+          "C": 250
+        },
+        "template": {
+          "3": 252,
+          "1": 248,
+          "0": 252,
+          "2": 248
+        },
+        "answer_template_joint": {
+          "D:3": 63,
+          "B:1": 62,
+          "A:0": 63,
+          "D:1": 62,
+          "A:3": 63,
+          "D:0": 63,
+          "B:0": 63,
+          "C:2": 62,
+          "B:3": 63,
+          "C:1": 62,
+          "D:2": 62,
+          "B:2": 62,
+          "A:2": 62,
+          "C:0": 63,
+          "C:3": 63,
+          "A:1": 62
+        },
+        "unique_task_keys": 1000,
+        "unique_normalized_prompts": 1000,
+        "answer_value_min": 0,
+        "answer_value_max": 625
+      },
+      "validation": {
+        "rows": 200,
+        "operation": {
+          "add": 80,
+          "mul": 40,
+          "sub": 80
+        },
+        "answer_position": {
+          "A": 50,
+          "B": 50,
+          "D": 50,
+          "C": 50
+        },
+        "template": {
+          "0": 52,
+          "2": 48,
+          "1": 48,
+          "3": 52
+        },
+        "answer_template_joint": {
+          "A:0": 13,
+          "B:0": 13,
+          "D:0": 13,
+          "A:2": 12,
+          "C:1": 12,
+          "D:2": 12,
+          "D:3": 13,
+          "C:0": 13,
+          "B:2": 12,
+          "C:2": 12,
+          "C:3": 13,
+          "A:1": 12,
+          "B:1": 12,
+          "A:3": 13,
+          "B:3": 13,
+          "D:1": 12
+        },
+        "unique_task_keys": 200,
+        "unique_normalized_prompts": 200,
+        "answer_value_min": 0,
+        "answer_value_max": 575
+      },
+      "test": {
+        "rows": 400,
+        "operation": {
+          "sub": 170,
+          "add": 170,
+          "mul": 60
+        },
+        "answer_position": {
+          "D": 100,
+          "B": 100,
+          "A": 100,
+          "C": 100
+        },
+        "template": {
+          "0": 100,
+          "3": 96,
+          "2": 100,
+          "1": 104
+        },
+        "answer_template_joint": {
+          "D:0": 25,
+          "B:0": 25,
+          "B:3": 24,
+          "A:2": 25,
+          "B:2": 25,
+          "C:3": 24,
+          "A:0": 25,
+          "B:1": 26,
+          "D:3": 24,
+          "A:1": 26,
+          "D:2": 25,
+          "D:1": 26,
+          "C:2": 25,
+          "A:3": 24,
+          "C:0": 25,
+          "C:1": 26
+        },
+        "unique_task_keys": 400,
+        "unique_normalized_prompts": 400,
+        "answer_value_min": 0,
+        "answer_value_max": 600
+      }
+    },
+    "cross_split_overlap": {
+      "train_validation_task_key": 0,
+      "train_validation_prompt": 0,
+      "train_test_task_key": 0,
+      "train_test_prompt": 0,
+      "validation_test_task_key": 0,
+      "validation_test_prompt": 0
+    },
+    "checks": [
+      "manifest hashes and row counts",
+      "programmatic arithmetic and option uniqueness",
+      "answer label correctness",
+      "task-key and normalized-prompt split isolation",
+      "answer-position balance",
+      "answer-position by template joint balance and full support"
+    ],
+    "failures": [],
+    "boundary": "The audit proves internal Phase5 split isolation, not absence from all historical S10 pretraining/SFT corpora."
+  },
+  "candidates": {
+    "R02A": {
+      "experiment_id": "R02A-s10-math-baseline-20260908",
+      "method": "baseline",
+      "validation": {
+        "status": "completed",
+        "candidate": "R02A",
+        "split": "validation",
+        "samples": 200,
+        "protocol": {
+          "correctness": "one unambiguous leading/correct-answer option label equals programmatic answer",
+          "strict_format": "entire normalized completion is one A/B/C/D label",
+          "greedy_pass_at_1": true,
+          "sample_k": 4,
+          "temperature": 0.8,
+          "top_p": 0.95,
+          "max_new_tokens": 8,
+          "seed": 42,
+          "precision": "float32 parameters with BF16 autocast"
+        },
+        "pass_at_1": 0.24,
+        "choice_valid_at_1": 0.955,
+        "strict_format_at_1": 0.0,
+        "sample_accuracy": 0.205,
+        "sample_choice_valid": 0.81875,
+        "sample_strict_format": 0.00875,
+        "pass_at_k": 0.355,
+        "mean_greedy_tokens": 5.6,
+        "greedy_choice_distribution": {
+          "A": 185,
+          "INVALID": 9,
+          "C": 6
+        },
+        "by_operation": {
+          "add": {
+            "samples": 80,
+            "pass_at_1": 0.25
+          },
+          "mul": {
+            "samples": 40,
+            "pass_at_1": 0.25
+          },
+          "sub": {
+            "samples": 80,
+            "pass_at_1": 0.225
+          }
+        },
+        "by_template": {
+          "0": {
+            "samples": 52,
+            "pass_at_1": 0.23076923076923078
+          },
+          "1": {
+            "samples": 48,
+            "pass_at_1": 0.25
+          },
+          "2": {
+            "samples": 48,
+            "pass_at_1": 0.22916666666666666
+          },
+          "3": {
+            "samples": 52,
+            "pass_at_1": 0.25
+          }
+        },
+        "by_answer_position": {
+          "A": {
+            "samples": 50,
+            "pass_at_1": 0.94
+          },
+          "B": {
+            "samples": 50,
+            "pass_at_1": 0.0
+          },
+          "C": {
+            "samples": 50,
+            "pass_at_1": 0.02
+          },
+          "D": {
+            "samples": 50,
+            "pass_at_1": 0.0
+          }
+        },
+        "data_sha256": "e60ae6b32d90b4176fd3f256c28c28f5f75a8b3d3e50d46f524790158c7ba3ec",
+        "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+        "limitations": [
+          "pass@k is empirical any-correct over fixed sampled generations, not an unbiased estimator",
+          "multiple-choice arithmetic does not measure free-form GSM8K reasoning"
+        ]
+      },
+      "test": {
+        "status": "completed",
+        "candidate": "R02A",
+        "split": "test",
+        "samples": 400,
+        "protocol": {
+          "correctness": "one unambiguous leading/correct-answer option label equals programmatic answer",
+          "strict_format": "entire normalized completion is one A/B/C/D label",
+          "greedy_pass_at_1": true,
+          "sample_k": 4,
+          "temperature": 0.8,
+          "top_p": 0.95,
+          "max_new_tokens": 8,
+          "seed": 42,
+          "precision": "float32 parameters with BF16 autocast"
+        },
+        "pass_at_1": 0.2325,
+        "choice_valid_at_1": 0.9775,
+        "strict_format_at_1": 0.0,
+        "sample_accuracy": 0.209375,
+        "sample_choice_valid": 0.78375,
+        "sample_strict_format": 0.003125,
+        "pass_at_k": 0.41,
+        "mean_greedy_tokens": 5.575,
+        "greedy_choice_distribution": {
+          "A": 373,
+          "C": 18,
+          "INVALID": 9
+        },
+        "by_operation": {
+          "add": {
+            "samples": 170,
+            "pass_at_1": 0.24705882352941178
+          },
+          "mul": {
+            "samples": 60,
+            "pass_at_1": 0.23333333333333334
+          },
+          "sub": {
+            "samples": 170,
+            "pass_at_1": 0.21764705882352942
+          }
+        },
+        "by_template": {
+          "0": {
+            "samples": 100,
+            "pass_at_1": 0.2
+          },
+          "1": {
+            "samples": 104,
+            "pass_at_1": 0.25
+          },
+          "2": {
+            "samples": 100,
+            "pass_at_1": 0.23
+          },
+          "3": {
+            "samples": 96,
+            "pass_at_1": 0.25
+          }
+        },
+        "by_answer_position": {
+          "A": {
+            "samples": 100,
+            "pass_at_1": 0.91
+          },
+          "B": {
+            "samples": 100,
+            "pass_at_1": 0.0
+          },
+          "C": {
+            "samples": 100,
+            "pass_at_1": 0.02
+          },
+          "D": {
+            "samples": 100,
+            "pass_at_1": 0.0
+          }
+        },
+        "data_sha256": "5e67fa902c4c3c7fe165e4b287ebc1511c52a33545c5c184296e0e682eb997c3",
+        "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+        "limitations": [
+          "pass@k is empirical any-correct over fixed sampled generations, not an unbiased estimator",
+          "multiple-choice arithmetic does not measure free-form GSM8K reasoning"
+        ]
+      },
+      "choice_diagnostics": {
+        "distribution": {
+          "A": 373,
+          "C": 18,
+          "INVALID": 9
+        },
+        "max_position_share_all_samples": 0.9325,
+        "max_position_share_among_valid": 0.9539641943734015,
+        "unique_valid_choices": 2,
+        "collapsed": true
+      },
+      "seven": {
+        "ceval-valid": 0.2325408618127786,
+        "cmmlu": 0.25254705577620445,
+        "arc_easy": 0.343013468013468,
+        "piqa": 0.5625680087051143,
+        "openbookqa": 0.28,
+        "hellaswag": 0.28211511651065524,
+        "social_iqa": 0.35823950870010235,
+        "macro": 0.33014628850261757,
+        "artifact_sha256": "b7e2af9ff1f5058fb4e2484018275d1e4670e7b78b4e9a0a940c615c6b1e0249"
+      },
+      "ifeval": {
+        "prompt_strict": 0.16820702402957485,
+        "instruction_strict": 0.2973621103117506,
+        "prompt_loose": 0.1922365988909427,
+        "instruction_loose": 0.3261390887290168,
+        "artifact_sha256": "db06a3583b22a525e5d85ed0e6551da7bec231b75bed774b5a3ccccb7605900e"
+      },
+      "behavior": {
+        "status": "completed",
+        "seed": 42,
+        "decoding": {
+          "do_sample": false,
+          "max_new_tokens": 192,
+          "open_thinking": false
+        },
+        "chat": {
+          "cases": 10,
+          "success_count": 8,
+          "success_rate": 0.8,
+          "format_cases": 6,
+          "format_success_count": 5,
+          "format_success_rate": 0.8333333333333334,
+          "refusal_anomaly_count": 0,
+          "repetition_anomaly_count": 1
+        },
+        "tool": {
+          "cases": 8,
+          "tool_selection_accuracy": 0.875,
+          "argument_validity_rate": 0.875,
+          "execution_success_rate": 0.875,
+          "final_answer_accuracy": 0.875,
+          "end_to_end_success_rate": 0.875,
+          "unfinished_rate": 0.0,
+          "invalid_tool_call_tag_count": 0
+        },
+        "samples_path": "eval/samples.jsonl",
+        "artifact_sha256": "342e97a685e5c922d5c1089ad735b2d04dfe271ab54812100d87281901483d8e"
+      },
+      "training": {
+        "method": "baseline",
+        "outer_steps": 0,
+        "optimizer_updates": 0,
+        "wall_seconds": 0.0
+      },
+      "checkpoint": {
+        "path": "/data/artifacts/minimind-lab/D01-s10-preference-baseline-20260908/exported-fp32/model.safetensors",
+        "sha256": "851ad62d58986bc72b6d8b0e17ebd06e6635f8f5c7161aff8e50ab1104569bce",
+        "bytes": 255658640,
+        "serialization": "float32"
+      },
+      "swanlab_train_url": "n/a-no-training"
+    },
+    "R02B": {
+      "experiment_id": "R02B-math-sft-control-20260908",
+      "method": "sft",
+      "validation": {
+        "status": "completed",
+        "candidate": "R02B",
+        "split": "validation",
+        "samples": 200,
+        "protocol": {
+          "correctness": "one unambiguous leading/correct-answer option label equals programmatic answer",
+          "strict_format": "entire normalized completion is one A/B/C/D label",
+          "greedy_pass_at_1": true,
+          "sample_k": 4,
+          "temperature": 0.8,
+          "top_p": 0.95,
+          "max_new_tokens": 8,
+          "seed": 42,
+          "precision": "float32 parameters with BF16 autocast"
+        },
+        "pass_at_1": 0.055,
+        "choice_valid_at_1": 0.24,
+        "strict_format_at_1": 0.24,
+        "sample_accuracy": 0.15,
+        "sample_choice_valid": 0.55375,
+        "sample_strict_format": 0.55375,
+        "pass_at_k": 0.4,
+        "mean_greedy_tokens": 1.24,
+        "greedy_choice_distribution": {
+          "INVALID": 152,
+          "D": 36,
+          "B": 8,
+          "C": 4
+        },
+        "by_operation": {
+          "add": {
+            "samples": 80,
+            "pass_at_1": 0.05
+          },
+          "mul": {
+            "samples": 40,
+            "pass_at_1": 0.05
+          },
+          "sub": {
+            "samples": 80,
+            "pass_at_1": 0.0625
+          }
+        },
+        "by_template": {
+          "0": {
+            "samples": 52,
+            "pass_at_1": 0.0
+          },
+          "1": {
+            "samples": 48,
+            "pass_at_1": 0.0
+          },
+          "2": {
+            "samples": 48,
+            "pass_at_1": 0.22916666666666666
+          },
+          "3": {
+            "samples": 52,
+            "pass_at_1": 0.0
+          }
+        },
+        "by_answer_position": {
+          "A": {
+            "samples": 50,
+            "pass_at_1": 0.0
+          },
+          "B": {
+            "samples": 50,
+            "pass_at_1": 0.06
+          },
+          "C": {
+            "samples": 50,
+            "pass_at_1": 0.0
+          },
+          "D": {
+            "samples": 50,
+            "pass_at_1": 0.16
+          }
+        },
+        "data_sha256": "e60ae6b32d90b4176fd3f256c28c28f5f75a8b3d3e50d46f524790158c7ba3ec",
+        "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+        "limitations": [
+          "pass@k is empirical any-correct over fixed sampled generations, not an unbiased estimator",
+          "multiple-choice arithmetic does not measure free-form GSM8K reasoning"
+        ]
+      },
+      "test": {
+        "status": "completed",
+        "candidate": "R02B",
+        "split": "test",
+        "samples": 400,
+        "protocol": {
+          "correctness": "one unambiguous leading/correct-answer option label equals programmatic answer",
+          "strict_format": "entire normalized completion is one A/B/C/D label",
+          "greedy_pass_at_1": true,
+          "sample_k": 4,
+          "temperature": 0.8,
+          "top_p": 0.95,
+          "max_new_tokens": 8,
+          "seed": 42,
+          "precision": "float32 parameters with BF16 autocast"
+        },
+        "pass_at_1": 0.055,
+        "choice_valid_at_1": 0.245,
+        "strict_format_at_1": 0.245,
+        "sample_accuracy": 0.1475,
+        "sample_choice_valid": 0.56875,
+        "sample_strict_format": 0.56875,
+        "pass_at_k": 0.4125,
+        "mean_greedy_tokens": 1.245,
+        "greedy_choice_distribution": {
+          "INVALID": 302,
+          "D": 71,
+          "B": 17,
+          "C": 10
+        },
+        "by_operation": {
+          "add": {
+            "samples": 170,
+            "pass_at_1": 0.058823529411764705
+          },
+          "mul": {
+            "samples": 60,
+            "pass_at_1": 0.05
+          },
+          "sub": {
+            "samples": 170,
+            "pass_at_1": 0.052941176470588235
+          }
+        },
+        "by_template": {
+          "0": {
+            "samples": 100,
+            "pass_at_1": 0.0
+          },
+          "1": {
+            "samples": 104,
+            "pass_at_1": 0.0
+          },
+          "2": {
+            "samples": 100,
+            "pass_at_1": 0.22
+          },
+          "3": {
+            "samples": 96,
+            "pass_at_1": 0.0
+          }
+        },
+        "by_answer_position": {
+          "A": {
+            "samples": 100,
+            "pass_at_1": 0.0
+          },
+          "B": {
+            "samples": 100,
+            "pass_at_1": 0.04
+          },
+          "C": {
+            "samples": 100,
+            "pass_at_1": 0.0
+          },
+          "D": {
+            "samples": 100,
+            "pass_at_1": 0.18
+          }
+        },
+        "data_sha256": "5e67fa902c4c3c7fe165e4b287ebc1511c52a33545c5c184296e0e682eb997c3",
+        "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+        "limitations": [
+          "pass@k is empirical any-correct over fixed sampled generations, not an unbiased estimator",
+          "multiple-choice arithmetic does not measure free-form GSM8K reasoning"
+        ]
+      },
+      "choice_diagnostics": {
+        "distribution": {
+          "INVALID": 302,
+          "D": 71,
+          "B": 17,
+          "C": 10
+        },
+        "max_position_share_all_samples": 0.1775,
+        "max_position_share_among_valid": 0.7244897959183674,
+        "unique_valid_choices": 3,
+        "collapsed": false
+      },
+      "seven": {
+        "ceval-valid": 0.25928677563150077,
+        "cmmlu": 0.24589880849594198,
+        "arc_easy": 0.3148148148148148,
+        "piqa": 0.5495103373231773,
+        "openbookqa": 0.304,
+        "hellaswag": 0.2801234813782115,
+        "social_iqa": 0.34953940634595704,
+        "macro": 0.32902480342708623,
+        "artifact_sha256": "07bd29ce18b2b37966afc801bdfcff5c7c022cbbc9610af6e54d3a1c6d45bbd7"
+      },
+      "ifeval": {
+        "prompt_strict": 0.07393715341959335,
+        "instruction_strict": 0.14628297362110312,
+        "prompt_loose": 0.08502772643253234,
+        "instruction_loose": 0.15587529976019185,
+        "artifact_sha256": "11d035fed4a06a4fe59e711c00e016deaa1024416fa0cc1a84ee575c8dc635ca"
+      },
+      "behavior": {
+        "status": "completed",
+        "seed": 42,
+        "decoding": {
+          "do_sample": false,
+          "max_new_tokens": 192,
+          "open_thinking": false
+        },
+        "chat": {
+          "cases": 10,
+          "success_count": 0,
+          "success_rate": 0.0,
+          "format_cases": 6,
+          "format_success_count": 0,
+          "format_success_rate": 0.0,
+          "refusal_anomaly_count": 0,
+          "repetition_anomaly_count": 0
+        },
+        "tool": {
+          "cases": 8,
+          "tool_selection_accuracy": 0.125,
+          "argument_validity_rate": 0.125,
+          "execution_success_rate": 0.125,
+          "final_answer_accuracy": 0.125,
+          "end_to_end_success_rate": 0.125,
+          "unfinished_rate": 0.75,
+          "invalid_tool_call_tag_count": 0
+        },
+        "samples_path": "eval/samples.jsonl",
+        "artifact_sha256": "7b4323a71ecb5edb5b3bcf56b7c3ca839e281e759e71e9acb14101600dbe1b5d"
+      },
+      "training": {
+        "event": "completed",
+        "method": "sft",
+        "outer_steps": 250,
+        "optimizer_updates": 500,
+        "wall_seconds": 15.158144844986964,
+        "completion_tokens": 4000,
+        "correct_rollouts": 0,
+        "total_rollouts": 0,
+        "mean_training_reward": null,
+        "peak_memory_mib": 1245.10791015625,
+        "model_path": "/data/artifacts/minimind-lab/R02B-math-sft-control-20260908/model-fp32",
+        "logged_loss_first": 2.2453505992889404,
+        "logged_loss_last": 1.1698541641235352,
+        "logged_grad_norm_mean": 25.82170162200928
+      },
+      "checkpoint": {
+        "path": "/data/artifacts/minimind-lab/R02B-math-sft-control-20260908/model-fp32/model.safetensors",
+        "sha256": "37ec69a7f1a35e043898b46f0acb9ac7528f9c1a124c46c827b63484767e684a",
+        "bytes": 275319536,
+        "serialization": "float32"
+      },
+      "swanlab_train_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/wqhvn9wd"
+    },
+    "R02C": {
+      "experiment_id": "R02C-math-grpo-20260908",
+      "method": "grpo",
+      "validation": {
+        "status": "completed",
+        "candidate": "R02C",
+        "split": "validation",
+        "samples": 200,
+        "protocol": {
+          "correctness": "one unambiguous leading/correct-answer option label equals programmatic answer",
+          "strict_format": "entire normalized completion is one A/B/C/D label",
+          "greedy_pass_at_1": true,
+          "sample_k": 4,
+          "temperature": 0.8,
+          "top_p": 0.95,
+          "max_new_tokens": 8,
+          "seed": 42,
+          "precision": "float32 parameters with BF16 autocast"
+        },
+        "pass_at_1": 0.25,
+        "choice_valid_at_1": 1.0,
+        "strict_format_at_1": 0.0,
+        "sample_accuracy": 0.24875,
+        "sample_choice_valid": 0.9925,
+        "sample_strict_format": 0.0,
+        "pass_at_k": 0.25,
+        "mean_greedy_tokens": 5.515,
+        "greedy_choice_distribution": {
+          "A": 200
+        },
+        "by_operation": {
+          "add": {
+            "samples": 80,
+            "pass_at_1": 0.25
+          },
+          "mul": {
+            "samples": 40,
+            "pass_at_1": 0.25
+          },
+          "sub": {
+            "samples": 80,
+            "pass_at_1": 0.25
+          }
+        },
+        "by_template": {
+          "0": {
+            "samples": 52,
+            "pass_at_1": 0.25
+          },
+          "1": {
+            "samples": 48,
+            "pass_at_1": 0.25
+          },
+          "2": {
+            "samples": 48,
+            "pass_at_1": 0.25
+          },
+          "3": {
+            "samples": 52,
+            "pass_at_1": 0.25
+          }
+        },
+        "by_answer_position": {
+          "A": {
+            "samples": 50,
+            "pass_at_1": 1.0
+          },
+          "B": {
+            "samples": 50,
+            "pass_at_1": 0.0
+          },
+          "C": {
+            "samples": 50,
+            "pass_at_1": 0.0
+          },
+          "D": {
+            "samples": 50,
+            "pass_at_1": 0.0
+          }
+        },
+        "data_sha256": "e60ae6b32d90b4176fd3f256c28c28f5f75a8b3d3e50d46f524790158c7ba3ec",
+        "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+        "limitations": [
+          "pass@k is empirical any-correct over fixed sampled generations, not an unbiased estimator",
+          "multiple-choice arithmetic does not measure free-form GSM8K reasoning"
+        ]
+      },
+      "test": {
+        "status": "completed",
+        "candidate": "R02C",
+        "split": "test",
+        "samples": 400,
+        "protocol": {
+          "correctness": "one unambiguous leading/correct-answer option label equals programmatic answer",
+          "strict_format": "entire normalized completion is one A/B/C/D label",
+          "greedy_pass_at_1": true,
+          "sample_k": 4,
+          "temperature": 0.8,
+          "top_p": 0.95,
+          "max_new_tokens": 8,
+          "seed": 42,
+          "precision": "float32 parameters with BF16 autocast"
+        },
+        "pass_at_1": 0.25,
+        "choice_valid_at_1": 1.0,
+        "strict_format_at_1": 0.0,
+        "sample_accuracy": 0.24875,
+        "sample_choice_valid": 0.994375,
+        "sample_strict_format": 0.0,
+        "pass_at_k": 0.25,
+        "mean_greedy_tokens": 5.5675,
+        "greedy_choice_distribution": {
+          "A": 400
+        },
+        "by_operation": {
+          "add": {
+            "samples": 170,
+            "pass_at_1": 0.2529411764705882
+          },
+          "mul": {
+            "samples": 60,
+            "pass_at_1": 0.25
+          },
+          "sub": {
+            "samples": 170,
+            "pass_at_1": 0.24705882352941178
+          }
+        },
+        "by_template": {
+          "0": {
+            "samples": 100,
+            "pass_at_1": 0.25
+          },
+          "1": {
+            "samples": 104,
+            "pass_at_1": 0.25
+          },
+          "2": {
+            "samples": 100,
+            "pass_at_1": 0.25
+          },
+          "3": {
+            "samples": 96,
+            "pass_at_1": 0.25
+          }
+        },
+        "by_answer_position": {
+          "A": {
+            "samples": 100,
+            "pass_at_1": 1.0
+          },
+          "B": {
+            "samples": 100,
+            "pass_at_1": 0.0
+          },
+          "C": {
+            "samples": 100,
+            "pass_at_1": 0.0
+          },
+          "D": {
+            "samples": 100,
+            "pass_at_1": 0.0
+          }
+        },
+        "data_sha256": "5e67fa902c4c3c7fe165e4b287ebc1511c52a33545c5c184296e0e682eb997c3",
+        "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+        "limitations": [
+          "pass@k is empirical any-correct over fixed sampled generations, not an unbiased estimator",
+          "multiple-choice arithmetic does not measure free-form GSM8K reasoning"
+        ]
+      },
+      "choice_diagnostics": {
+        "distribution": {
+          "A": 400
+        },
+        "max_position_share_all_samples": 1.0,
+        "max_position_share_among_valid": 1.0,
+        "unique_valid_choices": 1,
+        "collapsed": true
+      },
+      "seven": {
+        "ceval-valid": 0.2303120356612184,
+        "cmmlu": 0.2526333966499741,
+        "arc_easy": 0.3493265993265993,
+        "piqa": 0.5609357997823722,
+        "openbookqa": 0.272,
+        "hellaswag": 0.2810197171878112,
+        "social_iqa": 0.3679631525076766,
+        "macro": 0.33059867158795025,
+        "artifact_sha256": "4bc7ed51f6b1f65577249cd2e1867652dd8a75e08466f7695a6dd1090c5913fb"
+      },
+      "ifeval": {
+        "prompt_strict": 0.1534195933456562,
+        "instruction_strict": 0.28776978417266186,
+        "prompt_loose": 0.17375231053604437,
+        "instruction_loose": 0.3069544364508393,
+        "artifact_sha256": "7e5f1b4e23338021fdaefb8ed24a38e5f5697ba0bcca0dcc0aadb6bac6c479cb"
+      },
+      "behavior": {
+        "status": "completed",
+        "seed": 42,
+        "decoding": {
+          "do_sample": false,
+          "max_new_tokens": 192,
+          "open_thinking": false
+        },
+        "chat": {
+          "cases": 10,
+          "success_count": 9,
+          "success_rate": 0.9,
+          "format_cases": 6,
+          "format_success_count": 6,
+          "format_success_rate": 1.0,
+          "refusal_anomaly_count": 0,
+          "repetition_anomaly_count": 1
+        },
+        "tool": {
+          "cases": 8,
+          "tool_selection_accuracy": 0.875,
+          "argument_validity_rate": 0.875,
+          "execution_success_rate": 0.875,
+          "final_answer_accuracy": 0.875,
+          "end_to_end_success_rate": 0.875,
+          "unfinished_rate": 0.0,
+          "invalid_tool_call_tag_count": 0
+        },
+        "samples_path": "eval/samples.jsonl",
+        "artifact_sha256": "cbc3e3b9d98ace8b45eeb2adc5fb009a2497fb618063ad760e7ab46860eb449b"
+      },
+      "training": {
+        "event": "completed",
+        "method": "grpo",
+        "outer_steps": 250,
+        "optimizer_updates": 500,
+        "wall_seconds": 44.556031370011624,
+        "completion_tokens": 85646,
+        "correct_rollouts": 3874,
+        "total_rollouts": 16000,
+        "mean_training_reward": 0.242125,
+        "peak_memory_mib": 3325.80224609375,
+        "model_path": "/data/artifacts/minimind-lab/R02C-math-grpo-20260908/model-fp32",
+        "logged_reward_mean": 0.2,
+        "logged_degenerate_group_rate_mean": 0.93,
+        "logged_all_zero_group_rate_mean": 0.76,
+        "logged_all_one_group_rate_mean": 0.17,
+        "logged_entropy_mean": 0.5650471472740173,
+        "logged_approx_kl_mean": 0.07549365386366844,
+        "logged_clip_fraction_mean": 0.0020972242951393127,
+        "logged_mean_completion_length_mean": 5.238125,
+        "logged_rollout_seconds_mean": 0.06691812811652198,
+        "logged_reward_first_half": 0.18489583333333334,
+        "logged_reward_second_half": 0.21394230769230768
+      },
+      "checkpoint": {
+        "path": "/data/artifacts/minimind-lab/R02C-math-grpo-20260908/model-fp32/model.safetensors",
+        "sha256": "9bf2c4634cc9c194d7a5afa2f7abfa7eccef6bc173aa0291dc6378894edaa1c1",
+        "bytes": 275319536,
+        "serialization": "float32"
+      },
+      "swanlab_train_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/6t4l6v1o",
+      "gates": {
+        "pass1_ci_low_above_r02a": true,
+        "pass1_ci_low_above_r02b": true,
+        "no_answer_position_collapse": false,
+        "seven_macro_regression_within_1pp": true,
+        "ifeval_prompt_strict_regression_within_2pp": true,
+        "chat_at_least_7_of_10": true,
+        "format_at_least_4_of_6": true,
+        "tool_e2e_at_least_6_of_8": true,
+        "repetition_anomalies_at_most_2": true
+      },
+      "all_gates_pass": false
+    },
+    "R02D": {
+      "experiment_id": "R02D-math-cispo-20260908",
+      "method": "cispo",
+      "validation": {
+        "status": "completed",
+        "candidate": "R02D",
+        "split": "validation",
+        "samples": 200,
+        "protocol": {
+          "correctness": "one unambiguous leading/correct-answer option label equals programmatic answer",
+          "strict_format": "entire normalized completion is one A/B/C/D label",
+          "greedy_pass_at_1": true,
+          "sample_k": 4,
+          "temperature": 0.8,
+          "top_p": 0.95,
+          "max_new_tokens": 8,
+          "seed": 42,
+          "precision": "float32 parameters with BF16 autocast"
+        },
+        "pass_at_1": 0.25,
+        "choice_valid_at_1": 1.0,
+        "strict_format_at_1": 0.0,
+        "sample_accuracy": 0.25125,
+        "sample_choice_valid": 0.99125,
+        "sample_strict_format": 0.00125,
+        "pass_at_k": 0.26,
+        "mean_greedy_tokens": 5.49,
+        "greedy_choice_distribution": {
+          "B": 152,
+          "A": 48
+        },
+        "by_operation": {
+          "add": {
+            "samples": 80,
+            "pass_at_1": 0.25
+          },
+          "mul": {
+            "samples": 40,
+            "pass_at_1": 0.25
+          },
+          "sub": {
+            "samples": 80,
+            "pass_at_1": 0.25
+          }
+        },
+        "by_template": {
+          "0": {
+            "samples": 52,
+            "pass_at_1": 0.25
+          },
+          "1": {
+            "samples": 48,
+            "pass_at_1": 0.25
+          },
+          "2": {
+            "samples": 48,
+            "pass_at_1": 0.25
+          },
+          "3": {
+            "samples": 52,
+            "pass_at_1": 0.25
+          }
+        },
+        "by_answer_position": {
+          "A": {
+            "samples": 50,
+            "pass_at_1": 0.24
+          },
+          "B": {
+            "samples": 50,
+            "pass_at_1": 0.76
+          },
+          "C": {
+            "samples": 50,
+            "pass_at_1": 0.0
+          },
+          "D": {
+            "samples": 50,
+            "pass_at_1": 0.0
+          }
+        },
+        "data_sha256": "e60ae6b32d90b4176fd3f256c28c28f5f75a8b3d3e50d46f524790158c7ba3ec",
+        "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+        "limitations": [
+          "pass@k is empirical any-correct over fixed sampled generations, not an unbiased estimator",
+          "multiple-choice arithmetic does not measure free-form GSM8K reasoning"
+        ]
+      },
+      "test": {
+        "status": "completed",
+        "candidate": "R02D",
+        "split": "test",
+        "samples": 400,
+        "protocol": {
+          "correctness": "one unambiguous leading/correct-answer option label equals programmatic answer",
+          "strict_format": "entire normalized completion is one A/B/C/D label",
+          "greedy_pass_at_1": true,
+          "sample_k": 4,
+          "temperature": 0.8,
+          "top_p": 0.95,
+          "max_new_tokens": 8,
+          "seed": 42,
+          "precision": "float32 parameters with BF16 autocast"
+        },
+        "pass_at_1": 0.25,
+        "choice_valid_at_1": 1.0,
+        "strict_format_at_1": 0.0,
+        "sample_accuracy": 0.248125,
+        "sample_choice_valid": 0.989375,
+        "sample_strict_format": 0.0,
+        "pass_at_k": 0.2525,
+        "mean_greedy_tokens": 5.5275,
+        "greedy_choice_distribution": {
+          "B": 300,
+          "A": 100
+        },
+        "by_operation": {
+          "add": {
+            "samples": 170,
+            "pass_at_1": 0.2529411764705882
+          },
+          "mul": {
+            "samples": 60,
+            "pass_at_1": 0.25
+          },
+          "sub": {
+            "samples": 170,
+            "pass_at_1": 0.24705882352941178
+          }
+        },
+        "by_template": {
+          "0": {
+            "samples": 100,
+            "pass_at_1": 0.25
+          },
+          "1": {
+            "samples": 104,
+            "pass_at_1": 0.25
+          },
+          "2": {
+            "samples": 100,
+            "pass_at_1": 0.25
+          },
+          "3": {
+            "samples": 96,
+            "pass_at_1": 0.25
+          }
+        },
+        "by_answer_position": {
+          "A": {
+            "samples": 100,
+            "pass_at_1": 0.25
+          },
+          "B": {
+            "samples": 100,
+            "pass_at_1": 0.75
+          },
+          "C": {
+            "samples": 100,
+            "pass_at_1": 0.0
+          },
+          "D": {
+            "samples": 100,
+            "pass_at_1": 0.0
+          }
+        },
+        "data_sha256": "5e67fa902c4c3c7fe165e4b287ebc1511c52a33545c5c184296e0e682eb997c3",
+        "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+        "limitations": [
+          "pass@k is empirical any-correct over fixed sampled generations, not an unbiased estimator",
+          "multiple-choice arithmetic does not measure free-form GSM8K reasoning"
+        ]
+      },
+      "choice_diagnostics": {
+        "distribution": {
+          "B": 300,
+          "A": 100
+        },
+        "max_position_share_all_samples": 0.75,
+        "max_position_share_among_valid": 0.75,
+        "unique_valid_choices": 2,
+        "collapsed": true
+      },
+      "seven": {
+        "ceval-valid": 0.25185735512630014,
+        "cmmlu": 0.24892073907787945,
+        "arc_easy": 0.3493265993265993,
+        "piqa": 0.5609357997823722,
+        "openbookqa": 0.264,
+        "hellaswag": 0.28141804421429994,
+        "social_iqa": 0.3623336745138178,
+        "macro": 0.3312560302916098,
+        "artifact_sha256": "cd08af8ea4fda71383d9fde7a7c4db982d942527755b91dfb4ddc9728b107cd0"
+      },
+      "ifeval": {
+        "prompt_strict": 0.17190388170055454,
+        "instruction_strict": 0.3117505995203837,
+        "prompt_loose": 0.18853974121996303,
+        "instruction_loose": 0.32973621103117506,
+        "artifact_sha256": "0a403bbd24a36ecfc722710f4222f67b3d8e7a7a2beab3f6a38f30a606bd91a5"
+      },
+      "behavior": {
+        "status": "completed",
+        "seed": 42,
+        "decoding": {
+          "do_sample": false,
+          "max_new_tokens": 192,
+          "open_thinking": false
+        },
+        "chat": {
+          "cases": 10,
+          "success_count": 7,
+          "success_rate": 0.7,
+          "format_cases": 6,
+          "format_success_count": 4,
+          "format_success_rate": 0.6666666666666666,
+          "refusal_anomaly_count": 0,
+          "repetition_anomaly_count": 0
+        },
+        "tool": {
+          "cases": 8,
+          "tool_selection_accuracy": 0.875,
+          "argument_validity_rate": 0.875,
+          "execution_success_rate": 0.875,
+          "final_answer_accuracy": 0.875,
+          "end_to_end_success_rate": 0.875,
+          "unfinished_rate": 0.0,
+          "invalid_tool_call_tag_count": 0
+        },
+        "samples_path": "eval/samples.jsonl",
+        "artifact_sha256": "599d53eadfbb417d266062d59c943b9912b733d711b3fe7ff7ebdceed7006a4d"
+      },
+      "training": {
+        "event": "completed",
+        "method": "cispo",
+        "outer_steps": 250,
+        "optimizer_updates": 500,
+        "wall_seconds": 43.63908113096841,
+        "completion_tokens": 85267,
+        "correct_rollouts": 3741,
+        "total_rollouts": 16000,
+        "mean_training_reward": 0.2338125,
+        "peak_memory_mib": 3325.80029296875,
+        "model_path": "/data/artifacts/minimind-lab/R02D-math-cispo-20260908/model-fp32",
+        "logged_reward_mean": 0.258125,
+        "logged_degenerate_group_rate_mean": 0.85,
+        "logged_all_zero_group_rate_mean": 0.67,
+        "logged_all_one_group_rate_mean": 0.18,
+        "logged_entropy_mean": 0.5480894035100937,
+        "logged_approx_kl_mean": 0.22239187210798264,
+        "logged_clip_fraction_mean": 0.0,
+        "logged_mean_completion_length_mean": 5.099375,
+        "logged_rollout_seconds_mean": 0.06425312703941018,
+        "logged_reward_first_half": 0.19010416666666666,
+        "logged_reward_second_half": 0.32091346153846156
+      },
+      "checkpoint": {
+        "path": "/data/artifacts/minimind-lab/R02D-math-cispo-20260908/model-fp32/model.safetensors",
+        "sha256": "e906c5114075c54e74071c724aa906f0dbac6229292bee5d5182c0e221f90a19",
+        "bytes": 275319536,
+        "serialization": "float32"
+      },
+      "swanlab_train_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/k6ez8f9j",
+      "gates": {
+        "pass1_ci_low_above_r02a": false,
+        "pass1_ci_low_above_r02b": true,
+        "no_answer_position_collapse": false,
+        "seven_macro_regression_within_1pp": true,
+        "ifeval_prompt_strict_regression_within_2pp": true,
+        "chat_at_least_7_of_10": true,
+        "format_at_least_4_of_6": true,
+        "tool_e2e_at_least_6_of_8": true,
+        "repetition_anomalies_at_most_2": true
+      },
+      "all_gates_pass": false
+    }
+  },
+  "paired_bootstrap": {
+    "protocol": {
+      "samples": 400,
+      "seed": 42,
+      "replicates": 10000,
+      "pairing": "task_id",
+      "primary_metric": "greedy_correct"
+    },
+    "comparisons": {
+      "R02B_vs_R02A": {
+        "metric": "greedy_correct",
+        "mean_difference": -0.1775,
+        "bootstrap_95_ci": [
+          -0.2275,
+          -0.1275
+        ],
+        "candidate_only_correct": 22,
+        "both_same": 285,
+        "opponent_only_correct": 93,
+        "samples": 400,
+        "seed": 42,
+        "replicates": 10000,
+        "pass_at_4": {
+          "metric": "pass_at_k",
+          "mean_difference": 0.0025,
+          "bootstrap_95_ci": [
+            -0.065,
+            0.07
+          ],
+          "candidate_only_correct": 95,
+          "both_same": 211,
+          "opponent_only_correct": 94,
+          "samples": 400,
+          "seed": 42,
+          "replicates": 10000
+        }
+      },
+      "R02C_vs_R02A": {
+        "metric": "greedy_correct",
+        "mean_difference": 0.0175,
+        "bootstrap_95_ci": [
+          0.0025,
+          0.035
+        ],
+        "candidate_only_correct": 9,
+        "both_same": 389,
+        "opponent_only_correct": 2,
+        "samples": 400,
+        "seed": 42,
+        "replicates": 10000,
+        "pass_at_4": {
+          "metric": "pass_at_k",
+          "mean_difference": -0.16,
+          "bootstrap_95_ci": [
+            -0.1975,
+            -0.1225
+          ],
+          "candidate_only_correct": 2,
+          "both_same": 332,
+          "opponent_only_correct": 66,
+          "samples": 400,
+          "seed": 42,
+          "replicates": 10000
+        }
+      },
+      "R02D_vs_R02A": {
+        "metric": "greedy_correct",
+        "mean_difference": 0.0175,
+        "bootstrap_95_ci": [
+          -0.0425,
+          0.08
+        ],
+        "candidate_only_correct": 79,
+        "both_same": 249,
+        "opponent_only_correct": 72,
+        "samples": 400,
+        "seed": 42,
+        "replicates": 10000,
+        "pass_at_4": {
+          "metric": "pass_at_k",
+          "mean_difference": -0.1575,
+          "bootstrap_95_ci": [
+            -0.22,
+            -0.0925
+          ],
+          "candidate_only_correct": 57,
+          "both_same": 223,
+          "opponent_only_correct": 120,
+          "samples": 400,
+          "seed": 42,
+          "replicates": 10000
+        }
+      },
+      "R02C_vs_R02B": {
+        "metric": "greedy_correct",
+        "mean_difference": 0.195,
+        "bootstrap_95_ci": [
+          0.1425,
+          0.245
+        ],
+        "candidate_only_correct": 100,
+        "both_same": 278,
+        "opponent_only_correct": 22,
+        "samples": 400,
+        "seed": 42,
+        "replicates": 10000,
+        "pass_at_4": {
+          "metric": "pass_at_k",
+          "mean_difference": -0.1625,
+          "bootstrap_95_ci": [
+            -0.235,
+            -0.0875
+          ],
+          "candidate_only_correct": 84,
+          "both_same": 167,
+          "opponent_only_correct": 149,
+          "samples": 400,
+          "seed": 42,
+          "replicates": 10000
+        }
+      },
+      "R02D_vs_R02B": {
+        "metric": "greedy_correct",
+        "mean_difference": 0.195,
+        "bootstrap_95_ci": [
+          0.145,
+          0.245
+        ],
+        "candidate_only_correct": 100,
+        "both_same": 278,
+        "opponent_only_correct": 22,
+        "samples": 400,
+        "seed": 42,
+        "replicates": 10000,
+        "pass_at_4": {
+          "metric": "pass_at_k",
+          "mean_difference": -0.16,
+          "bootstrap_95_ci": [
+            -0.225,
+            -0.095
+          ],
+          "candidate_only_correct": 63,
+          "both_same": 210,
+          "opponent_only_correct": 127,
+          "samples": 400,
+          "seed": 42,
+          "replicates": 10000
+        }
+      },
+      "R02D_vs_R02C": {
+        "metric": "greedy_correct",
+        "mean_difference": 0.0,
+        "bootstrap_95_ci": [
+          -0.06,
+          0.06
+        ],
+        "candidate_only_correct": 75,
+        "both_same": 250,
+        "opponent_only_correct": 75,
+        "samples": 400,
+        "seed": 42,
+        "replicates": 10000,
+        "pass_at_4": {
+          "metric": "pass_at_k",
+          "mean_difference": 0.0025,
+          "bootstrap_95_ci": [
+            -0.0575,
+            0.0625
+          ],
+          "candidate_only_correct": 75,
+          "both_same": 251,
+          "opponent_only_correct": 74,
+          "samples": 400,
+          "seed": 42,
+          "replicates": 10000
+        }
+      }
+    }
+  },
+  "r01_incident": {
+    "status": "invalidated-data-confound",
+    "cause": "template_id deterministically predicted answer_position despite balanced marginals",
+    "detected_on": "validation",
+    "test_opened": false,
+    "resolution": "preserve R01 as invalid evidence; rebuild v2 with all 16 answer-position by template cells supported and balanced"
+  },
+  "limitations": [
+    "single training seed; no stability claim",
+    "synthetic four-choice arithmetic is not free-form mathematical reasoning",
+    "SFT and RL match prompt batches and optimizer updates, not FLOPs, target tokens, or wall-clock",
+    "test was opened once only after all R02 candidates completed and was not used for tuning"
+  ]
+}
