@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "dataset": "/data/datasets/minimind-lab/phase5/verifiable-math-v1",
+  "manifest_sha256": "9e31093892db4ab1d136e62a74c683e71b55a005e573bda43a2737fa20d6fe55",
+  "profiles": {
+    "train": {
+      "rows": 1000,
+      "operation": {
+        "mul": 200,
+        "sub": 400,
+        "add": 400
+      },
+      "answer_position": {
+        "D": 250,
+        "B": 250,
+        "A": 250,
+        "C": 250
+      },
+      "template": {
+        "0": 250,
+        "2": 250,
+        "1": 250,
+        "3": 250
+      },
+      "unique_task_keys": 1000,
+      "unique_normalized_prompts": 1000,
+      "answer_value_min": 0,
+      "answer_value_max": 625
+    },
+    "validation": {
+      "rows": 200,
+      "operation": {
+        "add": 80,
+        "mul": 40,
+        "sub": 80
+      },
+      "answer_position": {
+        "A": 50,
+        "B": 50,
+        "D": 50,
+        "C": 50
+      },
+      "template": {
+        "2": 50,
+        "3": 50,
+        "1": 50,
+        "0": 50
+      },
+      "unique_task_keys": 200,
+      "unique_normalized_prompts": 200,
+      "answer_value_min": 0,
+      "answer_value_max": 575
+    },
+    "test": {
+      "rows": 400,
+      "operation": {
+        "sub": 170,
+        "add": 170,
+        "mul": 60
+      },
+      "answer_position": {
+        "D": 100,
+        "B": 100,
+        "A": 100,
+        "C": 100
+      },
+      "template": {
+        "1": 101,
+        "3": 99,
+        "2": 99,
+        "0": 101
+      },
+      "unique_task_keys": 400,
+      "unique_normalized_prompts": 400,
+      "answer_value_min": 0,
+      "answer_value_max": 600
+    }
+  },
+  "cross_split_overlap": {
+    "train_validation_task_key": 0,
+    "train_validation_prompt": 0,
+    "train_test_task_key": 0,
+    "train_test_prompt": 0,
+    "validation_test_task_key": 0,
+    "validation_test_prompt": 0
+  },
+  "checks": [
+    "manifest hashes and row counts",
+    "programmatic arithmetic and option uniqueness",
+    "answer label correctness",
+    "task-key and normalized-prompt split isolation",
+    "answer-position balance"
+  ],
+  "failures": [],
+  "boundary": "The audit proves internal Phase5 split isolation, not absence from all historical S10 pretraining/SFT corpora."
+}

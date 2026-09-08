@@ -1,0 +1,86 @@
+{
+  "status": "completed",
+  "candidate": "R01A",
+  "split": "validation",
+  "samples": 200,
+  "protocol": {
+    "correctness": "one unambiguous leading/correct-answer option label equals programmatic answer",
+    "strict_format": "entire normalized completion is one A/B/C/D label",
+    "greedy_pass_at_1": true,
+    "sample_k": 4,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_new_tokens": 8,
+    "seed": 42,
+    "precision": "float32 parameters with BF16 autocast"
+  },
+  "pass_at_1": 0.23,
+  "choice_valid_at_1": 0.975,
+  "strict_format_at_1": 0.0,
+  "sample_accuracy": 0.18625,
+  "sample_choice_valid": 0.80125,
+  "sample_strict_format": 0.005,
+  "pass_at_k": 0.405,
+  "mean_greedy_tokens": 5.505,
+  "greedy_choice_distribution": {
+    "A": 189,
+    "INVALID": 5,
+    "C": 6
+  },
+  "by_operation": {
+    "add": {
+      "samples": 80,
+      "pass_at_1": 0.225
+    },
+    "mul": {
+      "samples": 40,
+      "pass_at_1": 0.2
+    },
+    "sub": {
+      "samples": 80,
+      "pass_at_1": 0.25
+    }
+  },
+  "by_template": {
+    "0": {
+      "samples": 50,
+      "pass_at_1": 0.36
+    },
+    "1": {
+      "samples": 50,
+      "pass_at_1": 0.0
+    },
+    "2": {
+      "samples": 50,
+      "pass_at_1": 0.56
+    },
+    "3": {
+      "samples": 50,
+      "pass_at_1": 0.0
+    }
+  },
+  "by_answer_position": {
+    "A": {
+      "samples": 50,
+      "pass_at_1": 0.88
+    },
+    "B": {
+      "samples": 50,
+      "pass_at_1": 0.0
+    },
+    "C": {
+      "samples": 50,
+      "pass_at_1": 0.04
+    },
+    "D": {
+      "samples": 50,
+      "pass_at_1": 0.0
+    }
+  },
+  "data_sha256": "aa501045f8ff0cc7d83de70d176f86db452037216f1b27ce5fc6f8be64b0c3df",
+  "model_config_sha256": "a84af4b440e5cd069f16b2462dff484992e4fff0c918f3fcdfc27e65657e3ab3",
+  "limitations": [
+    "pass@k is empirical any-correct over fixed sampled generations, not an unbiased estimator",
+    "multiple-choice arithmetic does not measure free-form GSM8K reasoning"
+  ]
+}

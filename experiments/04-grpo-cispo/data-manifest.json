@@ -1,0 +1,50 @@
+{
+  "name": "verifiable-math-v1",
+  "seed": 20260908,
+  "generator": "/data/projects/minimind-lab/scripts/data/rl/build_verifiable_math.py",
+  "task": "four-way exact-verifier arithmetic multiple choice",
+  "reward": "1 when one unambiguous leading/correct-answer option label matches the programmatic answer; otherwise 0; strict-letter format is tracked separately",
+  "split_policy": "task_key disjoint, stratified by operation, deterministic SHA-256 ordering",
+  "counts": {
+    "train": {
+      "mul": 200,
+      "sub": 400,
+      "add": 400
+    },
+    "validation": {
+      "add": 80,
+      "mul": 40,
+      "sub": 80
+    },
+    "test": {
+      "sub": 170,
+      "add": 170,
+      "mul": 60
+    }
+  },
+  "files": {
+    "train": {
+      "path": "/data/datasets/minimind-lab/phase5/verifiable-math-v1/train.jsonl",
+      "rows": 1000,
+      "bytes": 361229,
+      "sha256": "5ed9f4aa59ab30686e27d40e4d49244e39641f1d8fc8b0a4732931614aa51838"
+    },
+    "validation": {
+      "path": "/data/datasets/minimind-lab/phase5/verifiable-math-v1/validation.jsonl",
+      "rows": 200,
+      "bytes": 73192,
+      "sha256": "aa501045f8ff0cc7d83de70d176f86db452037216f1b27ce5fc6f8be64b0c3df"
+    },
+    "test": {
+      "path": "/data/datasets/minimind-lab/phase5/verifiable-math-v1/test.jsonl",
+      "rows": 400,
+      "bytes": 143965,
+      "sha256": "21a9cd6a88414c193e425c7fd3ad355c2e85e86dd24ccf36654aa351e56515b1"
+    }
+  },
+  "limitations": [
+    "synthetic narrow-domain arithmetic is not GSM8K reasoning",
+    "historical S10 training data cannot be proven semantically disjoint",
+    "multiple-choice accuracy may not transfer to free-form arithmetic"
+  ]
+}

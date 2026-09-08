@@ -1,0 +1,7 @@
+{
+  "status": "planned",
+  "experiment_id": "R01D-math-cispo-20260908",
+  "method": "cispo",
+  "artifact_dir": "/data/artifacts/minimind-lab/R01D-math-cispo-20260908",
+  "source_head_before_changes": "8604d0cb277bc2fa86f1ce30060ee85fcbec5a44"
+}
