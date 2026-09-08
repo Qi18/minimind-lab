@@ -1,6 +1,6 @@
 {
-  "status": "completed-promoted",
-  "decision": "GRPO and CISPO both pass the preregistered promotion gates versus R04A. CISPO has the highest pass@1 point estimate, but its differences versus SFT and GRPO are not statistically significant.",
+  "status": "completed-pending-sft-padding-revalidation",
+  "decision": "Observed R04 scores are retained, but promotion is on hold: SFT input IDs are left-padded while labels are right-padded. SFT control and EOS-causality claims require correction and rerun. R04 is target extraction with one-token decoding, not evidence of repaired arithmetic capability.",
   "dataset": {
     "name": "verifiable-target-extract-v1",
     "seed": 20260908,
@@ -762,7 +762,8 @@
         "chat_at_least_7_of_10": true,
         "tool_e2e_at_least_6_of_8": true
       },
-      "all_gates_pass": true
+      "recorded_numeric_gates_pass": true,
+      "promotion_status": "held-for-sft-control-revalidation"
     },
     "R04D": {
       "experiment_id": "R04D-target-cispo-20260908",
@@ -947,7 +948,8 @@
         "chat_at_least_7_of_10": true,
         "tool_e2e_at_least_6_of_8": true
       },
-      "all_gates_pass": true
+      "recorded_numeric_gates_pass": true,
+      "promotion_status": "held-for-sft-control-revalidation"
     }
   },
   "paired_bootstrap": {
@@ -1044,5 +1046,31 @@
     "target extraction is a narrow controlled verifier task, not general reasoning",
     "equal optimizer updates do not imply equal FLOPs or wall-clock compute",
     "test was opened once after all formal candidates completed"
-  ]
+  ],
+  "publication_audit": {
+    "finding": "sft_batch left-pads input_ids but right-pads labels",
+    "reproduction": {
+      "short_row": {
+        "supervised_position": 20,
+        "label_token": 52,
+        "input_token": 1,
+        "aligned": false
+      },
+      "long_row": {
+        "supervised_position": 40,
+        "label_token": 53,
+        "input_token": 53,
+        "aligned": true
+      }
+    },
+    "scope": "Variable-length SFT batches in the shared Phase5 trainer. RL reward measurements are retained, but comparisons to the affected SFT control and prior EOS diagnosis are provisional.",
+    "test_decode_batch_sizes": {
+      "R04A": 50,
+      "R04B": 50,
+      "R04C": 100,
+      "R04D": 100
+    },
+    "sampling_boundary": "Evaluation RNG seeds depend on batch start. The sampled metrics did not use identical random draws across all candidates.",
+    "one_token_boundary": "R03 probe decoding changed from four tokens to one alongside EOS masking; those changes were confounded."
+  }
 }

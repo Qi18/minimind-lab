@@ -142,14 +142,15 @@ def main():
                 row["behavior"]["tool"]["end_to_end_success_rate"] >= 0.75
             ),
         }
-        row["all_gates_pass"] = all(row["gates"].values())
+        row["recorded_numeric_gates_pass"] = all(row["gates"].values())
+        row["promotion_status"] = "held-for-sft-control-revalidation"
 
     result = {
-        "status": "completed-promoted",
+        "status": "completed-pending-sft-padding-revalidation",
         "decision": (
-            "GRPO and CISPO both pass the preregistered promotion gates versus R04A. "
-            "CISPO has the highest pass@1 point estimate, but its differences versus "
-            "SFT and GRPO are not statistically significant."
+            "Recorded scores are provisional: SFT input IDs are left-padded but labels "
+            "are right-padded. Promotion is held pending corrected SFT controls. "
+            "R04 target-extraction scores do not establish repaired arithmetic capability."
         ),
         "dataset": load(EXP / "data-manifest-r04.json"),
         "data_audit": load(EXP / "data-audit-r04.json"),
@@ -171,6 +172,11 @@ def main():
             "test was opened once after all formal candidates completed",
         ],
     }
+    existing_path = EXP / "comparison-r04.json"
+    if existing_path.exists():
+        previous = load(existing_path)
+        if "publication_audit" in previous:
+            result["publication_audit"] = previous["publication_audit"]
     (EXP / "comparison-r04.json").write_text(
         json.dumps(result, ensure_ascii=False, indent=2) + "\n"
     )
