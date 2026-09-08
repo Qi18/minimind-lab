@@ -7,7 +7,8 @@ experiments/
 ├── 00-preparation/   # E00 环境、E01 数据、E02 模型探针
 ├── 01-pretrain/
 ├── 02-sft/
-├── 03-dpo/
+├── 03-lora/         # Phase3 Full FT vs LoRA
+├── 03-dpo/          # 历史目录名，未来Phase4
 ├── 04-grpo-cispo/
 └── 05-agentic-rl/
 ```

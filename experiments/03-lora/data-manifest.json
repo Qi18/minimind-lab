@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "protocol_version": "phase3-code-domain-v1r1",
+  "created_at": "2026-09-07T14:41:02.062776+00:00",
+  "status": "accepted",
+  "domain": "python-code-instruction-following",
+  "train_source": {
+    "repo_id": "sahil2801/CodeAlpaca-20k",
+    "revision": "152bb5e9a29651266b018106053980070a0521a1",
+    "license": "cc-by-4.0",
+    "path": "/data/datasets/minimind-lab/data-v1/sft-v1-160m/raw/code_alpaca_20k.jsonl",
+    "sha256": "7a213e61a8a23633a1b9a9aab424b7f0c717865eb159be7c5e3f2061e991973b"
+  },
+  "heldout_test": {
+    "repo_id": "google-research-datasets/mbpp",
+    "revision": "4bb6404fdc6cacfda99d4ac4205087b89d32030c",
+    "config": "full",
+    "split": "test",
+    "license": "cc-by-4.0",
+    "used_for_training_or_selection": false
+  },
+  "split": {
+    "algorithm": "sha256(seed:origin_id)",
+    "seed": 20260907,
+    "train": {
+      "rows": 19015,
+      "assistant_target_tokens": 1607230,
+      "zero_target_rows": 0,
+      "truncated_rows": 21,
+      "schema_errors": 0
+    },
+    "validation": {
+      "rows": 1000,
+      "assistant_target_tokens": 86381,
+      "zero_target_rows": 0,
+      "truncated_rows": 2,
+      "schema_errors": 0
+    }
+  },
+  "contamination": {
+    "near_duplicate_threshold": 0.8,
+    "rejection_reasons": {
+      "containment_mbpp_test_prompt": 1,
+      "empty_prompt_or_output": 6
+    },
+    "train_validation_exact": 0,
+    "train_test_exact": 0,
+    "validation_test_exact": 0
+  },
+  "files": {
+    "train.jsonl": {
+      "rows": 19015,
+      "sha256": "a9aed1920a34ae54a67bc4ee0275b18e9047924696b7628394826ec7592e8a80"
+    },
+    "validation.jsonl": {
+      "rows": 1000,
+      "sha256": "add36987cda00c35befd3c6b1220e31a20885840957b015cbd51c8fa3225f315"
+    },
+    "mbpp_test.jsonl": {
+      "rows": 500,
+      "sha256": "f3dbe5f5668108d6c7b75b3407d4900b425dd0bec373a53bc5aa00cc6c395b5a"
+    },
+    "rejected_contamination.jsonl": {
+      "rows": 7,
+      "sha256": "ac37491e8ef99aa7582cf6f3c7f4e5b8e0aefba2aef461966d23f9ce9820785b"
+    },
+    "provenance.jsonl": {
+      "rows": 20015,
+      "sha256": "fa48f08cde10b44636b08fadc4cf64c1b642a5fa5d78dfcf7a131ea6798f9964"
+    }
+  },
+  "max_seq_len": 768,
+  "gates": {
+    "source_rows_match": true,
+    "source_sha_pinned": true,
+    "mbpp_test_rows_match": true,
+    "no_zero_targets": true,
+    "no_schema_errors": true,
+    "no_exact_cross_split_overlap": true
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "file_hash_checks": {
+    "train.jsonl": true,
+    "validation.jsonl": true,
+    "mbpp_test.jsonl": true,
+    "rejected_contamination.jsonl": true,
+    "provenance.jsonl": true
+  },
+  "loader_stats": {
+    "train": {
+      "rows": 19015,
+      "shifted_targets": 1607230,
+      "zero_target_rows": 0,
+      "nonassistant_mask_errors": 0
+    },
+    "validation": {
+      "rows": 1000,
+      "shifted_targets": 86381,
+      "zero_target_rows": 0,
+      "nonassistant_mask_errors": 0
+    }
+  },
+  "near_prompt_pairs_threshold_0_8": {
+    "train_validation": [],
+    "train_mbpp": [],
+    "validation_mbpp": []
+  },
+  "provenance_rows": 20015,
+  "timing": "post-training independent audit; not a pre-training gate",
+  "scope": "Phase3 train/validation/MBPP prompt comparison; not a full upstream S10 contamination audit",
+  "passed": true
+}

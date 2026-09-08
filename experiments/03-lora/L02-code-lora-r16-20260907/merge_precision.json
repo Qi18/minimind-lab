@@ -1,0 +1,57 @@
+{
+  "fp32_atol": 0.0001,
+  "fp32_rtol": 0.0001,
+  "fp32_algebra_passed": true,
+  "fp16_generation_equal_count": 6,
+  "prompts": [
+    {
+      "prompt": "Write a Python function add(a, b).",
+      "fp32_max_abs": 1.1563301086425781e-05,
+      "fp32_allclose": true,
+      "fp16_max_abs": 0.02734375,
+      "fp16_argmax_match": 1.0,
+      "fp16_generated_tokens_equal": true
+    },
+    {
+      "prompt": "Write a function that reverses a list.",
+      "fp32_max_abs": 1.7642974853515625e-05,
+      "fp32_allclose": true,
+      "fp16_max_abs": 0.029296875,
+      "fp16_argmax_match": 1.0,
+      "fp16_generated_tokens_equal": true
+    },
+    {
+      "prompt": "解释什么是机器学习。",
+      "fp32_max_abs": 1.2516975402832031e-05,
+      "fp32_allclose": true,
+      "fp16_max_abs": 0.033203125,
+      "fp16_argmax_match": 1.0,
+      "fp16_generated_tokens_equal": true
+    },
+    {
+      "prompt": "Return only JSON with key answer and value 42.",
+      "fp32_max_abs": 1.33514404296875e-05,
+      "fp32_allclose": true,
+      "fp16_max_abs": 0.03125,
+      "fp16_argmax_match": 1.0,
+      "fp16_generated_tokens_equal": true
+    },
+    {
+      "prompt": "Translate hello into Chinese.",
+      "fp32_max_abs": 1.430511474609375e-05,
+      "fp32_allclose": true,
+      "fp16_max_abs": 0.025390625,
+      "fp16_argmax_match": 1.0,
+      "fp16_generated_tokens_equal": true
+    },
+    {
+      "prompt": "Write a Python function to check even numbers.",
+      "fp32_max_abs": 1.4543533325195312e-05,
+      "fp32_allclose": true,
+      "fp16_max_abs": 0.029296875,
+      "fp16_argmax_match": 1.0,
+      "fp16_generated_tokens_equal": true
+    }
+  ],
+  "note": "Numerical algebra check is separate from rounded deployment equivalence; six prompts are a smoke test only."
+}

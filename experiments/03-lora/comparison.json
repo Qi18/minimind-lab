@@ -1,0 +1,302 @@
+[
+  {
+    "experiment_id": "L00-code-baseline-20260907",
+    "status": "completed",
+    "mbpp_pass_at_1_percent": 0.4,
+    "mbpp_pass_count": 2,
+    "mbpp_test_count": 500,
+    "official_seven_percent": {
+      "ceval-valid": 23.25408618127786,
+      "cmmlu": 25.246071490243484,
+      "arc_easy": 34.34343434343434,
+      "piqa": 56.14798694232862,
+      "openbookqa": 28.000000000000004,
+      "hellaswag": 28.20155347540331,
+      "social_iqa": 35.823950870010236
+    },
+    "official_macro_percent": 33.002440471813976,
+    "ifeval_percent": {
+      "prompt_level_strict_acc": 17.375231053604438,
+      "inst_level_strict_acc": 29.97601918465228,
+      "prompt_level_loose_acc": 19.77818853974122,
+      "inst_level_loose_acc": 32.97362110311751
+    },
+    "behavior": {
+      "status": "completed",
+      "seed": 42,
+      "decoding": {
+        "do_sample": false,
+        "max_new_tokens": 192,
+        "open_thinking": false
+      },
+      "chat": {
+        "cases": 10,
+        "success_count": 8,
+        "success_rate": 0.8,
+        "format_cases": 6,
+        "format_success_count": 5,
+        "format_success_rate": 0.8333333333333334,
+        "refusal_anomaly_count": 0,
+        "repetition_anomaly_count": 1
+      },
+      "tool": {
+        "cases": 8,
+        "tool_selection_accuracy": 0.875,
+        "argument_validity_rate": 0.875,
+        "execution_success_rate": 0.875,
+        "final_answer_accuracy": 0.875,
+        "end_to_end_success_rate": 0.875,
+        "unfinished_rate": 0.0,
+        "invalid_tool_call_tag_count": 0
+      },
+      "samples_path": "eval/samples.jsonl"
+    },
+    "training": {},
+    "actual_assistant_targets": 0,
+    "mbpp_diagnostics": {
+      "empty_extraction_count": 336,
+      "extracted_syntax_error_count": 21,
+      "note": "Extraction failures count as failures in the fixed harness. Syntax validity does not imply correct code."
+    },
+    "sources": [
+      {
+        "path": "/data/artifacts/minimind-lab/L00-code-baseline-20260907/eval/mbpp-full/results_2026-09-07T14-18-58.527046.json",
+        "sha256": "f445983bdd9d3d76a3c202f2540b729bbe91e98843af3eb8e2dfddaa9550621a"
+      },
+      {
+        "path": "/data/artifacts/minimind-lab/S10-ifeval-curriculum-v4-20260907/eval/official-seven-chat-template/results_2026-09-07T10-10-08.695454.json",
+        "sha256": "f9699443e8fb6e1b77314b8eaa27e1241df6f2f9a7b6344c1face3196ee8037e"
+      },
+      {
+        "path": "/data/artifacts/minimind-lab/S10-ifeval-curriculum-v4-20260907/eval/ifeval-chat-template/results_2026-09-07T10-13-41.489185.json",
+        "sha256": "d47765c0b1a6233d53c77505d3f8f2a5b9550ae0e21e4eeaf49df587dba1c072"
+      },
+      {
+        "path": "/data/artifacts/minimind-lab/S10-ifeval-curriculum-v4-20260907/eval/behavior/task_eval.json",
+        "sha256": "342e97a685e5c922d5c1089ad735b2d04dfe271ab54812100d87281901483d8e"
+      }
+    ],
+    "checkpoint_manifest": [
+      {
+        "path": "/data/artifacts/minimind-lab/S10-ifeval-curriculum-v4-20260907/checkpoints/s08_best_val_768.pth",
+        "bytes": 137684380,
+        "sha256": "46aeab66795795aa77d703f08d71b952fe98461040f4560e1301021540710131"
+      }
+    ]
+  },
+  {
+    "experiment_id": "L01-code-full-ft-20260907",
+    "status": "completed",
+    "mbpp_pass_at_1_percent": 0.0,
+    "mbpp_pass_count": 0,
+    "mbpp_test_count": 500,
+    "official_seven_percent": {
+      "ceval-valid": 23.105497771173848,
+      "cmmlu": 25.23743740286652,
+      "arc_easy": 34.553872053872055,
+      "piqa": 56.36561479869423,
+      "openbookqa": 25.6,
+      "hellaswag": 28.231428002389965,
+      "social_iqa": 34.2374616171955
+    },
+    "official_macro_percent": 32.47590166374173,
+    "ifeval_percent": {
+      "prompt_level_strict_acc": 17.929759704251385,
+      "inst_level_strict_acc": 30.215827338129497,
+      "prompt_level_loose_acc": 20.33271719038817,
+      "inst_level_loose_acc": 32.49400479616307
+    },
+    "behavior": {
+      "status": "completed",
+      "seed": 42,
+      "decoding": {
+        "do_sample": false,
+        "max_new_tokens": 192,
+        "open_thinking": false
+      },
+      "chat": {
+        "cases": 10,
+        "success_count": 7,
+        "success_rate": 0.7,
+        "format_cases": 6,
+        "format_success_count": 3,
+        "format_success_rate": 0.5,
+        "refusal_anomaly_count": 0,
+        "repetition_anomaly_count": 1
+      },
+      "tool": {
+        "cases": 8,
+        "tool_selection_accuracy": 0.875,
+        "argument_validity_rate": 0.875,
+        "execution_success_rate": 0.875,
+        "final_answer_accuracy": 0.75,
+        "end_to_end_success_rate": 0.75,
+        "unfinished_rate": 0.125,
+        "invalid_tool_call_tag_count": 0
+      },
+      "samples_path": "eval/samples.jsonl"
+    },
+    "training": {
+      "event": "completed",
+      "global_step": 594,
+      "baseline_validation_loss": 0.9745552012169754,
+      "best_validation_loss": 0.7577329559380626,
+      "wall_seconds": 94.64988684654236,
+      "peak_memory_mib": 6936.5078125,
+      "total_parameters": 63912192,
+      "trainable_parameters": 63912192,
+      "trainable_ratio": 1.0,
+      "timestamp": "2026-09-07T14:48:36Z",
+      "gpu_hours": 0.15774981141090394,
+      "overall_assistant_targets_per_second": 50926.959984803056,
+      "training_seed": 42,
+      "dataset_split_seed": 20260907
+    },
+    "actual_assistant_targets": 4820231,
+    "mbpp_diagnostics": {
+      "empty_extraction_count": 424,
+      "extracted_syntax_error_count": 5,
+      "note": "Extraction failures count as failures in the fixed harness. Syntax validity does not imply correct code."
+    },
+    "sources": [
+      {
+        "path": "/data/artifacts/minimind-lab/L01-code-full-ft-20260907/eval/mbpp/results_2026-09-07T15-00-07.099007.json",
+        "sha256": "96a55b1702702cd8345ddc6d0c057969689b7c0d08ec77714c7137743683abe4"
+      },
+      {
+        "path": "/data/artifacts/minimind-lab/L01-code-full-ft-20260907/eval/official-seven-chat-template/__data__artifacts__minimind-lab__L01-code-full-ft-20260907__exported-best/results_2026-09-08T02-36-45.588418.json",
+        "sha256": "418aff3368280c5f39576e2f45e9747f96e582ed9fce39dee86b87374050c47e"
+      },
+      {
+        "path": "/data/artifacts/minimind-lab/L01-code-full-ft-20260907/eval/ifeval-chat-template/__data__artifacts__minimind-lab__L01-code-full-ft-20260907__exported-best/results_2026-09-08T02-38-43.339829.json",
+        "sha256": "61668adfb98a040744e0a6ec45cf298669e2fa111df4e993021736f2cd62332e"
+      },
+      {
+        "path": "/data/artifacts/minimind-lab/L01-code-full-ft-20260907/eval/behavior/task_eval.json",
+        "sha256": "463b59f3787fd09f86826c2ca502f6ffd2393868e20cac584cf2fa187614d7e4"
+      }
+    ],
+    "checkpoint_manifest": [
+      {
+        "path": "/data/artifacts/minimind-lab/L01-code-full-ft-20260907/checkpoints/l01_best_val_768.pth",
+        "bytes": 137684380,
+        "sha256": "b303ffef955dc0f2ff8e0a7da3b9fb6552526dcd4db511168ab39d130c137432"
+      },
+      {
+        "path": "/data/artifacts/minimind-lab/L01-code-full-ft-20260907/checkpoints/l01_last_768.pth",
+        "bytes": 137684000,
+        "sha256": "ca4dc6e5de09d035e2f235f212b43fe93120fa9143ef7ebf22ddba0333c4954f"
+      }
+    ]
+  },
+  {
+    "experiment_id": "L02-code-lora-r16-20260907",
+    "status": "completed",
+    "mbpp_pass_at_1_percent": 0.0,
+    "mbpp_pass_count": 0,
+    "mbpp_test_count": 500,
+    "official_seven_percent": {
+      "ceval-valid": 23.328380386329865,
+      "cmmlu": 25.28060783975134,
+      "arc_easy": 34.217171717171716,
+      "piqa": 56.474428726877036,
+      "openbookqa": 26.0,
+      "hellaswag": 28.31109340768771,
+      "social_iqa": 35.107471852610026
+    },
+    "official_macro_percent": 32.674164847203954,
+    "ifeval_percent": {
+      "prompt_level_strict_acc": 19.038817005545287,
+      "inst_level_strict_acc": 31.414868105515588,
+      "prompt_level_loose_acc": 22.36598890942699,
+      "inst_level_loose_acc": 34.2925659472422
+    },
+    "behavior": {
+      "status": "completed",
+      "seed": 42,
+      "decoding": {
+        "do_sample": false,
+        "max_new_tokens": 192,
+        "open_thinking": false
+      },
+      "chat": {
+        "cases": 10,
+        "success_count": 8,
+        "success_rate": 0.8,
+        "format_cases": 6,
+        "format_success_count": 5,
+        "format_success_rate": 0.8333333333333334,
+        "refusal_anomaly_count": 0,
+        "repetition_anomaly_count": 1
+      },
+      "tool": {
+        "cases": 8,
+        "tool_selection_accuracy": 0.875,
+        "argument_validity_rate": 0.75,
+        "execution_success_rate": 0.875,
+        "final_answer_accuracy": 0.75,
+        "end_to_end_success_rate": 0.75,
+        "unfinished_rate": 0.25,
+        "invalid_tool_call_tag_count": 0
+      },
+      "samples_path": "eval/samples.jsonl"
+    },
+    "training": {
+      "event": "completed",
+      "global_step": 594,
+      "baseline_validation_loss": 0.9745552012169754,
+      "best_validation_loss": 0.8376368255766593,
+      "wall_seconds": 63.45794105529785,
+      "peak_memory_mib": 4464.2412109375,
+      "total_parameters": 64305408,
+      "trainable_parameters": 393216,
+      "trainable_ratio": 0.006114820078584993,
+      "timestamp": "2026-09-07T14:51:02Z",
+      "gpu_hours": 0.10576323509216308,
+      "overall_assistant_targets_per_second": 75959.46102001017,
+      "training_seed": 42,
+      "dataset_split_seed": 20260907
+    },
+    "actual_assistant_targets": 4820231,
+    "mbpp_diagnostics": {
+      "empty_extraction_count": 394,
+      "extracted_syntax_error_count": 5,
+      "note": "Extraction failures count as failures in the fixed harness. Syntax validity does not imply correct code."
+    },
+    "sources": [
+      {
+        "path": "/data/artifacts/minimind-lab/L02-code-lora-r16-20260907/eval/mbpp/results_2026-09-07T15-00-15.227740.json",
+        "sha256": "98aa32c335efc97532af06ed1716f47ea5294a30db4a6739020d8712710557f2"
+      },
+      {
+        "path": "/data/artifacts/minimind-lab/L02-code-lora-r16-20260907/eval/official-seven-chat-template/__data__artifacts__minimind-lab__L02-code-lora-r16-20260907__exported-best/results_2026-09-08T02-36-44.725536.json",
+        "sha256": "466b28a42b658ac682d1c75e6a43a4d9e25b62399fa4f1d433edd9fac61f1279"
+      },
+      {
+        "path": "/data/artifacts/minimind-lab/L02-code-lora-r16-20260907/eval/ifeval-chat-template/__data__artifacts__minimind-lab__L02-code-lora-r16-20260907__exported-best/results_2026-09-08T02-38-46.638725.json",
+        "sha256": "60e4610dc30970638b27e2445f1a1d2516ceb575a2a0bfb63473f8e78d925a46"
+      },
+      {
+        "path": "/data/artifacts/minimind-lab/L02-code-lora-r16-20260907/eval/behavior/task_eval.json",
+        "sha256": "9a7eacbc409436948593000406af3680c02daaf74545af5203457c0f50939a30"
+      }
+    ],
+    "checkpoint_manifest": [
+      {
+        "path": "/data/artifacts/minimind-lab/L02-code-lora-r16-20260907/checkpoints/l02_adapter_best_val_768.pth",
+        "bytes": 797594,
+        "sha256": "c0ccffad894fc7fa65aacab3f813ae40b1080dc744c67da90522aee174dba134"
+      },
+      {
+        "path": "/data/artifacts/minimind-lab/L02-code-lora-r16-20260907/checkpoints/l02_adapter_last_768.pth",
+        "bytes": 797386,
+        "sha256": "c7f3556b39267eca9ebddeef718f080e2d294120d8c91a84c014f31a4015d775"
+      },
+      {
+        "path": "/data/artifacts/minimind-lab/L02-code-lora-r16-20260907/checkpoints/l02_merged_best_val_768.pth",
+        "bytes": 137685109,
+        "sha256": "0b36e3218fcccb2300410ce0e422f56bf97b2ea1c16136a7ba1470655a72c595"
+      }
+    ]
+  }
+]

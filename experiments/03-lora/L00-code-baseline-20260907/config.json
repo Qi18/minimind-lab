@@ -1,0 +1,15 @@
+{
+  "experiment_id": "L00-code-baseline-20260907",
+  "phase": "phase3-full-vs-lora",
+  "method": "no-training-baseline",
+  "base_checkpoint": "/data/artifacts/minimind-lab/S10-ifeval-curriculum-v4-20260907/checkpoints/s08_best_val_768.pth",
+  "base_checkpoint_sha256": "46aeab66795795aa77d703f08d71b952fe98461040f4560e1301021540710131",
+  "dataset": "/data/datasets/minimind-lab/phase3/code-domain-v1r1",
+  "primary_eval": "lm-eval mbpp_instruct, 0-shot, chat template, greedy, pass@1",
+  "test_rows": 500,
+  "seed": 42,
+  "status": "completed",
+  "training_seed": 42,
+  "dataset_split_seed": 20260907,
+  "actual_assistant_targets": 0
+}

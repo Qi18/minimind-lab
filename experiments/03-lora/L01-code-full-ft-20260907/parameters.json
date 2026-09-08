@@ -1,0 +1,9 @@
+{
+  "method": "full",
+  "lora_rank": 0,
+  "total_parameters": 63912192,
+  "trainable_parameters": 63912192,
+  "trainable_ratio": 1.0,
+  "injected_module_count": 0,
+  "injected_modules": []
+}

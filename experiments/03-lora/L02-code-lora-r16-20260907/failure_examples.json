@@ -1,0 +1,23 @@
+[
+  {
+    "doc_id": 0,
+    "prompt": "Write a python function to remove first and last occurrence of a given character from the string.",
+    "response": "\ndef remove_occ(string):\n    if len(string) != len(string):\n        return \"\"\n    else:\n        return \"\"\n\nstring = \"hello\"\nif string in string:\n    print(string)\nelse:\n    print(\"No odd characters found.\")\nprint(string)\n```\nThe function works by first checking if the string is a palindrome. If it is, it is a palindrome. Then it checks if the string is equal to the length of the string. If it is, it is a palindrome.\ndef remove_occ(string):\n    if len(string) != len(string):\n        return \"\"\n    else:\n        return \"\"\nstring = \"hello\"\nstring = \"\"\nif string in string:\n    print(string)\nelse:\n    print(\"No odd characters found.\")\nprint(string)\n```\nThe function works by first checking if the string is a palindrome. If it is, it is a palindrome. Then it checks if",
+    "extracted_code": "def remove_occ(string):\n    if len(string) != len(string):\n        return \"\"\n    else:\n        return \"\"\n\nstring = \"hello\"\nif string in string:\n    print(string)\nelse:\n    print(\"No odd characters found.\")\nprint(string)",
+    "pass_at_1": 0.0
+  },
+  {
+    "doc_id": 1,
+    "prompt": "Write a function to sort a given matrix in ascending order according to the sum of its rows.",
+    "response": "\ndef sort_matrix(matrix):\n    # Sort the matrix\n    sorted_matrix = []\n    for i in range(len(matrix)):\n        for j in range(len(matrix[i])):\n            if matrix[i][j] == matrix[i][j]:\n                sorted_matrix.append(matrix[i])\n    return sorted_matrix\n```\ndef sort_matrix(matrix):\n    # Sort the matrix\n    sorted_matrix = []\n    for i in range(len(matrix)):\n        for j in range(len(matrix[i])):\n            if matrix[i][j] == matrix[i][j]:\n                sorted_matrix.append(matrix[i])\n    return sorted_matrix\n```\ndef sort_matrix(matrix):\n    # Sort the matrix\n    sorted_matrix = []\n    for i in range(len(matrix)):\n        for j in range(len(matrix[i])):\n            if matrix[i",
+    "extracted_code": "def sort_matrix(matrix):\n    # Sort the matrix\n    sorted_matrix = []\n    for i in range(len(matrix)):\n        for j in range(len(matrix[i])):\n            if matrix[i][j] == matrix[i][j]:\n                sorted_matrix.append(matrix[i])\n    return sorted_matrix",
+    "pass_at_1": 0.0
+  },
+  {
+    "doc_id": 2,
+    "prompt": "Write a function to count the most common words in a dictionary.",
+    "response": "\ndef count_common_words(dict_list):\n    count_common = {}\n    for word in dict_list:\n        if word in count_common:\n            count_common[word] += 1\n        else:\n            count_common[word] = 1\n    return count_common\n\ndict_list = ['red', 'green', 'black', 'pink', 'black', 'red', 'red', 'white', 'red']\nprint(count_common_words(dict_list))\n```\nThe function works by first checking if the word is in the dictionary. If it is, it is counted by converting the dictionary to a set. If it is, it is counted by converting the dictionary to a set. If it is, it is counted by converting the dictionary to a set. If it is, it is counted by converting the dictionary to a set.\nThen, it is returned.\nThen, it is returned.\nThe code works by checking if the word is in the",
+    "extracted_code": "def count_common_words(dict_list):\n    count_common = {}\n    for word in dict_list:\n        if word in count_common:\n            count_common[word] += 1\n        else:\n            count_common[word] = 1\n    return count_common\n\ndict_list = ['red', 'green', 'black', 'pink', 'black', 'red', 'red', 'white', 'red']\nprint(count_common_words(dict_list))",
+    "pass_at_1": 0.0
+  }
+]

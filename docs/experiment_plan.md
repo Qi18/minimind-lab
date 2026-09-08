@@ -316,6 +316,10 @@ LoRA 是明确领域上的效率实验，不替代主线 Full SFT。从 S★ 出
 
 报告领域指标、七项回归、可训练参数、峰值显存、wall、GPU-hours、adapter 大小，以及 merge 前后输出一致性。没有独立领域验收集时只允许 smoke。
 
+### 8.1 实际收口（2026-09-08）
+
+L00/S10、L01 Full FT、L02 LoRA r16 的训练与独立评测完成，阶段为 accepted with limitations。两组 MBPP 均0/500（S10为2/500），未证明代码能力提升；LoRA本次训练wall/显存分别下降约33%/36%。保留S10为后续基线。实际训练seed42、数据划分seed20260907、两组LR不同及其他限制见 [Phase3报告](phases/phase3-lora.md)。
+
 ## 9. Phase 4：DPO 偏好优化
 
 阅读 DPODataset、policy/ref log-prob、DPO loss、beta 和长度偏差，理解 DPO 是静态 off-policy preference optimization，不是在线探索。

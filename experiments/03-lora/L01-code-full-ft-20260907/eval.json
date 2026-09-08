@@ -1,0 +1,105 @@
+{
+  "experiment_id": "L01-code-full-ft-20260907",
+  "status": "completed",
+  "mbpp_pass_at_1_percent": 0.0,
+  "mbpp_pass_count": 0,
+  "mbpp_test_count": 500,
+  "official_seven_percent": {
+    "ceval-valid": 23.105497771173848,
+    "cmmlu": 25.23743740286652,
+    "arc_easy": 34.553872053872055,
+    "piqa": 56.36561479869423,
+    "openbookqa": 25.6,
+    "hellaswag": 28.231428002389965,
+    "social_iqa": 34.2374616171955
+  },
+  "official_macro_percent": 32.47590166374173,
+  "ifeval_percent": {
+    "prompt_level_strict_acc": 17.929759704251385,
+    "inst_level_strict_acc": 30.215827338129497,
+    "prompt_level_loose_acc": 20.33271719038817,
+    "inst_level_loose_acc": 32.49400479616307
+  },
+  "behavior": {
+    "status": "completed",
+    "seed": 42,
+    "decoding": {
+      "do_sample": false,
+      "max_new_tokens": 192,
+      "open_thinking": false
+    },
+    "chat": {
+      "cases": 10,
+      "success_count": 7,
+      "success_rate": 0.7,
+      "format_cases": 6,
+      "format_success_count": 3,
+      "format_success_rate": 0.5,
+      "refusal_anomaly_count": 0,
+      "repetition_anomaly_count": 1
+    },
+    "tool": {
+      "cases": 8,
+      "tool_selection_accuracy": 0.875,
+      "argument_validity_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "final_answer_accuracy": 0.75,
+      "end_to_end_success_rate": 0.75,
+      "unfinished_rate": 0.125,
+      "invalid_tool_call_tag_count": 0
+    },
+    "samples_path": "eval/samples.jsonl"
+  },
+  "training": {
+    "event": "completed",
+    "global_step": 594,
+    "baseline_validation_loss": 0.9745552012169754,
+    "best_validation_loss": 0.7577329559380626,
+    "wall_seconds": 94.64988684654236,
+    "peak_memory_mib": 6936.5078125,
+    "total_parameters": 63912192,
+    "trainable_parameters": 63912192,
+    "trainable_ratio": 1.0,
+    "timestamp": "2026-09-07T14:48:36Z",
+    "gpu_hours": 0.15774981141090394,
+    "overall_assistant_targets_per_second": 50926.959984803056,
+    "training_seed": 42,
+    "dataset_split_seed": 20260907
+  },
+  "actual_assistant_targets": 4820231,
+  "mbpp_diagnostics": {
+    "empty_extraction_count": 424,
+    "extracted_syntax_error_count": 5,
+    "note": "Extraction failures count as failures in the fixed harness. Syntax validity does not imply correct code."
+  },
+  "sources": [
+    {
+      "path": "/data/artifacts/minimind-lab/L01-code-full-ft-20260907/eval/mbpp/results_2026-09-07T15-00-07.099007.json",
+      "sha256": "96a55b1702702cd8345ddc6d0c057969689b7c0d08ec77714c7137743683abe4"
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/L01-code-full-ft-20260907/eval/official-seven-chat-template/__data__artifacts__minimind-lab__L01-code-full-ft-20260907__exported-best/results_2026-09-08T02-36-45.588418.json",
+      "sha256": "418aff3368280c5f39576e2f45e9747f96e582ed9fce39dee86b87374050c47e"
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/L01-code-full-ft-20260907/eval/ifeval-chat-template/__data__artifacts__minimind-lab__L01-code-full-ft-20260907__exported-best/results_2026-09-08T02-38-43.339829.json",
+      "sha256": "61668adfb98a040744e0a6ec45cf298669e2fa111df4e993021736f2cd62332e"
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/L01-code-full-ft-20260907/eval/behavior/task_eval.json",
+      "sha256": "463b59f3787fd09f86826c2ca502f6ffd2393868e20cac584cf2fa187614d7e4"
+    }
+  ],
+  "checkpoint_manifest": [
+    {
+      "path": "/data/artifacts/minimind-lab/L01-code-full-ft-20260907/checkpoints/l01_best_val_768.pth",
+      "bytes": 137684380,
+      "sha256": "b303ffef955dc0f2ff8e0a7da3b9fb6552526dcd4db511168ab39d130c137432"
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/L01-code-full-ft-20260907/checkpoints/l01_last_768.pth",
+      "bytes": 137684000,
+      "sha256": "ca4dc6e5de09d035e2f235f212b43fe93120fa9143ef7ebf22ddba0333c4954f"
+    }
+  ]
+}

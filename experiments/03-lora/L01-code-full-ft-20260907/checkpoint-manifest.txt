@@ -1,0 +1,2 @@
+b303ffef955dc0f2ff8e0a7da3b9fb6552526dcd4db511168ab39d130c137432  137684380  /data/artifacts/minimind-lab/L01-code-full-ft-20260907/checkpoints/l01_best_val_768.pth
+ca4dc6e5de09d035e2f235f212b43fe93120fa9143ef7ebf22ddba0333c4954f  137684000  /data/artifacts/minimind-lab/L01-code-full-ft-20260907/checkpoints/l01_last_768.pth

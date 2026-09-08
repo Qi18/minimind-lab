@@ -19,6 +19,7 @@ from torch.utils.data import DataLoader, DistributedSampler, Subset
 
 from dataset.lm_dataset import SFTDataset
 from model.model_minimind import MiniMindConfig
+from model.model_lora import apply_lora, save_lora
 from trainer.trainer_utils import Logger, get_lr, init_distributed_mode, init_model, is_main_process, setup_seed
 
 
@@ -53,13 +54,16 @@ def unwrap_model(model):
     return getattr(raw_model, "_orig_mod", raw_model)
 
 
-def save_weight(model, path):
+def save_weight(model, path, lora_only=False):
     if not is_main_process():
         return
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    state_dict = unwrap_model(model).state_dict()
-    torch.save({key: value.half().cpu() for key, value in state_dict.items()}, path)
-    Logger(f"Saved checkpoint: {path}")
+    if lora_only:
+        save_lora(model, path)
+    else:
+        state_dict = unwrap_model(model).state_dict()
+        torch.save({key: value.half().cpu() for key, value in state_dict.items()}, path)
+    Logger(f"Saved {'LoRA adapter' if lora_only else 'full checkpoint'}: {path}")
 
 
 @torch.no_grad()
@@ -139,6 +143,8 @@ def main():
     parser.add_argument("--data_path", required=True)
     parser.add_argument("--validation_data_path")
     parser.add_argument("--from_weight", default="pretrain")
+    parser.add_argument("--lora_rank", type=int, default=0, help="0=full fine-tuning; positive=LoRA rank")
+    parser.add_argument("--parameter_manifest")
     parser.add_argument("--validation_size", type=int, default=10000)
     parser.add_argument("--split_seed", type=int, default=42)
     parser.add_argument("--split_manifest", required=True)
@@ -167,6 +173,35 @@ def main():
         use_moe=bool(args.use_moe),
     )
     model, tokenizer = init_model(lm_config, args.from_weight, device=args.device)
+    lora_enabled = args.lora_rank > 0
+    if lora_enabled:
+        apply_lora(model, rank=args.lora_rank)
+        for name, parameter in model.named_parameters():
+            parameter.requires_grad = "lora" in name
+    trainable_parameters = [parameter for parameter in model.parameters() if parameter.requires_grad]
+    total_parameter_count = sum(parameter.numel() for parameter in model.parameters())
+    trainable_parameter_count = sum(parameter.numel() for parameter in trainable_parameters)
+    injected_modules = [
+        name for name, module in model.named_modules() if hasattr(module, "lora")
+    ]
+    parameter_payload = {
+        "method": "lora" if lora_enabled else "full",
+        "lora_rank": args.lora_rank,
+        "total_parameters": total_parameter_count,
+        "trainable_parameters": trainable_parameter_count,
+        "trainable_ratio": trainable_parameter_count / total_parameter_count,
+        "injected_module_count": len(injected_modules),
+        "injected_modules": injected_modules,
+    }
+    if is_main_process() and args.parameter_manifest:
+        os.makedirs(os.path.dirname(args.parameter_manifest), exist_ok=True)
+        with open(args.parameter_manifest, "w", encoding="utf-8") as handle:
+            json.dump(parameter_payload, handle, ensure_ascii=False, indent=2)
+    Logger(
+        f"method={parameter_payload['method']} total_params={total_parameter_count} "
+        f"trainable_params={trainable_parameter_count} "
+        f"trainable_ratio={parameter_payload['trainable_ratio']:.6f}"
+    )
 
     train_base = SFTDataset(args.data_path, tokenizer, max_length=args.max_seq_len, augment=bool(args.train_augment))
     if args.validation_data_path:
@@ -217,7 +252,9 @@ def main():
         pin_memory=True,
     )
 
-    optimizer = optim.AdamW(model.parameters(), lr=args.learning_rate)
+    optimizer = optim.AdamW(trainable_parameters, lr=args.learning_rate)
+    if args.use_compile and lora_enabled:
+        raise ValueError("LoRA monkey-patched forwards are incompatible with torch.compile")
     if args.use_compile:
         model = torch.compile(model)
     if dist.is_initialized():
@@ -233,9 +270,13 @@ def main():
             "train_size": len(train_dataset),
             "validation_size_actual": len(validation_dataset),
             "validation_indices_sha256": split_sha,
+            **parameter_payload,
         })
 
     total_optimizer_steps = math.ceil(len(train_loader) / args.accumulation_steps) * args.epochs
+    training_started = time.time()
+    if device.type == "cuda":
+        torch.cuda.reset_peak_memory_stats(device)
     global_step = 0
     optimizer.zero_grad(set_to_none=True)
 
@@ -250,6 +291,7 @@ def main():
     }, swanlab)
     Logger(f"SFT baseline validation_loss={baseline_loss:.6f}, tokens={baseline_tokens}")
     best_validation_loss = baseline_loss
+    save_weight(model, os.path.join(args.save_dir, f"{args.best_weight}_{args.hidden_size}.pth"), lora_enabled)
 
     window_nll = 0.0
     window_tokens = 0
@@ -289,7 +331,7 @@ def main():
                 continue
 
             scaler.unscale_(optimizer)
-            grad_norm = torch.nn.utils.clip_grad_norm_(model.parameters(), args.grad_clip)
+            grad_norm = torch.nn.utils.clip_grad_norm_(trainable_parameters, args.grad_clip)
             last_grad_norm = float(grad_norm.item() if torch.is_tensor(grad_norm) else grad_norm)
             scaler.step(optimizer)
             scaler.update()
@@ -336,17 +378,22 @@ def main():
                 window_started = time.time()
                 if validation_loss < best_validation_loss:
                     best_validation_loss = validation_loss
-                    save_weight(model, os.path.join(args.save_dir, f"{args.best_weight}_{args.hidden_size}.pth"))
+                    save_weight(model, os.path.join(args.save_dir, f"{args.best_weight}_{args.hidden_size}.pth"), lora_enabled)
 
             if global_step % args.save_interval == 0:
-                save_weight(model, os.path.join(args.save_dir, f"{args.save_weight}_{args.hidden_size}.pth"))
+                save_weight(model, os.path.join(args.save_dir, f"{args.save_weight}_{args.hidden_size}.pth"), lora_enabled)
 
-    save_weight(model, os.path.join(args.save_dir, f"{args.save_weight}_{args.hidden_size}.pth"))
+    save_weight(model, os.path.join(args.save_dir, f"{args.save_weight}_{args.hidden_size}.pth"), lora_enabled)
     append_metric(args.metrics_path, {
         "event": "completed",
         "global_step": global_step,
         "baseline_validation_loss": baseline_loss,
         "best_validation_loss": best_validation_loss,
+        "wall_seconds": time.time() - training_started,
+        "peak_memory_mib": torch.cuda.max_memory_allocated(device) / 1024 ** 2 if device.type == "cuda" else 0,
+        "total_parameters": total_parameter_count,
+        "trainable_parameters": trainable_parameter_count,
+        "trainable_ratio": trainable_parameter_count / total_parameter_count,
     }, swanlab)
     if swanlab:
         swanlab.finish()

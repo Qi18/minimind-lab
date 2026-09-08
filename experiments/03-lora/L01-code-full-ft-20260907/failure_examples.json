@@ -1,0 +1,23 @@
+[
+  {
+    "doc_id": 0,
+    "prompt": "Write a python function to remove first and last occurrence of a given character from the string.",
+    "response": "\ndef remove_first_occurrence(string):\n    result = \"\"\n    for char in string:\n        if char not in result:\n            result += char\n    return result\n\nstring = \"hello\"\nresult = remove_first_occurrence(string)\nprint(result) # Output: heo\n# Output: heo\n# PHP\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P\n# P",
+    "extracted_code": "",
+    "pass_at_1": 0.0
+  },
+  {
+    "doc_id": 1,
+    "prompt": "Write a function to sort a given matrix in ascending order according to the sum of its rows.",
+    "response": "\ndef sort_matrix(matrix):\n    \"\"\"\n    Sort a given matrix in ascending order according to the sum of its rows.\n    \"\"\"\n    # Sort the matrix\n    matrix = []\n    for i in range(len(matrix)):\n        for j in range(i+1, len(matrix[i])):\n            matrix.append(matrix[i][j])\n    return matrix\n\n# Driver code\nif __name__ == '__main__':\n    print(sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]]))\n# Output: [[1, 1, 1], [1, 2, 3], [2, 4, 5]]\n# Output: [[1, 1, 1], [1, 2, 3], [2, 4, 5]]\n# Output: [[1, 2, 3], [2, 4, 5], [1, -1, 1], [1, 2, 3]]\n# Output: [[1, 2, 3",
+    "extracted_code": "",
+    "pass_at_1": 0.0
+  },
+  {
+    "doc_id": 2,
+    "prompt": "Write a function to count the most common words in a dictionary.",
+    "response": "\ndef count_common_words(dict_list):\n    count_dict = {}\n    for key, value in dict_list.items():\n        if key in count_dict:\n            count_dict[key] += 1\n        else:\n            count_dict[key] = 1\n    return count_dict\n\ndict_list = ['red', 'green', 'black', 'pink', 'black', 'red']\nprint(count_common_words(dict_list))\nprint(count_common_words(dict_list))\n# Output: {'one': 1, 'two': 2, 'three': 3, 'four': 4}\n# Output: {'one': 2, 'two': 2, 'three': 3, 'four': 4}\n# Output: {'one': 2, 'two': 2, 'three': 3, 'four': 4}\n# Output: {'one': 2, 'two': 2, 'three': 3, 'four': 4}",
+    "extracted_code": "",
+    "pass_at_1": 0.0
+  }
+]

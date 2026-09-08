@@ -1,0 +1,26 @@
+{
+  "method": "lora",
+  "lora_rank": 16,
+  "total_parameters": 64305408,
+  "trainable_parameters": 393216,
+  "trainable_ratio": 0.006114820078584993,
+  "injected_module_count": 16,
+  "injected_modules": [
+    "model.layers.0.self_attn.q_proj",
+    "model.layers.0.self_attn.o_proj",
+    "model.layers.1.self_attn.q_proj",
+    "model.layers.1.self_attn.o_proj",
+    "model.layers.2.self_attn.q_proj",
+    "model.layers.2.self_attn.o_proj",
+    "model.layers.3.self_attn.q_proj",
+    "model.layers.3.self_attn.o_proj",
+    "model.layers.4.self_attn.q_proj",
+    "model.layers.4.self_attn.o_proj",
+    "model.layers.5.self_attn.q_proj",
+    "model.layers.5.self_attn.o_proj",
+    "model.layers.6.self_attn.q_proj",
+    "model.layers.6.self_attn.o_proj",
+    "model.layers.7.self_attn.q_proj",
+    "model.layers.7.self_attn.o_proj"
+  ]
+}

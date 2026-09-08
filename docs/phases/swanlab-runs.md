@@ -39,3 +39,9 @@ Workspace 固定为 `@richliu0153`。完整 URL 形如 `https://swanlab.cn/@rich
 - ~~P02 的 `swanlab-url.txt` 只存在于 `stage5/p02-dense-pretrain-full`，`main` 的 `registry.csv` 尚无 P02 行~~（2026-09-03 已修）：`main` 的 registry 已补 P02 行（`completed`），实验目录也已随合并 commit `6e1c67e` 进入 main，`swanlab-url.txt` 可直接打开。
 - ~~P03 目录没有 `swanlab-url.txt`，`registry.csv` 也无 P03 行~~（2026-09-03 部分修）：`main` 的 registry 已补 P03 行（`awaiting-report`，lab_commit `222e39c9…`，时间取自 `formal-b32-a1-epoch1/attempts/20260901T080746Z-542788/exit-status.json`），P03 目录也已随合并 commit `90a5c12` 进入 main；但目录仍只有 `README.md`/`command.sh`/`config.json`/`eval/`，缺 `report.md`/`run.json`/`metrics.csv`/`swanlab-url.txt`，三条 run URL 仍只能从 artifacts 日志与本地 `swanlog/` 回读。Phase 1 收口必须回填。
 - ~~P01 使用 project `MiniMind-Lab-Stage3`~~（2026-09-03 已修正认知）：P01/P02 的 run 已于 2026-09-01（stage5 收口 commit `5761979`）同步到统一 project `MiniMind-Lab`，因此现存所有 run 同 project、可在 SwanLab 界面叠图；`main` 之前只是没有同步这一修正，现已回填到 P01 的 `swanlab-url.txt`、`run.json`、`report.md` 与 registry。旧 run id 作为 `source_swanlab_run_id` 保留。
+
+## Phase 3 完整记录（2026-09-08）
+
+- L00-code-baseline-20260907: n/a-no-training / https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/980w5n9d
+- L01-code-full-ft-20260907: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/pz1x0ux9 / https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/gtetdf4e
+- L02-code-lora-r16-20260907: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/s0l5ishg / https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/8z9jka3t

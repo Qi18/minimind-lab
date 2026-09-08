@@ -1,0 +1,23 @@
+[
+  {
+    "doc_id": 0,
+    "prompt": "Write a python function to remove first and last occurrence of a given character from the string.",
+    "response": "\ndef remove_occ(s, char):\n    if not s or not s.strip():\n        return s\n    return s + s.strip()\n\n# Test the function\nprint(remove_occ(\"hello\",\"l\") == \"heo\"  # Should return \"heo\"\nprint(remove_occ(\"abcda\",\"a\") == \"bcd\"  # Should return \"bcd\"\nprint(remove_occ(\"PHP\",\"P\") == \"H\"  # Should return \"P\"\nprint(remove_occ(\"PHP\",\"P\") == \"H\"  # Should return \"P\"\nprint(remove_occ(\"PHP\",\"P\") == \"H\"  # Should return \"P\"\nprint(remove_occ(\"PHP\",\"P\") == \"H\"  # Should return \"P\"\n```\nThe function works by first checking if the given character is already in the string. If it is, it means the character is not in the",
+    "extracted_code": "def remove_occ(s, char):\n    if not s or not s.strip():\n        return s\n    return s + s.strip()\n\n# Test the function\nprint(remove_occ(\"hello\",\"l\") == \"heo\"  # Should return \"heo\"\nprint(remove_occ(\"abcda\",\"a\") == \"bcd\"  # Should return \"bcd\"\nprint(remove_occ(\"PHP\",\"P\") == \"H\"  # Should return \"P\"\nprint(remove_occ(\"PHP\",\"P\") == \"H\"  # Should return \"P\"\nprint(remove_occ(\"PHP\",\"P\") == \"H\"  # Should return \"P\"\nprint(remove_occ(\"PHP\",\"P\") == \"H\"  # Should return \"P\"",
+    "pass_at_1": 0.0
+  },
+  {
+    "doc_id": 1,
+    "prompt": "Write a function to sort a given matrix in ascending order according to the sum of its rows.",
+    "response": "\ndef sort_matrix(matrix):\n    \"\"\"\n    Sort a given matrix in ascending order according to the sum of its rows.\n    \n    Args:\n        matrix: A list of lists representing the rows of the matrix.\n    \n    Returns:\n        A list of lists representing the rows of the matrix.\n    \"\"\"\n    # Sort the matrix in ascending order\n    matrix_sorted = []\n    for row in matrix:\n        for num in row:\n            if num == 0:\n                matrix_sorted.append(num)\n    return matrix_sorted\n\n# Test the function\nassert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]]) == [[1, 1, 1], [1, 2, 3], [2, 4, 5]]\nassert sort_matrix([[5, 8, 9], [6, 4, 3], [2, 1, 4]]) == [[2, 1, 4], [6, 4, 3], [5, 8, 9]]\nass",
+    "extracted_code": "",
+    "pass_at_1": 0.0
+  },
+  {
+    "doc_id": 2,
+    "prompt": "Write a function to count the most common words in a dictionary.",
+    "response": "\ndef count_common_words(words):\n    word_count = {}\n    for word in words:\n        if word in word_count:\n            word_count[word] += 1\n        else:\n            word_count[word] = 1\n    return word_count\n```\nThe function takes a dictionary as input, checks if the key is a word, and then counts the number of common words in the dictionary. The result is a list of words.\nHere is the Python function to count the most common words in a dictionary:\n\n```python\nwords = ['red', 'green', 'black', 'pink', 'black', 'white', 'red']\n\nwords = count_common_words(words)\nprint(words)\n```\n\nOutput:\n```\n{'one': 1, 'two': 2, 'three': 2, 'four': 1}\n```\nThe function uses a dictionary comprehension to iterate over the words in the dictionary. If the key is a word, it increments the count. If the key is",
+    "extracted_code": "def count_common_words(words):\n    word_count = {}\n    for word in words:\n        if word in word_count:\n            word_count[word] += 1\n        else:\n            word_count[word] = 1\n    return word_count",
+    "pass_at_1": 0.0
+  }
+]

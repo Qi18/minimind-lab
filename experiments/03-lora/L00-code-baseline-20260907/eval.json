@@ -1,0 +1,85 @@
+{
+  "experiment_id": "L00-code-baseline-20260907",
+  "status": "completed",
+  "mbpp_pass_at_1_percent": 0.4,
+  "mbpp_pass_count": 2,
+  "mbpp_test_count": 500,
+  "official_seven_percent": {
+    "ceval-valid": 23.25408618127786,
+    "cmmlu": 25.246071490243484,
+    "arc_easy": 34.34343434343434,
+    "piqa": 56.14798694232862,
+    "openbookqa": 28.000000000000004,
+    "hellaswag": 28.20155347540331,
+    "social_iqa": 35.823950870010236
+  },
+  "official_macro_percent": 33.002440471813976,
+  "ifeval_percent": {
+    "prompt_level_strict_acc": 17.375231053604438,
+    "inst_level_strict_acc": 29.97601918465228,
+    "prompt_level_loose_acc": 19.77818853974122,
+    "inst_level_loose_acc": 32.97362110311751
+  },
+  "behavior": {
+    "status": "completed",
+    "seed": 42,
+    "decoding": {
+      "do_sample": false,
+      "max_new_tokens": 192,
+      "open_thinking": false
+    },
+    "chat": {
+      "cases": 10,
+      "success_count": 8,
+      "success_rate": 0.8,
+      "format_cases": 6,
+      "format_success_count": 5,
+      "format_success_rate": 0.8333333333333334,
+      "refusal_anomaly_count": 0,
+      "repetition_anomaly_count": 1
+    },
+    "tool": {
+      "cases": 8,
+      "tool_selection_accuracy": 0.875,
+      "argument_validity_rate": 0.875,
+      "execution_success_rate": 0.875,
+      "final_answer_accuracy": 0.875,
+      "end_to_end_success_rate": 0.875,
+      "unfinished_rate": 0.0,
+      "invalid_tool_call_tag_count": 0
+    },
+    "samples_path": "eval/samples.jsonl"
+  },
+  "training": {},
+  "actual_assistant_targets": 0,
+  "mbpp_diagnostics": {
+    "empty_extraction_count": 336,
+    "extracted_syntax_error_count": 21,
+    "note": "Extraction failures count as failures in the fixed harness. Syntax validity does not imply correct code."
+  },
+  "sources": [
+    {
+      "path": "/data/artifacts/minimind-lab/L00-code-baseline-20260907/eval/mbpp-full/results_2026-09-07T14-18-58.527046.json",
+      "sha256": "f445983bdd9d3d76a3c202f2540b729bbe91e98843af3eb8e2dfddaa9550621a"
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/S10-ifeval-curriculum-v4-20260907/eval/official-seven-chat-template/results_2026-09-07T10-10-08.695454.json",
+      "sha256": "f9699443e8fb6e1b77314b8eaa27e1241df6f2f9a7b6344c1face3196ee8037e"
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/S10-ifeval-curriculum-v4-20260907/eval/ifeval-chat-template/results_2026-09-07T10-13-41.489185.json",
+      "sha256": "d47765c0b1a6233d53c77505d3f8f2a5b9550ae0e21e4eeaf49df587dba1c072"
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/S10-ifeval-curriculum-v4-20260907/eval/behavior/task_eval.json",
+      "sha256": "342e97a685e5c922d5c1089ad735b2d04dfe271ab54812100d87281901483d8e"
+    }
+  ],
+  "checkpoint_manifest": [
+    {
+      "path": "/data/artifacts/minimind-lab/S10-ifeval-curriculum-v4-20260907/checkpoints/s08_best_val_768.pth",
+      "bytes": 137684380,
+      "sha256": "46aeab66795795aa77d703f08d71b952fe98461040f4560e1301021540710131"
+    }
+  ]
+}

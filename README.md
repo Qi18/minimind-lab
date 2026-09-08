@@ -57,12 +57,15 @@ DPO、GRPO/CISPO 和 Agentic RL 默认从同一个 Full SFT 基线分支，避�
 | Pretrain full（P02） | Random | `pretrain_t2t` 8,468,827 行 | 285.78 min / 38.10 GPU-hours | 七项宏平均 30.91 | 相对 P01 -0.54 pp；官方口径参考 +0.12 pp | [run](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3i1muwq039fpfv89fq4ru) | L20 保留，SHA `7065a461` |
 | Pretrain v1（P03） | Random | `pretrain-v1-1b28/final-remix-v1` 2,313,483 行 / 1.280B targets | 46.37 min / 6.18 GPU-hours | 七项宏平均 31.52；共享 validation NLL 2.60432 | 相对 P02 +0.62 pp，相对 P01 +0.08 pp | [run](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/qdpjh47fjt98184oos4bl) | L20 保留，SHA `0cfb7fc8` |
 | Full SFT（S10 release） | S09 step 400 / P03 64M | `ifeval-curriculum-v4` 41,720 行 / 4.163M assistant targets | 7×L20，3 epochs / 1,116 steps / 3.73 min | IFEval prompt strict 17.38%，较 S09 +6.29 pp；Chat 8/10；Tool E2E 7/8 | 七项 chat-template macro 33.00，与 S09 持平；语言/关键词/长度仍有限 | [train](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/bxdob3rh) / [eval](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/encs5zuk) | L20 保留 release，SHA `46aeab66` |
-| LoRA | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
+| Full FT（L01） | S10 | CodeAlpaca 19,015行 / 4.820M实际targets | 94.65s / 0.15775 GPU-h | MBPP 0/500；val NLL 0.7577 | 七项32.48%；Chat7/10；格式3/6 | [train](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/pz1x0ux9) | CPFS；不替换S10 |
+| LoRA r16（L02） | S10 | 同L01 | 63.46s / 0.10576 GPU-h；峰值4,464MiB | MBPP 0/500；adapter 0.393M参数 | 七项32.67%；Chat8/10；格式5/6 | [train](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/s0l5ishg) | adapter约779KiB；不替换S10 |
 | DPO | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
 | GRPO / CISPO | Full SFT | 待填写 | 待填写 | 待评测 | 待评测 | 待填写 | 待填写 |
 | Agentic RL | Full SFT | 待填写 | 待填写 | Tool Success 待评测 | 待评测 | 待填写 | 待填写 |
 
 表格只填写已经完成并能追溯到实验目录的结果。
+
+[Phase 3 已收尾](docs/phases/phase3-lora.md)：LoRA本次更省资源，但两组代码正确率均无提升；这是负结果，不作为代码能力提升的简历结论。
 
 当前结论：P03 的数据利用率和共享 validation 明显优于 P02，并作为 SFT 主线 Base。S10 已作为 Phase 2 release checkpoint：独立 IFEval prompt strict 相对 S09 提升 6.29pp，七项 macro 保持稳定，Chat/格式/重复/Tool 继续过门；阶段状态为 accepted with limitations，因为绝对 IFEval 仍低，语言、关键词和长度约束尚未解决。
 
