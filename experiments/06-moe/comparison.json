@@ -1,0 +1,99 @@
+{
+  "protocol_equal": true,
+  "paired_docs_and_prompts_equal": 29638,
+  "resamples": 10000,
+  "bootstrap_seed": 42,
+  "method": "paired question bootstrap stratified by seven benchmarks; equal-weight benchmark macro; categorical multinomial equivalent resampling",
+  "limitations": "exploratory single-training-seed; CI describes question sampling only, not training seed variability; no multiplicity correction",
+  "tasks": {
+    "ceval-valid": {
+      "dense_percent": 23.476968796433876,
+      "moe_percent": 22.956909361069837,
+      "delta_pp": -0.5200594353640398,
+      "n": 1346,
+      "improved": 20,
+      "regressed": 27,
+      "paired_bootstrap_95ci_pp": [
+        -1.5601783060921248,
+        0.5200594353640415
+      ]
+    },
+    "cmmlu": {
+      "dense_percent": 25.211535140735624,
+      "moe_percent": 25.14246244171991,
+      "delta_pp": -0.06907269901571311,
+      "n": 11582,
+      "improved": 187,
+      "regressed": 195,
+      "paired_bootstrap_95ci_pp": [
+        -0.3971680193403557,
+        0.26765670868589186
+      ]
+    },
+    "arc_easy": {
+      "dense_percent": 28.619528619528616,
+      "moe_percent": 32.70202020202021,
+      "delta_pp": 4.082491582491592,
+      "n": 2376,
+      "improved": 294,
+      "regressed": 197,
+      "paired_bootstrap_95ci_pp": [
+        2.272727272727273,
+        5.892255892255893
+      ]
+    },
+    "piqa": {
+      "dense_percent": 53.0467899891186,
+      "moe_percent": 54.18933623503809,
+      "delta_pp": 1.1425462459194904,
+      "n": 1838,
+      "improved": 225,
+      "regressed": 204,
+      "paired_bootstrap_95ci_pp": [
+        -1.088139281828074,
+        3.3188248095756254
+      ]
+    },
+    "openbookqa": {
+      "dense_percent": 27.200000000000003,
+      "moe_percent": 26.6,
+      "delta_pp": -0.6000000000000014,
+      "n": 500,
+      "improved": 42,
+      "regressed": 45,
+      "paired_bootstrap_95ci_pp": [
+        -4.2,
+        3.0
+      ]
+    },
+    "hellaswag": {
+      "dense_percent": 28.141804421429995,
+      "moe_percent": 28.291177056363274,
+      "delta_pp": 0.1493726349332789,
+      "n": 10042,
+      "improved": 634,
+      "regressed": 619,
+      "paired_bootstrap_95ci_pp": [
+        -0.5476996614220275,
+        0.8464449312885879
+      ]
+    },
+    "social_iqa": {
+      "dense_percent": 34.5957011258956,
+      "moe_percent": 34.339815762538386,
+      "delta_pp": -0.25588536335721557,
+      "n": 1954,
+      "improved": 131,
+      "regressed": 136,
+      "paired_bootstrap_95ci_pp": [
+        -1.8935516888433983,
+        1.3817809621289663
+      ]
+    }
+  },
+  "macro_delta_pp": 0.5613418522296278,
+  "macro_95ci_pp": [
+    -0.16467080892856942,
+    1.2866344365409463
+  ]
+}

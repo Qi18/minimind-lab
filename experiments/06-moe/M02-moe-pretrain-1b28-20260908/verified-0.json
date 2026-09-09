@@ -1,0 +1,20 @@
+{
+  "active_padded_tokens_per_second": 208376.0295479592,
+  "active_training_seconds": 8526.67994420667,
+  "best_validation_loss": 2.6244659513143076,
+  "epoch": 1,
+  "event": "completed",
+  "final_validation_loss": 2.624546794838812,
+  "final_validation_perplexity": 13.798319299278516,
+  "final_validation_rows": 11525,
+  "final_validation_tokens": 6400000,
+  "micro_step": 18075,
+  "optimizer_step": 9038,
+  "padded_tokens": 1776755712,
+  "resolved_target_optimizer_steps": 9038,
+  "resolved_total_optimizer_steps": 9038,
+  "status": "epochs_complete",
+  "timestamp": "2026-09-08T18:08:49Z",
+  "training_loop_padded_tokens_per_second": 198771.37216512204,
+  "training_loop_wall_seconds": 8938.69017779897
+}

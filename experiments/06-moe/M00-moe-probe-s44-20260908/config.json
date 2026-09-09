@@ -1,0 +1,16 @@
+{
+  "seed": 44,
+  "arm": "moe",
+  "total_parameters": 198416640,
+  "nominal_active_parameters": 63936768,
+  "steps": 100,
+  "batch": 4,
+  "seq": 768,
+  "data_sha256": "91ec12f68f534ecbcfb3b5b97564cd427f2d764aa72ac0894d8f1a7c16043019",
+  "scheduler_denominator": 578371,
+  "init": "random same seed; architecture RNG consumption differs",
+  "precision": "FP32 params + BF16 autocast",
+  "gpu": "7",
+  "source_sha256": "ce8eec6c221bcc07b66587b5ff5416eb7aaff917f56ed5470e448c49cebcd90f",
+  "model_source_sha256": "ad98639db128d63f5591b80cc94ec8f7663c647f3fd6bef0efefd4a09621918f"
+}

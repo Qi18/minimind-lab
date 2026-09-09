@@ -1,0 +1,18 @@
+{
+  "experiment_id": "M00-dense-probe-s44-20260908",
+  "status": "probe-completed",
+  "steps": 100,
+  "total_parameters": 63912192,
+  "nominal_active_parameters": 63912192,
+  "valid_targets": 223021,
+  "validation_nll": 7.0548921005861835,
+  "validation_ppl": 1158.512461719906,
+  "steady_targets_per_second": 62602.244840385705,
+  "peak_memory_mib": 2362.55224609375,
+  "checkpoint_sha256": "b520f573197fdf4c114ac2177f8fd023abf5b0bd24e55bae2daa1c36affbb65e",
+  "checkpoint_strict_load": true,
+  "optimizer_roundtrip": true,
+  "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/zc825k5w",
+  "not_formal_training": true,
+  "routing_counts_include_padding": true
+}

@@ -13,7 +13,7 @@
 | 4 | DPO 偏好优化 | [phase4-dpo.md](phase4-dpo.md) | completed-not-promoted |
 | 5 | GRPO/CISPO 可验证强化学习 | [`phase5-verifiable-rl.md`](phase5-verifiable-rl.md) | completed-not-promoted |
 | 6 | Agent SFT 与 Agentic RL | [phase6-agentic-rl.md](phase6-agentic-rl.md) | completed-not-promoted：实验验收收尾，S10保留 |
-| 7 | Dense vs MoE | `phase7-moe.md` | 未开始 |
+| 7 | Dense vs MoE | [phase7-moe.md](phase7-moe.md) | completed-not-promoted：原生对照实验收尾 |
 | 8 | 蒸馏：off-policy 与 on-policy（依赖 MoE teacher） | `phase8-distill.md` | 未开始 |
 
 状态取值：未开始 / 进行中 / 待出具 / draft / accepted / accepted with limitations / 已跳过。报告出具或状态变化的当天更新本表。

@@ -1,0 +1,7 @@
+{
+  "mode": "CPU FP32 toy; top1 normalized weights",
+  "main_surrogate_router_grad_max": 2.3281146455111923e-10,
+  "aux_router_grad_max": 1.6346499251085334e-05,
+  "aux_finite_nonzero": true,
+  "interpretation": "top1 normalization cancels selected gate weight gradient; auxiliary balance term supplies routing gradient; not a silent algorithm fix"
+}

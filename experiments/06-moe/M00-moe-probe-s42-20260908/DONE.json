@@ -1,0 +1,18 @@
+{
+  "experiment_id": "M00-moe-probe-s42-20260908",
+  "status": "probe-completed",
+  "steps": 100,
+  "total_parameters": 198416640,
+  "nominal_active_parameters": 63936768,
+  "valid_targets": 223021,
+  "validation_nll": 7.162615083160774,
+  "validation_ppl": 1290.2807162273482,
+  "steady_targets_per_second": 30681.1233188272,
+  "peak_memory_mib": 4310.53759765625,
+  "checkpoint_sha256": "e11f54329b2292dc84e65771e3b7298a625027723b395646c5e7d95a34b49493",
+  "checkpoint_strict_load": true,
+  "optimizer_roundtrip": true,
+  "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/zn6tg5eb",
+  "not_formal_training": true,
+  "routing_counts_include_padding": true
+}

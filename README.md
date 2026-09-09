@@ -92,3 +92,7 @@ cd minimind-lab
 未经评测或无法复现的数字不进入 README 和简历。
 
 [Phase6已按completed-not-promoted收尾](docs/phases/phase6-agentic-rl.md)：CISPO在单seed合成任务中有专项收益，但旧Tool未达7/8门槛；通用回归已完整执行，不替换S10。
+
+## Phase7 最新结果
+
+Dense/MoE同数据预算原生对照已收尾：七项macro 31.47% / 32.03%，差+0.56pp且配对95%CI跨0；MoE验证NLL略差、训练循环耗时多约40%。结论为completed-not-promoted，S10保持release。[完整报告](docs/phases/phase7-moe.md)。

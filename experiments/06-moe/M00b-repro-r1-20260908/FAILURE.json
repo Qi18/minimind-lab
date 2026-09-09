@@ -1,0 +1,4 @@
+{
+  "error": "0.0016481010243296623",
+  "traceback": "Traceback (most recent call last):\n  File \"/data/projects/minimind-lab/scripts/launch/start_phase7_formal.py\", line 118, in <module>\n    try:main()\n  File \"/data/projects/minimind-lab/scripts/launch/start_phase7_formal.py\", line 111, in main\n    gates[arm]=compare(continuous,interrupted);dump(A/'resume-gates.json',gates)\n  File \"/data/projects/minimind-lab/scripts/launch/start_phase7_formal.py\", line 87, in compare\n    walk(x['model'],y['model']);walk(x['optimizer'],y['optimizer'])\n  File \"/data/projects/minimind-lab/scripts/launch/start_phase7_formal.py\", line 82, in walk\n    for k in a:walk(a[k],b[k])\n  File \"/data/projects/minimind-lab/scripts/launch/start_phase7_formal.py\", line 77, in walk\n    assert torch.allclose(a,b,atol=1e-6,rtol=1e-6),err\nAssertionError: 0.0016481010243296623\n"
+}

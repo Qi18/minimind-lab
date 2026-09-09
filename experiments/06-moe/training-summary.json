@@ -1,0 +1,256 @@
+{
+  "dense": {
+    "experiment_id": "M01-dense-pretrain-1b28-20260908",
+    "training_swanlab": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/nyy90ef5",
+    "evaluation_swanlab": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/opixiuyd",
+    "checkpoint": {
+      "arm": "dense",
+      "checkpoint": "/data/artifacts/minimind-lab/phase7-formal-r3-20260908/dense-formal/weights/model_768.pth",
+      "checkpoint_sha256": "93d5263bb4d07d0c2aa07e220ce752c15011e825ccc2d9dd2b73fc07f7636599",
+      "selection": "fixed final epoch-end, not best validation",
+      "model_class": "MiniMindForCausalLM native",
+      "use_moe": false,
+      "parameters": 63912192,
+      "dtype": "torch.float16",
+      "tasks": [
+        "ceval-valid",
+        "cmmlu",
+        "arc_easy",
+        "piqa",
+        "openbookqa",
+        "hellaswag",
+        "social_iqa"
+      ],
+      "fewshot": 0,
+      "apply_chat_template": false,
+      "batch_size": 16,
+      "max_length": 32768,
+      "seed": 42,
+      "limit": null,
+      "tokenizer_sha256": "71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668",
+      "model_source_sha256": "ad98639db128d63f5591b80cc94ec8f7663c647f3fd6bef0efefd4a09621918f",
+      "eval_source_sha256": "f159733aa3ed694c77176abd92196fd8041097b297764a438e2de516b10c936d",
+      "lm_eval_version": "0.4.12",
+      "gpu": "4",
+      "adapter_logits_exact": true,
+      "add_bos_token": false
+    },
+    "completed": {
+      "active_padded_tokens_per_second": 293792.8673852677,
+      "active_training_seconds": 6047.647540980077,
+      "best_validation_loss": 2.6067958038792574,
+      "epoch": 1,
+      "event": "completed",
+      "final_validation_loss": 2.6068877721399257,
+      "final_validation_perplexity": 13.556793298575311,
+      "final_validation_rows": 11525,
+      "final_validation_tokens": 6400000,
+      "micro_step": 18075,
+      "optimizer_step": 9038,
+      "padded_tokens": 1776755712,
+      "resolved_target_optimizer_steps": 9038,
+      "resolved_total_optimizer_steps": 9038,
+      "status": "epochs_complete",
+      "timestamp": "2026-09-08T15:39:38Z",
+      "training_loop_padded_tokens_per_second": 279089.13605624274,
+      "training_loop_wall_seconds": 6366.266122383007
+    },
+    "max_peak_memory_mib": 12959.0654296875,
+    "logged_valid_targets": 1280000754,
+    "validation_curve": [
+      {
+        "step": 1000,
+        "nll": 3.156131840849668
+      },
+      {
+        "step": 2000,
+        "nll": 2.941019661331866
+      },
+      {
+        "step": 3000,
+        "nll": 2.8396244009430704
+      },
+      {
+        "step": 4000,
+        "nll": 2.7693640195266904
+      },
+      {
+        "step": 5000,
+        "nll": 2.7159395399145594
+      },
+      {
+        "step": 6000,
+        "nll": 2.6743372519060595
+      },
+      {
+        "step": 7000,
+        "nll": 2.641376214445066
+      },
+      {
+        "step": 8000,
+        "nll": 2.619446861849446
+      },
+      {
+        "step": 9000,
+        "nll": 2.6067958038792574
+      },
+      {
+        "step": 9038,
+        "nll": 2.6068877721399257
+      }
+    ],
+    "eval": {
+      "arm": "dense",
+      "results_percent": {
+        "ceval-valid": 23.476968796433876,
+        "cmmlu": 25.211535140735624,
+        "arc_easy": 28.619528619528616,
+        "piqa": 53.0467899891186,
+        "openbookqa": 27.200000000000003,
+        "hellaswag": 28.141804421429995,
+        "social_iqa": 34.5957011258956
+      },
+      "macro_percent": 31.470332584734617,
+      "effective_samples": {
+        "ceval-valid": 1346,
+        "cmmlu": 11582,
+        "arc_easy": 2376,
+        "piqa": 1838,
+        "openbookqa": 500,
+        "hellaswag": 10042,
+        "social_iqa": 1954
+      },
+      "total_samples": 29638,
+      "checkpoint_unchanged": true,
+      "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/opixiuyd",
+      "postprocessing_fix": "aggregate C-Eval/CMMLU leaf counts; original inference artifacts unchanged"
+    }
+  },
+  "moe": {
+    "experiment_id": "M02-moe-pretrain-1b28-20260908",
+    "training_swanlab": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/uvoc97pz",
+    "evaluation_swanlab": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/dxfvjdxy",
+    "checkpoint": {
+      "arm": "moe",
+      "checkpoint": "/data/artifacts/minimind-lab/phase7-formal-r3-20260908/moe-formal/weights/model_768_moe.pth",
+      "checkpoint_sha256": "b5e52b34165e3ab75cd70c8b66dd24c0ef9f7bdf1ca6cc78f89976cb284d1cf7",
+      "selection": "fixed final epoch-end, not best validation",
+      "model_class": "MiniMindForCausalLM native",
+      "use_moe": true,
+      "parameters": 198416640,
+      "dtype": "torch.float16",
+      "tasks": [
+        "ceval-valid",
+        "cmmlu",
+        "arc_easy",
+        "piqa",
+        "openbookqa",
+        "hellaswag",
+        "social_iqa"
+      ],
+      "fewshot": 0,
+      "apply_chat_template": false,
+      "batch_size": 16,
+      "max_length": 32768,
+      "seed": 42,
+      "limit": null,
+      "tokenizer_sha256": "71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668",
+      "model_source_sha256": "ad98639db128d63f5591b80cc94ec8f7663c647f3fd6bef0efefd4a09621918f",
+      "eval_source_sha256": "f159733aa3ed694c77176abd92196fd8041097b297764a438e2de516b10c936d",
+      "lm_eval_version": "0.4.12",
+      "gpu": "5",
+      "adapter_logits_exact": true,
+      "add_bos_token": false
+    },
+    "completed": {
+      "active_padded_tokens_per_second": 208376.0295479592,
+      "active_training_seconds": 8526.67994420667,
+      "best_validation_loss": 2.6244659513143076,
+      "epoch": 1,
+      "event": "completed",
+      "final_validation_loss": 2.624546794838812,
+      "final_validation_perplexity": 13.798319299278516,
+      "final_validation_rows": 11525,
+      "final_validation_tokens": 6400000,
+      "micro_step": 18075,
+      "optimizer_step": 9038,
+      "padded_tokens": 1776755712,
+      "resolved_target_optimizer_steps": 9038,
+      "resolved_total_optimizer_steps": 9038,
+      "status": "epochs_complete",
+      "timestamp": "2026-09-08T18:08:49Z",
+      "training_loop_padded_tokens_per_second": 198771.37216512204,
+      "training_loop_wall_seconds": 8938.69017779897
+    },
+    "max_peak_memory_mib": 16741.8330078125,
+    "logged_valid_targets": 1280000754,
+    "validation_curve": [
+      {
+        "step": 1000,
+        "nll": 3.224474469394125
+      },
+      {
+        "step": 2000,
+        "nll": 2.9978261308748273
+      },
+      {
+        "step": 3000,
+        "nll": 2.8821447766293398
+      },
+      {
+        "step": 4000,
+        "nll": 2.809274881847482
+      },
+      {
+        "step": 5000,
+        "nll": 2.748204030111171
+      },
+      {
+        "step": 6000,
+        "nll": 2.7007128149958888
+      },
+      {
+        "step": 7000,
+        "nll": 2.663724596212525
+      },
+      {
+        "step": 8000,
+        "nll": 2.6388023903012834
+      },
+      {
+        "step": 9000,
+        "nll": 2.6244659513143076
+      },
+      {
+        "step": 9038,
+        "nll": 2.624546794838812
+      }
+    ],
+    "eval": {
+      "arm": "moe",
+      "results_percent": {
+        "ceval-valid": 22.956909361069837,
+        "cmmlu": 25.14246244171991,
+        "arc_easy": 32.70202020202021,
+        "piqa": 54.18933623503809,
+        "openbookqa": 26.6,
+        "hellaswag": 28.291177056363274,
+        "social_iqa": 34.339815762538386
+      },
+      "macro_percent": 32.031674436964245,
+      "effective_samples": {
+        "ceval-valid": 1346,
+        "cmmlu": 11582,
+        "arc_easy": 2376,
+        "piqa": 1838,
+        "openbookqa": 500,
+        "hellaswag": 10042,
+        "social_iqa": 1954
+      },
+      "total_samples": 29638,
+      "checkpoint_unchanged": true,
+      "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/dxfvjdxy",
+      "postprocessing_fix": "aggregate C-Eval/CMMLU leaf counts; original inference artifacts unchanged"
+    }
+  }
+}

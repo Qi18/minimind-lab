@@ -1,0 +1,26 @@
+{
+  "arm": "dense",
+  "results_percent": {
+    "ceval-valid": 23.476968796433876,
+    "cmmlu": 25.211535140735624,
+    "arc_easy": 28.619528619528616,
+    "piqa": 53.0467899891186,
+    "openbookqa": 27.200000000000003,
+    "hellaswag": 28.141804421429995,
+    "social_iqa": 34.5957011258956
+  },
+  "macro_percent": 31.470332584734617,
+  "effective_samples": {
+    "ceval-valid": 1346,
+    "cmmlu": 11582,
+    "arc_easy": 2376,
+    "piqa": 1838,
+    "openbookqa": 500,
+    "hellaswag": 10042,
+    "social_iqa": 1954
+  },
+  "total_samples": 29638,
+  "checkpoint_unchanged": true,
+  "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/opixiuyd",
+  "postprocessing_fix": "aggregate C-Eval/CMMLU leaf counts; original inference artifacts unchanged"
+}

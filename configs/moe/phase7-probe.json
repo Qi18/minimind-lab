@@ -1,0 +1,25 @@
+{
+  "phase": 7,
+  "role": "architecture-probe",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "steps": 100,
+  "per_gpu_batch": 4,
+  "seq": 768,
+  "device": "GPU7 sequential paired",
+  "data": "P03 accepted final-remix-v1 10 rows per train shard, 64 validation prefix rows",
+  "formal_budget": "pending probe; intended full same 1.28B targets",
+  "release": "S10 unchanged",
+  "scope": "probe only; no formal quality claim",
+  "gates": [
+    "finite loss/gradients",
+    "identical token tensors within seed",
+    "strict checkpoint/optimizer roundtrip",
+    "total vs nominal active parameters",
+    "router loads and aux loss",
+    "no interference with resident GPUs0/1"
+  ]
+}

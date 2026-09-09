@@ -1,0 +1,20 @@
+{
+  "dense": {
+    "tensor_count": 361,
+    "max_abs_error": 0.0,
+    "allclose_atol": 1e-06,
+    "allclose_rtol": 1e-06,
+    "real_sigterm_step": 6,
+    "resumed_to": 12,
+    "continuous_to": 12
+  },
+  "moe": {
+    "tensor_count": 681,
+    "max_abs_error": 0.0,
+    "allclose_atol": 1e-06,
+    "allclose_rtol": 1e-06,
+    "real_sigterm_step": 6,
+    "resumed_to": 12,
+    "continuous_to": 12
+  }
+}

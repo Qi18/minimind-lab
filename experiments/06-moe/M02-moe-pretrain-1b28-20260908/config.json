@@ -1,0 +1,47 @@
+{
+  "phase": 7,
+  "formal_ids": [
+    "M01-dense-pretrain-1b28-20260908",
+    "M02-moe-pretrain-1b28-20260908"
+  ],
+  "gpu_ids": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "world_size": 4,
+  "batch_size": 32,
+  "accumulation_steps": 2,
+  "global_sequence_batch": 256,
+  "sequence_length": 768,
+  "epochs": 1,
+  "seed": 42,
+  "optimizer": "AdamW defaults wd0.01",
+  "lr": 0.0005,
+  "scheduler_optimizer_steps": 9038,
+  "dataset_root": "/data/datasets/minimind-lab/data-v1/pretrain-v1-1b28/final-remix-v1",
+  "unique_targets": 1280000000,
+  "sampler_note": "DDP pads 1 row at world4 (2313484 exposures); both arms identical, actual target exposure logged",
+  "validation_rows": 11525,
+  "validation_targets": 6400000,
+  "precision": "FP32 master BF16 autocast TF32 off",
+  "checkpoint_selection": "fixed final; best validation kept separately, not substituted",
+  "formal_gate": [
+    "4-rank allreduce and train",
+    "continuous12 vs SIGTERM6 plus resume12 weights and optimizer allclose1e-6",
+    "same-profile full-data100 steps each arm with full validation and strict load",
+    "idle GPUs lock and fresh output",
+    "no model promotion from probes"
+  ],
+  "runs_sequential_same_hardware": true,
+  "recipe_scope": "native top1 normalized MoE; router gradient mainly auxiliary; CE+aux and padded routing logged separately",
+  "deterministic_algorithms": true,
+  "cublas_workspace_config": ":4096:8",
+  "attempt": "r3",
+  "ddp_find_unused_parameters": true,
+  "ddp_bucket_cap_mb": 1024,
+  "nccl_algo": "Ring",
+  "nccl_proto": "Simple",
+  "reason": "disable DDP bucket rebuild to align continuous and restarted reduction layout"
+}

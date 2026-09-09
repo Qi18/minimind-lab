@@ -111,3 +111,34 @@ Workspace 固定为 `@richliu0153`。完整 URL 形如 `https://swanlab.cn/@rich
 - A02-general-regression-20260908: n/a-local-only-no-upload；完整证据见实验目录。
 - A03-general-regression-20260908: n/a-local-only-no-upload；完整证据见实验目录。
 - A00-A03-general-regression-20260908: n/a-local-only-no-upload；完整证据见实验目录。
+
+## Phase6 SwanLab 补传完成（2026-09-08）
+
+6个历史指标记录已获用户授权补传至MiniMind-Lab；云端均为FINISHED，282项指标回读一致。
+仅上传指标/元信息，不上传权重、数据集或完整逐题文本；不改变completed-not-promoted结论。
+
+- A02-A03-rl-v2-summary-20260908: [SwanLab](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/563ab2ac)
+- A00-A03-general-regression-20260908: [SwanLab](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/79f294dc)
+- A00-s10-general-regression-20260908: [SwanLab](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/0cb93996)
+- A01-general-regression-20260908: [SwanLab](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/da935c86)
+- A02-general-regression-20260908: [SwanLab](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/c74379f7)
+- A03-general-regression-20260908: [SwanLab](https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/a739ed89)
+
+## Phase7 M00架构探针
+
+- M00-dense-probe-s42-20260908: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/qtfry4f7
+- M00-moe-probe-s42-20260908: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/zn6tg5eb
+- M00-moe-probe-s43-20260908: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/nkxulnb9
+- M00-dense-probe-s43-20260908: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/lqpjih38
+- M00-dense-probe-s44-20260908: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/zc825k5w
+- M00-moe-probe-s44-20260908: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3dv7s2og
+
+## Phase7 正式训练
+
+- M01-dense-pretrain-1b28-20260908（completed）：https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/nyy90ef5
+- M02-moe-pretrain-1b28-20260908（completed）：https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/uvoc97pz
+
+### Phase7最终评测（均FINISHED）
+
+- M01-dense-pretrain-1b28-20260908：训练 https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/nyy90ef5；评测 https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/opixiuyd
+- M02-moe-pretrain-1b28-20260908：训练 https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/uvoc97pz；评测 https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/dxfvjdxy
