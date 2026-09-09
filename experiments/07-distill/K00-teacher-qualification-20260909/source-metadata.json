@@ -1,0 +1,20 @@
+{
+  "repository": "gongjy/minimind-3-pytorch",
+  "revision": "24a40130901f5229e841b41f0c070ebd95f3631d",
+  "file": {
+    "CommitMessage": "update weight",
+    "CommittedDate": 1774933474,
+    "CommitterName": "gongjy",
+    "InCheck": false,
+    "IsLFS": true,
+    "Mode": "33188",
+    "Name": "full_sft_768_moe.pth",
+    "Path": "full_sft_768_moe.pth",
+    "Revision": "24a40130901f5229e841b41f0c070ebd95f3631d",
+    "Sha256": "a050020ea6d1b9e824693d0db525b1a0a8b40f36a934ea8d89da161368f20cc1",
+    "Size": 406719725,
+    "Type": "blob"
+  },
+  "tokenizer_source_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",
+  "published_variant": "full_sft"
+}

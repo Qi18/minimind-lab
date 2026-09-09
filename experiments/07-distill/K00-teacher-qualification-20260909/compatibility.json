@@ -1,0 +1,27 @@
+{
+  "status": "compatibility-passed-not-quality-qualified",
+  "arms": {
+    "student": {
+      "checkpoint": "/data/artifacts/minimind-lab/S10-ifeval-curriculum-v4-20260907/checkpoints/s08_best_val_768.pth",
+      "sha256": "46aeab66795795aa77d703f08d71b952fe98461040f4560e1301021540710131",
+      "strict_load": true,
+      "finite_cpu_forward": true,
+      "parameters": 63912192
+    },
+    "teacher": {
+      "checkpoint": "/data/artifacts/minimind-lab/phase8-k00-teacher-gate-20260909/full_sft_768_moe.pth",
+      "sha256": "a050020ea6d1b9e824693d0db525b1a0a8b40f36a934ea8d89da161368f20cc1",
+      "strict_load": true,
+      "finite_cpu_forward": true,
+      "parameters": 198416640
+    }
+  },
+  "tokenizer_semantics_equal": true,
+  "tokenizer_source_commit": "393e387e9ad99f0f04c296e4c5e7353f4444629f",
+  "tokenizer_files_sha256": {
+    "tokenizer.json": "71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668",
+    "tokenizer_config.json": "d7cd6a60c9f191c4f9ffec69b2eb289ad2f960366724f328b681ae1e46e4c110"
+  },
+  "teacher_tokenizer_provenance": "official PyTorch checkpoint interpreted with pinned official MiniMind tokenizer; pth does not embed tokenizer",
+  "quality_gate": "pending fresh paired fixed instruction evaluation; no distillation authorized by compatibility alone"
+}
