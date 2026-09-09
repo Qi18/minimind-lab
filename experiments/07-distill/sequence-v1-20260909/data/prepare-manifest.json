@@ -1,0 +1,24 @@
+{
+  "status": "prompts-frozen",
+  "seed": 20260909,
+  "counts": {
+    "validation": 512,
+    "test": 512,
+    "train": 8192
+  },
+  "cross_split_normalized_overlap": 0,
+  "frozen_ifeval_behavior_and_s10_heldout_normalized_overlap": 0,
+  "near_duplicate_limit": "exact and NFKC/alphanumeric normalized scan only; same verifier family intentionally reused",
+  "training_prior_exposure": "broad replay may have appeared in S10; newly numbered constraint prompts not copied from IFEval",
+  "files": {
+    "candidates.jsonl": "0b537e4f12a4dde857e2c1be8cacf6a0ff92939c66c82c5898fb5feec4e446a5",
+    "test.jsonl": "2ba045655bfceec97d36e2690c5a469856ff2770aab273093930666fb8aef852",
+    "validation.jsonl": "1bffe05ffa77f8425ee4be01a89e7509fc05ad883dded66c64736deaf60045a4"
+  },
+  "source_sha": {
+    "builder": "7ef25a4ddfb5b280cb1084f58a58c0165069f6387740562864c6341070ed601c",
+    "curriculum": "d4813a048c99f10cc5499f17b35011956900255a7ba1e8dc577fc422f7ab59bc",
+    "broad_train": "6250d9548898ac1ebabd23f80560775c16f065a4ac85f5a2deb11f35ac6c61d8"
+  },
+  "broad_answers_verified": "structural only, no claim all factual answers correct"
+}

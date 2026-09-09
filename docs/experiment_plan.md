@@ -586,3 +586,16 @@ experiments/<stage>/<experiment-id>/
 每完成一个 Phase，先把对应的 `docs/phases/` 阶段报告与实验资产合入 main，再执行下一条。
 
 优先形成五条可量化结论：P03 数据管线相对 P02 的收益；官方 SFT 数据能达到的能力上限以及自建数据是否必要；SFT 带来的能力与遗忘；DPO/GRPO 的独立增益；Agentic RL 相对 Agent SFT 的端到端任务收益。项目成果不是“跑过多少脚本”，而是每条结论能否从代码、数据、SwanLab、checkpoint 和固定评测相互追溯。
+
+## Phase8 执行修订（2026-09-09）
+
+用户授权使用 Qwen3-8B 教师实施蒸馏。当前 K01/K02 采用序列答案 CE 对照，
+替代本轮原定同词表 KL 路径；token-KL / OPD 尚未实施，不宣称完成。
+详见 [冻结的执行预注册](phases/phase8-sequence-v1-preregister.md) 和
+[Phase8 当前状态](phases/phase8-distill.md)。验收前 S10 仍是 release。
+
+## Phase8 收口决定（2026-09-09）
+
+用户决定停止扩展本阶段：序列蒸馏K01/K02已完成并按负结果归档，S10保留。
+历史方案中的白盒KL、K03/K04与OPD暂缓且未实施；不再自动启动。
+项目可进入结果整理与简历展示，简历只列完成内容，不声称所有后训练都带来能力提升。

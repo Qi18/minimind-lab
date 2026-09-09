@@ -1,0 +1,21 @@
+{
+  "arm": "K01",
+  "checkpoint": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/train-K01/final.pth",
+  "checkpoint_sha256": "8cc48d5c28ecbc68b600264e4b12b1320a61d7792ff02d395a9f40b920f26b06",
+  "dtype": "float16",
+  "apply_chat_template": true,
+  "fewshot": 0,
+  "seed": 42,
+  "max_gen_toks_ifeval": 1280,
+  "max_gen_toks_new_constraints": 512,
+  "max_gen_toks_behavior": 192,
+  "source_sha256": "153e1c54a1ccfb955b5594688be4792aecd6a54a72cc1ad8b34f8dc3f9a3f6de",
+  "native_generator_source_sha256": "c1e17a3e9692016dd1f3462ca3e874a9e3350781036ce6390ed141ae3afaf8d3",
+  "model_source_sha256": "ad98639db128d63f5591b80cc94ec8f7663c647f3fd6bef0efefd4a09621918f",
+  "tokenizer_sha256": "71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668",
+  "config_sha256": "26566c09de5ba452aecf3481f729b9d437c3f9a669b4611c0283a312cc5c1465",
+  "lm_eval_version": "0.4.12",
+  "selection": "fixed-final",
+  "gpu": "0,1,2,3,4,5,6,7",
+  "parallelism": "8 independent GPU replicas; request round-robin; order restored; per GPU generation batch1 / likelihood batch16"
+}

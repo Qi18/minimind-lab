@@ -1,0 +1,11 @@
+{
+  "pid": 1504395,
+  "command": [
+    "/data/venvs/minimind-eval/bin/python",
+    "-u",
+    "/data/projects/minimind-lab/scripts/eval/run_phase8_qwen3_ifeval.py"
+  ],
+  "gpu": "6",
+  "log": "/data/artifacts/minimind-lab/phase8-k00-qwen3-8b-ifeval-20260909-launch.log",
+  "purpose": "IFEval qualification only, no training"
+}

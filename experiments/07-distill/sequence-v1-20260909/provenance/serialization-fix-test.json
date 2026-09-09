@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "types": [
+    "dtype",
+    "callable",
+    "numpy scalar",
+    "ndarray",
+    "tensor",
+    "nested numeric"
+  ],
+  "unknown_type_rejected": true
+}

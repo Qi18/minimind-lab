@@ -1,0 +1,62 @@
+{
+  "config": {
+    "name": "phase8-sequence-v1",
+    "seed": 20260909,
+    "data": "/data/datasets/minimind-lab/phase8-sequence-v1-20260909",
+    "artifacts": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909",
+    "teacher": "/data/models/Qwen3-8B",
+    "teacher_assets": "/data/artifacts/minimind-lab/phase8-k00-qwen3-8b-ifeval-20260909/model-assets.json",
+    "student": "/data/artifacts/minimind-lab/S10-ifeval-curriculum-v4-20260907/checkpoints/s08_best_val_768.pth",
+    "student_sha256": "46aeab66795795aa77d703f08d71b952fe98461040f4560e1301021540710131",
+    "s10_data": "/data/datasets/minimind-lab/data-v1/sft-ifeval-curriculum-v4",
+    "broad_data": "/data/datasets/minimind-lab/data-v1/sft-chat-repair-v2",
+    "max_seq_len": 768,
+    "max_assistant_tokens": 512,
+    "target_budget": 4194304,
+    "targets_per_update": 8192,
+    "micro_batch": 8,
+    "learning_rate": 3e-06,
+    "weight_decay": 0.01,
+    "gradient_clip": 1,
+    "eval_every": 100,
+    "selection": "fixed-final",
+    "precision": "FP32 master BF16 autocast",
+    "gpu_teacher": 6,
+    "gpu_K01": 4,
+    "gpu_K02": 5,
+    "scope": "sequence-level CE distillation; not token KL or OPD"
+  },
+  "arm": "K02",
+  "smoke": false,
+  "dataset": {
+    "status": "accepted-for-controlled-pilot-not-quality-certified",
+    "pairs": 4096,
+    "kinds": {
+      "constraint": 2048,
+      "broad": 2048
+    },
+    "targets_per_pass": {
+      "K01": 154835,
+      "K02": 670669
+    },
+    "train_prompt_ids_equal": true,
+    "truncation": 0,
+    "files": {
+      "K02-train.jsonl": "267341956462aa22ba6882339bba202bcdd58ce6ddd6320b0adf0c6e76d45ded",
+      "candidates.jsonl": "0b537e4f12a4dde857e2c1be8cacf6a0ff92939c66c82c5898fb5feec4e446a5",
+      "test.jsonl": "2ba045655bfceec97d36e2690c5a469856ff2770aab273093930666fb8aef852",
+      "teacher-answers.jsonl": "a35ff84033280e4f4c092c3e4058bbbc34a617be55037ac277ed07d170ec9425",
+      "validation.jsonl": "1bffe05ffa77f8425ee4be01a89e7509fc05ad883dded66c64736deaf60045a4",
+      "filter-audit.jsonl": "91bfa005c55557ad14796ee4a5d56560ce80ceb5d9786975705851cb79049491",
+      "K01-train.jsonl": "8b20ba34d5af2668298965228cb079cfece731f842dc0fa144c0b188bc35acc3"
+    },
+    "common_config_sha256": "26566c09de5ba452aecf3481f729b9d437c3f9a669b4611c0283a312cc5c1465"
+  },
+  "source_sha256": {
+    "scripts/launch/train_phase8_sequence.py": "e36ddc5c4d1ff74ccea873078ac722ef8f83d9faf69399c807207e8d4234903f",
+    "scripts/phase8_common.py": "475fddfe74f1a7fcdba2bae242943dc35c62a04e5a657e03a73e89884161964f",
+    "configs/distill/phase8-sequence-v1.json": "26566c09de5ba452aecf3481f729b9d437c3f9a669b4611c0283a312cc5c1465"
+  },
+  "student_sha256": "46aeab66795795aa77d703f08d71b952fe98461040f4560e1301021540710131",
+  "checkpoint_selection": "fixed-final"
+}

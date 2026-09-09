@@ -1,0 +1,116 @@
+{
+  "status": "completed-not-promoted-awaiting-review",
+  "arms": {
+    "S10": {
+      "status": "evaluated-not-promoted",
+      "arm": "S10",
+      "new_constraint_strict": 0.93359375,
+      "ifeval": {
+        "prompt_level_strict_acc,none": 0.18484288354898337,
+        "inst_level_strict_acc,none": 0.3117505995203837,
+        "prompt_level_loose_acc,none": 0.1977818853974122,
+        "inst_level_loose_acc,none": 0.3261390887290168
+      },
+      "seven": {
+        "ceval-valid": 23.25408618127786,
+        "cmmlu": 25.246071490243484,
+        "arc_easy": 34.301346801346796,
+        "piqa": 56.20239390642002,
+        "openbookqa": 28.000000000000004,
+        "hellaswag": 28.19159529974109,
+        "social_iqa": 35.823950870010236
+      },
+      "seven_macro_percent": 33.002777792719925,
+      "behavior": {
+        "chat_success": 8,
+        "format_success": 5,
+        "repetition_count": 1,
+        "tool_success": 7
+      },
+      "checkpoint_unchanged": true,
+      "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/6tzo7bb7",
+      "manual_broad_review_pending": true
+    },
+    "K01": {
+      "status": "evaluated-not-promoted",
+      "arm": "K01",
+      "new_constraint_strict": 0.9375,
+      "ifeval": {
+        "prompt_level_strict_acc,none": 0.18853974121996303,
+        "inst_level_strict_acc,none": 0.31534772182254195,
+        "prompt_level_loose_acc,none": 0.20517560073937152,
+        "inst_level_loose_acc,none": 0.3345323741007194
+      },
+      "seven": {
+        "ceval-valid": 24.219910846953937,
+        "cmmlu": 25.453289587290623,
+        "arc_easy": 33.92255892255892,
+        "piqa": 56.14798694232862,
+        "openbookqa": 27.6,
+        "hellaswag": 27.992431786496713,
+        "social_iqa": 35.312180143295805
+      },
+      "seven_macro_percent": 32.94976546127494,
+      "behavior": {
+        "chat_success": 9,
+        "format_success": 5,
+        "repetition_count": 0,
+        "tool_success": 6
+      },
+      "checkpoint_unchanged": true,
+      "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/7jzy9vey",
+      "manual_broad_review_pending": true
+    },
+    "K02": {
+      "status": "evaluated-not-promoted",
+      "arm": "K02",
+      "new_constraint_strict": 0.44921875,
+      "ifeval": {
+        "prompt_level_strict_acc,none": 0.14602587800369685,
+        "inst_level_strict_acc,none": 0.26258992805755393,
+        "prompt_level_loose_acc,none": 0.17005545286506468,
+        "inst_level_loose_acc,none": 0.29376498800959233
+      },
+      "seven": {
+        "ceval-valid": 22.808320950965825,
+        "cmmlu": 25.418753237782767,
+        "arc_easy": 33.5016835016835,
+        "piqa": 56.474428726877036,
+        "openbookqa": 28.599999999999998,
+        "hellaswag": 28.02230631348337,
+        "social_iqa": 35.67041965199591
+      },
+      "seven_macro_percent": 32.927987483255485,
+      "behavior": {
+        "chat_success": 8,
+        "format_success": 5,
+        "repetition_count": 1,
+        "tool_success": 6
+      },
+      "checkpoint_unchanged": true,
+      "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/mt9l6ao6",
+      "manual_broad_review_pending": true
+    }
+  },
+  "constraint_delta_K02_K01_pp": -48.828125,
+  "constraint_paired_bootstrap95ci_pp": [
+    -55.078125,
+    -42.578125
+  ],
+  "numerical_gates": {
+    "independent_constraint_gain_ci_positive": false,
+    "ifeval_vs_S10_nonregression": false,
+    "seven_vs_S10_within_1pp": true,
+    "chat": true,
+    "format": true,
+    "repeat": true,
+    "tool": false
+  },
+  "numerical_pass": false,
+  "manual_broad_review_pending": true,
+  "training_seed_count": 1,
+  "no_automatic_promotion": true,
+  "no_commit_or_push": true,
+  "scope": "sequence-level CE distillation, not KL/OPD",
+  "limitations": "same verifier family; finite heldout; IFEval used for teacher selection; token-matched but row exposure differs"
+}

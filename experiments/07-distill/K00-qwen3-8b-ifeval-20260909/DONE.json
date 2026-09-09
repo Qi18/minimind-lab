@@ -1,0 +1,16 @@
+{
+  "status": "completed-instruction-eval-only",
+  "samples": 541,
+  "scores": {
+    "prompt_level_strict_acc,none": 0.8096118299445472,
+    "inst_level_strict_acc,none": 0.8705035971223022,
+    "prompt_level_loose_acc,none": 0.8465804066543438,
+    "inst_level_loose_acc,none": 0.894484412470024
+  },
+  "generation_length_mean_tokens": 344.19593345656193,
+  "at_length_cap": 23,
+  "model_unchanged": true,
+  "total_seconds": 4983.2612217999995,
+  "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/fjfxv8yz",
+  "not_a_distillation_result": true
+}

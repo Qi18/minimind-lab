@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "single_nll": 2.2968835830688477,
+  "right_padded_nll": 2.296880006790161,
+  "label_shift": "labels[:,1:]",
+  "eos_supervised": true,
+  "truncation": 0
+}

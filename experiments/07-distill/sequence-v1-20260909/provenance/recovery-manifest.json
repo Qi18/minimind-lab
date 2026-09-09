@@ -1,0 +1,10 @@
+{
+  "reason": "JSON serialization dtype/function failures",
+  "archive": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1",
+  "training_repeated": false,
+  "sources": {
+    "scripts/phase8_common.py": "eba9a5f80a21238694acd397c259d3234d298ee776a1a3052a96ab4d5885147a",
+    "scripts/eval/eval_phase8_sequence.py": "97a8d8bd6868304a7baabbda5bd320eaa44f8fa16af95e0d000aabcf1ad39995",
+    "scripts/launch/recover_phase8_sequence_eval.py": "de234aaba55fe7adde8a7232386533073f8106ed85674be22c49f8e7e17a0735"
+  }
+}

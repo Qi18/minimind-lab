@@ -1,0 +1,9 @@
+{
+  "status": "completed-negative-not-promoted",
+  "numerical_pass": false,
+  "release": "S10",
+  "whitebox": "deferred-not-implemented",
+  "opd": "deferred-not-implemented",
+  "broad_manual_review": "not-completed-not-required-for-negative-archive",
+  "evidence": "comparison.json"
+}

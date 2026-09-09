@@ -1,0 +1,11 @@
+{
+  "configs/distill/phase8-sequence-v1.json": "26566c09de5ba452aecf3481f729b9d437c3f9a669b4611c0283a312cc5c1465",
+  "scripts/phase8_common.py": "475fddfe74f1a7fcdba2bae242943dc35c62a04e5a657e03a73e89884161964f",
+  "scripts/data/finalize_phase8_sequence.py": "590efb055e9155f7a1a28ecc34bb0b1031c0534fa383e6d074d4351a68dd3b99",
+  "scripts/data/prepare_phase8_sequence.py": "7ef25a4ddfb5b280cb1084f58a58c0165069f6387740562864c6341070ed601c",
+  "scripts/data/generate_phase8_sequence.py": "08b7c159da5dbd7aafe7ea976b424340e633f48db0445e5dfadd28f7c1e9abdc",
+  "scripts/launch/train_phase8_sequence.py": "e36ddc5c4d1ff74ccea873078ac722ef8f83d9faf69399c807207e8d4234903f",
+  "scripts/launch/start_phase8_sequence.py": "2a19c87546dab1a1e3791333f38a401391f04ce2e741cfd9dc1aada2936ee493",
+  "scripts/eval/eval_phase8_sequence.py": "1b7f29d9533ce892224fd6b3dc1887ad0da85408509416b8608826107fd9b299",
+  "docs/phases/phase8-sequence-v1-preregister.md": "67b970eb708d55701feeb05375b555c1c90c3dee79667090a7ff30515e12e00c"
+}

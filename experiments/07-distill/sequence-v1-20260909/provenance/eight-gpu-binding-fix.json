@@ -1,0 +1,6 @@
+{
+  "cause": "CUDA visibility changed after runtime initialization; workers used logical cuda0",
+  "fix": "keep all devices visible and bind explicit device per worker",
+  "source_sha256": "f88bc88590c58edf599109e26e147ddb0abe1be08fe431bc6ef2bf038601b5d3",
+  "archived_attempt": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eightgpu-binding-attempt"
+}

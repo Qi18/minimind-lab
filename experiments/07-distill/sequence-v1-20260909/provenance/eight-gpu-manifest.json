@@ -1,0 +1,29 @@
+{
+  "user_requested": "8 GPUs per model; models serial",
+  "gpu_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "arm_order": [
+    "S10",
+    "K01",
+    "K02"
+  ],
+  "reuse_completed": true,
+  "shard_coverage_tests": "passed 0 1 7 8 9 541 112919",
+  "sources": {
+    "scripts/eval/phase8_eight_gpu.py": "f88bc88590c58edf599109e26e147ddb0abe1be08fe431bc6ef2bf038601b5d3",
+    "scripts/eval/eval_phase8_sequence_8gpu.py": "153e1c54a1ccfb955b5594688be4792aecd6a54a72cc1ad8b34f8dc3f9a3f6de",
+    "scripts/launch/start_phase8_eval_8gpu.py": "e1e10997f8124892f3b64dd93de300eb7178b461a984e8f8ba0d1957c59b0673",
+    "scripts/phase8_common.py": "eba9a5f80a21238694acd397c259d3234d298ee776a1a3052a96ab4d5885147a"
+  },
+  "training_unchanged": true,
+  "limitations": "likelihood batch composition changes; not asserting bitwise numerical equivalence",
+  "device_binding": "explicit torch.cuda.set_device and model.to(cuda:index)"
+}

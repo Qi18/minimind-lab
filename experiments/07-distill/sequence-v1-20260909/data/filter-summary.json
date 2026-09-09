@@ -1,0 +1,13 @@
+{
+  "accepted_before_cap": {
+    "constraint": 2520,
+    "broad": 3685
+  },
+  "rejected": {
+    "student_encoding_or_length": 487,
+    "assistant_too_long": 827,
+    "generation_truncated": 638,
+    "constraint_failed": 35
+  },
+  "teacher_is_not_ground_truth": "broad factual quality not programmatically verified; manual review required before promotion"
+}

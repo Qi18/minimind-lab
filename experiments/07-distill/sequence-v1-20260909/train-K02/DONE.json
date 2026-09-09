@@ -1,0 +1,15 @@
+{
+  "status": "trained-not-promoted",
+  "arm": "K02",
+  "steps": 512,
+  "target_tokens": 4194304,
+  "checkpoint": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/train-K02/final.pth",
+  "checkpoint_sha256": "61a5d94485aa05dec0eae9e44f871404e5e2aacc838cdefd480548ce7033d6ac",
+  "strict_load": true,
+  "source_checkpoint_unchanged": true,
+  "wall_seconds": 192.12943207705393,
+  "row_draws": 25602,
+  "forward_rows": 26112,
+  "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/n9es2q13",
+  "automatic_promotion": false
+}

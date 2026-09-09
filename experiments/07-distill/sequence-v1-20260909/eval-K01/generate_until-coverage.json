@@ -1,0 +1,16 @@
+{
+  "requests": 541,
+  "shard_counts": [
+    68,
+    68,
+    68,
+    68,
+    68,
+    67,
+    67,
+    67
+  ],
+  "unique_coverage": true,
+  "order_restored": true,
+  "per_worker_batch": 1
+}

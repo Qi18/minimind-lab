@@ -1,0 +1,30 @@
+{
+  "status": "evaluated-not-promoted",
+  "arm": "S10",
+  "new_constraint_strict": 0.93359375,
+  "ifeval": {
+    "prompt_level_strict_acc,none": 0.18484288354898337,
+    "inst_level_strict_acc,none": 0.3117505995203837,
+    "prompt_level_loose_acc,none": 0.1977818853974122,
+    "inst_level_loose_acc,none": 0.3261390887290168
+  },
+  "seven": {
+    "ceval-valid": 23.25408618127786,
+    "cmmlu": 25.246071490243484,
+    "arc_easy": 34.301346801346796,
+    "piqa": 56.20239390642002,
+    "openbookqa": 28.000000000000004,
+    "hellaswag": 28.19159529974109,
+    "social_iqa": 35.823950870010236
+  },
+  "seven_macro_percent": 33.002777792719925,
+  "behavior": {
+    "chat_success": 8,
+    "format_success": 5,
+    "repetition_count": 1,
+    "tool_success": 7
+  },
+  "checkpoint_unchanged": true,
+  "swanlab_url": "https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/6tzo7bb7",
+  "manual_broad_review_pending": true
+}

@@ -1,0 +1,20 @@
+{
+  "arm": "S10",
+  "checkpoint": "/data/artifacts/minimind-lab/S10-ifeval-curriculum-v4-20260907/checkpoints/s08_best_val_768.pth",
+  "checkpoint_sha256": "46aeab66795795aa77d703f08d71b952fe98461040f4560e1301021540710131",
+  "dtype": "float16",
+  "apply_chat_template": true,
+  "fewshot": 0,
+  "seed": 42,
+  "max_gen_toks_ifeval": 1280,
+  "max_gen_toks_new_constraints": 512,
+  "max_gen_toks_behavior": 192,
+  "source_sha256": "97a8d8bd6868304a7baabbda5bd320eaa44f8fa16af95e0d000aabcf1ad39995",
+  "native_generator_source_sha256": "c1e17a3e9692016dd1f3462ca3e874a9e3350781036ce6390ed141ae3afaf8d3",
+  "model_source_sha256": "ad98639db128d63f5591b80cc94ec8f7663c647f3fd6bef0efefd4a09621918f",
+  "tokenizer_sha256": "71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668",
+  "config_sha256": "26566c09de5ba452aecf3481f729b9d437c3f9a669b4611c0283a312cc5c1465",
+  "lm_eval_version": "0.4.12",
+  "selection": "fixed-final",
+  "gpu": "7"
+}

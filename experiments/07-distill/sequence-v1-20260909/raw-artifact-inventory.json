@@ -1,0 +1,2237 @@
+{
+  "location": "L20 CPFS only; not uploaded",
+  "files": [
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/generation-driver.log",
+      "bytes": 8642
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02-driver.log",
+      "bytes": 42748
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eightgpu-controller-driver.log",
+      "bytes": 3172
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/recovery-eval-K01-driver.log",
+      "bytes": 38939
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/smoke-K02-driver.log",
+      "bytes": 1000
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eightgpu-eval-K02-driver.log",
+      "bytes": 251725
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/formal-K01-driver.log",
+      "bytes": 20124
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eightgpu-eval-K01-driver.log",
+      "bytes": 248538
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/formal-K02-driver.log",
+      "bytes": 19947
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/finalize-data-driver.log",
+      "bytes": 40
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/recovery-eval-S10-driver.log",
+      "bytes": 389059
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/recovery-controller-driver.log",
+      "bytes": 0
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01-driver.log",
+      "bytes": 49490
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/recovery-eval-K02-driver.log",
+      "bytes": 22950
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10-driver.log",
+      "bytes": 387467
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/controller-driver.log",
+      "bytes": 634
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eightgpu-binding-attempt/eightgpu-controller-driver.log",
+      "bytes": 0
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eightgpu-binding-attempt/eightgpu-eval-K01-driver.log",
+      "bytes": 21016
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eightgpu-binding-attempt/eval-K01/behavior-samples.jsonl",
+      "bytes": 8654
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eightgpu-binding-attempt/eval-K01/constraint-samples.jsonl",
+      "bytes": 80421
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eightgpu-binding-attempt/eval-K01/swanlog/run-20260909_070156-32wsz3sg/debug/debug.log",
+      "bytes": 149
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/generation-swanlab-backfill/run-20260909_061919-2rgio769/debug/debug.log",
+      "bytes": 160
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-K02/behavior-samples.jsonl",
+      "bytes": 8659
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-K02/constraint-samples.jsonl",
+      "bytes": 339169
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-K02/swanlog/run-20260909_062539-olxxq4ca/debug/debug.log",
+      "bytes": 149
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-K01/behavior-samples.jsonl",
+      "bytes": 8654
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-K01/constraint-samples.jsonl",
+      "bytes": 80421
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-K01/swanlog/run-20260909_062539-2i91bv5f/debug/debug.log",
+      "bytes": 149
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/behavior-samples.jsonl",
+      "bytes": 8773
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/constraint-samples.jsonl",
+      "bytes": 77855
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/swanlog/run-20260909_062539-hex9qojf/debug/debug.log",
+      "bytes": 149
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_high_school_chinese.jsonl",
+      "bytes": 80894
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_college_medicine.jsonl",
+      "bytes": 668414
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_education_science.jsonl",
+      "bytes": 70548
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_high_school_history.jsonl",
+      "bytes": 62948
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_computer_architecture.jsonl",
+      "bytes": 52314
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_middle_school_history.jsonl",
+      "bytes": 62746
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_advanced_mathematics.jsonl",
+      "bytes": 56850
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_high_school_physics.jsonl",
+      "bytes": 325544
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_world_history.jsonl",
+      "bytes": 575426
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_college_medical_statistics.jsonl",
+      "bytes": 276499
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_global_facts.jsonl",
+      "bytes": 361685
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_elementary_commonsense.jsonl",
+      "bytes": 430973
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_ancient_chinese.jsonl",
+      "bytes": 391813
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_logic.jsonl",
+      "bytes": 110201
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_sports_science.jsonl",
+      "bytes": 372367
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_astronomy.jsonl",
+      "bytes": 406627
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_high_school_politics.jsonl",
+      "bytes": 73042
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_fire_engineer.jsonl",
+      "bytes": 97387
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_anatomy.jsonl",
+      "bytes": 308556
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_legal_professional.jsonl",
+      "bytes": 95798
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_clinical_knowledge.jsonl",
+      "bytes": 758303
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_computer_science.jsonl",
+      "bytes": 474546
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_operating_system.jsonl",
+      "bytes": 44796
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_elementary_chinese.jsonl",
+      "bytes": 591780
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_chinese_driving_rule.jsonl",
+      "bytes": 322052
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_agronomy.jsonl",
+      "bytes": 372396
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_chinese_teacher_qualification.jsonl",
+      "bytes": 511876
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_middle_school_physics.jsonl",
+      "bytes": 54674
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_arts.jsonl",
+      "bytes": 342270
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_veterinary_medicine.jsonl",
+      "bytes": 56796
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_construction_project_management.jsonl",
+      "bytes": 351443
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_ethnology.jsonl",
+      "bytes": 317737
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_human_sexuality.jsonl",
+      "bytes": 298157
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-social_iqa.jsonl",
+      "bytes": 2781344
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_chinese_foreign_policy.jsonl",
+      "bytes": 376296
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_tax_accountant.jsonl",
+      "bytes": 167141
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_computer_network.jsonl",
+      "bytes": 47568
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_college_mathematics.jsonl",
+      "bytes": 323990
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_professional_psychology.jsonl",
+      "bytes": 543548
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_marxist_theory.jsonl",
+      "bytes": 497679
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_computer_security.jsonl",
+      "bytes": 490385
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_accountant.jsonl",
+      "bytes": 171304
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_economics.jsonl",
+      "bytes": 394049
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_traditional_chinese_medicine.jsonl",
+      "bytes": 409129
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_logical.jsonl",
+      "bytes": 299768
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_teacher_qualification.jsonl",
+      "bytes": 126760
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_basic_medicine.jsonl",
+      "bytes": 41462
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_chinese_civil_service_exam.jsonl",
+      "bytes": 639588
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_security_study.jsonl",
+      "bytes": 337631
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_high_school_mathematics.jsonl",
+      "bytes": 53111
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_high_school_chemistry.jsonl",
+      "bytes": 56476
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_business_administration.jsonl",
+      "bytes": 95340
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_electrical_engineering.jsonl",
+      "bytes": 422862
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-arc_easy.jsonl",
+      "bytes": 4452338
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_business_ethics.jsonl",
+      "bytes": 491697
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_professional_medicine.jsonl",
+      "bytes": 873301
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_food_science.jsonl",
+      "bytes": 313364
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_clinical_medicine.jsonl",
+      "bytes": 53611
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_mao_zedong_thought.jsonl",
+      "bytes": 67731
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_sports_science.jsonl",
+      "bytes": 45504
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_marxism.jsonl",
+      "bytes": 50670
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_chinese_language_and_literature.jsonl",
+      "bytes": 52075
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_genetics.jsonl",
+      "bytes": 430230
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_college_economics.jsonl",
+      "bytes": 154996
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_middle_school_chemistry.jsonl",
+      "bytes": 58107
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_modern_chinese.jsonl",
+      "bytes": 326108
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_middle_school_geography.jsonl",
+      "bytes": 31071
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_high_school_physics.jsonl",
+      "bytes": 64671
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_modern_chinese_history.jsonl",
+      "bytes": 60505
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_international_law.jsonl",
+      "bytes": 500285
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_civil_servant.jsonl",
+      "bytes": 175800
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_high_school_biology.jsonl",
+      "bytes": 58899
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_conceptual_physics.jsonl",
+      "bytes": 450890
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_nutrition.jsonl",
+      "bytes": 333129
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-piqa.jsonl",
+      "bytes": 2292604
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_electrical_engineer.jsonl",
+      "bytes": 97980
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_high_school_mathematics.jsonl",
+      "bytes": 371766
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_high_school_biology.jsonl",
+      "bytes": 619219
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_probability_and_statistics.jsonl",
+      "bytes": 57167
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_management.jsonl",
+      "bytes": 509056
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_urban_and_rural_planner.jsonl",
+      "bytes": 134187
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_legal_and_moral_basis.jsonl",
+      "bytes": 611581
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_middle_school_mathematics.jsonl",
+      "bytes": 53002
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_college_physics.jsonl",
+      "bytes": 59075
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_environmental_impact_assessment_engineer.jsonl",
+      "bytes": 93999
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_philosophy.jsonl",
+      "bytes": 252585
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_public_relations.jsonl",
+      "bytes": 416558
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_college_law.jsonl",
+      "bytes": 324459
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_art_studies.jsonl",
+      "bytes": 71672
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_middle_school_biology.jsonl",
+      "bytes": 57608
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_law.jsonl",
+      "bytes": 75771
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_college_engineering_hydrology.jsonl",
+      "bytes": 266845
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_sociology.jsonl",
+      "bytes": 526203
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_physician.jsonl",
+      "bytes": 116471
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_chinese_literature.jsonl",
+      "bytes": 488301
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_college_chemistry.jsonl",
+      "bytes": 58002
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_virology.jsonl",
+      "bytes": 397549
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_chinese_history.jsonl",
+      "bytes": 1117608
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_college_education.jsonl",
+      "bytes": 287785
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_high_school_geography.jsonl",
+      "bytes": 330519
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_high_school_politics.jsonl",
+      "bytes": 522202
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_marketing.jsonl",
+      "bytes": 452636
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_professional_accounting.jsonl",
+      "bytes": 429543
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_high_school_chemistry.jsonl",
+      "bytes": 445189
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_ideological_and_moral_cultivation.jsonl",
+      "bytes": 46171
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_discrete_mathematics.jsonl",
+      "bytes": 41266
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_plant_protection.jsonl",
+      "bytes": 50948
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_journalism.jsonl",
+      "bytes": 396489
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_professional_tour_guide.jsonl",
+      "bytes": 65790
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_chinese_food_culture.jsonl",
+      "bytes": 314343
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_elementary_information_and_technology.jsonl",
+      "bytes": 569738
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_world_religions.jsonl",
+      "bytes": 348541
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_education.jsonl",
+      "bytes": 367691
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_middle_school_politics.jsonl",
+      "bytes": 68107
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_college_programming.jsonl",
+      "bytes": 103333
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_high_school_geography.jsonl",
+      "bytes": 48264
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_college_actuarial_science.jsonl",
+      "bytes": 288794
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-ceval-valid_metrology_engineer.jsonl",
+      "bytes": 66698
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-hellaswag.jsonl",
+      "bytes": 44179538
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_elementary_mathematics.jsonl",
+      "bytes": 518592
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-openbookqa.jsonl",
+      "bytes": 725924
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_professional_law.jsonl",
+      "bytes": 670563
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_jurisprudence.jsonl",
+      "bytes": 1280739
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/seven/samples-cmmlu_machine_learning.jsonl",
+      "bytes": 333290
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/failed-attempt-1/eval-S10/ifeval/samples.jsonl",
+      "bytes": 2599680
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/behavior-samples.jsonl",
+      "bytes": 8659
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/constraint-samples.jsonl",
+      "bytes": 339169
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/swanlog/run-20260909_070925-mt9l6ao6/debug/debug.log",
+      "bytes": 149
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_high_school_chinese.jsonl",
+      "bytes": 80874
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_college_medicine.jsonl",
+      "bytes": 667970
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_education_science.jsonl",
+      "bytes": 70490
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_high_school_history.jsonl",
+      "bytes": 62988
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_computer_architecture.jsonl",
+      "bytes": 52266
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_middle_school_history.jsonl",
+      "bytes": 62706
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_advanced_mathematics.jsonl",
+      "bytes": 56818
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_high_school_physics.jsonl",
+      "bytes": 325472
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_world_history.jsonl",
+      "bytes": 575070
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_college_medical_statistics.jsonl",
+      "bytes": 276377
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_global_facts.jsonl",
+      "bytes": 361669
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_elementary_commonsense.jsonl",
+      "bytes": 430997
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_ancient_chinese.jsonl",
+      "bytes": 391795
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_logic.jsonl",
+      "bytes": 110285
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_sports_science.jsonl",
+      "bytes": 371987
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_astronomy.jsonl",
+      "bytes": 406325
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_high_school_politics.jsonl",
+      "bytes": 72978
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_fire_engineer.jsonl",
+      "bytes": 97277
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_anatomy.jsonl",
+      "bytes": 308528
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_legal_professional.jsonl",
+      "bytes": 95878
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_clinical_knowledge.jsonl",
+      "bytes": 758233
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_computer_science.jsonl",
+      "bytes": 474372
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_operating_system.jsonl",
+      "bytes": 44698
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_elementary_chinese.jsonl",
+      "bytes": 591648
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_chinese_driving_rule.jsonl",
+      "bytes": 321828
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_agronomy.jsonl",
+      "bytes": 372076
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_chinese_teacher_qualification.jsonl",
+      "bytes": 511614
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_middle_school_physics.jsonl",
+      "bytes": 54708
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_arts.jsonl",
+      "bytes": 342188
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_veterinary_medicine.jsonl",
+      "bytes": 56818
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_construction_project_management.jsonl",
+      "bytes": 351371
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_ethnology.jsonl",
+      "bytes": 317469
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_human_sexuality.jsonl",
+      "bytes": 298059
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-social_iqa.jsonl",
+      "bytes": 2779634
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_chinese_foreign_policy.jsonl",
+      "bytes": 376318
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_tax_accountant.jsonl",
+      "bytes": 167085
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_computer_network.jsonl",
+      "bytes": 47508
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_college_mathematics.jsonl",
+      "bytes": 323856
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_professional_psychology.jsonl",
+      "bytes": 543162
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_marxist_theory.jsonl",
+      "bytes": 497551
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_computer_security.jsonl",
+      "bytes": 490321
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_accountant.jsonl",
+      "bytes": 171406
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_economics.jsonl",
+      "bytes": 393809
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_traditional_chinese_medicine.jsonl",
+      "bytes": 408685
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_logical.jsonl",
+      "bytes": 299696
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_teacher_qualification.jsonl",
+      "bytes": 126632
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_basic_medicine.jsonl",
+      "bytes": 41446
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_chinese_civil_service_exam.jsonl",
+      "bytes": 639242
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_security_study.jsonl",
+      "bytes": 337453
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_high_school_mathematics.jsonl",
+      "bytes": 53143
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_high_school_chemistry.jsonl",
+      "bytes": 56444
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_business_administration.jsonl",
+      "bytes": 95228
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_electrical_engineering.jsonl",
+      "bytes": 422818
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-arc_easy.jsonl",
+      "bytes": 4448952
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_business_ethics.jsonl",
+      "bytes": 490999
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_professional_medicine.jsonl",
+      "bytes": 872601
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_food_science.jsonl",
+      "bytes": 313236
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_clinical_medicine.jsonl",
+      "bytes": 53603
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_mao_zedong_thought.jsonl",
+      "bytes": 67779
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_sports_science.jsonl",
+      "bytes": 45520
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_marxism.jsonl",
+      "bytes": 50698
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_chinese_language_and_literature.jsonl",
+      "bytes": 52041
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_genetics.jsonl",
+      "bytes": 429904
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_college_economics.jsonl",
+      "bytes": 154948
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_middle_school_chemistry.jsonl",
+      "bytes": 57999
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_modern_chinese.jsonl",
+      "bytes": 325880
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_middle_school_geography.jsonl",
+      "bytes": 31133
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_high_school_physics.jsonl",
+      "bytes": 64691
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_modern_chinese_history.jsonl",
+      "bytes": 60511
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_international_law.jsonl",
+      "bytes": 499983
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_civil_servant.jsonl",
+      "bytes": 175692
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_high_school_biology.jsonl",
+      "bytes": 58879
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_conceptual_physics.jsonl",
+      "bytes": 450742
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_nutrition.jsonl",
+      "bytes": 332653
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-piqa.jsonl",
+      "bytes": 2292250
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_electrical_engineer.jsonl",
+      "bytes": 98014
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_high_school_mathematics.jsonl",
+      "bytes": 371366
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_high_school_biology.jsonl",
+      "bytes": 618867
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_probability_and_statistics.jsonl",
+      "bytes": 57137
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_management.jsonl",
+      "bytes": 508772
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_urban_and_rural_planner.jsonl",
+      "bytes": 133987
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_legal_and_moral_basis.jsonl",
+      "bytes": 611361
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_middle_school_mathematics.jsonl",
+      "bytes": 53056
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_college_physics.jsonl",
+      "bytes": 59035
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_environmental_impact_assessment_engineer.jsonl",
+      "bytes": 93967
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_philosophy.jsonl",
+      "bytes": 252501
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_public_relations.jsonl",
+      "bytes": 416214
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_college_law.jsonl",
+      "bytes": 324479
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_art_studies.jsonl",
+      "bytes": 71586
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_middle_school_biology.jsonl",
+      "bytes": 57608
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_law.jsonl",
+      "bytes": 75681
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_college_engineering_hydrology.jsonl",
+      "bytes": 266545
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_sociology.jsonl",
+      "bytes": 526107
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_physician.jsonl",
+      "bytes": 116573
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_chinese_literature.jsonl",
+      "bytes": 488323
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_college_chemistry.jsonl",
+      "bytes": 57982
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_virology.jsonl",
+      "bytes": 397211
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_chinese_history.jsonl",
+      "bytes": 1117438
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_college_education.jsonl",
+      "bytes": 287697
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_high_school_geography.jsonl",
+      "bytes": 330519
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_high_school_politics.jsonl",
+      "bytes": 521798
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_marketing.jsonl",
+      "bytes": 452252
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_professional_accounting.jsonl",
+      "bytes": 429363
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_high_school_chemistry.jsonl",
+      "bytes": 445251
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_ideological_and_moral_cultivation.jsonl",
+      "bytes": 46135
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_discrete_mathematics.jsonl",
+      "bytes": 41214
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_plant_protection.jsonl",
+      "bytes": 50902
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_journalism.jsonl",
+      "bytes": 396149
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_professional_tour_guide.jsonl",
+      "bytes": 65796
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_chinese_food_culture.jsonl",
+      "bytes": 314139
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_elementary_information_and_technology.jsonl",
+      "bytes": 569620
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_world_religions.jsonl",
+      "bytes": 348117
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_education.jsonl",
+      "bytes": 367837
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_middle_school_politics.jsonl",
+      "bytes": 68141
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_college_programming.jsonl",
+      "bytes": 103321
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_high_school_geography.jsonl",
+      "bytes": 48280
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_college_actuarial_science.jsonl",
+      "bytes": 288558
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-ceval-valid_metrology_engineer.jsonl",
+      "bytes": 66564
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-hellaswag.jsonl",
+      "bytes": 44176034
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_elementary_mathematics.jsonl",
+      "bytes": 518024
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-openbookqa.jsonl",
+      "bytes": 725086
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_professional_law.jsonl",
+      "bytes": 670453
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_jurisprudence.jsonl",
+      "bytes": 1280367
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/seven/samples-cmmlu_machine_learning.jsonl",
+      "bytes": 333208
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K02/ifeval/samples.jsonl",
+      "bytes": 3120522
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/before-eight-gpu/eval-K02/behavior-samples.jsonl",
+      "bytes": 8659
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/before-eight-gpu/eval-K02/constraint-samples.jsonl",
+      "bytes": 339169
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/before-eight-gpu/eval-K02/swanlog/run-20260909_065029-keezy9vc/debug/debug.log",
+      "bytes": 149
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/before-eight-gpu/eval-K01/behavior-samples.jsonl",
+      "bytes": 8654
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/before-eight-gpu/eval-K01/constraint-samples.jsonl",
+      "bytes": 80421
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/before-eight-gpu/eval-K01/swanlog/run-20260909_065029-aeoc3kiz/debug/debug.log",
+      "bytes": 149
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/behavior-samples.jsonl",
+      "bytes": 8654
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/constraint-samples.jsonl",
+      "bytes": 80421
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/swanlog/run-20260909_070436-7jzy9vey/debug/debug.log",
+      "bytes": 149
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_high_school_chinese.jsonl",
+      "bytes": 80944
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_college_medicine.jsonl",
+      "bytes": 668448
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_education_science.jsonl",
+      "bytes": 70568
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_high_school_history.jsonl",
+      "bytes": 62912
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_computer_architecture.jsonl",
+      "bytes": 52216
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_middle_school_history.jsonl",
+      "bytes": 62778
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_advanced_mathematics.jsonl",
+      "bytes": 56846
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_high_school_physics.jsonl",
+      "bytes": 325580
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_world_history.jsonl",
+      "bytes": 575198
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_college_medical_statistics.jsonl",
+      "bytes": 276615
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_global_facts.jsonl",
+      "bytes": 361989
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_elementary_commonsense.jsonl",
+      "bytes": 431377
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_ancient_chinese.jsonl",
+      "bytes": 391693
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_logic.jsonl",
+      "bytes": 110363
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_sports_science.jsonl",
+      "bytes": 372461
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_astronomy.jsonl",
+      "bytes": 406669
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_high_school_politics.jsonl",
+      "bytes": 73030
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_fire_engineer.jsonl",
+      "bytes": 97401
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_anatomy.jsonl",
+      "bytes": 308580
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_legal_professional.jsonl",
+      "bytes": 95948
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_clinical_knowledge.jsonl",
+      "bytes": 758637
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_computer_science.jsonl",
+      "bytes": 474778
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_operating_system.jsonl",
+      "bytes": 44806
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_elementary_chinese.jsonl",
+      "bytes": 591746
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_chinese_driving_rule.jsonl",
+      "bytes": 322096
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_agronomy.jsonl",
+      "bytes": 372682
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_chinese_teacher_qualification.jsonl",
+      "bytes": 511866
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_middle_school_physics.jsonl",
+      "bytes": 54710
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_arts.jsonl",
+      "bytes": 342520
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_veterinary_medicine.jsonl",
+      "bytes": 56888
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_construction_project_management.jsonl",
+      "bytes": 351617
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_ethnology.jsonl",
+      "bytes": 317829
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_human_sexuality.jsonl",
+      "bytes": 298517
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-social_iqa.jsonl",
+      "bytes": 2779358
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_chinese_foreign_policy.jsonl",
+      "bytes": 376192
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_tax_accountant.jsonl",
+      "bytes": 167139
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_computer_network.jsonl",
+      "bytes": 47594
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_college_mathematics.jsonl",
+      "bytes": 324018
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_professional_psychology.jsonl",
+      "bytes": 543782
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_marxist_theory.jsonl",
+      "bytes": 497931
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_computer_security.jsonl",
+      "bytes": 490529
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_accountant.jsonl",
+      "bytes": 171410
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_economics.jsonl",
+      "bytes": 394043
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_traditional_chinese_medicine.jsonl",
+      "bytes": 409037
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_logical.jsonl",
+      "bytes": 300064
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_teacher_qualification.jsonl",
+      "bytes": 126772
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_basic_medicine.jsonl",
+      "bytes": 41498
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_chinese_civil_service_exam.jsonl",
+      "bytes": 639484
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_security_study.jsonl",
+      "bytes": 337529
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_high_school_mathematics.jsonl",
+      "bytes": 53139
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_high_school_chemistry.jsonl",
+      "bytes": 56400
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_business_administration.jsonl",
+      "bytes": 95414
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_electrical_engineering.jsonl",
+      "bytes": 422892
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-arc_easy.jsonl",
+      "bytes": 4450024
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_business_ethics.jsonl",
+      "bytes": 491517
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_professional_medicine.jsonl",
+      "bytes": 873045
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_food_science.jsonl",
+      "bytes": 313450
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_clinical_medicine.jsonl",
+      "bytes": 53625
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_mao_zedong_thought.jsonl",
+      "bytes": 67783
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_sports_science.jsonl",
+      "bytes": 45566
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_marxism.jsonl",
+      "bytes": 50654
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_chinese_language_and_literature.jsonl",
+      "bytes": 52085
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_genetics.jsonl",
+      "bytes": 430218
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_college_economics.jsonl",
+      "bytes": 155020
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_middle_school_chemistry.jsonl",
+      "bytes": 58091
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_modern_chinese.jsonl",
+      "bytes": 326114
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_middle_school_geography.jsonl",
+      "bytes": 31095
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_high_school_physics.jsonl",
+      "bytes": 64765
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_modern_chinese_history.jsonl",
+      "bytes": 60603
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_international_law.jsonl",
+      "bytes": 500337
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_civil_servant.jsonl",
+      "bytes": 175816
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_high_school_biology.jsonl",
+      "bytes": 58883
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_conceptual_physics.jsonl",
+      "bytes": 450830
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_nutrition.jsonl",
+      "bytes": 332989
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-piqa.jsonl",
+      "bytes": 2292498
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_electrical_engineer.jsonl",
+      "bytes": 98056
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_high_school_mathematics.jsonl",
+      "bytes": 371490
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_high_school_biology.jsonl",
+      "bytes": 619183
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_probability_and_statistics.jsonl",
+      "bytes": 57145
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_management.jsonl",
+      "bytes": 509230
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_urban_and_rural_planner.jsonl",
+      "bytes": 134141
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_legal_and_moral_basis.jsonl",
+      "bytes": 611521
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_middle_school_mathematics.jsonl",
+      "bytes": 53092
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_college_physics.jsonl",
+      "bytes": 59125
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_environmental_impact_assessment_engineer.jsonl",
+      "bytes": 93931
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_philosophy.jsonl",
+      "bytes": 252717
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_public_relations.jsonl",
+      "bytes": 416494
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_college_law.jsonl",
+      "bytes": 324475
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_art_studies.jsonl",
+      "bytes": 71676
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_middle_school_biology.jsonl",
+      "bytes": 57582
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_law.jsonl",
+      "bytes": 75821
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_college_engineering_hydrology.jsonl",
+      "bytes": 266909
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_sociology.jsonl",
+      "bytes": 526431
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_physician.jsonl",
+      "bytes": 116689
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_chinese_literature.jsonl",
+      "bytes": 488421
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_college_chemistry.jsonl",
+      "bytes": 57976
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_virology.jsonl",
+      "bytes": 397565
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_chinese_history.jsonl",
+      "bytes": 1117598
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_college_education.jsonl",
+      "bytes": 287881
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_high_school_geography.jsonl",
+      "bytes": 330583
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_high_school_politics.jsonl",
+      "bytes": 522062
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_marketing.jsonl",
+      "bytes": 452546
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_professional_accounting.jsonl",
+      "bytes": 429403
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_high_school_chemistry.jsonl",
+      "bytes": 445203
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_ideological_and_moral_cultivation.jsonl",
+      "bytes": 46155
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_discrete_mathematics.jsonl",
+      "bytes": 41142
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_plant_protection.jsonl",
+      "bytes": 50958
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_journalism.jsonl",
+      "bytes": 396817
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_professional_tour_guide.jsonl",
+      "bytes": 65770
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_chinese_food_culture.jsonl",
+      "bytes": 314415
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_elementary_information_and_technology.jsonl",
+      "bytes": 570088
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_world_religions.jsonl",
+      "bytes": 348719
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_education.jsonl",
+      "bytes": 368031
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_middle_school_politics.jsonl",
+      "bytes": 68193
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_college_programming.jsonl",
+      "bytes": 103333
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_high_school_geography.jsonl",
+      "bytes": 48306
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_college_actuarial_science.jsonl",
+      "bytes": 288580
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-ceval-valid_metrology_engineer.jsonl",
+      "bytes": 66686
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-hellaswag.jsonl",
+      "bytes": 44176202
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_elementary_mathematics.jsonl",
+      "bytes": 518354
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-openbookqa.jsonl",
+      "bytes": 725254
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_professional_law.jsonl",
+      "bytes": 670581
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_jurisprudence.jsonl",
+      "bytes": 1280787
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/seven/samples-cmmlu_machine_learning.jsonl",
+      "bytes": 333274
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-K01/ifeval/samples.jsonl",
+      "bytes": 2381182
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/smoke-K01/final.pth",
+      "bytes": 275338499
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/smoke-K01/resume.pt",
+      "bytes": 767069114
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/smoke-K01/swanlog/run-20260909_060047-vvlunoys/debug/debug.log",
+      "bytes": 150
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/behavior-samples.jsonl",
+      "bytes": 8773
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/constraint-samples.jsonl",
+      "bytes": 77855
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/swanlog/run-20260909_065029-6tzo7bb7/debug/debug.log",
+      "bytes": 149
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_high_school_chinese.jsonl",
+      "bytes": 80894
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_college_medicine.jsonl",
+      "bytes": 668414
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_education_science.jsonl",
+      "bytes": 70548
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_high_school_history.jsonl",
+      "bytes": 62948
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_computer_architecture.jsonl",
+      "bytes": 52314
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_middle_school_history.jsonl",
+      "bytes": 62746
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_advanced_mathematics.jsonl",
+      "bytes": 56850
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_high_school_physics.jsonl",
+      "bytes": 325544
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_world_history.jsonl",
+      "bytes": 575426
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_college_medical_statistics.jsonl",
+      "bytes": 276499
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_global_facts.jsonl",
+      "bytes": 361685
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_elementary_commonsense.jsonl",
+      "bytes": 430973
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_ancient_chinese.jsonl",
+      "bytes": 391813
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_logic.jsonl",
+      "bytes": 110201
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_sports_science.jsonl",
+      "bytes": 372367
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_astronomy.jsonl",
+      "bytes": 406627
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_high_school_politics.jsonl",
+      "bytes": 73042
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_fire_engineer.jsonl",
+      "bytes": 97387
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_anatomy.jsonl",
+      "bytes": 308556
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_legal_professional.jsonl",
+      "bytes": 95798
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_clinical_knowledge.jsonl",
+      "bytes": 758303
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_computer_science.jsonl",
+      "bytes": 474546
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_operating_system.jsonl",
+      "bytes": 44796
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_elementary_chinese.jsonl",
+      "bytes": 591780
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_chinese_driving_rule.jsonl",
+      "bytes": 322052
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_agronomy.jsonl",
+      "bytes": 372396
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_chinese_teacher_qualification.jsonl",
+      "bytes": 511876
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_middle_school_physics.jsonl",
+      "bytes": 54674
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_arts.jsonl",
+      "bytes": 342270
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_veterinary_medicine.jsonl",
+      "bytes": 56796
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_construction_project_management.jsonl",
+      "bytes": 351443
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_ethnology.jsonl",
+      "bytes": 317737
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_human_sexuality.jsonl",
+      "bytes": 298157
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-social_iqa.jsonl",
+      "bytes": 2781344
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_chinese_foreign_policy.jsonl",
+      "bytes": 376296
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_tax_accountant.jsonl",
+      "bytes": 167141
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_computer_network.jsonl",
+      "bytes": 47568
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_college_mathematics.jsonl",
+      "bytes": 323990
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_professional_psychology.jsonl",
+      "bytes": 543548
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_marxist_theory.jsonl",
+      "bytes": 497679
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_computer_security.jsonl",
+      "bytes": 490385
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_accountant.jsonl",
+      "bytes": 171304
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_economics.jsonl",
+      "bytes": 394049
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_traditional_chinese_medicine.jsonl",
+      "bytes": 409129
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_logical.jsonl",
+      "bytes": 299768
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_teacher_qualification.jsonl",
+      "bytes": 126760
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_basic_medicine.jsonl",
+      "bytes": 41462
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_chinese_civil_service_exam.jsonl",
+      "bytes": 639588
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_security_study.jsonl",
+      "bytes": 337631
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_high_school_mathematics.jsonl",
+      "bytes": 53111
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_high_school_chemistry.jsonl",
+      "bytes": 56476
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_business_administration.jsonl",
+      "bytes": 95340
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_electrical_engineering.jsonl",
+      "bytes": 422862
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-arc_easy.jsonl",
+      "bytes": 4452338
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_business_ethics.jsonl",
+      "bytes": 491697
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_professional_medicine.jsonl",
+      "bytes": 873301
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_food_science.jsonl",
+      "bytes": 313364
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_clinical_medicine.jsonl",
+      "bytes": 53611
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_mao_zedong_thought.jsonl",
+      "bytes": 67731
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_sports_science.jsonl",
+      "bytes": 45504
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_marxism.jsonl",
+      "bytes": 50670
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_chinese_language_and_literature.jsonl",
+      "bytes": 52075
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_genetics.jsonl",
+      "bytes": 430230
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_college_economics.jsonl",
+      "bytes": 154996
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_middle_school_chemistry.jsonl",
+      "bytes": 58107
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_modern_chinese.jsonl",
+      "bytes": 326108
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_middle_school_geography.jsonl",
+      "bytes": 31071
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_high_school_physics.jsonl",
+      "bytes": 64671
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_modern_chinese_history.jsonl",
+      "bytes": 60505
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_international_law.jsonl",
+      "bytes": 500285
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_civil_servant.jsonl",
+      "bytes": 175800
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_high_school_biology.jsonl",
+      "bytes": 58899
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_conceptual_physics.jsonl",
+      "bytes": 450890
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_nutrition.jsonl",
+      "bytes": 333129
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-piqa.jsonl",
+      "bytes": 2292604
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_electrical_engineer.jsonl",
+      "bytes": 97980
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_high_school_mathematics.jsonl",
+      "bytes": 371766
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_high_school_biology.jsonl",
+      "bytes": 619219
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_probability_and_statistics.jsonl",
+      "bytes": 57167
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_management.jsonl",
+      "bytes": 509056
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_urban_and_rural_planner.jsonl",
+      "bytes": 134187
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_legal_and_moral_basis.jsonl",
+      "bytes": 611581
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_middle_school_mathematics.jsonl",
+      "bytes": 53002
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_college_physics.jsonl",
+      "bytes": 59075
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_environmental_impact_assessment_engineer.jsonl",
+      "bytes": 93999
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_philosophy.jsonl",
+      "bytes": 252585
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_public_relations.jsonl",
+      "bytes": 416558
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_college_law.jsonl",
+      "bytes": 324459
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_art_studies.jsonl",
+      "bytes": 71672
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_middle_school_biology.jsonl",
+      "bytes": 57608
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_law.jsonl",
+      "bytes": 75771
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_college_engineering_hydrology.jsonl",
+      "bytes": 266845
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_sociology.jsonl",
+      "bytes": 526203
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_physician.jsonl",
+      "bytes": 116471
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_chinese_literature.jsonl",
+      "bytes": 488301
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_college_chemistry.jsonl",
+      "bytes": 58002
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_virology.jsonl",
+      "bytes": 397549
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_chinese_history.jsonl",
+      "bytes": 1117608
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_college_education.jsonl",
+      "bytes": 287785
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_high_school_geography.jsonl",
+      "bytes": 330519
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_high_school_politics.jsonl",
+      "bytes": 522202
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_marketing.jsonl",
+      "bytes": 452636
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_professional_accounting.jsonl",
+      "bytes": 429543
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_high_school_chemistry.jsonl",
+      "bytes": 445189
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_ideological_and_moral_cultivation.jsonl",
+      "bytes": 46171
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_discrete_mathematics.jsonl",
+      "bytes": 41266
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_plant_protection.jsonl",
+      "bytes": 50948
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_journalism.jsonl",
+      "bytes": 396489
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_professional_tour_guide.jsonl",
+      "bytes": 65790
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_chinese_food_culture.jsonl",
+      "bytes": 314343
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_elementary_information_and_technology.jsonl",
+      "bytes": 569738
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_world_religions.jsonl",
+      "bytes": 348541
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_education.jsonl",
+      "bytes": 367691
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_middle_school_politics.jsonl",
+      "bytes": 68107
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_college_programming.jsonl",
+      "bytes": 103333
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_high_school_geography.jsonl",
+      "bytes": 48264
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_college_actuarial_science.jsonl",
+      "bytes": 288794
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-ceval-valid_metrology_engineer.jsonl",
+      "bytes": 66698
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-hellaswag.jsonl",
+      "bytes": 44179538
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_elementary_mathematics.jsonl",
+      "bytes": 518592
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-openbookqa.jsonl",
+      "bytes": 725924
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_professional_law.jsonl",
+      "bytes": 670563
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_jurisprudence.jsonl",
+      "bytes": 1280739
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/seven/samples-cmmlu_machine_learning.jsonl",
+      "bytes": 333290
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/eval-S10/ifeval/samples.jsonl",
+      "bytes": 2599680
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/train-K01/final.pth",
+      "bytes": 275338499
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/train-K01/resume.pt",
+      "bytes": 767082298
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/train-K01/swanlog/run-20260909_061948-54xq794g/debug/debug.log",
+      "bytes": 150
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/smoke-K02/final.pth",
+      "bytes": 275338499
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/smoke-K02/resume.pt",
+      "bytes": 767069114
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/smoke-K02/swanlog/run-20260909_061927-ga7p95ea/debug/debug.log",
+      "bytes": 150
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/train-K02/final.pth",
+      "bytes": 275338499
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/train-K02/resume.pt",
+      "bytes": 767085562
+    },
+    {
+      "path": "/data/artifacts/minimind-lab/phase8-sequence-v1-20260909/train-K02/swanlog/run-20260909_061949-n9es2q13/debug/debug.log",
+      "bytes": 150
+    }
+  ]
+}
