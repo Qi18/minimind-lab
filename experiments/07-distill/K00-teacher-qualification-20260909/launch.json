@@ -1,0 +1,28 @@
+[
+  {
+    "arm": "teacher",
+    "gpu": "4",
+    "pid": 1501503,
+    "command": [
+      "/data/venvs/minimind-eval/bin/python",
+      "-u",
+      "scripts/eval/run_phase8_qualification.py",
+      "--arm",
+      "teacher"
+    ],
+    "lab_commit": "9a7913a909dfd610940c6b962c2b2adbb1c2998c"
+  },
+  {
+    "arm": "student",
+    "gpu": "5",
+    "pid": 1501505,
+    "command": [
+      "/data/venvs/minimind-eval/bin/python",
+      "-u",
+      "scripts/eval/run_phase8_qualification.py",
+      "--arm",
+      "student"
+    ],
+    "lab_commit": "9a7913a909dfd610940c6b962c2b2adbb1c2998c"
+  }
+]

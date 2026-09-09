@@ -142,3 +142,8 @@ Workspace 固定为 `@richliu0153`。完整 URL 形如 `https://swanlab.cn/@rich
 
 - M01-dense-pretrain-1b28-20260908：训练 https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/nyy90ef5；评测 https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/opixiuyd
 - M02-moe-pretrain-1b28-20260908：训练 https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/uvoc97pz；评测 https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/dxfvjdxy
+
+## Phase8 K00 teacher资格评测（running，未训练）
+
+- K00-student-IFEval: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/15gy76hx
+- K00-teacher-IFEval: https://swanlab.cn/@richliu0153/MiniMind-Lab/runs/3uavnnjv
